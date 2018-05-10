@@ -1,0 +1,8 @@
+deploy:
+  provider: heroku
+  api_key:
+    secure: sT9TUbEwFuQwW9jymcDHU9ZpSwhZo/rmdJ6EKeEEgoL2qAMCeOrHTAg+DVpEbB0HN8/I5zf7fCJsPDoJDS913f429lbiTgmIeGNJYTLrQ2cOUSOGxBuoGK4dCfHcqdtlX8iiFsPy98jD+590k1XUkDHZWz0N15X7dLuMk+ZZKX0cFt4R5uu4Ffe+qhjPU+m2+ccSCkStO7HmI2qGbfGm4MXa+5QDSvSa/knbcETRlfOH1gsfL1HOslc6RZAThol4rAHh69wQqOjOocbOaOP7dSiVa5pmUUN+NJWJOaYvP7yM8rrJC5dPGBeu59Ik/iYXiaGNtVJUdyUphfo9GkxzqhlqI2OmjnbZSAqd0N8VJZR3eZ74RAXxhQaH8wtDck36A0Cx4+t39xT0+bv6kPiIqFM5LNKPLMcvkOmFI/XVur6CsnJGJs1p3XK8KyhEe/tyAv0gtZYZBDaYJZBHW16J0P5xJByd1FC8XhW8Dif0g1Xux2xoLUg1tHnHNuidLRN2ZP06V3le1Pw26tw0z3aDaMun5IN4LT9wTtkriI1+YZk07JDszfecEt6ffxX5B4UtoWQN5i/ahm589J8hD5UZV/M1pXkqtdMI+Hf2VZhxAyZoj+NDOEpELnQd5mfja7viJ8Ddbtd1Wh34IEC8CGhUzasd2DOzDgNkaapu2ELb4Jg=
+  app:
+    master: codethesaurus-prod
+    staging: codethesaurus-staging
+    develop: codethesaurus-develop
