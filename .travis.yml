@@ -3,6 +3,7 @@ os:
 language: php
 php:
 - '7.1'
+- nightly
 
 cache:
   directories:
@@ -14,23 +15,3 @@ before_script:
 
 script:
   - vendor/bin/phpunit --coverage-text
-
-#deploy:
-#  provider: heroku
-#  api_key:
-#    secure: Uxj5zUflXbTCa/629rvnoYdhrWW32fMV1UkYktF2lvrZr0dYosnsG0zAEG4Cpyk369s9/zBeGS2jZBaBBB7Cta3uuL8DZ3orJRYzNEZbHy8H8xNH0ADPDTKMM8AvwblNTDa/7fYhYJRW8bLmqLCdcD2Vg/XWoFfWCVckxExHTSYAcSdL8u0r7Cd1R+CxN2iHveD4JJsSOYrEQNU0GPzt10WT0fvzfVvBmkO26WcQi0tGajfl68V0fx69Jh6VQSmTUrd98voMt7j+KLiVMCs+czexSjbQeJjDqhT0wc9eKFOGeEugB20jVXbkBNAHktjT81J4eGJGr0ytw+lgQFRcQXG7Cs3VoQbSA0vWhfmbOWlBhL/PT/qnylOwmyAYAX38Vh3YEJ/ulL4OTfNQlbHf/glYae2w26NijEas/dWtRiF85dDEfbM4CmSWwYf/t7yd6KMw7ymChxv5qw9BzT+m46m48K5FGcBYuOSVc4wH8SP3jtv+Y7Nvmy5ITiyo/3GKkKjtC4ifAl+lIZCRo8ngA4uvVszWGAiUSHSKvz8Cgu3XB7eCnTqqPhBfxroHwCvlbbtPiuWdRPTIDzmD54rUvt/bBZeEhOaS1i/af/UR0fG1Jxv+ry+7CmOzbnCVHA0YCOkHRLi56f17j33/Y7ZW6/tYeSX1VD/JD7hz29eSi88=
-#  app: codethesaurus-develop
-#  on:
-#    repo: codethesaurus/codethesaur.us
-#    branch: develop
-#
-#
-#deploy:
-#  skip_cleanup: true
-#  provider: heroku
-#  api_key:
-#    secure: xPIqDWdoyzlmENsMh9Uw9vOdYKv5uM4ZkRuHJ4GdJ+zMM67vjbuwcCN9jnGadFZ3dppQ57Ah00uxi0ChEwSb61SR+y0ESViuaQuFD8I+2d6obOCbeBKabqE7Qdp01HP4PVy7t1kXwzYAKGUFThsWj2tTvCmtLfYEirNCtXAomGHKvJ8IvKSelN4ncDwtLqNk9AuQtfSDixd3qPdKyA4aWXAKpHls5tShPB7YlndF/amiGN/KH5vDQmUVFrgR+7N3CFOFKqddt1kgVrIevMYgx2wfgUbmYE87GIi3uBlnoiuH60lBIw8K+TEI5v1fO2pB9YiSbNzlZzk1fo8raush16v3VbCJNm4s+La+4ZccqnRoLN59d6OQjx9xHbhxDnVAKTspV4jbPvh/xamhirRuYpln645g7Cus/RnxObcucuJhxEcLT3QmVSVdqi8T18F3Lv8sMGrcZ98s2zWx3F1aanYO529ypqY/CE+D/kiz2ia+MjU572sHyxYw44Y99Lk/xSwodewENxBD3xNHOt6ohgIorT/KBcP9CmhggMwRj+OY5Ec24rahoe+3s3C3wsJ30+gBReieSQ1ELVTmH4pUIgKbDjhgkmMrXOB8LNz2uof2nH8UUI4as5+dqi29DdB1ikYZpbgh4i97nN7J5Tw5pKDAiWPjeikZ49ZMIDr/054=
-#  app:
-#    master: codethesaurus-prod
-#    staging: codethesaurus-staging
-#    develop: codethesaurus-develop
