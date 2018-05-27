@@ -15,16 +15,16 @@ before_script:
 script:
   - vendor/bin/phpunit --coverage-text
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: Uxj5zUflXbTCa/629rvnoYdhrWW32fMV1UkYktF2lvrZr0dYosnsG0zAEG4Cpyk369s9/zBeGS2jZBaBBB7Cta3uuL8DZ3orJRYzNEZbHy8H8xNH0ADPDTKMM8AvwblNTDa/7fYhYJRW8bLmqLCdcD2Vg/XWoFfWCVckxExHTSYAcSdL8u0r7Cd1R+CxN2iHveD4JJsSOYrEQNU0GPzt10WT0fvzfVvBmkO26WcQi0tGajfl68V0fx69Jh6VQSmTUrd98voMt7j+KLiVMCs+czexSjbQeJjDqhT0wc9eKFOGeEugB20jVXbkBNAHktjT81J4eGJGr0ytw+lgQFRcQXG7Cs3VoQbSA0vWhfmbOWlBhL/PT/qnylOwmyAYAX38Vh3YEJ/ulL4OTfNQlbHf/glYae2w26NijEas/dWtRiF85dDEfbM4CmSWwYf/t7yd6KMw7ymChxv5qw9BzT+m46m48K5FGcBYuOSVc4wH8SP3jtv+Y7Nvmy5ITiyo/3GKkKjtC4ifAl+lIZCRo8ngA4uvVszWGAiUSHSKvz8Cgu3XB7eCnTqqPhBfxroHwCvlbbtPiuWdRPTIDzmD54rUvt/bBZeEhOaS1i/af/UR0fG1Jxv+ry+7CmOzbnCVHA0YCOkHRLi56f17j33/Y7ZW6/tYeSX1VD/JD7hz29eSi88=
-  app: codethesaurus-develop
-  on:
-    repo: codethesaurus/codethesaur.us
-    branch: develop
-
-
+#deploy:
+#  provider: heroku
+#  api_key:
+#    secure: Uxj5zUflXbTCa/629rvnoYdhrWW32fMV1UkYktF2lvrZr0dYosnsG0zAEG4Cpyk369s9/zBeGS2jZBaBBB7Cta3uuL8DZ3orJRYzNEZbHy8H8xNH0ADPDTKMM8AvwblNTDa/7fYhYJRW8bLmqLCdcD2Vg/XWoFfWCVckxExHTSYAcSdL8u0r7Cd1R+CxN2iHveD4JJsSOYrEQNU0GPzt10WT0fvzfVvBmkO26WcQi0tGajfl68V0fx69Jh6VQSmTUrd98voMt7j+KLiVMCs+czexSjbQeJjDqhT0wc9eKFOGeEugB20jVXbkBNAHktjT81J4eGJGr0ytw+lgQFRcQXG7Cs3VoQbSA0vWhfmbOWlBhL/PT/qnylOwmyAYAX38Vh3YEJ/ulL4OTfNQlbHf/glYae2w26NijEas/dWtRiF85dDEfbM4CmSWwYf/t7yd6KMw7ymChxv5qw9BzT+m46m48K5FGcBYuOSVc4wH8SP3jtv+Y7Nvmy5ITiyo/3GKkKjtC4ifAl+lIZCRo8ngA4uvVszWGAiUSHSKvz8Cgu3XB7eCnTqqPhBfxroHwCvlbbtPiuWdRPTIDzmD54rUvt/bBZeEhOaS1i/af/UR0fG1Jxv+ry+7CmOzbnCVHA0YCOkHRLi56f17j33/Y7ZW6/tYeSX1VD/JD7hz29eSi88=
+#  app: codethesaurus-develop
+#  on:
+#    repo: codethesaurus/codethesaur.us
+#    branch: develop
+#
+#
 #deploy:
 #  skip_cleanup: true
 #  provider: heroku
