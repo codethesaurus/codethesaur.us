@@ -1,0 +1,17 @@
+os:
+- linux
+language: php
+php:
+- '7.1'
+- nightly
+
+cache:
+  directories:
+  - "$HOME/.composer/cache/files"
+
+before_script:
+  - composer self-update
+  - composer install --no-interaction
+
+script:
+  - vendor/bin/phpunit --coverage-text
