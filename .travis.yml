@@ -12,7 +12,7 @@ php:
 before_script:
   - composer self-update
   - composer install --no-interaction
-  - cp .env.travis .env
+#  - cp .env.travis .env
 # Commenting this out. A blog suggested PHP CodeSniffer but I'm not going to run it yet (and may not)
 #  - pear install pear/PHP_CodeSniffer
 #  - phpenv rehash
