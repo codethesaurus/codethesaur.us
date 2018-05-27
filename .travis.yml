@@ -1,10 +1,31 @@
+os:
+  - linux
 language: php
 php:
   - '5.6'
   - '7.1'
 
+# Laravel was in src/ dir. I got rid of this. leaving this comment until I know for sure this is what I want
 #before_install:
 #  - cd src
+
+before_script:
+  - composer self-update
+  - composer install --no-interaction
+  - cp .env.travis .env
+# Commenting this out. A blog suggested PHP CodeSniffer but I'm not going to run it yet (and may not)
+#  - pear install pear/PHP_CodeSniffer
+#  - phpenv rehash
+#  - nvm install 7.7.1
+#  - npm install npm@latest -g
+#  - npm install -g jshint
+#  - npm install
+
+script:
+  - vendor/bin/phpunit --coverage-text
+#  - phpcs --ignore=app/Http/Controllers/Auth,app/Http/Controllers/Controller.php app/Http/Controllers
+#  - npm run production
+#  - jshint resources/assets/js/modules/*
 
 deploy:
   skip_cleanup: true
