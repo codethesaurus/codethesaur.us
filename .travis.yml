@@ -3,8 +3,8 @@ php:
   - '5.6'
   - '7.1'
 
-before_install:
-  - cd src
+#before_install:
+#  - cd src
 
 deploy:
   skip_cleanup: true
