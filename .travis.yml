@@ -5,6 +5,10 @@ php:
 #  - '5.6'
   - '7.1'
 
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
 # Laravel was in src/ dir. I got rid of this. leaving this comment until I know for sure this is what I want
 #before_install:
 #  - cd src
