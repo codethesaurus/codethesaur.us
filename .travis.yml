@@ -3,20 +3,33 @@ os:
 language: php
 php:
 - '7.1'
+
 cache:
   directories:
   - "$HOME/.composer/cache/files"
+
 before_script:
-- composer self-update
-- composer install --no-interaction
+  - composer self-update
+  - composer install --no-interaction
+
 script:
-- vendor/bin/phpunit --coverage-text
+  - vendor/bin/phpunit --coverage-text
+
 deploy:
-  skip_cleanup: true
   provider: heroku
   api_key:
-    secure: xPIqDWdoyzlmENsMh9Uw9vOdYKv5uM4ZkRuHJ4GdJ+zMM67vjbuwcCN9jnGadFZ3dppQ57Ah00uxi0ChEwSb61SR+y0ESViuaQuFD8I+2d6obOCbeBKabqE7Qdp01HP4PVy7t1kXwzYAKGUFThsWj2tTvCmtLfYEirNCtXAomGHKvJ8IvKSelN4ncDwtLqNk9AuQtfSDixd3qPdKyA4aWXAKpHls5tShPB7YlndF/amiGN/KH5vDQmUVFrgR+7N3CFOFKqddt1kgVrIevMYgx2wfgUbmYE87GIi3uBlnoiuH60lBIw8K+TEI5v1fO2pB9YiSbNzlZzk1fo8raush16v3VbCJNm4s+La+4ZccqnRoLN59d6OQjx9xHbhxDnVAKTspV4jbPvh/xamhirRuYpln645g7Cus/RnxObcucuJhxEcLT3QmVSVdqi8T18F3Lv8sMGrcZ98s2zWx3F1aanYO529ypqY/CE+D/kiz2ia+MjU572sHyxYw44Y99Lk/xSwodewENxBD3xNHOt6ohgIorT/KBcP9CmhggMwRj+OY5Ec24rahoe+3s3C3wsJ30+gBReieSQ1ELVTmH4pUIgKbDjhgkmMrXOB8LNz2uof2nH8UUI4as5+dqi29DdB1ikYZpbgh4i97nN7J5Tw5pKDAiWPjeikZ49ZMIDr/054=
-  app:
-    master: codethesaurus-prod
-    staging: codethesaurus-staging
-    develop: codethesaurus-develop
+    secure: wCVka5PknfmXKerBTCTMmsjHE/D0hHeAnSXbz5/2jbuoD0VubatRLfNhRpu+1wyEwa8BbhBELrPWnb1vFfhIxWTsU9D6LYH6ButL9DUOFvECu3JAaHhLGMPFmp146+dqfOBz4tCBImCahHKaKp+HJ1oj95bTzVYguGjIRO3q1uoEQlDIkUMMvAylJALjzHtE9ySLF0LO1Tkji2ocF38owqWQH7UBNJQbiJDrTBqV6MtT/3b4U+6bJbSbu2nd5HW9vEH68wfYGstXRLzNM44i7ljyAN/gMcCYRYuvQVmkmW/pOZI4ccPPHJsHsc8Fl1ZIbN09dRwL+r9wS0vGobgM+yobDgYBUKhiboBg6LVZEdeiIZ7YFstt9HpbgIO9lwA0KA96GdxFvn5brmLI3ycRHu5eCkjj5MUj6Jtz08WW2RXzRKoxx1RwH3BaFtdsog+9UHzrDtJDB535zLfeYenNGZ5bNgrmTuLXfhDTIUrfADf/C5rpXbO5N2owHZ1Hq7H5FCVOYOTzlmjApscYLqgd9H+mBq0O+rNn7G2Aja6TJdNfnskFmXs9rZdXlePsLGeuwenOHyZYmr+Otj3djOwK+yUFQOTSaE1OcMEewA/7lPxtqKWp1IhUKFvFpYlBIVOTIXFoLGEIzDCOaYQHxM6mOr/nWsVw2noOvpo+GJGEEGg=
+  app: codethesaurus
+  on:
+    repo: codethesaurus/codethesaur.us
+
+
+#deploy:
+#  skip_cleanup: true
+#  provider: heroku
+#  api_key:
+#    secure: xPIqDWdoyzlmENsMh9Uw9vOdYKv5uM4ZkRuHJ4GdJ+zMM67vjbuwcCN9jnGadFZ3dppQ57Ah00uxi0ChEwSb61SR+y0ESViuaQuFD8I+2d6obOCbeBKabqE7Qdp01HP4PVy7t1kXwzYAKGUFThsWj2tTvCmtLfYEirNCtXAomGHKvJ8IvKSelN4ncDwtLqNk9AuQtfSDixd3qPdKyA4aWXAKpHls5tShPB7YlndF/amiGN/KH5vDQmUVFrgR+7N3CFOFKqddt1kgVrIevMYgx2wfgUbmYE87GIi3uBlnoiuH60lBIw8K+TEI5v1fO2pB9YiSbNzlZzk1fo8raush16v3VbCJNm4s+La+4ZccqnRoLN59d6OQjx9xHbhxDnVAKTspV4jbPvh/xamhirRuYpln645g7Cus/RnxObcucuJhxEcLT3QmVSVdqi8T18F3Lv8sMGrcZ98s2zWx3F1aanYO529ypqY/CE+D/kiz2ia+MjU572sHyxYw44Y99Lk/xSwodewENxBD3xNHOt6ohgIorT/KBcP9CmhggMwRj+OY5Ec24rahoe+3s3C3wsJ30+gBReieSQ1ELVTmH4pUIgKbDjhgkmMrXOB8LNz2uof2nH8UUI4as5+dqi29DdB1ikYZpbgh4i97nN7J5Tw5pKDAiWPjeikZ49ZMIDr/054=
+#  app:
+#    master: codethesaurus-prod
+#    staging: codethesaurus-staging
+#    develop: codethesaurus-develop
