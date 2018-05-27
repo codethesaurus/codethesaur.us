@@ -1,41 +1,21 @@
 os:
-  - linux
+- linux
 language: php
 php:
-#  - '5.6'
-  - '7.1'
-
+- '7.1'
 cache:
   directories:
-    - $HOME/.composer/cache/files
-
-# Laravel was in src/ dir. I got rid of this. leaving this comment until I know for sure this is what I want
-#before_install:
-#  - cd src
-
+  - "$HOME/.composer/cache/files"
 before_script:
-  - composer self-update
-  - composer install --no-interaction
-#  - cp .env.travis .env
-# Commenting this out. A blog suggested PHP CodeSniffer but I'm not going to run it yet (and may not)
-#  - pear install pear/PHP_CodeSniffer
-#  - phpenv rehash
-#  - nvm install 7.7.1
-#  - npm install npm@latest -g
-#  - npm install -g jshint
-#  - npm install
-
+- composer self-update
+- composer install --no-interaction
 script:
-  - vendor/bin/phpunit --coverage-text
-#  - phpcs --ignore=app/Http/Controllers/Auth,app/Http/Controllers/Controller.php app/Http/Controllers
-#  - npm run production
-#  - jshint resources/assets/js/modules/*
-
+- vendor/bin/phpunit --coverage-text
 deploy:
   skip_cleanup: true
   provider: heroku
   api_key:
-    secure: POjzyOncqDNxgylryiknUtBVWDCnkJ4ZdeJqdbTpXov9EQAIPQKhQOx1rtBRX942Jzd/Ncp0D8mBW0QWlCFDNuQ6deWVGOCeZgE84nXLKRFSGMxz9eaIIdcCocEXIIA47GzAPdy4ZOXu7j7/VLXrDGZIxkAad7ndb6utmO2QZf+endkfvwPDiiKx5Lhrzwjr2dA2tFGP2RxbSom6Q4rha1oBdfuqwU9kpJwvUf59G/CrEmHsslFm63XS0CFASXzM9lU0LIXaPDt9BxlV+Xv4phyuBoVTEh7+t9oqjZRzQyZYyn5y8IHzqck3xsvSh+no6jedwxoCQZBZwGTKaWE+ea7gikGYq1XsFISEji+9M+r/MtfBEPBj315IurLI1YuEb3QC9A85YNgf8xHaXppJp+7pW5lrNs7wRWtLUhYcjnVOqanHpnuQAdEj46z0eSXpJ11cYo7Pr1VHUGwBozuwbzcHQhJyVJy/CwEex/xsUooaEoIJXlsPHzuAJLgEo/ILCvtS9t/BGdjZXMGLco2Ifznz6295gxalvm6jk0Z7Z4UEtnFUsT2VkJfZUlzygcVGlYFZIv3vXYtQAUG2RQJ8pFnkfDZGnenafLo4UPA+XcbpYTfuCtZCITwzlY2a7EqNxFSNUH08KnsErHKaBcuyoIizv4Vykr/nT+0nx6e+gPY=
+    secure: xPIqDWdoyzlmENsMh9Uw9vOdYKv5uM4ZkRuHJ4GdJ+zMM67vjbuwcCN9jnGadFZ3dppQ57Ah00uxi0ChEwSb61SR+y0ESViuaQuFD8I+2d6obOCbeBKabqE7Qdp01HP4PVy7t1kXwzYAKGUFThsWj2tTvCmtLfYEirNCtXAomGHKvJ8IvKSelN4ncDwtLqNk9AuQtfSDixd3qPdKyA4aWXAKpHls5tShPB7YlndF/amiGN/KH5vDQmUVFrgR+7N3CFOFKqddt1kgVrIevMYgx2wfgUbmYE87GIi3uBlnoiuH60lBIw8K+TEI5v1fO2pB9YiSbNzlZzk1fo8raush16v3VbCJNm4s+La+4ZccqnRoLN59d6OQjx9xHbhxDnVAKTspV4jbPvh/xamhirRuYpln645g7Cus/RnxObcucuJhxEcLT3QmVSVdqi8T18F3Lv8sMGrcZ98s2zWx3F1aanYO529ypqY/CE+D/kiz2ia+MjU572sHyxYw44Y99Lk/xSwodewENxBD3xNHOt6ohgIorT/KBcP9CmhggMwRj+OY5Ec24rahoe+3s3C3wsJ30+gBReieSQ1ELVTmH4pUIgKbDjhgkmMrXOB8LNz2uof2nH8UUI4as5+dqi29DdB1ikYZpbgh4i97nN7J5Tw5pKDAiWPjeikZ49ZMIDr/054=
   app:
     master: codethesaurus-prod
     staging: codethesaurus-staging
