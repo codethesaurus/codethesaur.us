@@ -19,9 +19,10 @@ deploy:
   provider: heroku
   api_key:
     secure: wCVka5PknfmXKerBTCTMmsjHE/D0hHeAnSXbz5/2jbuoD0VubatRLfNhRpu+1wyEwa8BbhBELrPWnb1vFfhIxWTsU9D6LYH6ButL9DUOFvECu3JAaHhLGMPFmp146+dqfOBz4tCBImCahHKaKp+HJ1oj95bTzVYguGjIRO3q1uoEQlDIkUMMvAylJALjzHtE9ySLF0LO1Tkji2ocF38owqWQH7UBNJQbiJDrTBqV6MtT/3b4U+6bJbSbu2nd5HW9vEH68wfYGstXRLzNM44i7ljyAN/gMcCYRYuvQVmkmW/pOZI4ccPPHJsHsc8Fl1ZIbN09dRwL+r9wS0vGobgM+yobDgYBUKhiboBg6LVZEdeiIZ7YFstt9HpbgIO9lwA0KA96GdxFvn5brmLI3ycRHu5eCkjj5MUj6Jtz08WW2RXzRKoxx1RwH3BaFtdsog+9UHzrDtJDB535zLfeYenNGZ5bNgrmTuLXfhDTIUrfADf/C5rpXbO5N2owHZ1Hq7H5FCVOYOTzlmjApscYLqgd9H+mBq0O+rNn7G2Aja6TJdNfnskFmXs9rZdXlePsLGeuwenOHyZYmr+Otj3djOwK+yUFQOTSaE1OcMEewA/7lPxtqKWp1IhUKFvFpYlBIVOTIXFoLGEIzDCOaYQHxM6mOr/nWsVw2noOvpo+GJGEEGg=
-  app: codethesaurus
+  app: codethesaurus-develop
   on:
     repo: codethesaurus/codethesaur.us
+    branch: develop
 
 
 #deploy:
