@@ -43,60 +43,111 @@
 
         <div class="album py-5 bg-light">
             <div class="container">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card mb-6 box-shadow">
+                <div class="card-deck row">
+                    <div class="card col-md-6">
+                        <form method="post" action="/compare">
+                        <div class="card-block">
+                            <h5 class="card-header">
+                                Learn a Language
+                            </h5>
                             <div class="card-body">
-                                <p class="card-text">Learn a Language</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <p class="card-text">What language concept do you want to know about?</p>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    Compare concepts side-by-side with a language you know and one you don't.
+                                </h6>
+                                <div class="card-text">
+                                    Choose a language concept:
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <select><option>Functions</option></select>
+                                <div class="card-text">
+                                    <div class="form-group">
+                                        <select class="form-control" id="concept" name="concept">
+                                            <option>Classes</option>
+                                            <option>Data Types</option>
+                                            <option>File I/O</option>
+                                            <option>Namespaces</option>
+                                            <option>Strings</option>
+                                            <option>Threads</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <p class="card-text">Pick a language you know and don't know to compare side-by-side</p>
+                                <div class="card-text">
+                                    Pick a language you know and don't know:
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <select><option>Python</option></select>
-                                        <select><option>Ruby</option></select>
+                                <div class="card-text">
+                                    <div class="form-group">
+                                        <select class="form-control" id="lang1" name="lang1">
+                                            <option>C++</option>
+                                            <option>Haskell</option>
+                                            <option>Java</option>
+                                            <option>JavaScript</option>
+                                            <option>PHP</option>
+                                            <option>Python</option>
+                                            <option>Ruby</option>
+                                        </select>
+                                        <select class="form-control" id="lang2" name="lang2">
+                                            <option>C++</option>
+                                            <option>Haskell</option>
+                                            <option>Java</option>
+                                            <option>JavaScript</option>
+                                            <option>PHP</option>
+                                            <option>Python</option>
+                                            <option>Ruby</option>
+                                        </select>
                                     </div>
-
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Go!</button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Go!</button>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="card col-md-6">
+                        <form method="post" action="/cheatsheet">
+                        <div class="card-block">
+                            <h5 class="card-header">
+                                See a Cheat Sheet
+                            </h5>
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    A quick and easy way to remind yourself how to do something.
+                                </h6>
+                                <div class="card-text">
+                                    Choose a language concept:
+                                </div>
+                                <div class="card-text">
+                                    <select class="form-control" id="concept" name="concept">
+                                        <option>Classes</option>
+                                        <option>Data Types</option>
+                                        <option>File I/O</option>
+                                        <option>Namespaces</option>
+                                        <option>Strings</option>
+                                        <option>Threads</option>
+                                    </select>
+                                </div>
+                                <div class="card-text">
+                                    Pick a language:
+                                </div>
+                                <div class="card-text">
+                                    <select class="form-control" id="lang1" name="lang1">
+                                        <option>C++</option>
+                                        <option>Haskell</option>
+                                        <option>Java</option>
+                                        <option>JavaScript</option>
+                                        <option>PHP</option>
+                                        <option>Python</option>
+                                        <option>Ruby</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Go!</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card mb-6 box-shadow">
-                            <div class="card-body">
-                                <p class="card-text">See a Cheat Sheet</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <p class="card-text">What language concept do you want to know about?</p>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <select><option>Functions</option></select>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <p class="card-text">Pick a language</p>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <select><option>Python</option></select>
-                                    </div>
-
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Go!</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -121,11 +172,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
     <script src="js/app.js"></script>
-
-
-
-
-
 
     </body>
 </html>
