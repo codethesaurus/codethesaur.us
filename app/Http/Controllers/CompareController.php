@@ -18,9 +18,17 @@ class CompareController extends Controller
             "concept" => $request->query('concept'),
             "lang1" => $request->query('lang1'),
             "lang2" => $request->query('lang2'),
-            "concepts" => [],
-            "lang1Concepts" => [],
-            "lang2Concepts" => []
+            "concepts" => ["Concept 1", "Concept 2", "Concept 3"],
+            "lang1Concepts" => [
+                "Concept 1" => "Concept 1 in lang 1",
+                "Concept 2" => "Concept 2 in lang 1",
+                "Concept 3" => "Concept 3 in lang 1"
+            ],
+            "lang2Concepts" => [
+                "Concept 1" => "Concept 1 in lang 2",
+                "Concept 2" => "Concept 2 in lang 2",
+                "Concept 3" => "Concept 3 in lang 2"
+            ]
         );
         return view('compare', $responseData);
     }
