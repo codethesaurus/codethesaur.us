@@ -1,0 +1,28 @@
+---
+language: Ruby
+version: '2.3'
+topic: functions
+define_no_params: |-
+  def functionName
+    statement()
+  end
+define_one_param: |-
+  def functionName(x)
+     echo(x)
+  end
+define_more_param: |-
+  def functionName(x, y, z)
+    echo (x + y + z)
+  end
+define_with_return: |-
+  def functionName(x, y, z)
+     x + y + z
+  end
+invoke: |-
+  functionName(1, 2, 3)
+  functionName 1, 2, 3
+default_argument: |-
+  def functionName(x, y, z=10)
+     x + y + z
+  end
+anonymous_function: square = lambda { |x| x * x }
