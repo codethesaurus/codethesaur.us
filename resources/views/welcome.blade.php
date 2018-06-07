@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="card-deck row">
                     <div class="card col-md-6">
-                        <form method="post" action="/compare">
+                        <form method="get" action="/compare">
                         <div class="card-block">
                             <h5 class="card-header">
                                 Learn a Language
@@ -49,7 +49,7 @@
                                             <option>Java</option>
                                             <option>JavaScript</option>
                                             <option>PHP</option>
-                                            <option>Python</option>
+                                            <option selected>Python</option>
                                             <option>Ruby</option>
                                         </select>
                                         <select class="form-control" id="lang2" name="lang2">
@@ -59,7 +59,7 @@
                                             <option>JavaScript</option>
                                             <option>PHP</option>
                                             <option>Python</option>
-                                            <option>Ruby</option>
+                                            <option selected>Ruby</option>
                                         </select>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                         </form>
                     </div>
                     <div class="card col-md-6">
-                        <form method="post" action="/cheatsheet">
+                        <form method="get" action="/cheatsheet">
                         <div class="card-block">
                             <h5 class="card-header">
                                 See a Cheat Sheet
@@ -105,7 +105,7 @@
                                         <option>Java</option>
                                         <option>JavaScript</option>
                                         <option>PHP</option>
-                                        <option>Python</option>
+                                        <option selected>Python</option>
                                         <option>Ruby</option>
                                     </select>
                                 </div>

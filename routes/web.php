@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('compare', 'CompareController');
+
+Route::get('compare/{id}', 'CompareController@show');
+Route::get('compare/{id1}/{id2}', 'CompareController@show');

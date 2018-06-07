@@ -22,9 +22,10 @@
 <header>
     <div class="navbar navbar-dark bg-blue box-shadow">
         <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center">
+            <a href="/" class="navbar-brand d-flex align-items-center">
                 <strong>Code Thesaurus</strong>
             </a>
+            {{-- Add this all back in if the hamburger menu is needed}}
             {{--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">--}}
             {{--<span class="navbar-toggler-icon"></span>--}}
             {{--</button>--}}
