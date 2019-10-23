@@ -6,8 +6,7 @@ php:
 - '7.2'
 - '7.3'
 
-addons:
-  postgresql: '11.0'
+services: postgresql
 
 cache:
   directories:
