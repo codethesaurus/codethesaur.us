@@ -1,17 +1,27 @@
 os:
 - linux
 language: php
+
 php:
 - '7.2'
 - '7.3'
 
+addons:
+  mariadb: '10.4'
+
 cache:
   directories:
+  - node_modules
+  - vendor
   - "$HOME/.composer/cache/files"
 
 before_script:
+  - cp .env.travis .env
+  - sudo mysql -e 'CREATE DATABASE testing;'
   - composer self-update
   - composer install --no-interaction
+  - php artisan key:generate
+  - php artisan migrate --no-interaction -vvv
 
 script:
   - vendor/bin/phpunit --coverage-text
