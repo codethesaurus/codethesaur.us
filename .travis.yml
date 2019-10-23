@@ -7,7 +7,7 @@ php:
 - '7.3'
 
 addons:
-  mariadb: '10.4'
+  postgresql: '11.0'
 
 cache:
   directories:
@@ -17,7 +17,7 @@ cache:
 
 before_script:
   - cp .env.travis .env
-  - sudo mysql -e 'CREATE DATABASE testing;'
+  - psql -c 'CREATE DATABASE laravel;' -U postgres
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
