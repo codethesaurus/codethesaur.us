@@ -1,17 +1,26 @@
 os:
 - linux
 language: php
+
 php:
-- '7.1'
 - '7.2'
+- '7.3'
+
+services: postgresql
 
 cache:
   directories:
+  - node_modules
+  - vendor
   - "$HOME/.composer/cache/files"
 
 before_script:
+  - cp .env.travis .env
+  - psql -c 'CREATE DATABASE laravel;' -U postgres
   - composer self-update
   - composer install --no-interaction
+  - php artisan key:generate
+  - php artisan migrate --no-interaction -vvv
 
 script:
   - vendor/bin/phpunit --coverage-text
