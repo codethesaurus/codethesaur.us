@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "language": "python",
+    "language_version": "3.7",
+    "language_name": "Python"
+  },
+  "data_types": [
+    {
+      "numerical": {
+        "boolean": "int",
+        "integer_16_bit": null,
+        "integer_32_bit": null,
+        "integer_64_bit": null,
+        "integer_as_object": "int",
+        "float_16_bit": null,
+        "float_32_bit": null,
+        "float_64_bit": null,
+        "float_as_object": "float"
+      }
+    },
+    {
+      "string": {
+        "string_as_object": "str",
+        "string_as_array": ""
+      }
+    },
+    {
+      "complex_numbers": {
+        "complex_as_object": "complex",
+        "real_number_part": "complex(real)",
+        "imaginary_number_part": "complex(real,imaginary)"
+      }
+    }
+  ]
+}

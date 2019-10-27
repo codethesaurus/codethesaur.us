@@ -1,0 +1,10 @@
+{
+  "languages": {
+    "Java": "java",
+    "C++": "cplusplus",
+    "Python": "python"
+  },
+  "structures": {
+    "Data Types": "data_types.json"
+  }
+}
