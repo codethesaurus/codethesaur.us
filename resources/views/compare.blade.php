@@ -4,6 +4,7 @@
 
 @section('content')
         <div class="container">
+            <div>Filesystem adapter: {{ $resources  }}</div>
             <div class="row">&nbsp;</div>
             <div class="row">
                 <h2 class="col-12">Comparing {{ $lang1 }}'s and {{ $lang2 }}'s {{ $concept }}</h2>
