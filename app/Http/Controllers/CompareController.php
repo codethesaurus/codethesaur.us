@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use http\Exception\UnexpectedValueException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
+use League\Flysystem\Adapter\Local;
+use phpDocumentor\Reflection\File;
+use PHPUnit\Util\Filesystem;
+use function MongoDB\BSON\toJSON;
 
 class CompareController extends Controller
 {
@@ -14,7 +20,24 @@ class CompareController extends Controller
      */
     public function index(Request $request)
     {
+
+        // Get thesaurus directory
+        $resource_dir = resource_path('thesauruses/');
+
+        // Read JSON file
+        $meta_data_json = file_get_contents($resource_dir . 'meta_info.json');
+        $meta_data = json_decode($meta_data_json,true);
+
+//        foreach ($meta_data['languages'] as $key => $value);
+//        }
+
+        if (!isset( $meta_data['languages'][$request->query('lang1')]) || !isset( $meta_data['languages'][$request->query('lang2')])){
+            throw new UnexpectedValueException("One of the passed in languages doesn't exist");
+        }
+
         $responseData = array(
+            // TODO: delete this eventually
+//            "resources" => $languages,
             "concept" => $request->query('concept'),
             "lang1" => $request->query('lang1'),
             "lang2" => $request->query('lang2'),
