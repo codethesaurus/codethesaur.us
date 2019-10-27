@@ -29,12 +29,12 @@
                                 <div class="card-text">
                                     <div class="form-group">
                                         <select class="form-control" id="concept" name="concept">
-                                            <option>Classes</option>
+{{--                                            <option>Classes</option>--}}
                                             <option>Data Types</option>
-                                            <option>File I/O</option>
-                                            <option>Namespaces</option>
-                                            <option>Strings</option>
-                                            <option>Threads</option>
+{{--                                            <option>File I/O</option>--}}
+{{--                                            <option>Namespaces</option>--}}
+{{--                                            <option>Strings</option>--}}
+{{--                                            <option>Threads</option>--}}
                                         </select>
                                     </div>
                                 </div>
@@ -45,21 +45,21 @@
                                     <div class="form-group">
                                         <select class="form-control" id="lang1" name="lang1">
                                             <option>C++</option>
-                                            <option>Haskell</option>
+{{--                                            <option>Haskell</option>--}}
                                             <option>Java</option>
-                                            <option>JavaScript</option>
-                                            <option>PHP</option>
+{{--                                            <option>JavaScript</option>--}}
+{{--                                            <option>PHP</option>--}}
                                             <option selected>Python</option>
-                                            <option>Ruby</option>
+{{--                                            <option>Ruby</option>--}}
                                         </select>
                                         <select class="form-control" id="lang2" name="lang2">
                                             <option>C++</option>
-                                            <option>Haskell</option>
+{{--                                            <option>Haskell</option>--}}
                                             <option>Java</option>
-                                            <option>JavaScript</option>
-                                            <option>PHP</option>
+{{--                                            <option>JavaScript</option>--}}
+{{--                                            <option>PHP</option>--}}
                                             <option>Python</option>
-                                            <option selected>Ruby</option>
+{{--                                            <option selected>Ruby</option>--}}
                                         </select>
                                     </div>
                                 </div>
@@ -73,14 +73,16 @@
                         </form>
                     </div>
                     <div class="card col-md-6">
-                        <form method="get" action="/cheatsheet">
+                        <form method="get" action="/reference">
                         <div class="card-block">
                             <h5 class="card-header">
-                                See a Cheat Sheet
+                                See a Reference Sheet
                             </h5>
                             <div class="card-body">
                                 <h6 class="card-subtitle mb-2 text-muted">
                                     A quick and easy way to remind yourself how to do something.
+                                    <br /><br />
+                                    Still under construction.
                                 </h6>
                                 <div class="card-text">
                                     Choose a language concept:

@@ -1,35 +1,35 @@
-﻿{
-  "meta": {
+{
+    "meta": {
     "language": "cplusplus",
-    "language_version": "C++17",
-    "language_name": "C++"
-  },
-  "data_types": [
+        "language_version": "C++17",
+        "language_name": "C++"
+},
+    "data_types": [
     {
-      "numerical": {
-        "boolean": "bool",
-        "integer_16_bit": "int",
-        "integer_32_bit": "long",
-        "integer_64_bit": "long long",
-        "integer_as_object": null,
-        "float_16_bit": "float",
-        "float_32_bit": "double",
-        "float_64_bit": "long double",
-        "float_as_object": null
-      }
+        "numerical": {
+            "boolean": "bool",
+            "integer_16_bit": "int",
+            "integer_32_bit": "long",
+            "integer_64_bit": "long long",
+            "integer_as_object": null,
+            "float_16_bit": "float",
+            "float_32_bit": "double",
+            "float_64_bit": "long double",
+            "float_as_object": null
+        }
     },
     {
-      "string": {
-        "string_as_object": "string",
-        "string_as_array": "char[]"
-      }
+        "string": {
+            "string_as_object": "string",
+            "string_as_array": "char[]"
+        }
     },
     {
-      "complex_numbers": {
-        "complex_as_object": "class complex",
-        "real_number_part": "complex.real",
-        "imaginary_number_part": "complex.imag"
-      }
+        "complex_numbers": {
+            "complex_as_object": "class complex",
+            "real_number_part": "complex.real",
+            "imaginary_number_part": "complex.imag"
+        }
     }
-  ]
+]
 }
