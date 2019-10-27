@@ -1,11 +1,10 @@
 @extends('layouts.main')
 
-@section('title', 'Comparing [lang] and [lang]')
+@section('title', 'Comparing [lang1] and [lang2]')
 
 @section('content')
         <div class="container">
-            <div class="row">&nbsp;</div>
-            <div class="row">
+            <div class="row mt-5">
                 <h2 class="col-12">Comparing {{ $lang1 }}'s and {{ $lang2 }}'s {{ $concept }}</h2>
             </div>
             <div class="row col-12">
@@ -31,21 +30,21 @@
                 </div>
             </div>
 
-@foreach ($concepts as $concept)
+@foreach ($lang1Concepts as $key => $value)
                 <div class="card-group">
                     <div class="card">
                         <div class="card-body">
-                            <div class="strong">{{ $concept }}</div>
+                            <div class="strong">{{ $key }}</div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <div>{{ $lang1Concepts[$concept] }}</div>
+                            <div><code>{{ $value }}</code></div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <div>{{ $lang2Concepts[$concept] }}</div>
+                            <div><code>{{ $lang2Concepts[$key] }}</code></div>
                         </div>
                     </div>
                 </div>
