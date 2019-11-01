@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 
-    <!-- Fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> -->
-
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css" />
 </head>
@@ -43,27 +40,6 @@
             </ul>
         </div>
     </nav>
-
-
-{{--    --}}
-{{--    <div class="navbar navbar-dark bg-blue box-shadow">--}}
-{{--        <div class="container d-flex justify-content-between">--}}
-{{--            <a href="/" class="navbar-brand d-flex align-items-center">--}}
-{{--                <strong>Code Thesaurus</strong>--}}
-{{--            </a>--}}
-
-{{--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">--}}
-{{--                <span class="navbar-toggler-icon"></span>--}}
-{{--            </button>--}}
-
-{{--            <div class="collapse navbar-collapse" id="navbarSupportedContent">--}}
-{{--                <div class="navbar-nav">--}}
-{{--                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>--}}
-{{--                    <a class="nav-item nav-link" href="/about/">About</a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
 </header>
 
 <main role="main">

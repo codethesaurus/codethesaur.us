@@ -29,12 +29,12 @@
                 <div class="card-group">
                     <div class="card">
                         <div class="card-body">
-                            <div class="strong">{{ $key }}</div>
+                            <div class="strong">{{ $value["name"] }}</div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <div><code>{{ $value }}</code></div>
+                            <div><code>{{ $value["code"] }}</code></div>
                         </div>
                     </div>
                 </div>
