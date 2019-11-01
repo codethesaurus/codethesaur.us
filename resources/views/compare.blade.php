@@ -30,21 +30,42 @@
                 </div>
             </div>
 
-@foreach ($lang1Concepts as $key => $value)
+@foreach ($lang1Concepts as $lang1_key => $lang1_value)
+    @php
+        $lang2_value = $lang2Concepts[$lang1_key];
+    @endphp
                 <div class="card-group">
                     <div class="card">
                         <div class="card-body">
-                            <div class="strong">{{ $key }}</div>
+                            <div class="strong">@php
+                            if ($lang1_value["name"] != null) {
+                                echo $lang1_value["name"];
+                            } else {
+                                echo "&nbsp;";
+                            }
+                            @endphp</div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <div><code>{{ $value }}</code></div>
+                            <div><code>@php
+                                        if ($lang1_value["code"] != null) {
+                                            echo $lang1_value["code"];
+                                        } else {
+                                            echo "&nbsp;";
+                                        }
+                                    @endphp</code></div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <div><code>{{ $lang2Concepts[$key] }}</code></div>
+                            <div><code>@php
+                                        if ($lang2_value["code"] != null) {
+                                            echo $lang2_value["code"];
+                                        } else {
+                                            echo "&nbsp;";
+                                        }
+                                    @endphp</code></div>
                         </div>
                     </div>
                 </div>

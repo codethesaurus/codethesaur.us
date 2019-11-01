@@ -19,10 +19,5 @@ Route::get('/about', function () {
     return view('about');
 });
 
-//Route::resource('compare', 'CompareController');
-//Route::resource('reference', 'ReferenceController');
-
-Route::get('/reference', 'ReferenceController@index');   // should this be index?
-//Route::get('/reference/{id}', 'ReferenceController@index');   // should this be index?
-Route::get('/compare', 'CompareController@index');   // should this also be index?
-//Route::get('/compare/{id1}/{id2}', 'CompareController@index');   // should this also be index?
+Route::get('/reference', 'ReferenceController@index');
+Route::get('/compare', 'CompareController@index');

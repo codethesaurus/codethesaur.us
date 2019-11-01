@@ -30,7 +30,7 @@
                                         <div class="form-group">
                                             <select class="form-control" id="concept" name="concept">
     {{--                                            <option>Classes</option>--}}
-                                                <option>Data Types</option>
+                                                <option value="data_types">Data Types</option>
     {{--                                            <option>File I/O</option>--}}
     {{--                                            <option>Namespaces</option>--}}
     {{--                                            <option>Strings</option>--}}
@@ -90,7 +90,7 @@
                                     <div class="card-text">
                                         <select class="form-control" id="concept" name="concept">
     {{--                                        <option>Classes</option>--}}
-                                            <option>Data Types</option>
+                                            <option value="data_types">Data Types</option>
     {{--                                        <option>File I/O</option>--}}
     {{--                                        <option>Namespaces</option>--}}
     {{--                                        <option>Strings</option>--}}

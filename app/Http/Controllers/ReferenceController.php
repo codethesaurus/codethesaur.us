@@ -3,11 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Storage;
-use League\Flysystem\Adapter\Local;
-use phpDocumentor\Reflection\File;
-use PHPUnit\Util\Filesystem;
 
 class ReferenceController extends Controller
 {
@@ -29,30 +24,35 @@ class ReferenceController extends Controller
      */
     public function index(Request $request)
     {
-
         // Get thesaurus directory
         $resource_dir = resource_path('thesauruses/');
 
         // Read JSON file
         $meta_data = $this->extractJson($resource_dir . 'meta_info.json');
-        $meta_data_lang = $meta_data["languages"];
+        $meta_data_langs = $meta_data["languages"];
 
-//        foreach ($meta_data['languages'] as $key => $value);
-//        }
+        $concept = $request->query('concept');
 
-        $responseData = array();
         try {
             $lang_name = $request->query('lang');
-            $lang_dir = $meta_data['languages'][$lang_name]; // ? $meta_data['languages'][$request->query('lang')] : "";
+            $lang_dir = $meta_data_langs[$lang_name];
 
-            $lang_data = $this->extractJson($resource_dir . $lang_dir . "/data_types.json");
+            $lang_data = ($this->extractJson($resource_dir . $lang_dir . "/" . $concept . ".json"))[$concept];
+
+            // Probably not the most efficient way to look for all the categories, but I can fix this later
+            // TODO: add category list to JSON files
+            $categories = array();
+            foreach($lang_data as $key => $value) {
+                if(!in_array($value["category"], $categories)) {
+                    array_push($categories, $value["category"]);
+                }
+            }
 
             $responseData = array(
-                "concept" => $request->query('concept'),
+                "concept" => $concept,
                 "lang" => $lang_name,
                 "lang_shortname" => $lang_dir,
-                "concepts" => ["Concept 1", "Concept 2", "Concept 3"],
-                "langConcepts" => $lang_data["data_types"][0]["numerical"],
+                "langConcepts" => $lang_data,
             );
 
         }
@@ -64,72 +64,4 @@ class ReferenceController extends Controller
         return view('reference', $responseData);
     }
 
-//    /**
-//     * Show the form for creating a new resource.
-//     *
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function create()
-//    {
-//        //
-//    }
-
-//    /**
-//     * Store a newly created resource in storage.
-//     *
-//     * @param  \Illuminate\Http\Request  $request
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function store(Request $request)
-//    {
-//        //
-//    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param string    $id1
-     * @param string    $id2
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $message = "Lang 1 is " . $id1;
-
-        return new Response($message);
-    }
-
-//    /**
-//     * Show the form for editing the specified resource.
-//     *
-//     * @param  int  $id
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function edit($id)
-//    {
-//        //
-//    }
-
-//    /**
-//     * Update the specified resource in storage.
-//     *
-//     * @param  \Illuminate\Http\Request  $request
-//     * @param  int  $id
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function update(Request $request, $id)
-//    {
-//        //
-//    }
-
-//    /**
-//     * Remove the specified resource from storage.
-//     *
-//     * @param  int  $id
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function destroy($id)
-//    {
-//        //
-//    }
 }
