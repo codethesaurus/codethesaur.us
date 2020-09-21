@@ -4,14 +4,8 @@ language: php
 php:
 - '7.1'
 - '7.2'
-
-cache:
-  directories:
-  - "$HOME/.composer/cache/files"
-
-before_script:
-  - composer self-update
-  - composer install --no-interaction
+- '7.3'
+- '7.4'
 
 script:
-  - vendor/bin/phpunit --coverage-text
+  - echo "hey! I'll replace this with a better build command later"
