@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "language": "python",
+    "language_version": "3.7",
+    "language_name": "Python"
+  },
+  "data_types": {
+    "boolean" : {
+      "id": "boolean",
+      "category": "numerical",
+      "name": "Boolean",
+      "code": "int"
+    },
+    "integer_16_bit" : {
+      "id": "integer_16_bit",
+      "category": "numerical",
+      "name": "16-bit integer",
+      "code": null
+    },
+    "integer_32_bit": {
+      "id": "integer_32_bit",
+      "category": "numerical",
+      "name": "32-bit integer",
+      "code": null
+    },
+    "integer_64_bit": {
+      "id": "integer_64_bit",
+      "category": "numerical",
+      "name": "64-bit integer",
+      "code": null
+    },
+    "integer_as_object": {
+      "id": "integer_as_object",
+      "category": "numerical",
+      "name": "Object-based Integer",
+      "code": "int"
+    },
+    "float_16_bit": {
+      "id": "float_16_bit",
+      "category": "numerical",
+      "name": "16-bit floating point",
+      "code": null
+    },
+    "float_32_bit": {
+      "id": "float_32_bit",
+      "category": "numerical",
+      "name": "32-bit floating point",
+      "code": null
+    },
+    "float_64_bit": {
+      "id": "float_64_bit",
+      "category": "numerical",
+      "name": "64-bit floating point",
+      "code": null
+    },
+    "float_as_object": {
+      "id": "float_as_object",
+      "category": "numerical",
+      "name": "Object-based floating point",
+      "code": "float"
+    },
+    "string_as_object": {
+      "id": "string_as_object",
+      "category": "strings",
+      "name": "String as an object",
+      "code": "str"
+    },
+    "string_as_array": {
+      "id": "string_as_array",
+      "category": "strings",
+      "name": "String as an array",
+      "code": null
+    },
+    "complex_as_object": {
+      "id": "complex_as_object",
+      "category": "complex_numbers",
+      "name": "Complex Number as an object",
+      "code": "complex"
+    },
+    "real_number_part": {
+      "id": "real_number_part",
+      "category": "complex_numbers",
+      "name": "Complex number real part",
+      "code": "complex(real)"
+    },
+    "imaginary_number_part": {
+      "id": "imaginary_number_part",
+      "category": "complex_numbers",
+      "name": "Complex number imaginary part",
+      "code": "complex(real, imaginary)"
+    }
+  }
+}
