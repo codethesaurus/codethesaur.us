@@ -5,12 +5,18 @@ from . import views
 urlpatterns = [
     # /
     path('', views.index, name='index'),
+
     # /about/
     path('about/', views.about, name='about'),
-    # # ex: /polls/5/
-    # path('<int:lang_id>/', views.detail, name='detail'),
-    # # ex: /polls/5/results/
-    # path('<int:lang_id>/results/', views.results, name='results'),
-    # # ex: /polls/5/vote/
-    # path('<int:lang_id>/vote/', views.vote, name='vote'),
+
+    # /compare/lang1/lang2
+    #path('<str:lang1>/<str:lang2>/', views.detail, name='detail')
+    # /compare/
+    path('compare/', views.compare, name='compare'),
+
+    # /reference/
+    # path('compare/', controller.for.reference???, name='reference'),
+    # /reference/lang1/
+    # path('<int:lang_id>/', views.refnerence, name='reference'),
+
 ]
