@@ -69,9 +69,6 @@ def compare(request):
         "lang2": lang2,
         "lang1_friendlyname": lang1_friendlyname,
         "lang2_friendlyname": lang2_friendlyname,
-        # "categories": categories
-        #"lang1Concepts": lang1_concept,   #remove?
-        #"lang2Concepts": lang2_concept    #remove?
         "common_concepts": common_concepts
     }
 
@@ -80,6 +77,39 @@ def compare(request):
 # add in compare with /compare/lang1/lang2 in the future
 
 
-def reference(request, language):
-    return HttpResponse("Placeholder...")
+def reference(request):
+    # TODO: try/catch
+
+    with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+        meta_data = meta_file.read()
+    meta_data_langs = json.loads(meta_data)["languages"]
+
+    lang = request.GET.get('lang', '')
+    lang_directory = meta_data_langs[lang]
+
+    concept = request.GET.get('concept', '')
+
+    with open("web/thesauruses/" + lang_directory + "/" + concept + ".json", 'r') as lang_file:
+        data = lang_file.read()
+    # parse file
+    lang_file_json = json.loads(data)
+    lang_concept = lang_file_json[concept]
+    lang_friendlyname = lang_file_json["meta"]["language_name"]
+
+    common_concepts =[]
+    for key in list(lang_concept.keys()):
+        common_concepts.append({
+            "key": key,
+            "lang": lang_concept[key]
+        })
+
+    response = {
+        "title": "Reference for " + lang,
+        "concept": concept,
+        "lang": lang,
+        "lang_friendlyname": lang_friendlyname,
+        "common_concepts": common_concepts
+    }
+
+    return render(request, 'reference.html', response)
 

@@ -17,6 +17,6 @@ urlpatterns = [
     # /reference/
     # path('compare/', controller.for.reference???, name='reference'),
     # /reference/lang1/
-    # path('<int:lang_id>/', views.refnerence, name='reference'),
+    path('reference/', views.reference, name='reference'),
 
 ]
