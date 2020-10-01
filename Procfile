@@ -1,1 +1,1 @@
-web: gunicorn web.wsgi --log-file -
+web: gunicorn codethesaurus.wsgi --log-file -
