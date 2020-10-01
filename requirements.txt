@@ -1,3 +1,4 @@
 Django~=3.1.1
 django_heroku~=0.3.1
 whitenoise~=5.2.0
+gunicorn~=20.0.4
