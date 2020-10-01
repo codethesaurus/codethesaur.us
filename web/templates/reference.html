@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="container">
+            <div class="row mt-5">
+                <h2 class="col-12">Reference for {{ lang }} for {{ concept }}</h2>
+            </div>
+            <div class="row col-12">
+                The following will eventually be a table of stuff that's populated with things from the languages
+            </div>
+            <div class="row">&nbsp;</div>
+
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="text-center">Concept</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="text-center">{{ lang }}</h5>
+                    </div>
+                </div>
+            </div>
+
+{% for item in common_concepts %}
+
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="strong">
+                                {{ item.lang.name|default:"&nbsp;" }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div><code>
+                                {{ item.lang.code|default:"&nbsp;" }}
+                            </code></div>
+                        </div>
+                    </div>
+                </div>
+{% endfor %}
+        </div>
+
+{% endblock content %}
