@@ -9,16 +9,17 @@ Good question. If there's an aspect of a language you don't know, you can compar
  
 ## Requirements
 
-* PHP 7.1
-* For ease of use, make sure `php` is in your `PATH` environment variable
+* Python 3.x
+* Django 3.11
 
 ## Cloning and running it locally
 1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
-1. Install PHP and composer. (For composer, you'll need to install the `mbstring` and `dom` extensions if you haven't.)
-1. Run `computer update` in the root directory of this repo.
-2. Then run `php artisan serve`
-3. In your broswer, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
-4. Press CTRL+C in the terminal to stop the server.
+1. Install [Python](https://www.python.org/downloads/) 
+1. For ease of use, make sure your Python folder is in your `PATH` environment variable
+1. Run `pip install Django`
+1. Then run `python manage.py runserver`
+1. In your browser, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000/](http://localhost:8000/) 
+1. Press CTRL+C in the terminal to stop the server.
 
 ## Code of Conduct
 
