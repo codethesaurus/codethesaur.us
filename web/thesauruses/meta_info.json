@@ -3,7 +3,8 @@
     "Java": "java",
     "C++": "cplusplus",
     "Python": "python",
-    "C#" : "C#"
+    "C#": "csharp"
+    "Scala": "scala"
   },
   "structures": {
     "Data Types": "data_types.json"

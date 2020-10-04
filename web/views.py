@@ -7,8 +7,13 @@ import json
 # from .models import Question
 
 def index(request):
+    with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+        meta_data = meta_file.read()
+    meta_data_langs = json.loads(meta_data)["languages"].keys
+
     content = {
-        'title': 'Welcome'
+        'title': 'Welcome',
+        'languages': meta_data_langs
     }
     return render(request, 'index.html', content)
 
