@@ -11,6 +11,12 @@
       "name": "Boolean",
       "code": "boolean"
     },
+    "integer_8_bit": {
+      "id": "integer_8_bit",
+      "category": "numerical",
+      "name": "8-bit integer",
+      "code": "byte"
+    },
     "integer_16_bit": {
       "id": "integer_16_bit",
       "category": "numerical",
