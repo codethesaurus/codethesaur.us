@@ -7,81 +7,75 @@
     "data_types": {
         "boolean": {
             "id": "boolean",
-            "category": "System.Boolean",
+            "category": "numerical",
             "name": "Boolean",
             "code": "bool"
         },
         "signed_byte": {
             "id": "signed_byte",
-            "category": "System.SByte",
+            "category": "numerical",
             "name": "Signed 8-bit integer",
             "code": "sbyte"
         },
         "unsigned_byte": {
             "id": "unsigned_byte",
-            "category": "System.Byte",
+            "category": "numerical",
             "name": "Unsigned 8-bit integer",
             "code": "byte"
         },
         "integer_signed_16_bit": {
             "id": "integer_signed_16_bit",
-            "category": "System.Int16",
+            "category": "numerical",
             "name": "Signed 16-bit integer",
             "code": "short"
         },
         "integer_unsigned_16_bit": {
             "id": "integer_unsigned_16_bit",
-            "category": "System.UInt16",
+            "category": "numerical",
             "name": "Unsigned 16-bit integer",
             "code": "ushort"
         },
         "integer_signed_32_bit": {
             "id": "integer_signed_32_bit",
-            "category": "System.Int32",
+            "category": "numerical",
             "name": "Signed 32-bit integer",
             "code": "int"
         },
         "integer_unsigned_32_bit": {
             "id": "integer_unsigned_32_bit",
-            "category": "System.UInt32",
+            "category": "numerical",
             "name": "Unsigned 32-bit integer",
             "code": "uint"
         },
         "integer_signed_64_bit": {
             "id": "integer_signed_64_bit",
-            "category": "System.Int64",
+            "category": "numerical",
             "name": "Signed 64-bit integer",
             "code": "long"
         },
         "integer_unsigned_64_bit": {
             "id": "integer_unsigned_64_bit",
-            "category": "System.UInt64",
+            "category": "numerical",
             "name": "Unsigned 64-bit integer",
             "code": "ulong"
         },
 
         "float_32_bit": {
             "id": "float_32_bit",
-            "category": "System.Single",
+            "category": "numerical",
             "name": "32-bit floating point",
             "code": "float"
         },
         "float_64_bit": {
             "id": "float_64_bit",
-            "category": "System.Double",
+            "category": "numerical",
             "name": "64-bit floating point",
             "code": "double"
         },
         "fixed_point": {
             "id": "fixed_point",
-            "category": "System.Decimal",
+            "category": "numerical",
             "name": "128-bit fixed decimal point",
-            "code": "decimal"
-        },
-        "char": {
-            "id": "fixed_point",
-            "category": "System.Char",
-            "name": "128-bit character ",
             "code": "decimal"
         }
     }
