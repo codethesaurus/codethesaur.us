@@ -3,7 +3,7 @@
     "Java": "java",
     "C++": "cplusplus",
     "Python": "python",
-    "C#": "csharp"
+    "C#": "csharp",
     "Scala": "scala"
   },
   "structures": {
