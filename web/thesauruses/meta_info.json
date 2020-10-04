@@ -2,7 +2,8 @@
   "languages": {
     "Java": "java",
     "C++": "cplusplus",
-    "Python": "python"
+    "Python": "python",
+    "C#" : "C#"
   },
   "structures": {
     "Data Types": "data_types.json"
