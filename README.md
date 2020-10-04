@@ -27,6 +27,9 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 1. In your browser, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000/](http://localhost:8000/)
 1. Press CTRL+C in the terminal to stop the server.
 
+You may need to install something that provides `pg_client`, such as
+`sudo apt install libpq-dev` on Linux or `brew install libpq` on macOS.
+
 ## Code of Conduct
 
 All contributors are required to follow the [Code Thesaurus Code of Conduct](CODE_OF_CONDUCT.md).
