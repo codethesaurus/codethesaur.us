@@ -46,7 +46,6 @@ def compare(request):
     lang2_directory = meta_data_langs.get(lang2)
 
     if not (lang1_directory and lang2_directory):
-        # TODO: Add meaninglful response
         return HttpResponseBadRequest("Lang does not exist")
 
     concept = request.GET.get('concept', '')
@@ -56,29 +55,32 @@ def compare(request):
     lang2_file_path = os.path.join(
         "web", "thesauruses", lang2_directory, concept) + ".json"
 
-    with open(lang1_file_path, 'r') as lang1_file:
-        data = lang1_file.read()
-        # parse file
-        lang1_file_json = json.loads(data)
-        lang1_concept = lang1_file_json[concept]
-        lang1_friendlyname = lang1_file_json["meta"]["language_name"]
+    try:
+        with open(lang1_file_path, 'r') as lang1_file:
+            data = lang1_file.read()
+            # parse file
+            lang1_file_json = json.loads(data)
+            lang1_concept = lang1_file_json[concept]
+            lang1_friendlyname = lang1_file_json["meta"]["language_name"]
 
-    with open(lang2_file_path, 'r') as lang2_file:
-        data = lang2_file.read()
-        # parse file
-        lang2_file_json = json.loads(data)
-        lang2_concept = lang2_file_json[concept]
-        lang2_friendlyname = lang2_file_json["meta"]["language_name"]
+        with open(lang2_file_path, 'r') as lang2_file:
+            data = lang2_file.read()
+            # parse file
+            lang2_file_json = json.loads(data)
+            lang2_concept = lang2_file_json[concept]
+            lang2_friendlyname = lang2_file_json["meta"]["language_name"]
+    except FileNotFoundError as fe:
+        return Http404
 
     common_concepts = []
     for key in (set(lang1_concept.keys()) & set(lang2_concept.keys())):
         common_concepts.append({
             "key": key,
-            "lang1": lang1_concept[key],
-            "lang2": lang2_concept[key]
+            "lang1": lang1_concept.get(key),
+            "lang2": lang2_concept.get(key),
         })
 
-    # establish order listing accross all languages
+    # establish order listing across all languages
     common_concepts.sort(key=lambda x: x["key"])
 
     # DB equivalent of full outer join
