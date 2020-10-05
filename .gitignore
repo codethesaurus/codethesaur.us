@@ -1,5 +1,4 @@
 __pycache__/
-web/tests/__pycache__/
 /node_modules
 /public/hot
 /public/storage
@@ -8,6 +7,7 @@ web/tests/__pycache__/
 /.idea
 /.vscode
 /.vagrant
+*.pyc
 Homestead.json
 Homestead.yaml
 npm-debug.log
