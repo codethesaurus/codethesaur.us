@@ -10,14 +10,14 @@ def index(request):
     content = {
         'title': 'Welcome'
     }
-    return render(request, 'index.html', content)
+    return render(request, 'web/index.html', content)
 
 
 def about(request):
     content = {
         'title': 'About'
     }
-    return render(request, 'about.html', content)
+    return render(request, 'web/about.html', content)
 
 
 def compare(request):
@@ -72,7 +72,7 @@ def compare(request):
         "common_concepts": common_concepts
     }
 
-    return render(request, 'compare.html', response)
+    return render(request, 'web/compare.html', response)
 
 # add in compare with /compare/lang1/lang2 in the future
 
@@ -111,5 +111,5 @@ def reference(request):
         "common_concepts": common_concepts
     }
 
-    return render(request, 'reference.html', response)
+    return render(request, 'web/reference.html', response)
 

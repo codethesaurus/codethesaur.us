@@ -1,9 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'web/base.html' %}
 
 {% block content %}
         <div class="container">
             <div class="row mt-5">
-                <h2 class="col-12">Reference for {{ lang }} for {{ concept }}</h2>
+                <h2 class="col-12">Comparing {{ lang1 }}'s and {{ lang2 }}'s {{ concept }}</h2>
             </div>
             <div class="row col-12">
                 The following will eventually be a table of stuff that's populated with things from the languages
@@ -18,7 +18,12 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang }}</h5>
+                        <h5 class="text-center">{{ lang1 }}</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="text-center">{{ lang2 }}</h5>
                     </div>
                 </div>
             </div>
@@ -29,14 +34,21 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="strong">
-                                {{ item.lang.name|default:"&nbsp;" }}
+                                {{ item.lang1.name|default:"&nbsp;" }}
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
                             <div><code>
-                                {{ item.lang.code|default:"&nbsp;" }}
+                                {{ item.lang1.code|default:"&nbsp;" }}
+                            </code></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div><code>
+                                {{ item.lang2.code|default:"&nbsp;" }}
                             </code></div>
                         </div>
                     </div>
