@@ -10,6 +10,8 @@
             </div>
             <div class="row">&nbsp;</div>
 
+{% for category in categories %}
+            <div class="row"><h3>{{ category.id }}</h3></div>
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
@@ -18,29 +20,31 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang }}</h5>
+                        <h5 class="text-center">Code Implementation</h5>
                     </div>
                 </div>
             </div>
 
-{% for item in common_concepts %}
-
-                <div class="card-group">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="strong">
-                                {{ item.lang.name|default:"&nbsp;" }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div><code>
-                                {{ item.lang.code|default:"&nbsp;" }}
-                            </code></div>
+    {% for concept_item in concepts %}
+        {% if concept_item.id in category.concepts %}
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="strong">
+                            {{ concept_item.name|default:"<nothing here>" }}
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div><code>
+                            {{ concept_item.code|default:"<nothing here>" }}
+                        </code></div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
 {% endfor %}
         </div>
 

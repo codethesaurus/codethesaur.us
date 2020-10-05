@@ -118,22 +118,31 @@ def reference(request):
         data = lang_file.read()
     # parse file
     lang_file_json = json.loads(data)
-    lang_concept = lang_file_json[concept]
+    lang_categories = lang_file_json[concept]
     lang_friendlyname = lang_file_json["meta"]["language_name"]
 
-    common_concepts =[]
-    for key in list(lang_concept.keys()):
-        common_concepts.append({
-            "key": key,
-            "lang": lang_concept[key]
+    categories = []
+    concepts = []
+    for key in list(lang_categories.keys()):
+        categories.append({
+            "id": key,
+            "concepts": list(lang_categories[key])
         })
+        for concept in list(lang_categories[key]):
+            concepts.append({
+                "id": concept,
+                "name": lang_categories[key][concept]["name"],
+                "code": lang_categories[key][concept]["code"]
+            })
+
 
     response = {
         "title": "Reference for " + lang,
         "concept": concept,
         "lang": lang,
         "lang_friendlyname": lang_friendlyname,
-        "common_concepts": common_concepts
+        "categories": categories,
+        "concepts": concepts
     }
 
     return render(request, 'reference.html', response)
