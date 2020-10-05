@@ -1,8 +1,9 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
-import json
 
+import json
+import os
 
 # from .models import Question
 
@@ -43,28 +44,35 @@ def compare(request):
 
     concept = request.GET.get('concept', '')
 
-    with open("web/thesauruses/" + lang1_directory + "/" + concept + ".json", 'r') as lang1_file:
+    lang1_file_path = os.path.join(
+        "web", "thesauruses", lang1_directory, concept) + ".json"
+    lang2_file_path = os.path.join(
+        "web", "thesauruses", lang2_directory, concept) + ".json"
+
+    with open(lang1_file_path, 'r') as lang1_file:
         data = lang1_file.read()
-    # parse file
-    lang1_file_json = json.loads(data)
-    lang1_concept = lang1_file_json[concept]
-    lang1_friendlyname = lang1_file_json["meta"]["language_name"]
+        # parse file
+        lang1_file_json = json.loads(data)
+        lang1_concept = lang1_file_json[concept]
+        lang1_friendlyname = lang1_file_json["meta"]["language_name"]
 
-    with open("web/thesauruses/" + lang2_directory + "/" + concept + ".json", 'r') as lang2_file:
+    with open(lang2_file_path, 'r') as lang2_file:
         data = lang2_file.read()
-    # parse file
-    lang2_file_json = json.loads(data)
-    lang2_concept = lang2_file_json[concept]
-    lang2_friendlyname = lang2_file_json["meta"]["language_name"]
+        # parse file
+        lang2_file_json = json.loads(data)
+        lang2_concept = lang2_file_json[concept]
+        lang2_friendlyname = lang2_file_json["meta"]["language_name"]
 
-    common_concepts =[]
-    for key in list(set.union(set(lang1_concept.keys()), set(lang2_concept.keys()))):
+    common_concepts = []
+    for key in (set(lang1_concept.keys()) & set(lang2_concept.keys())):
         common_concepts.append({
             "key": key,
             "lang1": lang1_concept[key],
             "lang2": lang2_concept[key]
         })
 
+    # establish order listing accross all languages
+    common_concepts.sort(key=lambda x: x["key"])
 
     # DB equivalent of full outer join
     response = {
