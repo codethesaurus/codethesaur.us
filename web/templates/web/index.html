@@ -1,4 +1,4 @@
-{% extends 'web/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
         <section class="jumbotron text-center">
@@ -42,22 +42,14 @@
                                     <div class="card-text">
                                         <div class="form-group">
                                             <select class="form-control" id="lang1" name="lang1">
-                                                <option>C++</option>
-<!--                                                <option>Haskell</option>-->
-                                                <option>Java</option>
-<!--                                                <option>JavaScript</option>-->
-<!--                                                <option>PHP</option>-->
-                                                <option selected>Python</option>
-<!--                                                <option>Ruby</option>-->
+                                                {% for lang in languages %}
+                                                <option>{{ lang }}</option>
+                                                {% endfor %}
                                             </select>
                                             <select class="form-control" id="lang2" name="lang2">
-                                                <option>C++</option>
-<!--                                                <option>Haskell</option>-->
-                                                <option>Java</option>
-<!--                                                <option>JavaScript</option>-->
-<!--                                                <option>PHP</option>-->
-                                                <option>Python</option>
-<!--                                                <option selected>Ruby</option>-->
+                                                {% for lang in languages %}
+                                                <option>{{ lang }}</option>
+                                                {% endfor %}
                                             </select>
                                         </div>
                                     </div>
@@ -100,13 +92,9 @@
                                     </div>
                                     <div class="card-text">
                                         <select class="form-control" id="lang" name="lang">
-                                            <option>C++</option>
-<!--                                            <option>Haskell</option>-->
-                                            <option>Java</option>
-<!--                                            <option>JavaScript</option>-->
-<!--                                            <option>PHP</option>-->
-                                            <option selected>Python</option>
-<!--                                            <option>Ruby</option>-->
+                                                {% for lang in languages %}
+                                                <option>{{ lang }}</option>
+                                                {% endfor %}
                                         </select>
                                     </div>
                                 </div>

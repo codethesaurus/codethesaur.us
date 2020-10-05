@@ -1,45 +1,42 @@
 {
   "meta": {
-    "language": "java",
-    "language_version": "11",
-    "language_name": "Java"
+    "language": "scala",
+    "language_version": "2.13.x",
+    "language_name": "Scala"
   },
   "data_types": {
     "boolean": {
       "id": "boolean",
       "category": "numerical",
       "name": "Boolean",
-      "code": "boolean"
+      "code": "Boolean"
     },
     "integer_8_bit": {
       "id": "integer_8_bit",
       "category": "numerical",
       "name": "8-bit integer",
-      "code": "byte"
+      "code": "Byte"
     },
     "integer_16_bit": {
       "id": "integer_16_bit",
       "category": "numerical",
       "name": "16-bit integer",
-      "code": "short"
+      "code": "Short"
     },
     "integer_32_bit": {
       "id": "integer_32_bit",
       "category": "numerical",
       "name": "32-bit integer",
-      "code": "int"
+      "code": "Int"
     },
     "integer_64_bit": {
       "id": "integer_64_bit",
       "category": "numerical",
       "name": "64-bit integer",
-      "code": "long"
+      "code": "Long"
     },
     "integer_as_object": {
-      "id": "integer_as_object",
-      "category": "numerical",
-      "name": "Object-based Integer",
-      "code": "Integer"
+
     },
     "float_16_bit": {
       "id": "float_16_bit",
@@ -51,13 +48,13 @@
       "id": "float_32_bit",
       "category": "numerical",
       "name": "32-bit floating point",
-      "code": "float"
+      "code": "Float"
     },
     "float_64_bit": {
       "id": "float_64_bit",
       "category": "numerical",
       "name": "64-bit floating point",
-      "code": "double"
+      "code": "Double"
     },
     "float_as_object": {
       "id": "float_as_object",
@@ -75,7 +72,7 @@
       "id": "string_as_array",
       "category": "strings",
       "name": "String as an array",
-      "code": "char[]"
+      "code": null
     },
     "complex_as_object": {
       "id": "complex_as_object",

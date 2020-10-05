@@ -31,4 +31,4 @@ Original text courtesy of the Speak Up! project and the Django Project.
 
 ## Questions?
 
-If you have questions, please see the [Django Code of Conduct FAQ](https://www.djangoproject.com/conduct/faq/). If that doesn't answer your questions, feel free to contact us.
+If you have questions, please reach out to us on [Twitter](https://twitter.com/codethesaurus) or by [email](mailto:conduct@codethesaur.us).
