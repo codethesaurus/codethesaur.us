@@ -1,4 +1,7 @@
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.http import (
+    HttpResponse, Http404, HttpResponseRedirect,
+    HttpResponseBadRequest,
+)
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 
@@ -39,8 +42,12 @@ def compare(request):
 
     lang1 = request.GET.get('lang1', '')
     lang2 = request.GET.get('lang2', '')
-    lang1_directory = meta_data_langs[lang1]
-    lang2_directory = meta_data_langs[lang2]
+    lang1_directory = meta_data_langs.get(lang1)
+    lang2_directory = meta_data_langs.get(lang2)
+
+    if not (lang1_directory and lang2_directory):
+        # TODO: Add meaninglful response
+        return HttpResponseBadRequest("Lang does not exist")
 
     concept = request.GET.get('concept', '')
 
