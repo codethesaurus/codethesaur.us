@@ -1,8 +1,12 @@
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.http import (
+    HttpResponse, Http404, HttpResponseRedirect,
+    HttpResponseBadRequest,
+)
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
-import json
 
+import json
+import os
 
 # from .models import Question
 
@@ -38,33 +42,49 @@ def compare(request):
 
     lang1 = request.GET.get('lang1', '')
     lang2 = request.GET.get('lang2', '')
-    lang1_directory = meta_data_langs[lang1]
-    lang2_directory = meta_data_langs[lang2]
+    lang1_directory = meta_data_langs.get(lang1)
+    lang2_directory = meta_data_langs.get(lang2)
+
+    if not (lang1_directory and lang2_directory):
+        return HttpResponseBadRequest("Lang does not exist")
 
     concept = request.GET.get('concept', '')
 
-    with open("web/thesauruses/" + lang1_directory + "/" + concept + ".json", 'r') as lang1_file:
-        data = lang1_file.read()
-    # parse file
-    lang1_file_json = json.loads(data)
-    lang1_concept = lang1_file_json[concept]
-    lang1_friendlyname = lang1_file_json["meta"]["language_name"]
+    lang1_file_path = os.path.join(
+        "web", "thesauruses", lang1_directory, concept) + ".json"
+    lang2_file_path = os.path.join(
+        "web", "thesauruses", lang2_directory, concept) + ".json"
 
-    with open("web/thesauruses/" + lang2_directory + "/" + concept + ".json", 'r') as lang2_file:
-        data = lang2_file.read()
-    # parse file
-    lang2_file_json = json.loads(data)
-    lang2_concept = lang2_file_json[concept]
-    lang2_friendlyname = lang2_file_json["meta"]["language_name"]
+    try:
+        with open(lang1_file_path, 'r') as lang1_file:
+            data = lang1_file.read()
+            # parse file
+            lang1_file_json = json.loads(data)
+            lang1_concept = lang1_file_json[concept]
+            lang1_friendlyname = lang1_file_json["meta"]["language_name"]
 
-    common_concepts =[]
-    for key in list(set.union(set(lang1_concept.keys()), set(lang2_concept.keys()))):
+        with open(lang2_file_path, 'r') as lang2_file:
+            data = lang2_file.read()
+            # parse file
+            lang2_file_json = json.loads(data)
+            lang2_concept = lang2_file_json[concept]
+            lang2_friendlyname = lang2_file_json["meta"]["language_name"]
+    except FileNotFoundError as fe:
+        return Http404
+
+    common_concepts = []
+    # XXX: Ideally we should set default value of lang dict here
+    # and not in template but that will be possible after issue #27
+    # is resolved
+    for key in (set(lang1_concept.keys()) | set(lang2_concept.keys())):
         common_concepts.append({
             "key": key,
-            "lang1": lang1_concept[key],
-            "lang2": lang2_concept[key]
+            "lang1": lang1_concept.get(key),
+            "lang2": lang2_concept.get(key),
         })
 
+    # establish order listing across all languages
+    common_concepts.sort(key=lambda x: x["key"])
 
     # DB equivalent of full outer join
     response = {
