@@ -73,7 +73,10 @@ def compare(request):
         return Http404
 
     common_concepts = []
-    for key in (set(lang1_concept.keys()) & set(lang2_concept.keys())):
+    # XXX: Ideally we should set default value of lang dict here
+    # and not in template but that will be possible after issue #27
+    # is resolved
+    for key in (set(lang1_concept.keys()) | set(lang2_concept.keys())):
         common_concepts.append({
             "key": key,
             "lang1": lang1_concept.get(key),
