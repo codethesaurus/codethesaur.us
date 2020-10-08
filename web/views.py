@@ -93,6 +93,17 @@ def compare(request):
         })
 
     for concept_key in all_concept_keys:
+        if lang1_concepts.get(concept_key) is None:
+            lang1_concepts[concept_key] = {
+                "name": "",
+                "code": ""
+            }
+        if lang2_concepts.get(concept_key) is None:
+            lang2_concepts[concept_key] = {
+                "name": "",
+                "code": ""
+            }
+
         both_concepts.append({
             "id": concept_key,
             "name1": lang1_concepts[concept_key]["name"],
@@ -155,8 +166,8 @@ def reference(request):
     for concept_key in lang_concepts.keys():
         concepts.append({
             "id": concept_key,
-            "name": lang_concepts[concept_key]["name"],
-            "code": lang_concepts[concept_key]["code"]
+            "name": "" or lang_concepts[concept_key]["name"],
+            "code": "" or lang_concepts[concept_key]["code"]
         })
 
     response = {
