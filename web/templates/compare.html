@@ -10,7 +10,9 @@
             </div>
             <div class="row">&nbsp;</div>
 
-            <div class="card-group">
+{% for category in categories %}
+           <div class="row"><h3>{{ category.id }}</h3></div>
+           <div class="card-group">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="text-center">Concept</h5>
@@ -18,41 +20,45 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang1 }}</h5>
+                        <h5 class="text-center">{{ lang1 }}'s Implementation</h5>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang2 }}</h5>
+                        <h5 class="text-center">{{ lang2 }}'s Implementation</h5>
                     </div>
                 </div>
             </div>
 
-{% for item in common_concepts %}
-
+    {% for concept_item in category.concepts %}
+        {% for c in concepts %}
+            {% if c.id == concept_item %}
                 <div class="card-group">
                     <div class="card">
                         <div class="card-body">
                             <div class="strong">
-                                {{ item.lang1.name|default:"&nbsp;" }}
+                                {{ c.name1|default:"Unsupported or Not Needed" }}
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
                             <div><code>
-                                {{ item.lang1.code|default:"Unsupported or Not Needed" }}
+                                {{ c.code1|default:"Unsupported or Not Needed" }}
                             </code></div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
                             <div><code>
-                                {{ item.lang2.code|default:"Unsupported or Not Needed" }}
+                                {{ c.code2|default:"Unsupported or Not Needed" }}
                             </code></div>
                         </div>
                     </div>
                 </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
 {% endfor %}
         </div>
 

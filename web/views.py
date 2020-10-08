@@ -60,31 +60,49 @@ def compare(request):
             data = lang1_file.read()
             # parse file
             lang1_file_json = json.loads(data)
-            lang1_concept = lang1_file_json[concept]
+
             lang1_friendlyname = lang1_file_json["meta"]["language_name"]
+            lang1_categories = lang1_file_json["categories"]
+            lang1_concepts = lang1_file_json[concept]
 
         with open(lang2_file_path, 'r') as lang2_file:
             data = lang2_file.read()
             # parse file
             lang2_file_json = json.loads(data)
-            lang2_concept = lang2_file_json[concept]
+
             lang2_friendlyname = lang2_file_json["meta"]["language_name"]
+            lang2_categories = lang2_file_json["categories"]
+            lang2_concepts = lang2_file_json[concept]
+
     except FileNotFoundError as fe:
         return Http404
 
-    common_concepts = []
+    both_categories = []
+    both_concepts = []
     # XXX: Ideally we should set default value of lang dict here
     # and not in template but that will be possible after issue #27
     # is resolved
-    for key in (set(lang1_concept.keys()) | set(lang2_concept.keys())):
-        common_concepts.append({
-            "key": key,
-            "lang1": lang1_concept.get(key),
-            "lang2": lang2_concept.get(key),
+
+    all_category_keys = list(set.union(set(lang1_categories.keys()), set(lang2_categories.keys())))
+    all_concept_keys = list(set.union(set(lang1_concepts.keys()), set(lang2_concepts.keys())))
+
+    for category_key in all_category_keys:
+        both_categories.append({
+            "id": category_key,
+            "concepts": lang1_categories[category_key]
+        })
+
+    for concept_key in all_concept_keys:
+        both_concepts.append({
+            "id": concept_key,
+            "name1": lang1_concepts[concept_key]["name"],
+            "name2": lang2_concepts[concept_key]["name"],
+            "code1": lang1_concepts[concept_key]["code"],
+            "code2": lang2_concepts[concept_key]["code"]
         })
 
     # establish order listing across all languages
-    common_concepts.sort(key=lambda x: x["key"])
+    # common_concepts.sort(key=lambda x: x["key"])
 
     # DB equivalent of full outer join
     response = {
@@ -94,7 +112,8 @@ def compare(request):
         "lang2": lang2,
         "lang1_friendlyname": lang1_friendlyname,
         "lang2_friendlyname": lang2_friendlyname,
-        "common_concepts": common_concepts
+        "categories": both_categories,
+        "concepts": both_concepts
     }
 
     return render(request, 'compare.html', response)
@@ -112,29 +131,33 @@ def reference(request):
     lang = request.GET.get('lang', '')
     lang_directory = meta_data_langs[lang]
 
+    if not (lang_directory):
+        return HttpResponseBadRequest("Lang does not exist")
+
     concept = request.GET.get('concept', '')
 
     with open("web/thesauruses/" + lang_directory + "/" + concept + ".json", 'r') as lang_file:
         data = lang_file.read()
     # parse file
     lang_file_json = json.loads(data)
-    lang_categories = lang_file_json[concept]
+
     lang_friendlyname = lang_file_json["meta"]["language_name"]
+    lang_categories = lang_file_json["categories"]
+    lang_concepts = lang_file_json[concept]
 
     categories = []
     concepts = []
-    for key in list(lang_categories.keys()):
+    for category_key in lang_categories.keys():
         categories.append({
-            "id": key,
-            "concepts": list(lang_categories[key])
+            "id": category_key,
+            "concepts": lang_categories[category_key]
         })
-        for concept in list(lang_categories[key]):
-            concepts.append({
-                "id": concept,
-                "name": lang_categories[key][concept]["name"],
-                "code": lang_categories[key][concept]["code"]
-            })
-
+    for concept_key in lang_concepts.keys():
+        concepts.append({
+            "id": concept_key,
+            "name": lang_concepts[concept_key]["name"],
+            "code": lang_concepts[concept_key]["code"]
+        })
 
     response = {
         "title": "Reference for " + lang,

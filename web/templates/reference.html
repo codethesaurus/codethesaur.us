@@ -20,30 +20,32 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">Code Implementation</h5>
+                        <h5 class="text-center">{{ lang }}'s Implementation</h5>
                     </div>
                 </div>
             </div>
 
-    {% for concept_item in concepts %}
-        {% if concept_item.id in category.concepts %}
+    {% for concept_item in category.concepts %}
+        {% for c in concepts %}
+            {% if c.id == concept_item %}
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
                         <div class="strong">
-                            {{ concept_item.name|default:"<nothing here>" }}
+                            {{ c.name }}
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
                         <div><code>
-                            {{ concept_item.code|default:"<nothing here>" }}
+                            {{ c.code|default:"Unsupported or Not Needed" }}
                         </code></div>
                     </div>
                 </div>
             </div>
-        {% endif %}
+            {% endif %}
+        {% endfor %}
     {% endfor %}
 {% endfor %}
         </div>
