@@ -1,9 +1,9 @@
 {
   "languages": {
-    "Java": "java",
     "C++": "cplusplus",
-    "Python": "python",
     "C#": "csharp",
+    "Java": "java",
+    "Python": "python",
     "Scala": "scala"
   },
   "structures": {
