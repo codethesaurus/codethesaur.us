@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load templatetags %}
 
 {% block content %}
         <div class="container">
@@ -33,13 +34,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div><code>
-                                {{ item.lang.code|default:"&nbsp;" }}
-                            </code></div>
-                        </div>
-                    </div>
+                    {% comparecard item.lang.code %}
                 </div>
 {% endfor %}
         </div>
