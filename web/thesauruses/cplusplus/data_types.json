@@ -4,68 +4,84 @@
     "language_version": "C++17",
     "language_name": "C++"
   },
+  "categories": {
+    "Numerical": [
+      "boolean",
+      "integer_16_bit",
+      "integer_32_bit",
+      "integer_64_bit",
+      "integer_as_object",
+      "float_16_bit",
+      "float_32_bit",
+      "float_64_bit",
+      "float_as_object"
+    ],
+    "Strings": [
+      "string_as_object",
+      "string_as_array"
+    ],
+    "Complex Numbers": [
+      "complex_as_object",
+      "real_number_part",
+      "imaginary_number_part"
+    ]
+  },
   "data_types": {
-    "numerical": {
-      "boolean": {
-        "name": "Boolean",
-        "code": "bool"
-      },
-      "integer_16_bit": {
-        "name": "16-bit integer",
-        "code": "int"
-      },
-      "integer_32_bit": {
-        "name": "32-bit integer",
-        "code": "long"
-      },
-      "integer_64_bit": {
-        "name": "64-bit integer",
-        "code": "long long"
-      },
-      "integer_as_object": {
-        "name": "Object-based Integer",
-        "code": null
-      },
-      "float_16_bit": {
-        "name": "16-bit floating point",
-        "code": "float"
-      },
-      "float_32_bit": {
-        "name": "32-bit floating point",
-        "code": "double"
-      },
-      "float_64_bit": {
-        "name": "64-bit floating point",
-        "code": "long double"
-      },
-      "float_as_object": {
-        "name": "Object-based floating point",
-        "code": null
-      }
+    "boolean": {
+      "name": "Boolean",
+      "code": "bool"
     },
-     "strings": {
-      "string_as_object": {
-        "name": "String as an object",
-        "code": "string"
-      },
-      "string_as_array": {
-        "name": "String as an array",
-        "code": "char[]"
-      }
+    "integer_16_bit": {
+      "name": "16-bit integer",
+      "code": "int"
     },
-    "complex": {
-      "complex_as_object": {
-        "name": "Complex Number as an object",
-        "code": "class complex"
-      },
-      "real_number_part": {
-        "name": "Complex number real part",
-        "code": "complex.real"
-      },
-      "imaginary_number_part": {
-        "name": "Complex number imaginary part",
-        "code": "complex.imag"
-      }
+    "integer_32_bit": {
+      "name": "32-bit integer",
+      "code": "long"
+    },
+    "integer_64_bit": {
+      "name": "64-bit integer",
+      "code": "long long"
+    },
+    "integer_as_object": {
+      "name": "Object-based Integer",
+      "code": null
+    },
+    "float_16_bit": {
+      "name": "16-bit floating point",
+      "code": "float"
+    },
+    "float_32_bit": {
+      "name": "32-bit floating point",
+      "code": "double"
+    },
+    "float_64_bit": {
+      "name": "64-bit floating point",
+      "code": "long double"
+    },
+    "float_as_object": {
+      "name": "Object-based floating point",
+      "code": null
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "code": "string"
+    },
+    "string_as_array": {
+      "name": "String as an array",
+      "code": "char[]"
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "code": "class complex"
+    },
+    "real_number_part": {
+      "name": "Complex number real part",
+      "code": "complex.real"
+    },
+    "imaginary_number_part": {
+      "name": "Complex number imaginary part",
+      "code": "complex.imag"
     }
- }
+  }
 }
