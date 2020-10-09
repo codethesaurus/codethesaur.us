@@ -1,7 +1,7 @@
 Master: [![Build Status](https://travis-ci.com/codethesaurus/codethesaur.us.svg?branch=master)](https://travis-ci.com/codethesaurus/codethesaur.us)
 Develop: [![Build Status](https://travis-ci.com/codethesaurus/codethesaur.us.svg?branch=develop)](https://travis-ci.com/codethesaurus/codethesaur.us)
 
-## codethesaur.us
+## [codethesaur.us](http://codethesaur.us/)
 Website that will compare language features side by side.
 
 ## Why would you want this?
