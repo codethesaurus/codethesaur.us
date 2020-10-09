@@ -9,8 +9,10 @@
             <div class="row col-12">
                 The following will eventually be a table of stuff that's populated with things from the languages
             </div>
-            <div class="row">&nbsp;</div>
 
+{% for category in categories %}
+            <div class="row">&nbsp;</div>
+            <div class="row"><h3>{{ category.id }}</h3></div>
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
@@ -19,24 +21,29 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang }}</h5>
+                        <h5 class="text-center">{{ lang }}'s Implementation</h5>
                     </div>
                 </div>
             </div>
 
-{% for item in common_concepts %}
-
-                <div class="card-group">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="strong">
-                                {{ item.lang.name|default:"&nbsp;" }}
-                            </div>
+    {% for concept_item in category.concepts %}
+        {% for c in concepts %}
+            {% if c.id == concept_item %}
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="strong">
+                            {{ c.name }}
                         </div>
                     </div>
-                    {% comparecard item.lang.code %}
                 </div>
+                {% comparecard c.code %}
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
 {% endfor %}
         </div>
+
 
 {% endblock content %}
