@@ -7,6 +7,7 @@
     "Scala": "scala"
   },
   "structures": {
-    "Data Types": "data_types.json"
+    "Data Types": "data_types.json",
+    "Functions/Methods": "functions.json"
   }
 }
