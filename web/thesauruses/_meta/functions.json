@@ -21,7 +21,7 @@
       "anonymous_function_variable_parameters"
     ]
   },
-  "data_types": {
+  "functions": {
     "void_function_no_parameters": {
       "name": "Function that does not return a value and takes no parameters",
       "code": ""
