@@ -56,8 +56,6 @@ python manage.py runserver
 deactivate
 ```
 
-- 
-
 
 
 ## Code of Conduct
