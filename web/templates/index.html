@@ -42,11 +42,13 @@
                                     <div class="card-text">
                                         <div class="form-group">
                                             <select class="form-control" id="lang1" name="lang1">
+                                                <option selected>{{exampleLanguages.0}}</option>
                                                 {% for lang in languages %}
                                                 <option>{{ lang }}</option>
                                                 {% endfor %}
                                             </select>
                                             <select class="form-control" id="lang2" name="lang2">
+                                                <option selected>{{exampleLanguages.1}}</option>
                                                 {% for lang in languages %}
                                                 <option>{{ lang }}</option>
                                                 {% endfor %}
@@ -92,6 +94,7 @@
                                     </div>
                                     <div class="card-text">
                                         <select class="form-control" id="lang" name="lang">
+                                                <option selected>{{exampleLanguages.2}}</option>
                                                 {% for lang in languages %}
                                                 <option>{{ lang }}</option>
                                                 {% endfor %}
