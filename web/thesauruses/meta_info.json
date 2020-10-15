@@ -9,6 +9,6 @@
   "structures": {
     "Control Structures": "control_structures.json",
     "Data Types": "data_types.json",
-    "Functions/Methods": "functions.json"
+    "Functions/Methods/Subroutines": "functions.json"
   }
 }
