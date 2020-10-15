@@ -19,6 +19,10 @@
       "anonymous_function_no_parameters",
       "anonymous_function_with_parameters",
       "anonymous_function_variable_parameters"
+    ],
+    "Subroutines": [
+      "call_subroutine",
+      "return_from_subroutine"
     ]
   },
   "functions": {
