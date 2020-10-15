@@ -14,10 +14,12 @@ def index(request):
     with open("web/thesauruses/meta_info.json", 'r') as meta_file:
         meta_data = meta_file.read()
     meta_data_langs = json.loads(meta_data)["languages"].keys
+    meta_structures = json.loads(meta_data)["structures"].keys
 
     content = {
         'title': 'Welcome',
-        'languages': meta_data_langs
+        'languages': meta_data_langs,
+        'structures': meta_structures
     }
     return render(request, 'index.html', content)
 
