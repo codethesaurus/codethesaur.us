@@ -69,7 +69,7 @@ def compare(request):
             lang2_concepts = lang2_file_json[concept]
 
     except:
-        return HttpResponse("The " + concept + " concept of either the " + lang1 + " or " + lang2 + " languages doesn't exist or hasn't been implemented yet.")
+        return HttpResponse("The " + request.GET.get('concept', '') + " concept of either the " + request.GET.get('lang1', '') + " or " + request.GET.get('lang2', '') + " languages doesn't exist or hasn't been implemented yet.")
 
     both_categories = []
     both_concepts = []
@@ -144,12 +144,12 @@ def reference(request):
             data = lang_file.read()
         # parse file
         lang_file_json = json.loads(data)
-    except:
-        return HttpResponse("The " + concept + " concept of the " + lang + " either doesn't exist or hasn't been implemented yet.")
 
-    lang_friendly_name = lang_file_json["meta"]["language_name"]
-    lang_categories = lang_file_json["categories"]
-    lang_concepts = lang_file_json[concept]
+        lang_friendly_name = lang_file_json["meta"]["language_name"]
+        lang_categories = lang_file_json["categories"]
+        lang_concepts = lang_file_json[concept]
+    except:
+        return HttpResponse("The " + request.GET.get('concept', '') + " concept of the " + request.GET.get('lang', '') + " either doesn't exist or hasn't been implemented yet.")
 
     categories = []
     concepts = []
