@@ -46,4 +46,4 @@ Finally, the Working Group will make a report on the situation to the Code Thesa
 
 ## Reconsideration
 
-Any of the parties directly involved or affected can request reconsideration of the committee’s decision. To make such a request, contact the Core Team at coreteam@codethesaur.us with your request and motivation and the Core Team will review the case.
+Any of the parties directly involved or affected can request reconsideration of the committee’s decision. To make such a request, contact the Core Team at conduct@codethesaur.us with your request and motivation and the Core Team will review the case.
