@@ -20,7 +20,7 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 
 ## Cloning and running it locally
 
-1. Clone the project (`C`)
+1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
 1. Install [Python](https://www.python.org/downloads/)
 1. For ease of use, make sure your Python folder is in your `PATH` environment variable
 1. Run `pip install -r requirements.txt`
@@ -30,33 +30,15 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 
 ## For mac users
 
-- open your terminal, clone the project
-```
-git clone https://github.com/codethesaurus/codethesaur.us.git
-
-pip3 install virtualenv
-
-// set up new virtual environment
-
-virtualenv --no-site-packages venv
-
-// activate virtual environment
-
-source venv/bin/activate
-
-pip install -r requirements.txt
-
-python manage.py runserver
-
-//  In your browser, visit http:localhost:8000
-//   CTRL - C in the terminal to stop the server
-
-// deactivate the virtual environment
-
-deactivate
-```
-
-
+1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
+1. Run `pip3 install virtualenv`
+1. To set up new virtual environment, run `virtualenv --no-site-packages venv`
+1. To activate virtual environment, run `source venv/bin/activate`
+1. Run `pip install -r requirements.txt`
+1. Then Run `python manage.py runserver`
+1. In your browser, visit `http://127.0.0.1:8000/` or `http://localhost:8000/`
+1. Press CTRL+C in the terminal to stop the server
+1. To deactivate the virtual environment, run `deactivate`
 
 ## Code of Conduct
 
