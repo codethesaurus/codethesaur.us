@@ -17,6 +17,7 @@ Python 3.x installed, you may need to suffix all `python` and `pip` commands
 with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 3 your default Python installation.
 
+
 ## Cloning and running it locally
 
 1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
@@ -26,6 +27,18 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 1. Then run `python manage.py runserver`
 1. In your browser, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000/](http://localhost:8000/)
 1. Press CTRL+C in the terminal to stop the server.
+
+## For mac users
+
+1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
+1. Run `pip3 install virtualenv`
+1. To set up new virtual environment, run `virtualenv --no-site-packages venv`
+1. To activate virtual environment, run `source venv/bin/activate`
+1. Run `pip install -r requirements.txt`
+1. Then Run `python manage.py runserver`
+1. In your browser, visit `http://127.0.0.1:8000/` or `http://localhost:8000/`
+1. Press CTRL+C in the terminal to stop the server
+1. To deactivate the virtual environment, run `deactivate`
 
 ## Code of Conduct
 
