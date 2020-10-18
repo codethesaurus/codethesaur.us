@@ -17,8 +17,19 @@ Python 3.x installed, you may need to suffix all `python` and `pip` commands
 with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 3 your default Python installation.
 
-
 ## Cloning and running it locally
+
+** Windows **
+
+1. Check to see if Python 3.x is installed with `python --version` or `python3 --version`. If Python 3.x isn't installed, visit https://www.python.org/downloads/windows/ or install it with `choco install python`
+1. Install Python's virtual environment venv with the command `pip3 install virtualenv`
+1. To set up new virtual environment, run `virtualenv venv`
+1. To activate virtual environment, run `venv\Scripts\activate.bat`
+1. Run `pip install -r requirements.txt`
+1. Then Run `python manage.py runserver`
+1. In your browser, visit `http://127.0.0.1:8000/` or `http://localhost:8000/`
+1. Press CTRL+C in the terminal to stop the server
+1. To deactivate the virtual environment, run `venv\Scripts\deactivate.bat`
 
 **Linux deployment:**
 
@@ -62,6 +73,7 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 1. In your browser, visit `http://127.0.0.1:8000/` or `http://localhost:8000/`
 1. Press CTRL+C in the terminal to stop the server
 1. To deactivate the virtual environment, run `deactivate`
+
 
 ## Code of Conduct
 
