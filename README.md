@@ -20,9 +20,32 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 
 ## Cloning and running it locally
 
+**Linux deployment:**
+
+1. If python3 and pip3 are not installed there is a guide for [Linux systems](https://www.tecmint.com/install-pip-in-linux/)
+1. Check system default `python --version`
+   If the returned text is not python 3.x then using `python3` will be required for following steps
+   Or if you would like to set python3 as a default simply open your .bashrc file.
+   `sudo nano ~/.bashrc` and add `alias python='python3'`
+1. Django 3.11 can be installed using the pip3 package manager.
+   `pip3 install django==3.11`
+
+**Run using venv**
+1. Install venv for virtual environment
+   `sudo apt install -y python3-venv` - Debian
+    Full python3 and venv setup [centOS](https://www.i2tutorials.com/how-to-install-python-set-up-programming-environment-on-centos/)
 1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
-1. Install [Python](https://www.python.org/downloads/)
-1. For ease of use, make sure your Python folder is in your `PATH` environment variable
+1. Switch into to directory `cd codethesaur.us`
+1. Use directory as virtual environment `python3 -m venv codethesaur.us`
+1. Activate the directory `source codethesaur.us/activate`
+1. Run `pip install -r requirements.txt`
+1. Then run `python manage.py runserver`
+1. In your browser, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000/](http://localhost:8000/)
+1. Press CTRL+C in the terminal to stop the server.
+
+**Run with no virtual environment**
+1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
+1. switch into to directory `cd codethesaur.us`
 1. Run `pip install -r requirements.txt`
 1. Then run `python manage.py runserver`
 1. In your browser, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000/](http://localhost:8000/)
