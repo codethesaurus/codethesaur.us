@@ -16,11 +16,13 @@ def index(request):
         meta_data = meta_file.read()
     meta_data_langs = json.loads(meta_data)["languages"].keys
     three_random_langs = random.sample(meta_data_langs(), k=3)
+    meta_structures = json.loads(meta_data)["structures"].keys
 
     content = {
         'title': 'Welcome',
         'languages': meta_data_langs,
         'exampleLanguages': three_random_langs
+        'structures': meta_structures
     }
     return render(request, 'index.html', content)
 
@@ -33,38 +35,32 @@ def about(request):
 
 
 def compare(request):
-    #JSON updates:
-    # language => id
-    # language_name => friendly_label
-
-    # TODO: try/catch
-
-    with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-        meta_data = meta_file.read()
-    meta_data_langs = json.loads(meta_data)["languages"]
-
-    lang1 = request.GET.get('lang1', '')
-    lang2 = request.GET.get('lang2', '')
-    lang1_directory = meta_data_langs.get(lang1)
-    lang2_directory = meta_data_langs.get(lang2)
-
-    if not (lang1_directory and lang2_directory):
-        return HttpResponseBadRequest("Lang does not exist")
-
-    concept = request.GET.get('concept', '')
-
-    lang1_file_path = os.path.join(
-        "web", "thesauruses", lang1_directory, concept) + ".json"
-    lang2_file_path = os.path.join(
-        "web", "thesauruses", lang2_directory, concept) + ".json"
-
     try:
+        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+            meta_data = meta_file.read()
+        meta_data_langs = json.loads(meta_data)["languages"]
+
+        lang1_query_string = request.GET.get('lang1', '')
+        lang2_query_string = request.GET.get('lang2', '')
+        lang1_directory = meta_data_langs.get(lang1_query_string)
+        lang2_directory = meta_data_langs.get(lang2_query_string)
+
+        # if not (lang1_directory and lang2_directory):
+        #     return HttpResponseBadRequest("Lang does not exist")
+
+        concept = request.GET.get('concept', '')
+
+        lang1_file_path = os.path.join(
+            "web", "thesauruses", lang1_directory, concept) + ".json"
+        lang2_file_path = os.path.join(
+            "web", "thesauruses", lang2_directory, concept) + ".json"
+
         with open(lang1_file_path, 'r') as lang1_file:
             data = lang1_file.read()
             # parse file
             lang1_file_json = json.loads(data)
 
-            lang1_friendlyname = lang1_file_json["meta"]["language_name"]
+            lang1_friendly_name = lang1_file_json["meta"]["language_name"]
             lang1_categories = lang1_file_json["categories"]
             lang1_concepts = lang1_file_json[concept]
 
@@ -73,12 +69,12 @@ def compare(request):
             # parse file
             lang2_file_json = json.loads(data)
 
-            lang2_friendlyname = lang2_file_json["meta"]["language_name"]
+            lang2_friendly_name = lang2_file_json["meta"]["language_name"]
             lang2_categories = lang2_file_json["categories"]
             lang2_concepts = lang2_file_json[concept]
 
-    except FileNotFoundError as fe:
-        return Http404
+    except:
+        return HttpResponse("The " + request.GET.get('concept', '') + " concept of either the " + request.GET.get('lang1', '') + " or " + request.GET.get('lang2', '') + " languages doesn't exist or hasn't been implemented yet.")
 
     both_categories = []
     both_concepts = []
@@ -120,12 +116,12 @@ def compare(request):
 
     # DB equivalent of full outer join
     response = {
-        "title": "Comparing" + lang1 + " " + lang2,
+        "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
         "concept": concept,
-        "lang1": lang1,
-        "lang2": lang2,
-        "lang1_friendlyname": lang1_friendlyname,
-        "lang2_friendlyname": lang2_friendlyname,
+        "lang1": lang1_directory,
+        "lang2": lang2_directory,
+        "lang1_friendlyname": lang1_friendly_name,
+        "lang2_friendlyname": lang2_friendly_name,
         "categories": both_categories,
         "concepts": both_concepts
     }
@@ -136,28 +132,29 @@ def compare(request):
 
 
 def reference(request):
-    # TODO: try/catch
+    try:
+        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+            meta_data = meta_file.read()
+        meta_data_langs = json.loads(meta_data)["languages"]
 
-    with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-        meta_data = meta_file.read()
-    meta_data_langs = json.loads(meta_data)["languages"]
+        lang_query_string = request.GET.get('lang', '')
+        lang_directory = meta_data_langs[lang_query_string]
 
-    lang = request.GET.get('lang', '')
-    lang_directory = meta_data_langs[lang]
+        # if not (lang_directory):
+        #     return HttpResponseBadRequest("Lang does not exist")
 
-    if not (lang_directory):
-        return HttpResponseBadRequest("Lang does not exist")
+        concept = request.GET.get('concept', '')
 
-    concept = request.GET.get('concept', '')
+        with open("web/thesauruses/" + lang_directory + "/" + concept + ".json", 'r') as lang_file:
+            data = lang_file.read()
+        # parse file
+        lang_file_json = json.loads(data)
 
-    with open("web/thesauruses/" + lang_directory + "/" + concept + ".json", 'r') as lang_file:
-        data = lang_file.read()
-    # parse file
-    lang_file_json = json.loads(data)
-
-    lang_friendlyname = lang_file_json["meta"]["language_name"]
-    lang_categories = lang_file_json["categories"]
-    lang_concepts = lang_file_json[concept]
+        lang_friendly_name = lang_file_json["meta"]["language_name"]
+        lang_categories = lang_file_json["categories"]
+        lang_concepts = lang_file_json[concept]
+    except:
+        return HttpResponse("The " + request.GET.get('concept', '') + " concept of the " + request.GET.get('lang', '') + " either doesn't exist or hasn't been implemented yet.")
 
     categories = []
     concepts = []
@@ -174,10 +171,10 @@ def reference(request):
         })
 
     response = {
-        "title": "Reference for " + lang,
+        "title": "Reference for " + lang_query_string,
         "concept": concept,
-        "lang": lang,
-        "lang_friendlyname": lang_friendlyname,
+        "lang": lang_directory,
+        "lang_friendlyname": lang_friendly_name,
         "categories": categories,
         "concepts": concepts
     }

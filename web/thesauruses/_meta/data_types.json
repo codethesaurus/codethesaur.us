@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "categories": {
+    "Numerical": [
+      "boolean",
+      "integer_16_bit",
+      "integer_32_bit",
+      "integer_64_bit",
+      "integer_as_object",
+      "float_16_bit",
+      "float_32_bit",
+      "float_64_bit",
+      "float_as_object"
+    ],
+    "Strings": [
+      "string_as_object",
+      "string_as_array"
+    ],
+    "Complex Numbers": [
+      "complex_as_object",
+      "real_number_part",
+      "imaginary_number_part"
+    ]
+  },
+  "data_types": {
+    "boolean": {
+      "name": "Boolean",
+      "code": ""
+    },
+    "integer_16_bit": {
+      "name": "16-bit integer",
+      "code": ""
+    },
+    "integer_32_bit": {
+      "name": "32-bit integer",
+      "code": ""
+    },
+    "integer_64_bit": {
+      "name": "64-bit integer",
+      "code": ""
+    },
+    "integer_as_object": {
+      "name": "Object-based Integer",
+      "code": ""
+    },
+    "float_16_bit": {
+      "name": "16-bit floating point",
+      "code": ""
+    },
+    "float_32_bit": {
+      "name": "32-bit floating point",
+      "code": ""
+    },
+    "float_64_bit": {
+      "name": "64-bit floating point",
+      "code": ""
+    },
+    "float_as_object": {
+      "name": "Object-based floating point",
+      "code": ""
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "code": ""
+    },
+    "string_as_array": {
+      "name": "String as an array",
+      "code": ""
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "code": ""
+    },
+    "real_number_part": {
+      "name": "Complex number real part",
+      "code": ""
+    },
+    "imaginary_number_part": {
+      "name": "Complex number imaginary part",
+      "code": ""
+    }
+  }
+}
