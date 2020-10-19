@@ -37,10 +37,10 @@ def compare(request):
             meta_data = meta_file.read()
         meta_data_langs = json.loads(meta_data)["languages"]
 
-        lang1 = request.GET.get('lang1', '')
-        lang2 = request.GET.get('lang2', '')
-        lang1_directory = meta_data_langs.get(lang1)
-        lang2_directory = meta_data_langs.get(lang2)
+        lang1_query_string = request.GET.get('lang1', '')
+        lang2_query_string = request.GET.get('lang2', '')
+        lang1_directory = meta_data_langs.get(lang1_query_string)
+        lang2_directory = meta_data_langs.get(lang2_query_string)
 
         # if not (lang1_directory and lang2_directory):
         #     return HttpResponseBadRequest("Lang does not exist")
@@ -113,10 +113,10 @@ def compare(request):
 
     # DB equivalent of full outer join
     response = {
-        "title": "Comparing" + lang1 + " " + lang2,
+        "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
         "concept": concept,
-        "lang1": lang1,
-        "lang2": lang2,
+        "lang1": lang1_directory,
+        "lang2": lang2_directory,
         "lang1_friendlyname": lang1_friendly_name,
         "lang2_friendlyname": lang2_friendly_name,
         "categories": both_categories,
@@ -134,8 +134,8 @@ def reference(request):
             meta_data = meta_file.read()
         meta_data_langs = json.loads(meta_data)["languages"]
 
-        lang = request.GET.get('lang', '')
-        lang_directory = meta_data_langs[lang]
+        lang_query_string = request.GET.get('lang', '')
+        lang_directory = meta_data_langs[lang_query_string]
 
         # if not (lang_directory):
         #     return HttpResponseBadRequest("Lang does not exist")
@@ -168,9 +168,9 @@ def reference(request):
         })
 
     response = {
-        "title": "Reference for " + lang,
+        "title": "Reference for " + lang_query_string,
         "concept": concept,
-        "lang": lang,
+        "lang": lang_directory,
         "lang_friendlyname": lang_friendly_name,
         "categories": categories,
         "concepts": concepts
