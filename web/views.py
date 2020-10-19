@@ -15,14 +15,14 @@ def index(request):
     with open("web/thesauruses/meta_info.json", 'r') as meta_file:
         meta_data = meta_file.read()
     meta_data_langs = json.loads(meta_data)["languages"].keys
-    three_random_langs = random.sample(meta_data_langs(), k=3)
     meta_structures = json.loads(meta_data)["structures"].keys
+    random_langs = random.sample(meta_data_langs(), k=3)
 
     content = {
         'title': 'Welcome',
         'languages': meta_data_langs,
-        'exampleLanguages': three_random_langs
-        'structures': meta_structures
+        'structures': meta_structures,
+        'randomLanguages': random_langs,
     }
     return render(request, 'index.html', content)
 

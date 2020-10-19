@@ -42,18 +42,20 @@
                                     <div class="card-text">
                                         <div class="form-group">
                                             <select class="form-control" id="lang1" name="lang1">
-                                                <option selected>{{exampleLanguages.0}}</option>
                                                 {% for lang in languages %}
-                                                    {% if lang != exampleLanguages.0 %}
+                                                    {% if lang != randomLanguages.0 %}
                                                         <option>{{ lang }}</option>
+                                                    {% else %}
+                                                        <option selected>{{ randomLanguages.0 }}</option>
                                                     {% endif %}
-                                                {% endfor %}
+                                            {% endfor %}
                                             </select>
                                             <select class="form-control" id="lang2" name="lang2">
-                                                <option selected>{{exampleLanguages.1}}</option>
                                                 {% for lang in languages %}
-                                                    {% if lang != exampleLanguages.1 %}
+                                                    {% if lang != randomLanguages.1 %}
                                                         <option>{{ lang }}</option>
+                                                    {% else %}
+                                                        <option selected>{{ randomLanguages.1 }}</option>
                                                     {% endif %}
                                                 {% endfor %}
                                             </select>
@@ -98,10 +100,11 @@
                                     </div>
                                     <div class="card-text">
                                         <select class="form-control" id="lang" name="lang">
-                                            <option selected>{{exampleLanguages.0}}</option>
                                             {% for lang in languages %}
-                                                {% if lang != exampleLanguages.0 %}
+                                                {% if lang != randomLanguages.2 %}
                                                     <option>{{ lang }}</option>
+                                                {% else %}
+                                                    <option selected>{{ randomLanguages.2 }}</option>
                                                 {% endif %}
                                             {% endfor %}
                                         </select>
