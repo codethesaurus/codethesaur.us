@@ -1,14 +1,9 @@
-from django.http import (
-    HttpResponse, Http404, HttpResponseRedirect,
-    HttpResponseBadRequest,
-)
-from django.shortcuts import render, get_object_or_404
-from django.urls import reverse
+from django.http import HttpResponse, HttpResponseBadRequest
+from django.shortcuts import render
+from django.utils.html import escape, strip_tags
 
 import json
 import os
-
-# from .models import Question
 
 def index(request):
     with open("web/thesauruses/meta_info.json", 'r') as meta_file:
@@ -37,20 +32,20 @@ def compare(request):
             meta_data = meta_file.read()
         meta_data_langs = json.loads(meta_data)["languages"]
 
-        lang1_query_string = request.GET.get('lang1', '')
-        lang2_query_string = request.GET.get('lang2', '')
+        concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
+        lang1_query_string = escape(strip_tags(request.GET.get('lang1', '')))
+        lang2_query_string = escape(strip_tags(request.GET.get('lang2', '')))
+
         lang1_directory = meta_data_langs.get(lang1_query_string)
         lang2_directory = meta_data_langs.get(lang2_query_string)
 
-        # if not (lang1_directory and lang2_directory):
-        #     return HttpResponseBadRequest("Lang does not exist")
-
-        concept = request.GET.get('concept', '')
+        if not lang1_directory and lang2_directory:
+            return HttpResponseBadRequest("The " + concept_query_string + " concept of either the " + lang1_query_string + " or " + lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
 
         lang1_file_path = os.path.join(
-            "web", "thesauruses", lang1_directory, concept) + ".json"
+            "web", "thesauruses", lang1_directory, concept_query_string) + ".json"
         lang2_file_path = os.path.join(
-            "web", "thesauruses", lang2_directory, concept) + ".json"
+            "web", "thesauruses", lang2_directory, concept_query_string) + ".json"
 
         with open(lang1_file_path, 'r') as lang1_file:
             data = lang1_file.read()
@@ -59,7 +54,7 @@ def compare(request):
 
             lang1_friendly_name = lang1_file_json["meta"]["language_name"]
             lang1_categories = lang1_file_json["categories"]
-            lang1_concepts = lang1_file_json[concept]
+            lang1_concepts = lang1_file_json[concept_query_string]
 
         with open(lang2_file_path, 'r') as lang2_file:
             data = lang2_file.read()
@@ -68,10 +63,10 @@ def compare(request):
 
             lang2_friendly_name = lang2_file_json["meta"]["language_name"]
             lang2_categories = lang2_file_json["categories"]
-            lang2_concepts = lang2_file_json[concept]
+            lang2_concepts = lang2_file_json[concept_query_string]
 
     except:
-        return HttpResponse("The " + request.GET.get('concept', '') + " concept of either the " + request.GET.get('lang1', '') + " or " + request.GET.get('lang2', '') + " languages doesn't exist or hasn't been implemented yet.")
+        return HttpResponseBadRequest("The " + concept_query_string + " concept of either the " + lang1_query_string + " or " + lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
 
     both_categories = []
     both_concepts = []
@@ -114,7 +109,7 @@ def compare(request):
     # DB equivalent of full outer join
     response = {
         "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
-        "concept": concept,
+        "concept": concept_query_string,
         "lang1": lang1_directory,
         "lang2": lang2_directory,
         "lang1_friendlyname": lang1_friendly_name,
@@ -134,24 +129,24 @@ def reference(request):
             meta_data = meta_file.read()
         meta_data_langs = json.loads(meta_data)["languages"]
 
-        lang_query_string = request.GET.get('lang', '')
-        lang_directory = meta_data_langs[lang_query_string]
+        concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
+        lang_query_string = escape(strip_tags(request.GET.get('lang', '')))
+        
+        lang_directory = meta_data_langs.get(lang_query_string)
 
-        # if not (lang_directory):
-        #     return HttpResponseBadRequest("Lang does not exist")
+        if not lang_directory:
+            return HttpResponseBadRequest("The " + concept_query_string + " concept of the " + lang_query_string + " language doesn't exist or hasn't been implemented yet.")
 
-        concept = request.GET.get('concept', '')
-
-        with open("web/thesauruses/" + lang_directory + "/" + concept + ".json", 'r') as lang_file:
+        with open("web/thesauruses/" + lang_directory + "/" + concept_query_string + ".json", 'r') as lang_file:
             data = lang_file.read()
         # parse file
         lang_file_json = json.loads(data)
 
         lang_friendly_name = lang_file_json["meta"]["language_name"]
         lang_categories = lang_file_json["categories"]
-        lang_concepts = lang_file_json[concept]
+        lang_concepts = lang_file_json[concept_query_string]
     except:
-        return HttpResponse("The " + request.GET.get('concept', '') + " concept of the " + request.GET.get('lang', '') + " either doesn't exist or hasn't been implemented yet.")
+        return HttpResponseBadRequest("The " + concept_query_string + " concept of the " + lang_query_string + " either doesn't exist or hasn't been implemented yet.")
 
     categories = []
     concepts = []
@@ -169,7 +164,7 @@ def reference(request):
 
     response = {
         "title": "Reference for " + lang_query_string,
-        "concept": concept,
+        "concept": concept_query_string,
         "lang": lang_directory,
         "lang_friendlyname": lang_friendly_name,
         "categories": categories,
