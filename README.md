@@ -18,6 +18,8 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 
 ### Windows
 
+1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
+1. Switch into to directory `cd codethesaur.us`
 1. Check to see if Python 3.x is installed with `python --version` or `python3 --version`. If Python 3.x isn't installed, visit https://www.python.org/downloads/windows/ or install it with `choco install python`
 1. Install Python's virtual environment venv with the command `pip3 install virtualenv`
 1. To set up new virtual environment, run `virtualenv venv`
@@ -30,12 +32,14 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 
 ### Mac
 
+1. Check to see if Python 3.x is installed with `python --version` or `python3 --version`. If Python 3.x isn't installed, install it with `brew install python`
 1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
+1. Switch into to directory `cd codethesaur.us`
 1. Run `pip3 install virtualenv`
 1. To set up new virtual environment, run `virtualenv --no-site-packages venv`
 1. To activate virtual environment, run `source venv/bin/activate`
-1. Run `pip install -r requirements.txt`
-1. Then Run `python manage.py runserver`
+1. Run `pip3 install -r requirements.txt`
+1. Then Run `python3 manage.py runserver`
 1. In your browser, visit `http://127.0.0.1:8000/` or `http://localhost:8000/`
 1. Press CTRL+C in the terminal to stop the server
 1. To deactivate the virtual environment, run `deactivate`
