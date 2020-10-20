@@ -1,112 +1,119 @@
 {% extends 'base.html' %}
 
 {% block content %}
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">The Polyglot Developer Reference</h1>
-                <p class="lead text-muted">Use this tool to compare language components from languages you know and don't know, or just use it as a language reference cheat sheet.</p>
-            </div>
-        </section>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">The Polyglot Developer Reference</h1>
+        <p class="lead text-muted">Use this tool to compare language components from languages you know and don't know,
+            or just use it as a language reference cheat sheet.</p>
+    </div>
+</section>
 
-        <div class="album py-5 bg-light">
-            <div class="container">
-                <div class="card-deck row">
-                    <div class="card col-md-6">
-                        <form method="get" action="/compare">
-                            <div class="card-block">
-                                <h5 class="card-header">
-                                    Learn a Language
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="card-deck row">
+            <div class="col-md-6">
+                <div class="card">
+                    <form method="get" action="/compare">
+                        <div class="card-block">
+                            <h4 class="card-header">
+                                Learn a Language
+                            </h4>
+                            <div class="card-body">
+                                <h5 class="card-subtitle mb-3">
+                                    Compare concepts side-by-side with a language you know and one you don't.
                                 </h5>
-                                <div class="card-body">
-                                    <h6 class="card-subtitle mb-2 text-muted">
-                                        Compare concepts side-by-side with a language you know and one you don't.
-                                    </h6>
-                                    <div class="card-text">
-                                        Choose a language concept:
-                                    </div>
-                                    <div class="card-text">
-                                        <div class="form-group">
-                                            <select class="form-control" name="concept">
-<!--                                                <option>Classes</option>-->
-                                                <option value="data_types">Data Types</option>
-<!--                                                <option>Functions</option>-->
-<!--                                                <option>Namespaces</option>-->
-<!--                                                <option>Strings</option>-->
-<!--                                                <option>Threads</option>-->
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="card-text">
-                                        Pick a language you know and don't know:
-                                    </div>
-                                    <div class="card-text">
-                                        <div class="form-group">
-                                            <select class="form-control" id="lang1" name="lang1">
-                                                {% for lang in languages %}
-                                                <option>{{ lang }}</option>
-                                                {% endfor %}
-                                            </select>
-                                            <select class="form-control" id="lang2" name="lang2">
-                                                {% for lang in languages %}
-                                                <option>{{ lang }}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
+
+                                <div class="card-text">
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary">Go!</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="card col-md-6">
-                        <form method="get" action="/reference">
-                            <div class="card-block">
-                                <h5 class="card-header">
-                                    See a Reference Sheet
-                                </h5>
-                                <div class="card-body">
-                                    <h6 class="card-subtitle mb-2 text-muted">
-                                        A quick and easy way to remind yourself how to do something.
-                                        <br /><br />
-                                        Still under construction.
-                                    </h6>
-                                    <div class="card-text">
-                                        Choose a language concept:
-                                    </div>
-                                    <div class="card-text">
-                                        <select class="form-control" name="concept">
-<!--                                            <option>Classes</option>-->
+                                        <label class="text-muted" for="concept"> Choose a language concept:</label>
+                                        <select class="custom-select" name="concept">
+                                            <!--                                                <option>Classes</option>-->
                                             <option value="data_types">Data Types</option>
-<!--                                            <option>Functions</option>-->
-<!--                                            <option>Namespaces</option>-->
-<!--                                            <option>Strings</option>-->
-<!--                                            <option>Threads</option>-->
-                                        </select>
-                                    </div>
-                                    <div class="card-text">
-                                        Pick a language:
-                                    </div>
-                                    <div class="card-text">
-                                        <select class="form-control" id="lang" name="lang">
-                                                {% for lang in languages %}
-                                                <option>{{ lang }}</option>
-                                                {% endfor %}
+                                            <!--                                                <option>Functions</option>-->
+                                            <!--                                                <option>Namespaces</option>-->
+                                            <!--                                                <option>Strings</option>-->
+                                            <!--                                                <option>Threads</option>-->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="card-footer">
+                                <div class="card-text">
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary">Go!</button>
+                                        <label class="text-muted" for="lang1">Pick a language you know:</label>
+                                        <select class="custom-select" id="lang1" name="lang1">
+                                            {% for lang in languages %}
+                                            <option>{{ lang }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-muted" for="lang2">Pick a language you <strong>don't</strong>
+                                            know:</label>
+                                        <select class="custom-select" id="lang2" name="lang2">
+                                            {% for lang in languages %}
+                                            <option>{{ lang }}</option>
+                                            {% endfor %}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="card-footer">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <span class="d-inline">Go <i class="fa fa-long-arrow-right ml-2"
+                                                aria-hidden="true"></i></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <form method="get" action="/reference">
+                        <div class="card-block">
+                            <h4 class="card-header">
+                                See a Reference Sheet
+                            </h4>
+                            <div class="card-body">
+                                <h5 class="card-subtitle mb-3">
+                                    A quick and easy way to remind yourself how to do something.
+
+                                    Still under construction.
+                                </h5>
+
+                                <div class="form-group">
+                                    <label class="text-muted" for="concept">Choose a language concept:</label>
+                                    <select class="custom-select" name="concept">
+                                        <!--                                            <option>Classes</option>-->
+                                        <option value="data_types">Data Types</option>
+                                        <!--                                            <option>Functions</option>-->
+                                        <!--                                            <option>Namespaces</option>-->
+                                        <!--                                            <option>Strings</option>-->
+                                        <!--                                            <option>Threads</option>-->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-muted" for="lang">Pick a language:</label>
+                                    <select class="custom-select" id="lang" name="lang">
+                                        {% for lang in languages %}
+                                        <option>{{ lang }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-lg"> <span class="d-inline">Go <i
+                                                class="fa fa-long-arrow-right ml-2"
+                                                aria-hidden="true"></i></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 {% endblock content %}
