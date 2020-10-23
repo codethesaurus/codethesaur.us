@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -12,10 +13,12 @@
   align-items: center;
   color: #fff;
 }
+
 .navbar-nav .nav-item {
   font-size: 2rem;
   color: #fff;
 }
+
 @media (min-width: 767px) {
   .navbar-nav {
     height: inherit;
@@ -24,6 +27,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .navbar-nav .nav-item {
     font-size: 1rem;
   }
@@ -37,6 +41,7 @@
 .navbar-dark .nav-item a.nav-link {
   color: #fff;
 }
+
 .navbar-dark .nav-item a.nav-link :hover {
   color: #000;
 }
@@ -51,15 +56,18 @@
   margin-bottom: 0;
   background-color: #fff;
 }
+
 @media (min-width: 767px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);
     padding-bottom: calc(var(--jumbotron-padding-y) * 2);
   }
 }
+
 .jumbotron .container {
   max-width: 60rem;
 }
+
 .jumbotron .container h1 {
   font-size: 3.5rem;
 }
@@ -69,7 +77,7 @@
 }
 
 .bg-blue {
-  background-color: cornflowerblue;
+  background-color: #304ffe;
 }
 
 .card-header {
@@ -82,6 +90,7 @@ footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+
 footer p {
   margin-bottom: 0.25rem;
 }
@@ -100,7 +109,10 @@ footer p {
 }
 
 a.toTop {
+  color: #304ffe;
   text-decoration: none;
 }
 
-/*# sourceMappingURL=app.css.map */
+.text-blue {
+  color: #304ffe;
+}
