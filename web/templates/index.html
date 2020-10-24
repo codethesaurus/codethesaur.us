@@ -43,12 +43,20 @@
                                         <div class="form-group">
                                             <select class="form-control" id="lang1" name="lang1">
                                                 {% for lang in languages %}
-                                                <option>{{ lang }}</option>
-                                                {% endfor %}
+                                                    {% if lang != randomLanguages.0 %}
+                                                        <option>{{ lang }}</option>
+                                                    {% else %}
+                                                        <option selected>{{ randomLanguages.0 }}</option>
+                                                    {% endif %}
+                                            {% endfor %}
                                             </select>
                                             <select class="form-control" id="lang2" name="lang2">
                                                 {% for lang in languages %}
-                                                <option>{{ lang }}</option>
+                                                    {% if lang != randomLanguages.1 %}
+                                                        <option>{{ lang }}</option>
+                                                    {% else %}
+                                                        <option selected>{{ randomLanguages.1 }}</option>
+                                                    {% endif %}
                                                 {% endfor %}
                                             </select>
                                         </div>
@@ -92,9 +100,13 @@
                                     </div>
                                     <div class="card-text">
                                         <select class="form-control" id="lang" name="lang">
-                                                {% for lang in languages %}
-                                                <option>{{ lang }}</option>
-                                                {% endfor %}
+                                            {% for lang in languages %}
+                                                {% if lang != randomLanguages.2 %}
+                                                    <option>{{ lang }}</option>
+                                                {% else %}
+                                                    <option selected>{{ randomLanguages.2 }}</option>
+                                                {% endif %}
+                                            {% endfor %}
                                         </select>
                                     </div>
                                 </div>

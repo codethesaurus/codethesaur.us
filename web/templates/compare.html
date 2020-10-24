@@ -4,7 +4,7 @@
 {% block content %}
         <div class="container">
             <div class="row mt-5">
-                <h2 class="col-12">Comparing {{ lang1 }}'s and {{ lang2 }}'s {{ concept }}</h2>
+                <h2 class="col-12">Comparing {{ lang1_friendlyname }}'s and {{ lang2_friendlyname }}'s {{ concept }}</h2>
             </div>
             <div class="row col-12">
                 The following will eventually be a table of stuff that's populated with things from the languages
@@ -22,12 +22,12 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang1 }}'s Implementation</h5>
+                        <h5 class="text-center">{{ lang1_friendlyname }}'s Implementation</h5>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang2 }}'s Implementation</h5>
+                        <h5 class="text-center">{{ lang2_friendlyname }}'s Implementation</h5>
                     </div>
                 </div>
             </div>
@@ -50,6 +50,27 @@
         {% endfor %}
     {% endfor %}
 {% endfor %}
-        </div>
 
+           <div class="row">&nbsp;</div>
+           <div class="card-group">
+                <div class="card">
+                    <div class="card-body">&nbsp;</div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href="https://github.com/codethesaurus/codethesaur.us/blob/master/web/thesauruses/{{ lang1 }}/{{ concept }}.json">
+                            Want to add or correct information for {{ lang1_friendlyname }}?
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href="https://github.com/codethesaurus/codethesaur.us/blob/master/web/thesauruses/{{ lang2 }}/{{ concept }}.json">
+                            Want to add or correct information for {{ lang2_friendlyname }}?
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 {% endblock content %}
