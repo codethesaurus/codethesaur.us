@@ -1,10 +1,25 @@
 {
   "languages": {
-    "C++": "cplusplus",
-    "C#": "csharp",
-    "Java": "java",
-    "Python": "python",
-    "Scala": "scala"
+    "C++": {
+      "folder": "cplusplus",
+      "versions": ["C++17"]
+    },
+    "C#": {
+      "folder": "csharp",
+      "versions": ["7.3"]
+    },
+    "Java": {
+      "folder": "java",
+      "versions": ["11"]
+    },
+    "Python": {
+      "folder": "python",
+      "versions": ["3.7"]
+    },
+    "Scala": {
+      "folder": "scala",
+      "versions": ["2.13.x"]
+    }
   },
   "structures": {
     "Control Structures": "control_structures.json",

@@ -33,14 +33,13 @@ def about(request):
 
 def compare(request):
     try:
-        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-            meta_data = meta_file.read()
-        meta_data_langs = json.loads(meta_data)["languages"]
-
         lang1 = request.GET.get('lang1', '')
         lang2 = request.GET.get('lang2', '')
-        lang1_directory = meta_data_langs.get(lang1)
-        lang2_directory = meta_data_langs.get(lang2)
+        lang1_version = request.GET.get('lang1_version', '')
+        lang2_version = request.GET.get('lang2_version', '')
+
+        lang1_directory = lang_dir(lang1, lang1_version)
+        lang2_directory = lang_dir(lang2, lang2_version)
 
         # if not (lang1_directory and lang2_directory):
         #     return HttpResponseBadRequest("Lang does not exist")
@@ -127,16 +126,25 @@ def compare(request):
 
 # add in compare with /compare/lang1/lang2 in the future
 
+def lang_dir(lang, lang_version):
+    with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+        meta_data = meta_file.read()
+    meta_data_langs = json.loads(meta_data)['languages']
+    lang_data = meta_data_langs[lang]
+    file_path = lang_data.get('folder')
+    versions = lang_data.get('versions')
+    if (lang_version in versions):
+        file_path = os.path.join(file_path, lang_version)
+    elif (len(versions) > 0):
+        file_path = os.path.join(file_path, versions[0])
+    print("Language path: " + file_path)
+    return file_path
 
 def reference(request):
     try:
-        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-            meta_data = meta_file.read()
-        meta_data_langs = json.loads(meta_data)["languages"]
-
         lang = request.GET.get('lang', '')
-        lang_directory = meta_data_langs[lang]
-
+        lang_version = request.GET.get('lang_version')
+        lang_directory = lang_dir(lang, lang_version)
         # if not (lang_directory):
         #     return HttpResponseBadRequest("Lang does not exist")
 
