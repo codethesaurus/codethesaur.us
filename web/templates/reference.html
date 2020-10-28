@@ -4,7 +4,7 @@
 {% block content %}
         <div class="container">
             <div class="row mt-5">
-                <h2 class="col-12">Reference for {{ lang }} for {{ concept }}</h2>
+                <h2 class="col-12">Reference for {{ lang_friendlyname }} for {{ concept }}</h2>
             </div>
             <div class="row col-12">
                 The following will eventually be a table of stuff that's populated with things from the languages
@@ -21,7 +21,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang }}'s Implementation</h5>
+                        <h5 class="text-center">{{ lang_friendlyname }}'s Implementation</h5>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,21 @@
         {% endfor %}
     {% endfor %}
 {% endfor %}
-        </div>
 
+           <div class="row">&nbsp;</div>
+           <div class="card-group">
+                <div class="card">
+                    <div class="card-body">&nbsp;</div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href="https://github.com/codethesaurus/codethesaur.us/blob/master/web/thesauruses/{{ lang }}/{{ concept }}.json">
+                            Want to add or correct information for {{ lang_friendlyname }}?
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 {% endblock content %}
