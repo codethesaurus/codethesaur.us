@@ -38,6 +38,9 @@ def compare(request):
         lang1_version = request.GET.get('lang1_version', '')
         lang2_version = request.GET.get('lang2_version', '')
 
+        meta_structures = json.loads(meta_data)["structures"]
+        concept_friendly_name = list(meta_structures.keys())[list(meta_structures.values()).index(concept_query_string + '.json')]
+
         lang1_directory = lang_dir(lang1_query_string, lang1_version)
         lang2_directory = lang_dir(lang2_query_string, lang2_version)
 
@@ -115,7 +118,7 @@ def compare(request):
     # DB equivalent of full outer join
     response = {
         "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
-        "concept": concept_query_string,
+        "concept": concept_friendly_name,
         "lang1": lang1_directory,
         "lang2": lang2_directory,
         "lang1_friendlyname": lang1_friendly_name,
@@ -147,6 +150,13 @@ def reference(request):
         concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
         lang_query_string = escape(strip_tags(request.GET.get('lang', '')))
         lang_version = request.GET.get('lang_version')
+
+        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+            meta_data = meta_file.read()
+        meta_data_langs = json.loads(meta_data)["languages"]
+        meta_structures = json.loads(meta_data)["structures"]
+
+        concept_friendly_name = list(meta_structures.keys())[list(meta_structures.values()).index(concept_query_string + '.json')]
 
         lang_directory = lang_dir(lang_query_string, lang_version)
 
@@ -184,7 +194,7 @@ def reference(request):
 
     response = {
         "title": "Reference for " + lang_query_string,
-        "concept": concept_query_string,
+        "concept": concept_friendly_name,
         "lang": lang_directory,
         "lang_friendlyname": lang_friendly_name,
         "categories": categories,
