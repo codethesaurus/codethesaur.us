@@ -1,51 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar-nav .nav-item {
+  font-size: 2rem;
+  color: #fff;
+}
+
+@media (min-width: 767px) {
+  .navbar-nav {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    font-size: 1rem;
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  border: 0;
+  color: #fff;
+}
+
+.navbar-dark .nav-item a.nav-link {
+  color: #fff;
+}
+
+.navbar-dark .nav-item a.nav-link :hover {
+  color: #000;
+}
+
 :root {
-    --jumbotron-padding-y: 3rem;
+  --jumbotron-padding-y: 3rem;
 }
 
 .jumbotron {
-    padding-top: var(--jumbotron-padding-y);
-    padding-bottom: var(--jumbotron-padding-y);
-    margin-bottom: 0;
-    background-color: #fff;
-}
-@media (min-width: 768px) {
-    .jumbotron {
-        padding-top: calc(var(--jumbotron-padding-y) * 2);
-        padding-bottom: calc(var(--jumbotron-padding-y) * 2);
-    }
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
 }
 
-.jumbotron p:last-child {
-    margin-bottom: 0;
-}
-
-.jumbotron-heading {
-    font-weight: 300;
+@media (min-width: 767px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
 }
 
 .jumbotron .container {
-    max-width: 40rem;
+  max-width: 60rem;
+}
+
+.jumbotron .container h1 {
+  font-size: 3.5rem;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
 }
 
 .bg-blue {
-    background-color: cornflowerblue;
+  background-color: #304ffe;
 }
 
-/*.navbar {*/
-    /*background-color: cornflowerblue;*/
-/*}*/
+.card-header {
+  background: #fdd835;
+  color: #000;
+}
 
 footer {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 footer p {
-    margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
 
 .text-strong {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.card-footer {
+  border: 0;
+  background-color: #fff;
+}
+
+a.toTop {
+  color: #304ffe;
+  text-decoration: none;
+}
+
+.text-blue {
+  color: #304ffe;
 }
