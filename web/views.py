@@ -120,6 +120,7 @@ def compare(request):
     response = {
         "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
         "concept": concept_friendly_name,
+        "concept_id": concept_query_string,
         "lang1": lang1_directory,
         "lang2": lang2_directory,
         "lang1_friendlyname": lang1_friendly_name,
@@ -179,6 +180,7 @@ def reference(request):
     response = {
         "title": "Reference for " + lang_query_string,
         "concept": concept_friendly_name,
+        "concept_id": concept_query_string,
         "lang": lang_directory,
         "lang_friendlyname": lang_friendly_name,
         "categories": categories,
