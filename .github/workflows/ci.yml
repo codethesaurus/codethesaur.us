@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run_tests:
+    if: github.ref == 'refs/heads/develop'
+    name: Run Django Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          ref: 'refs/heads/develop'
+      - name: Set up Python 3.8.5
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: pip install -r app/requirements.txt
+      - name: Run tests
+        run: python app/manage.py test app/
+        env:
+          SYSTEM_ENV: GITHUB_WORKFLOW
