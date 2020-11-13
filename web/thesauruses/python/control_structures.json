@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "python",
+    "language_version": "3.7",
+    "language_name": "Python"
   },
   "categories": {
     "Conditional Statements (ifs)": [
@@ -56,6 +56,8 @@
       if condition:
         statements
       elif condition:
+        statements
+      else:
         statements"
     },
     "while_loop": {
@@ -65,16 +67,10 @@
         statements"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
-      "code": "Unsupported or Not Needed"
     },
     "until_loop": {
-      "name": "Until loop",
-      "code": "Unsupported or Not Needed"
     },
     "do_until_loop": {
-      "name": "Do/Until loop",
-      "code": "Unsupported or Not Needed"
     },
     "for_loops": {
       "name": "For loop",
@@ -83,12 +79,8 @@
         statements"
     },
     "foreach_loops": {
-      "name": "Foreach loop",
-      "code": "Unsupported or Not Needed"
     },
     "each_iteration": {
-      "name": "Each iteration",
-      "code": "Unsupported or Not Needed"
     },
     "map_iteration": {
       "name": "Map iteration",
@@ -97,7 +89,6 @@
     "filter_iteration": {
       "name": "Filter iteration",
       "code": "filter(function, iterable)"
-    }
     }
   }
 }
