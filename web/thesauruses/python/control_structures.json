@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "language": "python",
+    "language_version": "3.7",
+    "language_name": "Python"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loops",
+      "foreach_loops"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration",
+      "recursion_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": "
+      if condition:
+        statements"
+    },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": "
+      if condition:
+        statements
+      else:
+        statements"
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": "
+      if condition:
+        statements
+      elif:
+        statements"
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": "
+      if condition:
+        statements
+      elif condition:
+        statements
+      else:
+        statements"
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": "
+      while condition:
+        statements"
+    },
+    "do_while_loop": {
+    },
+    "until_loop": {
+    },
+    "do_until_loop": {
+    },
+    "for_loops": {
+      "name": "For loop",
+      "code": "
+      for iterator in iterable:
+        statements"
+    },
+    "foreach_loops": {
+    },
+    "each_iteration": {
+    },
+    "map_iteration": {
+      "name": "Map iteration",
+      "code": "map(function, iterable)"
+    },
+    "filter_iteration": {
+      "name": "Filter iteration",
+      "code": "filter(function, iterable)"
+    }
+  }
+}
