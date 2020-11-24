@@ -144,4 +144,6 @@ STATICFILES_DIRS = (
 )
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
+# Configure Django App for Heroku.
+django_heroku.settings(locals(), test_runner=False)
