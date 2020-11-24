@@ -16,13 +16,13 @@ jobs:
         uses: actions/checkout@v1
         with:
           ref: 'refs/heads/develop'
-      - name: Set up Python 3.8.5
+      - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
       - name: Install dependencies
         run: pip install -r app/requirements.txt
       - name: Run tests
-        run: python app/manage.py test app/
+        run: python manage.py test
         env:
           SYSTEM_ENV: GITHUB_WORKFLOW
