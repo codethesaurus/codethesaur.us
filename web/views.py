@@ -10,9 +10,9 @@ from django.utils.html import escape, strip_tags
 def index(request):
     with open("web/thesauruses/meta_info.json", 'r') as meta_file:
         meta_data = meta_file.read()
-    meta_data_langs = json.loads(meta_data)["languages"].keys
-    meta_structures = json.loads(meta_data)["structures"].keys
-    random_langs = random.sample(meta_data_langs(), k=3)
+    meta_data_langs = json.loads(meta_data)["languages"]
+    meta_structures = json.loads(meta_data)["structures"]
+    random_langs = random.sample(list(meta_data_langs.values()), k=3)
 
     content = {
         'title': 'Welcome',
@@ -31,52 +31,53 @@ def about(request):
 
 
 def compare(request):
-    try:
-        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-            meta_data = meta_file.read()
-        meta_data_langs = json.loads(meta_data)["languages"]
+    # try:
+    with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+        meta_data = meta_file.read()
+    meta_data_langs = json.loads(meta_data)["languages"]
 
-        concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
-        lang1_query_string = escape(strip_tags(request.GET.get('lang1', '')))
-        lang2_query_string = escape(strip_tags(request.GET.get('lang2', '')))
-        meta_structures = json.loads(meta_data)["structures"]
-        concept_friendly_name = list(meta_structures.keys())[list(meta_structures.values()).index(concept_query_string + '.json')]
+    concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
+    lang1_query_string = escape(strip_tags(request.GET.get('lang1', '')))
+    lang2_query_string = escape(strip_tags(request.GET.get('lang2', '')))
+    meta_structures = json.loads(meta_data)["structures"]
+    # concept_friendly_name = list(meta_structures.keys())[list(meta_structures.values()).index(concept_query_string + '.json')]
+    concept_friendly_name = meta_structures[concept_query_string] #meta_structures.keys()[concept_query_string]
 
-        lang1_directory = meta_data_langs.get(lang1_query_string)
-        lang2_directory = meta_data_langs.get(lang2_query_string)
+    lang1_directory = lang1_query_string #meta_data_langs.get(lang1_query_string)
+    lang2_directory = lang2_query_string #meta_data_langs.get(lang2_query_string)
 
-        if not lang1_directory and lang2_directory:
-            return HttpResponseNotFound(
-                "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
-                lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
-
-        lang1_file_path = os.path.join(
-            "web", "thesauruses", lang1_directory, concept_query_string) + ".json"
-        lang2_file_path = os.path.join(
-            "web", "thesauruses", lang2_directory, concept_query_string) + ".json"
-
-        with open(lang1_file_path, 'r') as lang1_file:
-            data = lang1_file.read()
-            # parse file
-            lang1_file_json = json.loads(data)
-
-            lang1_friendly_name = lang1_file_json["meta"]["language_name"]
-            lang1_categories = lang1_file_json["categories"]
-            lang1_concepts = lang1_file_json[concept_query_string]
-
-        with open(lang2_file_path, 'r') as lang2_file:
-            data = lang2_file.read()
-            # parse file
-            lang2_file_json = json.loads(data)
-
-            lang2_friendly_name = lang2_file_json["meta"]["language_name"]
-            lang2_categories = lang2_file_json["categories"]
-            lang2_concepts = lang2_file_json[concept_query_string]
-
-    except:
+    if not lang1_directory and lang2_directory:
         return HttpResponseNotFound(
             "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
             lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
+
+    lang1_file_path = os.path.join(
+        "web", "thesauruses", lang1_directory, concept_query_string + ".json")
+    lang2_file_path = os.path.join(
+        "web", "thesauruses", lang2_directory, concept_query_string + ".json")
+
+    with open(lang1_file_path, 'r') as lang1_file:
+        data = lang1_file.read()
+        # parse file
+        lang1_file_json = json.loads(data)
+
+        lang1_friendly_name = lang1_file_json["meta"]["language_name"]
+        lang1_categories = lang1_file_json["categories"]
+        lang1_concepts = lang1_file_json[concept_query_string]
+
+    with open(lang2_file_path, 'r') as lang2_file:
+        data = lang2_file.read()
+        # parse file
+        lang2_file_json = json.loads(data)
+
+        lang2_friendly_name = lang2_file_json["meta"]["language_name"]
+        lang2_categories = lang2_file_json["categories"]
+        lang2_concepts = lang2_file_json[concept_query_string]
+
+    # except:
+    #     return HttpResponseNotFound(
+    #         "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
+    #         lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
 
     both_categories = []
     both_concepts = []

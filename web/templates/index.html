@@ -9,6 +9,8 @@
     </div>
 </section>
 
+<div>{{ structures_keys }}</div>
+
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="card-deck row">
@@ -28,21 +30,19 @@
                                     <div class="form-group">
                                         <label class="text-muted" for="concept"> Choose a language concept:</label>
                                         <select class="custom-select" id="concept" name="concept">
-                                            <!--                                                <option>Classes</option>-->
-                                            <option value="data_types">Data Types</option>
-                                            <!--                                                <option>Functions</option>-->
-                                            <!--                                                <option>Namespaces</option>-->
-                                            <!--                                                <option>Strings</option>-->
-                                            <!--                                                <option>Threads</option>-->
+                                            {% for k, v in structures.items %}
+                                            <option value="{{ k }}">{{ v }}</option>
+                                            {% endfor %}
                                         </select>
+                                        
                                     </div>
                                 </div>
                                 <div class="card-text">
                                     <div class="form-group">
                                         <label class="text-muted" for="lang1">Pick a language you know:</label>
                                         <select class="custom-select" id="lang1" name="lang1">
-                                            {% for lang in languages %}
-                                            <option>{{ lang }}</option>
+                                            {% for k, v in languages.items %}
+                                            <option value="{{ k }}">{{ v }}</option>
                                             {% endfor %}
                                         </select>
                                     </div>
@@ -50,8 +50,8 @@
                                         <label class="text-muted" for="lang2">Pick a language you <strong>don't</strong>
                                             know:</label>
                                         <select class="custom-select" id="lang2" name="lang2">
-                                            {% for lang in languages %}
-                                            <option>{{ lang }}</option>
+                                            {% for k, v in languages.items %}
+                                            <option value="{{ k }}">{{ v }}</option>
                                             {% endfor %}
                                         </select>
                                     </div>
@@ -86,21 +86,18 @@
                                 <div class="form-group">
                                     <label class="text-muted" for="concept">Choose a language concept:</label>
                                     <select class="custom-select" id="concept" name="concept">
-                                        <!--                                            <option>Classes</option>-->
-                                        <option value="data_types">Data Types</option>
-                                        <!--                                            <option>Functions</option>-->
-                                        <!--                                            <option>Namespaces</option>-->
-                                        <!--                                            <option>Strings</option>-->
-                                        <!--                                            <option>Threads</option>-->
+                                        {% for k, v in structures.items %}
+                                        <option value="{{ v }}">{{ k }}</option>
+                                        {% endfor %}
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label class="text-muted" for="lang">Pick a language:</label>
                                     <select class="custom-select" id="lang" name="lang">
-                                        {% for lang in languages %}
-                                        <option>{{ lang }}</option>
+                                        {% for k, v in languages.items %}
+                                        <option value="{{ k }}">{{ v }}</option>
                                         {% endfor %}
-                                    </select>
+                                </select>
                                 </div>
                             </div>
                             <div class="card-footer">
