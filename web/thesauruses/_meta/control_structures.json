@@ -9,15 +9,16 @@
       "if_conditional",
       "if_else_conditional",
       "if_elseif_conditional",
-      "if_elseif_else_conditional"
+      "if_elseif_else_conditional",
+      "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
       "do_while_loop",
       "until_loop",
       "do_until_loop",
-      "for_loops",
-      "foreach_loops"
+      "for_loop",
+      "foreach_loop"
     ],
     "Iterations": [
       "each_iteration",
@@ -44,6 +45,10 @@
       "name": "If/ElseIf/Else conditional",
       "code": ""
     },
+    "ternary_conditional": {
+      "name": "Ternary conditional",
+      "code": ""
+    },
     "while_loop": {
       "name": "While loop",
       "code": ""
@@ -60,11 +65,11 @@
       "name": "Do/Until loop",
       "code": ""
     },
-    "for_loops": {
+    "for_loop": {
       "name": "For loop",
       "code": ""
     },
-    "foreach_loops": {
+    "foreach_loop": {
       "name": "Foreach loop",
       "code": ""
     },
