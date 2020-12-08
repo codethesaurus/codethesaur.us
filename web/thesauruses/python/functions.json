@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "python",
+    "language_version": "3.7",
+    "language_name": "Python"
   },
   "categories": {
     "Void Functions": [
@@ -71,7 +71,7 @@
     },
     "anonymous_function_with_parameters": {
       "name": "Anonymous function that takes 1 or more defined parameters",
-      "code": "lambda parameter,parameter_1 .. : expression"
+      "code": "lambda parameter,parameter_1 ... : expression"
     },
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
