@@ -19,7 +19,7 @@
   color: #fff;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 576px) {
   .navbar-nav {
     height: inherit;
     display: flex;
