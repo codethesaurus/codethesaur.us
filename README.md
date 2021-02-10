@@ -8,6 +8,7 @@ Good question. If there's an aspect of a language you don't know, you can compar
 
 * Python 3.x
 * Django 3.11
+* PostgreSQL 13.x
 
 If you run `python --version` and it shows Python 2.x but you know you have
 Python 3.x installed, you may need to suffix all `python` and `pip` commands
@@ -53,13 +54,14 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
    `sudo nano ~/.bashrc` and add `alias python='python3'`
 1. Django 3.11 can be installed using the pip3 package manager.
    `pip3 install django==3.11`
+1. Install PostgreSQL `sudo apt install -y postgresql` - Debian
 1. Install venv for virtual environment
    `sudo apt install -y python3-venv` - Debian
     Full python3 and venv setup [centOS](https://www.i2tutorials.com/how-to-install-python-set-up-programming-environment-on-centos/)
 1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
 1. Switch into to directory `cd codethesaur.us`
 1. Use directory as virtual environment `python3 -m venv codethesaur.us`
-1. Activate the directory `source codethesaur.us/activate`
+1. Activate the directory `source codethesaur.us/bin/activate`
 1. Run `pip install -r requirements.txt`
 1. Then run `python manage.py runserver`
 1. In your browser, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000/](http://localhost:8000/)
