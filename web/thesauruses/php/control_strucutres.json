@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "php",
+    "language_version": "7.4",
+    "language_name": "PHP"
   },
   "categories": {
     "Conditional Statements (ifs)": [
@@ -20,73 +20,50 @@
       "foreach_loops"
     ],
     "Iterations": [
-      "each_iteration",
       "map_iteration",
-      "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
+      "filter_iteration"
     ]
   },
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": ""
+      "code": "if( condition ) { statement }"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": ""
+      "code": "if( condition ) { statement } else { else statement }"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": ""
+      "code": "if( condition ) { statement } elseif { elseif statement }"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": ""
+      "code": "if( condition ) { statement } elseif { elseif statement } else { else statement }"
     },
     "while_loop": {
       "name": "While loop",
-      "code": ""
+      "code": "while( true condition ) { code to be executed }"
     },
     "do_while_loop": {
       "name": "Do/While loop",
-      "code": ""
-    },
-    "until_loop": {
-      "name": "Until loop",
-      "code": ""
-    },
-    "do_until_loop": {
-      "name": "Do/Until loop",
-      "code": ""
+      "code": "do { executable code } while ( true condition );"
     },
     "for_loops": {
       "name": "For loop",
-      "code": ""
+      "code": "for ( intial_counter, test_counter, increment ) { executable code }"
     },
     "foreach_loops": {
       "name": "Foreach loop",
-      "code": ""
-    },
-    "each_iteration": {
-      "name": "Each iteration",
-      "code": ""
+      "code": "foreach ( iterable as item ) { executable code }"
     },
     "map_iteration": {
       "name": "Map iteration",
-      "code": ""
+      "code": "array_map( function( element ) { transform element }, array );"
     },
     "filter_iteration": {
       "name": "Filter iteration",
-      "code": ""
-    },
-    "fold_iteration": {
-      "name": "Fold iteration",
-      "code": ""
-    },
-    "recursion_iteration": {
-      "name": "Recursion iteration",
-      "code": ""
+      "code": "array_filter( array, function( element ) { return a bool } );"
     }
   }
 }
