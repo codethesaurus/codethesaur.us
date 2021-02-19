@@ -4,7 +4,8 @@
     "C#": "csharp",
     "Java": "java",
     "Python": "python",
-    "Scala": "scala"
+    "Scala": "scala",
+    "PHP": "php"
   },
   "structures": {
     "Control Structures": "control_structures.json",
