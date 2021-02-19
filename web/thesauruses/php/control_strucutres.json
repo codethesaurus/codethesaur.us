@@ -27,65 +27,39 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": "if( $true_condition ) { 
-	      	//statement 
-	      }"
+      "code": "if( $true_condition ) {\n    //statement\n}"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": "if( $condition ) {
-	      	// statement
-	      } else { 
-		// else statement 
-	      }"
+      "code": "if( $condition ) {\n    // statement\n} else {\n    // else statement\n}"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": "if( $condition ) {
-	          // statement 
-	       } elseif ( $othercondition ) { 
-		  // elseif statement 
-	       }"
+      "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n}"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": "if( $condition ) {
-	           // statement 
-	       } elseif ( $othercondition ) { 
-		   // elseif statement 
-	       } else { 
-		   // else statement
-	       }"
+      "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n} else {\n    // else statement\n}"
     },
     "while_loop": {
       "name": "While loop",
-      "code": "while( $condition ) { 
-	           // code to be executed 
-	       }"
+      "code": "while( $condition ) {\n    // code to be executed\n}"
     },
     "do_while_loop": {
       "name": "Do/While loop",
-      "code": "do { 
-	          //executable code 
-	       } while ( $condition );"
+      "code": "do {\n    //executable code\n} while ( $condition );"
     },
     "for_loops": {
       "name": "For loop",
-      "code": "for ( $intial_counter, $test_counter, $increment ) { 
-	          // executable code 
-	       }"
+      "code": "for ( $intial_counter, $test_counter, $increment ) {\n    // executable code\n}"
     },
     "foreach_loops": {
       "name": "Foreach loop",
-      "code": "foreach ( $iterable as $item ) { 
-	          // executable code 
-	       }"
+      "code": "foreach ( $iterable as $item ) {\n    // executable code}"
     },
     "map_iteration": {
       "name": "Map iteration",
-      "code": "array_map( function( $element ) { 
-	          // transform element 
-	       }, $array );"
+      "code": "array_map( function( $element ) {\n    // transform element\n}, $array );"
     },
     "filter_iteration": {
       "name": "Filter iteration",
