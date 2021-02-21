@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "categories": {
+    "Numerical": [
+      "boolean",
+      "integer",
+      "float"
+    ],
+    "Strings": [
+      "string"
+    ],
+    "Compound Types": [
+      "array",
+      "associative_array"
+    ]
+  },
+  "data_types": {
+    "boolean": {
+      "name": "Boolean",
+      "code": "(bool) $value;"
+    },
+    "integer": {
+      "name": "Integer",
+      "code": "(int) $value;\n(integer) $value;"
+    },
+    "float": {
+      "name": "Float",
+      "code": "(float) $value;\n(double) $value;\n(real) $value;"
+    },
+    "string": {
+      "name": "String",
+      "code": "\"string\"\n'string'"
+    },
+    "array": {
+      "name": "Array",
+      "code": "$value = array();\n$value = [];"
+    },
+    "associative_array": {
+      "name": "Associative Array",
+      "code": "$array = array();\n$array = [];\n\n$array[ $key ]=$value;"
+    }
+  }
+}
