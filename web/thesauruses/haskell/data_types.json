@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "language": "haskell",
+    "language_version": "2010",
+    "language_name": "Haskell"
+  },
+    "categories": {
+    "Numerical": [
+      "boolean",
+      "integer_16_bit",
+      "integer_32_bit",
+      "integer_64_bit",
+      "integer_as_object",
+      "float_16_bit",
+      "float_32_bit",
+      "float_64_bit",
+      "float_as_object"
+    ],
+    "Strings": [
+      "string_as_object",
+      "string_as_array"
+    ],
+    "Complex Numbers": [
+      "complex_as_object",
+      "real_number_part",
+      "imaginary_number_part"
+    ]
+  },
+  "data_types": {
+    "boolean" : {
+      "name": "Boolean",
+      "code": "Bool"
+    },
+    "integer_16_bit" : {
+      "name": "16-bit integer",
+      "code": "import Data.Int\nInt16"
+    },
+    "integer_32_bit": {
+      "name": "32-bit integer",
+      "code": "Data.Int.Int32"
+    },
+    "integer_64_bit": {
+      "name": "64-bit integer",
+      "code": "Data.Int.Int64"
+    },
+    "integer_as_object": {
+      "name": "Object-based Integer",
+      "code": "Integer"
+    },
+    "float_16_bit": {
+      "name": "16-bit floating point",
+      "code": null
+    },
+    "float_32_bit": {
+      "name": "32-bit floating point",
+      "code": "Float"
+    },
+    "float_64_bit": {
+      "name": "64-bit floating point",
+      "code": "Double"
+    },
+    "float_as_object": {
+      "name": "Object-based floating point",
+      "code": null
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "code": "Data.Text.Text"
+    },
+    "string_as_array": {
+      "name": "String as an array",
+      "code": "String == [Char]"
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "code": "real Data.Complex.:+ imaginary"
+    },
+    "real_number_part": {
+      "name": "Complex number real part",
+      "code": "realPart c"
+    },
+    "imaginary_number_part": {
+      "name": "Complex number imaginary part",
+      "code": "imagPart c"
+    }
+  }
+}
