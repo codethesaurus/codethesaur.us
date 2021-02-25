@@ -67,6 +67,19 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 1. In your browser, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000/](http://localhost:8000/)
 1. Press CTRL+C in the terminal to stop the server.
 
+### Docker container
+
+If you want, you can run and develop the application within docker container. To do this, firstly you have to make sure that you have docker installed and running on you local machine. If you don't, [here](https://docs.docker.com/get-docker/) you can see how to get it.
+To build the app inside a docker container, follow the following steps:
+
+1. Firstly, build the docker image based on the supplied Dockerfile `docker build -t cthesaurus-img .`
+1. Then, run the docker container by using the image that you've just created `docker run --name codethesaurus-container -dti -p 8000:8000 -v `pwd`:/code cthesaurus-img bash`
+1. You can check if the container is up and running by invoking 'docker container ls' - your container should be present on the list, its name should be set to "codethesaur-container".
+1. Now you can attach to running container by using the following command `docker attach codethesaurus-container`
+1. When you are attached, you have access to command line interface which controls the container. From there, you can manage your django app by manage.py, as you would do in local environment. 
+1. To run the server, simply run `python manage.py runserver 0:8000` - you have to specify 0.0.0.0 (0 is a shortcut for that) address to be able to access the website outside of the container - it is possible thanks to the port mapping, which is set during 'docker run ...' command by specifying '-p 8000:8000'.
+1. To edit the respository, do it in your local directory on your machine - the changes that you make will be refleced in the container, thanks to the mounting of the filesystem, which was specified by '-v pwd:/code' option during 'docker run ...' command execution.
+
 ## Contributing
 
 Check out the [Contributing Guide](CONTRIBUTING.md) to learn more about how you can help add more language data, fix bugs, or add features!
