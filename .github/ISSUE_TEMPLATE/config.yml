@@ -1,5 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Code Thesaurus Documentation
+    url: https://docs.codethesaur.us
+    about: The official documentation for Code Thesaurus
   - name: Code Thesaurus Twitter
     url: https://twitter.com/codethesaurus
     about: The Twitter account for the project
+  - name: Email
+    url: mailto:hello@codethesaur.us
+    about: Email for the maintainer (for any questions or suggestions)

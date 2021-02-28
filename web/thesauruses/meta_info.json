@@ -4,6 +4,7 @@
     "csharp": "C#",
     "java": "Java",
     "javascript": "JavaScript",
+    "nim": "Nim",
     "python": "Python", 
     "scala": "Scala"
   },

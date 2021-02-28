@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "language": "nim",
+    "language_version": "1.4",
+    "language_name": "Nim"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "for_loops",
+      "foreach_loops"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration",
+      "recursion_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": "if condition: statements"
+    },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": "if condition:\n  statements\nelse:  statements"
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": "if condition:\n  statements\nelif:\n  statements"
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": "if condition:\n  statements\nelif condition:\n  statements\nelse:\n  statements"
+    },
+    "ternary_conditional": {
+      "name": "Conditional (ternary) Operator",
+      "code": "if condition: exprIfTrue else: exprIfFalse"
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": "while condition: statements"
+    },
+    "for_loops": {
+      "name": "For loop",
+      "code": "for iterator in iterable: statements"
+    },
+    "map_iteration": {
+      "name": "Map iteration",
+      "code": "map(function, iterable)"
+    },
+    "filter_iteration": {
+      "name": "Filter iteration",
+      "code": "filter(function, iterable)"
+    }
+  }
+}
