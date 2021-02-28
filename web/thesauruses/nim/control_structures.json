@@ -28,19 +28,19 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": "if condition:\n  statements"
+      "code": "if condition:\\n  statements"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": "if condition:\n  statements\nelse:  statements"
+      "code": "if condition:\\n  statements\\nelse:  statements"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": "if condition:\n  statements\nelif:\n  statements"
+      "code": "if condition:\\n  statements\\nelif:\\n  statements"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": "if condition:\n  statements\nelif condition:\n  statements\nelse:\n  statements"
+      "code": "if condition:\\n  statements\\nelif condition:\\n  statements\\nelse:\\n  statements"
     },
     "ternary_conditional": {
       "name": "Conditional (ternary) Operator",
@@ -48,11 +48,11 @@
     },
     "while_loop": {
       "name": "While loop",
-      "code": "while condition:\n  statements"
+      "code": "while condition:\\n  statements"
     },
     "for_loops": {
       "name": "For loop",
-      "code": "for iterator in iterable:\n  statements"
+      "code": "for iterator in iterable:\\n  statements"
     },
     "map_iteration": {
       "name": "Map iteration",
