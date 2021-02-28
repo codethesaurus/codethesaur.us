@@ -54,10 +54,6 @@
       "name": "For loop",
       "code": "for iterator in iterable: statements"
     },
-    "foreach_loops": {
-    },
-    "each_iteration": {
-    },
     "map_iteration": {
       "name": "Map iteration",
       "code": "map(function, iterable)"
