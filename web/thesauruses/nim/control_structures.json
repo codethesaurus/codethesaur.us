@@ -28,7 +28,7 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": "if condition: statements"
+      "code": "if condition:\n  statements"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
@@ -48,11 +48,11 @@
     },
     "while_loop": {
       "name": "While loop",
-      "code": "while condition: statements"
+      "code": "while condition:\n  statements"
     },
     "for_loops": {
       "name": "For loop",
-      "code": "for iterator in iterable: statements"
+      "code": "for iterator in iterable:\n  statements"
     },
     "map_iteration": {
       "name": "Map iteration",

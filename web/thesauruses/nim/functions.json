@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "language": "nim",
+    "language_version": "1.4",
+    "language_name": "Nim"
+  },
+  "categories": {
+    "Void Functions": [
+      "void_function_no_parameters",
+      "void_function_with_parameters",
+      "void_function_variable_parameters"
+    ],
+    "Return Value Functions": [
+      "return_value_function_no_parameters",
+      "return_value_function_with_parameters",
+      "return_value_function_variable_parameters"
+    ],
+    "Lambda/Anonymous Functions": [
+      "anonymous_function_no_parameters",
+      "anonymous_function_with_parameters",
+      "anonymous_function_variable_parameters"
+    ],
+    "Subroutines": [
+      "call_subroutine",
+      "return_from_subroutine"
+    ]
+  },
+  "functions": {
+    "void_function_no_parameters": {
+      "name": "Function that does not return a value and takes no parameters",
+      "code": "func name() =\n  discard\n"
+    },
+    "void_function_with_parameters": {
+      "name": "Function that does not return a value and that takes 1 or more defined parameters",
+      "code": "func name(parameter0: int, parameter1: bool) =\n  discard\n"
+    },
+    "void_function_variable_parameters": {
+      "name": "Function that does not return a value and function that takes an unknown number of parameters",
+      "code": "func name(parameters: varargs[auto]) =\n  discard\n"
+    },
+    "return_value_function_no_parameters": {
+      "name": "Function that returns a value and takes no parameters",
+      "code": "func name(): string =\n  result = \"value\"\n"
+    },
+    "return_value_function_with_parameters": {
+      "name": "Function that returns a value and takes 1 or more defined parameters",
+      "code": "func name(parameter0: int, parameter1: bool): string =\n  result = \"value\"\n"
+    },
+    "return_value_function_variable_parameters": {
+      "name": "Function that returns a value and takes an unknown number of parameters",
+      "code": "func name(parameters: varargs[auto]): string =\n  result = \"value\"\n"
+    },
+    "anonymous_function_no_parameters": {
+      "name": "Anonymous function that takes no parameters",
+      "code": "func (): string =\n  result = \"value\"\n"
+    },
+    "anonymous_function_with_parameters": {
+      "name": "Anonymous function that takes 1 or more defined parameters",
+      "code": "func name(parameter0: int, parameter1: int): string =\n  result = \"value\"\n"
+    },
+    "anonymous_function_variable_parameters": {
+      "name": "Anonymous function that takes an unknown number of parameters",
+      "code": "func (parameters: varargs[auto]): string =\n  result = \"value\"\n"
+    },
+    "call_subroutine": {
+      "name": "Call subroutine",
+      "code": "name(parameter0, parameter1, parameterN)"
+    },
+    "return_from_subroutine": {
+      "name": "Return from subroutine",
+      "code": "result = \"value\""
+    }
+  }
+}
