@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "language": "Java",
+    "language_version": "15",
+    "language_name": "Java"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "ternary conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "for_loop"
+    ],
+    "Iterations": [
+      "foreach_loop"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": "if(condition){code block to be executed}"
+    },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": "if(condition){code block to be executed} else{code block to be executed}"
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": "if(condition){code block to be executed} else if(condition){code block to be executed}"
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": "if(condition){code block to be executed} else if(condition){code block to be executed} else{code block to be executed}"
+    },
+    "ternary_conditional": {
+      "name": "Conditional (ternary) Operator",
+      "code": "condition ? exprIfTrue : exprIfFalse"
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": "while(condition){code block to be executed}"
+    },
+    "do_while_loop": {
+      "name": "Do/While loop",
+      "code": "do{code to be executed} whilr(condition)"
+    },
+    "for_loops": {
+      "name": "For loop",
+      "code": "for(statement1 (counter variable(s)); statement2 (condition to keep the loop running); statement3 (statement executed each time after the loop has been executed)){code block to be executed}"
+    },
+    "foreach_loop": {
+      "name": "Foreach loop",
+      "code": "for(item : array of type item){code to execute}"
+    }
+  }
+}
