@@ -7,6 +7,7 @@
   "categories": {
     "Numerical": [
       "boolean",
+      "integer_8_bit",
       "integer_16_bit",
       "integer_32_bit",
       "integer_64_bit",
@@ -30,6 +31,10 @@
   "data_types": {
     "boolean": {
       "name": "Boolean",
+      "code": ""
+    },
+    "integer_8_bit": {
+      "name": "8-bit integer",
       "code": ""
     },
     "integer_16_bit": {
