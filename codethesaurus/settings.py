@@ -32,6 +32,9 @@ if SYSTEM_ENV == 'PRODUCTION' or SYSTEM_ENV == 'STAGING':
 else:
     DEBUG = True
 
+# redirect all http requests to https in non debugging envs
+SECURE_SSL_REDIRECT = not DEBUG
+
 ALLOWED_HOSTS = []
 
 
