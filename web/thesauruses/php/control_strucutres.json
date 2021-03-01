@@ -45,6 +45,10 @@
       "name": "If/ElseIf/Else conditional",
       "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n} else {\n    // else statement\n}"
     },
+    "ternary_conditional":{
+      "name": "Ternary conditional",
+      "code": "$value ? $value : $other_value;\n$value ?: $other_value;"
+    },
     "while_loop": {
       "name": "While loop",
       "code": "while( $condition ) {\n    // code to be executed\n}"
