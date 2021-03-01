@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "cplusplus",
+    "language_version": "c++17",
+    "language_name": "C++"
   },
   "categories": {
     "Conditional Statements (ifs)": [
