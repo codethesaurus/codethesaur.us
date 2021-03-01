@@ -1,20 +1,21 @@
 {
   "meta": {
-    "language": "python",
-    "language_version": "3.7",
-    "language_name": "Python"
+    "language": "nim",
+    "language_version": "1.4",
+    "language_name": "Nim"
   },
     "categories": {
     "Numerical": [
       "boolean",
+      "integer_8_bit",
       "integer_16_bit",
       "integer_32_bit",
       "integer_64_bit",
       "integer_as_object",
-      "float_16_bit",
       "float_32_bit",
       "float_64_bit",
-      "float_as_object"
+      "float_as_object",
+      "char"
     ],
     "Strings": [
       "string_as_object",
@@ -33,43 +34,43 @@
     },
     "integer_16_bit" : {
       "name": "16-bit integer",
-      "code": null
+      "code": "int16"
     },
     "integer_32_bit": {
       "name": "32-bit integer",
-      "code": null
+      "code": "int32"
     },
     "integer_64_bit": {
       "name": "64-bit integer",
-      "code": null
+      "code": "int64"
     },
     "integer_as_object": {
       "name": "Object-based Integer",
       "code": "int"
     },
-    "float_16_bit": {
-      "name": "16-bit floating point",
-      "code": null
-    },
     "float_32_bit": {
       "name": "32-bit floating point",
-      "code": null
+      "code": "float32"
     },
     "float_64_bit": {
       "name": "64-bit floating point",
-      "code": null
+      "code": "float64"
     },
     "float_as_object": {
       "name": "Object-based floating point",
       "code": "float"
     },
+    "char": {
+      "name": "Character",
+      "code": "char"
+    },
     "string_as_object": {
       "name": "String as an object",
-      "code": "str"
+      "code": "string"
     },
     "string_as_array": {
       "name": "String as an array",
-      "code": null
+      "code": "openArray[char]"
     },
     "complex_as_object": {
       "name": "Complex Number as an object",

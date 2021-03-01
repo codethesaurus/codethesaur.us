@@ -14,7 +14,8 @@
       "float_16_bit",
       "float_32_bit",
       "float_64_bit",
-      "float_as_object"
+      "float_as_object",
+      "char"
     ],
     "Strings": [
       "string_as_object",
@@ -61,6 +62,10 @@
     },
     "float_as_object": {
       "name": "Object-based floating point",
+      "code": ""
+    },
+    "char": {
+      "name": "Character",
       "code": ""
     },
     "string_as_object": {
