@@ -1,15 +1,17 @@
 {
   "languages": {
-    "C++": "cplusplus",
-    "C#": "csharp",
-    "Java": "java",
-    "Python": "python",
-    "Scala": "scala",
-    "PHP": "php"
+    "cplusplus": "C++",
+    "csharp": "C#",
+    "java": "Java",
+    "javascript": "JavaScript",
+    "nim": "Nim",
+    "php": "PHP",
+    "python": "Python",
+    "scala": "Scala"
   },
   "structures": {
-    "Control Structures": "control_structures.json",
-    "Data Types": "data_types.json",
-    "Functions/Methods/Subroutines": "functions.json"
+    "control_structures": "Control Structures",
+    "data_types": "Data Types",
+    "functions": "Functions/Methods/Subroutines"
   }
 }
