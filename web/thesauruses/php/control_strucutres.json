@@ -9,19 +9,23 @@
       "if_conditional",
       "if_else_conditional",
       "if_elseif_conditional",
-      "if_elseif_else_conditional"
+      "if_elseif_else_conditional",
+      "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
       "do_while_loop",
       "until_loop",
       "do_until_loop",
-      "for_loops",
-      "foreach_loops"
+      "for_loop",
+      "foreach_loop"
     ],
     "Iterations": [
+      "each_iteration",
       "map_iteration",
-      "filter_iteration"
+      "filter_iteration",
+      "fold_iteration",
+      "recursion_iteration"
     ]
   },
   "control_structures": {
