@@ -59,11 +59,15 @@
     },
     "for_loops": {
       "name": "For loop",
-      "code": "for ( $intial_counter, $test_counter, $increment ) {\n    // executable code\n}"
+      "code": "for ( $intial_counter; $test_counter; $increment ) {\n    // executable code\n}"
     },
-    "foreach_loops": {
+    "foreach_loop": {
       "name": "Foreach loop",
       "code": "foreach ( $iterable as $item ) {\n    // executable code}"
+    },
+    "each_iteration": {
+      "name": "Each iteration",
+      "code": ""
     },
     "map_iteration": {
       "name": "Map iteration",
@@ -72,6 +76,14 @@
     "filter_iteration": {
       "name": "Filter iteration",
       "code": "array_filter( $array, function( $element ) { // return a bool } );"
+    },
+    "fold_iteration": {
+      "name": "Fold iteration",
+      "code": ""
+    },
+    "recursion_iteration": {
+      "name": "Recursion iteration",
+      "code": ""
     }
   }
 }
