@@ -89,7 +89,7 @@
     "for_loops": {
       "name": "For loop",
       "code": "
-      for(initialization; condition; increment/decrement){
+      for(initialization; condition; incrementor){
         statements;
       }"
     },
