@@ -31,55 +31,55 @@
     "if_conditional": {
       "name": "If conditional",
       "code": "
-      if(condition){
-        statements;
+      if(condition){\n
+        statements;\n
       }"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
       "code": "
-      if(condition){
-        statements;
-      }
-      else{
-        statements;
+      if(condition){\n
+        statements;\n
+      }\n
+      else{\n
+        statements;\n
       }"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
       "code": "
-      if(condition){
-        statements;
-      }
-      else if(condition){
-          statements;
+      if(condition){\n
+        statements;\n
+      }\n
+      else if(condition){\n
+          statements;\n
       }"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
       "code": "
-      if(condition){
-        statements;
-      }
-      else if(condition){
-          statements;
-      }
-      else{
-        statements;
+      if(condition){\n
+        statements;\n
+      }\n
+      else if(condition){\n
+          statements;\n
+      }\n
+      else{\n
+        statements;\n
       }"
     },
     "while_loop": {
       "name": "While loop",
       "code": "
-      while(condition){
-        statements;
+      while(condition){\n
+        statements;\n
       }"
     },
     "do_while_loop": {
       "name": "Do/While loop",
       "code": "
-      do{
-        statements;
+      do{\n
+        statements;\n
       }while(condition)"
     },
     "until_loop": {
@@ -89,15 +89,15 @@
     "for_loops": {
       "name": "For loop",
       "code": "
-      for(initialization; condition; incrementor){
-        statements;
+      for(initialization; condition; incrementor){\n
+        statements;\n
       }"
     },
     "foreach_loops": {
       "name": "Foreach loop",
       "code": "
-      for(variable: array/vector){
-        statements;
+      for(variable: array/vector){\n
+        statements;\n
       } "
     },
     "each_iteration": {
