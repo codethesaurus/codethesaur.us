@@ -1,12 +1,12 @@
 {
   "languages": {
-    "cplusplus": "C++",
-    "csharp": "C#",
-    "java": "Java",
-    "javascript": "JavaScript",
-    "nim": "Nim",
-    "python": "Python", 
-    "scala": "Scala"
+    "cplusplus": "c++",
+    "csharp": "c#",
+    "java": "java",
+    "javascript": "javascript",
+    "nim": "nim",
+    "python": "python",
+    "scala": "scala"
   },
   "structures": {
     "control_structures": "Control Structures",
