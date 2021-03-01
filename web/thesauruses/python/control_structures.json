@@ -9,15 +9,16 @@
       "if_conditional",
       "if_else_conditional",
       "if_elseif_conditional",
-      "if_elseif_else_conditional"
+      "if_elseif_else_conditional",
+      "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
       "do_while_loop",
       "until_loop",
       "do_until_loop",
-      "for_loops",
-      "foreach_loops"
+      "for_loop",
+      "foreach_loop"
     ],
     "Iterations": [
       "each_iteration",
@@ -30,57 +31,51 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": "
-      if condition:
-        statements"
+      "code": "if condition:\n    statements"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": "
-      if condition:
-        statements
-      else:
-        statements"
+      "code": "if condition:\n    statements\nelse:\n    statements"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": "
-      if condition:
-        statements
-      elif:
-        statements"
+      "code": "if condition:\n    statements\nelif:\n    statements"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": "
-      if condition:
-        statements
-      elif condition:
-        statements
-      else:
-        statements"
+      "code": "if condition:\n    statements\nelif condition:\n    statements\nelse:    statements"
+    },
+    "ternary_conditional": {
+      "name": "Conditional (ternary) Operator",
+      "code": ""
     },
     "while_loop": {
       "name": "While loop",
-      "code": "
-      while condition:
-        statements"
+      "code": "while condition:\n    statements"
     },
     "do_while_loop": {
+      "name": "",
+      "code": ""
     },
     "until_loop": {
+      "name": "",
+      "code": ""
     },
     "do_until_loop": {
+      "name": "",
+      "code": ""
     },
-    "for_loops": {
+    "for_loop": {
       "name": "For loop",
-      "code": "
-      for iterator in iterable:
-        statements"
+      "code": "for iterator in iterable:\n    statements"
     },
-    "foreach_loops": {
+    "foreach_loop": {
+      "name": "",
+      "code": ""
     },
     "each_iteration": {
+      "name": "",
+      "code": ""
     },
     "map_iteration": {
       "name": "Map iteration",
@@ -89,6 +84,14 @@
     "filter_iteration": {
       "name": "Filter iteration",
       "code": "filter(function, iterable)"
+    },
+    "fold_iteration": {
+      "name": "",
+      "code": ""
+    },
+    "recursion_iteration": {
+      "name": "",
+      "code": ""
     }
   }
 }

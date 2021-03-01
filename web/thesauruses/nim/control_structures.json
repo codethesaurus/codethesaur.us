@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "nim",
+    "language_version": "1.4",
+    "language_name": "Nim"
   },
   "categories": {
     "Conditional Statements (ifs)": [
@@ -14,11 +14,8 @@
     ],
     "Loops": [
       "while_loop",
-      "do_while_loop",
-      "until_loop",
-      "do_until_loop",
-      "for_loop",
-      "foreach_loop"
+      "for_loops",
+      "foreach_loops"
     ],
     "Iterations": [
       "each_iteration",
@@ -31,67 +28,39 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": ""
+      "code": "if condition: statements"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": ""
+      "code": "if condition:\n  statements\nelse:  statements"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": ""
+      "code": "if condition:\n  statements\nelif:\n  statements"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": ""
+      "code": "if condition:\n  statements\nelif condition:\n  statements\nelse:\n  statements"
     },
     "ternary_conditional": {
-      "name": "Ternary conditional",
-      "code": ""
+      "name": "Conditional (ternary) Operator",
+      "code": "if condition: exprIfTrue else: exprIfFalse"
     },
     "while_loop": {
       "name": "While loop",
-      "code": ""
+      "code": "while condition: statements"
     },
-    "do_while_loop": {
-      "name": "Do/While loop",
-      "code": ""
-    },
-    "until_loop": {
-      "name": "Until loop",
-      "code": ""
-    },
-    "do_until_loop": {
-      "name": "Do/Until loop",
-      "code": ""
-    },
-    "for_loop": {
+    "for_loops": {
       "name": "For loop",
-      "code": ""
-    },
-    "foreach_loop": {
-      "name": "Foreach loop",
-      "code": ""
-    },
-    "each_iteration": {
-      "name": "Each iteration",
-      "code": ""
+      "code": "for iterator in iterable: statements"
     },
     "map_iteration": {
       "name": "Map iteration",
-      "code": ""
+      "code": "map(function, iterable)"
     },
     "filter_iteration": {
       "name": "Filter iteration",
-      "code": ""
-    },
-    "fold_iteration": {
-      "name": "Fold iteration",
-      "code": ""
-    },
-    "recursion_iteration": {
-      "name": "Recursion iteration",
-      "code": ""
+      "code": "filter(function, iterable)"
     }
   }
 }
