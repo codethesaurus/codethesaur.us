@@ -29,40 +29,40 @@
     "void_function_no_parameters": {
       "name": "Function that does not return a value and takes no parameters",
       "code": "
-      def function_name():
+      def function_name():\n
         statements"
     },
     "void_function_with_parameters": {
       "name": "Function that does not return a value and that takes 1 or more defined parameters",
       "code": "
-      def function_name(parameter, parameter_1 ):
+      def function_name(parameter, parameter_1):\n
         statements"
     },
     "void_function_variable_parameters": {
       "name": "Function that does not return a value and function that takes an unknown number of parameters",
       "code": "
-      def function_name(*parameter_name):
+      def function_name(*parameter_name):\n
         statements"
     },
     "return_value_function_no_parameters": {
       "name": "Function that returns a value and takes no parameters",
       "code": "
-      def function_name():
-        statements
+      def function_name():\n
+        statements\n
         return expression"
     },
     "return_value_function_with_parameters": {
       "name": "Function that returns a value and takes 1 or more defined parameters",
       "code": "
-      def function_name(parameter, parameter_1 ):
-        statements
+      def function_name(parameter, parameter_1):\n
+        statements\n
         return expression"
     },
     "return_value_function_variable_parameters": {
       "name": "Function that returns a value and takes an unknown number of parameters",
       "code": "
-      def function_name(*parameter_name):
-        statements
+      def function_name(*parameter_name):\n
+        statements\n
         return expression"
     },
     "anonymous_function_no_parameters": {
