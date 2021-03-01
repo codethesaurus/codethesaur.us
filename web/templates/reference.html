@@ -4,7 +4,7 @@
 {% block content %}
         <div class="container">
             <div class="row mt-5">
-                <h2 class="col-12">Reference for {{ lang_friendlyname }} for {{ concept }}</h2>
+                <h2 class="col-12">Reference for {{ lang_friendlyname|linebreaksbr }} for {{ concept|linebreaksbr }}</h2>
             </div>
             <div class="row col-12">
                 The following will eventually be a table of stuff that's populated with things from the languages
@@ -12,7 +12,7 @@
 
 {% for category in categories %}
             <div class="row">&nbsp;</div>
-            <div class="row"><h3>{{ category.id }}</h3></div>
+            <div class="row"><h3>{{ category.id|linebreaksbr }}</h3></div>
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang_friendlyname }}'s Implementation</h5>
+                        <h5 class="text-center">{{ lang_friendlyname|linebreaksbr }}'s Implementation</h5>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="strong">
-                            {{ c.name }}
+                            {{ c.name|linebreaksbr }}
                         </div>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <a href="https://github.com/codethesaurus/codethesaur.us/blob/master/web/thesauruses/{{ lang }}/{{ concept_id }}.json">
-                            Want to add or correct information for {{ lang_friendlyname }}?
+                        <a href="https://github.com/codethesaurus/codethesaur.us/blob/master/web/thesauruses/{{ lang|linebreaksbr }}/{{ concept_id|linebreaksbr }}.json">
+                            Want to add or correct information for {{ lang_friendlyname|linebreaksbr }}?
                         </a>
                     </div>
                 </div>
