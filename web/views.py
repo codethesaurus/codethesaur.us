@@ -136,29 +136,33 @@ def reference(request):
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
             meta_data = meta_file.read()
         meta_data_langs = json.loads(meta_data)["languages"]
+        meta_data_structures = json.loads(meta_data)["structures"]
 
         concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
         lang_query_string = escape(strip_tags(request.GET.get('lang', '')))
 
-        lang_directory = meta_data_langs.get(lang_query_string)
+        concept_friendly_name_pos = list(meta_data_structures.values()).index(concept_query_string)
+        concept_friendly_name = list(meta_data_structures.keys())[concept_friendly_name_pos]
 
-        if not lang_directory:
+        if not lang_query_string:
             return HttpResponseNotFound(
-                "The " + concept_query_string + " concept of the " + lang_query_string +
-                "language doesn't exist or hasn't been implemented yet.")
+                "The " + concept_query_string + " concept of the " + lang_query_string + " language doesn't exist or hasn't been implemented yet.")
 
-        with open("web/thesauruses/" + lang_directory + "/" + concept_query_string + ".json", 'r') as lang_file:
+        lang_file_path = os.path.join(
+            "web", "thesauruses", lang_query_string, concept_query_string) + ".json"
+
+        with open(lang_file_path, 'r') as lang_file:
             data = lang_file.read()
-        # parse file
-        lang_file_json = json.loads(data)
+            # parse file
+            lang_file_json = json.loads(data)
 
-        lang_friendly_name = lang_file_json["meta"]["language_name"]
-        lang_categories = lang_file_json["categories"]
-        lang_concepts = lang_file_json[concept_query_string]
+            lang_friendly_name = lang_file_json["meta"]["language_name"]
+            lang_categories = lang_file_json["categories"]
+            lang_concepts = lang_file_json[concept_query_string]
+
     except:
         return HttpResponseNotFound(
-            "The " + concept_query_string + " concept of the " + lang_query_string + "either doesn't exist or hasn't "
-                                                                                     "been implemented yet.")
+            "The " + concept_query_string + " concept of the " + lang_query_string + " language doesn't exist or hasn't been implemented yet.")
 
     categories = []
     concepts = []
@@ -177,7 +181,8 @@ def reference(request):
     response = {
         "title": "Reference for " + lang_query_string,
         "concept": concept_query_string,
-        "lang": lang_directory,
+        "concept_friendly_name": concept_friendly_name,
+        "lang": lang_query_string,
         "lang_friendlyname": lang_friendly_name,
         "categories": categories,
         "concepts": concepts
