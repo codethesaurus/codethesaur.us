@@ -25,7 +25,7 @@ class TestViews(TestCase):
 
 
 	def test_compare_view_GET(self):
-		url = reverse('compare') + '?concept=data_types&lang1=Python&lang2=Java'
+		url = reverse('compare') + '?concept=data_types&lang1=python&lang2=java'
 		response = self.client.get(url)
 
 		self.assertEquals(response.status_code, 200)
@@ -34,7 +34,7 @@ class TestViews(TestCase):
 
 
 	def test_reference_view_GET(self):
-		url = reverse('reference') + '?concept=data_types&lang=Python'	
+		url = reverse('reference') + '?concept=data_types&lang=python'
 		response = self.client.get(url)
 
 		self.assertEquals(response.status_code, 200)

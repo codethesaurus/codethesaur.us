@@ -31,53 +31,51 @@ def about(request):
 
 
 def compare(request):
-    # try:
-    with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-        meta_data = meta_file.read()
-    meta_data_langs = json.loads(meta_data)["languages"]
+    try:
+        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+            meta_data = meta_file.read()
+        meta_data_langs = json.loads(meta_data)["languages"]
+        meta_data_structures = json.loads(meta_data)["structures"]
 
-    concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
-    lang1_query_string = escape(strip_tags(request.GET.get('lang1', '')))
-    lang2_query_string = escape(strip_tags(request.GET.get('lang2', '')))
-    meta_structures = json.loads(meta_data)["structures"]
-    # concept_friendly_name = list(meta_structures.keys())[list(meta_structures.values()).index(concept_query_string + '.json')]
-    concept_friendly_name = meta_structures[concept_query_string] #meta_structures.keys()[concept_query_string]
+        concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
+        lang1_query_string = escape(strip_tags(request.GET.get('lang1', '')))
+        lang2_query_string = escape(strip_tags(request.GET.get('lang2', '')))
 
-    lang1_directory = lang1_query_string #meta_data_langs.get(lang1_query_string)
-    lang2_directory = lang2_query_string #meta_data_langs.get(lang2_query_string)
+        concept_friendly_name_pos = list(meta_data_structures.values()).index(concept_query_string)
+        concept_friendly_name = list(meta_data_structures.keys())[concept_friendly_name_pos]
 
-    if not lang1_directory and lang2_directory:
+        if not lang1_query_string and lang2_query_string:
+            return HttpResponseNotFound(
+                "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
+                lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
+
+        lang1_file_path = os.path.join(
+            "web", "thesauruses", lang1_query_string, concept_query_string) + ".json"
+        lang2_file_path = os.path.join(
+            "web", "thesauruses", lang2_query_string, concept_query_string) + ".json"
+
+        with open(lang1_file_path, 'r') as lang1_file:
+            data = lang1_file.read()
+            # parse file
+            lang1_file_json = json.loads(data)
+
+            lang1_friendly_name = lang1_file_json["meta"]["language_name"]
+            lang1_categories = lang1_file_json["categories"]
+            lang1_concepts = lang1_file_json[concept_query_string]
+
+        with open(lang2_file_path, 'r') as lang2_file:
+            data = lang2_file.read()
+            # parse file
+            lang2_file_json = json.loads(data)
+
+            lang2_friendly_name = lang2_file_json["meta"]["language_name"]
+            lang2_categories = lang2_file_json["categories"]
+            lang2_concepts = lang2_file_json[concept_query_string]
+
+    except:
         return HttpResponseNotFound(
             "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
             lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
-
-    lang1_file_path = os.path.join(
-        "web", "thesauruses", lang1_directory, concept_query_string + ".json")
-    lang2_file_path = os.path.join(
-        "web", "thesauruses", lang2_directory, concept_query_string + ".json")
-
-    with open(lang1_file_path, 'r') as lang1_file:
-        data = lang1_file.read()
-        # parse file
-        lang1_file_json = json.loads(data)
-
-        lang1_friendly_name = lang1_file_json["meta"]["language_name"]
-        lang1_categories = lang1_file_json["categories"]
-        lang1_concepts = lang1_file_json[concept_query_string]
-
-    with open(lang2_file_path, 'r') as lang2_file:
-        data = lang2_file.read()
-        # parse file
-        lang2_file_json = json.loads(data)
-
-        lang2_friendly_name = lang2_file_json["meta"]["language_name"]
-        lang2_categories = lang2_file_json["categories"]
-        lang2_concepts = lang2_file_json[concept_query_string]
-
-    # except:
-    #     return HttpResponseNotFound(
-    #         "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
-    #         lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
 
     both_categories = []
     both_concepts = []
@@ -120,10 +118,10 @@ def compare(request):
     # DB equivalent of full outer join
     response = {
         "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
-        "concept": concept_friendly_name,
-        "concept_id": concept_query_string,
-        "lang1": lang1_directory,
-        "lang2": lang2_directory,
+        "concept": concept_query_string,
+        "concept_friendly_name": concept_friendly_name,
+        "lang1": lang1_query_string,
+        "lang2": lang2_query_string,
         "lang1_friendlyname": lang1_friendly_name,
         "lang2_friendlyname": lang2_friendly_name,
         "categories": both_categories,
@@ -138,31 +136,33 @@ def reference(request):
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
             meta_data = meta_file.read()
         meta_data_langs = json.loads(meta_data)["languages"]
-        meta_structures = json.loads(meta_data)["structures"]
+        meta_data_structures = json.loads(meta_data)["structures"]
 
         concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
         lang_query_string = escape(strip_tags(request.GET.get('lang', '')))
-        concept_friendly_name = list(meta_structures.keys())[list(meta_structures.values()).index(concept_query_string + '.json')]
 
-        lang_directory = meta_data_langs.get(lang_query_string)
+        concept_friendly_name_pos = list(meta_data_structures.values()).index(concept_query_string)
+        concept_friendly_name = list(meta_data_structures.keys())[concept_friendly_name_pos]
 
-        if not lang_directory:
+        if not lang_query_string:
             return HttpResponseNotFound(
-                "The " + concept_query_string + " concept of the " + lang_query_string +
-                "language doesn't exist or hasn't been implemented yet.")
+                "The " + concept_query_string + " concept of the " + lang_query_string + " language doesn't exist or hasn't been implemented yet.")
 
-        with open("web/thesauruses/" + lang_directory + "/" + concept_query_string + ".json", 'r') as lang_file:
+        lang_file_path = os.path.join(
+            "web", "thesauruses", lang_query_string, concept_query_string) + ".json"
+
+        with open(lang_file_path, 'r') as lang_file:
             data = lang_file.read()
-        # parse file
-        lang_file_json = json.loads(data)
+            # parse file
+            lang_file_json = json.loads(data)
 
-        lang_friendly_name = lang_file_json["meta"]["language_name"]
-        lang_categories = lang_file_json["categories"]
-        lang_concepts = lang_file_json[concept_query_string]
+            lang_friendly_name = lang_file_json["meta"]["language_name"]
+            lang_categories = lang_file_json["categories"]
+            lang_concepts = lang_file_json[concept_query_string]
+
     except:
         return HttpResponseNotFound(
-            "The " + concept_query_string + " concept of the " + lang_query_string + "either doesn't exist or hasn't "
-                                                                                     "been implemented yet.")
+            "The " + concept_query_string + " concept of the " + lang_query_string + " language doesn't exist or hasn't been implemented yet.")
 
     categories = []
     concepts = []
@@ -180,9 +180,9 @@ def reference(request):
 
     response = {
         "title": "Reference for " + lang_query_string,
-        "concept": concept_friendly_name,
-        "concept_id": concept_query_string,
-        "lang": lang_directory,
+        "concept": concept_query_string,
+        "concept_friendly_name": concept_friendly_name,
+        "lang": lang_query_string,
         "lang_friendlyname": lang_friendly_name,
         "categories": categories,
         "concepts": concepts

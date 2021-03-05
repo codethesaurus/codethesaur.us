@@ -1,17 +1,17 @@
 {
   "languages": {
-    "cplusplus": "C++",
-    "csharp": "C#",
-    "java": "Java",
-    "javascript": "JavaScript",
-    "nim": "Nim",
-    "php": "PHP",
-    "python": "Python",
-    "scala": "Scala"
+    "C++": "cplusplus",
+    "C#": "csharp",
+    "Haskell": "haskell",
+    "Java": "java",
+    "JavaScript": "javascript",
+    "Nim": "nim",
+    "Python": "python",
+    "Scala": "scala"
   },
   "structures": {
-    "control_structures": "Control Structures",
-    "data_types": "Data Types",
-    "functions": "Functions/Methods/Subroutines"
+    "Control Structures": "control_structures",
+    "Data Types": "data_types",
+    "Functions/Methods/Subroutines": "functions"
   }
 }

@@ -32,6 +32,10 @@
       "name": "Boolean",
       "code": "bool"
     },
+    "integer_8_bit" : {
+      "name": "8-bit integer",
+      "code": "int8"
+    },
     "integer_16_bit" : {
       "name": "16-bit integer",
       "code": "int16"
