@@ -22,12 +22,12 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang1_friendlyname }}'s Implementation</h5>
+                        <h5 class="text-center">{{ lang1_friendlyname|linebreaksbr }}'s Implementation</h5>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="text-center">{{ lang2_friendlyname }}'s Implementation</h5>
+                        <h5 class="text-center">{{ lang2_friendlyname|linebreaksbr }}'s Implementation</h5>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="strong">
-                                {{ c.name1|default:"Unsupported or Not Needed" }}
+                                {{ c.name1|default:"Unsupported or Not Needed"|linebreaksbr }}
                             </div>
                         </div>
                     </div>
