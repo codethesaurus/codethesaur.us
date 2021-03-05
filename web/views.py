@@ -12,7 +12,7 @@ def index(request):
         meta_data = meta_file.read()
     meta_data_langs = json.loads(meta_data)["languages"]
     meta_structures = json.loads(meta_data)["structures"]
-    random_langs = random.sample(meta_data_langs().keys(), k=3)
+    random_langs = random.sample(list(meta_data_langs.values()), k=3)
 
     content = {
         'title': 'Welcome',
@@ -35,23 +35,24 @@ def compare(request):
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
             meta_data = meta_file.read()
         meta_data_langs = json.loads(meta_data)["languages"]
+        meta_data_structures = json.loads(meta_data)["structures"]
 
         concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
         lang1_query_string = escape(strip_tags(request.GET.get('lang1', '')))
         lang2_query_string = escape(strip_tags(request.GET.get('lang2', '')))
 
-        lang1_directory = meta_data_langs.get(lang1_query_string)
-        lang2_directory = meta_data_langs.get(lang2_query_string)
+        concept_friendly_name_pos = list(meta_data_structures.values()).index(concept_query_string)
+        concept_friendly_name = list(meta_data_structures.keys())[concept_friendly_name_pos]
 
-        if not lang1_directory and lang2_directory:
+        if not lang1_query_string and lang2_query_string:
             return HttpResponseNotFound(
                 "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
                 lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
 
         lang1_file_path = os.path.join(
-            "web", "thesauruses", lang1_directory, concept_query_string) + ".json"
+            "web", "thesauruses", lang1_query_string, concept_query_string) + ".json"
         lang2_file_path = os.path.join(
-            "web", "thesauruses", lang2_directory, concept_query_string) + ".json"
+            "web", "thesauruses", lang2_query_string, concept_query_string) + ".json"
 
         with open(lang1_file_path, 'r') as lang1_file:
             data = lang1_file.read()
@@ -118,8 +119,9 @@ def compare(request):
     response = {
         "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
         "concept": concept_query_string,
-        "lang1": lang1_directory,
-        "lang2": lang2_directory,
+        "concept_friendly_name": concept_friendly_name,
+        "lang1": lang1_query_string,
+        "lang2": lang2_query_string,
         "lang1_friendlyname": lang1_friendly_name,
         "lang2_friendlyname": lang2_friendly_name,
         "categories": both_categories,
