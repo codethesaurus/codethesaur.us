@@ -10,7 +10,7 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
-      "ternary conditional"
+      "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
@@ -24,39 +24,39 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": "if(condition){code block to be executed}"
+      "code": "if(condition){\n statements;\n}"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": "if(condition){code block to be executed} else{code block to be executed}"
+      "code": "if(condition){\n statements;\n} \nelse{\n statements;\n}"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": "if(condition){code block to be executed} else if(condition){code block to be executed}"
+      "code": "if(condition){\nstatements;\n} \nelse if(condition){\nstatements;\n}"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": "if(condition){code block to be executed} else if(condition){code block to be executed} else{code block to be executed}"
+      "code": "if(condition){\nstatements; \n} \nelse if(condition){\nstatements;\n} \nelse{\nstatements;\n}"
     },
     "ternary_conditional": {
       "name": "Conditional (ternary) Operator",
-      "code": "condition ? exprIfTrue : exprIfFalse"
+      "code": "condition ? statementIfTrue : statementIfFalse"
     },
     "while_loop": {
       "name": "While loop",
-      "code": "while(condition){code block to be executed}"
+      "code": "while(condition){\nstatements;\n}"
     },
     "do_while_loop": {
       "name": "Do/While loop",
-      "code": "do{code to be executed} whilr(condition)"
+      "code": "do{\nstatements;\n} \nwhile(condition)"
     },
-    "for_loops": {
+    "for_loop": {
       "name": "For loop",
-      "code": "for(statement1 (counter variable(s)); statement2 (condition to keep the loop running); statement3 (statement executed each time after the loop has been executed)){code block to be executed}"
+      "code": "for(counter variable(s); loop condition; executed after each iteration){\ncode block to be executed}"
     },
     "foreach_loop": {
       "name": "Foreach loop",
-      "code": "for(item : array of type item){code to execute}"
+      "code": "for(item : array of type item){\nstatements;\n}"
     }
   }
 }
