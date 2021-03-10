@@ -5,7 +5,7 @@
     "language_name": "JavaScript"
   },
   "categories": {
-    "conditions (ifs)": [
+    "Conditional Statements (ifs)": [
       "if_conditional",
       "if_else_conditional",
       "if_elseif_conditional",
@@ -15,12 +15,17 @@
     "Loops": [
       "while_loop",
       "do_while_loop",
-      "for_loop"
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop"
     ],
-    "Array_Iterations": [
+    "Iterations": [
+      "each_iteration",
       "map_iteration",
       "filter_iteration",
-      "foreach_loop"
+      "fold_iteration",
+      "recursion_iteration"
     ]
   },
   "control_structures": {
@@ -52,6 +57,14 @@
       "name": "Do/While loop",
       "code": "do {code block to be executed} while(condition)"
     },
+    "until_loop":{
+      "name": "",
+      "code": ""
+    },
+    "do_until_loop": {
+      "name": "",
+      "code": ""
+    },
     "for_loop": {
       "name": "For loop",
       "code": "for(statement1 (counter variable(s)); statement2 (condition to keep the loop running); statement3 (statement executed each time after the loop has been executed)){code block to be executed}"
@@ -60,6 +73,10 @@
       "name": "Foreach loop",
       "code": "array.forEach(function(currentValue, index, arr), thisValue)"
     },
+    "each_iteration": {
+      "name": "",
+      "code": ""
+    },
     "map_iteration": {
       "name": "Map iteration",
       "code": "array.map(function(currentValue, index, arr), thisValue)"
@@ -67,6 +84,14 @@
     "filter_iteration": {
       "name": "Filter iteration",
       "code": "array.filter(function(currentValue, index, arr), thisValue)"
+    },
+    "fold_iteration": {
+      "name": "",
+      "code": ""
+    },
+    "recursion_iteration": {
+      "name": "",
+      "code": ""
     }
   }
 }

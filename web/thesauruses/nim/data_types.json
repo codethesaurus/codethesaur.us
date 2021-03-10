@@ -1,10 +1,10 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "nim",
+    "language_version": "1.4",
+    "language_name": "Nim"
   },
-  "categories": {
+    "categories": {
     "Numerical": [
       "boolean",
       "integer_8_bit",
@@ -12,7 +12,6 @@
       "integer_32_bit",
       "integer_64_bit",
       "integer_as_object",
-      "float_16_bit",
       "float_32_bit",
       "float_64_bit",
       "float_as_object",
@@ -29,69 +28,65 @@
     ]
   },
   "data_types": {
-    "boolean": {
+    "boolean" : {
       "name": "Boolean",
-      "code": ""
+      "code": "bool"
     },
-    "integer_8_bit": {
+    "integer_8_bit" : {
       "name": "8-bit integer",
-      "code": ""
+      "code": "int8"
     },
-    "integer_16_bit": {
+    "integer_16_bit" : {
       "name": "16-bit integer",
-      "code": ""
+      "code": "int16"
     },
     "integer_32_bit": {
       "name": "32-bit integer",
-      "code": ""
+      "code": "int32"
     },
     "integer_64_bit": {
       "name": "64-bit integer",
-      "code": ""
+      "code": "int64"
     },
     "integer_as_object": {
       "name": "Object-based Integer",
-      "code": ""
-    },
-    "float_16_bit": {
-      "name": "16-bit floating point",
-      "code": ""
+      "code": "int"
     },
     "float_32_bit": {
       "name": "32-bit floating point",
-      "code": ""
+      "code": "float32"
     },
     "float_64_bit": {
       "name": "64-bit floating point",
-      "code": ""
+      "code": "float64"
     },
     "float_as_object": {
       "name": "Object-based floating point",
-      "code": ""
+      "code": "float"
     },
     "char": {
       "name": "Character",
-      "code": ""
+      "code": "char"
     },
     "string_as_object": {
       "name": "String as an object",
-      "code": ""
+      "code": "string"
     },
     "string_as_array": {
       "name": "String as an array",
-      "code": ""
+      "code": "openArray[char]"
     },
     "complex_as_object": {
       "name": "Complex Number as an object",
-      "code": ""
+      "code": "complex"
     },
     "real_number_part": {
       "name": "Complex number real part",
-      "code": ""
+      "code": "complex(real)"
     },
     "imaginary_number_part": {
       "name": "Complex number imaginary part",
-      "code": ""
+      "code": "complex(real, imaginary)"
     }
   }
 }

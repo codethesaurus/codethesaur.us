@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "php",
+    "language_version": "7.4",
+    "language_name": "PHP"
   },
   "categories": {
     "Conditional Statements (ifs)": [
@@ -31,47 +31,39 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": ""
+      "code": "if( $true_condition ) {\n    //statement\n}"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": ""
+      "code": "if( $condition ) {\n    // statement\n} else {\n    // else statement\n}"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": ""
+      "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n}"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": ""
+      "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n} else {\n    // else statement\n}"
     },
-    "ternary_conditional": {
+    "ternary_conditional":{
       "name": "Ternary conditional",
-      "code": ""
+      "code": "$value ? $value : $other_value;\n$value ?: $other_value;"
     },
     "while_loop": {
       "name": "While loop",
-      "code": ""
+      "code": "while( $condition ) {\n    // code to be executed\n}"
     },
     "do_while_loop": {
       "name": "Do/While loop",
-      "code": ""
+      "code": "do {\n    //executable code\n} while ( $condition );"
     },
-    "until_loop": {
-      "name": "Until loop",
-      "code": ""
-    },
-    "do_until_loop": {
-      "name": "Do/Until loop",
-      "code": ""
-    },
-    "for_loop": {
+    "for_loops": {
       "name": "For loop",
-      "code": ""
+      "code": "for ( $intial_counter; $test_counter; $increment ) {\n    // executable code\n}"
     },
     "foreach_loop": {
       "name": "Foreach loop",
-      "code": ""
+      "code": "foreach ( $iterable as $item ) {\n    // executable code}"
     },
     "each_iteration": {
       "name": "Each iteration",
@@ -79,11 +71,11 @@
     },
     "map_iteration": {
       "name": "Map iteration",
-      "code": ""
+      "code": "array_map( function( $element ) {\n    // transform element\n}, $array );"
     },
     "filter_iteration": {
       "name": "Filter iteration",
-      "code": ""
+      "code": "array_filter( $array, function( $element ) { // return a bool } );"
     },
     "fold_iteration": {
       "name": "Fold iteration",

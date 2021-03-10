@@ -2,13 +2,16 @@
   "languages": {
     "C++": "cplusplus",
     "C#": "csharp",
+    "Haskell": "haskell",
     "Java": "java",
+    "JavaScript": "javascript",
+    "Nim": "nim",
     "Python": "python",
     "Scala": "scala"
   },
   "structures": {
-    "Control Structures": "control_structures.json",
-    "Data Types": "data_types.json",
-    "Functions/Methods/Subroutines": "functions.json"
+    "Control Structures": "control_structures",
+    "Data Types": "data_types",
+    "Functions/Methods/Subroutines": "functions"
   }
 }

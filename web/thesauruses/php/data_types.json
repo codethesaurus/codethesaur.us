@@ -1,13 +1,12 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "php",
+    "language_version": "7.4",
+    "language_name": "PHP"
   },
   "categories": {
     "Numerical": [
       "boolean",
-      "integer_8_bit",
       "integer_16_bit",
       "integer_32_bit",
       "integer_64_bit",
@@ -31,23 +30,19 @@
   "data_types": {
     "boolean": {
       "name": "Boolean",
-      "code": ""
-    },
-    "integer_8_bit": {
-      "name": "8-bit integer",
-      "code": ""
+      "code": "bool"
     },
     "integer_16_bit": {
       "name": "16-bit integer",
-      "code": ""
+      "code": "int"
     },
     "integer_32_bit": {
       "name": "32-bit integer",
-      "code": ""
+      "code": "int"
     },
     "integer_64_bit": {
       "name": "64-bit integer",
-      "code": ""
+      "code": "int"
     },
     "integer_as_object": {
       "name": "Object-based Integer",
@@ -55,15 +50,15 @@
     },
     "float_16_bit": {
       "name": "16-bit floating point",
-      "code": ""
+      "code": "float"
     },
     "float_32_bit": {
       "name": "32-bit floating point",
-      "code": ""
+      "code": "float"
     },
     "float_64_bit": {
       "name": "64-bit floating point",
-      "code": ""
+      "code": "float"
     },
     "float_as_object": {
       "name": "Object-based floating point",
