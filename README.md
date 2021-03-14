@@ -17,7 +17,19 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 
 ## Cloning and running it locally
 
-### Windows
+### Docker container
+
+If you want, you can run and develop the application within docker container. To do this, firstly you have to make sure that you have Docker installed and running on you local machine. If you don't, [here](https://docs.docker.com/get-docker/) you can see how to get it.
+To build the app inside a Docker container, follow the following steps:
+
+1. Firstly, build the Docker image based on the supplied Dockerfile `docker build -t cthesaurus-img .`
+1. Then, run the Docker container by using the image that you've just created ``docker run --name codethesaurus-container -dti -p 8000:8000 -v `pwd`:/code cthesaurus-img``
+1. You can check if the container is up and running by invoking `docker container ls` - your container should be present on the list, its name should be set to "codethesaurus-container".
+1. Django development server is run automatically when you run the container - page should be available at http://localhost:8000.
+1. You can attach to the container by running `docker attach codethesaurus-container` - after you attach, you have to stop the development server by CTRL+C key combination. After that, you have access to the command line interface inside the container, where you can invoke django managment commands.
+1. To edit the respository, do it in your local directory on your machine - the changes that you make will be reflected in the container, thanks to the mounting of the filesystem, which was specified by ``-v `pwd`:/code`` option during `docker run ...` command execution.
+
+### Manual Install - Windows
 
 1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
 1. Switch into to directory `cd codethesaur.us`
@@ -31,7 +43,7 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 1. Press CTRL+C in the terminal to stop the server
 1. To deactivate the virtual environment, run `venv\Scripts\deactivate.bat`
 
-### Mac
+### Manual Install - Mac
 
 1. Check to see if Python 3.x is installed with `python --version` or `python3 --version`. If Python 3.x isn't installed, install it with `brew install python`
 1. Clone the project (`git clone https://github.com/codethesaurus/codethesaur.us.git`)
@@ -45,7 +57,7 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 1. Press CTRL+C in the terminal to stop the server
 1. To deactivate the virtual environment, run `deactivate`
 
-### Linux
+### Manual Install - Linux
 
 1. If python3 and pip3 are not installed there is a guide for [Linux systems](https://www.tecmint.com/install-pip-in-linux/)
 1. Check system default `python --version`
@@ -67,18 +79,6 @@ with `3`, e.g. `pip3` and `python3`, or follow the process for making Python
 1. In your browser, visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000/](http://localhost:8000/)
 1. Press CTRL+C in the terminal to stop the server.
 
-### Docker container
-
-If you want, you can run and develop the application within docker container. To do this, firstly you have to make sure that you have docker installed and running on you local machine. If you don't, [here](https://docs.docker.com/get-docker/) you can see how to get it.
-To build the app inside a docker container, follow the following steps:
-
-1. Firstly, build the docker image based on the supplied Dockerfile `docker build -t cthesaurus-img .`
-1. Then, run the docker container by using the image that you've just created ``docker run --name codethesaurus-container -dti -p 8000:8000 -v `pwd`:/code cthesaurus-img``
-1. You can check if the container is up and running by invoking `docker container ls` - your container should be present on the list, its name should be set to "codethesaur-container".
-1. Django development server is run automatically when you run the container - page should be available at localhost:8000.
-1. You can attach to the container by running `docker attach codethesaurus-container` - after you attach, you have to stop the development server by CTRL+C key combination. After that, you have access to the command line interface inside the container, where you can invoke django managment commands.
-1. To edit the respository, do it in your local directory on your machine - the changes that you make will be reflected in the container, thanks to the mounting of the filesystem, which was specified by ``-v `pwd`:/code`` option during `docker run ...` command execution.
-
 ## Contributing
 
 Check out the [Contributing Guide](CONTRIBUTING.md) to learn more about how you can help add more language data, fix bugs, or add features!
@@ -89,6 +89,8 @@ All contributors are required to follow the [Code Thesaurus Code of Conduct](COD
 
 ## Questions?
 
-Preferred: Reach out on Twitter [@codethesaurus](https://twitter.com/codethesaurus)
+If it's related to an issue, write a comment on the issue or email us at coreteam@codethesaur.us.
+
+You can also reach out on Twitter [@codethesaurus](https://twitter.com/codethesaurus).
 
 You could also email the core team (coreteam@codethesaur.us).
