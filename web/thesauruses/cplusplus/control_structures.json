@@ -30,57 +30,27 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": "
-      if(condition){\n
-        statements;\n
-      }"
+      "code": "if(condition){\nstatements;\n}"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": "
-      if(condition){\n
-        statements;\n
-      }\n
-      else{\n
-        statements;\n
-      }"
+      "code": "if(condition){\nstatements;\n}\nelse{\nstatements;\n}"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": "
-      if(condition){\n
-        statements;\n
-      }\n
-      else if(condition){\n
-          statements;\n
-      }"
+      "code": "if(condition){\nstatements;\n}\n else if(condition){\nstatements;\n}"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": "
-      if(condition){\n
-        statements;\n
-      }\n
-      else if(condition){\n
-          statements;\n
-      }\n
-      else{\n
-        statements;\n
-      }"
+      "code": "if(condition){\nstatements;\n}\nelse if(condition){\nstatements;\n}\nelse{\nstatements;\n}"
     },
     "while_loop": {
       "name": "While loop",
-      "code": "
-      while(condition){\n
-        statements;\n
-      }"
+      "code": "while(condition){\nstatements;\n}"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
-      "code": "
-      do{\n
-        statements;\n
-      }while(condition)"
+      "name": "Do/While loop", 
+      "code": "do{\nstatements;\n}while(condition)"
     },
     "until_loop": {
     },
@@ -88,17 +58,11 @@
     },
     "for_loops": {
       "name": "For loop",
-      "code": "
-      for(initialization; condition; incrementor){\n
-        statements;\n
-      }"
+      "code": "for(initialization; condition; incrementor){\nstatements;\n}"
     },
     "foreach_loops": {
       "name": "Foreach loop",
-      "code": "
-      for(variable: array/vector){\n
-        statements;\n
-      } "
+      "code": "for(variable: array/vector){\nstatements;\n} "
     },
     "each_iteration": {
     },
