@@ -63,8 +63,12 @@
       "code": "lambda *parameter : expression"
     },
     "call_subroutine": {
+      "name": "Call Subroutine",
+      "code": ""
       },
     "return_from_subroutine": {
+      "name": "Call from Subroutine",
+      "code": ""
       }
   }
 }
