@@ -53,8 +53,12 @@
       "code": "do{\nstatements;\n}while(condition)"
     },
     "until_loop": {
+      "name": "Until Loop",
+      "code": ""
     },
     "do_until_loop": {
+      "name": "Do Until Loop",
+      "code": ""
     },
     "for_loops": {
       "name": "For loop",
@@ -65,14 +69,24 @@
       "code": "for(variable: array/vector){\nstatements;\n} "
     },
     "each_iteration": {
+      "name": "Each iteration",
+      "code": ""
     },
     "map_iteration": {
+      "name": "Map Iteration",
+      "code": ""
     },
     "filter_iteration": {
+      "name": "Filter Iteration",
+      "code": ""
     },
     "fold_iteration": {
+      "name": "Fold Iteration",
+      "code": ""
     },
     "recursion_iteration": {
+      "name": "Recursion Iteration",
+      "code": ""
     }
   }
 }
