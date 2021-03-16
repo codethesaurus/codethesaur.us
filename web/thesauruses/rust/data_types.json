@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "language": "rust",
+    "language_version": "1",
+    "language_name": "Rust"
+  },
+  "categories": {
+    "Numerical": [
+      "boolean",
+      "integer_8_bit",
+      "integer_16_bit",
+      "integer_32_bit",
+      "integer_64_bit",
+      "integer_as_object",
+      "float_16_bit",
+      "float_32_bit",
+      "float_64_bit",
+      "float_as_object",
+      "char"
+    ],
+    "Strings": [
+      "string_as_object",
+      "string_as_array"
+    ],
+    "Complex Numbers": [
+      "complex_as_object",
+      "real_number_part",
+      "imaginary_number_part"
+    ]
+  },
+  "data_types": {
+    "boolean": {
+      "name": "Boolean",
+      "code": "bool"
+    },
+    "integer_8_bit": {
+      "name": "8-bit integer",
+      "code": "i8"
+    },
+    "integer_16_bit": {
+      "name": "16-bit integer",
+      "code": "i16"
+    },
+    "integer_32_bit": {
+      "name": "32-bit integer",
+      "code": "i32"
+    },
+    "integer_64_bit": {
+      "name": "64-bit integer",
+      "code": "i64"
+    },
+    "integer_as_object": {
+      "name": "Object-based Integer",
+      "code": ""
+    },
+    "float_16_bit": {
+      "name": "16-bit floating point",
+      "code": ""
+    },
+    "float_32_bit": {
+      "name": "32-bit floating point",
+      "code": "f32"
+    },
+    "float_64_bit": {
+      "name": "64-bit floating point",
+      "code": "f64"
+    },
+    "float_as_object": {
+      "name": "Object-based floating point",
+      "code": ""
+    },
+    "char": {
+      "name": "Character",
+      "code": "char"
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "code": "str"
+    },
+    "string_as_array": {
+      "name": "String as an array",
+      "code": "String"
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "code": "num::complex::Complex::new(real, imag)"
+    },
+    "real_number_part": {
+      "name": "Complex number real part",
+      "code": "complex.re"
+    },
+    "imaginary_number_part": {
+      "name": "Complex number imaginary part",
+      "code": "complex.im"
+    }
+  }
+}
