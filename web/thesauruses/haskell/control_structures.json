@@ -43,7 +43,7 @@
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": ""
+      "code": "if condition\n    then expression\n    else if condition\n        then expression\n        else expression"
     },
     "ternary_conditional": {
       "name": "Ternary conditional",
@@ -51,7 +51,7 @@
     },
     "while_loop": {
       "name": "While loop",
-      "code": ""
+      "code": "whileM monadBool"
     },
     "do_while_loop": {
       "name": "Do/While loop",
@@ -59,7 +59,7 @@
     },
     "until_loop": {
       "name": "Until loop",
-      "code": ""
+      "code": "untilJustM monadMaybeA"
     },
     "do_until_loop": {
       "name": "Do/Until loop",
@@ -71,7 +71,7 @@
     },
     "foreach_loop": {
       "name": "Foreach loop",
-      "code": ""
+      "code": "forM traversable function"
     },
     "each_iteration": {
       "name": "Each iteration",
