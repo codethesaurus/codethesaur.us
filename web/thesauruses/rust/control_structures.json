@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "language": "rust",
+    "language_version": "1",
+    "language_name": "Rust"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration",
+      "recursion_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": "if condition {\n    statements;\n}"
+    },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": "if condition {\n    statements;\n} else {\n    statements;\n}"
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": "if condition {\n    statements;\n} else if condition2 {\n    statements;\n}"
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": "if condition {\n    statements;\n} else if condition2 {\n    statements;\n} else {\n    statements;\n}"
+    },
+    "ternary_conditional": {
+      "name": "Ternary conditional",
+      "code": ""
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": "while condition {\n    statements;\n}"
+    },
+    "do_while_loop": {
+      "name": "Do/While loop",
+      "code": ""
+    },
+    "until_loop": {
+      "name": "Until loop",
+      "code": ""
+    },
+    "do_until_loop": {
+      "name": "Do/Until loop",
+      "code": ""
+    },
+    "for_loop": {
+      "name": "For loop",
+      "code": ""
+    },
+    "foreach_loop": {
+      "name": "Foreach loop",
+      "code": "for variable in iterable {\n    statements;\n}"
+    },
+    "each_iteration": {
+      "name": "Each iteration",
+      "code": "iter.for_each(|item| {\n    statements;\n});"
+    },
+    "map_iteration": {
+      "name": "Map iteration",
+      "code": "iter.map(|item| {\n    expression\n}"
+    },
+    "filter_iteration": {
+      "name": "Filter iteration",
+      "code": "iter.filter(|item| {\n    boolean_expression\n}"
+    },
+    "fold_iteration": {
+      "name": "Fold iteration",
+      "code": "iter.fold(init, |acc, x| {\n    expression\n}"
+    },
+    "recursion_iteration": {
+      "name": "Recursion iteration",
+      "code": ""
+    }
+  }
+}
