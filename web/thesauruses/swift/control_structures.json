@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "language": "swift",
+    "language_version": "5.3.3",
+    "language_name": "Swift"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration",
+      "recursion_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": "if condition {\n    statements\n}"
+      },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": "if condition {\n    statements\n}\nelse {\n    statements\n}"
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": "if condition {\n    statements\n}else if condition {\n    statements\n}"
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": "if condition {\n    statements\n}else if condition {\n    statements\n}\nelse {\n    statements\n}"
+    },
+    "ternary_conditional": {
+      "name": "Ternary conditional",
+      "code": "condition ? statement if true : statement if false"
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": "while condition {\n    statements\n}"
+    },
+    "do_while_loop": {
+      "name": "Do/While loop",
+      "code": "repeat {\n    statements\n} while condition"
+    },
+    "until_loop": {
+      "name": "Until loop",
+      "code": ""
+    },
+    "do_until_loop": {
+      "name": "Do/Until loop",
+      "code": ""
+    },
+    "for_loop": {
+      "name": "For loop",
+      "code": ""
+    },
+    "foreach_loop": {
+      "name": "Foreach loop",
+      "code": "for iterable in iterator {\n    statements\n}"
+    },
+    "each_iteration": {
+      "name": "Each iteration",
+      "code": ""
+    },
+    "map_iteration": {
+      "name": "Map iteration",
+      "code": "iterable.map{closure}"
+    },
+    "filter_iteration": {
+      "name": "Filter iteration",
+      "code": "iterable.filter{closure}"
+    },
+    "fold_iteration": {
+      "name": "Fold iteration",
+      "code": "iterable.reduce(value){closure}"
+    },
+    "recursion_iteration": {
+      "name": "Recursion iteration",
+      "code": ""
+    }
+  }
+}
