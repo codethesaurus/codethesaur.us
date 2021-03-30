@@ -39,12 +39,12 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="strong">
-                                {{ c.name1|default:"Unsupported or Not Needed"|linebreaksbr }}
+                                {{ c.name|default:"Unsupported or Not Needed"|linebreaksbr }}
                             </div>
                         </div>
                     </div>
-                    {% comparecard c.code1 %}
-                    {% comparecard c.code2 %}
+                    {% comparecard c.code1 c.comment1 %}
+                    {% comparecard c.code2 c.comment2 %}
                 </div>
             {% endif %}
         {% endfor %}
