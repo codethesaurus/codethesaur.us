@@ -34,7 +34,6 @@ def compare(request):
     try:
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
             meta_data = meta_file.read()
-        meta_data_langs = json.loads(meta_data)["languages"]
         meta_data_structures = json.loads(meta_data)["structures"]
 
         concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
@@ -49,10 +48,20 @@ def compare(request):
                 "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
                 lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
 
+        meta_lang_file_path = os.path.join(
+            "web", "thesauruses", "_meta", concept_query_string) + ".json"
         lang1_file_path = os.path.join(
             "web", "thesauruses", lang1_query_string, concept_query_string) + ".json"
         lang2_file_path = os.path.join(
             "web", "thesauruses", lang2_query_string, concept_query_string) + ".json"
+
+        with open(meta_lang_file_path, 'r') as meta_lang_file:
+            data = meta_lang_file.read()
+            # parse file
+            meta_lang_file_json = json.loads(data)
+
+            meta_lang_categories = meta_lang_file_json["categories"]
+            meta_lang_concepts = meta_lang_file_json[concept_query_string]
 
         with open(lang1_file_path, 'r') as lang1_file:
             data = lang1_file.read()
@@ -83,33 +92,34 @@ def compare(request):
     # and not in template but that will be possible after issue #27
     # is resolved
 
-    all_category_keys = list(set.union(set(lang1_categories.keys()), set(lang2_categories.keys())))
-    all_concept_keys = list(set.union(set(lang1_concepts.keys()), set(lang2_concepts.keys())))
+    all_category_keys = list(meta_lang_categories.keys())
+    all_concept_keys = list(meta_lang_concepts.keys())
 
     for category_key in all_category_keys:
         both_categories.append({
             "id": category_key,
-            "concepts": lang1_categories[category_key]
+            "concepts": meta_lang_categories[category_key]
         })
 
     for concept_key in all_concept_keys:
         if lang1_concepts.get(concept_key) is None:
             lang1_concepts[concept_key] = {
-                "name": "",
-                "code": ""
+                "code": "",
+                "comment": ""
             }
         if lang2_concepts.get(concept_key) is None:
             lang2_concepts[concept_key] = {
-                "name": "",
-                "code": ""
+                "code": "",
+                "comment": ""
             }
 
         both_concepts.append({
             "id": concept_key,
-            "name1": lang1_concepts[concept_key]["name"],
-            "name2": lang2_concepts[concept_key]["name"],
+            "name": meta_lang_concepts[concept_key]["name"],
             "code1": lang1_concepts[concept_key]["code"],
-            "code2": lang2_concepts[concept_key]["code"]
+            "code2": lang2_concepts[concept_key]["code"],
+            "comment1": lang1_concepts[concept_key].get("comment", ""),
+            "comment2": lang2_concepts[concept_key].get("comment", "")
         })
 
     # establish order listing across all languages
@@ -135,7 +145,6 @@ def reference(request):
     try:
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
             meta_data = meta_file.read()
-        meta_data_langs = json.loads(meta_data)["languages"]
         meta_data_structures = json.loads(meta_data)["structures"]
 
         concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
@@ -148,8 +157,18 @@ def reference(request):
             return HttpResponseNotFound(
                 "The " + concept_query_string + " concept of the " + lang_query_string + " language doesn't exist or hasn't been implemented yet.")
 
+        meta_lang_file_path = os.path.join(
+            "web", "thesauruses", "_meta", concept_query_string) + ".json"
         lang_file_path = os.path.join(
             "web", "thesauruses", lang_query_string, concept_query_string) + ".json"
+
+        with open(meta_lang_file_path, 'r') as meta_lang_file:
+            data = meta_lang_file.read()
+            # parse file
+            meta_lang_file_json = json.loads(data)
+
+            meta_lang_categories = meta_lang_file_json["categories"]
+            meta_lang_concepts = meta_lang_file_json[concept_query_string]
 
         with open(lang_file_path, 'r') as lang_file:
             data = lang_file.read()
@@ -169,13 +188,14 @@ def reference(request):
     for category_key in lang_categories.keys():
         categories.append({
             "id": category_key,
-            "concepts": lang_categories[category_key]
+            "concepts": meta_lang_categories[category_key]
         })
     for concept_key in lang_concepts.keys():
         concepts.append({
             "id": concept_key,
-            "name": "" or lang_concepts[concept_key]["name"],
-            "code": "" or lang_concepts[concept_key]["code"]
+            "name": meta_lang_concepts[concept_key]["name"],
+            "code": lang_concepts[concept_key]["code"],
+            "comment": lang_concepts[concept_key].get("comment", "")
         })
 
     response = {
