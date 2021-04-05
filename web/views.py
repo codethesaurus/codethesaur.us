@@ -37,9 +37,9 @@ class Language(object):
     def has_key(self):
         return self.key == ""
 
-    def load_concept(self, concept):
+    def load_structure(self, structure_key):
         file_path = os.path.join(
-            "web", "thesauruses", self.key, concept) + ".json"
+            "web", "thesauruses", self.key, structure_key) + ".json"
         with open(file_path, 'r') as file:
             data = file.read()
             # parse file
@@ -47,7 +47,7 @@ class Language(object):
 
             self.friendly_name = file_json["meta"]["language_name"]
             self.categories = file_json["categories"]
-            self.concepts = file_json[concept]
+            self.concepts = file_json[structure_key]
 
     def concept(self, concept_key):
         if self.concepts.get(concept_key) is None:
@@ -76,12 +76,13 @@ class MetaInfo(object):
         return list(self.data_structures.keys())[index]
 
     def structure(self, structure_key):
-        return MetaStructure(structure_key)
+        return MetaStructure(structure_key, self.structure_friendly_name(structure_key))
 
 
 class MetaStructure(object):
-    def __init__(self, structure_key):
+    def __init__(self, structure_key, friendly_name):
         self.key = structure_key
+        self.friendly_name = friendly_name
         meta_structure_file_path = os.path.join(
             "web", "thesauruses", "_meta", structure_key) + ".json"
         with open(meta_structure_file_path, 'r') as meta_structure_file:
@@ -104,17 +105,16 @@ def compare(request):
             "The " + structure_query_string + " concept of either the " + lang1.key + " or " +
             lang2.key + " languages doesn't exist or hasn't been implemented yet.")
 
-    try:
-        metainfo = MetaInfo()
-        structure_friendly_name = metainfo.structure_friendly_name(structure_query_string)
-        meta_structure = metainfo.structure(structure_query_string)
+    metainfo = MetaInfo()
+    meta_structure = metainfo.structure(structure_query_string)
 
-        lang1.load_concept(meta_structure.key)
-        lang2.load_concept(meta_structure.key)
+    try:
+        lang1.load_structure(meta_structure.key)
+        lang2.load_structure(meta_structure.key)
 
     except:
         return HttpResponseNotFound(
-            "The " + meta_structure.key + " concept of either the " + lang1.key + " or " +
+            "The " + meta_structure.friendly_name + " concept of either the " + lang1.key + " or " +
             lang2.key + " languages doesn't exist or hasn't been implemented yet.")
 
     both_categories = []
@@ -150,7 +150,7 @@ def compare(request):
     response = {
         "title": "Comparing" + lang1.friendly_name + " " + lang2.friendly_name,
         "concept": meta_structure.key,
-        "concept_friendly_name": structure_friendly_name,
+        "concept_friendly_name": meta_structure.friendly_name,
         "lang1": lang1.key,
         "lang2": lang2.key,
         "lang1_friendlyname": lang1.friendly_name,
@@ -165,56 +165,41 @@ def compare(request):
 def reference(request):
 
     lang = Language(escape(strip_tags(request.GET.get('lang', ''))))
-    concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
+    structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
     if not lang.has_key:
         return HttpResponseNotFound(
-            "The " + concept_query_string + " concept of the " + lang.key + " language doesn't exist or hasn't been implemented yet.")
+            "The " + structure_query_string + " concept of the " + lang.key + " language doesn't exist or hasn't been implemented yet.")
+
+    metainfo = MetaInfo()
+    meta_structure = metainfo.structure(structure_query_string)
 
     try:
-        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-            meta_data = meta_file.read()
-        meta_data_structures = json.loads(meta_data)["structures"]
-
-        concept_friendly_name_pos = list(meta_data_structures.values()).index(concept_query_string)
-        concept_friendly_name = list(meta_data_structures.keys())[concept_friendly_name_pos]
-
-        meta_lang_file_path = os.path.join(
-            "web", "thesauruses", "_meta", concept_query_string) + ".json"
-
-        with open(meta_lang_file_path, 'r') as meta_lang_file:
-            data = meta_lang_file.read()
-            # parse file
-            meta_lang_file_json = json.loads(data)
-
-            meta_lang_categories = meta_lang_file_json["categories"]
-            meta_lang_concepts = meta_lang_file_json[concept_query_string]
-
-        lang.load_concept(concept_query_string)
+        lang.load_structure(meta_structure.key)
 
     except:
         return HttpResponseNotFound(
-            "The " + concept_query_string + " concept of the " + lang.key + " language doesn't exist or hasn't been implemented yet.")
+            "The " + meta_structure.friendly_name + " concept of the " + lang.key + " language doesn't exist or hasn't been implemented yet.")
 
     categories = []
     concepts = []
     for category_key in lang.categories:
         categories.append({
             "id": category_key,
-            "concepts": meta_lang_categories[category_key]
+            "concepts": meta_structure.categories[category_key] # meta_lang_categories[category_key]
         })
 
     for concept_key in lang.concepts:
         concepts.append({
             "id": concept_key,
-            "name": meta_lang_concepts[concept_key]["name"],
+            "name": meta_structure.concepts[concept_key]["name"],
             "code": lang.concept_code(concept_key),
             "comment": lang.concept_comment(concept_key)
         })
 
     response = {
         "title": "Reference for " + lang.key,
-        "concept": concept_query_string,
-        "concept_friendly_name": concept_friendly_name,
+        "concept": meta_structure.key,
+        "concept_friendly_name": meta_structure.friendly_name,
         "lang": lang.key,
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
