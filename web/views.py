@@ -30,30 +30,38 @@ def about(request):
     return render(request, 'about.html', content)
 
 
+class Language(object):
+    def __init__(self, key):
+        self.key = key
+
+    def has_key(self):
+        return self.key == ""
+
+
 def compare(request):
+    lang1 = Language(escape(strip_tags(request.GET.get('lang1', ''))))
+    lang2 = Language(escape(strip_tags(request.GET.get('lang2', ''))))
     try:
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
             meta_data = meta_file.read()
         meta_data_structures = json.loads(meta_data)["structures"]
 
         concept_query_string = escape(strip_tags(request.GET.get('concept', '')))
-        lang1_query_string = escape(strip_tags(request.GET.get('lang1', '')))
-        lang2_query_string = escape(strip_tags(request.GET.get('lang2', '')))
+
+        if not lang1.has_key and lang2.has_key:
+            return HttpResponseNotFound(
+                "The " + concept_query_string + " concept of either the " + lang1.key + " or " +
+                lang2.key + " languages doesn't exist or hasn't been implemented yet.")
 
         concept_friendly_name_pos = list(meta_data_structures.values()).index(concept_query_string)
         concept_friendly_name = list(meta_data_structures.keys())[concept_friendly_name_pos]
 
-        if not lang1_query_string and lang2_query_string:
-            return HttpResponseNotFound(
-                "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
-                lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
-
         meta_lang_file_path = os.path.join(
             "web", "thesauruses", "_meta", concept_query_string) + ".json"
         lang1_file_path = os.path.join(
-            "web", "thesauruses", lang1_query_string, concept_query_string) + ".json"
+            "web", "thesauruses", lang1.key, concept_query_string) + ".json"
         lang2_file_path = os.path.join(
-            "web", "thesauruses", lang2_query_string, concept_query_string) + ".json"
+            "web", "thesauruses", lang2.key, concept_query_string) + ".json"
 
         with open(meta_lang_file_path, 'r') as meta_lang_file:
             data = meta_lang_file.read()
@@ -83,8 +91,8 @@ def compare(request):
 
     except:
         return HttpResponseNotFound(
-            "The " + concept_query_string + " concept of either the " + lang1_query_string + " or " +
-            lang2_query_string + " languages doesn't exist or hasn't been implemented yet.")
+            "The " + concept_query_string + " concept of either the " + lang1.key + " or " +
+            lang2.key + " languages doesn't exist or hasn't been implemented yet.")
 
     both_categories = []
     both_concepts = []
@@ -130,8 +138,8 @@ def compare(request):
         "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
         "concept": concept_query_string,
         "concept_friendly_name": concept_friendly_name,
-        "lang1": lang1_query_string,
-        "lang2": lang2_query_string,
+        "lang1": lang1.key,
+        "lang2": lang2.key,
         "lang1_friendlyname": lang1_friendly_name,
         "lang2_friendlyname": lang2_friendly_name,
         "categories": both_categories,
