@@ -37,6 +37,32 @@ class Language(object):
     def has_key(self):
         return self.key == ""
 
+    def load_concept(self, concept):
+        file_path = os.path.join(
+            "web", "thesauruses", self.key, concept) + ".json"
+        with open(file_path, 'r') as file:
+            data = file.read()
+            # parse file
+            file_json = json.loads(data)
+
+            self.friendly_name = file_json["meta"]["language_name"]
+            self.categories = file_json["categories"]
+            self.concepts = file_json[concept]
+
+    def concept(self, concept_key):
+        if self.concepts.get(concept_key) is None:
+            return {
+                "code": "",
+                "comment": ""
+            }
+        else:
+            return self.concepts.get(concept_key)
+
+    def concept_code(self, concept_key):
+        return self.concept(concept_key)["code"]
+
+    def concept_comment(self, concept_key):
+        return self.concept(concept_key).get("comment", "")
 
 def compare(request):
     lang1 = Language(escape(strip_tags(request.GET.get('lang1', ''))))
@@ -58,11 +84,6 @@ def compare(request):
 
         meta_lang_file_path = os.path.join(
             "web", "thesauruses", "_meta", concept_query_string) + ".json"
-        lang1_file_path = os.path.join(
-            "web", "thesauruses", lang1.key, concept_query_string) + ".json"
-        lang2_file_path = os.path.join(
-            "web", "thesauruses", lang2.key, concept_query_string) + ".json"
-
         with open(meta_lang_file_path, 'r') as meta_lang_file:
             data = meta_lang_file.read()
             # parse file
@@ -71,23 +92,8 @@ def compare(request):
             meta_lang_categories = meta_lang_file_json["categories"]
             meta_lang_concepts = meta_lang_file_json[concept_query_string]
 
-        with open(lang1_file_path, 'r') as lang1_file:
-            data = lang1_file.read()
-            # parse file
-            lang1_file_json = json.loads(data)
-
-            lang1_friendly_name = lang1_file_json["meta"]["language_name"]
-            lang1_categories = lang1_file_json["categories"]
-            lang1_concepts = lang1_file_json[concept_query_string]
-
-        with open(lang2_file_path, 'r') as lang2_file:
-            data = lang2_file.read()
-            # parse file
-            lang2_file_json = json.loads(data)
-
-            lang2_friendly_name = lang2_file_json["meta"]["language_name"]
-            lang2_categories = lang2_file_json["categories"]
-            lang2_concepts = lang2_file_json[concept_query_string]
+        lang1.load_concept(concept_query_string)
+        lang2.load_concept(concept_query_string)
 
     except:
         return HttpResponseNotFound(
@@ -109,25 +115,15 @@ def compare(request):
             "concepts": meta_lang_categories[category_key]
         })
 
+    # Start Building Response Structure
     for concept_key in all_concept_keys:
-        if lang1_concepts.get(concept_key) is None:
-            lang1_concepts[concept_key] = {
-                "code": "",
-                "comment": ""
-            }
-        if lang2_concepts.get(concept_key) is None:
-            lang2_concepts[concept_key] = {
-                "code": "",
-                "comment": ""
-            }
-
         both_concepts.append({
             "id": concept_key,
             "name": meta_lang_concepts[concept_key]["name"],
-            "code1": lang1_concepts[concept_key]["code"],
-            "code2": lang2_concepts[concept_key]["code"],
-            "comment1": lang1_concepts[concept_key].get("comment", ""),
-            "comment2": lang2_concepts[concept_key].get("comment", "")
+            "code1": lang1.concept_code(concept_key),
+            "code2": lang2.concept_code(concept_key),
+            "comment1": lang1.concept_comment(concept_key),
+            "comment2": lang2.concept_comment(concept_key)
         })
 
     # establish order listing across all languages
@@ -135,13 +131,13 @@ def compare(request):
 
     # DB equivalent of full outer join
     response = {
-        "title": "Comparing" + lang1_friendly_name + " " + lang2_friendly_name,
+        "title": "Comparing" + lang1.friendly_name + " " + lang2.friendly_name,
         "concept": concept_query_string,
         "concept_friendly_name": concept_friendly_name,
         "lang1": lang1.key,
         "lang2": lang2.key,
-        "lang1_friendlyname": lang1_friendly_name,
-        "lang2_friendlyname": lang2_friendly_name,
+        "lang1_friendlyname": lang1.friendly_name,
+        "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
         "concepts": both_concepts
     }
