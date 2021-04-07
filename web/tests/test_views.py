@@ -5,7 +5,6 @@ from web.views import index, about, compare, reference
 
 class TestViews(TestCase):
 
-
 	def test_index_view_GET(self):
 		url = reverse('index')
 		response = self.client.get(url)
@@ -13,7 +12,6 @@ class TestViews(TestCase):
 		self.assertEqual(response.status_code, 200)
 		self.assertTemplateUsed(response, 'index.html')
 		self.assertTemplateUsed(response, 'base.html')
-
 
 	def test_about_view_GET(self):
 		url = reverse('about')
@@ -23,8 +21,7 @@ class TestViews(TestCase):
 		self.assertTemplateUsed(response, 'about.html')
 		self.assertTemplateUsed(response, 'base.html')
 
-
-	def test_compare_view_GET(self):
+	def test_compare_view_both_valid_languages(self):
 		url = reverse('compare') + '?concept=data_types&lang1=python&lang2=java'
 		response = self.client.get(url)
 
@@ -32,11 +29,84 @@ class TestViews(TestCase):
 		self.assertTemplateUsed(response, 'compare.html')
 		self.assertTemplateUsed(response, 'base.html')
 
+	def test_compare_view_invalid_languages(self):
+		url = reverse('compare') + '?concept=data_types&lang1=cupcake&lang2=donut'
+		response = self.client.get(url)
 
-	def test_reference_view_GET(self):
+		self.assertEquals(response.status_code, 404)
+		self.assertTemplateNotUsed(response, 'compare.html')
+		self.assertTemplateNotUsed(response, 'base.html')
+
+	def test_compare_view_one_valid_one_invalid_language(self):
+		url = reverse('compare') + '?concept=data_types&lang1=python&lang2=donut'
+		response = self.client.get(url)
+
+		self.assertEquals(response.status_code, 404)
+		self.assertTemplateNotUsed(response, 'compare.html')
+		self.assertTemplateNotUsed(response, 'base.html')
+
+	def test_compare_view_empty_query_string(self):
+		url = reverse('compare')
+
+		# This SHOULD be a pretty 404 error, but presently is a Python exception
+		with self.assertRaises(ValueError):
+			response = self.client.get(url)
+
+		# After implemented, this SHOULD eventually be:
+		# response = self.client.get(url)
+		# self.assertEquals(response.status_code, 404)
+		# self.assertTemplateNotUsed(response, 'some_new_error_template.html')
+
+	def test_compare_view_invalid_concept(self):
+		url = reverse('compare') + '?concept=boop'
+
+		# This SHOULD be a pretty 404 error, but presently is a Python exception
+		with self.assertRaises(ValueError):
+			response = self.client.get(url)
+
+		# After implemented, this SHOULD eventually be:
+		# response = self.client.get(url)
+		# self.assertEquals(response.status_code, 404)
+		# self.assertTemplateNotUsed(response, 'some_new_error_template.html')
+
+
+
+	def test_reference_view_valid_language(self):
 		url = reverse('reference') + '?concept=data_types&lang=python'
 		response = self.client.get(url)
 
 		self.assertEquals(response.status_code, 200)
 		self.assertTemplateUsed(response, 'reference.html')
 		self.assertTemplateUsed(response, 'base.html')
+
+	def test_reference_view_invalid_languages(self):
+		url = reverse('reference') + '?concept=data_types&lang=cupcake'
+		response = self.client.get(url)
+
+		self.assertEquals(response.status_code, 404)
+		self.assertTemplateNotUsed(response, 'reference.html')
+		self.assertTemplateNotUsed(response, 'base.html')
+
+	def test_reference_view_empty_query_string(self):
+		url = reverse('reference')
+
+		# This SHOULD be a pretty 404 error, but presently is a Python exception
+		with self.assertRaises(ValueError):
+			response = self.client.get(url)
+
+		# After implemented, this SHOULD eventually be:
+		# response = self.client.get(url)
+		# self.assertEquals(response.status_code, 404)
+		# self.assertTemplateNotUsed(response, 'some_new_error_template.html')
+
+	def test_reference_view_invalid_concept(self):
+		url = reverse('reference') + '?concept=boop'
+
+		# This SHOULD be a pretty 404 error, but presently is a Python exception
+		with self.assertRaises(ValueError):
+			response = self.client.get(url)
+
+		# After implemented, this SHOULD eventually be:
+		# response = self.client.get(url)
+		# self.assertEquals(response.status_code, 404)
+		# self.assertTemplateNotUsed(response, 'some_new_error_template.html')
