@@ -24,7 +24,7 @@ class TestViews(TestCase):
 		self.assertTemplateUsed(response, 'base.html')
 
 
-	def test_compare_view_GET(self):
+	def test_compare_view_both_valid_languages(self):
 		url = reverse('compare') + '?concept=data_types&lang1=python&lang2=java'
 		response = self.client.get(url)
 
