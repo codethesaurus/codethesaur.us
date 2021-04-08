@@ -84,13 +84,13 @@ WSGI_APPLICATION = 'codethesaurus.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-# DATABASES = {}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+DATABASES = {}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -146,4 +146,4 @@ STATICFILES_DIRS = (
 )
 
 # Configure Django App for Heroku.
-django_on_heroku.settings(locals(), databases=True, staticfiles=True)
+django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True)
