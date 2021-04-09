@@ -35,7 +35,11 @@ else:
 # redirect all http requests to https in non debugging envs
 SECURE_SSL_REDIRECT = not DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "codethesaurus-prod.herokuapp.com",
+    "codethesaur.us",
+    "127.0.0.1"
+]
 
 
 # Application definition
