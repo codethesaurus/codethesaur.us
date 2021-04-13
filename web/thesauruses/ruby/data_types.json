@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "language": "ruby",
+    "language_version": "3.0",
+    "language_name": "Ruby"
+  },
+  "categories": {
+    "Numerical": [
+      "boolean",
+      "integer_8_bit",
+      "integer_16_bit",
+      "integer_32_bit",
+      "integer_64_bit",
+      "integer_as_object",
+      "float_16_bit",
+      "float_32_bit",
+      "float_64_bit",
+      "float_as_object",
+      "char"
+    ],
+    "Strings": [
+      "string_as_object",
+      "string_as_array"
+    ],
+    "Complex Numbers": [
+      "complex_as_object",
+      "real_number_part",
+      "imaginary_number_part"
+    ]
+  },
+  "data_types": {
+    "boolean": {
+      "name": "",
+      "code": "",
+      "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalsClass`, which both inherits from `Object`."
+    },
+    "integer_8_bit": {
+      "code": ""
+    },
+    "integer_16_bit": {
+      "code": ""
+    },
+    "integer_32_bit": {
+      "code": ""
+    },
+    "integer_64_bit": {
+      "code": ""
+    },
+    "integer_as_object": {
+      "code": "Integer"
+    },
+    "float_16_bit": {
+      "code": ""
+    },
+    "float_32_bit": {
+      "code": ""
+    },
+    "float_64_bit": {
+      "code": ""
+    },
+    "float_as_object": {
+      "name": "Object-based floating point",
+      "code": "Float"
+    },
+    "char": {
+      "code": ""
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "code": "String"
+    },
+    "string_as_array": {
+      "code": ""
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "code": "Complex"
+    },
+    "real_number_part": {
+      "code": ""
+    },
+    "imaginary_number_part": {
+      "code": ""
+    }
+  }
+}
