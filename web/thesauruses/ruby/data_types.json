@@ -30,7 +30,6 @@
   },
   "data_types": {
     "boolean": {
-      "name": "",
       "code": "",
       "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalsClass`, which both inherits from `Object`."
     },
@@ -59,21 +58,18 @@
       "code": ""
     },
     "float_as_object": {
-      "name": "Object-based floating point",
       "code": "Float"
     },
     "char": {
       "code": ""
     },
     "string_as_object": {
-      "name": "String as an object",
       "code": "String"
     },
     "string_as_array": {
       "code": ""
     },
     "complex_as_object": {
-      "name": "Complex Number as an object",
       "code": "Complex"
     },
     "real_number_part": {
