@@ -2,7 +2,7 @@ import json
 import os
 import random
 
-from django.http import HttpResponseNotFound
+from django.http import HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound, HttpResponseServerError
 from django.shortcuts import render
 from django.utils.html import escape, strip_tags
 
@@ -185,7 +185,7 @@ def reference(request):
     for category_key in lang.categories:
         categories.append({
             "id": category_key,
-            "concepts": meta_structure.categories[category_key] # meta_lang_categories[category_key]
+            "concepts": meta_structure.categories[category_key]  # meta_lang_categories[category_key]
         })
 
     for concept_key in lang.concepts:
@@ -207,3 +207,24 @@ def reference(request):
     }
 
     return render(request, 'reference.html', response)
+
+
+def error_handler_400_bad_request(request, exception):
+    response = render(request, 'error400.html')
+    return HttpResponseBadRequest(response)
+
+
+def error_handler_403_forbidden(request, exception):
+    response = render(request, 'error403.html')
+    return HttpResponseForbidden(response)
+
+
+def error_handler_404_not_found(request, exception):
+    response = render(request, 'error404.html')
+    return HttpResponseNotFound(response)
+
+
+def error_handler_500_server_error(request):
+    response = render(request, 'error500.html')
+    return HttpResponseServerError(response)
+
