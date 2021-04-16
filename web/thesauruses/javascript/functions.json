@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "language": "javascript",
+    "language_version": "ES2020",
+    "language_name": "JavaScript"
+  },
+  "categories": {
+    "Void Functions": [
+      "void_function_no_parameters",
+      "void_function_with_parameters"
+    ],
+    "Return Value Functions": [
+      "return_value_function_no_parameters",
+      "return_value_function_with_parameters"
+    ],
+    "Lambda/Anonymous Functions": [
+      "anonymous_function_no_parameters",
+      "anonymous_function_with_parameters"
+    ]
+  },
+  "functions": {
+    "void_function_no_parameters": {
+      "name": "Function that does not return a value and takes no parameters",
+      "code": "function funcName() {function body}"
+    },
+    "void_function_with_parameters": {
+      "name": "Function that does not return a value and that takes 1 or more defined parameters",
+      "code": "function funcName(param1, param2...) {function body}"
+    },
+    "return_value_function_no_parameters": {
+      "name": "Function that returns a value and takes no parameters",
+      "code": "function funcName() {function body... return something}"
+    },
+    "return_value_function_with_parameters": {
+      "name": "Function that returns a value and takes 1 or more defined parameters",
+      "code": "function funcName(param1, param2...) {function body... return something}"
+    },
+    "anonymous_function_no_parameters": {
+      "name": "Anonymous function that takes no parameters",
+      "code": "() => {function body}"
+    },
+    "anonymous_function_with_parameters": {
+      "name": "Anonymous function that takes 1 or more defined parameters",
+      "code": "(param1, param2...) => {function body}"
+    }
+  }
+}
