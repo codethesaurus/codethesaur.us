@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% load templatetags %}
 
 {% block content %}
 
-    <div><strong>400 Error!</strong></div>
-
-    <div>I don't know what you tried to request, but it didn't work!</div>
-
-    <div>Go back to our <a href="/">home page</a>!</div>
-
+<div class="container">
+  <div class="bg-light p-5 rounded">
+    <h1>400 Error - Bad Request!</h1>
+    <p class="lead">I don't know what you were trying to request, but it didn't work!</p>
+    <a class="btn btn-lg btn-primary" href="/" role="button">Go to the Home Page &raquo;</a>
+  </div>
+</div>
 
 {% endblock content %}
