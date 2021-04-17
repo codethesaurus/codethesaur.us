@@ -1,12 +1,13 @@
 {
   "meta": {
-    "language": "haskell",
-    "language_version": "2010",
-    "language_name": "Haskell"
+    "language": "rust",
+    "language_version": "1",
+    "language_name": "Rust"
   },
-    "categories": {
+  "categories": {
     "Numerical": [
       "boolean",
+      "integer_8_bit",
       "integer_16_bit",
       "integer_32_bit",
       "integer_64_bit",
@@ -14,7 +15,8 @@
       "float_16_bit",
       "float_32_bit",
       "float_64_bit",
-      "float_as_object"
+      "float_as_object",
+      "char"
     ],
     "Strings": [
       "string_as_object",
@@ -27,61 +29,69 @@
     ]
   },
   "data_types": {
-    "boolean" : {
+    "boolean": {
       "name": "Boolean",
-      "code": "Bool"
+      "code": "bool"
     },
-    "integer_16_bit" : {
+    "integer_8_bit": {
+      "name": "8-bit integer",
+      "code": "i8"
+    },
+    "integer_16_bit": {
       "name": "16-bit integer",
-      "code": "import Data.Int\nInt16"
+      "code": "i16"
     },
     "integer_32_bit": {
       "name": "32-bit integer",
-      "code": "Data.Int.Int32"
+      "code": "i32"
     },
     "integer_64_bit": {
       "name": "64-bit integer",
-      "code": "Data.Int.Int64"
+      "code": "i64"
     },
     "integer_as_object": {
       "name": "Object-based Integer",
-      "code": "Integer"
+      "code": ""
     },
     "float_16_bit": {
       "name": "16-bit floating point",
-      "code": null
+      "code": ""
     },
     "float_32_bit": {
       "name": "32-bit floating point",
-      "code": "Float"
+      "code": "f32"
     },
     "float_64_bit": {
       "name": "64-bit floating point",
-      "code": "Double"
+      "code": "f64"
     },
     "float_as_object": {
       "name": "Object-based floating point",
-      "code": null
+      "code": ""
+    },
+    "char": {
+      "name": "Character",
+      "code": "char"
     },
     "string_as_object": {
       "name": "String as an object",
-      "code": "Data.Text.Text"
+      "code": "str"
     },
     "string_as_array": {
       "name": "String as an array",
-      "code": "String == [Char]"
+      "code": "String"
     },
     "complex_as_object": {
       "name": "Complex Number as an object",
-      "code": "real Data.Complex.:+ imaginary"
+      "code": "num::complex::Complex::new(real, imag)"
     },
     "real_number_part": {
       "name": "Complex number real part",
-      "code": "realPart c"
+      "code": "complex.re"
     },
     "imaginary_number_part": {
       "name": "Complex number imaginary part",
-      "code": "imagPart c"
+      "code": "complex.im"
     }
   }
 }
