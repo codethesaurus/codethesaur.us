@@ -31,7 +31,7 @@
   "data_types": {
     "boolean": {
       "code": "",
-      "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalsClass`, which both inherits from `Object`."
+      "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalseClass`, which both inherits from `Object`."
     },
     "integer_8_bit": {
       "code": ""

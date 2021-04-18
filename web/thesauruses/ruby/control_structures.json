@@ -40,7 +40,7 @@
       "code": "if true\n  expressions\nelsif true\n  expressions\nend"
     },
     "if_elseif_else_conditional": {
-      "code": "if condition\n  expressions\nelsif condition\n    expressions\nelse\n  expressionss\nend"
+      "code": "if condition\n  expressions\nelsif condition\n  expressions\nelse\n  expressionss\nend"
     },
     "ternary_conditional": {
       "code": "conditional ? true : false"
@@ -81,4 +81,5 @@
     "recursion_iteration": {
       "code": ""
     }
+  }
 }
