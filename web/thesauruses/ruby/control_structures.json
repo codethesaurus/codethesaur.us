@@ -31,7 +31,7 @@
   "control_structures": {
     "if_conditional": {
       "code": "if (true)\n  expression\nend",
-      "comments": "The parenthesis around the consitional are optional."
+      "comments": "The parenthesis around the conditional are optional."
     },
     "if_else_conditional": {
       "code": "if true\n  expressions\nelse\n  expressions\nend"
