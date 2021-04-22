@@ -9,7 +9,8 @@
       "if_conditional",
       "if_else_conditional",
       "if_elseif_conditional",
-      "if_elseif_else_conditional"
+      "if_elseif_else_conditional",
+      "defer"
     ],
     "Loops": [
       "for_loop",
@@ -33,6 +34,11 @@
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
       "code": "if condition1 {\n    // code to be executed if condition1 is true\n} else if condition2 {\n    // code to be executed if condition2 is true\n} else {\n    // code to be executed if neither conditions are met\n}"
+    },
+    "defer": {
+      "name": "Defer statement",
+      "code": "func main() {\n    defer fmt.Println(\"World!\")\n    fmt.Println(\"Hello,\")\n}",
+      "comment": "The above prints \"Hello, World!\". A defer statement defers the execution of the function it is placed before until the surrounding function returns. It is important to note that the arguments in the deferred function are evaluated immediately, but the funciton call is not executed until the surrounding function has returned."
     },
     "for_loop": {
       "name": "For loop",
