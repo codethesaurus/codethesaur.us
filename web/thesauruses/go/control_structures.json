@@ -28,19 +28,21 @@
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": ""
+      "code": "if condition1 {\n    // code to be executed if condition1 is true\n} else if condition2 {\n    // code to be executed if condition2 is true\n}"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": ""
+      "code": "if condition1 {\n    // code to be executed if condition1 is true\n} else if condition2 {\n    // code to be executed if condition2 is true\n} else {\n    // code to be executed if neither conditions are met\n}"
     },
     "for_loop": {
       "name": "For loop",
-      "code": ""
+      "code": "for i := 0; i < 10; i++ {\n    // do something\n}",
+      "comment": "Go only has one looping control structure, the for loop. The three components of the for loop are: the init statement (optional), the condition expression (mandatory), and the post statement (optional). The init statement is executed before the first iteration, the post statement is executed at the end of each iteration, while the condition expression is evaluated before every iteration."
     },
     "foreach_loop": {
       "name": "Foreach loop",
-      "code": ""
+      "code": "integers := []int{5, 2, 7, 1}\nfor i, v := range integers {\n    fmt.Printf(\"2**%d = %d\n\", i, v)\n}",
+      "comment": "The above prints: 2**0 = 5, 2**1 = 2, 2**2 = 7, 2**3 = 1 with new lines instead of commas."
     }
   }
 }

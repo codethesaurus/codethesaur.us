@@ -2,6 +2,7 @@
   "languages": {
     "C++": "cplusplus",
     "C#": "csharp",
+    "Go": "go",
     "Haskell": "haskell",
     "Java": "java",
     "JavaScript": "javascript",
