@@ -33,11 +33,11 @@
     },
     "defer": {
       "code": "func main() {\n    defer fmt.Println(\"World!\")\n    fmt.Println(\"Hello,\")\n}",
-      "comment": "The above prints \"Hello, World!\". A defer statement defers the execution of the function it is placed before until the surrounding function returns. It is important to note that the arguments in the deferred function are evaluated immediately, but the funciton call is not executed until the surrounding function has returned."
+      "comment": "The above prints \"Hello, World!\". A defer statement defers the execution of the function it is placed before until the surrounding function returns. It is important to note that the arguments in the deferred function are evaluated immediately, but the function call is not executed until the surrounding function has returned."
     },
     "for_loop": {
       "code": "for i := 0; i < 10; i++ {\n    // do something\n}",
-      "comment": "Go only has one looping control structure, the for loop. The three components of the for loop are: the init statement (optional), the condition expression (mandatory), and the post statement (optional). The init statement is executed before the first iteration, the post statement is executed at the end of each iteration, while the condition expression is evaluated before every iteration."
+      "comment": "Go has one looping control structure, the for loop. The three components of the for loop are: the init statement (optional), the condition expression (mandatory), and the post statement (optional). The init statement is executed before the first iteration, the post statement is executed at the end of each iteration, while the condition expression is evaluated before every iteration."
     },
     "foreach_loop": {
       "code": "integers := []int{5, 2, 7, 1}\nfor i, v := range integers {\n    fmt.Printf(\"2**%d = %d\n\", i, v)\n}",
