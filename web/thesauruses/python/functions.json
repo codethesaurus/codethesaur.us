@@ -19,51 +19,32 @@
       "anonymous_function_no_parameters",
       "anonymous_function_with_parameters",
       "anonymous_function_variable_parameters"
-    ],
-    "Subroutines": [
-      "call_subroutine",
-      "return_from_subroutine"
     ]
   },
   "functions": {
     "void_function_no_parameters": {
       "name": "Function that does not return a value and takes no parameters",
-      "code": "
-      def function_name():\n
-        statements"
+      "code": "def function_name():\n    statements"
     },
     "void_function_with_parameters": {
       "name": "Function that does not return a value and that takes 1 or more defined parameters",
-      "code": "
-      def function_name(parameter, parameter_1):\n
-        statements"
+      "code": "def function_name(parameter, parameter_1):\n    statements"
     },
     "void_function_variable_parameters": {
       "name": "Function that does not return a value and function that takes an unknown number of parameters",
-      "code": "
-      def function_name(*parameter_name):\n
-        statements"
+      "code": "def function_name(*parameter_name):\n    statements"
     },
     "return_value_function_no_parameters": {
       "name": "Function that returns a value and takes no parameters",
-      "code": "
-      def function_name():\n
-        statements\n
-        return expression"
+      "code": "def function_name():\n    statements\n    return expression"
     },
     "return_value_function_with_parameters": {
       "name": "Function that returns a value and takes 1 or more defined parameters",
-      "code": "
-      def function_name(parameter, parameter_1):\n
-        statements\n
-        return expression"
+      "code": "def function_name(parameter, parameter_1):\n    statements\n    return expression"
     },
     "return_value_function_variable_parameters": {
       "name": "Function that returns a value and takes an unknown number of parameters",
-      "code": "
-      def function_name(*parameter_name):\n
-        statements\n
-        return expression"
+      "code": "def function_name(*parameter_name):\n    statements\n    return expression"
     },
     "anonymous_function_no_parameters": {
       "name": "Anonymous function that takes no parameters",
@@ -76,10 +57,6 @@
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
       "code": "lambda *parameter : expression"
-    },
-    "call_subroutine": {
-      },
-    "return_from_subroutine": {
-      }
+    }
   }
 }

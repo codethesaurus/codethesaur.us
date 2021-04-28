@@ -9,106 +9,43 @@
       "if_conditional",
       "if_else_conditional",
       "if_elseif_conditional",
-      "if_elseif_else_conditional"
+      "if_elseif_else_conditional",
+      "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
       "do_while_loop",
-      "until_loop",
-      "do_until_loop",
       "for_loops",
       "foreach_loops"
-    ],
-    "Iterations": [
-      "each_iteration",
-      "map_iteration",
-      "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
     ]
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
-      "code": "
-      if(condition){\n
-        statements;\n
-      }"
+      "code": "if (condition) {\n    statements;\n}"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
-      "code": "
-      if(condition){\n
-        statements;\n
-      }\n
-      else{\n
-        statements;\n
-      }"
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
-      "code": "
-      if(condition){\n
-        statements;\n
-      }\n
-      else if(condition){\n
-          statements;\n
-      }"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}"
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
-      "code": "
-      if(condition){\n
-        statements;\n
-      }\n
-      else if(condition){\n
-          statements;\n
-      }\n
-      else{\n
-        statements;\n
-      }"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n    statements;\n}"
+    },
+    "ternary_conditional": {
+      "code": "condition ? expression_if_true : expression_if_false"
     },
     "while_loop": {
-      "name": "While loop",
-      "code": "
-      while(condition){\n
-        statements;\n
-      }"
+      "code": "while (condition) {\n    statements;\n}"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
-      "code": "
-      do{\n
-        statements;\n
-      }while(condition)"
+      "code": "do {\n    statements;\n} while (condition);"
     },
-    "until_loop": {
+    "for_loop": {
+      "code": "for (initialization; condition; incrementor) {\n    statements;\n}"
     },
-    "do_until_loop": {
-    },
-    "for_loops": {
-      "name": "For loop",
-      "code": "
-      for(initialization; condition; incrementor){\n
-        statements;\n
-      }"
-    },
-    "foreach_loops": {
-      "name": "Foreach loop",
-      "code": "
-      for(variable: array/vector){\n
-        statements;\n
-      } "
-    },
-    "each_iteration": {
-    },
-    "map_iteration": {
-    },
-    "filter_iteration": {
-    },
-    "fold_iteration": {
-    },
-    "recursion_iteration": {
+    "foreach_loop": {
+      "code": "for (variable: array/vector) {\n    statements;\n} "
     }
   }
 }
