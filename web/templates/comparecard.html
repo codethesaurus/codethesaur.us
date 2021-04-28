@@ -2,7 +2,7 @@
     <div class="card-body">
         <div>
             {% if code %}
-                <pre>{{ code }}</pre>
+                <div class="syntax">{{ code | safe }}</div>
             {% else %}
                 <div>Unsupported or Not Needed</div>
             {% endif %}

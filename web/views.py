@@ -6,6 +6,9 @@ from django.http import HttpResponseNotFound
 from django.shortcuts import render
 from django.utils.html import escape, strip_tags
 
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name
+from pygments.formatters import HtmlFormatter
 
 def index(request):
     with open("web/thesauruses/meta_info.json", 'r') as meta_file:
@@ -137,8 +140,16 @@ def compare(request):
         both_concepts.append({
             "id": concept_key,
             "name": meta_structure.concepts[concept_key]["name"],
-            "code1": lang1.concept_code(concept_key),
-            "code2": lang2.concept_code(concept_key),
+            "code1": highlight(
+                lang1.concept_code(concept_key),
+                get_lexer_by_name(lang1.key),
+                HtmlFormatter()
+                ) if lang1.concept_code(concept_key) else None,
+            "code2": highlight(
+                lang2.concept_code(concept_key),
+                get_lexer_by_name(lang2.key),
+                HtmlFormatter()
+                ) if lang2.concept_code(concept_key) else None,
             "comment1": lang1.concept_comment(concept_key),
             "comment2": lang2.concept_comment(concept_key)
         })
@@ -192,7 +203,11 @@ def reference(request):
         concepts.append({
             "id": concept_key,
             "name": meta_structure.concepts[concept_key]["name"],
-            "code": lang.concept_code(concept_key),
+            "code": highlight(
+                lang.concept_code(concept_key),
+                get_lexer_by_name(lang.key),
+                HtmlFormatter()
+                ) if lang.concept_code(concept_key) else None,
             "comment": lang.concept_comment(concept_key)
         })
 
