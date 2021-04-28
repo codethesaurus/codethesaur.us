@@ -10,8 +10,7 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
-      "ternary_conditional",
-      "defer"
+      "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
