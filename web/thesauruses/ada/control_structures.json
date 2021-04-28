@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "language": "ada",
+    "language_version": "2012",
+    "language_name": "Ada"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "for_loop"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": "if condition then\n    statements;\nend if;"
+    },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": "if condition then\n    statements;\nelse\n    statements;\nend if;"
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": "if condition then\n    statements;\nelsif condition then\n    statements;\nend if;"
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": "if condition then\n    statements;\nelsif condition then\n    statements;\nelse\n    statements;\nend if;"
+    },
+    "ternary_conditional": {
+      "name": "Ternary conditional",
+      "code": "Variable := (if condition\n    then expression\n    else expression);"
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": "while condition loop\n    statements;\nend loop;"
+    },
+    "do_while_loop": {
+      "name": "Do/While loop",
+      "code": "loop\n    statements;\n    exit when not condition;\nend loop;"
+    },
+    "for_loop": {
+      "name": "For loop",
+      "code": "for I in First_Index .. Last_Index loop\n    statements;\nend loop;"
+    }
+  }
+}
