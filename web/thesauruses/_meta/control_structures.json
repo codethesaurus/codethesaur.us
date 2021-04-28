@@ -49,10 +49,6 @@
       "name": "Ternary conditional",
       "code": ""
     },
-    "defer": {
-      "name": "Defer statement",
-      "code": ""
-    },
     "while_loop": {
       "name": "While loop",
       "code": ""
