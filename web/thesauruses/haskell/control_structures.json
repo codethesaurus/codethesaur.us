@@ -8,6 +8,7 @@
     "Conditional Statements (ifs)": [
       "if_else_conditional",
       "if_elseif_else_conditional",
+      "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
@@ -27,6 +28,9 @@
     },
     "if_elseif_else_conditional": {
       "code": "if condition\n    then expression\n    else if condition\n        then expression\n        else expression"
+    },
+    "switch_statement": {
+      "code": "case expression of\n    \"value1\" -> expression\n    \"value2\" | guard -> expression\n    \"value2\" | another_guard -> expression\n    _ -> expression -- default case"
     },
     "ternary_conditional": {
       "code": "if condition\n    then expression\n    else expression"

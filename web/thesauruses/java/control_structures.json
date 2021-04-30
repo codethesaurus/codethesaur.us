@@ -10,7 +10,8 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
-      "ternary_conditional"
+      "ternary_conditional",
+      "switch_statement"
     ],
     "Loops": [
       "while_loop",
@@ -36,6 +37,9 @@
     },
     "ternary_conditional": {
       "code": "condition ? statementIfTrue : statementIfFalse"
+    },
+    "switch_statement": {
+      "code": "switch (expression) {\n  case constant-expression:\n    statements;\n    break;\n  default:\n    statements;\n}"
     },
     "while_loop": {
       "code": "while (condition) {\n    statements;\n}"

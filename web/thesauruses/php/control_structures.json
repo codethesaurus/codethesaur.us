@@ -39,6 +39,9 @@
     "ternary_conditional":{
       "code": "$value ? $value : $other_value;\n$value ?: $other_value;"
     },
+    "switch_statement": {
+      "code": "switch ($i) {\n    case 0:\n        echo \"i equals 0\";\n        break;\n    case 1:\n        echo \"i equals 1\";\n        break;\n    case 2:\n        echo \"i equals 2\";\n        break;\n    default:\n        echo \"no previous match\"\n}"
+    },
     "while_loop": {
       "code": "while( $condition ) {\n    // code to be executed\n}"
     },

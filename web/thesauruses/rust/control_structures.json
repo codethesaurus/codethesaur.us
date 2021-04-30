@@ -10,7 +10,8 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
-      "ternary_conditional"
+      "ternary_conditional",
+      "switch_statement"
     ],
     "Loops": [
       "while_loop",
@@ -38,6 +39,9 @@
     },
     "ternary_conditional": {
       "code": "if condition { expression } else { expression }"
+    },
+    "switch_statement": {
+      "code": "match expression {\n    pattern => { statements }\n    _ => { statements } // the special pattern _ matches all cases\n}"
     },
     "while_loop": {
       "code": "while condition {\n    statements;\n}"
