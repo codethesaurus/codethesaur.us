@@ -23,40 +23,31 @@
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
-      "code": "if(condition){\n statements;\n}"
+      "code": "if (condition) {\n    statements;\n}"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
-      "code": "if(condition){\n statements;\n} \nelse{\n statements;\n}"
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
-      "code": "if(condition){\nstatements;\n} \nelse if(condition){\nstatements;\n}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}"
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
-      "code": "if(condition){\nstatements; \n} \nelse if(condition){\nstatements;\n} \nelse{\nstatements;\n}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else{\n    statements;\n}"
     },
     "ternary_conditional": {
-      "name": "Conditional (ternary) Operator",
       "code": "condition ? statementIfTrue : statementIfFalse"
     },
     "while_loop": {
-      "name": "While loop",
-      "code": "while(condition){\nstatements;\n}"
+      "code": "while (condition) {\n    statements;\n}"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
-      "code": "do{\nstatements;\n} \nwhile(condition)"
+      "code": "do{\n    statements;\n}\nwhile(condition);"
     },
     "for_loop": {
-      "name": "For loop",
-      "code": "for(counter variable(s); loop condition; executed after each iteration){\ncode block to be executed}"
+      "code": "for (counter variable(s); loop condition; executed after each iteration) {\n    code block to be executed\n}"
     },
     "foreach_loop": {
-      "name": "Foreach loop",
-      "code": "for(item : array of type item){\nstatements;\n}"
+      "code": "for(item : array of type item){\n    statements;\n}"
     }
   }
 }

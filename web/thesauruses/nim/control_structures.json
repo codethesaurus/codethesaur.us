@@ -14,8 +14,7 @@
     ],
     "Loops": [
       "while_loop",
-      "for_loops",
-      "foreach_loops"
+      "for_loop"
     ],
     "Iterations": [
       "each_iteration",
@@ -27,39 +26,30 @@
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
-      "code": "if condition:\\n  statements"
+      "code": "if condition:\n  statements"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
-      "code": "if condition:\\n  statements\\nelse:  statements"
+      "code": "if condition:\n  statements\nelse:\n  statements"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
-      "code": "if condition:\\n  statements\\nelif:\\n  statements"
+      "code": "if condition:\n  statements\nelif:\n  statements"
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
-      "code": "if condition:\\n  statements\\nelif condition:\\n  statements\\nelse:\\n  statements"
+      "code": "if condition:\n  statements\nelif condition:\n  statements\nelse:\n  statements"
     },
     "ternary_conditional": {
-      "name": "Conditional (ternary) Operator",
-      "code": "if condition: exprIfTrue else: exprIfFalse"
+      "code": "if condition:\n  exprIfTrue else:\n  exprIfFalse"
     },
     "while_loop": {
-      "name": "While loop",
-      "code": "while condition:\\n  statements"
+      "code": "while condition:\n  statements"
     },
-    "for_loops": {
-      "name": "For loop",
-      "code": "for iterator in iterable:\\n  statements"
+    "for_loop": {
+      "code": "for iterator in iterable:\n  statements"
     },
     "map_iteration": {
-      "name": "Map iteration",
       "code": "map(function, iterable)"
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "code": "filter(function, iterable)"
     }
   }

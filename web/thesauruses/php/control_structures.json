@@ -15,75 +15,47 @@
     "Loops": [
       "while_loop",
       "do_while_loop",
-      "until_loop",
-      "do_until_loop",
       "for_loop",
       "foreach_loop"
     ],
     "Iterations": [
-      "each_iteration",
       "map_iteration",
-      "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
+      "filter_iteration"
     ]
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
       "code": "if( $true_condition ) {\n    //statement\n}"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
       "code": "if( $condition ) {\n    // statement\n} else {\n    // else statement\n}"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
       "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n}"
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
       "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n} else {\n    // else statement\n}"
     },
     "ternary_conditional":{
-      "name": "Ternary conditional",
       "code": "$value ? $value : $other_value;\n$value ?: $other_value;"
     },
     "while_loop": {
-      "name": "While loop",
       "code": "while( $condition ) {\n    // code to be executed\n}"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
       "code": "do {\n    //executable code\n} while ( $condition );"
     },
-    "for_loops": {
-      "name": "For loop",
+    "for_loop": {
       "code": "for ( $intial_counter; $test_counter; $increment ) {\n    // executable code\n}"
     },
     "foreach_loop": {
-      "name": "Foreach loop",
       "code": "foreach ( $iterable as $item ) {\n    // executable code}"
     },
-    "each_iteration": {
-      "name": "Each iteration",
-      "code": ""
-    },
     "map_iteration": {
-      "name": "Map iteration",
       "code": "array_map( function( $element ) {\n    // transform element\n}, $array );"
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "code": "array_filter( $array, function( $element ) { // return a bool } );"
-    },
-    "fold_iteration": {
-      "name": "Fold iteration",
-      "code": ""
-    },
-    "recursion_iteration": {
-      "name": "Recursion iteration",
-      "code": ""
     }
   }
 }

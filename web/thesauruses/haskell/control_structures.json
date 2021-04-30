@@ -6,92 +6,49 @@
   },
   "categories": {
     "Conditional Statements (ifs)": [
-      "if_conditional",
       "if_else_conditional",
-      "if_elseif_conditional",
       "if_elseif_else_conditional",
       "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
-      "do_while_loop",
       "until_loop",
-      "do_until_loop",
-      "for_loop",
       "foreach_loop"
     ],
     "Iterations": [
-      "each_iteration",
       "map_iteration",
       "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
+      "fold_iteration"
     ]
   },
   "control_structures": {
-    "if_conditional": {
-      "name": "If conditional",
-      "code": ""
-    },
     "if_else_conditional": {
-      "name": "If/Else conditional",
       "code": "if condition\n    then expression\n    else expression"
     },
-    "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
-      "code": ""
-    },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
       "code": "if condition\n    then expression\n    else if condition\n        then expression\n        else expression"
     },
     "ternary_conditional": {
-      "name": "Ternary conditional",
-      "code": ""
+      "code": "if condition\n    then expression\n    else expression"
     },
     "while_loop": {
-      "name": "While loop",
       "code": "whileM monadBool"
     },
-    "do_while_loop": {
-      "name": "Do/While loop",
-      "code": ""
-    },
     "until_loop": {
-      "name": "Until loop",
       "code": "untilJustM monadMaybeA"
     },
-    "do_until_loop": {
-      "name": "Do/Until loop",
-      "code": ""
-    },
-    "for_loop": {
-      "name": "For loop",
-      "code": ""
-    },
     "foreach_loop": {
-      "name": "Foreach loop",
       "code": "forM traversable function"
     },
-    "each_iteration": {
-      "name": "Each iteration",
-      "code": ""
-    },
     "map_iteration": {
-      "name": "Map iteration",
       "code": "map function list"
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "code": "filter function list"
     },
     "fold_iteration": {
-      "name": "Fold iteration",
+      "comment": "haskell also supplies `foldl` and `foldl'` to provide folding with left association",
       "code": "foldr function start foldable"
-    },
-    "recursion_iteration": {
-      "name": "Recursion iteration",
-      "code": ""
     }
   }
 }

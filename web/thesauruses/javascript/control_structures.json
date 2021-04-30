@@ -15,83 +15,47 @@
     "Loops": [
       "while_loop",
       "do_while_loop",
-      "until_loop",
-      "do_until_loop",
       "for_loop",
       "foreach_loop"
     ],
     "Iterations": [
-      "each_iteration",
       "map_iteration",
-      "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
+      "filter_iteration"
     ]
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
-      "code": "if(condition){code block to be executed}"
+      "code": "if (condition) {\n    code block to be executed\n}"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
-      "code": "if(condition){code block to be executed} else {code block to be executed}"
+      "code": "if (condition) {\n    code block to be executed\n} else {\n    code block to be executed\n}"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
-      "code": "if(condition){code block to be executed} else if(condition){code block to be executed}"
+      "code": "if (condition) {\n    code block to be executed\n} else if (condition) {\n    code block to be executed\n}"
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
-      "code": "if(condition){code block to be executed} else if(condition){code block to be executed} else {code block to be executed}"
+      "code": "if (condition) {\n    code block to be executed\n} else if (condition) {\n    code block to be executed\n} else {\n    code block to be executed\n}"
     },
     "ternary_conditional": {
-      "name": "Conditional (ternary) Operator",
       "code": "condition ? exprIfTrue : exprIfFalse"
     },
     "while_loop": {
-      "name": "While loop",
-      "code": "while(condition){code block to be executed}"
+      "code": "while (condition) {\n    code block to be executed\n}"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
-      "code": "do {code block to be executed} while(condition)"
-    },
-    "until_loop":{
-      "name": "",
-      "code": ""
-    },
-    "do_until_loop": {
-      "name": "",
-      "code": ""
+      "code": "do {\n    code block to be executed\n} while (condition);"
     },
     "for_loop": {
-      "name": "For loop",
-      "code": "for(statement1 (counter variable(s)); statement2 (condition to keep the loop running); statement3 (statement executed each time after the loop has been executed)){code block to be executed}"
+      "code": "for (statement1 /*counter variable(s)*/; statement2 /*condition to keep the loop running*/; statement3 /*statement executed each time after the loop has been executed*/){\n    code block to be executed\n}"
     },
     "foreach_loop": {
-      "name": "Foreach loop",
       "code": "array.forEach(function(currentValue, index, arr), thisValue)"
     },
-    "each_iteration": {
-      "name": "",
-      "code": ""
-    },
     "map_iteration": {
-      "name": "Map iteration",
       "code": "array.map(function(currentValue, index, arr), thisValue)"
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "code": "array.filter(function(currentValue, index, arr), thisValue)"
-    },
-    "fold_iteration": {
-      "name": "",
-      "code": ""
-    },
-    "recursion_iteration": {
-      "name": "",
-      "code": ""
     }
   }
 }
