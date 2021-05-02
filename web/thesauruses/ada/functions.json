@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "language": "ada",
+    "language_version": "2012",
+    "language_name": "Ada"
+  },
+  "categories": {
+    "Void Functions": [
+      "void_function_no_parameters",
+      "void_function_with_parameters"
+    ],
+    "Return Value Functions": [
+      "return_value_function_no_parameters",
+      "return_value_function_with_parameters"
+    ]
+  },
+  "functions": {
+    "void_function_no_parameters": {
+      "name": "Function that does not return a value and takes no parameters",
+      "code": "procedure Procedure_Name is\n    Type_Declaration: Integer;\nbegin\n    statements;\nend Procedure_Name;"
+    },
+    "void_function_with_parameters": {
+      "name": "Function that does not return a value and that takes 1 or more defined parameters",
+      "code": "procedure Procedure_Name(Parameter, Second_Parameter : Type, Third_Parameter : Another_Type) is\n    Function_Variable : Integer;\nbegin\n    statements;\nend Procedure_Name;"
+    },
+    "return_value_function_no_parameters": {
+      "name": "Function that returns a value and takes no parameters",
+      "code": "function Function_Name return Return_Type is\nbegin\n    Statements;\n    return Return_Value;\nend Function_Name;"
+    },
+    "return_value_function_with_parameters": {
+      "name": "Function that returns a value and takes 1 or more defined parameters",
+      "code": "function Function_Name(Parameter : Parameter_Type, Second_Parameter : Another_Type) return Return_Type is\nbegin\n    Statements;\n    return Return_Value;\nend Function_Name;"
+    }
+  }
+}

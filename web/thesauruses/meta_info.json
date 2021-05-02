@@ -1,5 +1,6 @@
 {
   "languages": {
+    "Ada": "ada",
     "C++": "cpp",
     "C#": "csharp",
     "Go": "go",
