@@ -18,6 +18,7 @@
   "structures": {
     "Control Structures": "control_structures",
     "Data Types": "data_types",
-    "Functions/Methods/Subroutines": "functions"
+    "Functions, Methods, and Subroutines": "functions",
+    "Lists, Arrays, and Hashed Lists": "lists"
   }
 }
