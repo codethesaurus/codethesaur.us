@@ -50,7 +50,7 @@
       "code": "do {\n    code block to be executed\n} while (condition);"
     },
     "for_loop": {
-      "code": "for (statement1 /*counter variable(s)*/; statement2 /*condition to keep the loop running*/; statement3 /*statement executed each time after the loop has been executed*/){\n    code block to be executed\n}"
+      "code": "for (initialization_statement; condition; update_statement){\n    code block to be executed\n}"
     },
     "foreach_loop": {
       "code": "array.forEach(function(currentValue, index, arr), thisValue)"
