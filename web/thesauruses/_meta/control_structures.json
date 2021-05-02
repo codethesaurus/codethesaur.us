@@ -10,6 +10,7 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
+      "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
@@ -44,6 +45,9 @@
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
       "code": ""
+    },
+    "switch_statement": {
+      "name": "Switch statement"
     },
     "ternary_conditional": {
       "name": "Ternary conditional",
