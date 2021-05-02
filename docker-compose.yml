@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      target: cthesaurus-img
+    container_name: codethesaurus-container
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./:/code"

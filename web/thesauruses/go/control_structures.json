@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "language": "go",
+    "language_version": "1.16",
+    "language_name": "Go"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional"
+    ],
+    "Loops": [
+      "for_loop",
+      "foreach_loop"
+    ],
+    "Iterations": []
+  },
+  "control_structures": {
+    "if_conditional": {
+      "code": "if condition {\n    // code to be executed if condition is true\n}"
+    },
+    "if_else_conditional": {
+      "code": "if condition {\n    // code to be executed if condition is true\n} else {\n    // code to be executed if condition is false\n}"
+    },
+    "if_elseif_conditional": {
+      "code": "if condition1 {\n    // code to be executed if condition1 is true\n} else if condition2 {\n    // code to be executed if condition2 is true\n}"
+    },
+    "if_elseif_else_conditional": {
+      "code": "if condition1 {\n    // code to be executed if condition1 is true\n} else if condition2 {\n    // code to be executed if condition2 is true\n} else {\n    // code to be executed if neither conditions are met\n}"
+    },
+    "for_loop": {
+      "code": "for i := 0; i < 10; i++ {\n    // do something\n}",
+      "comment": "Go has one looping control structure, the for loop. The three components of the for loop are: the init statement (optional), the condition expression (mandatory), and the post statement (optional). The init statement is executed before the first iteration, the post statement is executed at the end of each iteration, while the condition expression is evaluated before every iteration."
+    },
+    "foreach_loop": {
+      "code": "integers := []int{5, 2, 7, 1}\nfor i, v := range integers {\n    fmt.Printf(\"2**%d = %d\n\", i, v)\n}",
+      "comment": "The above prints: 2**0 = 5, 2**1 = 2, 2**2 = 7, 2**3 = 1 with new lines instead of commas."
+    }
+  }
+}

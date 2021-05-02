@@ -1,0 +1,89 @@
+{
+    "meta": {
+      "language": "language_id",
+      "language_version": "version.number",
+      "language_name": "Human-Friendly Language Name"
+    },
+    "categories": {
+      "Conditional Statements (ifs)": [
+        "if_conditional",
+        "if_else_conditional",
+        "if_elseif_conditional",
+        "if_elseif_else_conditional",
+        "ternary_conditional"
+      ],
+      "Loops": [
+        "while_loop",
+        "do_while_loop",
+        "until_loop",
+        "do_until_loop",
+        "for_loop",
+        "foreach_loop"
+      ],
+      "Iterations": [
+        "each_iteration",
+        "map_iteration",
+        "filter_iteration",
+        "fold_iteration",
+        "recursion_iteration"
+      ]
+    },
+    "control_structures": {
+      "if_conditional": {
+        "name": "If conditional",
+        "code": "if (condition)\n{\n     statements;\n}"
+      },
+      "if_else_conditional": {
+        "name": "If/Else conditional",
+        "code": "if (condition)\n{\n     statements;\n} \nelse\n{\n     statements;\n}"
+      },
+      "if_elseif_conditional": {
+        "name": "If/ElseIf conditional",
+        "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}"
+      },
+      "if_elseif_else_conditional": {
+        "name": "If/ElseIf/Else conditional",
+        "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}\nelse\n{\n    statements;\n}"
+      },
+      "ternary_conditional": {
+        "name": "Ternary conditional",
+        "code": "condition ? trueExpression : falseExpression"
+      },
+      "while_loop": {
+        "name": "While loop",
+        "code": "while (condition)\n{\n    statements;\n}"
+      },
+      "do_while_loop": {
+        "name": "Do/While loop",
+        "code": "do\n{\n    statements;\n}\nwhile(condition)"
+      },
+      "for_loop": {
+        "name": "For loop",
+        "code": "for(variables; conditions; expression after iteration)\n{\n    statements\n}"
+      },
+      "foreach_loop": {
+        "name": "Foreach loop",
+        "code": "foreach(item in object)\n{\n    statements\n}"
+      },
+      "each_iteration": {
+        "name": "Each iteration",
+        "code": ""
+      },
+      "map_iteration": {
+        "name": "Map iteration",
+        "code": ""
+      },
+      "filter_iteration": {
+        "name": "Filter iteration",
+        "code": ""
+      },
+      "fold_iteration": {
+        "name": "Fold iteration",
+        "code": ""
+      },
+      "recursion_iteration": {
+        "name": "Recursion iteration",
+        "code": ""
+      }
+    }
+  }

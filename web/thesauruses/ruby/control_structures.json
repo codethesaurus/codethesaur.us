@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "language": "ruby",
+    "language_version": "3.0",
+    "language_name": "Ruby"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration",
+      "recursion_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "code": "if (true)\n  expression\nend",
+      "comments": "The parenthesis around the conditional are optional."
+    },
+    "if_else_conditional": {
+      "code": "if true\n  expressions\nelse\n  expressions\nend"
+    },
+    "if_elseif_conditional": {
+      "code": "if true\n  expressions\nelsif true\n  expressions\nend"
+    },
+    "if_elseif_else_conditional": {
+      "code": "if condition\n  expressions\nelsif condition\n  expressions\nelse\n  expressionss\nend"
+    },
+    "ternary_conditional": {
+      "code": "conditional ? true : false"
+    },
+    "while_loop": {
+        "code": "while conditional\n  expressions\nend"
+    },
+    "do_while_loop": {
+      "code": "loop do\n  expressions\n  break unless conditional\nend"
+    },
+    "until_loop": {
+      "code": "until conditional\n  expressions\nend"
+    },
+    "do_until_loop": {
+      "code": "loop do\n  expressions\n  break if conditional\nend"
+    },
+    "for_loop": {
+      "code": "for i in (0...5) do |i|\n  expressions\nend",
+      "comment": "`.each` is preferred. For is not normally used."
+    },
+    "foreach_loop": {
+      "code": "for i in arr do\n  puts i\nend",
+      "comment": "`.each` is preferred. For is not normally used."
+    },
+    "each_iteration": {
+      "code": "[].each do |item|\n  expressions\nend\n# or...\n[].each_with_index do |item, index|\n  expressions\nend"
+    },
+    "map_iteration": {
+      "code": "[].map(&:magic!)\n# OR...\n[].map do |item|\n  item.magic!\nend\n# OR...\n[].map { |item| item.magic! }"
+    },
+    "filter_iteration": {
+      "code": "[].select { |item| condition }"
+    },
+    "fold_iteration": {
+      "code": "[].reduce(:+)",
+      "comment": "Inject and reduce handle this."
+    },
+    "recursion_iteration": {
+      "code": ""
+    }
+  }
+}
