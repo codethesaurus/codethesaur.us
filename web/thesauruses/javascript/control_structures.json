@@ -26,16 +26,16 @@
   },
   "control_structures": {
     "if_conditional": {
-      "code": "if (condition) {\n    code block to be executed\n}"
+      "code": "if (condition) {\n    statements;\n}"
     },
     "if_else_conditional": {
-      "code": "if (condition) {\n    code block to be executed\n} else {\n    code block to be executed\n}"
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}"
     },
     "if_elseif_conditional": {
-      "code": "if (condition) {\n    code block to be executed\n} else if (condition) {\n    code block to be executed\n}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}"
     },
     "if_elseif_else_conditional": {
-      "code": "if (condition) {\n    code block to be executed\n} else if (condition) {\n    code block to be executed\n} else {\n    code block to be executed\n}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n    statements;\n}"
     },
     "switch_statement": {
       "code": "switch (expression) {\n  case x:\n    statements;\n    break;\n  case y:\n    statements;\n    break;\n  default:\n    statements;\n}"
@@ -44,13 +44,13 @@
       "code": "condition ? exprIfTrue : exprIfFalse"
     },
     "while_loop": {
-      "code": "while (condition) {\n    code block to be executed\n}"
+      "code": "while (condition) {\n    statements;\n}"
     },
     "do_while_loop": {
-      "code": "do {\n    code block to be executed\n} while (condition);"
+      "code": "do {\n    statements;\n} while (condition);"
     },
     "for_loop": {
-      "code": "for (initialization_statement; condition; update_statement){\n    code block to be executed\n}"
+      "code": "for (initialization_statement; condition; update_statement){\n    statements;\n}"
     },
     "foreach_loop": {
       "code": "array.forEach(function(currentValue, index, arr), thisValue)"
