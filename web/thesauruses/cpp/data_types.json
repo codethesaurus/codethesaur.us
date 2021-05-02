@@ -10,11 +10,9 @@
       "integer_16_bit",
       "integer_32_bit",
       "integer_64_bit",
-      "integer_as_object",
       "float_16_bit",
       "float_32_bit",
-      "float_64_bit",
-      "float_as_object"
+      "float_64_bit"
     ],
     "Strings": [
       "string_as_object",
@@ -43,10 +41,6 @@
       "name": "64-bit integer",
       "code": "long long"
     },
-    "integer_as_object": {
-      "name": "Object-based Integer",
-      "code": null
-    },
     "float_16_bit": {
       "name": "16-bit floating point",
       "code": "float"
@@ -58,10 +52,6 @@
     "float_64_bit": {
       "name": "64-bit floating point",
       "code": "long double"
-    },
-    "float_as_object": {
-      "name": "Object-based floating point",
-      "code": null
     },
     "string_as_object": {
       "name": "String as an object",
