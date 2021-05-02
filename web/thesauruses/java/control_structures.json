@@ -48,7 +48,7 @@
       "code": "do{\n    statements;\n}\nwhile(condition);"
     },
     "for_loop": {
-      "code": "for (counter variable(s); loop condition; executed after each iteration) {\n    code block to be executed\n}"
+      "code": "for (initialization_statements; condition; update_statements) {\n    statements;\n}"
     },
     "foreach_loop": {
       "code": "for(item : array of type item){\n    statements;\n}"
