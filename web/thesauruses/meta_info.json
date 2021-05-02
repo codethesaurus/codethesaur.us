@@ -1,6 +1,6 @@
 {
   "languages": {
-    "C++": "cplusplus",
+    "C++": "cpp",
     "C#": "csharp",
     "Go": "go",
     "Haskell": "haskell",
