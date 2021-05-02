@@ -1,18 +1,19 @@
 {
   "languages": {
-    "Ada": "ada",
-    "C++": "cpp",
-    "C#": "csharp",
-    "Go": "go",
-    "Haskell": "haskell",
-    "Java": "java",
-    "JavaScript": "javascript",
-    "Nim": "nim",
-    "PHP": "php",
-    "Python": "python",
-    "Ruby": "ruby",
-    "Rust": "rust",
-    "Scala": "scala"
+    "Ada (version 2012)": "ada",
+    "C++ (version C++17, generic)": "cpp",
+    "C# (version 9)": "csharp",
+    "Go (version 1.16)": "go",
+    "Haskell (version 2010)": "haskell",
+    "Java (version 15)": "java",
+    "JavaScript (version ES2020)": "javascript",
+    "Nim (version 1.4)": "nim",
+    "PHP (version 7.4)": "php",
+    "Python (version 3.7)": "python",
+    "Ruby (version 3.0)": "ruby",
+    "Rust (version 1)": "rust",
+    "Scala (version 2.13)": "scala",
+    "Swift (version 5.3.3)": "swift"
   },
   "structures": {
     "Control Structures": "control_structures",
