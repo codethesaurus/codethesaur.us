@@ -40,11 +40,11 @@
       "code": "Data.Int.Int32"
     },
     "integer_64_bit": {
-      "name": "64-bit integer",
+
       "code": "Data.Int.Int64"
     },
     "integer_as_object": {
-      "name": "Object-based Integer",
+
       "code": "Integer"
     },
     "float_16_bit": {
