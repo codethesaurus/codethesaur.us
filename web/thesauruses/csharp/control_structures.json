@@ -30,11 +30,11 @@
     },
     "control_structures": {
       "if_conditional": {
-        "name": "If conditional",
+
         "code": "if (condition)\n{\n     statements;\n}"
       },
       "if_else_conditional": {
-        "name": "If/Else conditional",
+
         "code": "if (condition)\n{\n     statements;\n} \nelse\n{\n     statements;\n}"
       },
       "if_elseif_conditional": {

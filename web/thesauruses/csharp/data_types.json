@@ -28,11 +28,11 @@
   },
   "data_types": {
     "boolean": {
-        "name": "Boolean",
+
         "code": "bool"
     },
     "integer_16_bit": {
-        "name": "16-bit integer",
+
         "code": "short"
     },
     "integer_32_bit": {

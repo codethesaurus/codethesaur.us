@@ -33,15 +33,15 @@
     },
     "integer_16_bit" : {
       "name": "16-bit integer",
-      "code": null
+      "not-implemented": true
     },
     "integer_32_bit": {
       "name": "32-bit integer",
-      "code": null
+      "not-implemented": true
     },
     "integer_64_bit": {
       "name": "64-bit integer",
-      "code": null
+      "not-implemented": true
     },
     "integer_as_object": {
       "name": "Object-based Integer",
@@ -49,15 +49,15 @@
     },
     "float_16_bit": {
       "name": "16-bit floating point",
-      "code": null
+      "not-implemented": true
     },
     "float_32_bit": {
       "name": "32-bit floating point",
-      "code": null
+      "not-implemented": true
     },
     "float_64_bit": {
       "name": "64-bit floating point",
-      "code": null
+      "not-implemented": true
     },
     "float_as_object": {
       "name": "Object-based floating point",
@@ -69,7 +69,7 @@
     },
     "string_as_array": {
       "name": "String as an array",
-      "code": null
+      "not-implemented": true
     },
     "complex_as_object": {
       "name": "Complex Number as an object",
