@@ -121,7 +121,7 @@
       "reduce_right"
     ]
   },
-  "functions": {
+  "lists": {
     "name_of_ordered_mutable_list": {
       "name": "What is a ordered, mutable list called?",
       "code": ""
