@@ -74,7 +74,7 @@ class Language(object):
         return self.concept(concept_key).get("not-implemented", False) is False
 
     def concept_code(self, concept_key):
-        return self.concept(concept_key)["code"]
+        return self.concept(concept_key).get("code")
 
     def concept_comment(self, concept_key):
         return self.concept(concept_key).get("comment", "")
@@ -110,16 +110,23 @@ class MetaStructure(object):
 
 
 def format_code_for_display(concept_key, lang):
-    if lang.concept_unknown(concept_key):
+    if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
         return "Unknown"
     if lang.concept_implemented(concept_key):
         return highlight(
             lang.concept_code(concept_key),
             get_lexer_by_name(lang.key),
             HtmlFormatter()
-        ) if lang.concept_code(concept_key) else None
+        )
     else:
-        return "Not Implemented"
+        return None
+
+def format_comment_for_display(concept_key, lang):
+    if not lang.concept_implemented(concept_key) and lang.concept_comment(concept_key) == "":
+        return "Not Implemented In This Language"
+    else:
+        return lang.concept_comment(concept_key)
+
 
 def compare(request):
     lang1 = Language(escape(strip_tags(request.GET.get('lang1', ''))))
@@ -165,8 +172,8 @@ def compare(request):
             "name": meta_structure.concepts[concept_key]["name"],
             "code1": format_code_for_display(concept_key, lang1),
             "code2": format_code_for_display(concept_key, lang2),
-            "comment1": lang1.concept_comment(concept_key),
-            "comment2": lang2.concept_comment(concept_key)
+            "comment1": format_comment_for_display(concept_key, lang1),
+            "comment2": format_comment_for_display(concept_key, lang2)
         })
 
     # establish order listing across all languages
@@ -219,7 +226,7 @@ def reference(request):
             "id": concept_key,
             "name": meta_structure.concepts[concept_key]["name"],
             "code": format_code_for_display(concept_key, lang),
-            "comment": lang.concept_comment(concept_key)
+            "comment": format_comment_for_display(concept_key, lang)
         })
 
     response = {
