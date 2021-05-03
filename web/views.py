@@ -60,11 +60,18 @@ class Language(object):
             }
         elif self.concepts.get(concept_key).get("not-implemented", False):
             return {
-                "code": "Not Implemented In Language",
+                "not-implemented": True,
+                "code": "",
                 "comment": self.concepts.get(concept_key).get("comment", "")
             }
         else:
             return self.concepts.get(concept_key)
+
+    def concept_unknown(self, concept_key):
+        return self.concepts.get(concept_key) is None
+
+    def concept_implemented(self, concept_key):
+        return self.concept(concept_key).get("not-implemented", False) is False
 
     def concept_code(self, concept_key):
         return self.concept(concept_key)["code"]
@@ -102,6 +109,17 @@ class MetaStructure(object):
             self.concepts = meta_structure_file_json[structure_key]
 
 
+def format_code_for_display(concept_key, lang):
+    if lang.concept_unknown(concept_key):
+        return "Unknown"
+    if lang.concept_implemented(concept_key):
+        return highlight(
+            lang.concept_code(concept_key),
+            get_lexer_by_name(lang.key),
+            HtmlFormatter()
+        ) if lang.concept_code(concept_key) else None
+    else:
+        return "Not Implemented"
 
 def compare(request):
     lang1 = Language(escape(strip_tags(request.GET.get('lang1', ''))))
@@ -145,16 +163,8 @@ def compare(request):
         both_concepts.append({
             "id": concept_key,
             "name": meta_structure.concepts[concept_key]["name"],
-            "code1": highlight(
-                lang1.concept_code(concept_key),
-                get_lexer_by_name(lang1.key),
-                HtmlFormatter()
-                ) if lang1.concept_code(concept_key) else None,
-            "code2": highlight(
-                lang2.concept_code(concept_key),
-                get_lexer_by_name(lang2.key),
-                HtmlFormatter()
-                ) if lang2.concept_code(concept_key) else None,
+            "code1": format_code_for_display(concept_key, lang1),
+            "code2": format_code_for_display(concept_key, lang2),
             "comment1": lang1.concept_comment(concept_key),
             "comment2": lang2.concept_comment(concept_key)
         })
@@ -208,11 +218,7 @@ def reference(request):
         concepts.append({
             "id": concept_key,
             "name": meta_structure.concepts[concept_key]["name"],
-            "code": highlight(
-                lang.concept_code(concept_key),
-                get_lexer_by_name(lang.key),
-                HtmlFormatter()
-                ) if lang.concept_code(concept_key) else None,
+            "code": format_code_for_display(concept_key, lang),
             "comment": lang.concept_comment(concept_key)
         })
 
