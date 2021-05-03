@@ -58,6 +58,11 @@ class Language(object):
                 "code": "",
                 "comment": ""
             }
+        elif self.concepts.get(concept_key).get("not-implemented", False):
+            return {
+                "code": "Not Implemented In Language",
+                "comment": self.concepts.get(concept_key).get("comment", "")
+            }
         else:
             return self.concepts.get(concept_key)
 
