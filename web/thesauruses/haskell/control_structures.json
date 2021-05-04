@@ -6,25 +6,40 @@
   },
   "categories": {
     "Conditional Statements (ifs)": [
+      "if_conditional",
       "if_else_conditional",
+      "if_elseif_conditional",
       "if_elseif_else_conditional",
       "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
+      "do_while_loop",
       "until_loop",
+      "do_until_loop",
+      "for_loop",
       "foreach_loop"
     ],
     "Iterations": [
+      "each_iteration",
       "map_iteration",
       "filter_iteration",
-      "fold_iteration"
+      "fold_iteration",
+      "recursion_iteration"
     ]
   },
   "control_structures": {
+    "if_conditional": {
+      "not-implemented": true,
+      "comment": "Everything in Haskell is an expression and has to return something thus there needs to be a `else` clause"
+    },
     "if_else_conditional": {
       "code": "if condition\n    then expression\n    else expression"
+    },
+    "if_elseif_conditional": {
+      "not-implemented": true,
+      "comment": "See \"If conditional\""
     },
     "if_elseif_else_conditional": {
       "code": "if condition\n    then expression\n    else if condition\n        then expression\n        else expression"
@@ -36,13 +51,27 @@
       "code": "if condition\n    then expression\n    else expression"
     },
     "while_loop": {
+      "comment": "while `whileM` is not exactly a loop it allows for very similar code, `monadBool` is a monad that returns a Bool and gets run until it returns `False`",
       "code": "whileM monadBool"
     },
+    "do_while_loop": {
+      "not-implemented": true
+    },
     "until_loop": {
+      "comment": "like `whileM` this only behaves similarly to a until loop",
       "code": "untilJustM monadMaybeA"
+    },
+    "do_until_loop": {
+      "not-implemented": true
+    },
+    "for_loop": {
+      "not-implemented": true
     },
     "foreach_loop": {
       "code": "forM traversable function"
+    },
+    "each_iteration": {
+      "not-implemented": true
     },
     "map_iteration": {
       "code": "map function list"
@@ -53,6 +82,9 @@
     "fold_iteration": {
       "comment": "haskell also supplies `foldl` and `foldl'` to provide folding with left association",
       "code": "foldr function start foldable"
+    },
+    "recursion_iteration": {
+      "code": "fix function"
     }
   }
 }

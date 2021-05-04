@@ -7,16 +7,27 @@
   "categories": {
     "Numerical": [
       "boolean",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_integer_as_object",
       "signed_float_16_bit",
       "signed_float_32_bit",
       "signed_float_64_bit",
-      "signed_float_as_object"
+      "signed_float_as_object",
+      "signed_integer_16_bit",
+      "signed_integer_32_bit",
+      "signed_integer_64_bit",
+      "signed_integer_8_bit",
+      "signed_integer_as_object",
+      "unsigned_float_16_bit",
+      "unsigned_float_32_bit",
+      "unsigned_float_64_bit",
+      "unsigned_float_as_object",
+      "unsigned_integer_16_bit",
+      "unsigned_integer_32_bit",
+      "unsigned_integer_64_bit",
+      "unsigned_integer_8_bit",
+      "unsigned_integer_as_object"
     ],
     "Characters and Strings": [
+      "character",
       "string_as_object",
       "string_as_array"
     ],
@@ -27,58 +38,80 @@
     ]
   },
   "data_types": {
-    "boolean": {
-      "name": "Boolean",
+    "boolean" : {
       "code": "Bool"
     },
-    "signed_integer_16_bit": {
-      "name": "16-bit integer",
+    "signed_integer_8_bit" : {
+      "code": "import Data.Int\nInt8"
+    },
+    "signed_integer_16_bit" : {
       "code": "import Data.Int\nInt16"
     },
     "signed_integer_32_bit": {
-      "name": "32-bit integer",
-      "code": "Data.Int.Int32"
+      "code": "import Data.Int\nInt32"
     },
     "signed_integer_64_bit": {
-      "code": "Data.Int.Int64"
+      "code": "import Data.Int\nInt64"
     },
     "signed_integer_as_object": {
       "code": "Integer"
     },
     "signed_float_16_bit": {
-      "name": "16-bit floating point",
-      "code": null
+      "not-implemented": true
     },
     "signed_float_32_bit": {
-      "name": "32-bit floating point",
       "code": "Float"
     },
     "signed_float_64_bit": {
-      "name": "64-bit floating point",
       "code": "Double"
     },
     "signed_float_as_object": {
-      "name": "Object-based floating point",
-      "code": null
+      "not-implemented": true
+    },
+    "unsigned_integer_8_bit" : {
+      "code": "import Data.Word\nWord8"
+    },
+    "unsigned_integer_16_bit" : {
+      "code": "import Data.Word\nWord16"
+    },
+    "unsigned_integer_32_bit": {
+      "code": "import Data.Word\nWord32"
+    },
+    "unsigned_integer_64_bit": {
+      "code": "import Data.Word\nWord64"
+    },
+    "unsigned_integer_as_object": {
+      "code": "Word"
+    },
+    "unsigned_float_16_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_32_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_64_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_as_object": {
+      "not-implemented": true
+    },
+    "character": {
+      "code": "Char"
     },
     "string_as_object": {
-      "name": "String as an object",
-      "code": "Data.Text.Text"
+      "code": "import Data.Text\nText"
     },
     "string_as_array": {
-      "name": "String as an array",
       "code": "String == [Char]"
     },
     "complex_as_object": {
-      "name": "Complex Number as an object",
-      "code": "real Data.Complex.:+ imaginary"
+      "code": "import Data.Complex\nComplex elementType",
+      "comment": "`elementType` is the type for the elements for example `Float` or `Int`"
     },
     "real_number_part": {
-      "name": "Complex number real part",
       "code": "realPart c"
     },
     "imaginary_number_part": {
-      "name": "Complex number imaginary part",
       "code": "imagPart c"
     }
   }
