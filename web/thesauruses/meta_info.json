@@ -13,7 +13,8 @@
     "Ruby (version 3.0)": "ruby",
     "Rust (version 1)": "rust",
     "Scala (version 2.13)": "scala",
-    "Swift (version 5.3.3)": "swift"
+    "Swift (version 5.3.3)": "swift",
+    "TypeScript (version 4.2)": "typescript"
   },
   "structures": {
     "Control Structures": "control_structures",
