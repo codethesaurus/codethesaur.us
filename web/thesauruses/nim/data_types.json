@@ -15,7 +15,12 @@
       "float_32_bit",
       "float_64_bit",
       "float_as_object",
-      "char"
+      "char",
+      "unsigned_integer_8_bit",
+      "unsigned_integer_16_bit",
+      "unsigned_integer_32_bit",
+      "unsigned_integer_64_bit",
+      "unsigned_integer_as_object"
     ],
     "Strings": [
       "string_as_object",
@@ -67,6 +72,26 @@
     "char": {
       "name": "Character",
       "code": "char"
+    },
+    "unsigned_integer_8_bit" : {
+      "name": "8-bit unsigned integer",
+      "code": "uint8"
+    },
+    "unsigned_integer_16_bit" : {
+      "name": "16-bit unsigned integer",
+      "code": "uint16"
+    },
+    "unsigned_integer_32_bit": {
+      "name": "32-bit unsigned integer",
+      "code": "uint32"
+    },
+    "unsigned_integer_64_bit": {
+      "name": "64-bit unsigned integer",
+      "code": "uint64"
+    },
+    "unsigned_integer_as_object": {
+      "name": "Object-based unsigned Integer",
+      "code": "uint"
     },
     "string_as_object": {
       "name": "String as an object",
