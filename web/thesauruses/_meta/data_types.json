@@ -16,7 +16,12 @@
       "float_32_bit",
       "float_64_bit",
       "float_as_object",
-      "char"
+      "char",
+      "unsigned_integer_8_bit",
+      "unsigned_integer_16_bit",
+      "unsigned_integer_32_bit",
+      "unsigned_integer_64_bit",
+      "unsigned_integer_as_object"
     ],
     "Strings": [
       "string_as_object",
