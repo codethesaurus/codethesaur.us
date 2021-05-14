@@ -42,19 +42,19 @@
       "code": "if condition:\n  exprIfTrue else:\n  exprIfFalse"
     },
     "switch_statement": {
-      "code": "case expression:\n  of expressionOrRange:\n    statements\n  else:\n    statements"
+      "code": "case expression\nof expressionOrRange:\n    statements\nelse:\n    statements"
     },
     "while_loop": {
       "code": "while condition:\n  statements"
     },
     "for_loop": {
-      "code": "for iterator in iterable:\n  statements"
+      "code": "for item in iterable:\n  statements"
     },
     "map_iteration": {
-      "code": "map(function, iterable)"
+      "code": "iterable.map function"
     },
     "filter_iteration": {
-      "code": "filter(function, iterable)"
+      "code": "iterable.filter function"
     }
   }
 }
