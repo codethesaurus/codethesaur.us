@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "language": "typescript",
+    "language_version": "4.2",
+    "language_name": "TypeScript"
+  },
+  "categories": {
+    "Void Functions": [
+      "void_function_no_parameters",
+      "void_function_with_parameters",
+      "void_function_variable_parameters"
+    ],
+    "Return Value Functions": [
+      "return_value_function_no_parameters",
+      "return_value_function_with_parameters",
+      "return_value_function_variable_parameters"
+    ],
+    "Lambda/Anonymous Functions": [
+      "anonymous_function_no_parameters",
+      "anonymous_function_with_parameters",
+      "anonymous_function_variable_parameters"
+    ],
+    "Subroutines": [
+      "call_subroutine",
+      "return_from_subroutine"
+    ]
+  },
+  "functions": {
+    "void_function_no_parameters": {
+      "code": "const voidfn: () => void = () => {\n\t/* do stuff */\n}\n// Within a class this can be\nclass MyClass {\n\tvoidfn(): void {\n\t\t/* do stuff*/\n\t}\n}"
+    },
+    "void_function_with_parameters": {
+      "code": "const voidfn: (s: string, n: number) => void =\n(s: string, n: number) => {\n\t/* do stuff */\n}\n// Within a class this can be\nclass MyClass {\n\tvoidfn(s: string, n: number): void {\n\t\t/* do stuff*/\n\t}\n}"
+    },
+    "void_function_variable_parameters": {
+      "code": "voidfn(s: string, n: number, ...others: any[]): void {\n\t/* do stuff */\n}",
+      "comment": "This is the syntax for defining a class method which is used here for better readability. The `others` parameter is provided as an array to the function code."
+    },
+    "return_value_function_no_parameters": {
+      "code": "fn(): number {\n\treturn 42;\n}"
+    },
+    "return_value_function_with_parameters": {
+      "code": "fn(s: string, n: number): {name: string, age: number} {\n\treturn { name: s, age: n }\n}"
+    },
+    "return_value_function_variable_parameters": {
+      "code": "sum(...nums: number[]): number {\n\treturn nums.reduce((a, b) => a + b, 0);\n}",
+      "comment": "This method returns the sum of all values provided. Can be called like `sum(1, 13, 43, 15)` which would return 72."
+    },
+    "anonymous_function_no_parameters": {
+      "code": "() => { /* do stuff */ }"
+    },
+    "anonymous_function_with_parameters": {
+      "code": "(name: string, age: number) => ({name, age})",
+      "comment": "This method returns an object literal containing `name` and `age` properties."
+    },
+    "anonymous_function_variable_parameters": {
+      "code": "(...urls: string[]): void => { urls.forEach(url => { fetch(url) }) }"
+    },
+    "call_subroutine": {
+      "not-implemented": true
+    },
+    "return_from_subroutine": {
+      "not-implemented": true
+    }
+  }
+}
