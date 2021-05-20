@@ -17,7 +17,6 @@ import django_on_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -36,11 +35,11 @@ else:
 SECURE_SSL_REDIRECT = not DEBUG
 
 ALLOWED_HOSTS = [
-    "codethesaurus-prod.herokuapp.com",
-    "codethesaur.us",
-    "127.0.0.1"
+    # "codethesaurus-prod.herokuapp.com",
+    # "codethesaur.us",
+    # "127.0.0.1",
+    "*"
 ]
-
 
 # Application definition
 
@@ -61,7 +60,8 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'codethesaurus.urls'
@@ -83,7 +83,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'codethesaurus.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -113,7 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -130,8 +128,7 @@ USE_TZ = True
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
@@ -142,6 +139,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+os.makedirs('STATIC_ROOT', exist_ok=True)
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
@@ -150,3 +148,36 @@ STATICFILES_DIRS = (
 
 # Configure Django App for Heroku.
 django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True)
+
+LOGGING = {
+            'version': 1,
+            'disable_existing_loggers': False,
+            'formatters': {
+                'verbose': {
+                    'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
+                               'pathname=%(pathname)s lineno=%(lineno)s ' +
+                               'funcname=%(funcName)s %(message)s'),
+                    'datefmt': '%Y-%m-%d %H:%M:%S'
+                },
+                'simple': {
+                    'format': '%(levelname)s %(message)s'
+                }
+            },
+            'handlers': {
+                'null': {
+                    'level': 'DEBUG',
+                    'class': 'logging.NullHandler',
+                },
+                'console': {
+                    'level': 'DEBUG',
+                    'class': 'logging.StreamHandler',
+                    'formatter': 'verbose'
+                }
+            },
+            'loggers': {
+                'testlogger': {
+                    'handlers': ['console'],
+                    'level': 'INFO',
+                }
+            }
+        }
