@@ -26,7 +26,6 @@
       "map_iteration",
       "filter_iteration",
       "fold_iteration",
-      "recursion_iteration"
     ]
   },
   "control_structures": {
