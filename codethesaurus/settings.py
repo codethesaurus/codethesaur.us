@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,7 +89,7 @@ WSGI_APPLICATION = 'codethesaurus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
     }
 }
 
@@ -137,47 +136,32 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 os.makedirs('STATIC_ROOT', exist_ok=True)
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = [
+    # os.path.join(BASE_DIR, 'static'),
+    'static/images',
+    'static/css',
+    'staticfiles'
+]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+if os.getcwd() == '/app':
+    import dj_database_url
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(db_from_env)
+
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    ALLOWED_HOSTS = ['codethesaurus-prod.herokuapp.com']
+    DEBUG = True
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 # Configure Django App for Heroku.
-django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True)
-
-LOGGING = {
-            'version': 1,
-            'disable_existing_loggers': False,
-            'formatters': {
-                'verbose': {
-                    'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
-                               'pathname=%(pathname)s lineno=%(lineno)s ' +
-                               'funcname=%(funcName)s %(message)s'),
-                    'datefmt': '%Y-%m-%d %H:%M:%S'
-                },
-                'simple': {
-                    'format': '%(levelname)s %(message)s'
-                }
-            },
-            'handlers': {
-                'null': {
-                    'level': 'DEBUG',
-                    'class': 'logging.NullHandler',
-                },
-                'console': {
-                    'level': 'DEBUG',
-                    'class': 'logging.StreamHandler',
-                    'formatter': 'verbose'
-                }
-            },
-            'loggers': {
-                'testlogger': {
-                    'handlers': ['console'],
-                    'level': 'INFO',
-                }
-            }
-        }
+import django_on_heroku
+django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True, logging=True)
