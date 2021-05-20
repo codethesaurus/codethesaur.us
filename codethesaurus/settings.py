@@ -17,9 +17,6 @@ import django_on_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", "default-unsafe-key")
 
@@ -34,12 +31,7 @@ else:
 # redirect all http requests to https in non debugging envs
 SECURE_SSL_REDIRECT = not DEBUG
 
-ALLOWED_HOSTS = [
-    # "codethesaurus-prod.herokuapp.com",
-    # "codethesaur.us",
-    # "127.0.0.1",
-    "*"
-]
+ALLOWED_HOSTS = [ "*" ]
 
 # Application definition
 
@@ -61,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
-    # 'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'codethesaurus.urls'
@@ -125,22 +116,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
 # https://dev.to/fazledyn/deploying-django-3-1-on-heroku-417
 # https://github.com/pkrefta/django-on-heroku/blob/3b2367fec9417230dbfba0235353403865386a41/django_on_heroku/core.py#L106
 
-# Removing to see if django-on-heroku adds this in
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 os.makedirs(STATIC_ROOT, exist_ok=True)
@@ -148,24 +130,7 @@ os.makedirs(STATIC_ROOT, exist_ok=True)
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    # 'static/images',
-    # 'static/css',
-    # 'staticfiles'
 ]
-
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# if os.getcwd() == '/app':
-#     import dj_database_url
-#     db_from_env = dj_database_url.config(conn_max_age=500)
-#     DATABASES['default'].update(db_from_env)
-#
-#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-#     ALLOWED_HOSTS = ['codethesaurus-prod.herokuapp.com']
-#     DEBUG = True
-#     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Configure Django App for Heroku.
 django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True, logging=True)
