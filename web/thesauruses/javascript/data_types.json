@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "language": "javascript",
+    "language_version": "ES2020",
+    "language_name": "JavaScript"
+  },
+  "categories": {
+    "Numerical": [
+      "boolean",
+      "integer_8_bit",
+      "integer_16_bit",
+      "integer_32_bit",
+      "integer_64_bit",
+      "integer_as_object",
+      "float_16_bit",
+      "float_32_bit",
+      "float_64_bit",
+      "float_as_object",
+      "char"
+    ],
+    "Strings": [
+      "string_as_object",
+      "string_as_array"
+    ],
+    "Complex Numbers": [
+      "complex_as_object",
+      "real_number_part",
+      "imaginary_number_part"
+    ]
+  },
+  "data_types": {
+    "boolean": {
+      "code": "Boolean",
+      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+    },
+    "integer_8_bit": {
+      "not-implemented": true
+    },
+    "integer_16_bit": {
+      "not-implemented": true
+    },
+    "integer_32_bit": {
+      "not-implemented": true
+    },
+    "integer_64_bit": {
+      "not-implemented": true
+    },
+    "integer_as_object": {
+      "code": "BigInt",
+      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+    },
+    "float_16_bit": {
+      "not-implemented": true
+    },
+    "float_32_bit": {
+      "not-implemented": true
+    },
+    "float_64_bit": {
+      "code": "Number",
+      "comment": "The Number wrapper object is represented by a double-precision 64-bit float under the hood"
+    },
+    "float_as_object": {
+      "code": "Number",
+      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+    },
+    "char": {
+      "not-implemented": true,
+      "comment": "It's possible to use single-character strings, such as the output of String.prototype.charAt()"
+    },
+    "string_as_object": {
+      "code": "String"
+    },
+    "string_as_array": {
+      "code": "String",
+      "comment": "String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods"
+    },
+    "complex_as_object": {
+      "not-implemented": true
+    },
+    "real_number_part": {
+      "not-implemented": true
+    },
+    "imaginary_number_part": {
+      "not-implemented": true
+    }
+  }
+}

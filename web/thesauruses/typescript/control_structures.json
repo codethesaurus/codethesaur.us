@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "javascript",
-    "language_version": "ES2020",
-    "language_name": "JavaScript"
+    "language": "typescript",
+    "language_version": "4.2",
+    "language_name": "TypeScript"
   },
   "categories": {
     "Conditional Statements (ifs)": [
