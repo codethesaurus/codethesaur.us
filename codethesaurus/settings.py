@@ -145,7 +145,7 @@ STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, 'static'),
     'static/images',
     'static/css',
-    'staticfiles'
+    # 'staticfiles'
 ]
 
 MEDIA_URL = '/media/'
