@@ -25,8 +25,7 @@
       "each_iteration",
       "map_iteration",
       "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
+      "fold_iteration"
     ]
   },
   "control_structures": {
@@ -78,9 +77,6 @@
       "code": "array.filter(function(currentValue, index, arr), thisValue)"
     },
     "fold_iteration": {
-      "not-implemented": true
-    },
-    "recursion_iteration": {
       "not-implemented": true
     }
   }

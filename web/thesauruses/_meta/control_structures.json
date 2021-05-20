@@ -91,10 +91,6 @@
     "fold_iteration": {
       "name": "Fold iteration",
       "code": ""
-    },
-    "recursion_iteration": {
-      "name": "Recursion iteration",
-      "code": ""
     }
   }
 }

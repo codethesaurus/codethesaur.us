@@ -24,8 +24,7 @@
         "each_iteration",
         "map_iteration",
         "filter_iteration",
-        "fold_iteration",
-        "recursion_iteration"
+        "fold_iteration"
       ]
     },
     "control_structures": {
@@ -79,10 +78,6 @@
       },
       "fold_iteration": {
         "name": "Fold iteration",
-        "code": ""
-      },
-      "recursion_iteration": {
-        "name": "Recursion iteration",
         "code": ""
       }
     }

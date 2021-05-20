@@ -24,8 +24,7 @@
       "each_iteration",
       "map_iteration",
       "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
+      "fold_iteration"
     ]
   },
   "control_structures": {
@@ -77,9 +76,6 @@
     "fold_iteration": {
       "code": "[].reduce(:+)",
       "comment": "Inject and reduce handle this."
-    },
-    "recursion_iteration": {
-      "code": ""
     }
   }
 }
