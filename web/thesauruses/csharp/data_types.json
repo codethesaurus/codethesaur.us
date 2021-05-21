@@ -7,16 +7,16 @@
   "categories": {
     "Numerical": [
       "boolean",
-      "integer_16_bit",
-      "integer_32_bit",
-      "integer_64_bit",
-      "integer_as_object",
-      "float_16_bit",
-      "float_32_bit",
-      "float_64_bit",
-      "float_as_object"
+      "signed_integer_16_bit",
+      "signed_integer_32_bit",
+      "signed_integer_64_bit",
+      "signed_integer_as_object",
+      "signed_float_16_bit",
+      "signed_float_32_bit",
+      "signed_float_64_bit",
+      "signed_float_as_object"
     ],
-    "Strings": [
+    "Characters and Strings": [
       "string_as_object",
       "string_as_array"
     ],
@@ -28,28 +28,26 @@
   },
   "data_types": {
     "boolean": {
-
-        "code": "bool"
+      "code": "bool"
     },
-    "integer_16_bit": {
-
-        "code": "short"
+    "signed_integer_16_bit": {
+      "code": "short"
     },
-    "integer_32_bit": {
-        "name": "32-bit integer",
-        "code": "int"
+    "signed_integer_32_bit": {
+      "name": "32-bit integer",
+      "code": "int"
     },
-    "integer_64_bit": {
-        "name": "64-bit integer",
-        "code": "long"
+    "signed_integer_64_bit": {
+      "name": "64-bit integer",
+      "code": "long"
     },
-    "float_32_bit": {
-        "name": "32-bit floating point",
-        "code": "float"
+    "signed_float_32_bit": {
+      "name": "32-bit floating point",
+      "code": "float"
     },
-    "float_64_bit": {
-        "name": "64-bit floating point",
-        "code": "double"
+    "signed_float_64_bit": {
+      "name": "64-bit floating point",
+      "code": "double"
     }
   }
 }

@@ -7,18 +7,18 @@
   "categories": {
     "Numerical": [
       "boolean",
-      "integer_8_bit",
-      "integer_16_bit",
-      "integer_32_bit",
-      "integer_64_bit",
-      "integer_as_object",
-      "float_16_bit",
-      "float_32_bit",
-      "float_64_bit",
-      "float_as_object",
-      "char"
+      "signed_integer_8_bit",
+      "signed_integer_16_bit",
+      "signed_integer_32_bit",
+      "signed_integer_64_bit",
+      "signed_integer_as_object",
+      "signed_float_16_bit",
+      "signed_float_32_bit",
+      "signed_float_64_bit",
+      "signed_float_as_object",
     ],
-    "Strings": [
+    "Characters and Strings": [
+      "character",
       "string_as_object",
       "string_as_array"
     ],
@@ -33,43 +33,43 @@
 
       "code": "bool"
     },
-    "integer_8_bit": {
+    "signed_integer_8_bit": {
 
       "code": "i8"
     },
-    "integer_16_bit": {
+    "signed_integer_16_bit": {
       "name": "16-bit integer",
       "code": "i16"
     },
-    "integer_32_bit": {
+    "signed_integer_32_bit": {
       "name": "32-bit integer",
       "code": "i32"
     },
-    "integer_64_bit": {
+    "signed_integer_64_bit": {
       "name": "64-bit integer",
       "code": "i64"
     },
-    "integer_as_object": {
+    "signed_integer_as_object": {
       "name": "Object-based Integer",
       "code": ""
     },
-    "float_16_bit": {
+    "signed_float_16_bit": {
       "name": "16-bit floating point",
       "code": ""
     },
-    "float_32_bit": {
+    "signed_float_32_bit": {
       "name": "32-bit floating point",
       "code": "f32"
     },
-    "float_64_bit": {
+    "signed_float_64_bit": {
       "name": "64-bit floating point",
       "code": "f64"
     },
-    "float_as_object": {
+    "signed_float_as_object": {
       "name": "Object-based floating point",
       "code": ""
     },
-    "char": {
+    "character": {
       "name": "Character",
       "code": "char"
     },
