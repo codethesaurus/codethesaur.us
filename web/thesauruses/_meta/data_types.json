@@ -24,7 +24,7 @@
       "signed_float_64_bit",
       "unsigned_float_64_bit",
       "signed_float_as_object",
-      "unsigned_float_as_object",
+      "unsigned_float_as_object"
     ],
     "Characters and Strings": [
       "character",
