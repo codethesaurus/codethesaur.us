@@ -181,7 +181,7 @@ def compare(request):
 
     # DB equivalent of full outer join
     response = {
-        "title": "Comparing" + lang1.friendly_name + " " + lang2.friendly_name,
+        "title": "Comparing " + lang1.friendly_name + " " + lang2.friendly_name,
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
         "lang1": lang1.key,
