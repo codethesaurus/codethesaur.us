@@ -18,7 +18,8 @@
       "float_as_object",
       "char"
     ],
-    "Strings": [
+    "Characters and Strings": [
+      "character",
       "string_as_object",
       "string_as_array"
     ],
@@ -69,7 +70,7 @@
       "name": "Object-based floating point",
       "code": ""
     },
-    "char": {
+    "character": {
       "name": "Character",
       "code": ""
     },
