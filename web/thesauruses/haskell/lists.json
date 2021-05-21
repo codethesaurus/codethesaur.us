@@ -84,7 +84,6 @@
       "delete_immutable_set"
     ],
     "Find/Search Functions": [
-      "find_element_at_position",
       "find_element_by_value",
       "find_minimum_element",
       "find_maximum_element",

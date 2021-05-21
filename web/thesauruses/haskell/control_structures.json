@@ -82,9 +82,6 @@
     "fold_iteration": {
       "comment": "haskell also supplies `foldl` and `foldl'` to provide folding with left association",
       "code": "foldr function start foldable"
-    },
-    "recursion_iteration": {
-      "code": "fix function"
     }
   }
 }
