@@ -27,48 +27,37 @@
   },
   "functions": {
     "void_function_no_parameters": {
-      "name": "Function that does not return a value and takes no parameters",
-      "code": ""
+      "not-implemented": true
     },
     "void_function_with_parameters": {
-      "name": "Function that does not return a value and that takes 1 or more defined parameters",
-      "code": ""
+      "not-implemented": true
     },
     "void_function_variable_parameters": {
-      "name": "Function that does not return a value and function that takes an unknown number of parameters",
-      "code": ""
+      "not-implemented": true
     },
     "return_value_function_no_parameters": {
-      "name": "Function that returns a value and takes no parameters",
-      "code": ""
+      "not-implemented": true
     },
     "return_value_function_with_parameters": {
-      "name": "Function that returns a value and takes 1 or more defined parameters",
       "code": "function_name parameter parameter2 = expression"
     },
     "return_value_function_variable_parameters": {
-      "name": "Function that returns a value and takes an unknown number of parameters",
-      "code": ""
+      "not-implemented": true
     },
     "anonymous_function_no_parameters": {
-      "name": "Anonymous function that takes no parameters",
-      "code": ""
+      "not-implemented": true
     },
     "anonymous_function_with_parameters": {
-      "name": "Anonymous function that takes 1 or more defined parameters",
       "code": "\\parameter parameter2 -> expression"
     },
     "anonymous_function_variable_parameters": {
-      "name": "Anonymous function that takes an unknown number of parameters",
-      "code": ""
+      "not-implemented": true
     },
     "call_subroutine": {
-      "name": "Call subroutine",
-      "code": ""
+      "not-implemented": true
     },
     "return_from_subroutine": {
-      "name": "Return from subroutine",
-      "code": ""
+      "not-implemented": true
     }
   }
 }
