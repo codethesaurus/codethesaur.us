@@ -4,7 +4,7 @@
     "language_version": "3.7",
     "language_name": "Python"
   },
-    "categories": {
+  "categories": {
     "Numerical": [
       "boolean",
       "signed_integer_16_bit",
@@ -27,11 +27,11 @@
     ]
   },
   "data_types": {
-    "boolean" : {
+    "boolean": {
       "name": "Boolean",
       "code": "bool"
     },
-    "signed_integer_16_bit" : {
+    "signed_integer_16_bit": {
       "name": "16-bit integer",
       "not-implemented": true
     },

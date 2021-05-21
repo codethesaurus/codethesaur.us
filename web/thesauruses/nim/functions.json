@@ -27,47 +27,36 @@
   },
   "functions": {
     "void_function_no_parameters": {
-
       "code": "func name() =\n  discard"
     },
     "void_function_with_parameters": {
-
       "code": "func name(parameter0: int, parameter1: bool) =\n  discard"
     },
     "void_function_variable_parameters": {
-
       "code": "func name(parameters: varargs[auto]) =\n  discard"
     },
     "return_value_function_no_parameters": {
-
       "code": "func name(): string =\n  result = \"value\""
     },
     "return_value_function_with_parameters": {
-
       "code": "func name(parameter0: int, parameter1: bool): string =\n  result = \"value\""
     },
     "return_value_function_variable_parameters": {
-
       "code": "func name(parameters: varargs[auto]): string =\n  result = \"value\""
     },
     "anonymous_function_no_parameters": {
-
       "code": "func (): string =\n  result = \"value\""
     },
     "anonymous_function_with_parameters": {
-
       "code": "func name(parameter0: int, parameter1: int): string =\n  result = \"value\""
     },
     "anonymous_function_variable_parameters": {
-
       "code": "func (parameters: varargs[auto]): string =\n  result = \"value\""
     },
     "call_subroutine": {
-
       "code": "name(parameter0, parameter1, parameterN)"
     },
     "return_from_subroutine": {
-
       "code": "result = \"value\""
     }
   }

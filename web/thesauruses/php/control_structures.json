@@ -36,7 +36,7 @@
     "if_elseif_else_conditional": {
       "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n} else {\n    // else statement\n}"
     },
-    "ternary_conditional":{
+    "ternary_conditional": {
       "code": "$value ? $value : $other_value;\n$value ?: $other_value;"
     },
     "switch_statement": {

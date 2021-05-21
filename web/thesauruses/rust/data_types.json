@@ -15,7 +15,7 @@
       "signed_float_16_bit",
       "signed_float_32_bit",
       "signed_float_64_bit",
-      "signed_float_as_object",
+      "signed_float_as_object"
     ],
     "Characters and Strings": [
       "character",
@@ -30,11 +30,9 @@
   },
   "data_types": {
     "boolean": {
-
       "code": "bool"
     },
     "signed_integer_8_bit": {
-
       "code": "i8"
     },
     "signed_integer_16_bit": {

@@ -4,7 +4,7 @@
     "language_version": "11",
     "language_name": "Java"
   },
-    "categories": {
+  "categories": {
     "Numerical": [
       "boolean",
       "signed_integer_16_bit",

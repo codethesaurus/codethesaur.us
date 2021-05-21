@@ -20,35 +20,27 @@
   },
   "control_structures": {
     "if_conditional": {
-
       "code": "if condition then\n    statements;\nend if;"
     },
     "if_else_conditional": {
-
       "code": "if condition then\n    statements;\nelse\n    statements;\nend if;"
     },
     "if_elseif_conditional": {
-
       "code": "if condition then\n    statements;\nelsif condition then\n    statements;\nend if;"
     },
     "if_elseif_else_conditional": {
-
       "code": "if condition then\n    statements;\nelsif condition then\n    statements;\nelse\n    statements;\nend if;"
     },
     "ternary_conditional": {
-
       "code": "Variable := (if condition\n    then expression\n    else expression);"
     },
     "while_loop": {
-
       "code": "while condition loop\n    statements;\nend loop;"
     },
     "do_while_loop": {
-
       "code": "loop\n    statements;\n    exit when not condition;\nend loop;"
     },
     "for_loop": {
-
       "code": "for I in First_Index .. Last_Index loop\n    statements;\nend loop;"
     }
   }

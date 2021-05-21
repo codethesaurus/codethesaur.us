@@ -45,7 +45,7 @@
       "code": "conditional ? true : false"
     },
     "while_loop": {
-        "code": "while conditional\n  expressions\nend"
+      "code": "while conditional\n  expressions\nend"
     },
     "do_while_loop": {
       "code": "loop do\n  expressions\n  break unless conditional\nend"

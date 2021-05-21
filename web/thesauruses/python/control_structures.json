@@ -36,22 +36,18 @@
       "code": "if condition:\n    statements\nelif condition:\n    statements\nelse:\n    statements"
     },
     "ternary_conditional": {
-
       "code": "expression_if_true if condition else expression_if_false"
     },
     "while_loop": {
-
       "code": "while condition:\n    statements"
     },
     "foreach_loop": {
       "code": "for iterator in iterable:\n    statements"
     },
     "map_iteration": {
-
       "code": "map(function, iterable)"
     },
     "filter_iteration": {
-
       "code": "filter(function, iterable)"
     }
   }

@@ -60,10 +60,10 @@
       "code": "->(*params) { expression }\n# or...\nlambda do |*params|\n  expressions\nend\n# or...\nProc.new do |*params|\n  expressions\nend"
     },
     "call_subroutine": {
-      "code":""
+      "code": ""
     },
     "return_from_subroutine": {
-      "code":""
+      "code": ""
     }
   }
 }
