@@ -7,18 +7,18 @@
   "categories": {
     "Numerical": [
       "boolean",
-      "integer_8_bit",
-      "integer_16_bit",
-      "integer_32_bit",
-      "integer_64_bit",
-      "integer_as_object",
-      "float_16_bit",
-      "float_32_bit",
-      "float_64_bit",
-      "float_as_object",
-      "char"
+      "signed_integer_8_bit",
+      "signed_integer_16_bit",
+      "signed_integer_32_bit",
+      "signed_integer_64_bit",
+      "signed_integer_as_object",
+      "signed_float_16_bit",
+      "signed_float_32_bit",
+      "signed_float_64_bit",
+      "signed_float_as_object"
     ],
     "Strings": [
+      "character",
       "string_as_object",
       "string_as_array"
     ],
@@ -32,35 +32,35 @@
     "boolean": {
       "code": "boolean"
     },
-    "integer_8_bit": {
+    "signed_integer_8_bit": {
       "not-implemented": true
     },
-    "integer_16_bit": {
+    "signed_integer_16_bit": {
       "not-implemented": true
     },
-    "integer_32_bit": {
+    "signed_integer_32_bit": {
       "not-implemented": true
     },
-    "integer_64_bit": {
+    "signed_integer_64_bit": {
       "not-implemented": true
     },
-    "integer_as_object": {
+    "signed_integer_as_object": {
       "code": "BigInt",
       "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
     },
-    "float_16_bit": {
+    "signed_float_16_bit": {
       "not-implemented": true
     },
-    "float_32_bit": {
+    "signed_float_32_bit": {
       "not-implemented": true
     },
-    "float_64_bit": {
+    "signed_float_64_bit": {
       "code": "number"
     },
-    "float_as_object": {
+    "signed_float_as_object": {
       "code": "Number"
     },
-    "char": {
+    "character": {
       "not-implemented": true,
       "comment": "It's possible to use single-character strings, such as the output of String.prototype.charAt()"
     },

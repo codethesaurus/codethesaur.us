@@ -7,14 +7,14 @@
     "categories": {
     "Numerical": [
       "boolean",
-      "integer_16_bit",
-      "integer_32_bit",
-      "integer_64_bit",
-      "integer_as_object",
-      "float_16_bit",
-      "float_32_bit",
-      "float_64_bit",
-      "float_as_object"
+      "signed_integer_16_bit",
+      "signed_integer_32_bit",
+      "signed_integer_64_bit",
+      "signed_integer_as_object",
+      "signed_float_16_bit",
+      "signed_float_32_bit",
+      "signed_float_64_bit",
+      "signed_float_as_object"
     ],
     "Strings": [
       "string_as_object",
@@ -31,35 +31,35 @@
       "name": "Boolean",
       "code": "Bool"
     },
-    "integer_16_bit" : {
+    "signed_integer_16_bit" : {
       "name": "16-bit integer",
       "code": "import Data.Int\nInt16"
     },
-    "integer_32_bit": {
+    "signed_integer_32_bit": {
       "name": "32-bit integer",
       "code": "Data.Int.Int32"
     },
-    "integer_64_bit": {
+    "signed_integer_64_bit": {
 
       "code": "Data.Int.Int64"
     },
-    "integer_as_object": {
+    "signed_integer_as_object": {
 
       "code": "Integer"
     },
-    "float_16_bit": {
+    "signed_float_16_bit": {
       "name": "16-bit floating point",
       "code": null
     },
-    "float_32_bit": {
+    "signed_float_32_bit": {
       "name": "32-bit floating point",
       "code": "Float"
     },
-    "float_64_bit": {
+    "signed_float_64_bit": {
       "name": "64-bit floating point",
       "code": "Double"
     },
-    "float_as_object": {
+    "signed_float_as_object": {
       "name": "Object-based floating point",
       "code": null
     },

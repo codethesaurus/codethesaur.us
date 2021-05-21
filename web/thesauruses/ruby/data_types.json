@@ -7,18 +7,18 @@
   "categories": {
     "Numerical": [
       "boolean",
-      "integer_8_bit",
-      "integer_16_bit",
-      "integer_32_bit",
-      "integer_64_bit",
-      "integer_as_object",
-      "float_16_bit",
-      "float_32_bit",
-      "float_64_bit",
-      "float_as_object",
-      "char"
+      "signed_integer_8_bit",
+      "signed_integer_16_bit",
+      "signed_integer_32_bit",
+      "signed_integer_64_bit",
+      "signed_integer_as_object",
+      "signed_float_16_bit",
+      "signed_float_32_bit",
+      "signed_float_64_bit",
+      "signed_float_as_object"
     ],
     "Strings": [
+      "character",
       "string_as_object",
       "string_as_array"
     ],
@@ -33,34 +33,34 @@
       "code": "",
       "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalseClass`, which both inherits from `Object`."
     },
-    "integer_8_bit": {
+    "signed_integer_8_bit": {
       "code": ""
     },
-    "integer_16_bit": {
+    "signed_integer_16_bit": {
       "code": ""
     },
-    "integer_32_bit": {
+    "signed_integer_32_bit": {
       "code": ""
     },
-    "integer_64_bit": {
+    "signed_integer_64_bit": {
       "code": ""
     },
-    "integer_as_object": {
+    "signed_integer_as_object": {
       "code": "Integer"
     },
-    "float_16_bit": {
+    "signed_float_16_bit": {
       "code": ""
     },
-    "float_32_bit": {
+    "signed_float_32_bit": {
       "code": ""
     },
-    "float_64_bit": {
+    "signed_float_64_bit": {
       "code": ""
     },
-    "float_as_object": {
+    "signed_float_as_object": {
       "code": "Float"
     },
-    "char": {
+    "character": {
       "code": ""
     },
     "string_as_object": {

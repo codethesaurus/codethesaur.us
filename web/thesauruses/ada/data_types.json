@@ -7,15 +7,15 @@
   "categories": {
     "Numerical": [
       "boolean",
-      "integer_8_bit",
-      "integer_as_object",
-      "float_16_bit",
-      "float_32_bit",
-      "float_64_bit",
-      "float_as_object",
-      "char"
+      "signed_integer_8_bit",
+      "signed_integer_as_object",
+      "signed_float_16_bit",
+      "signed_float_32_bit",
+      "signed_float_64_bit",
+      "signed_float_as_object"
     ],
     "Strings": [
+      "character",
       "string_as_array"
     ],
     "Complex Numbers": [
@@ -29,21 +29,21 @@
 
       "code": "boolean"
     },
-    "integer_8_bit": {
+    "signed_integer_8_bit": {
       "comment": "In Ada you can define your own integer types by declaring it like this with a range, the compiler then chooses a representation that can hold all desired values.",
       "code": "type My_Int is range -128 .. 127;"
     },
-    "integer_as_object": {
+    "signed_integer_as_object": {
       "code": "Integer"
     },
-    "float_64_bit": {
+    "signed_float_64_bit": {
       "comment": "Like with integers Ada let's you create your own floating point types as well by specifying the desired amount of decimal digits",
       "code": "type My_Float is digits 15;"
     },
-    "float_as_object": {
+    "signed_float_as_object": {
       "code": "Float"
     },
-    "char": {
+    "character": {
       "code": "Character"
     },
     "string_as_array": {
