@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "language": "scala",
+    "language_version": "2.13.x",
+    "language_name": "Scala"
+  },
+  "categories": {
+    "Void Functions": [
+      "void_function_no_parameters",
+      "void_function_with_parameters",
+      "void_function_variable_parameters"
+    ],
+    "Return Value Functions": [
+      "return_value_function_no_parameters",
+      "return_value_function_with_parameters",
+      "return_value_function_variable_parameters"
+    ],
+    "Lambda/Anonymous Functions": [
+      "anonymous_function_no_parameters",
+      "anonymous_function_with_parameters",
+      "anonymous_function_variable_parameters"
+    ],
+    "Subroutines": [
+      "call_subroutine",
+      "return_from_subroutine"
+    ]
+  },
+  "functions": {
+    "void_function_no_parameters": {
+      "code": "// For simple expressions, simply give the expression:\ndef methodName(): Unit = expression\n\n// For more complex expressions, or to make local definitions,\n// use a block instead:\ndef methodName(): Unit = {\n  expressions and definitions\n}",
+      "comment": "Blocks (which may contain multiple expressions and definitions and evaluate to the value of the last expression) are a kind of expression."
+    },
+    "void_function_with_parameters": {
+      "code": "// You may have a single parameter list with multiple parameters:\ndef methodName(param1: Type1, param2: Type2, ...): Unit =\n  expression\n\n// You may also have zero or more parameter lists each with\n// zero or more parameters:\ndef methodName(param1a: Type1a, ...)\n              (param1b: Type1b, ...)...: Unit = expression"
+    },
+    "void_function_variable_parameters": {
+      "code": "// In each parameter list, a single extra variable parameter may\n// follow defined parameters:\ndef methodName(param1: Type1,..., extraParams: ExtraType*): Unit =\n  expression",
+      "comment": "`extraParams` will have type `Seq[ExtraType]`. Note that multiple parameter lists may each have their own extra parameters."
+    },
+    "return_value_function_no_parameters": {
+      "code": "// For simple expressions, simply give the expression:\ndef methodName(): ResultType = expression\n\n// For more complex expressions, or to make local definitions,\n// use a block instead:\ndef methodName(): ResultType = {\n  expressions and definitions\n}\n\n// You may also have zero parameter lists:\ndef methodName: ResultType = expression",
+      "comment": "A method with zero parameter lists is referenced like accessing a field (`object.methodName`), but executes code every time it is evaluated. Such methods are typically used for methods that are essentially computed fields with no side-effects."
+    },
+    "return_value_function_with_parameters": {
+      "code": "// You may have a single parameter list with multiple parameters:\ndef methodName(param1: Type1, param2: Type2, ...): ResultType =\n  expression\n\n// You may also have zero or more parameter lists each with\n// zero or more parameters:\ndef methodName(param1a: Type1a, ...)\n              (param1b: Type1b, ...)...: ResultType = expression"
+    },
+    "return_value_function_variable_parameters": {
+      "code": "// In each parameter list, a single extra variable parameter may\n// follow defined parameters:\ndef methodName\n  (param1: Type1,..., extraParams: ExtraType*): ResultType =\n    expression",
+      "comment": "`extraParams` will have type `Seq[ExtraType]`. Note that multiple parameter lists may each have their own extra parameters."
+    },
+    "anonymous_function_no_parameters": {
+      "code": "() => expression"
+    },
+    "anonymous_function_with_parameters": {
+      "code": "// You may specify the types of the parameters:\n(param1: Type1, param2: Type2, ...) => expression\n\n// You may leave parameter types out and let the compiler\n// infer them:\n(param1, param2, ...) => expression\n\n// Multiple parameter lists may be given with extra arrows:\n(param1a: Type1a) => (param1b: Type1b) => expression\n\n// A block may begin with parameter lists:\n{ (param1: Type1, param2: Type2, ...) =>\n  expressions and definitions\n}",
+      "comment": "If you leave out the parameter types, Scala will do type inference to determine those types. This is not always possible, and you may sometimes receive a compilation error to inform you that you need to include type annotations."
+    },
+    "anonymous_function_variable_parameters": {
+      "not-implemented": true,
+      "comment": "Function values in Scala may not take variable numbers of arguments. Methods with variables arguments when used as a function value take a single `Seq[ExtraType]` argument instead."
+    },
+    "call_subroutine": {
+      "code": "// You may call a method on a value:\nexpression.methodName(arg1, arg2, ...)\n\n// You may apply a value, which is the same as calling the\n// \"apply\" method:\nexpression(arg1, arg2, ...)\n\n// You may use a method name as an operator:\nexpression methodName arg\n\n// You may call methods with multiple parameter lists with\n// multiple argument lists (or partially apply them):\nexpression(arg1a, arg2a, ...)(arg1b, arg2b, ...)...",
+      "comment": "Scala methods and functions may accept multiple parameter lists, which are called by giving multiple argument lists. Scala operators like `+` are simply methods with symbolic names."
+    },
+    "return_from_subroutine": {
+      "code": "return expression",
+      "comment": "The value of a function is the value of the body expression. A block's value is the value of the last expression in the block. Using `return` will return early, but note that this will not always do what you expect in the presence of `for` comprehensions, anonymous functions, and the like."
+    }
+  }
+}
