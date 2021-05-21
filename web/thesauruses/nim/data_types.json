@@ -4,22 +4,27 @@
     "language_version": "1.4",
     "language_name": "Nim"
   },
-    "categories": {
+  "categories": {
     "Numerical": [
       "boolean",
-      "unsigned_integer_8_bit",
-      "unsigned_integer_16_bit",
-      "unsigned_integer_32_bit",
-      "unsigned_integer_64_bit",
-      "unsigned_integer_as_object"
       "signed_integer_8_bit",
+      "unsigned_integer_8_bit",
       "signed_integer_16_bit",
+      "unsigned_integer_16_bit",
       "signed_integer_32_bit",
+      "unsigned_integer_32_bit",
       "signed_integer_64_bit",
+      "unsigned_integer_64_bit",
       "signed_integer_as_object",
+      "unsigned_integer_as_object",
+      "signed_float_16_bit",
+      "unsigned_float_16_bit",
       "signed_float_32_bit",
+      "unsigned_float_32_bit",
       "signed_float_64_bit",
-      "signed_float_as_object"
+      "unsigned_float_64_bit",
+      "signed_float_as_object",
+      "unsigned_float_as_object"
     ],
     "Characters and Strings": [
       "character",
@@ -33,15 +38,15 @@
     ]
   },
   "data_types": {
-    "boolean" : {
+    "boolean": {
       "name": "Boolean",
       "code": "bool"
     },
-    "signed_integer_8_bit" : {
+    "signed_integer_8_bit": {
       "name": "8-bit integer",
       "code": "int8"
     },
-    "signed_integer_16_bit" : {
+    "signed_integer_16_bit": {
       "name": "16-bit integer",
       "code": "int16"
     },
@@ -73,11 +78,11 @@
       "name": "Character",
       "code": "char"
     },
-    "unsigned_integer_8_bit" : {
+    "unsigned_integer_8_bit": {
       "name": "8-bit unsigned integer",
       "code": "uint8"
     },
-    "unsigned_integer_16_bit" : {
+    "unsigned_integer_16_bit": {
       "name": "16-bit unsigned integer",
       "code": "uint16"
     },
