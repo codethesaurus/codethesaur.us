@@ -16,12 +16,16 @@
     "Loops": [
       "while_loop",
       "do_while_loop",
+      "until_loop",
+      "do_until_loop",
       "for_loop",
       "foreach_loop"
     ],
     "Iterations": [
+      "each_iteration",
       "map_iteration",
-      "filter_iteration"
+      "filter_iteration",
+      "fold_iteration"
     ]
   },
   "control_structures": {
@@ -38,7 +42,8 @@
       "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n    statements;\n}"
     },
     "switch_statement": {
-      "code": "switch (expression) {\n  case x:\n    statements;\n    break;\n  case y:\n    statements;\n    break;\n  default:\n    statements;\n}"
+      "code": "switch (expression) {\n  case x:\n    statements;\n    break;\n  case y:\n    statements;\n    break;\n  default:\n    statements;\n}",
+      "comment": "Expression is compared with cases using the strict === comparator"
     },
     "ternary_conditional": {
       "code": "condition ? exprIfTrue : exprIfFalse"
@@ -49,17 +54,30 @@
     "do_while_loop": {
       "code": "do {\n    statements;\n} while (condition);"
     },
+    "until_loop": {
+      "not-implemented": true
+    },
+    "do_until_loop": {
+      "not-implemented": true
+    },
     "for_loop": {
       "code": "for (initialization_statement; condition; update_statement){\n    statements;\n}"
     },
     "foreach_loop": {
-      "code": "array.forEach(function(currentValue, index, arr), thisValue)"
+      "code": "// Example 1\nfor(const element of array) { ... }\n// Example 2\narray.forEach(function(currentValue, index, arr), thisValue)\n// Example 3\nfor(const propertyName in object) { ... }",
+      "comment": "The for...of loop is intended for arrays and provides the entire element. The for...in loop works on objects and arrays and returns the key, requiring the value to be dereferenced such as object[propertyName]. The array.forEach(...) loop is a functional iterator provided only on arrays."
+    },
+    "each_iteration": {
+      "not-implemented": true
     },
     "map_iteration": {
       "code": "array.map(function(currentValue, index, arr), thisValue)"
     },
     "filter_iteration": {
       "code": "array.filter(function(currentValue, index, arr), thisValue)"
-    }
+    },
+    "fold_iteration": {
+      "not-implemented": true
+    },
   }
 }

@@ -17,10 +17,6 @@ import django_on_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY", "default-unsafe-key")
 
@@ -35,12 +31,7 @@ else:
 # redirect all http requests to https in non debugging envs
 SECURE_SSL_REDIRECT = not DEBUG
 
-ALLOWED_HOSTS = [
-    "codethesaurus-prod.herokuapp.com",
-    "codethesaur.us",
-    "127.0.0.1"
-]
-
+ALLOWED_HOSTS = [ "*" ]
 
 # Application definition
 
@@ -84,14 +75,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'codethesaurus.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
     }
 }
 
@@ -113,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -127,26 +116,21 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+# https://dev.to/fazledyn/deploying-django-3-1-on-heroku-417
+# https://github.com/pkrefta/django-on-heroku/blob/3b2367fec9417230dbfba0235353403865386a41/django_on_heroku/core.py#L106
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+os.makedirs(STATIC_ROOT, exist_ok=True)
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-)
+]
 
 # Configure Django App for Heroku.
-django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True)
+django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True, logging=True)

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "ruby",
-    "language_version": "3.0",
-    "language_name": "Ruby"
+    "language": "javascript",
+    "language_version": "ES2020",
+    "language_name": "JavaScript"
   },
   "categories": {
     "Numerical": [
@@ -30,53 +30,58 @@
   },
   "data_types": {
     "boolean": {
-      "code": "",
-      "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalseClass`, which both inherits from `Object`."
+      "code": "Boolean",
+      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
     },
     "signed_integer_8_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_integer_16_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_integer_32_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_integer_64_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_integer_as_object": {
-      "code": "Integer"
+      "code": "BigInt",
+      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
     },
     "signed_float_16_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_float_32_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_float_64_bit": {
-      "code": ""
+      "code": "Number",
+      "comment": "The Number wrapper object is represented by a double-precision 64-bit float under the hood"
     },
     "signed_float_as_object": {
-      "code": "Float"
+      "code": "Number",
+      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
     },
     "character": {
-      "code": ""
+      "not-implemented": true,
+      "comment": "It's possible to use single-character strings, such as the output of String.prototype.charAt()"
     },
     "string_as_object": {
       "code": "String"
     },
     "string_as_array": {
-      "code": ""
+      "code": "String",
+      "comment": "String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods"
     },
     "complex_as_object": {
-      "code": "Complex"
+      "not-implemented": true
     },
     "real_number_part": {
-      "code": ""
+      "not-implemented": true
     },
     "imaginary_number_part": {
-      "code": ""
+      "not-implemented": true
     }
   }
 }
