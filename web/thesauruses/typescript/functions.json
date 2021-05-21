@@ -27,34 +27,36 @@
   },
   "functions": {
     "void_function_no_parameters": {
-      "code": "const voidfn: () => void = () => {\n\t/* do stuff */\n}\n// Within a class this can be\nclass MyClass {\n\tvoidfn(): void {\n\t\t/* do stuff*/\n\t}\n}"
+      "code": "const fn: () => void = () => {\n    statements;\n}\n// Within a class this can be\nclass MyClass {\n    fn(): void {\n        statements;\n    }\n}"
     },
     "void_function_with_parameters": {
-      "code": "const voidfn: (s: string, n: number) => void =\n(s: string, n: number) => {\n\t/* do stuff */\n}\n// Within a class this can be\nclass MyClass {\n\tvoidfn(s: string, n: number): void {\n\t\t/* do stuff*/\n\t}\n}"
+      "code": "const fn: (s: string, n: number) => void =\n(s: string, n: number) => {\n    statements;\n}\n// Within a class this can be\nclass MyClass {\n    fn(s: string, n: number): void {\n        /* do stuff*/\n    }\n}"
     },
     "void_function_variable_parameters": {
-      "code": "voidfn(s: string, n: number, ...others: any[]): void {\n\t/* do stuff */\n}",
+      "code": "fn(s: string, n: number, ...others: any[]): void {\n    statements;\n}",
       "comment": "This is the syntax for defining a class method which is used here for better readability. The `others` parameter is provided as an array to the function code."
     },
     "return_value_function_no_parameters": {
-      "code": "fn(): number {\n\treturn 42;\n}"
+      "code": "fn(): number {\n    return 42;\n}"
     },
     "return_value_function_with_parameters": {
-      "code": "fn(s: string, n: number): {name: string, age: number} {\n\treturn { name: s, age: n }\n}"
+      "code": "fn(s: string, n: number): {name: string, age: number} {\n    return { name: s, age: n }\n}",
+      "comment": "In TypeScript it's important to note the similarity between the `prop: type` notation in a type definition and the `prop: value` notation in an object literal, such as the one being returned in this example."
     },
     "return_value_function_variable_parameters": {
-      "code": "sum(...nums: number[]): number {\n\treturn nums.reduce((a, b) => a + b, 0);\n}",
-      "comment": "This method returns the sum of all values provided. Can be called like `sum(1, 13, 43, 15)` which would return 72."
+      "code": "sum(...nums: number[]): number {\n    return nums.reduce((a, b) => a + b, 0);\n}",
+      "comment": "The method in this example returns the sum of all values provided. Can be called like `sum(1, 13, 43, 15)` which would return 72."
     },
     "anonymous_function_no_parameters": {
-      "code": "() => { /* do stuff */ }"
+      "code": "() => { statements; }"
     },
     "anonymous_function_with_parameters": {
       "code": "(name: string, age: number) => ({name, age})",
       "comment": "This method returns an object literal containing `name` and `age` properties."
     },
     "anonymous_function_variable_parameters": {
-      "code": "(...urls: string[]): void => { urls.forEach(url => { fetch(url) }) }"
+      "code": "(...params: string[]): void => {\n    statements;\n}",
+      "comment": "The parameter can be any name and any type of array."
     },
     "call_subroutine": {
       "not-implemented": true
