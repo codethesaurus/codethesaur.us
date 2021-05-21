@@ -17,7 +17,7 @@
       "signed_float_64_bit",
       "signed_float_as_object"
     ],
-    "Strings": [
+    "Characters and Strings": [
       "character",
       "string_as_object",
       "string_as_array"
