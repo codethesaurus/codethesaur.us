@@ -10,6 +10,7 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
+      "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
@@ -30,68 +31,57 @@
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
-      "code": ""
+      "not-implemented": true,
+      "comment": "Everything in Haskell is an expression and has to return something thus there needs to be a `else` clause"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
       "code": "if condition\n    then expression\n    else expression"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
-      "code": ""
+      "not-implemented": true,
+      "comment": "See \"If conditional\""
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
       "code": "if condition\n    then expression\n    else if condition\n        then expression\n        else expression"
     },
+    "switch_statement": {
+      "code": "case expression of\n    \"value1\" -> expression\n    \"value2\" | guard -> expression\n    \"value2\" | another_guard -> expression\n    _ -> expression -- default case"
+    },
     "ternary_conditional": {
-      "name": "Ternary conditional",
-      "code": ""
+      "code": "if condition\n    then expression\n    else expression"
     },
     "while_loop": {
-      "name": "While loop",
+      "comment": "while `whileM` is not exactly a loop it allows for very similar code, `monadBool` is a monad that returns a Bool and gets run until it returns `False`",
       "code": "whileM monadBool"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
-      "code": ""
+      "not-implemented": true
     },
     "until_loop": {
-      "name": "Until loop",
+      "comment": "like `whileM` this only behaves similarly to a until loop",
       "code": "untilJustM monadMaybeA"
     },
     "do_until_loop": {
-      "name": "Do/Until loop",
-      "code": ""
+      "not-implemented": true
     },
     "for_loop": {
-      "name": "For loop",
-      "code": ""
+      "not-implemented": true
     },
     "foreach_loop": {
-      "name": "Foreach loop",
       "code": "forM traversable function"
     },
     "each_iteration": {
-      "name": "Each iteration",
-      "code": ""
+      "not-implemented": true
     },
     "map_iteration": {
-      "name": "Map iteration",
       "code": "map function list"
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "code": "filter function list"
     },
     "fold_iteration": {
-      "name": "Fold iteration",
+      "comment": "haskell also supplies `foldl` and `foldl'` to provide folding with left association",
       "code": "foldr function start foldable"
-    },
-    "recursion_iteration": {
-      "name": "Recursion iteration",
-      "code": ""
     }
   }
 }

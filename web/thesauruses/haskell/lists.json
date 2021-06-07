@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "language": "haskell",
+    "language_version": "2010",
+    "language_name": "Haskell"
+  },
+  "categories": {
+    "Ordered, Mutable Lists": [
+      "name_of_ordered_mutable_list",
+      "create_a_ordered_mutable_list",
+      "ordered_mutable_list_start_number",
+      "ordered_mutable_list_can_be_appended",
+      "ordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_ordered_mutable_list",
+      "insert_into_beginning_of_ordered_mutable_list",
+      "insert_into_end_of_ordered_mutable_list",
+      "insert_into_middle_of_ordered_mutable_list",
+      "erase_element_at_beginning_of_ordered_mutable_list",
+      "erase_element_at_end_of_ordered_mutable_list",
+      "erase_element_in_middle_of_ordered_mutable_list",
+      "swap_elements_in_ordered_mutable_list",
+      "delete_ordered_mutable_list"
+    ],
+    "Unordered, Mutable Lists": [
+      "name_of_unordered_mutable_list",
+      "create_a_unordered_mutable_list",
+      "unordered_mutable_list_start_number",
+      "unordered_mutable_list_can_be_appended",
+      "unordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_unordered_mutable_list",
+      "insert_into_beginning_of_unordered_mutable_list",
+      "insert_into_end_of_unordered_mutable_list",
+      "insert_into_middle_of_unordered_mutable_list",
+      "erase_element_at_beginning_of_unordered_mutable_list",
+      "erase_element_at_end_of_unordered_mutable_list",
+      "erase_element_in_middle_of_unordered_mutable_list",
+      "swap_elements_in_unordered_mutable_list",
+      "delete_unordered_mutable_list"
+    ],
+    "Ordered, Immutable Lists": [
+      "name_of_ordered_immutable_list",
+      "create_a_ordered_immutable_list",
+      "ordered_immutable_list_start_number",
+      "access_element_in_ordered_immutable_list",
+      "delete_ordered_immutable_list"
+    ],
+    "Unordered, Immutable Lists": [
+      "name_of_unordered_immutable_list",
+      "create_a_unordered_immutable_list",
+      "unordered_immutable_list_start_number",
+      "access_element_in_unordered_immutable_list",
+      "delete_unordered_immutable_list"
+    ],
+    "Mutable Hashed Lists": [
+      "name_of_mutable_hashed_list",
+      "create_a_mutable_hashed_list",
+      "insert_element_to_mutable_hashed_list",
+      "erase_element_from_mutable_hashed_list",
+      "delete_mutable_hashed_list"
+    ],
+    "Immutable Hashed Lists": [
+      "name_of_immutable_hashed_list",
+      "create_a_immutable_hashed_list",
+      "insert_element_to_immutable_hashed_list",
+      "erase_element_from_immutable_hashed_list",
+      "delete_immutable_hashed_list"
+    ],
+    "Mutable Key/Value Sets": [
+      "create_a_mutable_set",
+      "get_key_from_mutable_set",
+      "get_value_from_mutable_set",
+      "get_all_keys_from_mutable_set",
+      "get_all_values_from_mutable_set",
+      "swap_key_and_value_in_mutable_set",
+      "delete_mutable_set"
+    ],
+    "Immutable Key/Value Sets": [
+      "create_a_immutable_set",
+      "get_key_from_immutable_set",
+      "get_value_from_immutable_set",
+      "get_all_keys_from_immutable_set",
+      "get_all_values_from_immutable_set",
+      "swap_key_and_value_in_immutable_set",
+      "delete_immutable_set"
+    ],
+    "Find/Search Functions": [
+      "find_element_by_value",
+      "find_minimum_element",
+      "find_maximum_element",
+      "convert_list_to_string"
+    ],
+    "Splitting/Joining Lists": [
+      "concatenate_two_lists",
+      "split_list_at_index",
+      "split_list_at_value"
+    ],
+    "Copying Lists": [
+      "duplicate_a_list",
+      "duplicate_subset_of_list"
+    ],
+    "Sizing/Resizing Lists": [
+      "get_list_length",
+      "resize_list"
+    ],
+    "Comparing/Equality": [
+      "do_two_lists_match_exactly",
+      "do_two_lists_contain_same_items",
+      "does_list_satisfy_some_expression",
+      "does_list_not_satisfy_an_expression"
+    ],
+    "Sorting/Shuffling Lists": [
+      "sort_list",
+      "shuffle_list",
+      "reverse_list"
+    ],
+    "Functions On List Elements": [
+      "map",
+      "filter",
+      "reduce_left",
+      "reduce_right"
+    ]
+  },
+  "lists": {
+    "name_of_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "create_a_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "ordered_mutable_list_start_number": {
+      "not-implemented": true
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "not-implemented": true
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "not-implemented": true
+    },
+    "access_element_in_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "delete_ordered_mutable_list": {
+      "not-implemented": true
+    },
+    "name_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "create_a_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "unordered_mutable_list_start_number": {
+      "not-implemented": true
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "not-implemented": true
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "not-implemented": true
+    },
+    "access_element_in_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "delete_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "name_of_ordered_immutable_list": {
+      "not-implemented": true
+    },
+    "create_a_ordered_immutable_list": {
+      "not-implemented": true
+    },
+    "ordered_immutable_list_start_number": {
+      "not-implemented": true
+    },
+    "access_element_in_ordered_immutable_list": {
+      "not-implemented": true
+    },
+    "delete_ordered_immutable_list": {
+      "not-implemented": true
+    },
+    "name_of_unordered_immutable_list": {
+      "comment": "`a` is the type of elements of the list",
+      "code": "[a]"
+    },
+    "create_a_unordered_immutable_list": {
+      "code": "[firstElement, secondElement]"
+    },
+    "unordered_immutable_list_start_number": {
+      "code": "0"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "code": "list !! index"
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": true
+    },
+    "name_of_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "create_a_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "delete_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "name_of_immutable_hashed_list": {
+      "code": "Set"
+    },
+    "create_a_immutable_hashed_list": {
+      "code": "Set.empty\nSet.fromList list\nSet.fromAscList ascendingList\nSet.fromDescList descendingList\nSet.fromDistinctAscList list\nSet.fromDistinctDescList list"
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "code": "insert setToInsertTo elementToInsert"
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "code": "delete setToDeleteFrom elementToDelete"
+    },
+    "delete_immutable_hashed_list": {
+      "not-implemented": true
+    },
+    "create_a_mutable_set": {
+      "not-implemented": true
+    },
+    "get_key_from_mutable_set": {
+      "not-implemented": true
+    },
+    "get_value_from_mutable_set": {
+      "not-implemented": true
+    },
+    "get_all_keys_from_mutable_set": {
+      "not-implemented": true
+    },
+    "get_all_values_from_mutable_set": {
+      "not-implemented": true
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "not-implemented": true
+    },
+    "delete_mutable_set": {
+      "not-implemented": true
+    },
+    "create_a_immutable_set": {
+      "code": "import qualified Data.Map as Map\nMap.empty\nMap.singleton key value -- Map containing a single entry\nMap.fromSet generateValueFromKey set\nMap.fromList [(key1, value1), (key2, value2)]",
+      "comment": "choose `Data.Map.Strict` or `Data.Map.Lazy` depending on your requirements"
+    },
+    "get_key_from_immutable_set": {
+      "not-implemented": true
+    },
+    "get_value_from_immutable_set": {
+      "code": "map ! key"
+    },
+    "get_all_keys_from_immutable_set": {
+      "code": "keys map"
+    },
+    "get_all_values_from_immutable_set": {
+      "code": "elems map"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "not-implemented": true
+    },
+    "delete_immutable_set": {
+      "not-implemented": true
+    },
+    "find_element_by_value": {
+      "code": "elemIndex elementToSearchFor list"
+    },
+    "find_minimum_element": {
+      "code": "minimum list",
+      "comment": "minimum works on all `Foldables` not just lists"
+    },
+    "find_maximum_element": {
+      "code": "maximum list",
+      "comment": "maximum works on all `Foldables` not just lists"
+    },
+    "convert_list_to_string": {
+      "not-implemented": true,
+      "comment": "A `String` is just a `List` of `Char`s"
+    },
+    "concatenate_two_lists": {
+      "name": "Concatenate two lists together",
+      "code": "list1 ++ list2"
+    },
+    "split_list_at_index": {
+      "name": "Split lists at an index",
+      "code": "splitAt index listToSplit"
+    },
+    "split_list_at_value": {
+      "not-implemented": true
+    },
+    "duplicate_a_list": {
+      "not-implemented": true,
+      "comment": "Since you cannot mutate a list it is always going to be the same and you can refer to the original list"
+    },
+    "duplicate_subset_of_list": {
+      "not-implemented": true
+    },
+    "get_list_length": {
+      "code": "length list"
+    },
+    "resize_list": {
+      "comment": "The list is always gonna be exactly as big as the number of elements that are in it",
+      "not-implemented": true
+    },
+    "do_two_lists_match_exactly": {
+      "code": "value = listA == listB"
+    },
+    "do_two_lists_contain_same_items": {
+      "code": "value = listA == listB"
+    },
+    "does_list_satisfy_some_expression": {
+      "code": "all testFunction foldable -- tests if all elements satisfy the `testFunction`\nany testFunction foldable -- tests if any element satisfies the `testFunction`"
+    },
+    "does_list_not_satisfy_an_expression": {
+      "comment": "You can easily achieve this with function composition of `all` or `any` and the `not` function",
+      "not-implemented": true
+    },
+    "sort_list": {
+      "code": "sort list"
+    },
+    "shuffle_list": {
+      "code": "shuffleM list",
+      "comment": "This shuffles your list in a Monad, there are other shuffles available that use a RandomGenerator or a list of random integers to shuffle"
+    },
+    "reverse_list": {
+      "code": "reverse list"
+    },
+    "map": {
+      "code": "map function list"
+    },
+    "filter": {
+      "code": "filter function list"
+    },
+    "reduce_left": {
+      "code": "foldl function start foldable\nfoldl' function start foldable -- strict version of foldl\nfoldl1 function foldable -- folds taking the first element of the foldable as start\nfoldl1' function foldable -- strict version of `foldl1`"
+    },
+    "reduce_right": {
+      "code": "foldr function start foldable\nfoldr1 function foldable -- folds taking the last element of the foldable as start"
+    }
+  }
+}

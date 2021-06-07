@@ -1,16 +1,12 @@
 <div class="card">
     <div class="card-body">
+    {% if code %}
+        <div class="syntax">{{ code | safe }}</div>
+    {% endif %}
+    {% if comment %}
         <div>
-            {% if code %}
-                <pre>{{ code }}</pre>
-            {% else %}
-                <div>Unsupported or Not Needed</div>
-            {% endif %}
-        </div>
-        <div>
-            {% if comment %}
                 {{ comment }}
-            {% endif %}
         </div>
+    {% endif %}
     </div>
 </div>

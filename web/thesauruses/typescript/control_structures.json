@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "language": "typescript",
+    "language_version": "4.2",
+    "language_name": "TypeScript"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "switch_statement",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "code": "if (condition) {\n    statements;\n}",
+      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+    },
+    "if_else_conditional": {
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}",
+      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+    },
+    "if_elseif_conditional": {
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}",
+      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+    },
+    "if_elseif_else_conditional": {
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n    statements;\n}",
+      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+    },
+    "switch_statement": {
+      "code": "switch (expression) {\n  case x:\n    statements;\n    break;\n  case y:\n    statements;\n    break;\n  default:\n    statements;\n}",
+      "comment": "Expression is compared with cases using the strict === comparator."
+    },
+    "ternary_conditional": {
+      "code": "condition ? exprIfTrue : exprIfFalse",
+      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+    },
+    "while_loop": {
+      "code": "while (condition) {\n    statements;\n}",
+      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+    },
+    "do_while_loop": {
+      "code": "do {\n    statements;\n} while (condition);",
+      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+    },
+    "until_loop": {
+      "not-implemented": true
+    },
+    "do_until_loop": {
+      "not-implemented": true
+    },
+    "for_loop": {
+      "code": "for (initialization_statement; condition; update_statement) {\n    statements;\n}",
+      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+    },
+    "foreach_loop": {
+      "code": "// Example 1\nfor(const element of array) {\n    statements;\n}\n// Example 2\nfor(const propertyName in object) {\n    statements;\n}",
+      "comment": "The for...of loop is intended for arrays and provides the entire element. The for...in loop works on objects and arrays and returns the key, requiring the value to be dereferenced such as object[propertyName]."
+    },
+    "each_iteration": {
+      "code": "array.forEach((currentValue: Type, index: number, arr: Type): void => {\n    /* operate on array element */\n}, thisValue)",
+      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function."
+    },
+    "map_iteration": {
+      "code": "array.map((currentValue: OldType, index: number, arr: OldType[]): NewType => {\n    /* return new value/type for this array index */\n}, thisValue)",
+      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function."
+    },
+    "filter_iteration": {
+      "code": "array.filter((currentValue: Type, index: number, arr: Type[]): boolean => {\n    /* return true if this value should remain in the array */\n}, thisValue)",
+      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function."
+    },
+    "fold_iteration": {
+      "code": "array.reduce((accumulator: NewType, currentValue: OldType, index: number, array: OldType[]) => {\n    return accumulator\n}, initialValue)",
+      "comment": "The function body can be anything, but the return value will be used as the accumulator for the next array value processed. The initialValue is of `NewType`."
+    }
+  }
+}

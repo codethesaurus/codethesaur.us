@@ -1,0 +1,466 @@
+{
+  "meta": {
+    "language": "nim",
+    "language_version": "1.4",
+    "language_name": "Nim"
+  },
+  "categories": {
+    "Ordered, Mutable Lists": [
+      "name_of_ordered_mutable_list",
+      "create_a_ordered_mutable_list",
+      "ordered_mutable_list_start_number",
+      "ordered_mutable_list_can_be_appended",
+      "ordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_ordered_mutable_list",
+      "insert_into_beginning_of_ordered_mutable_list",
+      "insert_into_end_of_ordered_mutable_list",
+      "insert_into_middle_of_ordered_mutable_list",
+      "erase_element_at_beginning_of_ordered_mutable_list",
+      "erase_element_at_end_of_ordered_mutable_list",
+      "erase_element_in_middle_of_ordered_mutable_list",
+      "swap_elements_in_ordered_mutable_list",
+      "delete_ordered_mutable_list"
+    ],
+    "Unordered, Mutable Lists": [
+      "name_of_unordered_mutable_list",
+      "create_a_unordered_mutable_list",
+      "unordered_mutable_list_start_number",
+      "unordered_mutable_list_can_be_appended",
+      "unordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_unordered_mutable_list",
+      "insert_into_beginning_of_unordered_mutable_list",
+      "insert_into_end_of_unordered_mutable_list",
+      "insert_into_middle_of_unordered_mutable_list",
+      "erase_element_at_beginning_of_unordered_mutable_list",
+      "erase_element_at_end_of_unordered_mutable_list",
+      "erase_element_in_middle_of_unordered_mutable_list",
+      "swap_elements_in_unordered_mutable_list",
+      "delete_unordered_mutable_list"
+    ],
+    "Ordered, Immutable Lists": [
+      "name_of_ordered_immutable_list",
+      "create_a_ordered_immutable_list",
+      "ordered_immutable_list_start_number",
+      "access_element_in_ordered_immutable_list",
+      "delete_ordered_immutable_list"
+    ],
+    "Unordered, Immutable Lists": [
+      "name_of_unordered_immutable_list",
+      "create_a_unordered_immutable_list",
+      "unordered_immutable_list_start_number",
+      "access_element_in_unordered_immutable_list",
+      "delete_unordered_immutable_list"
+    ],
+    "Mutable Hashed Lists": [
+      "name_of_mutable_hashed_list",
+      "create_a_mutable_hashed_list",
+      "insert_element_to_mutable_hashed_list",
+      "erase_element_from_mutable_hashed_list",
+      "delete_mutable_hashed_list"
+    ],
+    "Immutable Hashed Lists": [
+      "name_of_immutable_hashed_list",
+      "create_a_immutable_hashed_list",
+      "insert_element_to_immutable_hashed_list",
+      "erase_element_from_immutable_hashed_list",
+      "delete_immutable_hashed_list"
+    ],
+    "Mutable Key/Value Sets": [
+      "create_a_mutable_set",
+      "get_key_from_mutable_set",
+      "get_value_from_mutable_set",
+      "get_all_keys_from_mutable_set",
+      "get_all_values_from_mutable_set",
+      "swap_key_and_value_in_mutable_set",
+      "delete_mutable_set"
+    ],
+    "Immutable Key/Value Sets": [
+      "create_a_immutable_set",
+      "get_key_from_immutable_set",
+      "get_value_from_immutable_set",
+      "get_all_keys_from_immutable_set",
+      "get_all_values_from_immutable_set",
+      "swap_key_and_value_in_immutable_set",
+      "delete_immutable_set"
+    ],
+    "Find/Search Functions": [
+      "find_element_at_position",
+      "find_element_by_value",
+      "find_minimum_element",
+      "find_maximum_element",
+      "convert_list_to_string"
+    ],
+    "Splitting/Joining Lists": [
+      "concatenate_two_lists",
+      "split_list_at_index",
+      "split_list_at_value"
+    ],
+    "Copying Lists": [
+      "duplicate_a_list",
+      "duplicate_subset_of_list"
+    ],
+    "Sizing/Resizing Lists": [
+      "get_list_length",
+      "resize_list"
+    ],
+    "Comparing/Equality": [
+      "do_two_lists_match_exactly",
+      "do_two_lists_contain_same_items",
+      "does_list_satisfy_some_expression",
+      "does_list_not_satisfy_an_expression"
+    ],
+    "Sorting/Shuffling Lists": [
+      "sort_list",
+      "shuffle_list",
+      "reverse_list"
+    ],
+    "Functions On List Elements": [
+      "map",
+      "filter",
+      "reduce_left",
+      "reduce_right"
+    ]
+  },
+  "lists": {
+    "name_of_ordered_mutable_list": {
+      "name": "What is a ordered, mutable list called?",
+      "code": "seq"
+    },
+    "create_a_ordered_mutable_list": {
+      "name": "Create the list",
+      "code": "@[0, 1, 2]"
+    },
+    "ordered_mutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": "0"
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "name": "Can you append to it?",
+      "code": "Yes"
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "name": "Can you insert into the middle of it?",
+      "code": "Yes"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "name": "Access element by index",
+      "code": "list[index]"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "name": "Insert element at beginning",
+      "code": "list.insert element, 0"
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "name": "Insert element at end",
+      "code": "list.add element"
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "name": "Insert element in middle",
+      "code": "list.insert element, index_at_middle"
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "name": "Erase first element",
+      "code": "list.delete 0"
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "name": "Erase last element",
+      "code": "list.delete list.len"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "name": "Erase element in the middle",
+      "code": "list.delete index_at_middle"
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "name": "Swap two elements",
+      "code": "swap list[index0], list[index1]"
+    },
+    "delete_ordered_mutable_list": {
+      "name": "Delete the list",
+      "code": "Automatic compile-time deterministic memory management"
+    },
+    "name_of_unordered_mutable_list": {
+      "name": "What is a unordered, mutable list called?",
+      "code": "Table"
+    },
+    "create_a_unordered_mutable_list": {
+      "name": "unordered",
+      "code": "{\"key\": \"value\"}.toTable"
+    },
+    "unordered_mutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": "0"
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "name": "Can you append to it?",
+      "code": "Yes"
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "name": "Can you insert into the middle of it?",
+      "code": "Yes"
+    },
+    "access_element_in_unordered_mutable_list": {
+      "name": "Access element by index",
+      "code": "table[key]"
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "name": "Insert element at beginning",
+      "code": "table[key] = value"
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "name": "Insert element at end",
+      "code": "table[key] = value"
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "name": "Insert element in middle",
+      "code": "table[key] = value"
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "name": "Erase first element",
+      "code": "table.del key"
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "name": "Erase last element",
+      "code": "table.del key"
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "name": "Erase element in the middle",
+      "code": "table.del key"
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "name": "Swap two elements",
+      "code": "swap table[key0], table[key1]"
+    },
+    "delete_unordered_mutable_list": {
+      "name": "Delete the list",
+      "code": "Automatic compile-time deterministic memory management"
+    },
+    "name_of_ordered_immutable_list": {
+      "name": "What is a ordered, immutable list called?",
+      "code": "seq"
+    },
+    "create_a_ordered_immutable_list": {
+      "name": "Create the list",
+      "code": "@[0, 1, 2]"
+    },
+    "ordered_immutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": "0"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "name": "Access element by index",
+      "code": "list[index]"
+    },
+    "delete_ordered_immutable_list": {
+      "name": "Delete the list",
+      "code": "Automatic compile-time deterministic memory management"
+    },
+    "name_of_unordered_immutable_list": {
+      "name": "What is a unordered, immutable list called?",
+      "code": "Table"
+    },
+    "create_a_unordered_immutable_list": {
+      "name": "Create the list",
+      "code": "{\"key\": \"value\"}.toTable"
+    },
+    "unordered_immutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": "0"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "name": "Access element by index",
+      "code": "table[key]"
+    },
+    "delete_unordered_immutable_list": {
+      "name": "Delete the list",
+      "code": "Automatic compile-time deterministic memory management"
+    },
+    "name_of_mutable_hashed_list": {
+      "name": "What is a mutable hashed list called?",
+      "code": "Table"
+    },
+    "create_a_mutable_hashed_list": {
+      "name": "Create the list",
+      "code": "{\"key\": \"value\"}.toTable"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "name": "Insert an element",
+      "code": "table[key] = value"
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "name": "Erase an element from the list",
+      "code": "table.del key"
+    },
+    "delete_mutable_hashed_list": {
+      "name": "Delete the list",
+      "code": "Automatic compile-time deterministic memory management"
+    },
+    "name_of_immutable_hashed_list": {
+      "name": "What is an immutable hashed list called?",
+      "code": "Table"
+    },
+    "create_a_immutable_hashed_list": {
+      "name": "Create the list",
+      "code": "{\"key\": \"value\"}.toTable"
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "name": "Insert an element",
+      "code": "table[key] = value"
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "name": "Erase an element from the list",
+      "code": "table.del key"
+    },
+    "delete_immutable_hashed_list": {
+      "name": "Delete the list",
+      "code": "Automatic compile-time deterministic memory management"
+    },
+    "create_a_mutable_set": {
+      "name": "Create a mutable key/value set",
+      "code": ""
+    },
+    "get_key_from_mutable_set": {
+      "name": "Get key",
+      "code": ""
+    },
+    "get_value_from_mutable_set": {
+      "name": "Get value",
+      "code": ""
+    },
+    "get_all_keys_from_mutable_set": {
+      "name": "Get all keys",
+      "code": ""
+    },
+    "get_all_values_from_mutable_set": {
+      "name": "Get all values",
+      "code": ""
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "name": "Swap a key and value",
+      "code": ""
+    },
+    "delete_mutable_set": {
+      "name": "Delete the set",
+      "code": "Automatic compile-time deterministic memory management"
+    },
+    "create_a_immutable_set": {
+      "name": "Create an immutable key/value set",
+      "code": ""
+    },
+    "get_key_from_immutable_set": {
+      "name": "Get key",
+      "code": ""
+    },
+    "get_value_from_immutable_set": {
+      "name": "Get value",
+      "code": ""
+    },
+    "get_all_keys_from_immutable_set": {
+      "name": "Get all keys",
+      "code": ""
+    },
+    "get_all_values_from_immutable_set": {
+      "name": "Get all values",
+      "code": ""
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "name": "Swap a key and value",
+      "code": ""
+    },
+    "delete_immutable_set": {
+      "name": "Delete the set",
+      "code": "Automatic compile-time deterministic memory management"
+    },
+    "find_element_at_position": {
+      "name": "Find/search for an element at an index position",
+      "code": ""
+    },
+    "find_element_by_value": {
+      "name": "Find/search for an element by value",
+      "code": "list.find item"
+    },
+    "find_minimum_element": {
+      "name": "Find the minimum value in a list",
+      "code": "list.low"
+    },
+    "find_maximum_element": {
+      "name": "Find the maximum value in a list",
+      "code": "list.high"
+    },
+    "convert_list_to_string": {
+      "name": "Convert a list to a string",
+      "code": "$list"
+    },
+    "concatenate_two_lists": {
+      "name": "Concatenate two lists together",
+      "code": "list0 & list1"
+    },
+    "split_list_at_index": {
+      "name": "Split lists at an index",
+      "code": ""
+    },
+    "split_list_at_value": {
+      "name": "Split list at a value",
+      "code": ""
+    },
+    "duplicate_a_list": {
+      "name": "Duplicate a list",
+      "code": "new_list = list"
+    },
+    "duplicate_subset_of_list": {
+      "name": "Duplicate a portion/subset of a list",
+      "code": "list[start..end]"
+    },
+    "get_list_length": {
+      "name": "Get list length",
+      "code": "list.len"
+    },
+    "resize_list": {
+      "name": "Increase/decrease list size",
+      "code": "list.setLen lenght"
+    },
+    "do_two_lists_match_exactly": {
+      "name": "Do two lists match every element?",
+      "code": "list0 == list1"
+    },
+    "do_two_lists_contain_same_items": {
+      "name": "Do two lists contain all the same items?",
+      "code": "list0 == list1"
+    },
+    "does_list_satisfy_some_expression": {
+      "name": "Does a list satisfy some expression?",
+      "code": "list.all criteria"
+    },
+    "does_list_not_satisfy_an_expression": {
+      "name": "Does a list entirely not satisfy an expression?",
+      "code": "not(list.all criteria)"
+    },
+    "sort_list": {
+      "name": "Sort a list",
+      "code": "list.sort"
+    },
+    "shuffle_list": {
+      "name": "Shuffle list elements",
+      "code": "list.shuffle"
+    },
+    "reverse_list": {
+      "name": "Reverse order of list elements",
+      "code": "list.reverse"
+    },
+    "map": {
+      "name": "Map function across list",
+      "code": "list.map function"
+    },
+    "filter": {
+      "name": "Filter a list based on criteria",
+      "code": "list.filter criteria"
+    },
+    "reduce_left": {
+      "name": "Reduce a list left-to-right",
+      "code": "list.foldl criteria"
+    },
+    "reduce_right": {
+      "name": "Reduce a list right-to-left",
+      "code": "list.foldr criteria"
+    }
+  }
+}

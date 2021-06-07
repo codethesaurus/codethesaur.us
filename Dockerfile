@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3 AS cthesaurus-img
 ENV PYTHONBUFFERED=1
 WORKDIR /code
 copy requirements.txt /code/

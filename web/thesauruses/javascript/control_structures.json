@@ -10,6 +10,7 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
+      "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
@@ -24,74 +25,59 @@
       "each_iteration",
       "map_iteration",
       "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
+      "fold_iteration"
     ]
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
-      "code": "if(condition){code block to be executed}"
+      "code": "if (condition) {\n    statements;\n}"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
-      "code": "if(condition){code block to be executed} else {code block to be executed}"
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
-      "code": "if(condition){code block to be executed} else if(condition){code block to be executed}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}"
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
-      "code": "if(condition){code block to be executed} else if(condition){code block to be executed} else {code block to be executed}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n    statements;\n}"
+    },
+    "switch_statement": {
+      "code": "switch (expression) {\n  case x:\n    statements;\n    break;\n  case y:\n    statements;\n    break;\n  default:\n    statements;\n}",
+      "comment": "Expression is compared with cases using the strict === comparator"
     },
     "ternary_conditional": {
-      "name": "Conditional (ternary) Operator",
       "code": "condition ? exprIfTrue : exprIfFalse"
     },
     "while_loop": {
-      "name": "While loop",
-      "code": "while(condition){code block to be executed}"
+      "code": "while (condition) {\n    statements;\n}"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
-      "code": "do {code block to be executed} while(condition)"
+      "code": "do {\n    statements;\n} while (condition);"
     },
-    "until_loop":{
-      "name": "",
-      "code": ""
+    "until_loop": {
+      "not-implemented": true
     },
     "do_until_loop": {
-      "name": "",
-      "code": ""
+      "not-implemented": true
     },
     "for_loop": {
-      "name": "For loop",
-      "code": "for(statement1 (counter variable(s)); statement2 (condition to keep the loop running); statement3 (statement executed each time after the loop has been executed)){code block to be executed}"
+      "code": "for (initialization_statement; condition; update_statement){\n    statements;\n}"
     },
     "foreach_loop": {
-      "name": "Foreach loop",
-      "code": "array.forEach(function(currentValue, index, arr), thisValue)"
+      "code": "// Example 1\nfor(const element of array) { ... }\n// Example 2\narray.forEach(function(currentValue, index, arr), thisValue)\n// Example 3\nfor(const propertyName in object) { ... }",
+      "comment": "The for...of loop is intended for arrays and provides the entire element. The for...in loop works on objects and arrays and returns the key, requiring the value to be dereferenced such as object[propertyName]. The array.forEach(...) loop is a functional iterator provided only on arrays."
     },
     "each_iteration": {
-      "name": "",
-      "code": ""
+      "not-implemented": true
     },
     "map_iteration": {
-      "name": "Map iteration",
       "code": "array.map(function(currentValue, index, arr), thisValue)"
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "code": "array.filter(function(currentValue, index, arr), thisValue)"
     },
     "fold_iteration": {
-      "name": "",
-      "code": ""
-    },
-    "recursion_iteration": {
-      "name": "",
-      "code": ""
+      "not-implemented": true
     }
   }
 }

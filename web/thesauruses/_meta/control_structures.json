@@ -10,6 +10,7 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
+      "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
@@ -24,8 +25,7 @@
       "each_iteration",
       "map_iteration",
       "filter_iteration",
-      "fold_iteration",
-      "recursion_iteration"
+      "fold_iteration"
     ]
   },
   "control_structures": {
@@ -44,6 +44,9 @@
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
       "code": ""
+    },
+    "switch_statement": {
+      "name": "Switch statement"
     },
     "ternary_conditional": {
       "name": "Ternary conditional",
@@ -87,10 +90,6 @@
     },
     "fold_iteration": {
       "name": "Fold iteration",
-      "code": ""
-    },
-    "recursion_iteration": {
-      "name": "Recursion iteration",
       "code": ""
     }
   }

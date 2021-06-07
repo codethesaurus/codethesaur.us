@@ -4,19 +4,19 @@
     "language_version": "2.13.x",
     "language_name": "Scala"
   },
-    "categories": {
+  "categories": {
     "Numerical": [
       "boolean",
-      "integer_16_bit",
-      "integer_32_bit",
-      "integer_64_bit",
-      "integer_as_object",
-      "float_16_bit",
-      "float_32_bit",
-      "float_64_bit",
-      "float_as_object"
+      "signed_integer_16_bit",
+      "signed_integer_32_bit",
+      "signed_integer_64_bit",
+      "signed_integer_as_object",
+      "signed_float_16_bit",
+      "signed_float_32_bit",
+      "signed_float_64_bit",
+      "signed_float_as_object"
     ],
-    "Strings": [
+    "Characters and Strings": [
       "string_as_object",
       "string_as_array"
     ],
@@ -28,42 +28,33 @@
   },
   "data_types": {
     "boolean": {
-      "name": "Boolean",
       "code": "Boolean"
     },
-    "integer_8_bit": {
-      "name": "8-bit integer",
+    "signed_integer_8_bit": {
       "code": "Byte"
     },
-    "integer_16_bit": {
-      "name": "16-bit integer",
+    "signed_integer_16_bit": {
       "code": "Short"
     },
-    "integer_32_bit": {
-      "name": "32-bit integer",
+    "signed_integer_32_bit": {
       "code": "Int"
     },
-    "integer_64_bit": {
-      "name": "64-bit integer",
+    "signed_integer_64_bit": {
       "code": "Long"
     },
-    "integer_as_object": {
-      "name": "",
-      "code": null
+    "signed_integer_as_object": {
+      "not-implemented": true
     },
-    "float_16_bit": {
-      "name": "16-bit floating point",
-      "code": null
+    "signed_float_16_bit": {
+      "not-implemented": true
     },
-    "float_32_bit": {
-      "name": "32-bit floating point",
+    "signed_float_32_bit": {
       "code": "Float"
     },
-    "float_64_bit": {
-      "name": "64-bit floating point",
+    "signed_float_64_bit": {
       "code": "Double"
     },
-    "float_as_object": {
+    "signed_float_as_object": {
       "name": "Object-based floating point",
       "code": "Float"
     },
@@ -73,19 +64,19 @@
     },
     "string_as_array": {
       "name": "String as an array",
-      "code": null
+      "not-implemented": true
     },
     "complex_as_object": {
       "name": "Complex Number as an object",
-      "code": null
+      "not-implemented": true
     },
     "real_number_part": {
       "name": "Complex number real part",
-      "code": null
+      "not-implemented": true
     },
     "imaginary_number_part": {
       "name": "Complex number imaginary part",
-      "code": null
+      "not-implemented": true
     }
   }
 }

@@ -1,16 +1,13 @@
 {
   "meta": {
-    "language": "ruby",
-    "language_version": "3.0",
-    "language_name": "Ruby"
+    "language": "ada",
+    "language_version": "2012",
+    "language_name": "Ada"
   },
   "categories": {
     "Numerical": [
       "boolean",
       "signed_integer_8_bit",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
       "signed_integer_as_object",
       "signed_float_16_bit",
       "signed_float_32_bit",
@@ -19,7 +16,6 @@
     ],
     "Characters and Strings": [
       "character",
-      "string_as_object",
       "string_as_array"
     ],
     "Complex Numbers": [
@@ -30,53 +26,37 @@
   },
   "data_types": {
     "boolean": {
-      "code": "",
-      "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalseClass`, which both inherits from `Object`."
+      "code": "boolean"
     },
     "signed_integer_8_bit": {
-      "code": ""
-    },
-    "signed_integer_16_bit": {
-      "code": ""
-    },
-    "signed_integer_32_bit": {
-      "code": ""
-    },
-    "signed_integer_64_bit": {
-      "code": ""
+      "comment": "In Ada you can define your own integer types by declaring it like this with a range, the compiler then chooses a representation that can hold all desired values.",
+      "code": "type My_Int is range -128 .. 127;"
     },
     "signed_integer_as_object": {
       "code": "Integer"
     },
-    "signed_float_16_bit": {
-      "code": ""
-    },
-    "signed_float_32_bit": {
-      "code": ""
-    },
     "signed_float_64_bit": {
-      "code": ""
+      "comment": "Like with integers Ada let's you create your own floating point types as well by specifying the desired amount of decimal digits",
+      "code": "type My_Float is digits 15;"
     },
     "signed_float_as_object": {
       "code": "Float"
     },
     "character": {
-      "code": ""
-    },
-    "string_as_object": {
-      "code": "String"
+      "code": "Character"
     },
     "string_as_array": {
-      "code": ""
+      "code": "String"
     },
     "complex_as_object": {
+      "comment": "Ada's Complex type is found in the library `Ada.Numerics.Generic_Complex_Types`",
       "code": "Complex"
     },
     "real_number_part": {
-      "code": ""
+      "code": "Re (Complex_Number);"
     },
     "imaginary_number_part": {
-      "code": ""
+      "code": "Im (Complex_Number);"
     }
   }
 }
