@@ -115,7 +115,7 @@ def format_code_for_display(concept_key, lang):
     if lang.concept_implemented(concept_key):
         return highlight(
             lang.concept_code(concept_key),
-            get_lexer_by_name(lang.key),
+            get_lexer_by_name(lang.key, startinline=True),
             HtmlFormatter()
         )
     else:
