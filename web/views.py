@@ -1,16 +1,55 @@
 import json
-import os
 import random
 
 from django.http import HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound, HttpResponseServerError
 from django.shortcuts import render
 from django.utils.html import escape, strip_tags
-
 from pygments import highlight
+from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
-from pygments.formatters import HtmlFormatter
+
+from web.Language import Language
+from web.MetaInfo import MetaInfo
+
+
+def format_code_for_display(concept_key, lang):
+    """
+    Returns the formatted HTML formatted syntax-highlighted text for a concept key (from a meta language file) and a language
+    :param concept_key: name of the key to format
+    :param lang: language to format it (in meta language/syntax highlighter format)
+    :return: string with code with applied HTML formatting
+    """
+    if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
+        return "Unknown"
+    if lang.concept_implemented(concept_key):
+        return highlight(
+            lang.concept_code(concept_key),
+            get_lexer_by_name(lang.key, startinline=True),
+            HtmlFormatter()
+        )
+    else:
+        return None
+
+
+def format_comment_for_display(concept_key, lang):
+    """
+    Returns the formatted HTML formatted comment text for a concept key (from a meta language file) and a language
+    :param concept_key: the concept key located in the meta language JSON file
+    :param lang: the ID of the language to fetch concept key from
+    :return: formatted HTML for the comment
+    """
+    if not lang.concept_implemented(concept_key) and lang.concept_comment(concept_key) == "":
+        return "Not Implemented In This Language"
+    else:
+        return lang.concept_comment(concept_key)
+
 
 def index(request):
+    """
+    Renders the home page (/)
+    :param request: HttpRequest object
+    :return: HttpResponse object with rendered object of the page
+    """
     with open("web/thesauruses/meta_info.json", 'r') as meta_file:
         meta_data = meta_file.read()
     meta_data_langs = json.loads(meta_data)["languages"]
@@ -27,108 +66,23 @@ def index(request):
 
 
 def about(request):
+    """
+    Renders the about page (/about)
+    :param request: HttpRequest object
+    :return: HttpResponse object with rendered object of the page
+    """
     content = {
         'title': 'About'
     }
     return render(request, 'about.html', content)
 
 
-class Language(object):
-    def __init__(self, key):
-        self.key = key
-
-    def has_key(self):
-        return self.key == ""
-
-    def load_structure(self, structure_key):
-        file_path = os.path.join(
-            "web", "thesauruses", self.key, structure_key) + ".json"
-        with open(file_path, 'r') as file:
-            data = file.read()
-            # parse file
-            file_json = json.loads(data)
-
-            self.friendly_name = file_json["meta"]["language_name"]
-            self.categories = file_json["categories"]
-            self.concepts = file_json[structure_key]
-
-    def concept(self, concept_key):
-        if self.concepts.get(concept_key) is None:
-            return {
-                "code": "",
-                "comment": ""
-            }
-        elif self.concepts.get(concept_key).get("not-implemented", False):
-            return {
-                "not-implemented": True,
-                "code": "",
-                "comment": self.concepts.get(concept_key).get("comment", "")
-            }
-        else:
-            return self.concepts.get(concept_key)
-
-    def concept_unknown(self, concept_key):
-        return self.concepts.get(concept_key) is None
-
-    def concept_implemented(self, concept_key):
-        return self.concept(concept_key).get("not-implemented", False) is False
-
-    def concept_code(self, concept_key):
-        return self.concept(concept_key).get("code")
-
-    def concept_comment(self, concept_key):
-        return self.concept(concept_key).get("comment", "")
-
-
-class MetaInfo(object):
-    def __init__(self):
-        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-            meta_data = meta_file.read()
-        self.data_structures = json.loads(meta_data)["structures"]
-
-    def structure_friendly_name(self, structure_key):
-        index = list(self.data_structures.values()).index(structure_key)
-        return list(self.data_structures.keys())[index]
-
-    def structure(self, structure_key):
-        return MetaStructure(structure_key, self.structure_friendly_name(structure_key))
-
-
-class MetaStructure(object):
-    def __init__(self, structure_key, friendly_name):
-        self.key = structure_key
-        self.friendly_name = friendly_name
-        meta_structure_file_path = os.path.join(
-            "web", "thesauruses", "_meta", structure_key) + ".json"
-        with open(meta_structure_file_path, 'r') as meta_structure_file:
-            data = meta_structure_file.read()
-            # parse file
-            meta_structure_file_json = json.loads(data)
-
-            self.categories = meta_structure_file_json["categories"]
-            self.concepts = meta_structure_file_json[structure_key]
-
-
-def format_code_for_display(concept_key, lang):
-    if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
-        return "Unknown"
-    if lang.concept_implemented(concept_key):
-        return highlight(
-            lang.concept_code(concept_key),
-            get_lexer_by_name(lang.key, startinline=True),
-            HtmlFormatter()
-        )
-    else:
-        return None
-
-def format_comment_for_display(concept_key, lang):
-    if not lang.concept_implemented(concept_key) and lang.concept_comment(concept_key) == "":
-        return "Not Implemented In This Language"
-    else:
-        return lang.concept_comment(concept_key)
-
-
 def compare(request):
+    """
+    Renders the page comparing two language structures (/compare)
+    :param request: HttpRequest object
+    :return: HttpResponse object with rendered object of the page
+    """
     lang1 = Language(escape(strip_tags(request.GET.get('lang1', ''))))
     lang2 = Language(escape(strip_tags(request.GET.get('lang2', ''))))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
@@ -153,8 +107,7 @@ def compare(request):
     both_categories = []
     both_concepts = []
     # XXX: Ideally we should set default value of lang dict here
-    # and not in template but that will be possible after issue #27
-    # is resolved
+    # and not in template now that issue #27 is resolved
 
     all_category_keys = list(meta_structure.categories.keys())
     all_concept_keys = list(meta_structure.concepts.keys())
@@ -196,7 +149,11 @@ def compare(request):
 
 
 def reference(request):
-
+    """
+    Renders the page showing one language structure for reference (/compare)
+    :param request: HttpRequest object
+    :return: HttpResponse object with rendered object of the page
+    """
     lang = Language(escape(strip_tags(request.GET.get('lang', ''))))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
     if not lang.has_key:
@@ -243,21 +200,43 @@ def reference(request):
 
 
 def error_handler_400_bad_request(request, exception):
+    """
+    Renders the page for a generic client error (HTTP 400)
+    :param request: HttpRequest object
+    :param exception: details about the exception
+    :return: HttpResponse object with rendered object of the page
+    """
     response = render(request, 'error400.html')
     return HttpResponseBadRequest(response)
 
 
 def error_handler_403_forbidden(request, exception):
+    """
+    Renders the page for a forbidden error (HTTP 403)
+    :param request: HttpRequest object
+    :param exception: details about the exception
+    :return: HttpResponse object with rendered object of the page
+    """
     response = render(request, 'error403.html')
     return HttpResponseForbidden(response)
 
 
 def error_handler_404_not_found(request, exception):
+    """
+    Renders the page for a file not found error (HTTP 404)
+    :param request: HttpRequest object
+    :param exception: details about the exception
+    :return: HttpResponse object with rendered object of the page
+    """
     response = render(request, 'error404.html')
     return HttpResponseNotFound(response)
 
 
 def error_handler_500_server_error(request):
+    """
+    Renders the page for a generic server error (HTTP 500)
+    :param request: HttpRequest object
+    :return: HttpResponse object with rendered object of the page
+    """
     response = render(request, 'error500.html')
     return HttpResponseServerError(response)
-
