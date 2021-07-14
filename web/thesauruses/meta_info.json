@@ -1,6 +1,7 @@
 {
   "languages": {
     "Ada (version 2012)": "ada",
+    "BASH (version 3.2.57):": "bash",
     "C++ (version C++17, generic)": "cpp",
     "C# (version 9)": "csharp",
     "Go (version 1.16)": "go",

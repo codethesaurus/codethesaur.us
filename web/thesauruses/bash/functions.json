@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "language": "bash",
+    "language_version": "3.2.57",
+    "language_name": "BASH"
+  },
+  "categories": {
+    "Void Functions": [
+      "void_function_no_parameters",
+      "void_function_with_parameters",
+      "void_function_variable_parameters"
+    ],
+    "Return Value Functions": [
+      "return_value_function_no_parameters",
+      "return_value_function_with_parameters",
+      "return_value_function_variable_parameters"
+    ]
+  },
+  "functions": {
+    "void_function_no_parameters": {
+      "code": "function_name () {\n    statements\n}"
+    },
+    "void_function_with_parameters": {
+      "code": "function_name() {\n    $1\n    $2\n    statements\n}\n \nfunction_name parameter1 parameter2"
+    },
+    "void_function_variable_parameters": {
+      "code": "function_name() {\n    $@\n    statements\n}\n \nfunction_name parameter1 ... parameterN"
+    },
+    "return_value_function_no_parameters": {
+      "code": "function_name () {\n    statements\n    return expression\n}"
+    },
+    "return_value_function_with_parameters": {
+      "code": "function_name() {\n    $1\n    $2\n    statements\n    return expression\n}\n \nfunction_name parameter1 parameter2"
+    },
+    "return_value_function_variable_parameters": {
+      "code": "function_name() {\n    $@\n    statements\n    return expression\n}\n \nfunction_name parameter1 ... parameterN"
+    }
+  }
+}
