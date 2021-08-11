@@ -17,6 +17,7 @@
     "TypeScript (version 4.2)": "typescript"
   },
   "structures": {
+    "Classes": "classes",
     "Control Structures": "control_structures",
     "Data Types": "data_types",
     "Functions, Methods, and Subroutines": "functions",
