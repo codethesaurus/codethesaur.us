@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "language": "nim",
+    "language_version": "1.4",
+    "language_name": "Nim"
+  },
+  "categories": {
+    "Defining Classes": [
+      "normal_class",
+      "abstract_class",
+      "interface",
+      "read_only_class",
+      "static_class",
+      "inner_class"
+    ],
+    "Adding Private and Public Members": [
+      "private_variables",
+      "protected_variables",
+      "public_variables",
+      "static_variables",
+      "private_functions",
+      "protected_functions",
+      "public_functions",
+      "static_functions"
+    ],
+    "Extending and Implementing Classes": [
+      "extends_class",
+      "extending_interface",
+      "calling_superclass_functions"
+    ],
+    "Creating Objects and Polymorphism": [
+      "instantiating_object",
+      "instantiating_polymorphic_object"
+    ],
+    "Constructors and Deconstructor": [
+      "implement_constructor"
+    ]
+  },
+  "classes": {
+    "normal_class": {
+      "name": "Normal class",
+      "code": "type Name = object"
+    },
+    "abstract_class": {
+      "name": "Abstract class",
+      "code": "type Name = concept"
+    },
+    "interface": {
+      "name": "Interface",
+      "code": "type Name = concept"
+    },
+    "read_only_class": {
+      "name": "Read-only class",
+      "code": "type Name = object"
+    },
+    "static_class": {
+      "name": "Static class",
+      "code": "Types are static"
+    },
+    "inner_class": {
+      "name": "Inner class",
+      "code": "type Name = object\n  inner: InnerType"
+    },
+    "private_variables": {
+      "name": "Defining public variables",
+      "code": "var name* = \"value\""
+    },
+    "protected_variables": {
+      "name": "Defining protected variables",
+      "code": "var name = \"value\""
+    },
+    "public_variables": {
+      "name": "Defining public variables",
+      "code": "var name* = \"value\""
+    },
+    "static_variables": {
+      "name": "Defining static variables",
+      "code": "",
+      "comment": "variables are static"
+    },
+    "private_functions": {
+      "name": "Defining private functions",
+      "code": "",
+      "comment": "functions are private by default"
+    },
+    "protected_functions": {
+      "name": "Defining protected functions",
+      "code": "",
+      "comment": "functions are protected by default"
+    },
+    "public_functions": {
+      "name": "Defining private functions",
+      "code": "",
+      "comment": "functions are private by default"
+    },
+    "static_functions": {
+      "name": "Defining static functions",
+      "code": "",
+      "comment": "functions are static"
+    },
+    "extends_class": {
+      "name": "Class that inherits/extends another class",
+      "code": "type Name = ref object of ParentType"
+    },
+    "extending_interface": {
+      "name": "Class/Interface that inherits/extends another class/interface",
+      "code": "type Name = ref object of ParentType"
+    },
+    "calling_superclass_functions": {
+      "name": "Calling a superclass function",
+      "code": "superclass.function()"
+    },
+    "instantiating_object": {
+      "name": "Instantiating a new object",
+      "code": "Name(argument: \"value\", other: 42)"
+    },
+    "instantiating_polymorphic_object": {
+      "name": "Instantiating a polymorphic object",
+      "code": "Name(argument: \"value\", other: 42)"
+    },
+    "implement_constructor": {
+      "name": "Implementing a class constructor",
+      "code": "",
+      "comment": "Any function that returns the Type"
+    }
+  }
+}
