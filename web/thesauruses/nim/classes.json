@@ -55,7 +55,8 @@
     },
     "static_class": {
       "name": "Static class",
-      "code": "Types are static"
+      "code": "",
+      "comment": "Types are static"
     },
     "inner_class": {
       "name": "Inner class",
