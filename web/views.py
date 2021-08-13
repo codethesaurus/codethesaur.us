@@ -85,14 +85,15 @@ def compare(request):
     lang2 = Language(escape(strip_tags(request.GET.get('lang2', ''))))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
 
-    if (not lang1.has_key()) or (not lang2.has_key()):
-        error_message = ""
-        if not structure_query_string:
-            error_message = "The URL didn't specify a structure/concept to look up.<br />"
-        if not lang1.has_key():
-            error_message = error_message + "The URL didn't specify a first language to look up.<br />"
-        if not lang2.has_key():
-            error_message = error_message + "The URL didn't specify a second language to look up.<br />"
+    error_message = ""
+    if not structure_query_string:
+        error_message = "The URL didn't specify a structure/concept to look up.<br />"
+    if not lang1.has_key():
+        error_message = error_message + "The URL didn't specify a first language to look up.<br />"
+    if not lang2.has_key():
+        error_message = error_message + "The URL didn't specify a second language to look up.<br />"
+
+    if error_message:
         error_page_data = {
             "message": error_message
         }
@@ -184,19 +185,41 @@ def reference(request):
     """
     lang = Language(escape(strip_tags(request.GET.get('lang', ''))))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
-    if not lang.has_key:
-        return HttpResponseNotFound(
-            "The " + structure_query_string + " concept of the " + lang.key + " language doesn't exist or hasn't been implemented yet.")
 
-    metainfo = MetaInfo()
-    meta_structure = metainfo.structure(structure_query_string)
+    error_message = ""
+    if not structure_query_string:
+        error_message = "The URL didn't specify a structure/concept to look up.<br />"
+    if not lang.has_key():
+        error_message = error_message + "The URL didn't specify a language to look up.<br />"
+    if error_message:
+        error_page_data = {
+            "message": error_message
+        }
+        response = render(request, 'errormisc.html', error_page_data)
+
+        return HttpResponseNotFound(response)
+
+    try:
+        metainfo = MetaInfo()
+        meta_structure = metainfo.structure(structure_query_string)
+    # pylint: disable=broad-except
+    except Exception:
+        error_page_data = {
+            "message": "The structure/concept isn't valid. Double-check your URL and try again.<br />"
+        }
+        response = render(request, "errormisc.html", error_page_data)
+
+        return HttpResponseNotFound(response)
 
     try:
         lang.load_structure(meta_structure.key)
     # pylint: disable=broad-except
     except Exception:
-        return HttpResponseNotFound(
-            "The " + meta_structure.friendly_name + " concept of the " + lang.key + " language doesn't exist or hasn't been implemented yet.")
+        error_page_data = {
+            "message": "The language (" + lang.key + ") isn't valid. Double-check your URL and try again.<br />"
+        }
+        response = render(request, "errormisc.html", error_page_data)
+        return HttpResponseNotFound(response)
 
     categories = []
     concepts = []
