@@ -179,7 +179,7 @@ def compare(request):
 
 def reference(request):
     """
-    Renders the page showing one language structure for reference (/compare)
+    Renders the page showing one language structure for reference (/reference)
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
