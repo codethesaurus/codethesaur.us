@@ -117,8 +117,15 @@ def compare(request):
         lang1.load_structure(meta_structure.key)
     # pylint: disable=broad-except
     except Exception:
+        error_message = ""
+        if lang1.lang_exists():
+            error_message = f"There is no entry about this structure/concept for the \
+                first language ({lang1.key}) yet.<br />"
+        else:
+            error_message = f"The first language ({lang1.key}) isn't valid. \
+                Double-check your URL and try again.<br />"
         error_page_data = {
-            "message": "The first language (" + lang1.key + ") isn't valid. Double-check your URL and try again.<br />"
+            "message": error_message
         }
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
@@ -127,8 +134,15 @@ def compare(request):
         lang2.load_structure(meta_structure.key)
     # pylint: disable=broad-except
     except Exception:
+        error_message = ""
+        if lang2.lang_exists():
+            error_message = f"There is no entry about this structure/concept for the \
+                second language ({lang2.key}) yet.<br />"
+        else:
+            error_message = f"The second language ({lang2.key}) isn't valid. \
+                Double-check your URL and try again.<br />"
         error_page_data = {
-            "message": "The second language (" + lang2.key + ") isn't valid. Double-check your URL and try again.<br />"
+            "message": error_message
         }
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
@@ -179,7 +193,7 @@ def compare(request):
 
 def reference(request):
     """
-    Renders the page showing one language structure for reference (/compare)
+    Renders the page showing one language structure for reference (/reference)
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -215,8 +229,15 @@ def reference(request):
         lang.load_structure(meta_structure.key)
     # pylint: disable=broad-except
     except Exception:
+        error_message = ""
+        if lang.lang_exists():
+            error_message = f"There is no entry about this structure/concept for the \
+                language ({lang.key}) yet.<br />"
+        else:
+            error_message = f"The language ({lang.key}) isn't valid. \
+                Double-check your URL and try again.<br />"
         error_page_data = {
-            "message": "The language (" + lang.key + ") isn't valid. Double-check your URL and try again.<br />"
+            "message": error_message
         }
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
