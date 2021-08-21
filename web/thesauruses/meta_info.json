@@ -21,6 +21,7 @@
     "Control Structures": "control_structures",
     "Data Types": "data_types",
     "Functions, Methods, and Subroutines": "functions",
-    "Lists, Arrays, and Hashed Lists": "lists"
+    "Lists, Arrays, and Hashed Lists": "lists",
+    "Logical and Mathematical/Arithmetic Operators": "operators"
   }
 }
