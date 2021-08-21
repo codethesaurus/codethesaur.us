@@ -24,6 +24,13 @@ class Language:
         # Empty string is falsy, but text is truthy, but would return return text
         return bool(self.key)
 
+    def lang_exists(self):
+        """
+        Returns a Boolean if the language (self.key) exists in the thesauruses or not
+        :rtype: bool
+        """
+        return os.path.exists(os.path.join("web", "thesauruses", self.key))
+
     def load_structure(self, structure_key):
         """
         Loads the structure file into the Language object
