@@ -13,8 +13,28 @@ from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 
-from web.models import MetaInfo
+from web.models import MetaInfo, SiteVisit, LookupData
 from web.thesaurus_template_generators import generate_language_template
+
+
+def store_url_info(request):
+    visit = SiteVisit(
+        url=request.get_full_path(),
+        user_agent=request.META['HTTP_USER_AGENT'],
+        referer=request.META['HTTP_REFERER']
+    )
+    visit.save()
+    return visit
+
+
+def store_lookup_info(request, visit, language1, language2, structure):
+    info = LookupData(
+        language1=language1,
+        language2=language2,
+        structure=structure,
+        site_visit=visit
+    )
+    info.save()
 
 
 def index(request):
@@ -24,6 +44,9 @@ def index(request):
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
+
+    store_url_info(request)
+
     meta_info = MetaInfo()
 
     meta_data_langs = dict()
@@ -53,6 +76,8 @@ def about(request):
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
+    store_url_info(request)
+
     content = {
         'title': 'About',
         'description': 'Code Thesaurus: A polyglot developer reference tool'
@@ -68,6 +93,8 @@ def compare(request):
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
+    visit = store_url_info(request)
+
     lang1_string = escape(strip_tags(request.GET.get('lang1', '')))
     lang2_string = escape(strip_tags(request.GET.get('lang2', '')))
 
@@ -156,6 +183,8 @@ def compare(request):
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
 
+    store_lookup_info(request, visit, lang1.key, lang2.key, meta_structure.key)
+
     both_categories = []
 
     for (category_key, category) in meta_structure.categories.items():
@@ -190,6 +219,8 @@ def reference(request):
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
+    visit = store_url_info(request)
+
     lang_string = escape(strip_tags(request.GET.get('lang', '')))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
 
@@ -246,6 +277,8 @@ def reference(request):
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
 
+    store_lookup_info(request, visit, lang.key, '', meta_structure.key)
+
     categories = []
 
     for (category_key, category) in meta_structure.categories.items():
@@ -277,6 +310,8 @@ def error_handler_400_bad_request(request, _exception):
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
     """
+    store_url_info(request)
+
     response = render(request, 'error400.html')
     return HttpResponseBadRequest(response)
 
@@ -289,6 +324,8 @@ def error_handler_403_forbidden(request, _exception):
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
     """
+    store_url_info(request)
+
     response = render(request, 'error403.html')
     return HttpResponseForbidden(response)
 
@@ -301,6 +338,8 @@ def error_handler_404_not_found(request, _exception):
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
     """
+    store_url_info(request)
+
     response = render(request, 'error404.html')
     return HttpResponseNotFound(response)
 
@@ -312,6 +351,8 @@ def error_handler_500_server_error(request):
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
+    store_url_info(request)
+
     response = render(request, 'error500.html')
     return HttpResponseServerError(response)
 
