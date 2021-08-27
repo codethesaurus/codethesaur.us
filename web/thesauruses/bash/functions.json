@@ -43,6 +43,12 @@
     },
     "anonymous_function_variable_parameters": {
       "not-implemented": true
+    },
+    "call_subroutine": {
+      "not-implemented": true
+    },
+    "return_from_subroutine": {
+      "not-implemented": true
     }
   }
 }
