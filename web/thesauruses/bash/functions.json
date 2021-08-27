@@ -34,6 +34,15 @@
     },
     "return_value_function_variable_parameters": {
       "code": "function_name() {\n    $@\n    statements\n    return expression\n}\n \nfunction_name parameter1 ... parameterN"
+    },
+    "anonymous_function_no_parameters": {
+      "not-implemented": true
+    },
+    "anonymous_function_with_parameters": {
+      "not-implemented": true
+    },
+    "anonymous_function_variable_parameters": {
+      "not-implemented": true
     }
   }
 }
