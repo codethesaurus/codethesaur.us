@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "language": "nim",
+    "language_version": "1.4",
+    "language_name": "Nim"
+  },
+  "categories": {
+    "Defining Classes": [
+      "normal_class",
+      "abstract_class",
+      "interface",
+      "read_only_class",
+      "static_class",
+      "inner_class"
+    ],
+    "Adding Private and Public Members": [
+      "private_variables",
+      "protected_variables",
+      "public_variables",
+      "static_variables",
+      "private_functions",
+      "protected_functions",
+      "public_functions",
+      "static_functions"
+    ],
+    "Extending and Implementing Classes": [
+      "extends_class",
+      "extending_interface",
+      "calling_superclass_functions"
+    ],
+    "Creating Objects and Polymorphism": [
+      "instantiating_object",
+      "instantiating_polymorphic_object"
+    ],
+    "Constructors and Deconstructor": [
+      "implement_constructor"
+    ]
+  },
+  "classes": {
+    "normal_class": {
+      "code": "type Name = object"
+    },
+    "abstract_class": {
+      "code": "type Name = concept"
+    },
+    "interface": {
+      "code": "type Name = concept"
+    },
+    "read_only_class": {
+      "code": "type Name = object"
+    },
+    "static_class": {
+      "code": "",
+      "comment": "Types are static"
+    },
+    "inner_class": {
+      "code": "type Name = object\n  inner: InnerType"
+    },
+    "private_variables": {
+      "code": "var name* = \"value\""
+    },
+    "protected_variables": {
+      "code": "var name = \"value\""
+    },
+    "public_variables": {
+      "code": "var name* = \"value\""
+    },
+    "static_variables": {
+      "code": "",
+      "comment": "variables are static"
+    },
+    "private_functions": {
+      "code": "",
+      "comment": "functions are private by default"
+    },
+    "protected_functions": {
+      "code": "",
+      "comment": "functions are protected by default"
+    },
+    "public_functions": {
+      "code": "",
+      "comment": "functions are private by default"
+    },
+    "static_functions": {
+      "code": "",
+      "comment": "functions are static"
+    },
+    "extends_class": {
+      "code": "type Name = ref object of ParentType"
+    },
+    "extending_interface": {
+      "code": "type Name = ref object of ParentType"
+    },
+    "calling_superclass_functions": {
+      "code": "superclass.function()"
+    },
+    "instantiating_object": {
+      "code": "Name(argument: \"value\", other: 42)"
+    },
+    "instantiating_polymorphic_object": {
+      "code": "Name(argument: \"value\", other: 42)"
+    },
+    "implement_constructor": {
+      "code": "",
+      "comment": "Any function that returns the Type"
+    }
+  }
+}

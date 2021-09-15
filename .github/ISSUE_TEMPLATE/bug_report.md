@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Use this template for reporting bugs
+about: Use this template for reporting bugs (not security issues, see the Security Policy)
 ---
 
 # Expected Behavior
@@ -20,3 +20,4 @@ about: Use this template for reporting bugs
 # Additional Info
 
 <!-- Optional. If there's any additional information that you have, mention it here. -->
+<!-- You can attach screenshots too by pasting them in the window. -->

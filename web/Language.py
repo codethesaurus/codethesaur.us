@@ -8,14 +8,28 @@ class Language:
         Initialize the Language object, which will contain concepts for a given structure
         :param key: ID of the language in the meta_info.json file
         """
-        self.key = key
+
+        # Add an empty string to convert SafeString to str
+        self.key = str(key + "")
+        self.friendly_name = None
+        self.categories = None
+        self.concepts = None
 
     def has_key(self):
         """
         Returns a Boolean if the language key exists or not
         :rtype: bool
         """
-        return self.key == ""
+
+        # Empty string is falsy, but text is truthy, but would return return text
+        return bool(self.key)
+
+    def lang_exists(self):
+        """
+        Returns a Boolean if the language (self.key) exists in the thesauruses or not
+        :rtype: bool
+        """
+        return os.path.exists(os.path.join("web", "thesauruses", self.key))
 
     def load_structure(self, structure_key):
         """
@@ -45,14 +59,13 @@ class Language:
                 "code": "",
                 "comment": ""
             }
-        elif self.concepts.get(concept_key).get("not-implemented", False):
+        if self.concepts.get(concept_key).get("not-implemented", False):
             return {
                 "not-implemented": True,
                 "code": "",
                 "comment": self.concepts.get(concept_key).get("comment", "")
             }
-        else:
-            return self.concepts.get(concept_key)
+        return self.concepts.get(concept_key)
 
     def concept_unknown(self, concept_key):
         """

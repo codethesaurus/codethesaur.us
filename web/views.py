@@ -27,8 +27,7 @@ def format_code_for_display(concept_key, lang):
             get_lexer_by_name(lang.key, startinline=True),
             HtmlFormatter()
         )
-    else:
-        return None
+    return None
 
 
 def format_comment_for_display(concept_key, lang):
@@ -40,8 +39,7 @@ def format_comment_for_display(concept_key, lang):
     """
     if not lang.concept_implemented(concept_key) and lang.concept_comment(concept_key) == "":
         return "Not Implemented In This Language"
-    else:
-        return lang.concept_comment(concept_key)
+    return lang.concept_comment(concept_key)
 
 
 def index(request):
@@ -87,26 +85,71 @@ def compare(request):
     lang2 = Language(escape(strip_tags(request.GET.get('lang2', ''))))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
 
-    if not lang1.has_key and lang2.has_key:
-        return HttpResponseNotFound(
-            "The " + structure_query_string + " concept of either the " + lang1.key + " or " +
-            lang2.key + " languages doesn't exist or hasn't been implemented yet.")
+    error_message = ""
+    if not structure_query_string:
+        error_message = "The URL didn't specify a structure/concept to look up.<br />"
+    if not lang1.has_key():
+        error_message = error_message + "The URL didn't specify a first language to look up.<br />"
+    if not lang2.has_key():
+        error_message = error_message + "The URL didn't specify a second language to look up.<br />"
 
-    metainfo = MetaInfo()
-    meta_structure = metainfo.structure(structure_query_string)
+    if error_message:
+        error_page_data = {
+            "message": error_message
+        }
+        response = render(request, 'errormisc.html', error_page_data)
+
+        return HttpResponseNotFound(response)
+
+    try:
+        metainfo = MetaInfo()
+        meta_structure = metainfo.structure(structure_query_string)
+    # pylint: disable=broad-except
+    except Exception:
+        error_page_data = {
+            "message": "The structure/concept isn't valid. Double-check your URL and try again.<br />"
+        }
+        response = render(request, "errormisc.html", error_page_data)
+
+        return HttpResponseNotFound(response)
 
     try:
         lang1.load_structure(meta_structure.key)
-        lang2.load_structure(meta_structure.key)
+    # pylint: disable=broad-except
+    except Exception:
+        error_message = ""
+        if lang1.lang_exists():
+            error_message = f"There is no entry about this structure/concept for the \
+                first language ({lang1.key}) yet.<br />"
+        else:
+            error_message = f"The first language ({lang1.key}) isn't valid. \
+                Double-check your URL and try again.<br />"
+        error_page_data = {
+            "message": error_message
+        }
+        response = render(request, "errormisc.html", error_page_data)
+        return HttpResponseNotFound(response)
 
-    except:
-        return HttpResponseNotFound(
-            "The " + meta_structure.friendly_name + " concept of either the " + lang1.key + " or " +
-            lang2.key + " languages doesn't exist or hasn't been implemented yet.")
+    try:
+        lang2.load_structure(meta_structure.key)
+    # pylint: disable=broad-except
+    except Exception:
+        error_message = ""
+        if lang2.lang_exists():
+            error_message = f"There is no entry about this structure/concept for the \
+                second language ({lang2.key}) yet.<br />"
+        else:
+            error_message = f"The second language ({lang2.key}) isn't valid. \
+                Double-check your URL and try again.<br />"
+        error_page_data = {
+            "message": error_message
+        }
+        response = render(request, "errormisc.html", error_page_data)
+        return HttpResponseNotFound(response)
 
     both_categories = []
     both_concepts = []
-    # XXX: Ideally we should set default value of lang dict here
+    # Ideally we should set default value of lang dict here
     # and not in template now that issue #27 is resolved
 
     all_category_keys = list(meta_structure.categories.keys())
@@ -150,25 +193,54 @@ def compare(request):
 
 def reference(request):
     """
-    Renders the page showing one language structure for reference (/compare)
+    Renders the page showing one language structure for reference (/reference)
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
     lang = Language(escape(strip_tags(request.GET.get('lang', ''))))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
-    if not lang.has_key:
-        return HttpResponseNotFound(
-            "The " + structure_query_string + " concept of the " + lang.key + " language doesn't exist or hasn't been implemented yet.")
 
-    metainfo = MetaInfo()
-    meta_structure = metainfo.structure(structure_query_string)
+    error_message = ""
+    if not structure_query_string:
+        error_message = "The URL didn't specify a structure/concept to look up.<br />"
+    if not lang.has_key():
+        error_message = error_message + "The URL didn't specify a language to look up.<br />"
+    if error_message:
+        error_page_data = {
+            "message": error_message
+        }
+        response = render(request, 'errormisc.html', error_page_data)
+
+        return HttpResponseNotFound(response)
+
+    try:
+        metainfo = MetaInfo()
+        meta_structure = metainfo.structure(structure_query_string)
+    # pylint: disable=broad-except
+    except Exception:
+        error_page_data = {
+            "message": "The structure/concept isn't valid. Double-check your URL and try again.<br />"
+        }
+        response = render(request, "errormisc.html", error_page_data)
+
+        return HttpResponseNotFound(response)
 
     try:
         lang.load_structure(meta_structure.key)
-
-    except:
-        return HttpResponseNotFound(
-            "The " + meta_structure.friendly_name + " concept of the " + lang.key + " language doesn't exist or hasn't been implemented yet.")
+    # pylint: disable=broad-except
+    except Exception:
+        error_message = ""
+        if lang.lang_exists():
+            error_message = f"There is no entry about this structure/concept for the \
+                language ({lang.key}) yet.<br />"
+        else:
+            error_message = f"The language ({lang.key}) isn't valid. \
+                Double-check your URL and try again.<br />"
+        error_page_data = {
+            "message": error_message
+        }
+        response = render(request, "errormisc.html", error_page_data)
+        return HttpResponseNotFound(response)
 
     categories = []
     concepts = []
@@ -199,6 +271,7 @@ def reference(request):
     return render(request, 'reference.html', response)
 
 
+# pylint: disable=unused-argument
 def error_handler_400_bad_request(request, exception):
     """
     Renders the page for a generic client error (HTTP 400)
@@ -210,6 +283,7 @@ def error_handler_400_bad_request(request, exception):
     return HttpResponseBadRequest(response)
 
 
+# pylint: disable=unused-argument
 def error_handler_403_forbidden(request, exception):
     """
     Renders the page for a forbidden error (HTTP 403)
@@ -221,6 +295,7 @@ def error_handler_403_forbidden(request, exception):
     return HttpResponseForbidden(response)
 
 
+# pylint: disable=unused-argument
 def error_handler_404_not_found(request, exception):
     """
     Renders the page for a file not found error (HTTP 404)
