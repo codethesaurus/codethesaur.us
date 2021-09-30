@@ -39,79 +39,85 @@
   },
   "data_types": {
     "boolean": {
-      "code": ""
+      "code": "Boolean",
+      "comment": "The type is an object wrapper for the boolean primitive data type"
     },
     "signed_integer_8_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "unsigned_integer_8_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_integer_16_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "unsigned_integer_16_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_integer_32_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "unsigned_integer_32_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_integer_64_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "unsigned_integer_64_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_integer_as_object": {
-      "code": ""
+      "code": "BigInt",
+      "comment": "The type is an object wrapper for the bigint primitive data type"
     },
     "unsigned_integer_as_object": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_float_16_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "unsigned_float_16_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_float_32_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "unsigned_float_32_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_float_64_bit": {
-      "code": ""
+      "code": "Number",
+      "comment": "The Number wrapper object is represented by a double-precision 64-bit float under the hood. All the 'Not-a-Number' values in the IEEE Standard specification are clubbed into a single special NaN value in javascript."
     },
     "unsigned_float_64_bit": {
-      "code": ""
+      "not-implemented": true
     },
     "signed_float_as_object": {
-      "code": ""
+      "code": "Number",
+      "comment": "The type is an object wrapper for the number primitive data type"
     },
     "unsigned_float_as_object": {
-      "code": ""
+      "not-implemented": true
     },
     "character": {
-      "code": ""
+      "not-implemented": true
     },
     "string_as_object": {
-      "code": ""
+      "code": "String",
+      "comment": "The type is an object wrapper for the string primitive data type"
     },
     "string_as_array": {
-      "code": ""
+      "code": "String",
+      "comment": "String is implemented as a set of ordered sequences of zero or more 16-bit unsigned integer values (each treated as UTF-16 code unit). String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods"
     },
     "complex_as_object": {
-      "code": ""
+      "not-implemented": true
     },
     "real_number_part": {
-      "code": ""
+      "not-implemented": true
     },
     "imaginary_number_part": {
-      "code": ""
+      "not-implemented": true
     }
   }
 }
