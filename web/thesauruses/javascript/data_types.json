@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "javascript",
+    "language_version": "EC2021",
+    "language_name": "JavaScript"
   },
   "categories": {
     "Numerical": [
