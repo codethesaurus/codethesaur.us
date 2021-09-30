@@ -1,21 +1,30 @@
 {
   "meta": {
-    "language": "javascript",
-    "language_version": "ES2020",
-    "language_name": "JavaScript"
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
   },
   "categories": {
     "Numerical": [
       "boolean",
       "signed_integer_8_bit",
+      "unsigned_integer_8_bit",
       "signed_integer_16_bit",
+      "unsigned_integer_16_bit",
       "signed_integer_32_bit",
+      "unsigned_integer_32_bit",
       "signed_integer_64_bit",
+      "unsigned_integer_64_bit",
       "signed_integer_as_object",
+      "unsigned_integer_as_object",
       "signed_float_16_bit",
+      "unsigned_float_16_bit",
       "signed_float_32_bit",
+      "unsigned_float_32_bit",
       "signed_float_64_bit",
-      "signed_float_as_object"
+      "unsigned_float_64_bit",
+      "signed_float_as_object",
+      "unsigned_float_as_object"
     ],
     "Characters and Strings": [
       "character",
@@ -30,58 +39,104 @@
   },
   "data_types": {
     "boolean": {
-      "code": "Boolean",
-      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+      "name": "Boolean",
+      "code": ""
     },
     "signed_integer_8_bit": {
-      "not-implemented": true
+      "name": "Signed 8-bit integer",
+      "code": ""
+    },
+    "unsigned_integer_8_bit": {
+      "name": "Unsigned 8-bit integer",
+      "code": ""
     },
     "signed_integer_16_bit": {
-      "not-implemented": true
+      "name": "Signed 16-bit integer",
+      "code": ""
+    },
+    "unsigned_integer_16_bit": {
+      "name": "Unsigned 16-bit integer",
+      "code": ""
     },
     "signed_integer_32_bit": {
-      "not-implemented": true
+      "name": "Signed 32-bit integer",
+      "code": ""
+    },
+    "unsigned_integer_32_bit": {
+      "name": "Unsigned 32-bit integer",
+      "code": ""
     },
     "signed_integer_64_bit": {
-      "not-implemented": true
+      "name": "Signed 64-bit integer",
+      "code": ""
+    },
+    "unsigned_integer_64_bit": {
+      "name": "Unsigned 64-bit integer",
+      "code": ""
     },
     "signed_integer_as_object": {
-      "code": "BigInt",
-      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+      "name": "Signed object-based Integer",
+      "code": ""
+    },
+    "unsigned_integer_as_object": {
+      "name": "Unsigned object-based Integer",
+      "code": ""
     },
     "signed_float_16_bit": {
-      "not-implemented": true
+      "name": "Signed 16-bit floating point",
+      "code": ""
+    },
+    "unsigned_float_16_bit": {
+      "name": "Unsigned 16-bit floating point",
+      "code": ""
     },
     "signed_float_32_bit": {
-      "not-implemented": true
+      "name": "Signed 32-bit floating point",
+      "code": ""
+    },
+    "unsigned_float_32_bit": {
+      "name": "Unsigned 32-bit floating point",
+      "code": ""
     },
     "signed_float_64_bit": {
-      "code": "Number",
-      "comment": "The Number wrapper object is represented by a double-precision 64-bit float under the hood"
+      "name": "Signed 64-bit floating point",
+      "code": ""
+    },
+    "unsigned_float_64_bit": {
+      "name": "Unsigned 64-bit floating point",
+      "code": ""
     },
     "signed_float_as_object": {
-      "code": "Number",
-      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+      "name": "Signed object-based floating point",
+      "code": ""
+    },
+    "unsigned_float_as_object": {
+      "name": "Unsigned object-based floating point",
+      "code": ""
     },
     "character": {
-      "not-implemented": true,
-      "comment": "It's possible to use single-character strings, such as the output of String.prototype.charAt()"
+      "name": "Character",
+      "code": ""
     },
     "string_as_object": {
-      "code": "String"
+      "name": "String as an object",
+      "code": ""
     },
     "string_as_array": {
-      "code": "String",
-      "comment": "String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods"
+      "name": "String as an array of characters",
+      "code": ""
     },
     "complex_as_object": {
-      "not-implemented": true
+      "name": "Complex Number as an object",
+      "code": ""
     },
     "real_number_part": {
-      "not-implemented": true
+      "name": "Complex number real part",
+      "code": ""
     },
     "imaginary_number_part": {
-      "not-implemented": true
+      "name": "Complex number imaginary part",
+      "code": ""
     }
   }
 }
