@@ -30,69 +30,53 @@
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
       "code": "if condition; then statements; fi"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
       "code": "if condition; then statements; else statements; fi"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
       "code": "if condition; then statements; elif condition; then statements; fi"
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
       "code": "if condition; then statements; elif condition; then statements; else statements; fi"
     },
     "switch_statement": {
-      "name": "Switch statement",
       "code": "case expresssion in\n  pattern1 )\n    statements ;;\n  pattern2 )\n    statements;;\nesac"
     },
     "ternary_conditional": {
-      "name": "Ternary conditional",
       "not_implemented": true
     },
     "while_loop": {
-      "name": "While loop",
       "code": "while test-commands; do consequent-commands; done",
       "comment": "Execute consequent-commands as long as test-commands has an exit status of zero."
     },
     "do_while_loop": {
-      "name": "Do/While loop",
       "not_implemented": true
     },
     "until_loop": {
-      "name": "Until loop",
       "code": "until test-commands; do consequent-commands; done",
       "comment": "Execute 'consequent-commands' as long as 'test-commands' has an exit status which is not zero."
     },
     "do_until_loop": {
-      "name": "Do/Until loop",
       "not_implemented": true
     },
     "for_loop": {
-      "name": "For loop",
       "code": "for (initialization_statements ; condition ; update_statements) ; do commands ; done"
     },
     "foreach_loop": {
-      "name": "Foreach loop",
       "code": "for item in list ;  do commands; done"
     },
     "each_iteration": {
-      "name": "Each iteration",
       "not_implemented": true
     },
     "map_iteration": {
-      "name": "Map iteration",
       "not_implemented": true
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "not_implemented": true
     },
     "fold_iteration": {
-      "name": "Fold iteration",
       "not_implemented": true
     }
   }
