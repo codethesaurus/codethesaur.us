@@ -39,79 +39,81 @@
   },
   "data_types": {
     "boolean": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_integer_8_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "unsigned_integer_8_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_integer_16_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "unsigned_integer_16_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_integer_32_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "unsigned_integer_32_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_integer_64_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "unsigned_integer_64_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_integer_as_object": {
-      "code": ""
+      "not_implemented": true,
+      "comment": "It is possible to declare a variable as integer using the 'declare' keywords. The variable is stored as a string but it is then operated on like an integer."
     },
     "unsigned_integer_as_object": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_float_16_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "unsigned_float_16_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_float_32_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "unsigned_float_32_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_float_64_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "unsigned_float_64_bit": {
-      "code": ""
+      "not_implemented": true
     },
     "signed_float_as_object": {
-      "code": ""
+      "not_implemented": true
     },
     "unsigned_float_as_object": {
-      "code": ""
+      "not_implemented": true
     },
     "character": {
-      "code": ""
+      "not_implemented": true
     },
     "string_as_object": {
-      "code": ""
+      "not_implemented": true
     },
     "string_as_array": {
-      "code": ""
+      "code": "name",
+      "comment": "Variables in bash are basically character strings which are collections of characters, but they don't support any array operations."
     },
     "complex_as_object": {
-      "code": ""
+      "not_implemented": true
     },
     "real_number_part": {
-      "code": ""
+      "not_implemented": true
     },
     "imaginary_number_part": {
-      "code": ""
+      "not_implemented": true
     }
   }
 }
