@@ -31,66 +31,69 @@
   "control_structures": {
     "if_conditional": {
       "name": "If conditional",
-      "code": ""
+      "code": "if condition; then statements; fi"
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
-      "code": ""
+      "code": "if condition; then statements; else statements; fi"
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
-      "code": ""
+      "code": "if condition; then statements; elif condition; then statements; fi"
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
-      "code": ""
+      "code": "if condition; then statements; elif condition; then statements; else statements; fi"
     },
     "switch_statement": {
-      "name": "Switch statement"
+      "name": "Switch statement",
+      "code": "case expresssion in\n    pattern1 )\n    statements ;;\n   pattern2 )\n    statements;;\n    esac"
     },
     "ternary_conditional": {
       "name": "Ternary conditional",
-      "code": ""
+      "not_implemented": true
     },
     "while_loop": {
       "name": "While loop",
-      "code": ""
+      "code": "while test-commands; do consequent-commands; done",
+      "comment": "Execute consequent-commands as long as test-commands has an exit status of zero."
     },
     "do_while_loop": {
       "name": "Do/While loop",
-      "code": ""
+      "not_implemented": true
     },
     "until_loop": {
       "name": "Until loop",
-      "code": ""
+      "code": "until test-commands; do consequent-commands; done",
+      "comment": "Execute 'consequent-commands' as long as 'test-commands' has an exit status which is not zero."
     },
     "do_until_loop": {
       "name": "Do/Until loop",
-      "code": ""
+      "not_implemented": true
     },
     "for_loop": {
       "name": "For loop",
-      "code": ""
+      "code": "for (initialization_statements ; condition ; update_statements) ; do commands ; done"
     },
     "foreach_loop": {
       "name": "Foreach loop",
-      "code": ""
+      "code": "for item in list ;  do commands; done"
     },
     "each_iteration": {
       "name": "Each iteration",
-      "code": ""
+      "not_implemented": true
     },
     "map_iteration": {
       "name": "Map iteration",
-      "code": ""
+      "not_implemented": true
     },
     "filter_iteration": {
       "name": "Filter iteration",
-      "code": ""
+      "not_implemented": true
     },
     "fold_iteration": {
       "name": "Fold iteration",
-      "code": ""
+      "not_implemented": true
     }
   }
 }
