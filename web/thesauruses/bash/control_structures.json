@@ -47,7 +47,7 @@
     },
     "switch_statement": {
       "name": "Switch statement",
-      "code": "case expresssion in\n    pattern1 )\n    statements ;;\n   pattern2 )\n    statements;;\n    esac"
+      "code": "case expresssion in\n  pattern1 )\n    statements ;;\n  pattern2 )\n    statements;;\nesac"
     },
     "ternary_conditional": {
       "name": "Ternary conditional",
