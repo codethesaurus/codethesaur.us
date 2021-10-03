@@ -39,104 +39,90 @@
    },
    "data_types": {
      "boolean": {
-       "name": "Boolean",
-       "code": ""
+       "code": "BOOL",
+       "comment": "As opposed to true and false, Objective-C stores boolean values as YES and NO, respectively."
      },
      "signed_integer_8_bit": {
-       "name": "Signed 8-bit integer",
-       "code": ""
+       "not-implemented": true
      },
      "unsigned_integer_8_bit": {
-       "name": "Unsigned 8-bit integer",
-       "code": ""
+      "not-implemented": true
      },
      "signed_integer_16_bit": {
-       "name": "Signed 16-bit integer",
-       "code": ""
+       "code": "short int",
+       "comment": "Signed short integers range from -32768 to 32767"
      },
      "unsigned_integer_16_bit": {
-       "name": "Unsigned 16-bit integer",
-       "code": ""
+       "code": "unsigned short int",
+       "comment": "Unsigned short integers range from 0 to 65535"
      },
      "signed_integer_32_bit": {
-       "name": "Signed 32-bit integer",
-       "code": ""
+       "code": "int",
+       "comment": "Integers range from -2147483648 to 2147483647"
      },
      "unsigned_integer_32_bit": {
-       "name": "Unsigned 32-bit integer",
-       "code": ""
+       "code": "unsigned int",
+       "comment": "Unsigned integers range from 0 to 4294967295"
      },
      "signed_integer_64_bit": {
-       "name": "Signed 64-bit integer",
-       "code": ""
+       "code": "long int",
+       "comment": "Long integers range from -9223372036854775808 to 9223372036854775807"
      },
      "unsigned_integer_64_bit": {
-       "name": "Unsigned 64-bit integer",
-       "code": ""
+       "code": "unsigned long int",
+       "comment": "Unsigned long integers range from 0 to 18446744073709551615"
      },
      "signed_integer_as_object": {
-       "name": "Signed object-based Integer",
-       "code": ""
+      "not-implemented": true
      },
      "unsigned_integer_as_object": {
-       "name": "Unsigned object-based Integer",
-       "code": ""
+      "not-implemented": true
      },
      "signed_float_16_bit": {
-       "name": "Signed 16-bit floating point",
-       "code": ""
+      "not-implemented": true
      },
      "unsigned_float_16_bit": {
-       "name": "Unsigned 16-bit floating point",
-       "code": ""
+      "not-implemented": true
      },
      "signed_float_32_bit": {
-       "name": "Signed 32-bit floating point",
-       "code": ""
+       "code": "float",
+       "comment": "The f suffix denotes the end decimal."
      },
      "unsigned_float_32_bit": {
-       "name": "Unsigned 32-bit floating point",
-       "code": ""
+      "not-implemented": true
      },
      "signed_float_64_bit": {
-       "name": "Signed 64-bit floating point",
-       "code": ""
+      "not-implemented": true
      },
      "unsigned_float_64_bit": {
-       "name": "Unsigned 64-bit floating point",
-       "code": ""
+      "not-implemented": true
      },
      "signed_float_as_object": {
-       "name": "Signed object-based floating point",
-       "code": ""
+      "not-implemented": true
      },
      "unsigned_float_as_object": {
-       "name": "Unsigned object-based floating point",
-       "code": ""
+      "not-implemented": true
      },
      "character": {
-       "name": "Character",
-       "code": ""
+       "code": "char",
+       "comment": "Using %c to output the character value and %i to output the ASCII value."
      },
      "string_as_object": {
-       "name": "String as an object",
-       "code": ""
+       "code": "NSString",
+       "comment": "NSString is immutable, however, Objective-C has a mutable string object called NSMutableString"
      },
      "string_as_array": {
-       "name": "String as an array of characters",
-       "code": ""
+      "code": "NSString",
+      "comment": "NSString is built on the C version of strings, which are arrays of characters. When using an NSString, you can use index notation to access specific characters."
      },
      "complex_as_object": {
-       "name": "Complex Number as an object",
-       "code": ""
+      "not-implemented": true
      },
      "real_number_part": {
-       "name": "Complex number real part",
-       "code": ""
+      "not-implemented": true
      },
      "imaginary_number_part": {
-       "name": "Complex number imaginary part",
-       "code": ""
+      "not-implemented": true
      }
    }
  }
