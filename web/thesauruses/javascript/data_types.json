@@ -1,21 +1,30 @@
 {
   "meta": {
     "language": "javascript",
-    "language_version": "ES2020",
+    "language_version": "EC2021",
     "language_name": "JavaScript"
   },
   "categories": {
     "Numerical": [
       "boolean",
       "signed_integer_8_bit",
+      "unsigned_integer_8_bit",
       "signed_integer_16_bit",
+      "unsigned_integer_16_bit",
       "signed_integer_32_bit",
+      "unsigned_integer_32_bit",
       "signed_integer_64_bit",
+      "unsigned_integer_64_bit",
       "signed_integer_as_object",
+      "unsigned_integer_as_object",
       "signed_float_16_bit",
+      "unsigned_float_16_bit",
       "signed_float_32_bit",
+      "unsigned_float_32_bit",
       "signed_float_64_bit",
-      "signed_float_as_object"
+      "unsigned_float_64_bit",
+      "signed_float_as_object",
+      "unsigned_float_as_object"
     ],
     "Characters and Strings": [
       "character",
@@ -31,48 +40,75 @@
   "data_types": {
     "boolean": {
       "code": "Boolean",
-      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+      "comment": "The type is an object wrapper for the boolean primitive data type"
     },
     "signed_integer_8_bit": {
+      "not-implemented": true
+    },
+    "unsigned_integer_8_bit": {
       "not-implemented": true
     },
     "signed_integer_16_bit": {
       "not-implemented": true
     },
+    "unsigned_integer_16_bit": {
+      "not-implemented": true
+    },
     "signed_integer_32_bit": {
+      "not-implemented": true
+    },
+    "unsigned_integer_32_bit": {
       "not-implemented": true
     },
     "signed_integer_64_bit": {
       "not-implemented": true
     },
+    "unsigned_integer_64_bit": {
+      "not-implemented": true
+    },
     "signed_integer_as_object": {
       "code": "BigInt",
-      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+      "comment": "The type is an object wrapper for the bigint primitive data type"
+    },
+    "unsigned_integer_as_object": {
+      "not-implemented": true
     },
     "signed_float_16_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_16_bit": {
       "not-implemented": true
     },
     "signed_float_32_bit": {
       "not-implemented": true
     },
+    "unsigned_float_32_bit": {
+      "not-implemented": true
+    },
     "signed_float_64_bit": {
       "code": "Number",
-      "comment": "The Number wrapper object is represented by a double-precision 64-bit float under the hood"
+      "comment": "The Number wrapper object is represented by a double-precision 64-bit float under the hood. All the 'Not-a-Number' values in the IEEE Standard specification are clubbed into a single special NaN value in javascript."
+    },
+    "unsigned_float_64_bit": {
+      "not-implemented": true
     },
     "signed_float_as_object": {
       "code": "Number",
-      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+      "comment": "The type is an object wrapper for the number primitive data type"
+    },
+    "unsigned_float_as_object": {
+      "not-implemented": true
     },
     "character": {
-      "not-implemented": true,
-      "comment": "It's possible to use single-character strings, such as the output of String.prototype.charAt()"
+      "not-implemented": true
     },
     "string_as_object": {
-      "code": "String"
+      "code": "String",
+      "comment": "The type is an object wrapper for the string primitive data type"
     },
     "string_as_array": {
       "code": "String",
-      "comment": "String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods"
+      "comment": "String is implemented as a set of ordered sequences of zero or more 16-bit unsigned integer values (each treated as UTF-16 code unit). String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods"
     },
     "complex_as_object": {
       "not-implemented": true
