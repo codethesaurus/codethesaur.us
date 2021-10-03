@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "language": "go",
+    "language_version": "1.16",
+    "language_name": "Go"
+  },
+  "categories": {
+    "Numerical": [
+      "boolean",
+      "signed_integer_8_bit",
+      "unsigned_integer_8_bit",
+      "signed_integer_16_bit",
+      "unsigned_integer_16_bit",
+      "signed_integer_32_bit",
+      "unsigned_integer_32_bit",
+      "signed_integer_64_bit",
+      "unsigned_integer_64_bit",
+      "signed_integer_as_object",
+      "unsigned_integer_as_object",
+      "signed_float_16_bit",
+      "unsigned_float_16_bit",
+      "signed_float_32_bit",
+      "unsigned_float_32_bit",
+      "signed_float_64_bit",
+      "unsigned_float_64_bit",
+      "signed_float_as_object",
+      "unsigned_float_as_object"
+    ],
+    "Characters and Strings": [
+      "character",
+      "string_as_object",
+      "string_as_array"
+    ],
+    "Complex Numbers": [
+      "complex_as_object",
+      "real_number_part",
+      "imaginary_number_part"
+    ]
+  },
+  "data_types": {
+    "boolean": {
+      "code": ""
+    },
+    "signed_integer_8_bit": {
+      "code": ""
+    },
+    "unsigned_integer_8_bit": {
+      "code": ""
+    },
+    "signed_integer_16_bit": {
+      "code": ""
+    },
+    "unsigned_integer_16_bit": {
+      "code": ""
+    },
+    "signed_integer_32_bit": {
+      "code": ""
+    },
+    "unsigned_integer_32_bit": {
+      "code": ""
+    },
+    "signed_integer_64_bit": {
+      "code": ""
+    },
+    "unsigned_integer_64_bit": {
+      "code": ""
+    },
+    "signed_integer_as_object": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "unsigned_integer_as_object": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "signed_float_16_bit": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "unsigned_float_16_bit": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "signed_float_32_bit": {
+      "code": "",
+      "comment": "float32 uses single-precision floating point format to store values. Basically it is the set of all IEEE-754 32-bit floating-point numbers. The 32 bits are divided into – 1 bit sign, 8 bits exponent, and 23 bits mantissa. float 32 take half much size as float 64 and are comparatively faster on some machine architectures"
+    },
+    "unsigned_float_32_bit": {
+      "code": ""
+    },
+    "signed_float_64_bit": {
+      "code": "",
+      "comment": "float64 uses a double-precision floating-point format to store values. Basically it is the set of all IEEE-754 64-bit floating-point numbers. The 64 bits are divided into 1-bit sign, 11 bits exponent, 52 bits mantissa. float64 takes twice as much size compared to float32 but can represent numbers more accurately than float32."
+    },
+    "unsigned_float_64_bit": {
+      "code": ""
+    },
+    "signed_float_as_object": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "unsigned_float_as_object": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "character": {
+      "code": ""
+    },
+    "string_as_object": {
+      "code": ""
+    },
+    "string_as_array": {
+      "code": "",
+      "comment": "string is a read only slice of bytes in golang"
+    },
+    "complex_as_object": {
+      "code": ""
+    },
+    "real_number_part": {
+      "code": ""
+    },
+    "imaginary_number_part": {
+      "code": ""
+    }
+  }
+}
