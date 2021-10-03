@@ -9,6 +9,7 @@
     "Java (version 15)": "java",
     "JavaScript (version ES2020)": "javascript",
     "Nim (version 1.4)": "nim",
+    "Objective-C": "objectivec",
     "PHP (version 7.4)": "php",
     "Python (version 3.7)": "python",
     "Ruby (version 3.0)": "ruby",
