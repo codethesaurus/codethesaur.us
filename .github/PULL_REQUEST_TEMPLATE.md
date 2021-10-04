@@ -1,16 +1,26 @@
-## 📝 What type of PR is this? (check all applicable)
+## What GitHub issue does this PR apply to?
+Resolves #xxxx
 
-- [ ] Refactor
-- [ ] Feature
-- [ ] Bug Fix
-- [ ] Optimization
-- [ ] Documentation Update
+## What changed and why?
 
-## 📖 Description
+<!-- Please replace this line with a description of the changes -->
 
-_Please replace this line with a description of the changes.
+## (If editing Django app) Please add screenshots
 
-## ✅ QA Instructions, Screenshots
+<!-- Please copy screenshots, then replace this line by pasting screenshots here -->
 
-_Please replace this line with instructions on how to test your changes.
+## Any additional comments or things to be aware of while reviewing?
 
+<!-- Please replace this line with any comments -->
+
+
+
+<!-- -------------------------- -->
+<!-- Don't edit below this line -->
+## Reviewer Steps
+
+- [ ] Review commits
+- [ ] (If needed) Approve first run of workflow
+- [ ] (If needed) Activate Deploy Preview app
+- [ ] Verify any changes in Deploy Preview
+- [ ] Approve and/or merge changes

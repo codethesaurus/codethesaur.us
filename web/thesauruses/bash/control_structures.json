@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "language": "bash",
+    "language_version": "bash-5.1",
+    "language_name": "BASH"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "switch_statement",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "code": "if condition; then statements; fi"
+    },
+    "if_else_conditional": {
+      "code": "if condition; then statements; else statements; fi"
+    },
+    "if_elseif_conditional": {
+      "code": "if condition; then statements; elif condition; then statements; fi"
+    },
+    "if_elseif_else_conditional": {
+      "code": "if condition; then statements; elif condition; then statements; else statements; fi"
+    },
+    "switch_statement": {
+      "code": "case expresssion in\n  pattern1 )\n    statements ;;\n  pattern2 )\n    statements;;\nesac"
+    },
+    "ternary_conditional": {
+      "not_implemented": true
+    },
+    "while_loop": {
+      "code": "while test-commands; do consequent-commands; done",
+      "comment": "Execute consequent-commands as long as test-commands has an exit status of zero."
+    },
+    "do_while_loop": {
+      "not_implemented": true
+    },
+    "until_loop": {
+      "code": "until test-commands; do consequent-commands; done",
+      "comment": "Execute 'consequent-commands' as long as 'test-commands' has an exit status which is not zero."
+    },
+    "do_until_loop": {
+      "not_implemented": true
+    },
+    "for_loop": {
+      "code": "for (initialization_statements ; condition ; update_statements) ; do commands ; done"
+    },
+    "foreach_loop": {
+      "code": "for item in list ;  do commands; done"
+    },
+    "each_iteration": {
+      "not_implemented": true
+    },
+    "map_iteration": {
+      "not_implemented": true
+    },
+    "filter_iteration": {
+      "not_implemented": true
+    },
+    "fold_iteration": {
+      "not_implemented": true
+    }
+  }
+}
