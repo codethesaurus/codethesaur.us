@@ -58,51 +58,51 @@
   "operators": {
     "addition": {
       "name": "Addition operator",
-      "code": ""
+      "code": "+"
     },
     "addition_assignment": {
       "name": "Addition and assignment operator",
-      "code": ""
+      "code": "+="
     },
     "subtraction": {
       "name": "Subtraction operator",
-      "code": ""
+      "code": "-"
     },
     "subtraction_assignment": {
       "name": "Subtraction and assignment operator",
-      "code": ""
+      "code": "-="
     },
     "multiplication": {
       "name": "Multiplication operator",
-      "code": ""
+      "code": "*"
     },
     "multiplication_assignment": {
       "name": "Multiplication and assignment operator",
-      "code": ""
+      "code": "*="
     },
     "division": {
       "name": "Division operator",
-      "code": ""
+      "code": "/"
     },
     "division_assignment": {
       "name": "Division and assignment operator",
-      "code": ""
+      "code": "/="
     },
     "modulus": {
       "name": "Modulus (remainder) operator",
-      "code": ""
+      "code": "%"
     },
     "modulus_assignment": {
       "name": "Modulus and assignment operator",
-      "code": ""
+      "code": "%="
     },
     "increment": {
       "name": "Increment (add 1) operator",
-      "code": ""
+      "code": "++"
     },
     "decrement": {
       "name": "Decrement (subtract 1) operator",
-      "code": ""
+      "code": "--"
     },
     "exponential": {
       "name": "Exponential operator",
@@ -122,27 +122,27 @@
     },
     "equal_to": {
       "name": "Equality operator",
-      "code": ""
+      "code": "=="
     },
     "not_equal_to": {
       "name": "Not equal to operator",
-      "code": ""
+      "code": "!="
     },
     "less_than": {
       "name": "Less than operator",
-      "code": ""
+      "code": "<"
     },
     "less_than_or_equal_to": {
       "name": "Less than or equal to operator",
-      "code": ""
+      "code": "<="
     },
     "greater_than": {
       "name": "Greater than operator",
-      "code": ""
+      "code": ">"
     },
     "greater_than_or_equal_to": {
       "name": "Greater than or equal to operator",
-      "code": ""
+      "code": ">="
     },
     "null_coalescing": {
       "name": "Null coalescing operator",
@@ -158,7 +158,7 @@
     },
     "and": {
       "name": "Logical AND operator",
-      "code": ""
+      "code": "&&"
     },
     "and_assignment": {
       "name": "Logical AND assignment operator",
@@ -166,7 +166,7 @@
     },
     "or": {
       "name": "Logical OR operator",
-      "code": ""
+      "code": "||"
     },
     "or_assignment": {
       "name": "Logical OR assignment operator",
@@ -174,7 +174,7 @@
     },
     "not": {
       "name": "Logical NOT operator",
-      "code": ""
+      "code": "!"
     },
     "not_assignment": {
       "name": "Logical NOT assignment operator",
@@ -198,7 +198,7 @@
     },
     "left_shift": {
       "name": "Left shift bitwise operator",
-      "code": ""
+      "code": "<<"
     },
     "left_shift_assignment": {
       "name": "Left shift assignment operator",
@@ -206,7 +206,7 @@
     },
     "right_shift": {
       "name": "Right shift bitwise operator",
-      "code": ""
+      "code": ">>"
     },
     "right_shift_assignment": {
       "name": "Right shift assignment operator",
@@ -214,7 +214,7 @@
     },
     "ternary": {
       "name": "Ternary operator",
-      "code": ""
+      "code": "?:"
     },
     "null_forgiving": {
       "name": "Null forgiving operator",
