@@ -35,7 +35,7 @@
       "code": ""
     },
     "void_function_with_keyword_parameters": {
-      "name": "Function that does not return a value and that and takes 0 or more defined keyword parameters",
+      "name": "Function that does not return a value and that takes 0 or more defined keyword parameters",
       "code": ""
     },
     "void_function_variable_parameters": {
