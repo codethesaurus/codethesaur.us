@@ -2,7 +2,7 @@
    "meta": {
      "language": "language_id",
      "language_version": "version.number",
-     "language_name": "Human-Friendly Language Name"
+     "language_name": "Objective-C"
    },
    "categories": {
      "Numerical": [
