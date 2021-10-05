@@ -40,13 +40,13 @@
       "code": "expression_if_true if condition else expression_if_false"
     },
     "while_loop": {
-      "code": "while condition:\n    statements"
+      "code": "while condition:\n    statements\n\nwhile True:\n    statements\n    if(conditional):\n        break"
     },
     "foreach_loop": {
-      "code": "for iterator in iterable:\n    statements"
+      "code": "for iterator in iterable:\n    statements\n\nfor first, second in iterable_of_tuples:\n    foo(first)\n    bar(second)"
     },
     "list_comprehension": {
-      "code": "[doSomething(item) for item in iterable]\n[doSomething(item) for item in iterable if conditional(item)]"
+      "code": "[foo(item) for item in iterable]\n[foo(item) for item in iterable if conditional(item)]"
     },
     "map_iteration": {
       "code": "map(function, iterable)"
