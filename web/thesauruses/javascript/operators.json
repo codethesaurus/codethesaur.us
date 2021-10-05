@@ -1,0 +1,223 @@
+{
+    "meta": {
+      "language": "javascript",
+      "language_version": "ES2020",
+      "language_name": "JavaScript"
+    },
+    "categories": {
+      "Arithmetic Operators": [
+        "addition",
+        "addition_assignment",
+        "subtraction",
+        "subtraction_assignment",
+        "multiplication",
+        "multiplication_assignment",
+        "division",
+        "division_assignment",
+        "modulus",
+        "modulus_assignment",
+        "increment",
+        "decrement",
+        "exponential",
+        "factorial",
+        "absolute_value",
+        "percentage"
+      ],
+      "Equality/Comparison Operators": [
+        "equal_to",
+        "not_equal_to",
+        "less_than",
+        "less_than_or_equal_to",
+        "greater_than",
+        "greater_than_or_equal_to",
+        "null_coalescing",
+        "is",
+        "is_not"
+      ],
+      "Logical/Boolean/Bitwise Operators": [
+        "and",
+        "and_assignment",
+        "or",
+        "or_assignment",
+        "not",
+        "not_assignment",
+        "xor",
+        "xor_assignment",
+        "xnor",
+        "xnor_assignment",
+        "left_shift",
+        "left_shift_assignment",
+        "right_shift",
+        "right_shift_assignment"
+      ],
+      "Conditional Operators": [
+        "ternary",
+        "null_forgiving"
+      ]
+    },
+    "operators": {
+      "addition": {
+        "code": "+",
+        "comment":"sum two numeric operands"
+      },
+      "addition_assignment": {
+        "code": "+=",
+        "comment":"adds the value of the right operand and assigns it to varaible"
+      },
+      "subtraction": {
+        "code": "-",
+        "comment": "returns the differenc of two operands"
+      },
+      "subtraction_assignment": {
+        "code": "-=",
+        "comment": "subtracts the value of the right operand from a variable and assigns the result to variable"
+      },
+      "multiplication": {
+        "code": "*",
+        "comment": "returns product of the operands"
+      },
+      "multiplication_assignment": {
+        "code": "*=",
+        "comment": "multiplies a variable by the value of the right operand and assigns the result to the variable."
+      },
+      "division": {
+        "code": "/",
+        "comment": "returns the quotient of its operands where the left operand is the dividend and the right operand is the divisor."
+      },
+      "division_assignment": {
+        "code": "/=",
+        "comment": "divides a variable by the value of the right operand and assigns the result to the variable."
+      },
+      "modulus": {
+        "code": "%",
+        "comment": "returns the remainder left over when one operand is divided by a second operand"
+      },
+      "modulus_assignment": {
+        "code": "%=", 
+        "comment": "divides a variable by the value of the right operand and assigns the remainder to the variable."
+      },
+      "increment": {
+        "code": "++",
+        "comment": "adds 1 to its operand"
+      },
+      "decrement": {
+        "code": "--",
+        "comment": "subtracts 1 to its operand"
+      },
+      "exponential": {
+        "code": "**",
+        "comment": "returns the result of raising the first operand to the power of the second operand."
+      },
+      "factorial": {
+        "code": "",
+        "not-implemented": true
+      },
+      "absolute_value": {
+        "code": "",
+        "not-implemented": true
+      },
+      "percentage": {
+        "code": "",
+        "not-implemented": true
+      },
+      "equal_to": {
+        "code": "==",
+        "comment": " compare two value on both the sides and then return true or false."
+      },
+      "not_equal_to": {
+        "code": "!=",
+        "comment": "returns true if the condition is false or or false if condition is true"
+      },
+      "less_than": {
+        "code": "<",
+        "comment": "returns true if the left operand is less than the right operand, and false otherwise."
+      },
+      "less_than_or_equal_to": {
+        "code": "<=",
+        "comment": "returns true if the left operand is less than or equal to the right operand, and false otherwise."
+      },
+      "greater_than": {
+        "code": ">",
+        "comment": "returns true if the left operand is greater than the right operand, and false otherwise."
+      },
+      "greater_than_or_equal_to": {
+        "code": ">=",
+        "comment": "returns true if the left operand is greater than or equal to the right operand, and false otherwise."
+      },
+      "null_coalescing": {
+        "code": "??",
+        "comment": " logical operator that returns its right-hand side operand when its left-hand side operand is null"
+      },
+      "is": {
+        "code": "",
+        "not-implemented": true
+      },
+      "is_not": {
+        "code": "",
+        "not-implemented": true
+      },
+      "and": {
+        "code": "&&",
+        "comment": "returns true if and only if all of its operands are true."
+      },
+      "and_assignment": {
+        "code": "&&=",
+        "comment": "assigns the value of right operator to left only if left operator has truthy value"
+      },
+      "or": {
+        "code": "||",
+        "comment": "return true if one or moreof its operands is true"
+      },
+      "or_assignment": {
+        "code": "||=",
+        "comment": "performs an assignment only if x is false"
+      },
+      "not": {
+        "code": "!",
+        "comment": "reverses the true/false outcome of the expression"
+      },
+      "not_assignment": {
+        "code": "",
+        "not-implemented": true
+      },
+      "xor": {
+        "code": "",
+        "not-implemented": true
+      },
+      "xor_assignment": {
+        "code": "",
+        "not-implemented": true
+      },
+      "xnor": {
+        "code": "",
+        "not-implemented": true
+      },
+      "xnor_assignment": {
+        "code": "",
+        "not-implemented": true
+      },
+      "left_shift": {
+        "code": "<<",
+        "comment": "This operator shifts the first operand the specified number of bits to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right"
+      },
+      "left_shift_assignment": {
+        "code": "<<=",
+        "comment": "moves the specified amount of bits to the left and assigns the result to the variable"
+      },
+      "right_shift": {
+        "code": ">>",
+        "comment": " shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded.Copies of the leftmost bit are shifted in from the left."
+      },
+      "right_shift_assignment": {
+        "code": ">>=",
+        "comment": "moves the specified amount of bits to the right and assigns the result to the variable."
+      },
+      "ternary": {
+        "code": "condition ? expressionIfTrue : expressionIfFalse"
+      },
+      "null_forgiving": {
+        "code": "",
+        "not-implemented": true
+      }
+    }
+  }
