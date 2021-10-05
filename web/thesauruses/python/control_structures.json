@@ -15,7 +15,8 @@
     "Loops": [
       "while_loop",
       "for_loop",
-      "foreach_loop"
+      "foreach_loop",
+      "list_comprehension"
     ],
     "Iterations": [
       "map_iteration",
@@ -43,6 +44,9 @@
     },
     "foreach_loop": {
       "code": "for iterator in iterable:\n    statements"
+    },
+    "list_comprehension": {
+      "code": "[doSomething(item) for item in iterable]"
     },
     "map_iteration": {
       "code": "map(function, iterable)"

@@ -19,7 +19,8 @@
       "until_loop",
       "do_until_loop",
       "for_loop",
-      "foreach_loop"
+      "foreach_loop",
+      "list_comprehension"
     ],
     "Iterations": [
       "each_iteration",
@@ -50,6 +51,10 @@
     },
     "ternary_conditional": {
       "name": "Ternary conditional",
+      "code": ""
+    },
+    "list_comprehension": {
+      "name": "List Comprehension",
       "code": ""
     },
     "while_loop": {
