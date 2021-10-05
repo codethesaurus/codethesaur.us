@@ -23,18 +23,17 @@ Resolves #xxxx
 <!-- If this doesn't apply, you can delete this header and section. -->
 
 
+## Checklist
+
+<!-- Either add an X inside the [ ], or submit the PR and click the checkboxes. -->
+
+- [ ] I claimed any associated issue(s) and they are not someone else's
+- [ ] I have looked at documentation to ensure I made any revisions correctly
+- [ ] I tested my changes locally to ensure they work
+- [ ] (If editing Django) I have added or edited any appropriate unit tests for my changes
+
+
 ## Any additional comments or things to be aware of while reviewing?
 
 <!-- Please replace this line with any comments -->
 
-
-
-<!-- -------------------------- -->
-<!-- Don't edit below this line -->
-## Reviewer Steps
-
-- [ ] Review commits
-- [ ] (If needed) Approve first run of workflow
-- [ ] (If needed) Activate Heroku Review app
-- [ ] Verify any changes in Deploy Preview
-- [ ] Approve and/or merge changes
