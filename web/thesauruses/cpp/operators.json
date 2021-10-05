@@ -1,7 +1,7 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
+    "language": "cpp",
+    "language_version": "C++20",
     "language_name": "Human-Friendly Language Name"
   },
   "categories": {
