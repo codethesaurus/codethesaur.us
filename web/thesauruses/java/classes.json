@@ -1,0 +1,126 @@
+{
+	"meta": {
+		"language": "java",
+		"language_version": "15",
+		"language_name": "Java"
+	},
+	"categories": {
+		"Defining Classes": [
+			"normal_class",
+			"abstract_class",
+			"interface",
+			"read_only_class",
+			"static_class",
+			"inner_class",
+			"packages",
+			"class_with_generic_type"
+		],
+		"Adding Private and Public Members": [
+			"private_variables",
+			"protected_variables",
+			"public_variables",
+			"static_variables",
+			"private_functions",
+			"protected_functions",
+			"public_functions",
+			"static_functions"
+		],
+		"Extending and Implementing Classes": [
+			"extends_class",
+			"extending_interface",
+			"calling_superclass_functions",
+			"overriding_superclass_functions"
+		],
+		"Creating Objects and Polymorphism": [
+			"instantiating_object",
+			"instantiating_polymorphic_object"
+		],
+		"Constructors and Deconstructor": [
+			"implement_constructor",
+			"implement_deconstructor"
+		]
+	},
+	"classes": {
+		"normal_class": {
+			"code": "access-modifier class ClassName {\n  Class body containing variables and methods \n}"
+		},
+		"abstract_class": {
+			"code": "access-modifier abstract class ClassName {\n declare fields  \n  declare non-abstract methods  \n  abstract access-modifier method_name();  \n}"
+		},
+		"interface": {
+			"code": "interface interface_name {\n declare constant fields \n  declare methods that abstract by default i.e. access-modifier method_name(); \n}"
+		},
+		"read_only_class": {
+			"code": "access-modifier class ClassName {\n  Private Data Member Declaration \n  private data-type variable_name = variable_value; \n  Defining Getter method to return the value of private properties. \n  public data-type getter_method() {\n  return variable_name; \n} \n}",
+			"comment": "We can make a class read-only by making all of the data members private.  \n  Please note:  \n  1.If we make a class read-only, then we can’t modify the properties or data members value of the class. \n  2.If we make a class read-only, then we can only read the properties or data members value of the class.  \n  3.The read-only class will contain only getter methods which return the value of the private properties to the main() function. \n  4.The read-only class can contain setter methods if we want to modify the value of the private properties after reading because there is our choice to keep setter method in the class but as per based on the concepts we should not contain."
+		},
+		"static_class": {
+			"code": "access-modifier class OuterClassName {\n  access-modifier static data-type variable_name = variable_value;  \n  Static and nested class \n  static class InnerStaticClassName {\n  non-static method of the nested class \n  access-modifier data-type method_name() {\n  statements to access static members of the outer class; \n}  \n}  \n}",
+			"comment": "We can declare a class static by using the static keyword. A class can be declared static only if it is a nested class. It does not require any reference of the outer class."
+		},
+		"inner_class": {
+			"code": "access-modifier class OuterClassName {\n    class body containing variables, methods and nested class   \n  class InnerStaticClassName {\n    class body containing variables and methods \n} \n}",
+			"comment": "Java inner class or nested class is a class that is declared inside the class or interface."
+		},
+		"packages": {
+			"code": "package PackageName;",
+			"comment": "To create a package, use the package keyword. To create an object of a class (bundled in a package), in your code, you have to use import keyword followed by its fully qualified name or end the sentence with an asterisk sign (.*) after package to import all classes in the package."
+
+		},
+		"class_with_generic_type": {
+			"code": "access-modifier class ClassName<T> {\n T stands for 'Type' \n  private T t;  \n  public void set(T t) { this.t = t; }  \n  public T get() { return t; }  \n}",
+			"comment": "A generic class is defined with the following format: class name<T1, T2, ..., Tn> { /* ... */ }. The type parameter section, delimited by angle brackets (<>), follows the class name. It specifies the type parameters (also called type variables) T1, T2, ..., and Tn."
+		},
+		"private_variables": {
+			"code": "private type varName = value;"
+		},
+		"protected_variables": {
+			"code": "protected data_type variable_name = value;"
+		},
+		"public_variables": {
+			"code": "public data_type variable_name = value;"
+		},
+		"static_variables": {
+			"code": "static data_type variable_name = value;"
+		},
+		"private_functions": {
+			"code": "private data_type method_name(){\n method body \n}"
+		},
+		"protected_functions": {
+			"code": "protected data_type method_name(){\n method body \n}"
+		},
+		"public_functions": {
+			"code": "public data_type method_name(){\n method body \n}"
+		},
+		"static_functions": {
+			"code": "access-modifier static data_type method_name(){\n method body \n}"
+		},
+		"extends_class": {
+			"code": "class ChildClassName extends ParentClassName {\n  Class body containing variables and methods \n}"
+		},
+		"extending_interface": {
+			"code": "class ClassName implements InterfaceName {\n  Class body containing variables and methods \n}"
+		},
+		"calling_superclass_functions": {
+			"code": "super.methodName();"
+		},
+		"overriding_superclass_functions": {
+			"code": "class ClassName1 {\n public data_type method_name() {\n  method body \n} \n} \n  public class ClassName2 extends ClassName1 {\n  @Override \n  public data_type method_name() {\n  overriding method body  \n} \n}"
+		},
+		"instantiating_object": {
+			"code": "ClassName objName = new ClassName();  "
+		},
+		"instantiating_polymorphic_object": {
+			"code": "ParentClassOrInterfaceName objName = new ChildClassName();",
+			"comment": "A reference variable can refer to any object of its declared type or any subtype of its declared type. A reference variable can be declared as a class or interface type."
+		},
+		"implement_constructor": {
+			"code": "access-modifier class ClassName {\n  ClassName(){\n constructor body  \n}  \n}"
+		},
+		"implement_deconstructor": {
+			"code": "",
+			"not-implemented": "true",
+			"comment": "There is no concept of destructor in Java. In place of the destructor, Java provides the garbage collector that works the same as the destructor. The garbage collector is a program (thread) that runs on the JVM. It automatically deletes the unused objects (objects that are no longer used) and free-up the memory."
+		}
+	}
+}
