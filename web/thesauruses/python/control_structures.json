@@ -46,7 +46,7 @@
       "code": "for iterator in iterable:\n    statements"
     },
     "list_comprehension": {
-      "code": "[doSomething(item) for item in iterable]"
+      "code": "[doSomething(item) for item in iterable]\n[doSomething(item) for item in iterable if conditional(item)]"
     },
     "map_iteration": {
       "code": "map(function, iterable)"
