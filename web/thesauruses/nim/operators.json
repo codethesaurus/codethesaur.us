@@ -94,7 +94,6 @@
     },
     "modulus_assignment": {
       "name": "Modulus and assignment operator",
-      "code": "",
       "not-implemented": "true"
     },
     "increment": {
@@ -164,7 +163,6 @@
     },
     "and_assignment": {
       "name": "Logical AND assignment operator",
-      "code": "",
       "not-implemented": "true"
     },
     "or": {
@@ -173,7 +171,6 @@
     },
     "or_assignment": {
       "name": "Logical OR assignment operator",
-      "code": "",
       "not-implemented": "true"
     },
     "not": {
@@ -182,17 +179,14 @@
     },
     "not_assignment": {
       "name": "Logical NOT assignment operator",
-      "code": "",
       "not-implemented": "true"
     },
     "xor": {
       "name": "Logical XOR operator",
-      "code": "xor",
-      "not-implemented": "true"
+      "code": "xor"
     },
     "xor_assignment": {
       "name": "Logical XOR assignment operator",
-      "code": "",
       "not-implemented": "true"
     },
     "xnor": {
@@ -201,7 +195,6 @@
     },
     "xnor_assignment": {
       "name": "Logical XNOR assignment operator",
-      "code": "",
       "not-implemented": "true"
     },
     "left_shift": {
@@ -210,7 +203,6 @@
     },
     "left_shift_assignment": {
       "name": "Left shift assignment operator",
-      "code": "",
       "not-implemented": "true"
     },
     "right_shift": {
@@ -219,7 +211,6 @@
     },
     "right_shift_assignment": {
       "name": "Right shift assignment operator",
-      "code": "",
       "not-implemented": "true"
     },
     "ternary": {
@@ -229,7 +220,6 @@
     },
     "null_forgiving": {
       "name": "Null forgiving operator",
-      "code": "",
       "not-implemented": "true",
       "comment": "'not null' annotation allows null-free programming"
     }
