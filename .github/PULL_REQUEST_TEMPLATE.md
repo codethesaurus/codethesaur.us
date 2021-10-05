@@ -1,4 +1,9 @@
 ## What GitHub issue does this PR apply to?
+
+<!-- Replace "xxxx" with the issue number.  -->
+<!-- You can change it to say only "Closes #", "Fixes #", or "Resolves #". -->
+<!-- Don't add "issue" to it otherwise it won't link. -->
+
 Resolves #xxxx
 
 ## What changed and why?
@@ -8,6 +13,7 @@ Resolves #xxxx
 ## (If editing Django app) Please add screenshots
 
 <!-- Please copy screenshots, then replace this line by pasting screenshots here -->
+<!-- If this doesn't apply, you can delete this header and section. -->
 
 ## Any additional comments or things to be aware of while reviewing?
 
