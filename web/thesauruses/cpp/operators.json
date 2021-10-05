@@ -1,7 +1,7 @@
 {
   "meta": {
     "language": "cpp",
-    "language_version": "C++17",
+    "language_version": "C++20",
     "language_name": "C++"
   },
   "categories": {
@@ -98,26 +98,32 @@
     },
     "increment": {
       "name": "Increment (add 1) operator",
+      "comment": "There are two types of increment: pre-increment (++x) and post-increment (x++). ",
       "code": "++"
     },
     "decrement": {
       "name": "Decrement (subtract 1) operator",
+      "comment": "There are two types of decrement: pre-decrement (--x) and post-decrement (x--). ",
       "code": "--"
     },
     "exponential": {
       "name": "Exponential operator",
+      "not-implemented": "true",
       "code": ""
     },
     "factorial": {
       "name": "Factorial operator",
+      "not-implemented": "true",
       "code": ""
     },
     "absolute_value": {
       "name": "Absolute value operator",
+      "not-implemented": "true",
       "code": ""
     },
     "percentage": {
       "name": "Percentage operator",
+      "not-implemented": "true",
       "code": ""
     },
     "equal_to": {
@@ -146,14 +152,17 @@
     },
     "null_coalescing": {
       "name": "Null coalescing operator",
+      "not-implemented": "true",
       "code": ""
     },
     "is": {
       "name": "Is operator",
+      "not-implemented": "true",
       "code": ""
     },
     "is_not": {
       "name": "Is not operator",
+      "not-implemented": "true",
       "code": ""
     },
     "and": {
@@ -162,6 +171,7 @@
     },
     "and_assignment": {
       "name": "Logical AND assignment operator",
+      "not-implemented": "true",
       "code": ""
     },
     "or": {
@@ -170,6 +180,7 @@
     },
     "or_assignment": {
       "name": "Logical OR assignment operator",
+      "not-implemented": "true",
       "code": ""
     },
     "not": {
@@ -178,22 +189,25 @@
     },
     "not_assignment": {
       "name": "Logical NOT assignment operator",
+      "not-implemented": "true",
       "code": ""
     },
     "xor": {
       "name": "Logical XOR operator",
-      "code": ""
+      "code": "^"
     },
     "xor_assignment": {
       "name": "Logical XOR assignment operator",
-      "code": ""
+      "code": "^="
     },
     "xnor": {
       "name": "Logical XNOR operator",
+      "not-implemented": "true",
       "code": ""
     },
     "xnor_assignment": {
       "name": "Logical XNOR assignment operator",
+      "not-implemented": "true",
       "code": ""
     },
     "left_shift": {
@@ -202,7 +216,7 @@
     },
     "left_shift_assignment": {
       "name": "Left shift assignment operator",
-      "code": ""
+      "code": "<<="
     },
     "right_shift": {
       "name": "Right shift bitwise operator",
@@ -210,7 +224,7 @@
     },
     "right_shift_assignment": {
       "name": "Right shift assignment operator",
-      "code": ""
+      "code": ">>="
     },
     "ternary": {
       "name": "Ternary operator",
@@ -218,6 +232,7 @@
     },
     "null_forgiving": {
       "name": "Null forgiving operator",
+      "not-implemented": "true",
       "code": ""
     }
   }
