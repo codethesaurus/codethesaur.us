@@ -27,6 +27,6 @@ Resolves #xxxx
 
 - [ ] Review commits
 - [ ] (If needed) Approve first run of workflow
-- [ ] (If needed) Activate Deploy Preview app
+- [ ] (If needed) Activate Heroku Review app
 - [ ] Verify any changes in Deploy Preview
 - [ ] Approve and/or merge changes
