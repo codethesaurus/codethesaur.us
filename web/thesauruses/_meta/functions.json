@@ -34,6 +34,10 @@
       "name": "Function that does not return a value and that takes 1 or more defined parameters",
       "code": ""
     },
+    "void_function_with_keyword_parameters": {
+      "name": "Function that does not return a value and that and takes 0 or more defined keyword parameters",
+      "code": ""
+    },
     "void_function_variable_parameters": {
       "name": "Function that does not return a value and function that takes an unknown number of parameters",
       "code": ""
@@ -46,6 +50,10 @@
       "name": "Function that returns a value and takes 1 or more defined parameters",
       "code": ""
     },
+    "return_value_function_with_keyword_parameters": {
+      "name": "Function that returns a value and takes 0 or more defined keyword parameters",
+      "code": ""
+    },
     "return_value_function_variable_parameters": {
       "name": "Function that returns a value and takes an unknown number of parameters",
       "code": ""
@@ -56,6 +64,10 @@
     },
     "anonymous_function_with_parameters": {
       "name": "Anonymous function that takes 1 or more defined parameters",
+      "code": ""
+    },
+    "anonymous_function_with_keyword_parameters": {
+      "name": "Anonymous function that takes 0 or more defined keyword parameters",
       "code": ""
     },
     "anonymous_function_variable_parameters": {
