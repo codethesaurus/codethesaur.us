@@ -1,0 +1,123 @@
+{
+   "meta": {
+     "language": "language_id",
+     "language_version": "version.number",
+     "language_name": "Swift"
+   },
+   "categories": {
+     "Numerical": [
+       "boolean",
+       "signed_integer_8_bit",
+       "unsigned_integer_8_bit",
+       "signed_integer_16_bit",
+       "unsigned_integer_16_bit",
+       "signed_integer_32_bit",
+       "unsigned_integer_32_bit",
+       "signed_integer_64_bit",
+       "unsigned_integer_64_bit",
+       "signed_integer_as_object",
+       "unsigned_integer_as_object",
+       "signed_float_16_bit",
+       "unsigned_float_16_bit",
+       "signed_float_32_bit",
+       "unsigned_float_32_bit",
+       "signed_float_64_bit",
+       "unsigned_float_64_bit",
+       "signed_float_as_object",
+       "unsigned_float_as_object"
+     ],
+     "Characters and Strings": [
+       "character",
+       "string_as_object",
+       "string_as_array"
+     ],
+     "Complex Numbers": [
+       "complex_as_object",
+       "real_number_part",
+       "imaginary_number_part"
+     ]
+   },
+   "data_types": {
+     "boolean": {
+       "code": "Bool"
+     },
+     "signed_integer_8_bit": {
+       "code": "Int8"
+     },
+     "unsigned_integer_8_bit": {
+       "code": "UInt8"
+     },
+     "signed_integer_16_bit": {
+       "code": "Int16"
+     },
+     "unsigned_integer_16_bit": {
+       "code": "UInt16"
+     },
+     "signed_integer_32_bit": {
+       "code": "Int32"
+     },
+     "unsigned_integer_32_bit": {
+       "code": "UInt32"
+     },
+     "signed_integer_64_bit": {
+       "code": "Int64"
+     },
+     "unsigned_integer_64_bit": {
+       "code": "UInt64"
+     },
+     "signed_integer_as_object": {
+       "code": "Int",
+       "comment": "``Int`` is used in situations where the platform size may not be known. On a 32-bit platform, ``Int`` can store 32-bit integers."
+     },
+     "unsigned_integer_as_object": {
+       "code": "UInt",
+       "comment": "``UInt`` is used for unsigned integers and the size adapts to platform size. ``UInt`` can store on 64-bit integers on a 64-bit platform, for example."
+     },
+     "signed_float_16_bit": {
+       "not-implemented": "true"
+     },
+     "unsigned_float_16_bit": {
+       "not-implemented": "true"
+     },
+     "signed_float_32_bit": {
+       "code": "Float",
+       "comment": "Floats in Swift are precise up to 7 digits."
+     },
+     "unsigned_float_32_bit": {
+       "not-implemented": "true"
+     },
+     "signed_float_64_bit": {
+       "code": "Double",
+       "comment": "Doubles in Swift are precise up to 15 digits."
+     },
+     "unsigned_float_64_bit": {
+       "not-implemented": "true"
+     },
+     "signed_float_as_object": {
+       "not-implemented": "true"
+     },
+     "unsigned_float_as_object": {
+       "not-implemented": "true"
+     },
+     "character": {
+       "code": "Character"
+     },
+     "string_as_object": {
+       "not-implemented": "true"
+     },
+     "string_as_array": {
+       "code": "String",
+       "comment": "``String`` in Swift bridges to Foundation's ``NSString`` class, so developers have a wide variety of string methods available to them."
+     },
+     "complex_as_object": {
+       "not-implemented": "true"
+     },
+     "real_number_part": {
+      "not-implemented": "true"
+     },
+     "imaginary_number_part": {
+      "not-implemented": "true"
+     }
+   }
+ }
+ 
