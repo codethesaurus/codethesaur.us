@@ -18,10 +18,20 @@ from web.thesaurus_template_generators import generate_language_template
 
 
 def store_url_info(request):
+    if 'HTTP_USER_AGENT' in request.META:
+        user_agent = request.META['HTTP_USER_AGENT']
+    else:
+        user_agent = ""
+
+    if 'HTTP_REFERER' in request.META:
+        referer = request.META['HTTP_REFERER']
+    else:
+        referer = ""
+
     visit = SiteVisit(
         url=request.get_full_path(),
-        user_agent=request.META['HTTP_USER_AGENT'],
-        referer=request.META['HTTP_REFERER']
+        user_agent=user_agent,
+        referer=request
     )
     visit.save()
     return visit
