@@ -52,51 +52,51 @@
   "operators": {
     "addition": {
       "name": "Addition operator",
-      "code": "+"
+      "code": "op1 + op2"
     },
     "addition_assignment": {
       "name": "Addition and assignment operator",
-      "code": "+="
+      "code": "op += number"
     },
     "subtraction": {
       "name": "Subtraction operator",
-      "code": "-"
+      "code": "op1 - op2"
     },
     "subtraction_assignment": {
       "name": "Subtraction and assignment operator",
-      "code": "-="
+      "code": "op -= number"
     },
     "multiplication": {
       "name": "Multiplication operator",
-      "code": "*"
+      "code": "op1 * op2"
     },
     "multiplication_assignment": {
       "name": "Multiplication and assignment operator",
-      "code": "*="
+      "code": "op *= number"
     },
     "division": {
       "name": "Division operator",
-      "code": "/"
+      "code": "op1 / op2"
     },
     "division_assignment": {
       "name": "Division and assignment operator",
-      "code": "/="
+      "code": "op /= number"
     },
     "modulus": {
       "name": "Modulus (remainder) operator",
-      "code": "%"
+      "code": "op1 % op2"
     },
     "modulus_assignment": {
       "name": "Modulus and assignment operator",
-      "code": "%="
+      "code": "op %= number"
     },
     "increment": {
       "name": "Increment (add 1) operator",
-      "code": "++"
+      "code": "op++"
     },
     "decrement": {
       "name": "Decrement (subtract 1) operator",
-      "code": "--"
+      "code": "op--"
     },
     "exponential": {
       "not-implemented": "true",
@@ -116,35 +116,35 @@
     },
     "receive_operator": {
       "name": "Receive Operator",
-      "code": "<-"
+      "code": "var <- ch"
     },
     "short_variable_declaration": {
       "name": "Short Variable Declaration",
-      "code": ":="
+      "code": "var := val"
     },
     "equal_to": {
       "name": "Equality operator",
-      "code": "=="
+      "code": "op1 == op2"
     },
     "not_equal_to": {
       "name": "Not equal to operator",
-      "code": "!="
+      "code": "op1 != op2"
     },
     "less_than": {
       "name": "Less than operator",
-      "code": "<"
+      "code": "op1 < op2"
     },
     "less_than_or_equal_to": {
       "name": "Less than or equal to operator",
-      "code": "<="
+      "code": "op1 <= op2"
     },
     "greater_than": {
       "name": "Greater than operator",
-      "code": ">"
+      "code": "op1 > op2"
     },
     "greater_than_or_equal_to": {
       "name": "Greater than or equal to operator",
-      "code": ">="
+      "code": "op1 >= op2"
     },
     "null_coalescing": {
       "not-implemented": "true",
@@ -160,7 +160,7 @@
     },
     "and": {
       "name": "Logical AND operator",
-      "code": "&&"
+      "code": "condition1 && condition2"
     },
     "and_assignment": {
       "not-implemented": "true",
@@ -168,7 +168,7 @@
     },
     "or": {
       "name": "Logical OR operator",
-      "code": "||"
+      "code": "condition1 || condition2"
     },
     "or_assignment": {
       "not-implemented": "true",
@@ -176,7 +176,7 @@
     },
     "not": {
       "name": "Logical NOT operator",
-      "code": "!"
+      "code": "!condition"
     },
     "not_assignment": {
       "not-implemented": "true",
@@ -200,43 +200,43 @@
     },
     "bitwise_xor":{
       "name": "Bitwise Exclusive OR",
-      "code": "^"
+      "code": "op1 ^ op2"
     },
     "bitwise_inclusive_or":{
       "name": "Bitwise Inclusive OR",
-      "code": "|"
+      "code": "op1 | op2"
     },
     "bitwise_xor_assignment":{
       "name": "Bitwise Exclusive OR Assignment",
-      "code": "^="
+      "code": "op ^= number"
     },
     "bitwise_inclusive_or_assignment":{
       "name": "Bitwise Inclusive OR Assignment",
-      "code": "|="
+      "code": "op |= number"
     },
     "and_not":{
       "name": "AND NOT",
-      "code": "&^"
+      "code": "op1 &^ op2"
     },
     "bitwise_not":{
       "name": "Bitwise Complement",
-      "code": "^number"
+      "code": "^op"
     },
     "left_shift": {
       "name": "Left shift bitwise operator",
-      "code": "<<"
+      "code": "op << number of bits"
     },
     "left_shift_assignment": {
       "name": "Left shift assignment operator",
-      "code": "<<="
+      "code": "op <<= number"
     },
     "right_shift": {
       "name": "Right shift bitwise operator",
-      "code": ">>"
+      "code": "op >> number of bits"
     },
     "right_shift_assignment": {
       "name": "Right shift assignment operator",
-      "code": ">>="
+      "code": "op >>= number"
     },
     "ternary": {
       "name": "Ternary operator",
