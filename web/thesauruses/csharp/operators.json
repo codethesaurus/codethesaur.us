@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "language": "C#",
+    "language_version": "9.0",
+    "language_name": "C#"
+  },
+  "categories": {
+    "Arithmetic Operators": [
+      "addition",
+      "addition_assignment",
+      "subtraction",
+      "subtraction_assignment",
+      "multiplication",
+      "multiplication_assignment",
+      "division",
+      "division_assignment",
+      "modulus",
+      "modulus_assignment",
+      "increment",
+      "decrement",
+      "exponential",
+      "factorial",
+      "absolute_value",
+      "percentage"
+    ],
+    "Equality/Comparison Operators": [
+      "equal_to",
+      "not_equal_to",
+      "less_than",
+      "less_than_or_equal_to",
+      "greater_than",
+      "greater_than_or_equal_to",
+      "null_coalescing",
+      "is",
+      "is_not"
+    ],
+    "Logical/Boolean/Bitwise Operators": [
+      "and",
+      "and_assignment",
+      "or",
+      "or_assignment",
+      "not",
+      "not_assignment",
+      "xor",
+      "xor_assignment",
+      "xnor",
+      "xnor_assignment",
+      "left_shift",
+      "left_shift_assignment",
+      "right_shift",
+      "right_shift_assignment"
+    ],
+    "Conditional Operators": [
+      "conditional_and",
+      "conditional_and_assignment",
+      "conditional_or",
+      "conditional_or_assignment",
+      "ternary",
+      "null_forgiving"
+    ]
+  },
+  "operators": {
+    "addition": {
+      "code": "+"
+    },
+    "addition_assignment": {
+      "code": "+="
+    },
+    "subtraction": {
+      "code": "-"
+    },
+    "subtraction_assignment": {
+      "code": "-="
+    },
+    "multiplication": {
+      "code": "*"
+    },
+    "multiplication_assignment": {
+      "code": "+="
+    },
+    "division": {
+      "code": "/"
+    },
+    "division_assignment": {
+      "code": "/="
+    },
+    "modulus": {
+      "code": "%"
+    },
+    "modulus_assignment": {
+      "code": "%="
+    },
+    "increment": {
+      "code": "++"
+    },
+    "decrement": {
+      "code": "--"
+    },
+    "exponential": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "factorial": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "absolute_value": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "percentage": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "equal_to": {
+      "code": "=="
+    },
+    "not_equal_to": {
+      "code": "!="
+    },
+    "less_than": {
+      "code": "<"
+    },
+    "less_than_or_equal_to": {
+      "code": "<="
+    },
+    "greater_than": {
+      "code": ">"
+    },
+    "greater_than_or_equal_to": {
+      "code": ">="
+    },
+    "null_coalescing": {
+      "code": "??"
+    },
+    "is": {
+      "code": "is"
+    },
+    "is_not": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "and": {
+      "code": "&"
+    },
+    "and_assignment": {
+      "code": "&="
+    },
+    "or": {
+      "code": "|"
+    },
+    "or_assignment": {
+      "code": "|="
+    },
+    "not": {
+      "code": "!"
+    },
+    "not_assignment": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "xor": {
+      "code": "^"
+    },
+    "xor_assignment": {
+      "code": "^="
+    },
+    "xnor": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "xnor_assignment": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "left_shift": {
+      "code": "<<"
+    },
+    "left_shift_assignment": {
+      "code": "<<="
+    },
+    "right_shift": {
+      "code": ">>"
+    },
+    "right_shift_assignment": {
+      "code": ">>="
+    },
+    "conditional_and": {
+      "code": "&&"
+    },
+    "conditional_and_assignment": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "conditional_or": {
+      "code": "||"
+    },
+    "conditional_or_assignment": {
+      "not-implemented": "true",
+      "code": ""
+    },
+    "ternary": {
+      "code": "?:"
+    },
+    "null_forgiving": {
+      "code": "!"
+    }
+  }
+}
