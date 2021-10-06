@@ -1,18 +1,17 @@
-name: JSON Validator
+name: JSON check
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - '**.json'
   pull_request:
-    branches:
-      - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-
+      - uses: actions/checkout@v2
       - name: json-syntax-check
-        uses: limitusus/json-syntax-check@v1.0.3
+        uses: limitusus/json-syntax-check@v1
+        with:
+          pattern: "\\.json$"
