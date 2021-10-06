@@ -14,8 +14,12 @@
       "multiplication_assignment",
       "division",
       "division_assignment",
+      "integer_division",
+      "integer_division_assignment",
       "modulus",
       "modulus_assignment",
+      "unary_plus",
+      "unary_minus",
       "increment",
       "decrement",
       "exponential",
@@ -88,6 +92,14 @@
       "name": "Division and assignment operator",
       "code": "/="
     },
+    "integer_division": {
+      "name": "Integer division operator",
+      "code": "div"
+    },
+    "integer_division_assignment": {
+      "name": "Integer division and assignment operator",
+      "not-implemented": "true"
+    },
     "modulus": {
       "name": "Modulus (remainder) operator",
       "code": "mod"
@@ -95,6 +107,14 @@
     "modulus_assignment": {
       "name": "Modulus and assignment operator",
       "not-implemented": "true"
+    },
+    "unary_plus": {
+      "name": "Unary plus operator",
+      "code": "+Infinite"
+    },
+    "unary_minus": {
+      "name": "Unary minus operator",
+      "code": "-Infinite"
     },
     "increment": {
       "name": "Increment (add 1) operator",
