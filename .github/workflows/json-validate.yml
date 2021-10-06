@@ -1,4 +1,4 @@
-name: JSON check
+name: JSON Check
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: json-syntax-check
+      - name: JSON Syntax Check
         uses: limitusus/json-syntax-check@v1
         with:
           pattern: "\\.json$"

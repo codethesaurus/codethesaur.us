@@ -1,4 +1,4 @@
-name: Run Django Unit Tests
+name: Unit Tester
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   run_tests:
-    name: Run Django Tests
+    name: Run Django Unit Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the branch
