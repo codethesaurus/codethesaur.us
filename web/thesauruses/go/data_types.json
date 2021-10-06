@@ -66,63 +66,56 @@
       "code": "uint64"
     },
     "signed_integer_as_object": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "unsigned_integer_as_object": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "signed_float_16_bit": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "unsigned_float_16_bit": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "signed_float_32_bit": {
       "code": "float32",
       "comment": "float32 uses single-precision floating point format to store values. Basically it is the set of all IEEE-754 32-bit floating-point numbers. The 32 bits are divided into – 1 bit sign, 8 bits exponent, and 23 bits mantissa. float 32 take half much size as float 64 and are comparatively faster on some machine architectures"
     },
     "unsigned_float_32_bit": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "signed_float_64_bit": {
       "code": "float64",
       "comment": "float64 uses a double-precision floating-point format to store values. Basically it is the set of all IEEE-754 64-bit floating-point numbers. The 64 bits are divided into 1-bit sign, 11 bits exponent, 52 bits mantissa. float64 takes twice as much size compared to float32 but can represent numbers more accurately than float32."
     },
     "unsigned_float_64_bit": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "signed_float_as_object": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "unsigned_float_as_object": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "character": {
-      "code": ""
+      "not-implemented": "true"
     },
     "string_as_object": {
+      "not-implemented": "true",
+      "comment": "unknown"
+    },
+    "string_as_array": {
       "code": "string",
       "comment": "string is a read only slice of bytes in golang"
     },
-    "string_as_array": {
-      "code": ""
-    },
     "complex_as_object": {
-      "code": ""
+      "not-implemented": "true"
     },
     "real_number_part": {
-      "code": ""
+      "not-implemented": "true"
     },
     "imaginary_number_part": {
-      "code": ""
+      "not-implemented": "true"
     }
   }
 }
