@@ -1,2 +1,18 @@
-- name: json-lint
-  uses: ocular-d/json-linter@0.0.2
+name: JSON Validator
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: json-lint
+        uses: ocular-d/json-linter@0.0.2
