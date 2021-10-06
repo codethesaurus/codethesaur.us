@@ -51,6 +51,10 @@
       "right_shift_assignment"
     ],
     "Conditional Operators": [
+      "conditional_and",
+      "conditional_and_assignment",
+      "conditional_or",
+      "conditional_or_assignment",
       "ternary",
       "null_forgiving"
     ]
@@ -210,6 +214,22 @@
     },
     "right_shift_assignment": {
       "name": "Right shift assignment operator",
+      "code": ""
+    },
+    "conditional_and": {
+      "name": "Conditional AND operator",
+      "code": ""
+    },
+    "conditional_and_assignment": {
+      "name": "Conditional AND assignment operator",
+      "code": ""
+    },
+    "conditional_or": {
+      "name": "Conditional OR operator",
+      "code": ""
+    },
+    "conditional_or_assignment": {
+      "name": "Conditional OR assignment operator",
       "code": ""
     },
     "ternary": {
