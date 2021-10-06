@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"language": "js",
-		"language_version": "ES2015",
+		"language_version": "ES2021",
 		"language_name": "JavaScript"
 	},
 	"categories": {
@@ -93,16 +93,13 @@
 			"code": "**"
 		},
 		"factorial": {
-			"not-implemented": "true",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"absolute_value": {
-			"not-implemented": "true",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"percentage": {
-			"not-implemented": "true",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"equal_to": {
 			"code": "==",
@@ -128,47 +125,40 @@
 			"code": "??"
 		},
 		"is": {
-			"name": "Is operator",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"is_not": {
-			"name": "Is not operator",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"and": {
 			"code": "&&"
 		},
 		"and_assignment": {
-			"not-implemented": "true",
-			"code": ""
+			"code": "&="
 		},
 		"or": {
 			"code": "||"
 		},
 		"or_assignment": {
-			"not-implemented": "true",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"not": {
 			"code": "!"
 		},
 		"not_assignment": {
-			"not-implemented": "true",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"xor": {
 			"code": "&"
 		},
 		"xor_assignment": {
-			"code": "&="
+			"code": "^="
 		},
 		"xnor": {
-			"not-implemented": "true",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"xnor_assignment": {
-			"not-implemented": "true",
-			"code": ""
+			"not-implemented": "true"
 		},
 		"left_shift": {
 			"code": "<<"
@@ -183,11 +173,10 @@
 			"code": ">>="
 		},
 		"ternary": {
-			"code": ":?"
+			"code": "?:"
 		},
 		"null_forgiving": {
-			"not-implemented": "true",
-			"code": ""
+			"not-implemented": "true"
 		}
 	}
 }
