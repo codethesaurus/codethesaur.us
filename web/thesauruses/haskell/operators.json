@@ -255,25 +255,24 @@
     },
     "left_shift": {
       "name": "Left shift bitwise operator",
-      "comment": "Haskell does not include bitwise operators by default, you need to import the Data.Bits module",
-      "code": "",
-      "not-implemented": "true"
+      "comment": "Haskell does not include bitwise operators by default, so you need to import the built-in Data.Bits module. This command shifts left if y is positive.",
+      "code": "import Data.Bits\nshift x y"
     },
     "left_shift_assignment": {
       "name": "Left shift assignment operator",
-      "comment": "Haskell does not include bitwise operators by default, you need to import the Data.Bits module",
-      "code": "",
+      "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
       "not-implemented": "true"
     },
     "right_shift": {
       "name": "Right shift bitwise operator",
       "code": "",
-      "not-implemented": "true"
+      "comment": "Haskell does not include bitwise operators by default, so you need to import the built-in Data.Bits module. This command shifts right if y is negative.",
+      "code": "import Data.Bits\nshift x (-y)"
     },
     "right_shift_assignment": {
       "name": "Right shift assignment operator",
-      "comment": "Haskell does not include bitwise operators by default, you need to import the Data.Bits module",
       "code": "",
+      "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
       "not-implemented": "true"
     },
     "ternary": {
