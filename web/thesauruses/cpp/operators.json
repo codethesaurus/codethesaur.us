@@ -96,19 +96,15 @@
     },
     "exponential": {
       "not-implemented": "true",
-      "code": ""
     },
     "factorial": {
       "not-implemented": "true",
-      "code": ""
     },
     "absolute_value": {
       "not-implemented": "true",
-      "code": ""
     },
     "percentage": {
       "not-implemented": "true",
-      "code": ""
     },
     "equal_to": {
       "code": "=="
@@ -130,36 +126,30 @@
     },
     "null_coalescing": {
       "not-implemented": "true",
-      "code": ""
     },
     "is": {
       "not-implemented": "true",
-      "code": ""
     },
     "is_not": {
       "not-implemented": "true",
-      "code": ""
     },
     "and": {
       "code": "&&"
     },
     "and_assignment": {
       "not-implemented": "true",
-      "code": ""
     },
     "or": {
       "code": "||"
     },
     "or_assignment": {
       "not-implemented": "true",
-      "code": ""
     },
     "not": {
       "code": "!"
     },
     "not_assignment": {
       "not-implemented": "true",
-      "code": ""
     },
     "xor": {
       "code": "^"
@@ -169,11 +159,9 @@
     },
     "xnor": {
       "not-implemented": "true",
-      "code": ""
     },
     "xnor_assignment": {
       "not-implemented": "true",
-      "code": ""
     },
     "left_shift": {
       "code": "<<"
@@ -192,7 +180,6 @@
     },
     "null_forgiving": {
       "not-implemented": "true",
-      "code": ""
     }
   }
 }
