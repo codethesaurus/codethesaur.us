@@ -61,53 +61,39 @@
   },
   "operators": {
     "addition": {
-      "name": "Addition operator",
       "code": "+"
     },
     "addition_assignment": {
       "name": "Addition and assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "subtraction": {
-      "name": "Subtraction operator",
       "code": "-"
     },
     "subtraction_assignment": {
-      "name": "Subtraction and assignment operator",
       "comment":"Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "multiplication": {
-      "name": "Multiplication operator",
       "code": "*"
     },
     "multiplication_assignment": {
-      "name": "Multiplication and assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "division": {
-      "name": "Division operator",
       "code": "/"
     },
     "division_assignment": {
-      "name": "Division and assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "integer_division": {
-      "name": "Integer division operator",
       "code": "div x y"
     },
     "integer_division_assignment": {
-      "name": "Integer division and assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "modulus": {
@@ -115,41 +101,31 @@
       "code": "mod x y"
     },
     "modulus_assignment": {
-      "name": "Modulus and assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "unary_plus": {
-      "name": "Unary plus operator",
       "comment": "There is only 1 unary operator in Haskell, unary minus",
-      "code": "",
       "not-implemented": "true"
     },
     "unary_minus": {
-      "name": "Unary minus operator",
       "code": "-x"
     },
     "increment": {
-      "name": "Increment (add 1) operator",
       "comment": "Haskell is a functional language, so it does not have an operator for incrementing in place.",
-      "code": "",
       "not-implemented": "true"
     },
     "decrement": {
-      "name": "Decrement (subtract 1) operator",
       "comment": "Haskell is a functional language, so it does not have an operator for decrementing in place.",
       "code": "",
       "not-implemented": "true"
     },
     "exponential": {
-      "name": "Exponential operator",
       "comment": "There are 3 exponentiation operators in Haskell, for integers, floating point numbers, and rational numbers respectively",
       "code": "x^y\nx^^y\nx**y"
     },
     "factorial": {
       "name": "Factorial operator",
-      "code": "",
       "not-implemented": "true"
     },
     "absolute_value": {
@@ -160,33 +136,25 @@
       "not-implemented": "true"
     },
     "equal_to": {
-      "name": "Equality operator",
       "code": "x == y"
     },
     "not_equal_to": {
-      "name": "Not equal to operator",
       "code": "x /= y"
     },
     "less_than": {
-      "name": "Less than operator",
       "code": "x < y"
     },
     "less_than_or_equal_to": {
-      "name": "Less than or equal to operator",
       "code": "x <= y"
     },
     "greater_than": {
-      "name": "Greater than operator",
       "code": "x > y"
     },
     "greater_than_or_equal_to": {
-      "name": "Greater than or equal to operator",
       "code": "x >= y"
     },
     "null_coalescing": {
-      "name": "Null coalescing operator",
       "comment": "Haskell does not have null references",
-      "code": "",
       "not-implemented": "true"
     },
     "is": {
@@ -206,84 +174,62 @@
       "code": "x && y"
     },
     "and_assignment": {
-      "name": "Logical AND assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "or": {
-      "name": "Logical OR operator",
       "code": "x || y"
     },
     "or_assignment": {
       "name": "Logical OR assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "not": {
       "name": "Logical NOT operator",
-      "code": "x /= y, \nnot x"
       "comment": "There are 2 valid logical not operators in Haskell.",
       "code": "x /= y \nnot x"
     },
     "not_assignment": {
-      "name": "Logical NOT assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "xor": {
-      "name": "Logical XOR operator",
       "code": "",
       "not-implemented": "true"
     },
     "xor_assignment": {
-      "name": "Logical XOR assignment operator",
       "code": "",
       "not-implemented": "true"
     },
     "xnor": {
-      "name": "Logical XNOR operator",
       "code": "x == x"
     },
     "xnor_assignment": {
-      "name": "Logical XNOR assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "code": "",
       "not-implemented": "true"
     },
     "left_shift": {
-      "name": "Left shift bitwise operator",
       "comment": "Haskell does not include bitwise operators by default, so you need to import the built-in Data.Bits module. This command shifts left if y is positive.",
       "code": "import Data.Bits\nshift x y"
     },
     "left_shift_assignment": {
-      "name": "Left shift assignment operator",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
       "not-implemented": "true"
     },
     "right_shift": {
-      "name": "Right shift bitwise operator",
-      "code": "",
       "comment": "Haskell does not include bitwise operators by default, so you need to import the built-in Data.Bits module. This command shifts right if y is negative.",
       "code": "import Data.Bits\nshift x (-y)"
     },
     "right_shift_assignment": {
-      "name": "Right shift assignment operator",
-      "code": "",
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
       "not-implemented": "true"
     },
     "ternary": {
-      "name": "Ternary operator",
-      "code": "",
       "not-implemented": "true"
     },
     "null_forgiving": {
-      "name": "Null forgiving operator",
       "comment": "Haskell does not have null references",
-      "code": "",
       "not-implemented": "true"
     }
   }
