@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "Java",
+    "language_version": "15",
+    "language_name": "Java"
   },
   "categories": {
     "Arithmetic Operators": [
@@ -90,15 +90,12 @@
       "code": "--"
     },
     "exponential": {
-      "code": "",
       "not-implemented": "true"
     },
     "factorial": {
-      "code": "",
       "not-implemented": "true"
     },
     "absolute_value": {
-      "code": "",
       "not-implemented": "true"
     },
     "percentage": {
@@ -123,29 +120,24 @@
       "code": ">="
     },
     "null_coalescing": {
-      "code": "",
       "not-implemented": "true"
     },
     "is": {
-      "code": "",
       "not-implemented": "true"
     },
     "is_not": {
-      "code": "",
       "not-implemented": "true"
     },
     "and": {
       "code": "&&"
     },
     "and_assignment": {
-      "code": "",
       "not-implemented": "true"
     },
     "or": {
       "code": "||"
     },
     "or_assignment": {
-      "code": "",
       "not-implemented": "true"
     },
     "not": {
@@ -161,11 +153,9 @@
       "code": "^="
     },
     "xnor": {
-      "code": "",
       "not-implemented": "true"
     },
     "xnor_assignment": {
-      "code": "",
       "not-implemented": "true"
     },
     "left_shift": {
@@ -184,7 +174,6 @@
       "code": "? :"
     },
     "null_forgiving": {
-      "code": "",
       "not-implemented": "true"
     }
   }
