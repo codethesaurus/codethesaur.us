@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "2010",
+    "language_name": "Haskell"
+  },
+  "categories": {
+    "Arithmetic Operators": [
+      "addition",
+      "addition_assignment",
+      "subtraction",
+      "subtraction_assignment",
+      "multiplication",
+      "multiplication_assignment",
+      "division",
+      "division_assignment",
+      "integer_division",
+      "integer_division_assignment",
+      "modulus",
+      "modulus_assignment",
+      "unary_plus",
+      "unary_minus",
+      "increment",
+      "decrement",
+      "exponential",
+      "factorial",
+      "absolute_value",
+      "percentage"
+    ],
+    "Equality/Comparison Operators": [
+      "equal_to",
+      "not_equal_to",
+      "less_than",
+      "less_than_or_equal_to",
+      "greater_than",
+      "greater_than_or_equal_to",
+      "null_coalescing",
+      "is",
+      "is_not"
+    ],
+    "Logical/Boolean/Bitwise Operators": [
+      "and",
+      "and_assignment",
+      "or",
+      "or_assignment",
+      "not",
+      "not_assignment",
+      "xor",
+      "xor_assignment",
+      "xnor",
+      "xnor_assignment",
+      "left_shift",
+      "left_shift_assignment",
+      "right_shift",
+      "right_shift_assignment"
+    ],
+    "Conditional Operators": [
+      "ternary",
+      "null_forgiving"
+    ]
+  },
+  "operators": {
+    "addition": {
+      "name": "Addition operator",
+      "code": "3+2"
+    },
+    "addition_assignment": {
+      "name": "Addition and assignment operator",
+      "code": "",
+      "not-implemented": "true"
+    },
+    "subtraction": {
+      "name": "Subtraction operator",
+      "code": "6-4"
+    },
+    "subtraction_assignment": {
+      "name": "Subtraction and assignment operator",
+      "comment":"Haskell is a functional language, so it does not allow variable reassignment. This introduces a new variable under the same name, shadowing the old variable.",
+      "code": "i=0 \ni <- return (i+1)"
+    },
+    "multiplication": {
+      "name": "Multiplication operator",
+      "code": "3*2"
+    },
+    "multiplication_assignment": {
+      "name": "Multiplication and assignment operator",
+      "code": ""
+    },
+    "division": {
+      "name": "Division operator",
+      "code": "6/2"
+    },
+    "division_assignment": {
+      "name": "Division and assignment operator",
+      "code": ""
+    },
+    "integer_division": {
+      "name": "Integer division operator",
+      "code": "div 7 2"
+    },
+    "integer_division_assignment": {
+      "name": "Integer division and assignment operator",
+      "code": "",
+      "not-implemented": "true"
+    },
+    "modulus": {
+      "name": "Modulus (remainder) operator",
+      "code": "mod 7 2"
+    },
+    "modulus_assignment": {
+      "name": "Modulus and assignment operator",
+      "code": ""
+    },
+    "unary_plus": {
+      "name": "Unary plus operator",
+      "comment": "There is only 1 unary operator in Haskell, unary minus",
+      "code": "",
+      "not-implemented": "true"
+    },
+    "unary_minus": {
+      "name": "Unary minus operator",
+      "code": "-3"
+    },
+    "increment": {
+      "name": "Increment (add 1) operator",
+      "code": ""
+    },
+    "decrement": {
+      "name": "Decrement (subtract 1) operator",
+      "code": ""
+    },
+    "exponential": {
+      "name": "Exponential operator",
+      "comment": "There are 3 exponentiation operators in Haskell, for integers, floating point numbers, and rational numbers respectively",
+      "code": "3^2, 3^^2, 3**2"
+    },
+    "factorial": {
+      "name": "Factorial operator",
+      "code": "",
+      "not-implemented": "true"
+    },
+    "absolute_value": {
+      "name": "Absolute value operator",
+      "code": "abs (-10)"
+    },
+    "percentage": {
+      "name": "Percentage operator",
+      "code": ""
+    },
+    "equal_to": {
+      "name": "Equality operator",
+      "code": "3 == 2"
+    },
+    "not_equal_to": {
+      "name": "Not equal to operator",
+      "code": "3 /= 2"
+    },
+    "less_than": {
+      "name": "Less than operator",
+      "code": "2 < 3"
+    },
+    "less_than_or_equal_to": {
+      "name": "Less than or equal to operator",
+      "code": "2 <= 3"
+    },
+    "greater_than": {
+      "name": "Greater than operator",
+      "code": "3 > 2"
+    },
+    "greater_than_or_equal_to": {
+      "name": "Greater than or equal to operator",
+      "code": "3 >= 2"
+    },
+    "null_coalescing": {
+      "name": "Null coalescing operator",
+      "comment": "Haskell does not have null references",
+      "code": "",
+      "not-implemented": "true"
+    },
+    "is": {
+      "name": "Is operator",
+      "code": "",
+      "comment": "Haskell doesn't have a notion of identity/reference equality.",
+      "not-implemented": "true"
+    },
+    "is_not": {
+      "name": "Is not operator",
+      "code": "",
+      "comment": "Haskell doesn't have a notion of identity/reference equality.",
+      "not-implemented": "true"
+    },
+    "and": {
+      "name": "Logical AND operator",
+      "code": "True && False"
+    },
+    "and_assignment": {
+      "name": "Logical AND assignment operator",
+      "code": ""
+    },
+    "or": {
+      "name": "Logical OR operator",
+      "code": "True || False"
+    },
+    "or_assignment": {
+      "name": "Logical OR assignment operator",
+      "code": ""
+    },
+    "not": {
+      "name": "Logical NOT operator",
+      "code": "True /= False, \nnot True"
+    },
+    "not_assignment": {
+      "name": "Logical NOT assignment operator",
+      "code": ""
+    },
+    "xor": {
+      "name": "Logical XOR operator",
+      "code": "",
+      "not-implemented": "true"
+    },
+    "xor_assignment": {
+      "name": "Logical XOR assignment operator",
+      "code": "",
+      "not-implemented": "true"
+    },
+    "xnor": {
+      "name": "Logical XNOR operator",
+      "code": "True == True"
+    },
+    "xnor_assignment": {
+      "name": "Logical XNOR assignment operator",
+      "code": ""
+    },
+    "left_shift": {
+      "name": "Left shift bitwise operator",
+      "code": ""
+    },
+    "left_shift_assignment": {
+      "name": "Left shift assignment operator",
+      "comment": "Haskell does not bitwise operators by default, you need to import the Data.Bits module",
+      "code": ""
+    },
+    "right_shift": {
+      "name": "Right shift bitwise operator",
+      "code": ""
+    },
+    "right_shift_assignment": {
+      "name": "Right shift assignment operator",
+      "code": ""
+    },
+    "ternary": {
+      "name": "Ternary operator",
+      "code": "if x == y then a else b"
+    },
+    "null_forgiving": {
+      "name": "Null forgiving operator",
+      "comment": "Haskell does not have null references",
+      "code": "",
+      "not-implemented": "true"
+    }
+  }
+}
