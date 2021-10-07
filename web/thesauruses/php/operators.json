@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "php",
+    "language_version": "7.4",
+    "language_name": "PHP"
   },
   "categories": {
     "Arithmetic Operators": [
@@ -45,127 +45,98 @@
   },
   "operators": {
     "addition": {
-      "name": "Addition operator",
       "code": "$operand1 + $operand2"
     },
     "addition_assignment": {
-      "name": "Addition and assignment operator",
       "code": "$operand1 += $operand2"
     },
     "subtraction": {
-      "name": "Subtraction operator",
       "code": "$operand1 - $operand2"
     },
     "subtraction_assignment": {
-      "name": "Subtraction and assignment operator",
       "code": "$operand1 -= $operand2"
     },
     "multiplication": {
-      "name": "Multiplication operator",
       "code": "$operand1 * $operand2"
     },
     "multiplication_assignment": {
-      "name": "Multiplication and assignment operator",
       "code": "$operand1 *= $operand2"
     },
     "division": {
-      "name": "Division operator",
       "code": "$operand1 / $operand2"
     },
     "division_assignment": {
-      "name": "Division and assignment operator",
       "code": "$operand1 /= $operand2"
     },
     "integer_division": {
-      "name": "Integer division operator",
       "code": "intdiv($operand1,$operand2)"
     },
     "modulus": {
-      "name": "Modulus (remainder) operator",
       "code": "$operand1 % $operand2"
     },
     "modulus_assignment": {
-      "name": "Modulus and assignment operator",
       "code": "$operand1 %= $operand2"
     },
     "unary_plus": {
-      "name": "Unary plus operator",
       "code": "+$operand1"
     },
     "unary_minus": {
-      "name": "Unary minus operator",
       "code": "-$operand1"
     },
     "increment": {
-      "name": "Increment (add 1) operator",
       "code": "$operand1++"
     },
     "decrement": {
-      "name": "Decrement (subtract 1) operator",
       "code": "$operand1--"
     },
     "exponential": {
-      "name": "Exponential operator",
       "code": "$operand1 ** $operand2"
     },
     "absolute_value": {
-      "name": "Absolute value operator",
       "code": "abs($operand1)"
     },
     "equal_to": {
-      "name": "Equality operator",
       "code": "$operand1 == $operand2"
     },
     "not_equal_to": {
-      "name": "Not equal to operator",
       "code": "$operand1 != $operand2"
     },
     "less_than": {
-      "name": "Less than operator",
       "code": "$operand1 < $operand2"
     },
     "less_than_or_equal_to": {
-      "name": "Less than or equal to operator",
       "code": "$operand1 <= $operand2"
     },
     "greater_than": {
-      "name": "Greater than operator",
       "code": "$operand1 > $operand2"
     },
     "greater_than_or_equal_to": {
-      "name": "Greater than or equal to operator",
       "code": "$operand1 >= $operand2"
     },
     "null_coalescing": {
-      "name": "Null coalescing operator",
       "code": "$operand1 ?? $operand2"
     },
     "and": {
-      "name": "Logical AND operator",
-      "code": "$operand1 and $operand2  $operand1 && $operand2"
+      "code": "$operand1 and $operand2 \n  $operand1 && $operand2",
+      "comment": "You can use any of them"
     },
     "or": {
-      "name": "Logical OR operator",
-      "code": "$operand1 or $operand2  $operand1 || $operand2"
+      "code": "$operand1 or $operand2 \n  $operand1 || $operand2",
+      "comment": "You can use any of them"
     },
     "not": {
-      "name": "Logical NOT operator",
       "code": "!$operand1"
     },
     "xor": {
-      "name": "Logical XOR operator",
       "code": "^$operand1"
     },
     "left_shift": {
-      "name": "Left shift bitwise operator",
       "code": "<<$operand1"
     },
     "right_shift": {
-      "name": "Right shift bitwise operator",
       "code": ">>$operand1"
     },
     "ternary": {
-      "name": "Ternary operator",
       "code": "$operand1 ? doTrue : doFalse"
     }
   }
