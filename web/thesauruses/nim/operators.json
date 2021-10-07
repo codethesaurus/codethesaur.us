@@ -61,185 +61,140 @@
   },
   "operators": {
     "addition": {
-      "name": "Addition operator",
       "code": "+"
     },
     "addition_assignment": {
-      "name": "Addition and assignment operator",
       "code": "+="
     },
     "subtraction": {
-      "name": "Subtraction operator",
       "code": "-"
     },
     "subtraction_assignment": {
-      "name": "Subtraction and assignment operator",
       "code": "-="
     },
     "multiplication": {
-      "name": "Multiplication operator",
       "code": "*"
     },
     "multiplication_assignment": {
-      "name": "Multiplication and assignment operator",
       "code": "*="
     },
     "division": {
-      "name": "Division operator",
       "code": "/"
     },
     "division_assignment": {
-      "name": "Division and assignment operator",
       "code": "/="
     },
     "integer_division": {
-      "name": "Integer division operator",
       "code": "div"
     },
     "integer_division_assignment": {
-      "name": "Integer division and assignment operator",
       "not-implemented": "true"
     },
     "modulus": {
-      "name": "Modulus (remainder) operator",
       "code": "mod"
     },
     "modulus_assignment": {
-      "name": "Modulus and assignment operator",
       "not-implemented": "true"
     },
     "unary_plus": {
-      "name": "Unary plus operator",
       "code": "+Infinite"
     },
     "unary_minus": {
-      "name": "Unary minus operator",
       "code": "-Infinite"
     },
     "increment": {
-      "name": "Increment (add 1) operator",
       "code": "inc"
     },
     "decrement": {
-      "name": "Decrement (subtract 1) operator",
       "code": "dec"
     },
     "exponential": {
-      "name": "Exponential operator",
       "code": "^"
     },
     "factorial": {
-      "name": "Factorial operator",
       "code": "fac"
     },
     "absolute_value": {
-      "name": "Absolute value operator",
       "code": "abs"
     },
     "percentage": {
-      "name": "Percentage operator",
       "code": ""
     },
     "equal_to": {
-      "name": "Equality operator",
       "code": "=="
     },
     "not_equal_to": {
-      "name": "Not equal to operator",
       "code": "!="
     },
     "less_than": {
-      "name": "Less than operator",
       "code": "<"
     },
     "less_than_or_equal_to": {
-      "name": "Less than or equal to operator",
       "code": "<="
     },
     "greater_than": {
-      "name": "Greater than operator",
       "code": ">"
     },
     "greater_than_or_equal_to": {
-      "name": "Greater than or equal to operator",
       "code": ">="
     },
     "null_coalescing": {
-      "name": "Null coalescing operator",
       "code": "?.",
       "comment": "'not null' annotation allows null-free programming"
     },
     "is": {
-      "name": "Is operator",
       "code": "is"
     },
     "is_not": {
-      "name": "Is not operator",
       "code": "isnot"
     },
     "and": {
-      "name": "Logical AND operator",
       "code": "and"
     },
     "and_assignment": {
-      "name": "Logical AND assignment operator",
       "not-implemented": "true"
     },
     "or": {
-      "name": "Logical OR operator",
       "code": "or"
     },
     "or_assignment": {
-      "name": "Logical OR assignment operator",
       "not-implemented": "true"
     },
     "not": {
-      "name": "Logical NOT operator",
       "code": "not"
     },
     "not_assignment": {
-      "name": "Logical NOT assignment operator",
       "not-implemented": "true"
     },
     "xor": {
-      "name": "Logical XOR operator",
       "code": "xor"
     },
     "xor_assignment": {
-      "name": "Logical XOR assignment operator",
       "not-implemented": "true"
     },
     "xnor": {
-      "name": "Logical XNOR operator",
       "code": ""
     },
     "xnor_assignment": {
-      "name": "Logical XNOR assignment operator",
       "not-implemented": "true"
     },
     "left_shift": {
-      "name": "Left shift bitwise operator",
       "code": "shl"
     },
     "left_shift_assignment": {
-      "name": "Left shift assignment operator",
       "not-implemented": "true"
     },
     "right_shift": {
-      "name": "Right shift bitwise operator",
       "code": "shr"
     },
     "right_shift_assignment": {
-      "name": "Right shift assignment operator",
       "not-implemented": "true"
     },
     "ternary": {
-      "name": "Ternary operator",
       "code": "if conditional: value0 else: value1",
       "comment": "Ternary operator is just if...else inline"
     },
     "null_forgiving": {
-      "name": "Null forgiving operator",
       "not-implemented": "true",
       "comment": "'not null' annotation allows null-free programming"
     }
