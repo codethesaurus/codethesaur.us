@@ -14,8 +14,12 @@
       "multiplication_assignment",
       "division",
       "division_assignment",
+      "integer_division",
+      "integer_division_assignment",
       "modulus",
       "modulus_assignment",
+      "unary_plus",
+      "unary_minus",
       "increment",
       "decrement",
       "exponential",
@@ -51,10 +55,6 @@
       "right_shift_assignment"
     ],
     "Conditional Operators": [
-      "conditional_and",
-      "conditional_and_assignment",
-      "conditional_or",
-      "conditional_or_assignment",
       "ternary",
       "null_forgiving"
     ]
@@ -84,11 +84,23 @@
     "division_assignment": {
       "code": "/="
     },
+    "integer_division": {
+      "not-implemented": "true"
+    },
+    "integer_division_assignment": {
+      "not-implemented": "true"
+    },
     "modulus": {
       "code": "%"
     },
     "modulus_assignment": {
       "code": "%="
+    },
+    "unary_plus": {
+      "code": "+"
+    },
+    "unary_minus": {
+      "code": "-"
     },
     "increment": {
       "code": "++"
@@ -97,20 +109,16 @@
       "code": "--"
     },
     "exponential": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "factorial": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "absolute_value": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "percentage": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "equal_to": {
       "code": "=="
@@ -137,8 +145,7 @@
       "code": "is"
     },
     "is_not": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "and": {
       "code": "&"
@@ -156,8 +163,7 @@
       "code": "!"
     },
     "not_assignment": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "xor": {
       "code": "^"
@@ -166,12 +172,10 @@
       "code": "^="
     },
     "xnor": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "xnor_assignment": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "left_shift": {
       "code": "<<"
@@ -184,20 +188,6 @@
     },
     "right_shift_assignment": {
       "code": ">>="
-    },
-    "conditional_and": {
-      "code": "&&"
-    },
-    "conditional_and_assignment": {
-      "not-implemented": "true",
-      "code": ""
-    },
-    "conditional_or": {
-      "code": "||"
-    },
-    "conditional_or_assignment": {
-      "not-implemented": "true",
-      "code": ""
     },
     "ternary": {
       "code": "?:"

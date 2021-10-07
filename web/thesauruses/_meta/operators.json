@@ -14,8 +14,12 @@
       "multiplication_assignment",
       "division",
       "division_assignment",
+      "integer_division",
+      "integer_division_assignment",
       "modulus",
       "modulus_assignment",
+      "unary_plus",
+      "unary_minus",
       "increment",
       "decrement",
       "exponential",
@@ -50,14 +54,7 @@
       "right_shift",
       "right_shift_assignment"
     ],
-    "Conditional Operators": [
-      "conditional_and",
-      "conditional_and_assignment",
-      "conditional_or",
-      "conditional_or_assignment",
-      "ternary",
-      "null_forgiving"
-    ]
+    "Conditional Operators": ["ternary", "null_forgiving"]
   },
   "operators": {
     "addition": {
@@ -92,12 +89,28 @@
       "name": "Division and assignment operator",
       "code": ""
     },
+    "integer_division": {
+      "name": "Integer division operator",
+      "code": ""
+    },
+    "integer_division_assignment": {
+      "name": "Integer division and assignment operator",
+      "code": ""
+    },
     "modulus": {
       "name": "Modulus (remainder) operator",
       "code": ""
     },
     "modulus_assignment": {
       "name": "Modulus and assignment operator",
+      "code": ""
+    },
+    "unary_plus": {
+      "name": "Unary plus operator",
+      "code": ""
+    },
+    "unary_minus": {
+      "name": "Unary minus operator",
       "code": ""
     },
     "increment": {
@@ -214,22 +227,6 @@
     },
     "right_shift_assignment": {
       "name": "Right shift assignment operator",
-      "code": ""
-    },
-    "conditional_and": {
-      "name": "Conditional AND operator",
-      "code": ""
-    },
-    "conditional_and_assignment": {
-      "name": "Conditional AND assignment operator",
-      "code": ""
-    },
-    "conditional_or": {
-      "name": "Conditional OR operator",
-      "code": ""
-    },
-    "conditional_or_assignment": {
-      "name": "Conditional OR assignment operator",
       "code": ""
     },
     "ternary": {
