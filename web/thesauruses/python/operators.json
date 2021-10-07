@@ -87,27 +87,22 @@
       "code": "%="
     },
     "increment": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "decrement": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"      
     },
     "exponential": {
       "code": "**"
     },
     "factorial": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "absolute_value": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "percentage": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "equal_to": {
       "code": "=="
@@ -128,8 +123,7 @@
       "code": ">="
     },
     "null_coalescing": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "is": {
       "code": "is"
@@ -141,37 +135,31 @@
       "code": "and"
     },
     "and_assignment": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "or": {
       "code": "or"
     },
     "or_assignment": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "not": {
       "code": "not"
     },
     "not_assignment": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "xor": {
       "code": "^"
     },
     "xor_assignment": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "xnor": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "xnor_assignment": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "left_shift": {
       "code": "<<"
@@ -189,8 +177,7 @@
       "code": "value1 if condition else value2"
     },
     "null_forgiving": {
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     }
   }
 }
