@@ -145,7 +145,7 @@
     "exponential": {
       "name": "Exponential operator",
       "comment": "There are 3 exponentiation operators in Haskell, for integers, floating point numbers, and rational numbers respectively",
-      "code": "x^y, x^^y, x**y"
+      "code": "x^y\nx^^y\nx**y"
     },
     "factorial": {
       "name": "Factorial operator",
@@ -157,8 +157,7 @@
       "code": "abs (-x)"
     },
     "percentage": {
-      "name": "Percentage operator",
-      "code": ""
+      "not-implemented": "true"
     },
     "equal_to": {
       "name": "Equality operator",
@@ -225,6 +224,8 @@
     "not": {
       "name": "Logical NOT operator",
       "code": "x /= y, \nnot x"
+      "comment": "There are 2 valid logical not operators in Haskell.",
+      "code": "x /= y \nnot x"
     },
     "not_assignment": {
       "name": "Logical NOT assignment operator",
