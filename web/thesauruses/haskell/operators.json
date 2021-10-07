@@ -277,7 +277,6 @@
     },
     "ternary": {
       "name": "Ternary operator",
-      "comment": "Haskell does not include bitwise operators by default, you need to import the Data.Bits module",
       "code": "",
       "not-implemented": "true"
     },
