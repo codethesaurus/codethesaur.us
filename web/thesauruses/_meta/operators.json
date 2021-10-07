@@ -49,14 +49,10 @@
       "xor_assignment",
       "xnor",
       "xnor_assignment",
-      "binary_and",
-      "binary_or",
-      "binary_ones_complement",
       "left_shift",
       "left_shift_assignment",
       "right_shift",
-      "right_shift_assignment",
-      "right_zero_fill"
+      "right_shift_assignment"
     ],
     "Conditional Operators": [
       "ternary",
@@ -220,18 +216,6 @@
       "name": "Logical XNOR assignment operator",
       "code": ""
     },
-    "binary_and": {
-      "name": "Binary AND operator",
-      "code": ""
-    },
-    "binary_or": {
-      "name": "Binary OR operator",
-      "code": ""
-    },
-    "binary_ones_complement": {
-      "name": "Binary Ones Complement Operator",
-      "code": ""
-    },
     "left_shift": {
       "name": "Left shift bitwise operator",
       "code": ""
@@ -246,10 +230,6 @@
     },
     "right_shift_assignment": {
       "name": "Right shift assignment operator",
-      "code": ""
-    },
-    "right_zero_fill": {
-      "name": "Shift right zero fill operator",
       "code": ""
     },
     "ternary": {
