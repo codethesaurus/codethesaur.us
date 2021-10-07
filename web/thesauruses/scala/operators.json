@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "language": "scala",
+    "language_version": "2.13.x",
+    "language_name": "Scala"
+  },
+  "categories": {
+    "Arithmetic Operators": [
+      "addition",
+      "addition_assignment",
+      "subtraction",
+      "subtraction_assignment",
+      "multiplication",
+      "multiplication_assignment",
+      "division",
+      "division_assignment",
+      "integer_division",
+      "integer_division_assignment",
+      "modulus",
+      "modulus_assignment",
+      "unary_plus",
+      "unary_minus",
+      "increment",
+      "decrement",
+      "exponential",
+      "factorial",
+      "absolute_value",
+      "percentage"
+    ],
+    "Equality/Comparison Operators": [
+      "equal_to",
+      "not_equal_to",
+      "less_than",
+      "less_than_or_equal_to",
+      "greater_than",
+      "greater_than_or_equal_to",
+      "null_coalescing",
+      "is",
+      "is_not"
+    ],
+    "Logical/Boolean/Bitwise Operators": [
+      "and",
+      "and_assignment",
+      "or",
+      "or_assignment",
+      "not",
+      "not_assignment",
+      "xor",
+      "xor_assignment",
+      "xnor",
+      "xnor_assignment",
+      "left_shift",
+      "left_shift_assignment",
+      "right_shift",
+      "right_shift_assignment"
+    ],
+    "Conditional Operators": [
+      "ternary",
+      "null_forgiving"
+    ]
+  },
+  "operators": {
+    "addition": {
+      "code": "+"
+    },
+    "addition_assignment": {
+      "code": "+="
+    },
+    "subtraction": {
+      "code": "-"
+    },
+    "subtraction_assignment": {
+      "code": "-="
+    },
+    "multiplication": {
+      "code": "*"
+    },
+    "multiplication_assignment": {
+      "code": "*="
+    },
+    "division": {
+      "code": "/"
+    },
+    "division_assignment": {
+      "code": "/="
+    },
+    "integer_division": {
+      "not-implemented": "true"
+    },
+    "integer_division_assignment": {
+      "not-implemented": "true"
+    },
+    "modulus": {
+      "code": "%"
+    },
+    "modulus_assignment": {
+      "code": "%="
+    },
+    "unary_plus": {
+      "not-implemented": "true"
+    },
+    "unary_minus": {
+      "not-implemented": "true"
+    },
+    "increment": {
+      "code": "++"
+    },
+    "decrement": {
+      "code": "--"
+    },
+    "exponential": {
+      "not-implemented": "true"
+    },
+    "factorial": {
+      "not-implemented": "true"
+    },
+    "absolute_value": {
+      "not-implemented": "true"
+    },
+    "percentage": {
+      "not-implemented": "true"
+    },
+    "equal_to": {
+      "code": "==",
+      "comment": "There is also === which you use to test whether two object references both refer to the same object instance"
+    },
+    "not_equal_to": {
+      "code": "!=",
+      "comment": "There is also !== which you use to test whether two object references both refer to the same object instance"
+    },
+    "less_than": {
+      "code": "<"
+    },
+    "less_than_or_equal_to": {
+      "code": "<="
+    },
+    "greater_than": {
+      "code": ">"
+    },
+    "greater_than_or_equal_to": {
+      "code": ">="
+    },
+    "null_coalescing": {
+      "code": "??"
+    },
+    "is": {
+      "not-implemented": "true"
+    },
+    "is_not": {
+      "not-implemented": "true"
+    },
+    "and": {
+      "code": "&&"
+    },
+    "and_assignment": {
+      "not-implemented": "true"
+    },
+    "or": {
+      "code": "||"
+    },
+    "or_assignment": {
+      "not-implemented": "true"
+    },
+    "not": {
+      "code": "!"
+    },
+    "not_assignment": {
+      "not-implemented": "true"
+    },
+    "xor": {
+      "code": "^"
+    },
+    "xor_assignment": {
+      "not-implemented": "true"
+    },
+    "xnor": {
+      "not-implemented": "true"
+    },
+    "xnor_assignment": {
+      "not-implemented": "true"
+    },    
+    "left_shift": {
+      "code": "<<"
+    },
+    "left_shift_assignment": {
+      "not-implemented": "true"
+    },
+    "right_shift": {
+      "code": ">>"
+    },
+    "right_shift_assignment": {
+      "not-implemented": "true"
+    },
+    "ternary": {
+      "code": "?:"
+    },
+    "null_forgiving": {
+      "not-implemented": "true"
+    }
+  }
+} 
