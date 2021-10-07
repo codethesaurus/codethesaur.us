@@ -53,10 +53,6 @@
       "name": "Ternary conditional",
       "code": ""
     },
-    "list_comprehension": {
-      "name": "List Comprehension",
-      "code": ""
-    },
     "while_loop": {
       "name": "While loop",
       "code": ""
@@ -79,6 +75,10 @@
     },
     "foreach_loop": {
       "name": "Foreach loop",
+      "code": ""
+    },
+    "list_comprehension": {
+      "name": "List Comprehension",
       "code": ""
     },
     "each_iteration": {

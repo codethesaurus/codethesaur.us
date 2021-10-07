@@ -40,13 +40,16 @@
       "code": "expression_if_true if condition else expression_if_false"
     },
     "while_loop": {
+      "comment": "Two ways to use while loops. The second block illustrates the use of `break` to break out of the while loop.",
       "code": "while condition:\n    statements\n\nwhile True:\n    statements\n    if(conditional):\n        break"
     },
     "foreach_loop": {
+      "comment": "Two ways to use the for-each loop. The second block illustrates the use of for-each when the iterable contains tuples of 2 items.",
       "code": "for iterator in iterable:\n    statements\n\nfor first, second in iterable_of_tuples:\n    foo(first)\n    bar(second)"
     },
     "list_comprehension": {
-      "code": "[foo(item) for item in iterable]\n[foo(item) for item in iterable if conditional(item)]"
+      "comment": "The second block illustrates the use of `if` to filter items in the list comprehension.",
+      "code": "new_list = [foo(item) for item in iterable]\nnew_list = [foo(item) for item in iterable if conditional(item)]"
     },
     "map_iteration": {
       "code": "map(function, iterable)"
