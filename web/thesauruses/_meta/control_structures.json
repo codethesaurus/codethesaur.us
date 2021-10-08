@@ -19,7 +19,8 @@
       "until_loop",
       "do_until_loop",
       "for_loop",
-      "foreach_loop"
+      "foreach_loop",
+      "list_comprehension"
     ],
     "Iterations": [
       "each_iteration",
@@ -74,6 +75,10 @@
     },
     "foreach_loop": {
       "name": "Foreach loop",
+      "code": ""
+    },
+    "list_comprehension": {
+      "name": "List Comprehension",
       "code": ""
     },
     "each_iteration": {
