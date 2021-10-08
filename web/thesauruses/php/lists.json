@@ -351,7 +351,7 @@
       "comment": "Sorttipe is optional\n possible values are\n0 = SORT_REGULAR - Default. Compare items normally (don't change types) \n 1 = SORT_NUMERIC - Compare items numerically\n2 = SORT_STRING - Compare items as strings\n3 = SORT_LOCALE_STRING - Compare items as strings, based on current locale\n4 = SORT_NATURAL - Compare items as strings using natural ordering\n5 = SORT_FLAG_CASE -"
     },
     "shuffle_list": {
-      "code": "suffle($array)"
+      "code": "shuffle($array)"
     },
     "reverse_list": {
       "code": "array_reverse($array)"
