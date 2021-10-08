@@ -125,7 +125,6 @@
       "code": "array_push($array,$value)"
     },
     "ordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "",
       "not-implemented": "true"
     },
     "access_element_in_ordered_mutable_list": {
@@ -138,7 +137,6 @@
       "code": "array_push($array,$value)"
     },
     "insert_into_middle_of_ordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "erase_element_at_beginning_of_ordered_mutable_list": {
@@ -148,206 +146,156 @@
       "code": "array_pop($array)"
     },
     "erase_element_in_middle_of_ordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "swap_elements_in_ordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "delete_ordered_mutable_list": {
       "code": "unset($array)"
     },
     "name_of_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "create_a_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "unordered_mutable_list_start_number": {
-      "code": "",
       "not-implemented": "true"
     },
     "unordered_mutable_list_can_be_appended": {
-      "code": "",
       "not-implemented": "true"
     },
     "unordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "",
       "not-implemented": "true"
     },
     "access_element_in_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "insert_into_beginning_of_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "insert_into_end_of_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "insert_into_middle_of_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "erase_element_at_end_of_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "swap_elements_in_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "delete_unordered_mutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "name_of_ordered_immutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "create_a_ordered_immutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "ordered_immutable_list_start_number": {
-      "code": "",
       "not-implemented": "true"
     },
     "access_element_in_ordered_immutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "delete_ordered_immutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "name_of_unordered_immutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "create_a_unordered_immutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "unordered_immutable_list_start_number": {
-      "code": "",
       "not-implemented": "true"
     },
     "access_element_in_unordered_immutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "delete_unordered_immutable_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "name_of_mutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "create_a_mutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "insert_element_to_mutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "erase_element_from_mutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "delete_mutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "name_of_immutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "create_a_immutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "insert_element_to_immutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "erase_element_from_immutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "delete_immutable_hashed_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "create_a_mutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "get_key_from_mutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "get_value_from_mutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "get_all_keys_from_mutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "get_all_values_from_mutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "swap_key_and_value_in_mutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "delete_mutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "create_a_immutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "get_key_from_immutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "get_value_from_immutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "get_all_keys_from_immutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "get_all_values_from_immutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "swap_key_and_value_in_immutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "delete_immutable_set": {
-      "code": "",
       "not-implemented": "true"
     },
     "find_element_at_position": {
@@ -372,7 +320,6 @@
       "code": "array_slice($array,$index)"
     },
     "split_list_at_value": {
-      "code": "",
       "not-implemented": "true"
     },
     "duplicate_a_list": {
@@ -385,7 +332,6 @@
       "code": "count($array)"
     },
     "resize_list": {
-      "code": "",
       "not-implemented": "true"
     },
     "do_two_lists_match_exactly": {
@@ -395,11 +341,9 @@
       "code": "array_diff($array1,$array2)"
     },
     "does_list_satisfy_some_expression": {
-      "code": "",
       "not-implemented": "true"
     },
     "does_list_not_satisfy_an_expression": {
-      "code": "",
       "not-implemented": "true"
     },
     "sort_list": {
