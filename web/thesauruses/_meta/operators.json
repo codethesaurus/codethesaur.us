@@ -54,10 +54,7 @@
       "right_shift",
       "right_shift_assignment"
     ],
-    "Conditional Operators": [
-      "ternary",
-      "null_forgiving"
-    ]
+    "Conditional Operators": ["ternary", "null_forgiving"]
   },
   "operators": {
     "addition": {
