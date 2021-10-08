@@ -335,10 +335,10 @@
       "not-implemented": "true"
     },
     "do_two_lists_match_exactly": {
-      "code": "array_diff($array1,$array2)"
+      "code": "$array1 === $array2"
     },
     "do_two_lists_contain_same_items": {
-      "code": "array_diff($array1,$array2)"
+      "code": "$array1 == $array2"
     },
     "does_list_satisfy_some_expression": {
       "not-implemented": "true"
