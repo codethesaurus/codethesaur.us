@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Code Thesaurus - {{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="{{request.scheme}}://{{request.META.HTTP_HOST}}/static/images/Logo-Book-Code.png" />
+
     <title>Code Thesaurus - {{ title }}</title>
 
     <!-- Bootstrap -->
