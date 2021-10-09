@@ -1,0 +1,379 @@
+{
+  "meta": {
+    "language": "Objective-C",
+    "language_version": "2.0",
+    "language_name": "Objective-C"
+  },
+  "categories": {
+    "Ordered, Mutable Lists": [
+      "name_of_ordered_mutable_list",
+      "create_a_ordered_mutable_list",
+      "ordered_mutable_list_start_number",
+      "ordered_mutable_list_can_be_appended",
+      "ordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_ordered_mutable_list",
+      "insert_into_beginning_of_ordered_mutable_list",
+      "insert_into_end_of_ordered_mutable_list",
+      "insert_into_middle_of_ordered_mutable_list",
+      "erase_element_at_beginning_of_ordered_mutable_list",
+      "erase_element_at_end_of_ordered_mutable_list",
+      "erase_element_in_middle_of_ordered_mutable_list",
+      "swap_elements_in_ordered_mutable_list",
+      "delete_ordered_mutable_list"
+    ],
+    "Unordered, Mutable Lists": [
+      "name_of_unordered_mutable_list",
+      "create_a_unordered_mutable_list",
+      "unordered_mutable_list_start_number",
+      "unordered_mutable_list_can_be_appended",
+      "unordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_unordered_mutable_list",
+      "insert_into_beginning_of_unordered_mutable_list",
+      "insert_into_end_of_unordered_mutable_list",
+      "insert_into_middle_of_unordered_mutable_list",
+      "erase_element_at_beginning_of_unordered_mutable_list",
+      "erase_element_at_end_of_unordered_mutable_list",
+      "erase_element_in_middle_of_unordered_mutable_list",
+      "swap_elements_in_unordered_mutable_list",
+      "delete_unordered_mutable_list"
+    ],
+    "Ordered, Immutable Lists": [
+      "name_of_ordered_immutable_list",
+      "create_a_ordered_immutable_list",
+      "ordered_immutable_list_start_number",
+      "access_element_in_ordered_immutable_list",
+      "delete_ordered_immutable_list"
+    ],
+    "Unordered, Immutable Lists": [
+      "name_of_unordered_immutable_list",
+      "create_a_unordered_immutable_list",
+      "unordered_immutable_list_start_number",
+      "access_element_in_unordered_immutable_list",
+      "delete_unordered_immutable_list"
+    ],
+    "Mutable Hashed Lists": [
+      "name_of_mutable_hashed_list",
+      "create_a_mutable_hashed_list",
+      "insert_element_to_mutable_hashed_list",
+      "erase_element_from_mutable_hashed_list",
+      "delete_mutable_hashed_list"
+    ],
+    "Immutable Hashed Lists": [
+      "name_of_immutable_hashed_list",
+      "create_a_immutable_hashed_list",
+      "insert_element_to_immutable_hashed_list",
+      "erase_element_from_immutable_hashed_list",
+      "delete_immutable_hashed_list"
+    ],
+    "Mutable Key/Value Sets": [
+      "create_a_mutable_set",
+      "get_key_from_mutable_set",
+      "get_value_from_mutable_set",
+      "get_all_keys_from_mutable_set",
+      "get_all_values_from_mutable_set",
+      "swap_key_and_value_in_mutable_set",
+      "delete_mutable_set"
+    ],
+    "Immutable Key/Value Sets": [
+      "create_a_immutable_set",
+      "get_key_from_immutable_set",
+      "get_value_from_immutable_set",
+      "get_all_keys_from_immutable_set",
+      "get_all_values_from_immutable_set",
+      "swap_key_and_value_in_immutable_set",
+      "delete_immutable_set"
+    ],
+    "Find/Search Functions": [
+      "find_element_by_value",
+      "find_minimum_element",
+      "find_maximum_element",
+      "convert_list_to_string"
+    ],
+    "Splitting/Joining Lists": [
+      "concatenate_two_lists",
+      "split_list_at_index",
+      "split_list_at_value"
+    ],
+    "Copying Lists": ["duplicate_a_list", "duplicate_subset_of_list"],
+    "Sizing/Resizing Lists": ["get_list_length", "resize_list"],
+    "Comparing/Equality": [
+      "do_two_lists_match_exactly",
+      "do_two_lists_contain_same_items",
+      "does_list_satisfy_some_expression",
+      "does_list_not_satisfy_an_expression"
+    ],
+    "Sorting/Shuffling Lists": ["sort_list", "shuffle_list", "reverse_list"],
+    "Functions On List Elements": [
+      "map",
+      "filter",
+      "reduce_left",
+      "reduce_right"
+    ]
+  },
+  "lists": {
+    "name_of_ordered_mutable_list": {
+      "code": "NSMutableArray"
+    },
+    "create_a_ordered_mutable_list": {
+      "code": "NSMutable *fullName = [NSMutableArray arrWtihObj: @\"Jack\",@\"Sparrow\",nil]"
+    },
+    "ordered_mutable_list_start_number": {
+      "code": "0 Based indexing"
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "code": "Yes"
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "code": "Yes",
+      "comment": "insert(_:at:)- Inserts a given object into the array’s contents at a given index."
+    },
+    "access_element_in_ordered_mutable_list": {
+      "code": "NSMutableArray arr = [Array1 objectAtIndex:i] objectIndex:j];"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "code": "insert(_:at:) - Inserts a given object into the array’s contents at a given index."
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "code": "add(_:) - Inserts a given object at the end of the array."
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "code": "insert(_:at:) - Inserts a given object into the array’s contents at a given index."
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": "removeObject(at:) - Removes the object at index."
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": "removeLastObject() - Removes the object with the highest-valued index in the array"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "code": "removeObject(at:) - Removes the object at index."
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "code": "exchangeObjectAtIndex:withObjectAtIndex: - Exchanges the objects in the array at given indexes."
+    },
+    "delete_ordered_mutable_list": {
+      "code": "removeObjectsInArray: - Removes from the receiving array the objects in another given array."
+    },
+    "name_of_unordered_mutable_list": {
+      "code": "NSMutableSet"
+    },
+    "create_a_unordered_mutable_list": {
+      "code": "NSMutableSet *set = [NSMutableSet setWithCapacity:2];NSLog(@\"%@\",set);"
+    },
+    "unordered_mutable_list_start_number": {
+      "not-implemented": "true"
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "code": "Yes"
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "not-implemented": "true",
+      "comment": "addObject: - Adds a given object to the set, if it is not already a member."
+    },
+    "access_element_in_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "comment": "addObject: - Adds a given object to the set, if it is not already a member."
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "comment": "addObject: - Adds a given object to the set, if it is not already a member."
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "comment": "addObject: - Adds a given object to the set, if it is not already a member."
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "comment": "remove(_:) - Removes a given object from the set."
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "comment": "remove(_:) - Removes a given object from the set."
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "comment": "remove(_:) - Removes a given object from the set."
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_unordered_mutable_list": {
+      "not-implemented": "true",
+      "comment": "remove(_:) - Removes a given object from the set."
+    },
+    "name_of_ordered_immutable_list": {
+      "code": "NSArray"
+    },
+    "create_a_ordered_immutable_list": {
+      "code": "let array: NSArray = [someObject, \"Hello, World!\", 42]"
+    },
+    "ordered_immutable_list_start_number": {
+      "code": "0 based Indexing"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "code": "object(at:)"
+    },
+    "delete_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_unordered_immutable_list": {
+      "code": "NSset"
+    },
+    "create_a_unordered_immutable_list": {
+      "code": "NSSet *set = [NSSet set];NSLog(@\"%@\",set);"
+    },
+    "unordered_immutable_list_start_number": {
+      "not-implemented": "true"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_mutable_hashed_list": {
+      "code": "NSHashTable"
+    },
+    "create_a_mutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "code": "add(_:)"
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "code": "remove(_:)"
+    },
+    "delete_mutable_hashed_list": {
+      "code": "removeAllObjects()"
+    },
+    "name_of_immutable_hashed_list": {
+      "code": ""
+    },
+    "create_a_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "delete_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "create_a_mutable_set": {
+      "code": "NSMutableSet"
+    },
+    "get_key_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "get_value_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "get_all_keys_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "get_all_values_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "not-implemented": "true"
+    },
+    "delete_mutable_set": {
+      "code": "remove(_:)"
+    },
+    "create_a_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_key_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_value_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_all_keys_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_all_values_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "not-implemented": "true"
+    },
+    "delete_immutable_set": {
+      "not-implemented": "true"
+    },
+    "find_element_at_position": {
+      "code": "indexOfObjectIdenticalTo:"
+    },
+    "find_element_by_value": {
+      "code": "containsObject:"
+    },
+    "find_minimum_element": {
+      "not-implemented": "true"
+    },
+    "find_maximum_element": {
+      "not-implemented": "true"
+    },
+    "convert_list_to_string": {
+      "code": "NSString * result = [[array valueForKey:@\"description\"] componentsJoinedByString:@\"\"];"
+    },
+    "concatenate_two_lists": {
+      "code": "NSArray *newArray=[firstArray arrayByAddingObjectsFromArray:secondArray];"
+    },
+    "split_list_at_index": {
+      "not-implemented": "true"
+    },
+    "split_list_at_value": {
+      "not-implemented": "true"
+    },
+    "duplicate_a_list": {
+      "code": "NSMutableArray *copy = [[NSMutableArray alloc] initWithArray:originalArray copyItems:YES];"
+    },
+    "duplicate_subset_of_list": {
+      "not-implemented": "true"
+    },
+    "get_list_length": {
+      "code": "var count: Int { get }"
+    },
+    "resize_list": {
+      "not-implemented": "true"
+    },
+    "do_two_lists_match_exactly": {
+      "not-implemented": "true"
+    },
+    "do_two_lists_contain_same_items": {
+      "not-implemented": "true"
+    },
+    "does_list_satisfy_some_expression": {
+      "not-implemented": "true"
+    },
+    "does_list_not_satisfy_an_expression": {
+      "not-implemented": "true"
+    },
+    "sort_list": {
+      "code": "sortedArrayUsingSelector:"
+    },
+    "shuffle_list": {
+      "code": "exchangeObject(at:withObjectAt:)"
+    },
+    "reverse_list": {
+      "code": "reverse()"
+    },
+    "map": {
+      "code": "objectEnumerator()"
+    },
+    "filter": {
+      "code": "predicateWithBlock:"
+    },
+    "reduce_left": {
+      "not-implemented": "true"
+    },
+    "reduce_right": {
+      "not-implemented": "true"
+    }
+  }
+}
