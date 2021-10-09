@@ -54,42 +54,42 @@
   },
   "operators": {
     "addition": {
-      "code": "+"
+      "code": "(( 8+4 ))"
     },
     "addition_assignment": {
-      "code": "+="
+      "code": "(( a+=4 ))"
     },
     "subtraction": {
-      "code": "-"
+      "code": "(( 8-4 ))"
     },
     "subtraction_assignment": {
-      "code": "-="
+      "code": "(( a-=4 ))"
     },
     "multiplication": {
-      "code": "*"
+      "code": "(( 8*4 ))"
     },
     "multiplication_assignment": {
-      "code": "*="
+      "code": "(( a*=4 ))"
     },
     "division": {
-      "code": "/"
+      "code": "(( 8/4 ))"
     },
     "division_assignment": {
-      "code": "/="
+      "code": "(( a/=4 ))"
     },
     "modulus": {
-      "code": "%"
+      "code": "(( 8%4 ))"
     },
     "modulus_assignment": {
-      "code": "%="
+      "code": "(( a%=4 ))"
     },
     "increment": {
-      "comment": "There are two types of increment: pre-increment (++x) and post-increment (x++). ",
-      "code": "++"
+      "code": "++",
+      "comment": "There are two types of increment: pre-increment ((++x)) and post-increment ((x++)). "
     },
     "decrement": {
-      "comment": "There are two types of decrement: pre-decrement (--x) and post-decrement (x--). ",
-      "code": "--"
+      "code": "--",
+      "comment": "There are two types of decrement: pre-decrement ((--x)) and post-decrement ((x--)). "
     },
     "exponential": {
       "not-implemented": "true"
@@ -104,25 +104,25 @@
       "not-implemented": "true"
     },
     "equal_to": {
-      "code": "=="
+      "code": "(( $a==$b ))"
     },
     "not_equal_to": {
-      "code": "!="
+      "code": "(( $a!=$b ))"
     },
     "less_than": {
-      "code": "<"
+      "code": "(( $a<$b ))"
     },
     "less_than_or_equal_to": {
-      "code": "<="
+      "code": "(( $a<=$b ))"
     },
     "greater_than": {
-      "code": ">"
+      "code": "(( $a>$b ))"
     },
     "greater_than_or_equal_to": {
-      "code": ">="
+      "code": "(( $a>=$b ))"
     },
     "null_coalescing": {
-      "code": ":"
+      "code": "${a:-20}"
     },
     "is": {
       "not-implemented": "true"
@@ -131,28 +131,28 @@
       "not-implemented": "true"
     },
     "and": {
-      "code": "&&"
+      "code": "[[ $a == 'A' && $b == 'B' ]]"
     },
     "and_assignment": {
       "not-implemented": "true"
     },
     "or": {
-      "code": "||"
+      "code": "[[ $a == 'A' || $b == 'B' ]]"
     },
     "or_assignment": {
       "not-implemented": "true"
     },
     "not": {
-      "code": "!"
+      "code": "[[ !$a ]]"
     },
     "not_assignment": {
       "not-implemented": "true"
     },
     "xor": {
-      "code": "^"
+      "code": "(( a^b ))"
     },
     "xor_assignment": {
-      "code": "^="
+      "code": "(( a^=3 ))"
     },
     "xnor": {
       "not-implemented": "true"
@@ -161,20 +161,20 @@
       "not-implemented": "true"
     },
     "left_shift": {
-      "code": "<<"
+      "code": "(( a<<1 ))"
     },
     "left_shift_assignment": {
-      "code": "<<="
+      "code": "(( a<<=1 ))"
     },
     "right_shift": {
-      "code": ">>"
+      "code": "(( a>>1 ))"
     },
     "right_shift_assignment": {
-      "code": ">>="
+      "code": "(( a>>=1 ))"
     },
     "ternary": {
       "comment": "Ternary operator only exists for arithmetic expressions:",
-      "code": "?:"
+      "code": "(( a>=5 ? 6 : 4 ))"
     },
     "null_forgiving": {
       "not-implemented": "true"
