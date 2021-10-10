@@ -107,7 +107,7 @@
       "code": "ClassName objectName = new ClassName();"
     },
     "instantiating_polymorphic_object": {
-      "code": "ChildClassName objectName = new ChildClassName();"
+      "code": "ParentClassName objectName = new ChildClassName();"
     },
     "implement_constructor": {
       "code": "class ClassName {\n\tconstructor ClassName() {\n\t}\n}"
