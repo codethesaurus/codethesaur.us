@@ -157,7 +157,8 @@
       "code": "Array"
     },
     "create_a_unordered_mutable_list": {
-      "code": "Syntax: let arrayName: type[];\nExamples: \nlet scores : (string | number)[];\nlet nums : number[] = [12.34,1,2,3];\nlet arr : Array<any> = [1,2,3,'hi'];\nlet arr : Array<number|boolean> = [1, true, 2];"
+      "code": "let arrayName: type[];\nlet arrayName = (type1 | type2)[]\nlet arrayName:Array<type> = new Array();",
+      "comment": "Examples: let scores : (string | number)[1,2,3,'hi'];"
     },
     "unordered_mutable_list_start_number": {
       "code": "0"
@@ -197,27 +198,21 @@
       "code": "[array[index1], array[index2]] = [array[index2], array[index1]];"
     },
     "delete_unordered_mutable_list": {
-      "code": "arrayName.length = 0",
-      "comment": "In strict mode, use of delete keyword on simple data is prohibited"
+      "code": "arrayName.length = 0"
     },
     "name_of_ordered_immutable_list": {
-      "code": "",
       "not-implemented": true
     },
     "create_a_ordered_immutable_list": {
-      "code": "",
       "not-implemented": true
     },
     "ordered_immutable_list_start_number": {
-      "code": "",
       "not-implemented": true
     },
     "access_element_in_ordered_immutable_list": {
-      "code": "",
       "not-implemented": true
     },
     "delete_ordered_immutable_list": {
-      "code": "",
       "not-implemented": true
     },
     "name_of_unordered_immutable_list": {
@@ -234,54 +229,42 @@
       "code": "arrayName[index];"
     },
     "delete_unordered_immutable_list": {
-      "code": "arrayName.length = 0",
-      "comment": "In strict mode, use of delete keyword on simple data is prohibited"
+      "code": "arrayName.length = 0"
     },
     "name_of_mutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "create_a_mutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "insert_element_to_mutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "erase_element_from_mutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "delete_mutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "name_of_immutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "create_a_immutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "insert_element_to_immutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "erase_element_from_immutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "delete_immutable_hashed_list": {
-      "code": "",
       "not-implemented": true
     },
     "create_a_mutable_set": {
       "code": "let map = new Map();\nmap.set(key, value);"
     },
     "get_key_from_mutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "get_value_from_mutable_set": {
@@ -296,42 +279,34 @@
       "comment": "It returns an iterable, so it must be used in a for loop."
     },
     "swap_key_and_value_in_mutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "delete_mutable_set": {
       "code": "map.clear()"
     },
     "create_a_immutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "get_key_from_immutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "get_value_from_immutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "get_all_keys_from_immutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "get_all_values_from_immutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "swap_key_and_value_in_immutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "delete_immutable_set": {
-      "code": "",
       "not-implemented": true
     },
     "find_element_at_position": {
-      "code": ""
+      "not-implemented": true
     },
     "find_element_by_value": {
       "code": "array.indexOf(searchElement[, fromIndex])"
@@ -369,7 +344,6 @@
       "code": "array.length = value"
     },
     "do_two_lists_match_exactly": {
-      "code": "",
       "not-implemented": true
     },
     "do_two_lists_contain_same_items": {
@@ -385,7 +359,6 @@
       "code": "array.sort()"
     },
     "shuffle_list": {
-      "code": "",
       "not-implemented": true
     },
     "reverse_list": {
