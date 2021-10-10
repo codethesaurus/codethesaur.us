@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "language": "php",
+    "language_version": "7.4",
+    "language_name": "PHP"
+  },
+  "categories": {
+    "Ordered, Mutable Lists": [
+      "name_of_ordered_mutable_list",
+      "create_a_ordered_mutable_list",
+      "ordered_mutable_list_start_number",
+      "ordered_mutable_list_can_be_appended",
+      "ordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_ordered_mutable_list",
+      "insert_into_beginning_of_ordered_mutable_list",
+      "insert_into_end_of_ordered_mutable_list",
+      "insert_into_middle_of_ordered_mutable_list",
+      "erase_element_at_beginning_of_ordered_mutable_list",
+      "erase_element_at_end_of_ordered_mutable_list",
+      "erase_element_in_middle_of_ordered_mutable_list",
+      "swap_elements_in_ordered_mutable_list",
+      "delete_ordered_mutable_list"
+    ],
+    "Unordered, Mutable Lists": [
+      "name_of_unordered_mutable_list",
+      "create_a_unordered_mutable_list",
+      "unordered_mutable_list_start_number",
+      "unordered_mutable_list_can_be_appended",
+      "unordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_unordered_mutable_list",
+      "insert_into_beginning_of_unordered_mutable_list",
+      "insert_into_end_of_unordered_mutable_list",
+      "insert_into_middle_of_unordered_mutable_list",
+      "erase_element_at_beginning_of_unordered_mutable_list",
+      "erase_element_at_end_of_unordered_mutable_list",
+      "erase_element_in_middle_of_unordered_mutable_list",
+      "swap_elements_in_unordered_mutable_list",
+      "delete_unordered_mutable_list"
+    ],
+    "Ordered, Immutable Lists": [
+      "name_of_ordered_immutable_list",
+      "create_a_ordered_immutable_list",
+      "ordered_immutable_list_start_number",
+      "access_element_in_ordered_immutable_list",
+      "delete_ordered_immutable_list"
+    ],
+    "Unordered, Immutable Lists": [
+      "name_of_unordered_immutable_list",
+      "create_a_unordered_immutable_list",
+      "unordered_immutable_list_start_number",
+      "access_element_in_unordered_immutable_list",
+      "delete_unordered_immutable_list"
+    ],
+    "Mutable Hashed Lists": [
+      "name_of_mutable_hashed_list",
+      "create_a_mutable_hashed_list",
+      "insert_element_to_mutable_hashed_list",
+      "erase_element_from_mutable_hashed_list",
+      "delete_mutable_hashed_list"
+    ],
+    "Immutable Hashed Lists": [
+      "name_of_immutable_hashed_list",
+      "create_a_immutable_hashed_list",
+      "insert_element_to_immutable_hashed_list",
+      "erase_element_from_immutable_hashed_list",
+      "delete_immutable_hashed_list"
+    ],
+    "Mutable Key/Value Sets": [
+      "create_a_mutable_set",
+      "get_key_from_mutable_set",
+      "get_value_from_mutable_set",
+      "get_all_keys_from_mutable_set",
+      "get_all_values_from_mutable_set",
+      "swap_key_and_value_in_mutable_set",
+      "delete_mutable_set"
+    ],
+    "Immutable Key/Value Sets": [
+      "create_a_immutable_set",
+      "get_key_from_immutable_set",
+      "get_value_from_immutable_set",
+      "get_all_keys_from_immutable_set",
+      "get_all_values_from_immutable_set",
+      "swap_key_and_value_in_immutable_set",
+      "delete_immutable_set"
+    ],
+    "Find/Search Functions": [
+      "find_element_by_value",
+      "find_minimum_element",
+      "find_maximum_element",
+      "convert_list_to_string"
+    ],
+    "Splitting/Joining Lists": [
+      "concatenate_two_lists",
+      "split_list_at_index",
+      "split_list_at_value"
+    ],
+    "Copying Lists": ["duplicate_a_list", "duplicate_subset_of_list"],
+    "Sizing/Resizing Lists": ["get_list_length", "resize_list"],
+    "Comparing/Equality": [
+      "do_two_lists_match_exactly",
+      "do_two_lists_contain_same_items",
+      "does_list_satisfy_some_expression",
+      "does_list_not_satisfy_an_expression"
+    ],
+    "Sorting/Shuffling Lists": ["sort_list", "shuffle_list", "reverse_list"],
+    "Functions On List Elements": [
+      "map",
+      "filter",
+      "reduce_left",
+      "reduce_right"
+    ]
+  },
+  "lists": {
+    "name_of_ordered_mutable_list": {
+      "code": "Array"
+    },
+    "create_a_ordered_mutable_list": {
+      "code": "$array = array(...) \n $array=[]",
+      "comment": "You can use any of them"
+    },
+    "ordered_mutable_list_start_number": {
+      "code": "0"
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "code": "array_push($array,$value)"
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "not-implemented": "true"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "code": "$array[0]"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "code": "array_unshift($array, $element);"
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "code": "array_push($array,$value)"
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": "array_shift($array)"
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": "array_pop($array)"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_ordered_mutable_list": {
+      "code": "unset($array)"
+    },
+    "name_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "create_a_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "unordered_mutable_list_start_number": {
+      "not-implemented": "true"
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "not-implemented": "true"
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "not-implemented": "true"
+    },
+    "access_element_in_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "create_a_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "ordered_immutable_list_start_number": {
+      "not-implemented": "true"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "create_a_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "unordered_immutable_list_start_number": {
+      "not-implemented": "true"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_mutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "create_a_mutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "delete_mutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "name_of_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "create_a_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "delete_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "create_a_mutable_set": {
+      "not-implemented": "true"
+    },
+    "get_key_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "get_value_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "get_all_keys_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "get_all_values_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "not-implemented": "true"
+    },
+    "delete_mutable_set": {
+      "not-implemented": "true"
+    },
+    "create_a_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_key_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_value_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_all_keys_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_all_values_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "not-implemented": "true"
+    },
+    "delete_immutable_set": {
+      "not-implemented": "true"
+    },
+    "find_element_at_position": {
+      "code": "$array[$n]"
+    },
+    "find_element_by_value": {
+      "code": "array_search($element,$array)"
+    },
+    "find_minimum_element": {
+      "code": "min($array)"
+    },
+    "find_maximum_element": {
+      "code": "max($array)"
+    },
+    "convert_list_to_string": {
+      "code": "implode($array)"
+    },
+    "concatenate_two_lists": {
+      "code": "array_merge($array1,$array2)"
+    },
+    "split_list_at_index": {
+      "code": "array_slice($array,$index)"
+    },
+    "split_list_at_value": {
+      "not-implemented": "true"
+    },
+    "duplicate_a_list": {
+      "code": "$copy = $array"
+    },
+    "duplicate_subset_of_list": {
+      "code": "$copy = array_slice($array, $offset, $length); "
+    },
+    "get_list_length": {
+      "code": "count($array)"
+    },
+    "resize_list": {
+      "not-implemented": "true"
+    },
+    "do_two_lists_match_exactly": {
+      "code": "$array1 === $array2"
+    },
+    "do_two_lists_contain_same_items": {
+      "code": "$array1 == $array2"
+    },
+    "does_list_satisfy_some_expression": {
+      "not-implemented": "true"
+    },
+    "does_list_not_satisfy_an_expression": {
+      "not-implemented": "true"
+    },
+    "sort_list": {
+      "code": "asort($array, sorttype)",
+      "comment": "sorttype is optional\n possible values are\n0 = SORT_REGULAR - Default. Compare items normally (don't change types) \n 1 = SORT_NUMERIC - Compare items numerically\n2 = SORT_STRING - Compare items as strings\n3 = SORT_LOCALE_STRING - Compare items as strings, based on current locale\n4 = SORT_NATURAL - Compare items as strings using natural ordering\n5 = SORT_FLAG_CASE -"
+    },
+    "shuffle_list": {
+      "code": "shuffle($array)"
+    },
+    "reverse_list": {
+      "code": "array_reverse($array)"
+    },
+    "map": {
+      "code": "array_map(function,$array)"
+    },
+    "filter": {
+      "code": "array_filter($array,function)"
+    },
+    "reduce_left": {
+      "code": "array_reduce($array,function)"
+    },
+    "reduce_right": {
+      "code": "array_reduce($array,function,-1)"
+    }
+  }
+}
