@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "categories": {
+    "Arithmetic Operators": [
+      "addition",
+      "addition_assignment",
+      "subtraction",
+      "subtraction_assignment",
+      "multiplication",
+      "multiplication_assignment",
+      "division",
+      "division_assignment",
+      "integer_division",
+      "integer_division_assignment",
+      "modulus",
+      "modulus_assignment",
+      "unary_plus",
+      "unary_minus",
+      "increment",
+      "decrement",
+      "exponential",
+      "factorial",
+      "absolute_value",
+      "percentage"
+    ],
+    "Equality/Comparison Operators": [
+      "equal_to",
+      "not_equal_to",
+      "less_than",
+      "less_than_or_equal_to",
+      "greater_than",
+      "greater_than_or_equal_to",
+      "null_coalescing",
+      "is",
+      "is_not"
+    ],
+    "Logical/Boolean/Bitwise Operators": [
+      "and",
+      "and_assignment",
+      "or",
+      "or_assignment",
+      "not",
+      "not_assignment",
+      "xor",
+      "xor_assignment",
+      "xnor",
+      "xnor_assignment",
+      "left_shift",
+      "left_shift_assignment",
+      "right_shift",
+      "right_shift_assignment"
+    ],
+    "Conditional Operators": ["ternary", "null_forgiving"]
+  },
+  "operators": {
+    "addition": {
+      "name": "Addition operator",
+      "code": ""
+    },
+    "addition_assignment": {
+      "name": "Addition and assignment operator",
+      "code": ""
+    },
+    "subtraction": {
+      "name": "Subtraction operator",
+      "code": ""
+    },
+    "subtraction_assignment": {
+      "name": "Subtraction and assignment operator",
+      "code": ""
+    },
+    "multiplication": {
+      "name": "Multiplication operator",
+      "code": ""
+    },
+    "multiplication_assignment": {
+      "name": "Multiplication and assignment operator",
+      "code": ""
+    },
+    "division": {
+      "name": "Division operator",
+      "code": ""
+    },
+    "division_assignment": {
+      "name": "Division and assignment operator",
+      "code": ""
+    },
+    "integer_division": {
+      "name": "Integer division operator",
+      "code": ""
+    },
+    "integer_division_assignment": {
+      "name": "Integer division and assignment operator",
+      "code": ""
+    },
+    "modulus": {
+      "name": "Modulus (remainder) operator",
+      "code": ""
+    },
+    "modulus_assignment": {
+      "name": "Modulus and assignment operator",
+      "code": ""
+    },
+    "unary_plus": {
+      "name": "Unary plus operator",
+      "code": ""
+    },
+    "unary_minus": {
+      "name": "Unary minus operator",
+      "code": ""
+    },
+    "increment": {
+      "name": "Increment (add 1) operator",
+      "code": ""
+    },
+    "decrement": {
+      "name": "Decrement (subtract 1) operator",
+      "code": ""
+    },
+    "exponential": {
+      "name": "Exponential operator",
+      "code": ""
+    },
+    "factorial": {
+      "name": "Factorial operator",
+      "code": ""
+    },
+    "absolute_value": {
+      "name": "Absolute value operator",
+      "code": ""
+    },
+    "percentage": {
+      "name": "Percentage operator",
+      "code": ""
+    },
+    "equal_to": {
+      "name": "Equality operator",
+      "code": ""
+    },
+    "not_equal_to": {
+      "name": "Not equal to operator",
+      "code": ""
+    },
+    "less_than": {
+      "name": "Less than operator",
+      "code": ""
+    },
+    "less_than_or_equal_to": {
+      "name": "Less than or equal to operator",
+      "code": ""
+    },
+    "greater_than": {
+      "name": "Greater than operator",
+      "code": ""
+    },
+    "greater_than_or_equal_to": {
+      "name": "Greater than or equal to operator",
+      "code": ""
+    },
+    "null_coalescing": {
+      "name": "Null coalescing operator",
+      "code": ""
+    },
+    "is": {
+      "name": "Is operator",
+      "code": ""
+    },
+    "is_not": {
+      "name": "Is not operator",
+      "code": ""
+    },
+    "and": {
+      "name": "Logical AND operator",
+      "code": ""
+    },
+    "and_assignment": {
+      "name": "Logical AND assignment operator",
+      "code": ""
+    },
+    "or": {
+      "name": "Logical OR operator",
+      "code": ""
+    },
+    "or_assignment": {
+      "name": "Logical OR assignment operator",
+      "code": ""
+    },
+    "not": {
+      "name": "Logical NOT operator",
+      "code": ""
+    },
+    "not_assignment": {
+      "name": "Logical NOT assignment operator",
+      "code": ""
+    },
+    "xor": {
+      "name": "Logical XOR operator",
+      "code": ""
+    },
+    "xor_assignment": {
+      "name": "Logical XOR assignment operator",
+      "code": ""
+    },
+    "xnor": {
+      "name": "Logical XNOR operator",
+      "code": ""
+    },
+    "xnor_assignment": {
+      "name": "Logical XNOR assignment operator",
+      "code": ""
+    },
+    "left_shift": {
+      "name": "Left shift bitwise operator",
+      "code": ""
+    },
+    "left_shift_assignment": {
+      "name": "Left shift assignment operator",
+      "code": ""
+    },
+    "right_shift": {
+      "name": "Right shift bitwise operator",
+      "code": ""
+    },
+    "right_shift_assignment": {
+      "name": "Right shift assignment operator",
+      "code": ""
+    },
+    "ternary": {
+      "name": "Ternary operator",
+      "code": ""
+    },
+    "null_forgiving": {
+      "name": "Null forgiving operator",
+      "code": ""
+    }
+  }
+}
