@@ -118,7 +118,7 @@
       "code": "abs"
     },
     "percentage": {
-      "code": ""
+      "not-implemented": "true"
     },
     "equal_to": {
       "code": "=="
@@ -173,7 +173,7 @@
       "not-implemented": "true"
     },
     "xnor": {
-      "code": ""
+      "not-implemented": "true"
     },
     "xnor_assignment": {
       "not-implemented": "true"
