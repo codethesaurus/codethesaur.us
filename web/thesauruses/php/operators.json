@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "language": "php",
+    "language_version": "7.4",
+    "language_name": "PHP"
+  },
+  "categories": {
+    "Arithmetic Operators": [
+      "addition",
+      "addition_assignment",
+      "subtraction",
+      "subtraction_assignment",
+      "multiplication",
+      "multiplication_assignment",
+      "division",
+      "division_assignment",
+      "integer_division",
+      "modulus",
+      "modulus_assignment",
+      "unary_plus",
+      "unary_minus",
+      "increment",
+      "decrement",
+      "exponential",
+      "absolute_value"
+    ],
+    "Equality/Comparison Operators": [
+      "equal_to",
+      "not_equal_to",
+      "less_than",
+      "less_than_or_equal_to",
+      "greater_than",
+      "greater_than_or_equal_to",
+      "null_coalescing"
+    ],
+    "Logical/Boolean/Bitwise Operators": [
+      "and",
+      "or",
+      "not",
+      "xor",
+      "left_shift",
+      "right_shift"
+    ],
+    "Conditional Operators": ["ternary"]
+  },
+  "operators": {
+    "addition": {
+      "code": "$operand1 + $operand2"
+    },
+    "addition_assignment": {
+      "code": "$operand1 += $operand2"
+    },
+    "subtraction": {
+      "code": "$operand1 - $operand2"
+    },
+    "subtraction_assignment": {
+      "code": "$operand1 -= $operand2"
+    },
+    "multiplication": {
+      "code": "$operand1 * $operand2"
+    },
+    "multiplication_assignment": {
+      "code": "$operand1 *= $operand2"
+    },
+    "division": {
+      "code": "$operand1 / $operand2"
+    },
+    "division_assignment": {
+      "code": "$operand1 /= $operand2"
+    },
+    "integer_division": {
+      "code": "intdiv($operand1,$operand2)"
+    },
+    "modulus": {
+      "code": "$operand1 % $operand2"
+    },
+    "modulus_assignment": {
+      "code": "$operand1 %= $operand2"
+    },
+    "unary_plus": {
+      "code": "+$operand1"
+    },
+    "unary_minus": {
+      "code": "-$operand1"
+    },
+    "increment": {
+      "code": "$operand1++"
+    },
+    "decrement": {
+      "code": "$operand1--"
+    },
+    "exponential": {
+      "code": "$operand1 ** $operand2"
+    },
+    "absolute_value": {
+      "code": "abs($operand1)"
+    },
+    "equal_to": {
+      "code": "$operand1 == $operand2"
+    },
+    "not_equal_to": {
+      "code": "$operand1 != $operand2"
+    },
+    "less_than": {
+      "code": "$operand1 < $operand2"
+    },
+    "less_than_or_equal_to": {
+      "code": "$operand1 <= $operand2"
+    },
+    "greater_than": {
+      "code": "$operand1 > $operand2"
+    },
+    "greater_than_or_equal_to": {
+      "code": "$operand1 >= $operand2"
+    },
+    "null_coalescing": {
+      "code": "$operand1 ?? $operand2"
+    },
+    "and": {
+      "code": "$operand1 and $operand2 \n  $operand1 && $operand2",
+      "comment": "You can use any of them"
+    },
+    "or": {
+      "code": "$operand1 or $operand2 \n  $operand1 || $operand2",
+      "comment": "You can use any of them"
+    },
+    "not": {
+      "code": "!$operand1"
+    },
+    "xor": {
+      "code": "^$operand1"
+    },
+    "left_shift": {
+      "code": "<<$operand1"
+    },
+    "right_shift": {
+      "code": ">>$operand1"
+    },
+    "ternary": {
+      "code": "$operand1 ? doTrue : doFalse"
+    }
+  }
+}
