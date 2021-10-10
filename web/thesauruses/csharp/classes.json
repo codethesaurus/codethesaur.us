@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "language": "csharp",
+    "language_version": "9.0",
+    "language_name": "C#"
+  },
+  "categories": {
+    "Defining Classes": [
+      "normal_class",
+      "abstract_class",
+      "interface",
+      "read_only_class",
+      "static_class",
+      "inner_class",
+      "packages",
+      "class_with_generic_type"
+    ],
+    "Adding Private and Public Members": [
+      "private_variables",
+      "protected_variables",
+      "public_variables",
+      "static_variables",
+      "private_functions",
+      "protected_functions",
+      "public_functions",
+      "static_functions"
+    ],
+    "Extending and Implementing Classes": [
+      "extends_class",
+      "extending_interface",
+      "calling_superclass_functions",
+      "overriding_superclass_functions"
+    ],
+    "Creating Objects and Polymorphism": [
+      "instantiating_object",
+      "instantiating_polymorphic_object"
+    ],
+    "Constructors and Deconstructor": [
+      "implement_constructor",
+      "implement_deconstructor"
+    ]
+  },
+  "classes": {
+    "normal_class": {
+      "code": "class ClassName {\n\t//declare properties, methods, etc\n}"
+    },
+    "abstract_class": {
+      "code": "abstract class ClassName {\n\t//declare abstract properties, methods, etc\n}"
+    },
+    "interface": {
+      "code": "interface IClassName {\n\t//declare properties, methods, etc\n\n}"
+    },
+    "read_only_class": {
+      "code": "class ClassName {\n\t //declare read-only properties, methods, etc\n}",
+      "comment": "Creating a read only class requires via read only properties."
+    },
+    "static_class": {
+      "code": "static class ClassName {\n\t//declare static properties, methods, etc\n}"
+    },
+    "inner_class": {
+      "code": "class OuterClass {\n\tclass InnerClass {\n\t\t//declare inner class properties, methods, etc\n\t}\n}"
+    },
+    "packages": {
+      "code": "namespace PackageName {\n\tclass className {\n\t\t//declare properties, methods, etc\n\t}\n\n\tclass secondName {\n\t\t//declare properties, methods, etc\n\t}\n}"
+    },
+    "class_with_generic_type": {
+      "code": "class ClassName<T> {\n\tT _t;\n\tpublic ClassName(T t) {\n\t\tthis._t = t;\n\t}\n}"
+    },
+    "private_variables": {
+      "code": "private type name = value;"
+    },
+    "protected_variables": {
+      "code": "protected string variableName = \"\";"
+    },
+    "public_variables": {
+      "code": "public string variableName = \"\";"
+    },
+    "static_variables": {
+      "code": "static string variableName = \"\";"
+    },
+    "private_functions": {
+      "code": "private void FunctionName() {\n\t//insert code here\n}"
+    },
+    "protected_functions": {
+      "code": "protected void FunctionName() {\n\t//insert code here\n}"
+    },
+    "public_functions": {
+      "code": "public void FunctionName() {\n\t//insert code here\n}"
+    },
+    "static_functions": {
+      "code": "static void FunctionName() {\n\t//insert code here\n}"
+    },
+    "extends_class": {
+      "code": "class ParentClassName {\n\tpublic string sampleProperty = \"\";\n}\n\nclass ChildClassName : ParentClassName {\n\tpublic string additionalProperty = \"\";\n}"
+    },
+    "extending_interface": {
+      "code": "interface IClassName {\n\n\tvoid SampleMethod();\n}\n\nclass InheritedClassName : IClassName {\n\tpublic void SampleMethod() {\n\t\t//insert code here\n\t}\n}",
+      "comment": "Any method indicated in the interface class must be implemented in the inherited class"
+    },
+    "calling_superclass_functions": {
+      "code": "superClass.FunctionName();"
+    },
+    "overriding_superclass_functions": {
+      "code": "class ParentClassName {\n\tpublic virtual void FunctionName() {\n\t\t//insert code\n\t};\n}\nclass ChildClassName : ParentClassName {\n\tpublic override void FunctionName() {\n\t\t//insert different code\n\t};\n}"
+    },
+    "instantiating_object": {
+      "code": "ClassName objectName = new ClassName();"
+    },
+    "instantiating_polymorphic_object": {
+      "code": "ChildClassName objectName = new ChildClassName();"
+    },
+    "implement_constructor": {
+      "code": "class ClassName {\n\tconstructor ClassName() {\n\t}\n}"
+    },
+    "implement_deconstructor": {
+      "code": "class ClassName {\n\t-ClassName() {\n\t}\n}"
+    }
+  }
+}
