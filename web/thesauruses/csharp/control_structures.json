@@ -1,7 +1,7 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
+    "language": "csharp",
+    "language_version": "9.0",
     "language_name": "C#"
   },
   "categories": {
@@ -10,6 +10,7 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
+      "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
@@ -18,7 +19,8 @@
       "until_loop",
       "do_until_loop",
       "for_loop",
-      "foreach_loop"
+      "foreach_loop",
+      "list_comprehension"
     ],
     "Iterations": [
       "each_iteration",
@@ -29,9 +31,11 @@
   },
   "control_structures": {
     "if_conditional": {
+      "name": "If conditional",
       "code": "if (condition)\n{\n     statements;\n}"
     },
     "if_else_conditional": {
+      "name": "If/Else conditional",
       "code": "if (condition)\n{\n     statements;\n} \nelse\n{\n     statements;\n}"
     },
     "if_elseif_conditional": {
@@ -41,6 +45,10 @@
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
       "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}\nelse\n{\n    statements;\n}"
+    },
+    "switch_statement": {
+      "name": "Switch statement",
+      "code": "switch (expression)\n{\n    case x:\n    \nstatements;    break;\n    case y:\n    \nstatements;    break;\n    default:\n    \nstatements;    break;\n}"
     },
     "ternary_conditional": {
       "name": "Ternary conditional",
@@ -54,29 +62,42 @@
       "name": "Do/While loop",
       "code": "do\n{\n    statements;\n}\nwhile(condition)"
     },
+    "until_loop": {
+      "not-implemented": true
+    },
+    "do_until_loop": {
+      "not-implemented": true
+    },
     "for_loop": {
       "name": "For loop",
-      "code": "for(variables; conditions; expression after iteration)\n{\n    statements\n}"
+      "code": "for(variables; conditions; expression after iteration)\n{\n    statements;\n}"
     },
     "foreach_loop": {
       "name": "Foreach loop",
-      "code": "foreach(item in object)\n{\n    statements\n}"
+      "code": "foreach(item in object)\n{\n    statements;\n}"
+    },
+    "list_comprehension": {
+      "name": "List Comprehension",
+      "code": "var newList = list.Select(function);",
+      "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     },
     "each_iteration": {
-      "name": "Each iteration",
-      "code": ""
+      "not-implemented": true
     },
     "map_iteration": {
       "name": "Map iteration",
-      "code": ""
+      "code": "var newList = list.Select(x => function(x));",
+      "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     },
     "filter_iteration": {
       "name": "Filter iteration",
-      "code": ""
+      "code": "var newList = list.Where(x => condition);",
+      "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     },
     "fold_iteration": {
       "name": "Fold iteration",
-      "code": ""
+      "code": "var result = list.Aggregate((x, y) => expression)",
+      "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     }
   }
 }
