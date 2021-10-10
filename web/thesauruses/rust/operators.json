@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "rust",
+    "language_version": "1.55.0",
+    "language_name": "Rust"
   },
   "categories": {
     "Arithmetic Operators": [
