@@ -131,19 +131,19 @@
       "not-implemented": "true"
     },
     "and": {
-      "code": "[[ $a == 'A' && $b == 'B' ]]"
+      "code": "expression1 && expressions2"
     },
     "and_assignment": {
       "not-implemented": "true"
     },
     "or": {
-      "code": "[[ $a == 'A' || $b == 'B' ]]"
+      "code": "expression1 || expressions2"
     },
     "or_assignment": {
       "not-implemented": "true"
     },
     "not": {
-      "code": "[[ !$a ]]"
+      "code": "!expression"
     },
     "not_assignment": {
       "not-implemented": "true"
