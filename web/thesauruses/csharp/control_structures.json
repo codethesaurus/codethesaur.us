@@ -78,7 +78,7 @@
     },
     "list_comprehension": {
       "name": "List Comprehension",
-      "code": "var newList = list.Select(function);",
+      "code": "var newList = list.Select(x => function(x));",
       "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     },
     "each_iteration": {
