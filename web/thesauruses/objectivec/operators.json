@@ -186,7 +186,7 @@
     },
     "left_shift": {
       "code": "int a = 1 << 2",
-      "comment": "Shits the specified bits to left, so a equals to 4"
+      "comment": "Shifts the specified bits to left, so a equals to 4"
     },
     "left_shift_assignment": {
       "code": "<<="
