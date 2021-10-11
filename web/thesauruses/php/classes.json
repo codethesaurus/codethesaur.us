@@ -42,110 +42,86 @@
     },
     "classes": {
       "normal_class": {
-        "name": "Normal class",
         "code": "class ClassName {\n //Class body containing variables and methods \n}"
       },
       "abstract_class": {
-        "name": "Abstract class",
         "code": "abstract class ClassName {\n //Class body containing methods (atleast one of which is abstract) \n}"
       },
       "interface": {
-        "name": "Interface",
         "code": "interface InterfaceName {\n //Interface body containing method declarations \n}"
       },
       "read_only_class": {
-        "name": "Read-only class",
         "code": "",
         "not-implemented": true
       },
       "static_class": {
-        "name": "Static class",
         "code": "class ClassName {\n //Class body containing static variables and static methods \n}"
       },
       "inner_class": {
-        "name": "Inner class",
         "code": "",
         "not-implemented": true
       },
       "packages": {
-        "name": "Package",
         "code": "",
         "comment": "Composer can be used to create and manage PHP Packages. (https://getcomposer.org)",
         "not-implemented": true
       },
       "class_with_generic_type": {
-        "name": "Class with a generic type",
         "code": "",
         "not-implemented": true
       },
       "private_variables": {
-        "name": "Defining private variables",
         "code": "private data_type $variable_name = value;",
         "comment": "Data types are optional in PHP"
       },
       "protected_variables": {
-        "name": "Defining protected variables",
         "code": "protected data_type $variable_name = value;",
         "comment": "Data types are optional in PHP"
       },
       "public_variables": {
-        "name": "Defining public variables",
         "code": "public data_type $variable_name = value;",
         "comment": "Data types are optional in PHP"
       },
       "static_variables": {
-        "name": "Defining static variables",
         "code": "access-modifier static data_type $variable_name = value;",
         "comment": "Data types are optional in PHP"
       },
       "private_functions": {
-        "name": "Defining private functions",
         "code": "private function methodName(){\n //Method Body \n}"
       },
       "protected_functions": {
-        "name": "Defining protected functions",
         "code": "protected function methodName(){\n //Method Body \n}"
       },
       "public_functions": {
-        "name": "Defining public functions",
         "code": "public function methodName(){\n //Method Body \n}"
       },
       "static_functions": {
-        "name": "Defining static functions",
         "code": "access-modifier static function methodName(){\n //Method Body \n}"
       },
       "extends_class": {
-        "name": "Class that inherits/extends another class",
         "code": "class ChildClassName extends ParentClassName {\n //Class body containing variables and methods \n}"
       },
       "extending_interface": {
-        "name": "Class/Interface that inherits/extends another class/interface",
         "code": "class ClassName implements InterfaceName {\n //Class body containing variables and methods \n}"
       },
       "calling_superclass_functions": {
-        "name": "Calling a superclass function",
         "code": "parent::methodName();"
       },
       "overriding_superclass_functions": {
-        "name": "Overriding a superclass function",
         "code": "class ParentClassName {\n public function methodName() {\n  //Method body \n } \n} \nclass ChildClassName extends ParentClassName {\n public function methodName() {\n  //Method body \n } \n}"
       },
       "instantiating_object": {
-        "name": "Instantiating a new object",
         "code": "ClassName $object_name = new ClassName();",
         "comment": "ClassName data type is optional when declaring a variable."
       },
       "instantiating_polymorphic_object": {
-        "name": "Instantiating a polymorphic object",
         "code": "InterfaceName $object_name = new ClassName();",
         "comment": "InterfaceName data type is optional when declaring a variable. ClassName class must implement the interface InterfaceName"
       },
       "implement_constructor": {
-        "name": "Implementing a class constructor",
         "code": "public function __construct() {\n //Method body \n}"
       },
       "implement_deconstructor": {
-        "name": "Implementing a class deconstructor",
         "code": "public function __destruct() {\n //Method body \n}"
       }
     }
