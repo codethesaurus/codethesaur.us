@@ -1,7 +1,7 @@
 {
    "meta": {
-     "language": "language_id",
-     "language_version": "version.number",
+     "language": "swift",
+     "language_version": "5.3.3",
      "language_name": "Swift"
    },
    "categories": {
@@ -67,11 +67,11 @@
      },
      "signed_integer_as_object": {
        "code": "Int",
-       "comment": "``Int`` is used in situations where the platform size may not be known. On a 32-bit platform, ``Int`` can store 32-bit integers."
+       "comment": "`Int` is used in situations where the platform size may not be known. On a 32-bit platform, `Int` can store 32-bit integers."
      },
      "unsigned_integer_as_object": {
        "code": "UInt",
-       "comment": "``UInt`` is used for unsigned integers and the size adapts to platform size. ``UInt`` can store on 64-bit integers on a 64-bit platform, for example."
+       "comment": "`UInt` is used for unsigned integers and the size adapts to platform size. `UInt` can store on 64-bit integers on a 64-bit platform, for example."
      },
      "signed_float_16_bit": {
        "not-implemented": "true"
@@ -107,7 +107,7 @@
      },
      "string_as_array": {
        "code": "String",
-       "comment": "``String`` in Swift bridges to Foundation's ``NSString`` class, so developers have a wide variety of string methods available to them."
+       "comment": "`String` in Swift bridges to Foundation's `NSString` class, so developers have a wide variety of string methods available to them."
      },
      "complex_as_object": {
        "not-implemented": "true"
