@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "categories": {
+    "Defining Classes": [
+      "normal_class",
+      "abstract_class",
+      "interface",
+      "read_only_class",
+      "static_class",
+      "inner_class",
+      "packages",
+      "class_with_generic_type"
+    ],
+    "Adding Private and Public Members": [
+      "private_variables",
+      "protected_variables",
+      "public_variables",
+      "static_variables",
+      "private_functions",
+      "protected_functions",
+      "public_functions",
+      "static_functions"
+    ],
+    "Extending and Implementing Classes": [
+      "extends_class",
+      "extending_interface",
+      "calling_superclass_functions",
+      "overriding_superclass_functions"
+    ],
+    "Creating Objects and Polymorphism": [
+      "instantiating_object",
+      "instantiating_polymorphic_object"
+    ],
+    "Constructors and Deconstructor": [
+      "implement_constructor",
+      "implement_deconstructor"
+    ]
+  },
+  "classes": {
+    "normal_class": {
+      "code": "class Demo { }"
+    },
+    "abstract_class": {
+      "code": "abstract class Demo { }"
+    },
+    "interface": {
+      "code": "interface Demo { }"
+    },
+    "read_only_class": {
+      "not-implemented": true
+    },
+    "static_class": {
+      "not-implemented": true
+    },
+    "inner_class": {
+      "not-implemented": true
+    },
+    "packages": {
+      "not-implemented": true
+    },
+    "class_with_generic_type": {
+      "code": "class KeyValuePair<T,U> {}"
+    },
+    "private_variables": {
+      "code": "class Demo { \n private type: number \n  }"
+    },
+    "protected_variables": {
+      "code": "class Demo { \n protected type: number  \n }"
+    },
+    "public_variables": {
+      "code": "class Demo { \n  type: number  \n }"
+    },
+    "static_variables": {
+      "code": "class Demo { \n static type: number  \n }"
+    },
+    "private_functions": {
+      "code": "class Demo { \n private getType():number {}  \n }"
+    },
+    "protected_functions": {
+      "code": "class Demo { \n protected getType():number {}  \n }"
+    },
+    "public_functions": {
+      "code": "class Demo { \n getType():number {}  \n }"
+    },
+    "static_functions": {
+      "code": "class Demo { \n static getType():number {}  \n }"
+    },
+    "extends_class": {
+      "code": "class Person {\n name: string;\n  }\n class Employee extends Person {\n empCode: number; \n displayName():void {\n console.log('Name = ' + this.name + ', Employee Code = ' + this.empCode);\n }\n }"
+    },
+    "extending_interface": {
+      "code": "interface IPerson {\n name: string;\n gender: string; \n}\n interface IEmployee extends IPerson {\n empCode: number; \n}"
+    },
+    "calling_superclass_functions": {
+      "code": "class Person{\n name:string\n eat():void{\n console.log(`${this.name} eats when hungry.`)\n }\n }\n class Student extends Person{\n rollnumber:number;\n constructor(rollnumber:number, name1:string){\n super(); // calling Parent's constructor\n }\n } "
+    },
+    "overriding_superclass_functions": {
+      "code": "class Person{\n name:string\n eat():void{\n console.log(`${this.name} eats when hungry.`)\n }\n }\n class Student extends Person{\n rollnumber:number;\n constructor(rollnumber:number, name1:string){\n super(); \n this.rollnumber = rollnumber\n this.name = name1\n }\n // overriding eat function\n eat():void{\n console.log(`${this.name} eats during break.`)\n }\n } "
+    },
+    "instantiating_object": {
+      "code": "const demoObject = new Demo()"
+    },
+    "instantiating_polymorphic_object": {
+      "code": "interface Point {\n x: number;\n y: number;\n }\n class Dot implements Point{\n x: number;\n y: number;\n }\n const object :Point = new Dot;"
+    },
+    "implement_constructor": {
+      "code": "class Employee {\n empCode: number;\n empName: string;\n constructor(code: number, name: string) {\n this.empName = name;\n this.empCode = code;\n }\n }"
+    },
+    "implement_deconstructor": {
+      "not-implemented": true
+    }
+  }
+}
