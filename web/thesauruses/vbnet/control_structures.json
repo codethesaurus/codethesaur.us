@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "language": "vbnet",
+    "language_version": "16.0",
+    "language_name": "Visual Basic"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "switch_statement",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop",
+      "list_comprehension"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "code": "If condition Then\n     statements\nEnd If"
+    },
+    "if_else_conditional": {
+      "code": "If condition Then\n     statements\nElse\n     statements\nEnd If"
+    },
+    "if_elseif_conditional": {
+      "code": "If condition Then\n     statements\nElseIf condition Then\n     statements\nEnd If"
+    },
+    "if_elseif_else_conditional": {
+      "code": "If condition Then\n     statements\nElse if condition Then\n     statements\nElse\n     statements\nEnd If"
+    },
+    "switch_statement": {
+      "code": "Select Case expression\n     Case x\n          statements\n     Case y\n          statements\n     Case Else\n          statements\nEnd Select"
+    },
+    "ternary_conditional": {
+      "code": "If(condition, trueExpression, falseExpression)"
+    },
+    "while_loop": {
+      "code": "Do While condition\n     statements\nLoop"
+    },
+    "do_while_loop": {
+      "code": "Do\n     statements\nLoop While condition"
+    },
+    "until_loop": {
+      "code": "Do Until condition\n     statements\nLoop"
+    },
+    "do_until_loop": {
+      "code": "Do\n     statements\nLoop Until condition"
+    },
+    "for_loop": {
+      "code": "For expression To end\n     statements\nNext",
+      "comment": "Can also set a step: `For number as Double = 2 To 0 Step -0.25`"
+    },
+    "foreach_loop": {
+      "code": "For Each item in object\n     statements\nNext"
+    },
+    "list_comprehension": {
+      "code": "Dim new_list = From item In iterable\n               Where condition"
+    },
+    "each_iteration": {
+      "not-implemented": true
+    },
+    "map_iteration": {
+      "not-implemented": true
+    },
+    "filter_iteration": {
+      "not-implemented": true
+    },
+    "fold_iteration": {
+      "not-implemented": true
+    }
+  }
+}
