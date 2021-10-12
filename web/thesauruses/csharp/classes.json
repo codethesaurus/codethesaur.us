@@ -51,8 +51,7 @@
       "code": "interface IClassName {\n\t//declare properties, methods, etc\n\n}"
     },
     "read_only_class": {
-      "code": "class ClassName {\n\t //declare read-only properties, methods, etc\n}",
-      "comment": "Creating a read only class requires via read only properties."
+      "not-implemented": "true"
     },
     "static_class": {
       "code": "static class ClassName {\n\t//declare static properties, methods, etc\n}"
