@@ -51,23 +51,19 @@
         "code": "interface InterfaceName {\n //Interface body containing method declarations \n}"
       },
       "read_only_class": {
-        "code": "",
         "not-implemented": true
       },
       "static_class": {
         "code": "class ClassName {\n //Class body containing static variables and static methods \n}"
       },
       "inner_class": {
-        "code": "",
         "not-implemented": true
       },
       "packages": {
-        "code": "",
         "comment": "Composer can be used to create and manage PHP Packages. (https://getcomposer.org)",
         "not-implemented": true
       },
       "class_with_generic_type": {
-        "code": "",
         "not-implemented": true
       },
       "private_variables": {
