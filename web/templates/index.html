@@ -14,99 +14,84 @@
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="card-deck row">
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <div class="card">
                     <form method="get" action="/compare">
                         <div class="card-block">
-                            <h4 class="card-header">
+                            <h4 class="card-header p-3">
                                 Learn a Language
                             </h4>
-                            <div class="card-body">
-                                <h5 class="card-subtitle mb-3">
+                            <div class="card-body p-3">
+                                <h5 class="card-subtitle pb-3">
                                     Compare concepts side-by-side with a language you know and one you don't.
                                 </h5>
 
                                 <div class="card-text">
-                                    <div class="form-group">
-                                        <label class="text-muted" for="concept"> Choose a language concept:</label>
-                                        <select class="custom-select" id="concept" name="concept">
-                                            {% for k, v in structures.items %}
-                                            <option value="{{ v }}">{{ k }}</option>
-                                            {% endfor %}
-                                        </select>
-                                        
-                                    </div>
+                                    <label class="text-muted py-2" for="concept"> Choose a language concept:</label>
+                                    <select class="form-select" id="concept" name="concept">
+                                        {% for k, v in structures.items %}
+                                        <option value="{{ v }}">{{ k }}</option>
+                                        {% endfor %}
+                                    </select>
+
                                 </div>
                                 <div class="card-text">
-                                    <div class="form-group">
-                                        <label class="text-muted" for="lang1">Pick a language you know:</label>
-                                        <select class="custom-select" id="lang1" name="lang1">
-                                            {% for k, v in languages.items %}
-                                            <option value="{{ v }}">{{ k }}</option>
-                                            {% endfor %}
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="text-muted" for="lang2">Pick a language you <strong>don't</strong>
-                                            know:</label>
-                                        <select class="custom-select" id="lang2" name="lang2">
-                                            {% for k, v in languages.items %}
-                                            <option value="{{ v }}">{{ k }}</option>
-                                            {% endfor %}
-                                        </select>
-                                    </div>
+                                    <label class="text-muted py-2" for="lang1">Pick a language you know:</label>
+                                    <select class="form-select" id="lang1" name="lang1">
+                                        {% for k, v in languages.items %}
+                                        <option value="{{ v }}">{{ k }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <label class="text-muted py-2" for="lang2">Pick a language you
+                                        <strong>don't</strong>
+                                        know:</label>
+                                    <select class="form-select" id="lang2" name="lang2">
+                                        {% for k, v in languages.items %}
+                                        <option value="{{ v }}">{{ k }}</option>
+                                        {% endfor %}
+                                    </select>
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <div class="form-group">
-                                    <button type="submit" class="btn bg-blue text-white btn-lg" aria-label="go"
-                                        aria-hidden="true">
-                                        <span class="d-inline">Go <i class="fa fa-long-arrow-right ml-2"
-                                                aria-hidden="true"></i></span></button>
-                                </div>
+                                <button type="submit" class="btn bg-blue text-white btn-lg my-3"
+                                    aria-label="go-learn-a-language" aria-hidden="true">
+                                    <span class="d-inline">Go <i class="fa fa-arrow-right ml-2"
+                                            aria-hidden="true"></i></span></button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <div class="card">
                     <form method="get" action="/reference">
                         <div class="card-block">
-                            <h4 class="card-header">
+                            <h4 class="card-header p-3">
                                 See a Reference Sheet
                             </h4>
-                            <div class="card-body">
-                                <h5 class="card-subtitle mb-3">
+                            <div class="card-body p-3">
+                                <h5 class="card-subtitle pb-3">
                                     A quick and easy way to remind yourself how to do something.
 
                                     Still under construction.
                                 </h5>
-
-                                <div class="form-group">
-                                    <label class="text-muted" for="concept">Choose a language concept:</label>
-                                    <select class="custom-select" id="concept" name="concept">
-                                        {% for k, v in structures.items %}
-                                        <option value="{{ v }}">{{ k }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="text-muted" for="lang">Pick a language:</label>
-                                    <select class="custom-select" id="lang" name="lang">
-                                        {% for k, v in languages.items %}
-                                        <option value="{{ v }}">{{ k }}</option>
-                                        {% endfor %}
+                                <label class="text-muted py-2" for="concept">Choose a language concept:</label>
+                                <select class="form-select" id="concept" name="concept">
+                                    {% for k, v in structures.items %}
+                                    <option value="{{ v }}">{{ k }}</option>
+                                    {% endfor %}
                                 </select>
-                                </div>
+                                <label class="text-muted py-2" for="lang">Pick a language:</label>
+                                <select class="form-select" id="lang" name="lang">
+                                    {% for k, v in languages.items %}
+                                    <option value="{{ v }}">{{ k }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
                             <div class="card-footer">
-                                <div class="form-group">
-                                    <button type="submit" class="btn bg-blue text-white btn-lg" aria-label="go"
-                                        aria-hidden="true"> <span class="d-inline">Go <i
-                                                class="fa fa-long-arrow-right ml-2"
-                                                aria-hidden="true"></i></span></button>
-                                </div>
+                                <button type="submit" class="btn bg-blue text-white btn-lg my-3"
+                                    aria-label="go-see-a-reference-sheet" aria-hidden="true"> <span class="d-inline">Go
+                                        <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i></span></button>
                             </div>
                         </div>
                     </form>
