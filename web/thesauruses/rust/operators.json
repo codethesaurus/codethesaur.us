@@ -110,14 +110,14 @@
       "not-implemented": true
     },
     "exponential": {
-      "not-implemented": true,
+      "code": ["pow(number, exponent)", "checked_pow(number, exponent)"],
       "comment": "Rust provides methods pow and checked_pow for exponentiation."
     },
     "factorial": {
       "not-implemented": true
     },
     "absolute_value": {
-      "not-implemented": true,
+      "code": "number.abs()",
       "comment": "Rust provides abs method for finding absolute value."
     },
     "percentage": {
