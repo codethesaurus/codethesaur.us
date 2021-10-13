@@ -157,7 +157,7 @@
       "code": "Array"
     },
     "create_a_unordered_mutable_list": {
-      "code": "let arrayName: type[];\nlet arrayName = (type1 | type2)[]\nlet arrayName:Array<type> = new Array();",
+      "code": "let arrayName: type[];",
       "comment": "Examples: let scores : (string | number)[1,2,3,'hi'];"
     },
     "unordered_mutable_list_start_number": {
