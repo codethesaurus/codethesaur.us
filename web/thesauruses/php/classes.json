@@ -1,8 +1,8 @@
 {
     "meta": {
-      "language": "language_id",
-      "language_version": "version.number",
-      "language_name": "Human-Friendly Language Name"
+      "language": "php",
+      "language_version": "8.0",
+      "language_name": "PHP"
     },
     "categories": {
       "Defining Classes": [
