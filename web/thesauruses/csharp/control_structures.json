@@ -70,7 +70,7 @@
     },
     "for_loop": {
       "name": "For loop",
-      "code": "for(variables; conditions; expression after iteration)\n{\n    statements;\n}"
+      "code": "for(variables; conditions; expressionAfterIteration)\n{\n    statements;\n}"
     },
     "foreach_loop": {
       "name": "Foreach loop",
