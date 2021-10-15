@@ -119,8 +119,11 @@ def compare(request):
     except Exception:
         error_message = ""
         if lang1.lang_exists():
-            error_message = f"There is no entry about this structure/concept for the \
-                first language ({lang1.key}) yet.<br />"
+             error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
+                first language ({lang1.key}) yet.<br /><br /> \
+                Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
+                Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}'>https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}</a>"
+
         else:
             error_message = f"The first language ({lang1.key}) isn't valid. \
                 Double-check your URL and try again.<br />"
