@@ -59,6 +59,7 @@ def index(request):
         'languages': meta_data_langs,
         'structures': meta_structures,
         'randomLanguages': random_langs,
+        'description': 'Code Thesaurus: A polyglot developer reference tool'
     }
     return render(request, 'index.html', content)
 
@@ -70,7 +71,8 @@ def about(request):
     :return: HttpResponse object with rendered object of the page
     """
     content = {
-        'title': 'About'
+        'title': 'About',
+        'description': 'Code Thesaurus: A polyglot developer reference tool'
     }
     return render(request, 'about.html', content)
 
@@ -177,7 +179,7 @@ def compare(request):
 
     # DB equivalent of full outer join
     response = {
-        "title": "Comparing " + lang1.friendly_name + " " + lang2.friendly_name,
+        "title": "Comparing " + lang1.friendly_name + " and " + lang2.friendly_name,
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
         "lang1": lang1.key,
@@ -185,7 +187,8 @@ def compare(request):
         "lang1_friendlyname": lang1.friendly_name,
         "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
-        "concepts": both_concepts
+        "concepts": both_concepts,
+        "description": "Code Thesaurus: Comparing " + lang1.friendly_name + " and " + lang2.friendly_name
     }
 
     return render(request, 'compare.html', response)
@@ -265,7 +268,8 @@ def reference(request):
         "lang": lang.key,
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
-        "concepts": concepts
+        "concepts": concepts,
+        "description": "Code Thesaurus: Reference for " + lang.key
     }
 
     return render(request, 'reference.html', response)
