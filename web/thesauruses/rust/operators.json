@@ -110,7 +110,7 @@
       "not-implemented": true
     },
     "exponential": {
-      "code": ["pow(number, exponent)", "checked_pow(number, exponent)"],
+      "code": "pow(number, exponent), checked_pow(number, exponent)",
       "comment": "Rust provides methods pow and checked_pow for exponentiation."
     },
     "factorial": {
