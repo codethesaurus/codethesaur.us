@@ -85,13 +85,13 @@
     },
     "import": {
       "code": "using  System;",
-      "comment": "string will be avalible without this use but String will not be."
+      "comment": "`string` will be avalible without this using but `String` will not be."
     },
     "default_string_byte_encoding": {
       "code": "UTF-16"
     },
     "create_new_string": {
-      "code": "var newString = \".... . .-.. .-.. ---\""
+      "code": "var newString = \".... . .-.. .-.. ---\";"
     },
     "create_multiline_string": {
       "code": "var multiLineString = @\"Line 1\n    Line 2\n     Line 3\";"
@@ -116,10 +116,10 @@
       "comment": "string.IsNullOrWhiteSpace() will return true when the string is null or the string contains any whitespace character as specified in the Unicode standard."
     },
     "concatenate_two_strings": {
-      "code": "var s1 = \"Hello\";\ns2 = \"World\";\n\n var interpolation = $\"{s1}{s2}\"\nvar s3 = s1 + s2;\ns1 += s2;"
+      "code": "var s1 = \"Hello\";\ns2 = \"World\";\n\nvar interpolation = $\"{s1}{s2}\"\nvar s3 = s1 + s2;\ns1 += s2;"
     },
     "concatenate_many_strings": {
-      "code": "var sb = new System.Text.StringBuilder();\n      for (int i = 0; i < 20; i++)\n      {\n        sb.AppendLine(i.ToString());\n      }\nvar result = sb.ToString();"
+      "code": "var sb = new System.Text.StringBuilder();\nfor (int i = 0; i < 20; i++)\n{\n    sb.AppendLine(i.ToString());\n}\nvar result = sb.ToString();"
     },
     "is_all_alphabetical": {
       "not-implemented": true
@@ -135,7 +135,7 @@
       "code": "bool isNumber = decimal.TryParse(str, out integer);"
     },
     "is_all_whitespaces": {
-      "code": "string.IsNullOrWhiteSpace();"
+      "code": "string.IsNullOrWhiteSpace(str);"
     },
     "is_all_uppercase": {
       "not-implemented": true
@@ -185,7 +185,7 @@
       "comment": "Requires use of System.Globalization."
     },
     "capitalize_string": {
-      "code": "var s1 = \"hello.\";\n    var s1Capitalised = Char.ToUpper(s1[0]) + s1.Substring(1);"
+      "code": "var s1 = \"hello.\";\nvar s1Capitalised = Char.ToUpper(s1[0]) + s1.Substring(1);"
     },
     "remove_whitespace": {
       "not-implemented": true
@@ -201,13 +201,13 @@
       "not-implemented": true
     },
     "split_at_newlines": {
-      "code": "str.Split('\n');"
+      "code": "str.Split('\\n');"
     },
     "split_at_substring": {
       "code": "str.Split(substring);"
     },
     "merge_lists_into_string": {
-      "code": "string.Join('', stringList);"
+      "code": "string.Join(delimiter, stringList);"
     },
     "encode_html_entities": {
       "code": "HttpUtility.HtmlEncode(str);",
