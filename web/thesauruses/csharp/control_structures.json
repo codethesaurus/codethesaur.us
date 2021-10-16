@@ -31,35 +31,27 @@
   },
   "control_structures": {
     "if_conditional": {
-      "name": "If conditional",
       "code": "if (condition)\n{\n     statements;\n}"
     },
     "if_else_conditional": {
-      "name": "If/Else conditional",
       "code": "if (condition)\n{\n     statements;\n} \nelse\n{\n     statements;\n}"
     },
     "if_elseif_conditional": {
-      "name": "If/ElseIf conditional",
       "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}"
     },
     "if_elseif_else_conditional": {
-      "name": "If/ElseIf/Else conditional",
       "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}\nelse\n{\n    statements;\n}"
     },
     "switch_statement": {
-      "name": "Switch statement",
       "code": "switch (expression)\n{\n    case x:\n        statements;\n        break;\n    case y:\n        statements;\n        break;\n    default:\n        statements;\n        break;\n}"
     },
     "ternary_conditional": {
-      "name": "Ternary conditional",
       "code": "condition ? trueExpression : falseExpression"
     },
     "while_loop": {
-      "name": "While loop",
       "code": "while (condition)\n{\n    statements;\n}"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
       "code": "do\n{\n    statements;\n}\nwhile(condition)"
     },
     "until_loop": {
@@ -69,15 +61,12 @@
       "not-implemented": true
     },
     "for_loop": {
-      "name": "For loop",
       "code": "for(variables; conditions; expressionAfterIteration)\n{\n    statements;\n}"
     },
     "foreach_loop": {
-      "name": "Foreach loop",
       "code": "foreach(item in object)\n{\n    statements;\n}"
     },
     "list_comprehension": {
-      "name": "List Comprehension",
       "code": "var newList = list.Select(x => function(x));",
       "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     },
@@ -85,17 +74,14 @@
       "not-implemented": true
     },
     "map_iteration": {
-      "name": "Map iteration",
       "code": "var newList = list.Select(x => function(x));",
       "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "code": "var newList = list.Where(x => condition);",
       "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     },
     "fold_iteration": {
-      "name": "Fold iteration",
       "code": "var result = list.Aggregate((x, y) => expression)",
       "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
     }
