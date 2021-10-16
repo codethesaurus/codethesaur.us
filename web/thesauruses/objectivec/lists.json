@@ -124,35 +124,42 @@
       "code": "Yes"
     },
     "ordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "Yes",
-      "comment": "insert(_:at:)- Inserts a given object into the array’s contents at a given index."
+      "code": "Yes"
     },
     "access_element_in_ordered_mutable_list": {
       "code": "NSMutableArray arr = [Array1 objectAtIndex:i] objectIndex:j];"
     },
     "insert_into_beginning_of_ordered_mutable_list": {
-      "code": "insert(_:at:) - Inserts a given object into the array’s contents at a given index."
+      "code": "insert(_:at:)",
+      "comment": "Inserts a given object into the array’s contents at a given index."
     },
     "insert_into_end_of_ordered_mutable_list": {
-      "code": "add(_:) - Inserts a given object at the end of the array."
+      "code": "add(_:)",
+      "comment": "Inserts a given object at the end of the array."
     },
     "insert_into_middle_of_ordered_mutable_list": {
-      "code": "insert(_:at:) - Inserts a given object into the array’s contents at a given index."
+      "code": "insert(_:at:)",
+      "comment": "Inserts a given object into the array’s contents at a given index."
     },
     "erase_element_at_beginning_of_ordered_mutable_list": {
-      "code": "removeObject(at:) - Removes the object at index."
+      "code": "removeObject(at:)",
+      "comment": "Removes the object at index."
     },
     "erase_element_at_end_of_ordered_mutable_list": {
-      "code": "removeLastObject() - Removes the object with the highest-valued index in the array"
+      "code": "removeLastObject()",
+      "comment": "Removes the object with the highest-valued index in the array"
     },
     "erase_element_in_middle_of_ordered_mutable_list": {
-      "code": "removeObject(at:) - Removes the object at index."
+      "code": "removeObject(at:)",
+      "comment": "Removes the object at index."
     },
     "swap_elements_in_ordered_mutable_list": {
-      "code": "exchangeObjectAtIndex:withObjectAtIndex: - Exchanges the objects in the array at given indexes."
+      "code": "exchangeObjectAtIndex:withObjectAtIndex",
+      "comment": "Exchanges the objects in the array at given indexes."
     },
     "delete_ordered_mutable_list": {
-      "code": "removeObjectsInArray: - Removes from the receiving array the objects in another given array."
+      "code": "removeObjectsInArray",
+      "comment": "Removes from the receiving array the objects in another given array."
     },
     "name_of_unordered_mutable_list": {
       "code": "NSMutableSet"
@@ -167,42 +174,34 @@
       "code": "Yes"
     },
     "unordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": "true",
-      "comment": "addObject: - Adds a given object to the set, if it is not already a member."
+      "not-implemented": "true"
     },
     "access_element_in_unordered_mutable_list": {
       "not-implemented": "true"
     },
     "insert_into_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "addObject: - Adds a given object to the set, if it is not already a member."
+      "not-implemented": "true"
     },
     "insert_into_end_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "addObject: - Adds a given object to the set, if it is not already a member."
+      "not-implemented": "true"
     },
     "insert_into_middle_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "addObject: - Adds a given object to the set, if it is not already a member."
+      "not-implemented": "true"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "remove(_:) - Removes a given object from the set."
+      "not-implemented": "true"
     },
     "erase_element_at_end_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "remove(_:) - Removes a given object from the set."
+      "not-implemented": "true"
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "remove(_:) - Removes a given object from the set."
+      "not-implemented": "true"
     },
     "swap_elements_in_unordered_mutable_list": {
       "not-implemented": "true"
     },
     "delete_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "remove(_:) - Removes a given object from the set."
+      "not-implemented": "true"
     },
     "name_of_ordered_immutable_list": {
       "code": "NSArray"
@@ -250,7 +249,7 @@
       "code": "removeAllObjects()"
     },
     "name_of_immutable_hashed_list": {
-      "code": ""
+      "not-implemented": "true"
     },
     "create_a_immutable_hashed_list": {
       "not-implemented": "true"
