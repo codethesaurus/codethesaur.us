@@ -1,7 +1,7 @@
 {
   "meta": {
     "language": "objectivec",
-    "language_version": "4",
+    "language_version": "2.0",
     "language_name": "Objective-C"
   },
   "categories": {
@@ -40,7 +40,6 @@
       "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}"
     },
     "if_elseif_else_conditional": {
-
       "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n   statements;\n}"
     },
     "switch_statement": {
@@ -74,10 +73,10 @@
       "not-implemented": true
     },
     "map_iteration": {
-      "code" : "NSLog(@”%@”, [array map:^id(id obj) { return [(NSString *)obj operation]; }]);"
+      "code" : "NSLog(@\"%@\", [array map:^id(id obj) { return [(NSString *)obj operation]; }]);"
     },
     "filter_iteration": {
-      "code": "NSLog(@”%@”, [array filter:^BOOL(id obj) { return [(NSString *)obj condition:@”o”]; }]);"
+      "code": "NSLog(@\"%@\", [array filter:^BOOL(id obj) { return [(NSString *)obj condition:@\"o\"]; }]);"
     },
     "fold_iteration": {
       "not-implemented": true
