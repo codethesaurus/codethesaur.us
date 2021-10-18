@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "switch_statement",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop",
+      "list_comprehension"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": ""
+    },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": ""
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": ""
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": ""
+    },
+    "switch_statement": {
+      "name": "Switch statement"
+    },
+    "ternary_conditional": {
+      "name": "Ternary conditional",
+      "code": ""
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": ""
+    },
+    "do_while_loop": {
+      "name": "Do/While loop",
+      "code": ""
+    },
+    "until_loop": {
+      "name": "Until loop",
+      "code": ""
+    },
+    "do_until_loop": {
+      "name": "Do/Until loop",
+      "code": ""
+    },
+    "for_loop": {
+      "name": "For loop",
+      "code": ""
+    },
+    "foreach_loop": {
+      "name": "Foreach loop",
+      "code": ""
+    },
+    "list_comprehension": {
+      "name": "List Comprehension",
+      "code": ""
+    },
+    "each_iteration": {
+      "name": "Each iteration",
+      "code": ""
+    },
+    "map_iteration": {
+      "name": "Map iteration",
+      "code": ""
+    },
+    "filter_iteration": {
+      "name": "Filter iteration",
+      "code": ""
+    },
+    "fold_iteration": {
+      "name": "Fold iteration",
+      "code": ""
+    }
+  }
+}
