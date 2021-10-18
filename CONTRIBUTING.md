@@ -18,15 +18,16 @@ Read on to learn how to take on issues or thesaurus data files to contribute!
 
 ## Check Out the Project
 
-Head over to https://codethesaur.us to see how the site currently works. 
+Head over to https://codethesaur.us to see how the site currently works.
 
 You can also head over to the [documentation site](https://docs.codethesaur.us) and read about how the site is designed and developed and how the core thesaurus files are created.
 
 Some of the types of work we need here include:
-* Working on site features or bugs filed as [Issues](https://github.com/codethesaurus/codethesaur.us/issues) on the project
-* Adding programming language information to the thesaurus data files (see any issue tagged "ct-language-data")
-* Adding new programming languages (those may not have issues but you're encouraged to add them)
-* Working on documentation (see [the documentation repo](https://github.com/codethesaurus/docs/issues) for those issues, or just propose some changes!)
+
+- Working on site features or bugs filed as [Issues](https://github.com/codethesaurus/codethesaur.us/issues) on the project
+- Adding programming language information to the thesaurus data files (see any issue tagged "ct-language-data")
+- Adding new programming languages (those may not have issues but you're encouraged to add them)
+- Working on documentation (see [the documentation repo](https://github.com/codethesaurus/docs/issues) for those issues, or just propose some changes!)
 
 ## Claiming An Issue
 
@@ -56,16 +57,16 @@ Please make your issue as detailed as possible! Add in the page or URL it happen
 
 ## From Issue to PR
 
-Think you can tackle an issue? Great! 
+Think you can tackle an issue? Great!
 
 1. First, fork the repo so you have your own copy of it
 1. Create a new branch. You can name it whatever you want, but I'd recommend something descriptive, like `issue-123-fix-string-exception`
 1. Make your changes! I suggest committing early and often.
-1. Make sure you test the changes. Check out how to run the project on the [`README.md`](README.md) page.
+1. Make sure you test the changes. Check out how to run the project on the [`README.md`](https://github.com/codethesaurus/codethesaur.us/README.md) page.
 1. If you can test the changes and they work reliably, then create a new pull request. Be sure to either add `Fixes #1234` or `Closes #1234` so GitHub can link your issue number automatically.
-1. The CI/CD system should run tests (if applicable) and spin up a sample deploy of the app. 
+1. The CI/CD system should run tests (if applicable) and spin up a sample deploy of the app.
 1. I'll review it and leave any comments for things that may need to change. Changes aren't intended because your code is bad but more a consideration towards how it may work with other parts of the project or ways the user might interact with it.
-1. Finally, we'll merge it in! 
+1. Finally, we'll merge it in!
 
 Note: Due to the prolific spam at this year's Hacktoberfest, your PR may get marked as invalid or spam if it appears to not follow the request on the issue or appears to just be trying to get easy PRs for the shirt. If it's mistakenly marked as invalid/spam, please reach out so I can correct it.
 
@@ -73,7 +74,7 @@ Note: Due to the prolific spam at this year's Hacktoberfest, your PR may get mar
 
 I have a large roadmap for this project and will be adding lots of new features in the near future. For now, the present focus is on adding lots of language data into the site.
 
-If you strongly believe there should be a new feature or something is really lacking on the site, you are welcome to add an [Issue](https://github.com/codethesaurus/codethesaur.us/issues/new/choose) and I'll consider it. 
+If you strongly believe there should be a new feature or something is really lacking on the site, you are welcome to add an [Issue](https://github.com/codethesaurus/codethesaur.us/issues/new/choose) and I'll consider it.
 
 ## Adding or Revising Documentation
 
@@ -87,8 +88,8 @@ Issues marked with a `frontend` tag are open to having the cosmetic changes fixe
 
 Please feel free to reach out! You can:
 
-* Tweet [@codethesaurus](https://twitter.com/codethesaurus) or [@geekygirlsarah](https://twitter.com/geekygirlsarah)
-* Email [coreteam@codethesaur.us](mailto:coreteam@codethesaur.us)
-* Add comments onto issues if they are specific to that issue
+- Tweet [@codethesaurus](https://twitter.com/codethesaurus) or [@geekygirlsarah](https://twitter.com/geekygirlsarah)
+- Email [coreteam@codethesaur.us](mailto:coreteam@codethesaur.us)
+- Add comments onto issues if they are specific to that issue
 
 ## Happy Hacking!
