@@ -243,7 +243,6 @@
 			"comment": "This operation is not necessary as the elements are accessed by the key"
     },
     "access_element_in_unordered_immutable_list": {
-      "name": "Access element by index",
       "code": "someList[4]"
     },
     "delete_unordered_immutable_list": {
