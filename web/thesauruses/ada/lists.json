@@ -126,33 +126,33 @@
     },
     "create_a_ordered_mutable_list": {
       "code": "type Definite is array (Integer range 1 .. 10) of Integer;A1 : Definite; \n type Indefinite is array (Integer range <>) of Integer; A2 : Indefinite (1 .. 20);",
-		"comment": "Method 1 creates array of size 1 to 10 and is fixed size. Method 2 creates array with Integer range, where range is indefinite i.e we can change the size of array."
+      "comment": "Method 1 creates array of size 1 to 10 and is fixed size. Method 2 creates array with Integer range, where range is indefinite i.e we can change the size of array."
     },
     "ordered_mutable_list_start_number": {
       "code": "type A1 is array (Integer range <>) of Integer; \n type A2 is array (character range 'a' .. 'z') of Integer; \n type A3 is array (Integer range 1 .. 0) of Integer; \n type A4 is array (Boolean) of Integer; ",
-		"comment": "In other programming languages, like Java and python where list indices work on pointers and references, in Ada, we the programmer decide what the index type should be. It can be of any type, just change the type inside the parenthesis."
+      "comment": "In other programming languages, like Java and python where list indices work on pointers and references, in Ada, we the programmer decide what the index type should be. It can be of any type, just change the type inside the parenthesis."
     },
     "ordered_mutable_list_can_be_appended": {
       "code": "yes"
     },
     "ordered_mutable_list_can_be_inserted_in_middle": {
-     	"code": "yes"
+      "code": "yes"
     },
     "access_element_in_ordered_mutable_list": {
       "code": "Put_Line(Integer'Image(V(1)));",
-		"comment": "Here index start from 1, so to access value of 1st element in array do V(index)"
+	  "comment": "Here index start from 1, so to access value of 1st element in array do V(index)"
     },
     "insert_into_beginning_of_ordered_mutable_list": {
       "code": "X : Arr(1 .. 3) := (1, 2, 3); Y : Arr(1 .. 4) := (4) & X; \n V: Vector; V.Prepend(20);",
-		"comment": "Method 1,concatenate and save the values in new array. In method 2, V is a Vector and V is prepended with value 20. For method 2, you need Ada.Containers.Vectors container."
+      "comment": "Method 1,concatenate and save the values in new array. In method 2, V is a Vector and V is prepended with value 20. For method 2, you need Ada.Containers.Vectors container."
     },
     "insert_into_end_of_ordered_mutable_list": {
       "code": "X : Arr(1 .. 3) := (1, 2, 3); Y : Arr(1 .. 4) := X & (4); \n V : Vector; V.Append(20);",
-		"comment": "Method 1 concatenates and save the values in new array. In method 2, V is a Vector and V is appended with value 20. For method 2, you need Ada.Containers.Vectors container."
+      "comment": "Method 1 concatenates and save the values in new array. In method 2, V is a Vector and V is appended with value 20. For method 2, you need Ada.Containers.Vectors container."
     },
     "insert_into_middle_of_ordered_mutable_list": {
       "code": "X : Arr(1 .. 3) := (1, 2, 3); Y : Arr(1 .. 7) := X & (6) & X; \n V.insert(C,12);",
-		"comment": "In method 1, to insert value in middle of the array, you can concatenate the array with known range and save the values in new array. In method 2, V is a vector.To insert element in middle in the vector, define Cursor C and then value to be inserted before C. For method 2, you need Ada.Containers.Vectors container."
+      "comment": "In method 1, to insert value in middle of the array, you can concatenate the array with known range and save the values in new array. In method 2, V is a vector.To insert element in middle in the vector, define Cursor C and then value to be inserted before C. For method 2, you need Ada.Containers.Vectors container."
     },
     "erase_element_at_beginning_of_ordered_mutable_list": {
       "code": "V.Delete(index)"
@@ -333,7 +333,7 @@
     },
     "concatenate_two_lists": {
       "code": "A1 : T := (1,2,3); A2 : T := (4,5,6); A3 : T := A1 & A2;",
-		"comment": " We can concatenate more 2 list by adding operator '&'. It must be noted that T should have the array size larger or equal to the arrays which is being concatenated."
+	  "comment": " We can concatenate more 2 list by adding operator '&'. It must be noted that T should have the array size larger or equal to the arrays which is being concatenated."
     },
     "split_list_at_index": {
       "not-implemented":"true"
@@ -343,11 +343,11 @@
     },
     "duplicate_a_list": {
       "code": "A1 : T(1 .. 10); \n A2 : T(1 .. 10); \n begin \n A1 := A2;",
-		"comment": " index of array A2 must be less than (or equal) to A1, or else an exception is raised." 
+	  "comment": " index of array A2 must be less than (or equal) to A1, or else an exception is raised." 
     },
     "duplicate_subset_of_list": {
       "code": "A1 (2 .. 4) := A2 (5 .. 7);",
-		"comment" : "to copy a subset of an array, the variable must be of type array and the programmer must specify the index of the array. It must be noted that both range specified in A1 and A2 should be of equal length."
+	  "comment" : "to copy a subset of an array, the variable must be of type array and the programmer must specify the index of the array. It must be noted that both range specified in A1 and A2 should be of equal length."
     },
     "get_list_length": {
       "code": "A1'Length"
@@ -357,11 +357,11 @@
     },
     "do_two_lists_match_exactly": {
       "code": "Arr1 = Arr2",
-		"comment": "returns boolean value."
+	  "comment": "returns boolean value."
     },
     "do_two_lists_contain_same_items": {
       "code": "Arr1 = Arr2",
-		"comment": "returns boolean value"
+	  "comment": "returns boolean value"
     },
     "does_list_satisfy_some_expression": {
       "not-implemented": "true"
@@ -370,8 +370,8 @@
       "not-implemented": "true"
     },
     "sort_list": {
-		"code": "Sort (V)",
-		"comment": "Ada.Containers.Vectors is required for above function to work."
+      "code": "Sort (V)",
+	  "comment": "Ada.Containers.Vectors is required for above function to work."
     },
     "shuffle_list": {
       "not-implemented":"true"
