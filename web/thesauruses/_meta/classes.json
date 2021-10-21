@@ -66,7 +66,7 @@
       "code": ""
     },
     "packages": {
-      "name": "Normal class",
+      "name": "Packages",
       "code": ""
     },
     "class_with_generic_type": {
@@ -74,7 +74,7 @@
       "code": ""
     },
     "private_variables": {
-      "name": "Defining public variables",
+      "name": "Defining private variables",
       "code": ""
     },
     "protected_variables": {
