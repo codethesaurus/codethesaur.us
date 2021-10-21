@@ -287,7 +287,7 @@
       "code": "for C in M.Iterate loop \n Put_Line (Key (C)) \n end loop;"
     },
     "get_all_values_from_mutable_set": {
-      "code": "for C in M.Iterate loop \n Put_Line (Integer'Image(M(C))); \n end loop",
+      "code": "for C in M.Iterate loop \n Put_Line (Integer'Image(M(C))); \n end loop"
     },
     "swap_key_and_value_in_mutable_set": {
       "not-implemented": "true"
