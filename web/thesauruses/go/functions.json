@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "go",
+    "language_version": "1.16",
+    "language_name": "Go"
   },
   "categories": {
     "Void Functions": [
