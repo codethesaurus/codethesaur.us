@@ -30,60 +30,46 @@
   },
   "functions": {
     "void_function_no_parameters": {
-      "name": "Function that does not return a value and takes no parameters",
-      "code": ""
+      "code": "func function_name() {}"
     },
     "void_function_with_parameters": {
-      "name": "Function that does not return a value and that takes 1 or more defined parameters",
-      "code": ""
+      "code": "func function_name(x int, y string) {}"
     },
     "void_function_with_keyword_parameters": {
-      "name": "Function that does not return a value and that takes 0 or more defined keyword parameters",
-      "code": ""
+     "code": "type keywordArgs struct {A, B, C int}\nfunc function_name(args *keywordArgs) {}"
     },
     "void_function_variable_parameters": {
-      "name": "Function that does not return a value and function that takes an unknown number of parameters",
-      "code": ""
+      "code": "func function_name (x ...int) {}"
     },
     "return_value_function_no_parameters": {
-      "name": "Function that returns a value and takes no parameters",
-      "code": ""
+      "code": "func function_name () return_type {return value}"
     },
     "return_value_function_with_parameters": {
-      "name": "Function that returns a value and takes 1 or more defined parameters",
-      "code": ""
+      "code": "func function_name (x int, y string) return_type {return value}"
     },
     "return_value_function_with_keyword_parameters": {
-      "name": "Function that returns a value and takes 0 or more defined keyword parameters",
-      "code": ""
+      "code": "type keywordArgs struct {A, B, C int}\nfunc function_name(args *keywordArgs) return_type {return value}"
     },
     "return_value_function_variable_parameters": {
-      "name": "Function that returns a value and takes an unknown number of parameters",
-      "code": ""
+      "code": "func (x ...int) return_type {return value}"
     },
     "anonymous_function_no_parameters": {
-      "name": "Anonymous function that takes no parameters",
-      "code": ""
+      "code": "func () {}"
     },
     "anonymous_function_with_parameters": {
-      "name": "Anonymous function that takes 1 or more defined parameters",
-      "code": ""
+      "code": "func (x int, y string) {}"
     },
     "anonymous_function_with_keyword_parameters": {
-      "name": "Anonymous function that takes 0 or more defined keyword parameters",
-      "code": ""
+      "code": "type keywordArgs struct {A, B, C int}\nfunc (args *keywordArgs) {}"
     },
     "anonymous_function_variable_parameters": {
-      "name": "Anonymous function that takes an unknown number of parameters",
-      "code": ""
+      "code": "func (x ...int) {}"
     },
     "call_subroutine": {
-      "name": "Call subroutine",
-      "code": ""
+      "code": "func_name()"
     },
     "return_from_subroutine": {
-      "name": "Return from subroutine",
-      "code": ""
+      "code": "return"
     }
   }
 }
