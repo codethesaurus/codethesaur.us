@@ -51,7 +51,7 @@ class TestTemplates(TestCase):
             "</div>"
         )
 
-        # code and comment
+        # code and comment (single line)
         rendered_template_4 = render_to_string(
             "comparecard.html",
             {
@@ -69,6 +69,28 @@ class TestTemplates(TestCase):
             "    \n"
             "        <div>\n"
             "            I am <strong>bold</strong> and <em>italic</em>, <code>let x = 1</code>.\n"
+            "        </div>\n"
+            "    \n"
+            "    </div>\n"
+            "</div>"
+        )
+
+        # no code and comment (multiple lines)
+        rendered_template_4 = render_to_string(
+            "comparecard.html",
+            {
+                "code": "",
+                "comment": "I am a humble\nmulti-line comment in the\nform of a haiku"
+            }
+        ).strip()
+        self.assertEquals(
+            rendered_template_3,
+            "<div class=\"card\">\n"
+            "    <div class=\"card-body\">\n"
+            "    \n"
+            "    \n"
+            "        <div>\n"
+            "            I am a humble<br>multi-line comment in the<br>form of a haiku\n"
             "        </div>\n"
             "    \n"
             "    </div>\n"
