@@ -60,7 +60,7 @@
       "code": "func (x int, y string) {}"
     },
     "anonymous_function_with_keyword_parameters": {
-      "code": "type keywordArgs struct {A, B, C int}\nfunc (args *keywordArgs) {}"
+      "code": "type keywordArgs struct {A, B, C int}\n\nfunc (args *keywordArgs) {}"
     },
     "anonymous_function_variable_parameters": {
       "code": "func (x ...int) {}"
