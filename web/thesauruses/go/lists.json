@@ -326,8 +326,7 @@
       "code": "max = s[0]\nfor _, value := range s {\n    if (value > max) {\n        max = value\n    }\n}"
     },
     "convert_list_to_string": {
-      "comment": "Built-in \"strings\" package needs to be imported first",
-      "code": "str := strings.Join(slice, \" \")"
+      "not-implemented": true
     },
     "concatenate_two_lists": {
       "code": "final_list := append(list1, list2...)"
@@ -351,12 +350,10 @@
       "not-implemented": true
     },
     "do_two_lists_match_exactly": {
-      "comment": "Need to import standard library \"reflect\"",
-      "code": "reflect.DeepEqual(list1, list2)"
+      "not-implemented": true
     },
     "do_two_lists_contain_same_items": {
-      "comment": "Need to import standard library \"reflect\"",
-      "code": "reflect.DeepEqual(list1, list2)"
+      "not-implemented": true
     },
     "does_list_satisfy_some_expression": {
       "not-implemented": true
@@ -365,12 +362,10 @@
       "not-implemented": true
     },
     "sort_list": {
-      "comment": "Need to import standard library \"sort\"; can also use Floats64s or Strings",
-      "code": "sort.Ints(list)"
+      "not-implemented": true
     },
     "shuffle_list": {
-      "comment": "Need to import standard library \"math/rand\"",
-      "code": "rand.Shuffle(len(list), func(i, j int) { list[i], list[j] = list[j], list[i] })"
+      "not-implemented": true
     },
     "reverse_list": {
       "code": "for i := 0; i < len(numbers)/2; i++ {\n    j := len(numbers) - i - 1\n    numbers[i], numbers[j] = numbers[j], numbers[i]\n}"
