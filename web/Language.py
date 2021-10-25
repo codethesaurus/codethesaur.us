@@ -49,7 +49,7 @@ class Language:
 
     def concept(self, concept_key):
         """
-        Get the concept (including code and comment) from the concept file for that Lanugage
+        Get the concept (including code and comment) from the concept file for that Language
         :param concept_key: key for the concept to look up
         :returns: a dict containing the code and comment, and possibly the 'not-implemented' flag. They are empty strings if not specified
         :rtype: object

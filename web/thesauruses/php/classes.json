@@ -1,0 +1,125 @@
+{
+    "meta": {
+      "language": "php",
+      "language_version": "8.0",
+      "language_name": "PHP"
+    },
+    "categories": {
+      "Defining Classes": [
+        "normal_class",
+        "abstract_class",
+        "interface",
+        "read_only_class",
+        "static_class",
+        "inner_class",
+        "packages",
+        "class_with_generic_type"
+      ],
+      "Adding Private and Public Members": [
+        "private_variables",
+        "protected_variables",
+        "public_variables",
+        "static_variables",
+        "private_functions",
+        "protected_functions",
+        "public_functions",
+        "static_functions"
+      ],
+      "Extending and Implementing Classes": [
+        "extends_class",
+        "extending_interface",
+        "calling_superclass_functions",
+        "overriding_superclass_functions"
+      ],
+      "Creating Objects and Polymorphism": [
+        "instantiating_object",
+        "instantiating_polymorphic_object"
+      ],
+      "Constructors and Deconstructor": [
+        "implement_constructor",
+        "implement_deconstructor"
+      ]
+    },
+    "classes": {
+      "normal_class": {
+        "code": "class ClassName {\n //Class body containing variables and methods \n}"
+      },
+      "abstract_class": {
+        "code": "abstract class ClassName {\n //Class body containing methods (atleast one of which is abstract) \n}"
+      },
+      "interface": {
+        "code": "interface InterfaceName {\n //Interface body containing method declarations \n}"
+      },
+      "read_only_class": {
+        "not-implemented": true
+      },
+      "static_class": {
+        "code": "class ClassName {\n //Class body containing static variables and static methods \n}"
+      },
+      "inner_class": {
+        "not-implemented": true
+      },
+      "packages": {
+        "comment": "Composer can be used to create and manage PHP Packages. (https://getcomposer.org)",
+        "not-implemented": true
+      },
+      "class_with_generic_type": {
+        "not-implemented": true
+      },
+      "private_variables": {
+        "code": "private data_type $variable_name = value;",
+        "comment": "Data types are optional in PHP"
+      },
+      "protected_variables": {
+        "code": "protected data_type $variable_name = value;",
+        "comment": "Data types are optional in PHP"
+      },
+      "public_variables": {
+        "code": "public data_type $variable_name = value;",
+        "comment": "Data types are optional in PHP"
+      },
+      "static_variables": {
+        "code": "access-modifier static data_type $variable_name = value;",
+        "comment": "Data types are optional in PHP"
+      },
+      "private_functions": {
+        "code": "private function methodName(){\n //Method Body \n}"
+      },
+      "protected_functions": {
+        "code": "protected function methodName(){\n //Method Body \n}"
+      },
+      "public_functions": {
+        "code": "public function methodName(){\n //Method Body \n}"
+      },
+      "static_functions": {
+        "code": "access-modifier static function methodName(){\n //Method Body \n}"
+      },
+      "extends_class": {
+        "code": "class ChildClassName extends ParentClassName {\n //Class body containing variables and methods \n}"
+      },
+      "extending_interface": {
+        "code": "class ClassName implements InterfaceName {\n //Class body containing variables and methods \n}"
+      },
+      "calling_superclass_functions": {
+        "code": "parent::methodName();"
+      },
+      "overriding_superclass_functions": {
+        "code": "class ParentClassName {\n public function methodName() {\n  //Method body \n } \n} \nclass ChildClassName extends ParentClassName {\n public function methodName() {\n  //Method body \n } \n}"
+      },
+      "instantiating_object": {
+        "code": "ClassName $object_name = new ClassName();",
+        "comment": "ClassName data type is optional when declaring a variable."
+      },
+      "instantiating_polymorphic_object": {
+        "code": "InterfaceName $object_name = new ClassName();",
+        "comment": "InterfaceName data type is optional when declaring a variable. ClassName class must implement the interface InterfaceName"
+      },
+      "implement_constructor": {
+        "code": "public function __construct() {\n //Method body \n}"
+      },
+      "implement_deconstructor": {
+        "code": "public function __destruct() {\n //Method body \n}"
+      }
+    }
+  }
+  

@@ -1,7 +1,7 @@
 {
   "meta": {
     "language": "python",
-    "language_version": "3.7",
+    "language_version": "3.10",
     "language_name": "Python"
   },
   "categories": {
@@ -10,6 +10,7 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
+      "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
@@ -35,6 +36,10 @@
     },
     "if_elseif_else_conditional": {
       "code": "if condition:\n    statements\nelif condition:\n    statements\nelse:\n    statements"
+    },
+    "switch_statement": {
+      "comment": "This control structure was introduced with Python 3.10 and is more powerful than shown here.",
+      "code": "match condition:\n    case value1:\n        statements\n    case value2:\n        statements"
     },
     "ternary_conditional": {
       "code": "expression_if_true if condition else expression_if_false"

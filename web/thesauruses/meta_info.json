@@ -11,7 +11,7 @@
     "Nim (version 1.4)": "nim",
     "Objective-C (version 2.0)": "objectivec",
     "PHP (version 7.4)": "php",
-    "Python (version 3.7)": "python",
+    "Python (version 3.10)": "python",
     "Ruby (version 3.0)": "ruby",
     "Rust (version 1)": "rust",
     "Scala (version 2.13)": "scala",
