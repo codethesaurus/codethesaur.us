@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "language": "language_id",
+        "language_version": "version.number",
+        "language_name": "Human-Friendly Language Name"
+    },
+    "categories": {
+        "Console IO": [
+            "Write Line",
+            "Write Line with new line",
+            "Read line",
+            "Read Char",
+            "Clear Console Output",
+            "Change Console Color"
+        ],
+        "File IO": [
+            "List Directory",
+            "Read Directory Info",
+            "Create Directory",
+            "Delete Directory",
+            "Rename Directory",
+            "Move Directory",
+            "Update Directory permissions",
+            "Read Line of File",
+            "Read Lines of File",
+            "Read File Stream",
+            "Create File",
+            "Delete File",
+            "Update File",
+            "Move File"
+        ],
+        "Network IO": [
+            "Send a get request",
+            "Send a post request",
+            "Add headers",
+            "Add query params",
+            "Inbuilt URL class",
+            "Open a connection",
+            "Close a connection",
+            "Add Authorization headers",
+            "Add Cookies",
+            "Read Cookies",
+            "Read headers"
+        ],
+        "Database IO": [
+            "Open connection",
+            "Close connection",
+            "Execute query single result set",
+            "Execute query multiple result sets",
+            "Execute non query (update, delete)"
+        ],
+        "Streams": [
+
+        ]
+    },
+    "functions": {}
+}
