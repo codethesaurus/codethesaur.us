@@ -51,6 +51,18 @@
         ],
         "Streams": [
 
+        ],
+        "JSON": [
+            "Serialize JSON",
+            "Deserialize JSON",
+            "Serialize JSON with options",
+            "Deserialize JSON with options"
+        ],
+        "XML": [
+            "Serialize XML",
+            "Deserialize XML",
+            "Serialize XML with options",
+            "Deserialize XML with options"
         ]
     },
     "functions": {}
