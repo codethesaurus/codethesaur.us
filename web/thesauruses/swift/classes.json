@@ -1,0 +1,143 @@
+{
+   "meta": {
+     "language": "swift",
+     "language_version": "5.3.3",
+     "language_name": "Swift"
+   },
+   "categories": {
+     "Defining Classes": [
+       "normal_class",
+       "abstract_class",
+       "interface",
+       "read_only_class",
+       "static_class",
+       "inner_class",
+       "packages",
+       "class_with_generic_type"
+     ],
+     "Adding Private and Public Members": [
+       "private_variables",
+       "protected_variables",
+       "public_variables",
+       "static_variables",
+       "private_functions",
+       "protected_functions",
+       "public_functions",
+       "static_functions"
+     ],
+     "Extending and Implementing Classes": [
+       "extends_class",
+       "extending_interface",
+       "calling_superclass_functions",
+       "overriding_superclass_functions"
+     ],
+     "Creating Objects and Polymorphism": [
+       "instantiating_object",
+       "instantiating_polymorphic_object"
+     ],
+     "Constructors and Deconstructor": [
+       "implement_constructor",
+       "implement_deconstructor"
+     ]
+   },
+   "classes": {
+     "normal_class": {
+       "name": "Normal class",
+       "code": "class Class_Name {code}"
+     },
+     "abstract_class": {
+       "name": "Abstract class",
+       "not-implemented": true
+     },
+     "interface": {
+       "name": "Interface",
+       "code": "protocol Name {code}"
+     },
+     "read_only_class": {
+       "name": "Read-only class",
+       "not-implemented": true
+     },
+     "static_class": {
+       "name": "Static class",
+       "not-implemented": true
+     },
+     "inner_class": {
+       "name": "Inner class",
+       "not-implemented": true
+     },
+     "packages": {
+       "name": "Packages",
+       "code": "Package()"
+     },
+     "class_with_generic_type": {
+       "name": "Class with a generic type",
+       "code": ""
+     },
+     "private_variables": {
+       "name": "Defining private variables",
+       "code": "private var variable_name"
+     },
+     "protected_variables": {
+       "name": "Defining protected variables",
+       "code": "internal var variable_name"
+     },
+     "public_variables": {
+       "name": "Defining public variables",
+       "code": "public class {}",
+       "comment": "Variables declared within public classes are public by default."
+     },
+     "static_variables": {
+       "name": "Defining static variables",
+       "code": "static var variable_name"
+     },
+     "private_functions": {
+       "name": "Defining private functions",
+       "code": "privat func function_name"
+     },
+     "protected_functions": {
+       "name": "Defining protected functions",
+       "code": "internal func function_name"
+     },
+     "public_functions": {
+       "name": "Defining public functions",
+       "code": ""
+     },
+     "static_functions": {
+       "name": "Defining static functions",
+       "code": "static func function_name"
+     },
+     "extends_class": {
+       "name": "Class that inherits/extends another class",
+       "code": "class Child: Parent"
+     },
+     "extending_interface": {
+       "name": "Class/Interface that inherits/extends another class/interface",
+       "code": "class Child: ProtocolParent"
+     },
+     "calling_superclass_functions": {
+       "name": "Calling a superclass function",
+       "code": ""
+     },
+     "overriding_superclass_functions": {
+       "name": "Overriding a superclass function",
+       "code": "override func method"
+     },
+     "instantiating_object": {
+       "name": "Instantiating a new object",
+       "code": "let instance = Class()"
+     },
+     "instantiating_polymorphic_object": {
+       "name": "Instantiating a polymorphic object",
+       "code": ""
+     },
+     "implement_constructor": {
+       "name": "Implementing a class constructor",
+       "code": "init ()"
+     },
+     "implement_deconstructor": {
+       "name": "Implementing a class deconstructor",
+       "code": "deinit()"
+     }
+   }
+ }
+ 
