@@ -42,7 +42,7 @@
       "code": "if condition; then statements; elif condition; then statements; else statements; fi"
     },
     "switch_statement": {
-      "code": "case expresssion in\n  pattern1 )\n    statements ;;\n  pattern2 )\n    statements;;\nesac"
+      "code": "case expression in\n  pattern1 )\n    statements ;;\n  pattern2 )\n    statements;;\nesac"
     },
     "ternary_conditional": {
       "not_implemented": true
