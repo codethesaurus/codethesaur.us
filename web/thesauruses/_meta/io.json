@@ -65,5 +65,5 @@
             "Deserialize XML with options"
         ]
     },
-    "functions": {}
+    "io": {}
 }
