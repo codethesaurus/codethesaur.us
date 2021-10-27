@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "language": "Clojure",
+    "language_version": "1.10.3",
+    "language_name": "Clojure"
+  },
+  "categories": {
+    "Void Functions": [
+      "void_function_no_parameters",
+      "void_function_with_parameters",
+      "void_function_variable_parameters"
+    ],
+    "Return Value Functions": [
+      "return_value_function_no_parameters",
+      "return_value_function_with_parameters",
+      "return_value_function_variable_parameters"
+    ],
+    "Lambda/Anonymous Functions": [
+      "anonymous_function_no_parameters",
+      "anonymous_function_with_parameters",
+      "anonymous_function_variable_parameters"
+    ],
+    "Subroutines": [
+      "call_subroutine",
+      "return_from_subroutine"
+    ]
+  },
+  "functions": {
+    "void_function_no_parameters": {
+      "code": "(defn void-no-params []\n  (println \"Function called\"))\n\n;; call it\n(void-no-params)\nFunction called",
+      "comment": "There is no concept of void in idiomatic Clojure, so functions with no meaningful return value simply return `nil` (equivalent to `null` in Java)."
+    },
+    "void_function_with_parameters": {
+      "code": "(defn void-params [x y]\n  (println \"x + y is: \" (+ x y)))\n\n;; call it\n(void-with-params 1 2)\nx + y is:  3\nnil"
+    },
+    "void_function_variable_parameters": {
+      "code": "(defn void-variable-params [& params]\n  (println \"Sum of all params: \" (apply + params)))\n\n;; call it\n(void-with-variable-params 1 2 3 4)\nSum of all params:  10\nnil"
+    },
+    "return_value_function_no_parameters": {
+      "code": "(defn return-val-no-params []\n  (rand-int 100))\n\n;; call it\n(return-val-no-params)\n49",
+      "comment": "The value returned by a function is the value that its last form yields. In this case, that is the value from `rand-int`."
+    },
+    "return_value_function_with_parameters": {
+      "code": ";; function to calculate log in different bases\n(defn return-val-params\n  ;; no base specified, assume natural log (base e)\n  ([x]\n   (Math/log x))\n  ;; base specified, use change of base formula\n  ([x base]\n    (/ (Math/log x) (Math/log base))))\n\n;; call it\n(return-val-with-params 2)\n0.6931471805599453\n(return-val-with-params 1000 10)\n2.9999999999999996",
+      "comment": "This shows how functions with parameters can have different arities (and different behavior for each). Different arity forms can call each other."
+    },
+    "return_value_function_variable_parameters": {
+      "code": ";; function to find the minimum value passed\n(defn return-val-variable-params [& params]\n  (apply min params))\n\n;; call it\n(return-val-variable-params 100 15 -2 -99 245)\n-99"
+    },
+    "anonymous_function_no_parameters": {
+      "code": "(fn []\n  (println \"Anonymous function called\"))"
+    },
+    "anonymous_function_with_parameters": {
+      "code": ";; anonymous function to increment the param `x` by one, then divide the result by 2\n(fn [x]\n  (/ (inc x) 2)"
+    },
+    "anonymous_function_variable_parameters": {
+      "code": "(fn [& params]\n(apply max params))"
+    },
+    "call_subroutine": {
+      "code": "(defn my-fn []\n  (println \"my-fn called\"))\n\n;; call it\n(my-fn)",
+      "comment": "Named functions are called by wrapping in parens. Anonymous functions can also be called this way. Functions can be returned from other functions."
+    },
+    "return_from_subroutine": {
+      "code": "(defn some-fn []\n  (println \"Printing this line yields nil, but we will still return the value 42 after this\")\n  42))",
+      "comment": "The value returned from a function is the value yielded by its final form."
+    }
+  }
+}
