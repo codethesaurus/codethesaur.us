@@ -42,101 +42,79 @@
    },
    "classes": {
      "normal_class": {
-       "name": "Normal class",
-       "code": "class Class_Name {code}"
+       "code": "class Class_Name {\n  //Class body \n}"
      },
      "abstract_class": {
-       "name": "Abstract class",
        "not-implemented": true
      },
      "interface": {
-       "name": "Interface",
-       "code": "protocol Name {code}"
+       "code": "protocol Protocol_Name {\n  //Protocol body \n}",
+       "comment": "Protocols in Swift have the same behaviors as interfaces."
      },
      "read_only_class": {
-       "name": "Read-only class",
        "not-implemented": true
      },
      "static_class": {
-       "name": "Static class",
        "not-implemented": true
      },
      "inner_class": {
-       "name": "Inner class",
        "not-implemented": true
      },
      "packages": {
-       "name": "Packages",
-       "code": "Package()"
+       "code": "Package(\n  //Package body \n)",
+       "comment": "Developers wanting to write a package are advised to use XCode's GUI for setup to ensure the configuration is correct."
      },
      "class_with_generic_type": {
-       "name": "Class with a generic type",
-       "code": ""
+       "code": "class Class_Name<Element> {\n  //Class body \n}",
+       "comment": "When writing a class with a generic type, `Element` is the type parameter and can be used when writing the class variables and methods."
      },
      "private_variables": {
-       "name": "Defining private variables",
        "code": "private var variable_name"
      },
      "protected_variables": {
-       "name": "Defining protected variables",
        "code": "internal var variable_name"
      },
      "public_variables": {
-       "name": "Defining public variables",
-       "code": "public class {}",
-       "comment": "Variables declared within public classes are public by default."
+       "code": "public var variable_name"
      },
      "static_variables": {
-       "name": "Defining static variables",
        "code": "static var variable_name"
      },
      "private_functions": {
-       "name": "Defining private functions",
-       "code": "privat func function_name"
+       "code": "private func function_name() {\n  //Function body \n}"
      },
      "protected_functions": {
-       "name": "Defining protected functions",
-       "code": "internal func function_name"
+       "code": "internal func function_name() {\n  //Function body \n}"
      },
      "public_functions": {
-       "name": "Defining public functions",
-       "code": ""
+       "code": "public func function_name() {\n  //Function body \n}"
      },
      "static_functions": {
-       "name": "Defining static functions",
-       "code": "static func function_name"
+       "code": "static func function_name() {\n  //Function body \n}"
      },
      "extends_class": {
-       "name": "Class that inherits/extends another class",
-       "code": "class Child: Parent"
+       "code": "class Child_Class: Parent_Class {\n  //Class body \n}"
      },
      "extending_interface": {
-       "name": "Class/Interface that inherits/extends another class/interface",
-       "code": "class Child: ProtocolParent"
+       "code": "class Child_Class: Parent_Protocol {\n  //Class body \n}"
      },
      "calling_superclass_functions": {
-       "name": "Calling a superclass function",
-       "code": ""
+       "code": "super.function_name()"
      },
      "overriding_superclass_functions": {
-       "name": "Overriding a superclass function",
-       "code": "override func method"
+       "code": "class Child_Class: Parent_Class {\n  override func function_name() {\n  //Function body \n} \n}"
      },
      "instantiating_object": {
-       "name": "Instantiating a new object",
-       "code": "let instance = Class()"
+       "code": "let instance = Class_Name()"
      },
      "instantiating_polymorphic_object": {
-       "name": "Instantiating a polymorphic object",
-       "code": ""
+       "code": "var obj_name : Parent_Class \n obj_name = Child_Class()"
      },
      "implement_constructor": {
-       "name": "Implementing a class constructor",
-       "code": "init ()"
+       "code": "class Class_Name {\n  init () {\n} \n}"
      },
      "implement_deconstructor": {
-       "name": "Implementing a class deconstructor",
-       "code": "deinit()"
+       "code": "class Class_Name {\n  deinit () {\n} \n}"
      }
    }
  }
