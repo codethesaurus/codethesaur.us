@@ -18,13 +18,13 @@
                 <div class="card">
                     <form method="get" action="/compare">
                         <div class="card-block">
-                            <h4 class="card-header p-3">
+                            <h2 class="card-header p-3">
                                 Learn a Language
-                            </h4>
+                            </h2>
                             <div class="card-body p-3">
-                                <h5 class="card-subtitle pb-3">
+                                <h3 class="card-subtitle pb-3">
                                     Compare concepts side-by-side with a language you know and one you don't.
-                                </h5>
+                                </h3>
 
                                 <div class="card-text">
                                     <label class="text-muted py-2" for="concept"> Choose a language concept:</label>
@@ -54,9 +54,9 @@
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn bg-blue text-white btn-lg my-3"
-                                    aria-label="go-learn-a-language" aria-hidden="true">
+                                    aria-label="Go compare languages">
                                     <span class="d-inline">Go <i class="fa fa-arrow-right ml-2"
-                                            aria-hidden="true"></i></span></button>
+                                        ></i></span></button>
                             </div>
                         </div>
                     </form>
@@ -66,17 +66,17 @@
                 <div class="card">
                     <form method="get" action="/reference">
                         <div class="card-block">
-                            <h4 class="card-header p-3">
+                            <h2 class="card-header p-3">
                                 See a Reference Sheet
-                            </h4>
+                            </h2>
                             <div class="card-body p-3">
-                                <h5 class="card-subtitle pb-3">
+                                <h3 class="card-subtitle pb-3">
                                     A quick and easy way to remind yourself how to do something.
 
                                     Still under construction.
-                                </h5>
-                                <label class="text-muted py-2" for="concept">Choose a language concept:</label>
-                                <select class="form-select" id="concept" name="concept">
+                                </h3>
+                                <label class="text-muted py-2" for="reference-concept">Choose a language concept:</label>
+                                <select class="form-select" id="reference-concept" name="concept">
                                     {% for k, v in structures.items %}
                                     <option value="{{ v }}">{{ k }}</option>
                                     {% endfor %}
@@ -90,8 +90,8 @@
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn bg-blue text-white btn-lg my-3"
-                                    aria-label="go-see-a-reference-sheet" aria-hidden="true"> <span class="d-inline">Go
-                                        <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i></span></button>
+                                    aria-label="Go to reference sheet"> <span class="d-inline">Go
+                                        <i class="fa fa-arrow-right ml-2"></i></span></button>
                             </div>
                         </div>
                     </form>

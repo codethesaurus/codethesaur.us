@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "nim",
-    "language_version": "1.6",
-    "language_name": "Nim"
+    "language": "objectivec",
+    "language_version": "2.0",
+    "language_name": "Objective-C"
   },
   "categories": {
     "Arithmetic Operators": [
@@ -14,8 +14,6 @@
       "multiplication_assignment",
       "division",
       "division_assignment",
-      "integer_division",
-      "integer_division_assignment",
       "modulus",
       "modulus_assignment",
       "unary_plus",
@@ -64,58 +62,63 @@
       "code": "+"
     },
     "addition_assignment": {
-      "code": "+="
+      "code": "+=",
+      "comment": "a += 20 is same as a = a + 20"
     },
     "subtraction": {
       "code": "-"
     },
     "subtraction_assignment": {
-      "code": "-="
+      "code": "-=",
+      "comment": "a -= 20 is same as a = a - 20"
     },
     "multiplication": {
       "code": "*"
     },
     "multiplication_assignment": {
-      "code": "*="
+      "code": "*=",
+      "comment": "a *= 20 is same as a = a * 20"
     },
     "division": {
-      "code": "/"
+      "code": "/",
+      "comment": "Returns integer quotient i.e. 31/2 gives 15"
     },
     "division_assignment": {
-      "code": "/="
-    },
-    "integer_division": {
-      "code": "div"
-    },
-    "integer_division_assignment": {
-      "not-implemented": "true"
+      "code": "/=",
+      "comment": "a /= 20 is same as a = a / 20"
     },
     "modulus": {
-      "code": "mod"
+      "code": "%",
+      "comment": "Gives remainder of division"
     },
     "modulus_assignment": {
-      "not-implemented": "true"
+      "code": "%="
     },
     "unary_plus": {
-      "code": "+Infinite"
+      "code": "int a = 12",
+      "comment": "Value of a is positive 12"
     },
     "unary_minus": {
-      "code": "-Infinite"
+      "code": "int a = -12",
+      "comment": "Value of a is negative 12"
     },
     "increment": {
-      "code": "inc"
+      "code": "int a = 10; a++;",
+      "comment": "Value of a is 11"
     },
     "decrement": {
-      "code": "dec"
+      "code": "int a = 10; a--;",
+      "comment": "Value of a is 9"
     },
     "exponential": {
-      "code": "^"
+      "code": "^",
+      "comment": "Value of 5^3 is 125"
     },
     "factorial": {
-      "code": "fac"
+      "not-implemented": "true"
     },
     "absolute_value": {
-      "code": "abs"
+      "not-implemented": "true"
     },
     "percentage": {
       "not-implemented": "true"
@@ -139,38 +142,41 @@
       "code": ">="
     },
     "null_coalescing": {
-      "code": "?.",
-      "comment": "'not null' annotation allows null-free programming"
+      "not-implemented": "true"
     },
     "is": {
-      "code": "is"
+      "not-implemented": "true"
     },
     "is_not": {
-      "code": "isnot"
+      "not-implemented": "true"
     },
     "and": {
-      "code": "and"
+      "code": "&&",
+      "comment": "If both operands are non-zero/true then statement is true else false."
     },
     "and_assignment": {
-      "not-implemented": "true"
+      "code": "&&="
     },
     "or": {
-      "code": "or"
+      "code": "||",
+      "comment": "If any operand is non-zero/true then statement is true else false."
     },
     "or_assignment": {
-      "not-implemented": "true"
+      "code": "||="
     },
     "not": {
-      "code": "not"
+      "code": "!",
+      "comment": "If operand is true then returns false and vice-versa"
     },
     "not_assignment": {
-      "not-implemented": "true"
+      "code": "=!"
     },
     "xor": {
-      "code": "xor"
+      "code": "int a = 4 ^ 6 \n",
+      "comment": "It is a bitwise operator. It copies the bit if it is set in one operand but not both. Value of a is 2"
     },
     "xor_assignment": {
-      "not-implemented": "true"
+      "code": "^="
     },
     "xnor": {
       "not-implemented": "true"
@@ -179,24 +185,25 @@
       "not-implemented": "true"
     },
     "left_shift": {
-      "code": "shl"
+      "code": "int a = 1 << 2",
+      "comment": "Shifts the specified bits to left, so a equals to 4"
     },
     "left_shift_assignment": {
-      "not-implemented": "true"
+      "code": "<<="
     },
     "right_shift": {
-      "code": "shr"
+      "code": "int a = 4 >> 2",
+      "comment": "Shifts specified bits to right side, 2 bits in this case so a equals to 1"
     },
     "right_shift_assignment": {
-      "not-implemented": "true"
+      "code": ">>="
     },
     "ternary": {
-      "code": "if conditional: value0 else: value1",
-      "comment": "Ternary operator is just if...else inline"
+      "code": "int a = (5 == 6) ? 60 : 80",
+      "comment": "If (5 == 6) true, then value of a is 60 else 80."
     },
     "null_forgiving": {
-      "not-implemented": "true",
-      "comment": "'not null' annotation allows null-free programming"
+      "not-implemented": "true"
     }
   }
 }
