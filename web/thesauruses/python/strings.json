@@ -94,7 +94,7 @@
     },
     "create_new_string": {
       "name": "Create new string",
-      "code": " Using Single Quotes\n \t'New String Example' \n using Double Quotes  \n  \t\"New String Example 2 \"  "
+      "code": "'New String Example' \n\"New String Example 2\"  "
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
@@ -186,11 +186,11 @@
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "code": "txt = 'Hello World!!' \nGet 5 characters from left\ntxt[0:5] "
+      "code": "txt = 'Hello World!!' \n#Get 5 characters from left\ntxt[0:5] "
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "code": "txt = 'Hello World!!' \nGet 5 characters from right \ntxt[-5:] "
+      "code": "txt = 'Hello World!!' \n#Get 5 characters from right \ntxt[-5:] "
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
