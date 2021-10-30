@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "nim",
-    "language_version": "1.6",
-    "language_name": "Nim"
+    "language": "go",
+    "language_version": "1.16",
+    "language_name": "Go"
   },
   "categories": {
     "Ordered, Mutable Lists": [
@@ -84,7 +84,6 @@
       "delete_immutable_set"
     ],
     "Find/Search Functions": [
-      "find_element_at_position",
       "find_element_by_value",
       "find_minimum_element",
       "find_maximum_element",
@@ -123,344 +122,269 @@
   },
   "lists": {
     "name_of_ordered_mutable_list": {
-      "name": "What is a ordered, mutable list called?",
-      "code": "seq"
+      "comment": "It is similar to an array just dynamically sized",
+      "code": "Slice"
     },
     "create_a_ordered_mutable_list": {
-      "name": "Create the list",
-      "code": "@[0, 1, 2]"
+      "comment": "s is the list(slice) and int is the data type it can hold",
+      "code": "var s = [] int{1, 2, 3}"
     },
     "ordered_mutable_list_start_number": {
-      "name": "What number does it start at?",
       "code": "0"
     },
     "ordered_mutable_list_can_be_appended": {
-      "name": "Can you append to it?",
       "code": "Yes"
     },
     "ordered_mutable_list_can_be_inserted_in_middle": {
-      "name": "Can you insert into the middle of it?",
       "code": "Yes"
     },
     "access_element_in_ordered_mutable_list": {
-      "name": "Access element by index",
       "code": "list[index]"
     },
     "insert_into_beginning_of_ordered_mutable_list": {
-      "name": "Insert element at beginning",
-      "code": "list.insert element, 0"
+      "comment": "Create a new slice and append the previous one to it",
+      "code": "s = append([]int{element}, s...)"
     },
     "insert_into_end_of_ordered_mutable_list": {
-      "name": "Insert element at end",
-      "code": "list.add element"
+      "code": "s = append(s, element)"
     },
     "insert_into_middle_of_ordered_mutable_list": {
-      "name": "Insert element in middle",
-      "code": "list.insert element, index_at_middle"
+      "code": "s = append(x[:index+1], x[index:]...)\ns[index]=value"
     },
     "erase_element_at_beginning_of_ordered_mutable_list": {
-      "name": "Erase first element",
-      "code": "list.delete 0"
+      "code": "s = s[1:]"
     },
     "erase_element_at_end_of_ordered_mutable_list": {
-      "name": "Erase last element",
-      "code": "list.delete list.len"
+      "code": "s = s[:len(s)-1]"
     },
     "erase_element_in_middle_of_ordered_mutable_list": {
-      "name": "Erase element in the middle",
-      "code": "list.delete index_at_middle"
+      "code": "s = append(s[:index], s[index+1:]...)"
     },
     "swap_elements_in_ordered_mutable_list": {
-      "name": "Swap two elements",
-      "code": "swap list[index0], list[index1]"
+      "code": "s[index1], s[index2] = s[index2], s[index1]"
     },
     "delete_ordered_mutable_list": {
-      "name": "Delete the list",
-      "code": "Automatic compile-time deterministic memory management"
+      "code": "s = nil"
     },
     "name_of_unordered_mutable_list": {
-      "name": "What is a unordered, mutable list called?",
-      "code": "Table"
+      "not-implemented": true
     },
     "create_a_unordered_mutable_list": {
-      "name": "unordered",
-      "code": "{\"key\": \"value\"}.toTable"
+      "not-implemented": true
     },
     "unordered_mutable_list_start_number": {
-      "name": "What number does it start at?",
-      "code": "0"
+      "not-implemented": true
     },
     "unordered_mutable_list_can_be_appended": {
-      "name": "Can you append to it?",
-      "code": "Yes"
+      "not-implemented": true
     },
     "unordered_mutable_list_can_be_inserted_in_middle": {
-      "name": "Can you insert into the middle of it?",
-      "code": "Yes"
+      "not-implemented": true
     },
     "access_element_in_unordered_mutable_list": {
-      "name": "Access element by index",
-      "code": "table[key]"
+      "not-implemented": true
     },
     "insert_into_beginning_of_unordered_mutable_list": {
-      "name": "Insert element at beginning",
-      "code": "table[key] = value"
+      "not-implemented": true
     },
     "insert_into_end_of_unordered_mutable_list": {
-      "name": "Insert element at end",
-      "code": "table[key] = value"
+      "not-implemented": true
     },
     "insert_into_middle_of_unordered_mutable_list": {
-      "name": "Insert element in middle",
-      "code": "table[key] = value"
+      "not-implemented": true
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
-      "name": "Erase first element",
-      "code": "table.del key"
+      "not-implemented": true
     },
     "erase_element_at_end_of_unordered_mutable_list": {
-      "name": "Erase last element",
-      "code": "table.del key"
+      "not-implemented": true
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
-      "name": "Erase element in the middle",
-      "code": "table.del key"
+      "not-implemented": true
     },
     "swap_elements_in_unordered_mutable_list": {
-      "name": "Swap two elements",
-      "code": "swap table[key0], table[key1]"
+      "not-implemented": true
     },
     "delete_unordered_mutable_list": {
-      "name": "Delete the list",
-      "code": "Automatic compile-time deterministic memory management"
+      "not-implemented": true
     },
     "name_of_ordered_immutable_list": {
-      "name": "What is a ordered, immutable list called?",
-      "code": "seq"
+      "not-implemented": true
     },
     "create_a_ordered_immutable_list": {
-      "name": "Create the list",
-      "code": "@[0, 1, 2]"
+      "not-implemented": true
     },
     "ordered_immutable_list_start_number": {
-      "name": "What number does it start at?",
-      "code": "0"
+      "not-implemented": true
     },
     "access_element_in_ordered_immutable_list": {
-      "name": "Access element by index",
-      "code": "list[index]"
+      "not-implemented": true
     },
     "delete_ordered_immutable_list": {
-      "name": "Delete the list",
-      "code": "Automatic compile-time deterministic memory management"
+      "not-implemented": true
     },
     "name_of_unordered_immutable_list": {
-      "name": "What is a unordered, immutable list called?",
-      "code": "Table"
+      "not-implemented": true
     },
     "create_a_unordered_immutable_list": {
-      "name": "Create the list",
-      "code": "{\"key\": \"value\"}.toTable"
+      "not-implemented": true
     },
     "unordered_immutable_list_start_number": {
-      "name": "What number does it start at?",
-      "code": "0"
+      "not-implemented": true
     },
     "access_element_in_unordered_immutable_list": {
-      "name": "Access element by index",
-      "code": "table[key]"
+      "not-implemented": true
     },
     "delete_unordered_immutable_list": {
-      "name": "Delete the list",
-      "code": "Automatic compile-time deterministic memory management"
+      "not-implemented": true
     },
     "name_of_mutable_hashed_list": {
-      "name": "What is a mutable hashed list called?",
-      "code": "Table"
+      "code": "map"
     },
     "create_a_mutable_hashed_list": {
-      "name": "Create the list",
-      "code": "{\"key\": \"value\"}.toTable"
+      "code": "var my_map = map[key_type] value_type {\n   key1: value1\n   key2: value2\n} "
     },
     "insert_element_to_mutable_hashed_list": {
-      "name": "Insert an element",
-      "code": "table[key] = value"
+      "code": "my_map[key] = value"
     },
     "erase_element_from_mutable_hashed_list": {
-      "name": "Erase an element from the list",
-      "code": "table.del key"
+      "code": "delete(my_map, key)"
     },
     "delete_mutable_hashed_list": {
-      "name": "Delete the list",
-      "code": "Automatic compile-time deterministic memory management"
+      "code": "my_map = nil"
     },
     "name_of_immutable_hashed_list": {
-      "name": "What is an immutable hashed list called?",
-      "code": "Table"
+      "not-implemented": true
     },
     "create_a_immutable_hashed_list": {
-      "name": "Create the list",
-      "code": "{\"key\": \"value\"}.toTable"
+      "not-implemented": true
     },
     "insert_element_to_immutable_hashed_list": {
-      "name": "Insert an element",
-      "code": "table[key] = value"
+      "not-implemented": true
     },
     "erase_element_from_immutable_hashed_list": {
-      "name": "Erase an element from the list",
-      "code": "table.del key"
+      "not-implemented": true
     },
     "delete_immutable_hashed_list": {
-      "name": "Delete the list",
-      "code": "Automatic compile-time deterministic memory management"
+      "not-implemented": true
     },
     "create_a_mutable_set": {
-      "name": "Create a mutable key/value set",
-      "code": ""
+      "not-implemented": true
     },
     "get_key_from_mutable_set": {
-      "name": "Get key",
-      "code": ""
+      "not-implemented": true
     },
     "get_value_from_mutable_set": {
-      "name": "Get value",
-      "code": ""
+      "not-implemented": true
     },
     "get_all_keys_from_mutable_set": {
-      "name": "Get all keys",
-      "code": ""
+      "not-implemented": true
     },
     "get_all_values_from_mutable_set": {
-      "name": "Get all values",
-      "code": ""
+      "not-implemented": true
     },
     "swap_key_and_value_in_mutable_set": {
-      "name": "Swap a key and value",
-      "code": ""
+      "not-implemented": true
     },
     "delete_mutable_set": {
-      "name": "Delete the set",
-      "code": "Automatic compile-time deterministic memory management"
+      "not-implemented": true
     },
     "create_a_immutable_set": {
-      "name": "Create an immutable key/value set",
-      "code": ""
+      "not-implemented": true
     },
     "get_key_from_immutable_set": {
-      "name": "Get key",
-      "code": ""
+      "not-implemented": true
     },
     "get_value_from_immutable_set": {
-      "name": "Get value",
-      "code": ""
+      "not-implemented": true
     },
     "get_all_keys_from_immutable_set": {
-      "name": "Get all keys",
-      "code": ""
+      "not-implemented": true
     },
     "get_all_values_from_immutable_set": {
-      "name": "Get all values",
-      "code": ""
+      "not-implemented": true
     },
     "swap_key_and_value_in_immutable_set": {
-      "name": "Swap a key and value",
-      "code": ""
+      "not-implemented": true
     },
     "delete_immutable_set": {
-      "name": "Delete the set",
-      "code": "Automatic compile-time deterministic memory management"
+      "not-implemented": true
     },
     "find_element_at_position": {
-      "name": "Find/search for an element at an index position",
-      "code": ""
+      "not-implemented": true
     },
     "find_element_by_value": {
-      "name": "Find/search for an element by value",
-      "code": "list.find item"
+      "comment": "Here s is the slice (list) and value is the search query",
+      "code": "for _, v := range s {\n    if s == value {\n        return true\n    }\n}\nreturn false"
     },
     "find_minimum_element": {
-      "name": "Find the minimum value in a list",
-      "code": "list.low"
+      "comment": "Here s is the slice(list) and min is the minimum value",
+      "code": "min = s[0]\nfor _, value := range s {\n    if (value < min) {\n        min = value\n    }\n}"
     },
     "find_maximum_element": {
-      "name": "Find the maximum value in a list",
-      "code": "list.high"
+      "comment": "Here s is the slice(list) and max is the maximum value",
+      "code": "max = s[0]\nfor _, value := range s {\n    if (value > max) {\n        max = value\n    }\n}"
     },
     "convert_list_to_string": {
-      "name": "Convert a list to a string",
-      "code": "$list"
+      "comment": "Built-in \"strings\" package needs to be imported first",
+      "code": "str := strings.Join(slice, \" \")"      
     },
     "concatenate_two_lists": {
-      "name": "Concatenate two lists together",
-      "code": "list0 & list1"
+      "code": "final_list := append(list1, list2...)"
     },
     "split_list_at_index": {
-      "name": "Split lists at an index",
-      "code": ""
+      "code": "s1 := s[0:index+1] \ns2 := s[index+1:]"
     },
     "split_list_at_value": {
-      "name": "Split list at a value",
-      "code": ""
+      "not-implemented": true
     },
     "duplicate_a_list": {
-      "name": "Duplicate a list",
       "code": "new_list = list"
     },
     "duplicate_subset_of_list": {
-      "name": "Duplicate a portion/subset of a list",
-      "code": "list[start..end]"
+      "code": "new_list = list[start:end]"
     },
     "get_list_length": {
-      "name": "Get list length",
-      "code": "list.len"
+      "code": "len(list)"
     },
     "resize_list": {
-      "name": "Increase/decrease list size",
-      "code": "list.setLen lenght"
+      "not-implemented": true
     },
     "do_two_lists_match_exactly": {
-      "name": "Do two lists match every element?",
-      "code": "list0 == list1"
+      "comment": "Need to import standard library \"reflect\"",
+      "code": "reflect.DeepEqual(list1, list2)"
     },
     "do_two_lists_contain_same_items": {
-      "name": "Do two lists contain all the same items?",
-      "code": "list0 == list1"
+      "comment": "Need to import standard library \"reflect\"",
+      "code": "reflect.DeepEqual(list1, list2)"
     },
     "does_list_satisfy_some_expression": {
-      "name": "Does a list satisfy some expression?",
-      "code": "list.all criteria"
+      "not-implemented": true
     },
     "does_list_not_satisfy_an_expression": {
-      "name": "Does a list entirely not satisfy an expression?",
-      "code": "not(list.all criteria)"
+      "not-implemented": true
     },
     "sort_list": {
-      "name": "Sort a list",
-      "code": "list.sort"
+      "comment": "Need to import standard library \"sort\"; can also use Floats64s or Strings",
+      "code": "sort.Ints(list)"
     },
     "shuffle_list": {
-      "name": "Shuffle list elements",
-      "code": "list.shuffle"
+      "not-implemented": true
     },
     "reverse_list": {
-      "name": "Reverse order of list elements",
-      "code": "list.reverse"
+      "not-implemented": true
     },
     "map": {
-      "name": "Map function across list",
-      "code": "list.map function"
+      "not-implemented": true
     },
     "filter": {
-      "name": "Filter a list based on criteria",
-      "code": "list.filter criteria"
+      "not-implemented": true
     },
     "reduce_left": {
-      "name": "Reduce a list left-to-right",
-      "code": "list.foldl criteria"
+      "not-implemented": true
     },
     "reduce_right": {
-      "name": "Reduce a list right-to-left",
-      "code": "list.foldr criteria"
+      "not-implemented": true
     }
   }
 }
