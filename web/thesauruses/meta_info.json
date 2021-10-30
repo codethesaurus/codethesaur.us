@@ -16,8 +16,8 @@
     "Rust (version 1)": "rust",
     "Scala (version 2.13)": "scala",
     "Swift (version 5.3.3)": "swift",
-    "Visual Basic (version 16)": "vbnet",
-    "TypeScript (version 4.2)": "typescript"
+    "TypeScript (version 4.2)": "typescript",
+    "Visual Basic (version 16)": "vbnet"
   },
   "structures": {
     "Classes": "classes",
