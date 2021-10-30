@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "language": "perl",
+    "language_version": "5.34",
+    "language_name": "Perl"
+  },
+  "categories": {
+    "Numerical": [
+      "boolean",
+      "signed_integer_8_bit",
+      "unsigned_integer_8_bit",
+      "signed_integer_16_bit",
+      "unsigned_integer_16_bit",
+      "signed_integer_32_bit",
+      "unsigned_integer_32_bit",
+      "signed_integer_64_bit",
+      "unsigned_integer_64_bit",
+      "signed_integer_as_object",
+      "unsigned_integer_as_object",
+      "signed_float_16_bit",
+      "unsigned_float_16_bit",
+      "signed_float_32_bit",
+      "unsigned_float_32_bit",
+      "signed_float_64_bit",
+      "unsigned_float_64_bit",
+      "signed_float_as_object",
+      "unsigned_float_as_object"
+    ],
+    "Characters and Strings": [
+      "character",
+      "string_as_object",
+      "string_as_array"
+    ],
+    "Complex Numbers": [
+      "complex_as_object",
+      "real_number_part",
+      "imaginary_number_part"
+    ]
+  },
+  "data_types": {
+    "boolean": {
+      "code": "",
+      "comment": "Use a scalar. Perl does not require to pre-declare variable type."
+    },
+    "signed_integer_8_bit": {
+      "not-implemented": true
+    },
+    "unsigned_integer_8_bit": {
+      "not-implemented": true
+    },
+    "signed_integer_16_bit": {
+      "not-implemented": true
+    },
+    "unsigned_integer_16_bit": {
+      "not-implemented": true
+    },
+    "signed_integer_32_bit": {
+      "not-implemented": true
+    },
+    "unsigned_integer_32_bit": {
+      "not-implemented": true
+    },
+    "signed_integer_64_bit": {
+      "not-implemented": true
+    },
+    "unsigned_integer_64_bit": {
+      "not-implemented": true
+    },
+    "signed_integer_as_object": {
+      "code": "",
+      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
+    },
+    "unsigned_integer_as_object": {
+      "not-implemented": true
+    },
+    "signed_float_16_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_16_bit": {
+      "not-implemented": true
+    },
+    "signed_float_32_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_32_bit": {
+      "not-implemented": true
+    },
+    "signed_float_64_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_64_bit": {
+      "not-implemented": true
+    },
+    "signed_float_as_object": {
+      "code": "",
+      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
+    },
+    "unsigned_float_as_object": {
+      "not-implemented": true
+    },
+    "character": {
+      "not-implemented": true
+    },
+    "string_as_object": {
+      "code": "",
+      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
+    },
+    "string_as_array": {
+      "not-implemented": true
+    },
+    "complex_as_object": {
+      "not-implemented": true
+    },
+    "real_number_part": {
+      "not-implemented": true
+    },
+    "imaginary_number_part": {
+      "not-implemented": true
+    }
+  }
+}
