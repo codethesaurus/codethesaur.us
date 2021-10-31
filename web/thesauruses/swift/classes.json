@@ -1,0 +1,121 @@
+{
+   "meta": {
+     "language": "swift",
+     "language_version": "5.3.3",
+     "language_name": "Swift"
+   },
+   "categories": {
+     "Defining Classes": [
+       "normal_class",
+       "abstract_class",
+       "interface",
+       "read_only_class",
+       "static_class",
+       "inner_class",
+       "packages",
+       "class_with_generic_type"
+     ],
+     "Adding Private and Public Members": [
+       "private_variables",
+       "protected_variables",
+       "public_variables",
+       "static_variables",
+       "private_functions",
+       "protected_functions",
+       "public_functions",
+       "static_functions"
+     ],
+     "Extending and Implementing Classes": [
+       "extends_class",
+       "extending_interface",
+       "calling_superclass_functions",
+       "overriding_superclass_functions"
+     ],
+     "Creating Objects and Polymorphism": [
+       "instantiating_object",
+       "instantiating_polymorphic_object"
+     ],
+     "Constructors and Deconstructor": [
+       "implement_constructor",
+       "implement_deconstructor"
+     ]
+   },
+   "classes": {
+     "normal_class": {
+       "code": "class Class_Name {\n  //Class body \n}"
+     },
+     "abstract_class": {
+       "not-implemented": true
+     },
+     "interface": {
+       "code": "protocol Protocol_Name {\n  //Protocol body \n}",
+       "comment": "Protocols in Swift have the same behaviors as interfaces."
+     },
+     "read_only_class": {
+       "not-implemented": true
+     },
+     "static_class": {
+       "not-implemented": true
+     },
+     "inner_class": {
+       "not-implemented": true
+     },
+     "packages": {
+       "code": "Package(\n  //Package body \n)",
+       "comment": "Developers wanting to write a package are advised to use XCode's GUI for setup to ensure the configuration is correct."
+     },
+     "class_with_generic_type": {
+       "code": "class Class_Name<Element> {\n  //Class body \n}",
+       "comment": "When writing a class with a generic type, `Element` is the type parameter and can be used when writing the class variables and methods."
+     },
+     "private_variables": {
+       "code": "private var variable_name"
+     },
+     "protected_variables": {
+       "code": "internal var variable_name"
+     },
+     "public_variables": {
+       "code": "public var variable_name"
+     },
+     "static_variables": {
+       "code": "static var variable_name"
+     },
+     "private_functions": {
+       "code": "private func function_name() {\n  //Function body \n}"
+     },
+     "protected_functions": {
+       "code": "internal func function_name() {\n  //Function body \n}"
+     },
+     "public_functions": {
+       "code": "public func function_name() {\n  //Function body \n}"
+     },
+     "static_functions": {
+       "code": "static func function_name() {\n  //Function body \n}"
+     },
+     "extends_class": {
+       "code": "class Child_Class: Parent_Class {\n  //Class body \n}"
+     },
+     "extending_interface": {
+       "code": "class Child_Class: Parent_Protocol {\n  //Class body \n}"
+     },
+     "calling_superclass_functions": {
+       "code": "super.function_name()"
+     },
+     "overriding_superclass_functions": {
+       "code": "class Child_Class: Parent_Class {\n  override func function_name() {\n  //Function body \n} \n}"
+     },
+     "instantiating_object": {
+       "code": "let instance = Class_Name()"
+     },
+     "instantiating_polymorphic_object": {
+       "code": "var obj_name : Parent_Class \n obj_name = Child_Class()"
+     },
+     "implement_constructor": {
+       "code": "class Class_Name {\n  init () {\n} \n}"
+     },
+     "implement_deconstructor": {
+       "code": "class Class_Name {\n  deinit () {\n} \n}"
+     }
+   }
+ }
+ 
