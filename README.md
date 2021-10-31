@@ -2,7 +2,7 @@
 Website that will compare language features side by side.
 
 ## Why would you want this?
-Good question. If there's an aspect of a language you don't know, you can compare a languages you know with a language you do. It's a good way to quickly learn a new language, or use it as a quick reference to remember things by.
+Good question. If there's an aspect of a language you don't know, you can compare it with an aspect of a language you do know. It's a good way to quickly learn a new language, or use it as a quick reference to remember things by.
 
 Learn more about some of the considerations behind this on the [Project Architecture](https://docs.codethesaur.us/project_architecture/) docs page.
 
