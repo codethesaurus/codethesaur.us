@@ -43,35 +43,28 @@
       "code": "if( condition ) {\n\t# statements\n} elsif( condition ) {\n\t# else if statements\n} else {\n\t# else statements\n}"
     },
     "switch_statement": {
-      "name": "Switch statement",
       "code": "switch( argument ) {\n\tcase 1 { # statements }\n\tcase \"a\" { # statements }\n\telse { # else statements }\n }",
       "comment": "The Switch module must be included (aka use Switch;)."
     },
     "ternary_conditional": {
-      "name": "Ternary conditional",
       "code": "condition ? trueExpression : falseExpression"
     },
     "while_loop": {
-      "name": "While loop",
       "code": "while( condition ) {\n\t# statements\n}"
     },
     "do_while_loop": {
-      "name": "Do/While loop",
       "code": "do {\n\t# statements\n} while( condition );"
     },
     "until_loop": {
-      "name": "Until loop",
       "code": "until( condition ) {\n\t# statements\n}"
     },
     "do_until_loop": {
       "not-implemented": true
     },
     "for_loop": {
-      "name": "For loop",
       "code": "for( init; condition; increment )\n{\n\t# statements\n}"
     },
     "foreach_loop": {
-      "name": "Foreach loop",
       "code": "foreach $item ( @list ) {\n\t# statements\n}"
     },
     "list_comprehension": {
@@ -81,11 +74,9 @@
       "not-implemented": true
     },
     "map_iteration": {
-      "name": "Map iteration",
       "code": "my @newArray = map { expression } @oldArray;"
     },
     "filter_iteration": {
-      "name": "Filter iteration",
       "code": "my @newArray = grep { expresssion } @oldArray;"
     },
     "fold_iteration": {

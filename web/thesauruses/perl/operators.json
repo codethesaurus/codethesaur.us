@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "perl",
+    "language_version": "5.34",
+    "language_name": "Perl"
   },
   "categories": {
     "Arithmetic Operators": [
