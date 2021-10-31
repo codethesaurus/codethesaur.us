@@ -27,7 +27,7 @@
       "absolute_value",
       "percentage"
     ],
-    "Equality/Comparison Operators": [
+    "Equality/Comparison/Logical Operators": [
       "equal_to",
       "not_equal_to",
       "less_than",
@@ -36,19 +36,22 @@
       "greater_than_or_equal_to",
       "null_coalescing",
       "is",
-      "is_not"
+      "is_not",
+      "logical_and",
+      "logical_or",
+      "logical_not"
     ],
-    "Logical/Boolean/Bitwise Operators": [
-      "and",
-      "and_assignment",
-      "or",
-      "or_assignment",
-      "not",
-      "not_assignment",
-      "xor",
-      "xor_assignment",
-      "xnor",
-      "xnor_assignment",
+    "Bitwise Operators": [
+      "bitwise_and",
+      "bitwise_and_assignment",
+      "bitwise_or",
+      "bitwise_or_assignment",
+      "bitwise_not",
+      "bitwise_not_assignment",
+      "bitwise_xor",
+      "bitwise_xor_assignment",
+      "bitwise_xnor",
+      "bitwise_xnor_assignment",
       "left_shift",
       "left_shift_assignment",
       "right_shift",
@@ -158,42 +161,6 @@
     },
     "is_not": {
       "comment": "Haskell doesn't have a notion of identity/reference equality.",
-      "not-implemented": "true"
-    },
-    "and": {
-      "code": "x && y"
-    },
-    "and_assignment": {
-      "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
-    },
-    "or": {
-      "code": "x || y"
-    },
-    "or_assignment": {
-      "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
-    },
-    "not": {
-      "comment": "There are 2 valid logical not operators in Haskell.",
-      "code": "x /= y \nnot x"
-    },
-    "not_assignment": {
-      "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
-    },
-    "xor": {
-      "code": "",
-      "not-implemented": "true"
-    },
-    "xor_assignment": {
-      "not-implemented": "true"
-    },
-    "xnor": {
-      "code": "x == y"
-    },
-    "xnor_assignment": {
-      "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
       "not-implemented": "true"
     },
     "left_shift": {
