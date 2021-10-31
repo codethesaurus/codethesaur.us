@@ -72,7 +72,7 @@ class TestMetaStructures(TestCase):
 		language_friendly_name = "Alphabet language!"
 
 		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
-		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"}}")
+		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
@@ -90,13 +90,14 @@ class TestMetaStructures(TestCase):
 		self.assertEquals(language.concept("concept1"), dict({"code": "abc"}))
 		self.assertEquals(language.concept("concept2"), dict({"code": "abc", "comment": "My comment"}))
 		self.assertEquals(language.concept("concept3"), dict({"code": "", "comment": "", "not-implemented": True}))
+		self.assertEquals(language.concept("concept4"), dict({"code": ["line1","line2"]}))
 
 	def test_language_concept_unknown(self):
 		language_id = "abcdefg"
 		langauge_friendly_name = "Alphabet language!"
 
 		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
-		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"}}")
+		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
@@ -111,13 +112,14 @@ class TestMetaStructures(TestCase):
 		self.assertEquals(language.concept_unknown("concept1"), False)
 		self.assertEquals(language.concept_unknown("concept2"), False)
 		self.assertEquals(language.concept_unknown("concept3"), False)
+		self.assertEquals(language.concept_unknown("concept4"), False)
 
 	def test_language_concept_implemented(self):
 		language_id = "abcdefg"
 		langauge_friendly_name = "Alphabet language!"
 
 		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
-		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"}}")
+		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
@@ -133,13 +135,14 @@ class TestMetaStructures(TestCase):
 		self.assertEquals(language.concept_implemented("concept1"), True)
 		self.assertEquals(language.concept_implemented("concept2"), True)
 		self.assertEquals(language.concept_implemented("concept3"), False)
+		self.assertEquals(language.concept_implemented("concept4"), True)
 
 	def test_language_get_concept_code(self):
 		language_id = "abcdefg"
 		langauge_friendly_name = "Alphabet language!"
 
 		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
-		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"}}")
+		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
@@ -155,13 +158,14 @@ class TestMetaStructures(TestCase):
 		self.assertEquals(language.concept_code("concept1"), "abc")
 		self.assertEquals(language.concept_code("concept2"), "abc")
 		self.assertEquals(language.concept_code("concept3"), "")
+		self.assertEquals(language.concept_code("concept4"), "line1\nline2")
 
 	def test_language_get_concept_comment(self):
 		language_id = "abcdefg"
 		langauge_friendly_name = "Alphabet language!"
 
 		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
-		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"}}")
+		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
@@ -177,4 +181,5 @@ class TestMetaStructures(TestCase):
 		self.assertEquals(language.concept_comment("concept1"), "")
 		self.assertEquals(language.concept_comment("concept2"), "My comment")
 		self.assertEquals(language.concept_comment("concept3"), "")
+		self.assertEquals(language.concept_comment("concept4"), "")
 
