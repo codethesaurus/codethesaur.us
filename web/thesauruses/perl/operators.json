@@ -121,27 +121,27 @@
       "not-implemented": true
     },
     "equal_to": {
-      "code": "== or eq",
+      "code": "==\neq",
       "comment": "Use == for numerical comparision and eq for string comparison"
     },
     "not_equal_to": {
-      "code": "!= or ne",
+      "code": "!=\nne",
       "comment": "Use != for numerical comparision and ne for string comparison"
     },
     "less_than": {
-      "code": "< or lt",
+      "code": "<\nlt",
       "comment": "Use < for numerical comparision and lt for string comparison"
     },
     "less_than_or_equal_to": {
-      "code": "<= or le",
+      "code": "<=\nle",
       "comment": "Use <= for numerical comparision and le for string comparison"
     },
     "greater_than": {
-      "code": "> or gt",
+      "code": ">\ngt",
       "comment": "Use > for numerical comparision and gt for string comparison"
     },
     "greater_than_or_equal_to": {
-      "code": ">= or ge",
+      "code": ">=\nge",
       "comment": "Use >= for numerical comparision and ge for string comparison"
     },
     "null_coalescing": {
