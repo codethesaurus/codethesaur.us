@@ -1,0 +1,385 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "categories": {
+    "Imports": [
+      "statement_to_import_exception_handling"
+    ],
+    "Defining Errors/Exceptions": [
+      "are_exception_types_functions",
+      "are_exception_types_objects",
+      "are_exception_types_gotos",
+      "base_exception_type",
+      "define_new_exception_type"
+    ],
+    "Error Capture Blocks": [
+      "try_or_operator",
+      "statement_to_start_trying_code",
+      "statement_to_start_catching_exceptions",
+      "statement_to_catch_generic_exception",
+      "statement_to_catch_specific_exception",
+      "statement_to_catch_multiple_exceptions",
+      "statement_to_break_out_if_caught_exception",
+      "statement_to_stop_program_if_caught_exception",
+      "statement_to_start_code_if_no_exceptions_caught",
+      "statement_to_start_cleaning_up_after_exception",
+      "order_to_call_all_statements",
+      "statement_to_end_trying_code",
+      "property_with_exception_code",
+      "property_with_exception_message",
+      "property_with_stack_trace",
+      "property_containing_other_info"
+    ],
+    "Manually Throwing exceptions": [
+      "throw_generic_exception",
+      "throw_exception_as_text",
+      "throw_specific_exception_type"
+    ],
+    "Data Type Errors/Exceptions": [
+      "base_data_type_exception_type",
+      "invalid_data_type_exception_type",
+      "variable_not_found_exception_type",
+      "object_not_found_exception_type",
+      "index_out_of_bounds_exception_type",
+      "key_name_not_found_exception_type",
+      "invalid_encoding_exception_type"
+    ],
+    "Mathematical Errors/Exceptions": [
+      "base_mathematical_exception_type",
+      "overflow_exception_type",
+      "floating_point_exception_type",
+      "divide_by_zero_exception_type",
+      "cannot_cast_types_exception_type"
+    ],
+    "Memory Errors/Exceptions": [
+      "base_memory_exception_type",
+      "cannot_allocate_memory_exception_type",
+      "out_of_memory_exception_type",
+      "stack_overflow_exception_type",
+      "cannot_access_pointer_exception_type"
+    ],
+    "File Input/Output Errors/Exceptions": [
+      "base_file_exception_type",
+      "end_of_file_exception_type",
+      "file_does_not_exist_exception_type",
+      "file_already_exists_exception_type",
+      "item_is_actually_directory_exception_type",
+      "item_is_not_a_directory_exception_type",
+      "cannot_access_file_exception_type",
+      "drive_disconnected_exception_type",
+      "file_no_longer_available_exception_type",
+      "file_timeout_exception"
+    ],
+    "Network Input/Output Errors/Exceptions": [
+      "base_network_exception_type",
+      "connection_refused_exception_type",
+      "connection_broken_exception_type",
+      "invalid_hostname_exception",
+      "cannot_establish_connection_exception_type",
+      "connection_timed_out_exception_type",
+      "bad_certificate_exception_type",
+      "expired_certificate_exception_type"
+    ],
+    "Operating System Errors/Exceptions": [
+      "child_process_could_not_be_created_exception_type",
+      "child_process_unexpected_ending_exception_type",
+      "process_not_found_exception_type"
+
+    ],
+    "Other Errors/Exception Types": [
+      "import_not_found_exception_type",
+      "keyboard_interrupt_exception_type",
+      "syntax_exception_type",
+      "uncaught_signal_exception_type"
+    ],
+    "Warnings": [
+      "base_warning_type",
+      "deprecation_warning_type"
+    ]
+  },
+  "exception_handling": {
+    "statement_to_import_exception_handling": {
+      "name": "Import statement to add exception handling",
+      "code": ""
+    },
+    "are_exception_types_functions": {
+      "name": "Are specific exception types a functions?",
+      "code": ""
+    },
+    "are_exception_types_objects": {
+      "name": "Are specific exception types an object?",
+      "code": ""
+    },
+    "are_exception_types_gotos": {
+      "name": "Are specific exception types a Goto statement?",
+      "code": ""
+    },
+    "base_exception_type": {
+      "name": "Base exception type name",
+      "code": ""
+    },
+    "define_new_exception_type": {
+      "name": "Statement to define a new exception type",
+      "code": ""
+    },
+    "try_or_operator": {
+      "name": "Try-Or operator",
+      "code": ""
+    },
+    "statement_to_start_trying_code": {
+      "name": "Statement to start a block of code to try",
+      "code": ""
+    },
+    "statement_to_start_catching_exceptions": {
+      "name": "Statement to start catching exceptions",
+      "code": ""
+    },
+    "statement_to_catch_generic_exception": {
+      "name": "Statement to catch a generic exception",
+      "code": ""
+    },
+    "statement_to_catch_specific_exception": {
+      "name": "Statement to catch a specific exception",
+      "code": ""
+    },
+    "statement_to_catch_multiple_exceptions": {
+      "name": "Statement to catch multiple types of exceptions",
+      "code": ""
+    },
+    "statement_to_break_out_if_caught_exception": {
+      "name": "Statement to break out of a block if an exception is caught",
+      "code": ""
+    },
+    "statement_to_stop_program_if_caught_exception": {
+      "name": "Statement to stop the program if an exception is caught",
+      "code": ""
+    },
+    "statement_to_start_code_if_no_exceptions_caught": {
+      "name": "Statement to start code if no exceptions are caught",
+      "code": ""
+    },
+    "statement_to_start_cleaning_up_after_exception": {
+      "name": "Statement to start code ran after an exception",
+      "code": ""
+    },
+    "order_to_call_all_statements": {
+      "name": "The order to call all statements in a block to catch exceptions",
+      "code": ""
+    },
+    "statement_to_end_trying_code": {
+      "name": "Statement to end a block of code to try ",
+      "code": ""
+    },
+    "property_with_exception_code": {
+      "name": "Property within an exception object containing the error code",
+      "code": ""
+    },
+    "property_with_exception_message": {
+      "name": "Property within an exception object containing the error message",
+      "code": ""
+    },
+    "property_with_stack_trace": {
+      "name": "Property within an exception object containing the stack trace",
+      "code": ""
+    },
+    "property_containing_other_info": {
+      "name": "Property within an exception object containing additional information",
+      "code": ""
+    },
+    "throw_generic_exception": {
+      "name": "Throw a generic exception",
+      "code": ""
+    },
+    "throw_exception_as_text": {
+      "name": "Throw an exception as a text error message",
+      "code": ""
+    },
+    "throw_specific_exception_type": {
+      "name": "Throw an exception as a specific exception object",
+      "code": ""
+    },
+    "base_data_type_exception_type": {
+      "name": "Base class type for all data type exceptions",
+      "code": ""
+    },
+    "invalid_data_type_exception_type": {
+      "name": "Class name for an invalid type exception",
+      "code": ""
+    },
+    "variable_not_found_exception_type": {
+      "name": "Class name for a variable not found exception",
+      "code": ""
+    },
+    "object_not_found_exception_type": {
+      "name": "Class name for an object not found exception",
+      "code": ""
+    },
+    "index_out_of_bounds_exception_type": {
+      "name": "Class name for an index out of bounds exception",
+      "code": ""
+    },
+    "key_name_not_found_exception_type": {
+      "name": "Class name for a key name not found exception",
+      "code": ""
+    },
+    "invalid_encoding_exception_type": {
+      "name": "Class name for an invalid encoding exception",
+      "code": ""
+    },
+    "base_mathematical_exception_type": {
+      "name": "Base class name for a mathematical exception",
+      "code": ""
+    },
+    "overflow_exception_type": {
+      "name": "Class name for an overflow exception",
+      "code": ""
+    },
+    "floating_point_exception_type": {
+      "name": "Class name for a floating point exception",
+      "code": ""
+    },
+    "divide_by_zero_exception_type": {
+      "name": "Class name for a divide by zero exception",
+      "code": ""
+    },
+    "cannot_cast_types_exception_type": {
+      "name": "Class name for a cast type exception",
+      "code": ""
+    },
+    "base_memory_exception_type": {
+      "name": "Base class name for a memory exception",
+      "code": ""
+    },
+    "cannot_allocate_memory_exception_type": {
+      "name": "Class name for being an unable to allocate memory exception",
+      "code": ""
+    },
+    "out_of_memory_exception_type": {
+      "name": "Class name for a running out of memory exception",
+      "code": ""
+    },
+    "stack_overflow_exception_type": {
+      "name": "Class name for a stack overflow exception",
+      "code": ""
+    },
+    "cannot_access_pointer_exception_type": {
+      "name": "Class name for a cannot access pointer exception",
+      "code": ""
+    },
+    "base_file_exception_type": {
+      "name": "Base class name for a file operation exception",
+      "code": ""
+    },
+    "end_of_file_exception_type": {
+      "name": "Class name for an end of file exception",
+      "code": ""
+    },
+    "file_does_not_exist_exception_type": {
+      "name": "Class name for a file does not exist exception",
+      "code": ""
+    },
+    "file_already_exists_exception_type": {
+      "name": "Class name for a file already exists exception",
+      "code": ""
+    },
+    "item_is_actually_directory_exception_type": {
+      "name": "Class name for an item is actually a directory exception",
+      "code": ""
+    },
+    "item_is_not_a_directory_exception_type": {
+      "name": "Class name for an item is not a directory exception",
+      "code": ""
+    },
+    "cannot_access_file_exception_type": {
+      "name": "Class name for a cannot access file exception",
+      "code": ""
+    },
+    "drive_disconnected_exception_type": {
+      "name": "Class name for a drive disconnected exception",
+      "code": ""
+    },
+    "file_no_longer_available_exception_type": {
+      "name": "Class name for a file that is no longer available exception",
+      "code": ""
+    },
+    "file_timeout_exception": {
+      "name": "Class name for a file timeout error",
+      "code": ""
+    },
+    "base_network_exception_type": {
+      "name": "Base class name for a network exception",
+      "code": ""
+    },
+    "connection_refused_exception_type": {
+      "name": "Class name for a network connection refused exception",
+      "code": ""
+    },
+    "connection_broken_exception_type": {
+      "name": "Class name for a network connection broken exception",
+      "code": ""
+    },
+    "invalid_hostname_exception": {
+      "name": "Class name for an invalid hostname exception",
+      "code": ""
+    },
+    "cannot_establish_connection_exception_type": {
+      "name": "Class name for a cannot establish a network connection exception",
+      "code": ""
+    },
+    "connection_timed_out_exception_type": {
+      "name": "Class name for a network connection timed out exception",
+      "code": ""
+    },
+    "bad_certificate_exception_type": {
+      "name": "Class name for a bad SSL/TLS certificate exception",
+      "code": ""
+    },
+    "expired_certificate_exception_type": {
+      "name": "Class name for an expired SSL/TLS certificate exception",
+      "code": ""
+    },
+    "base_test_assertion_exception_type": {
+      "name": "Base class name for a test assertion exception",
+      "code": ""
+    },
+    "child_process_could_not_be_created_exception_type": {
+      "name": "Class name for a child process that could not be created exception",
+      "code": ""
+    },
+    "child_process_unexpected_ending_exception_type": {
+      "name": "Class name for a child process that ended unexpectedly exception",
+      "code": ""
+    },
+    "process_not_found_exception_type": {
+      "name": "Class name for a process that's not found exception",
+      "code": ""
+    },
+    "import_not_found_exception_type": {
+      "name": "Class name for an import that's not found exception",
+      "code": ""
+    },
+    "keyboard_interrupt_exception_type": {
+      "name": "Class name for a keyboard interrupt occurrence exception",
+      "code": ""
+    },
+    "syntax_exception_type": {
+      "name": "Class name for a syntax exception",
+      "code": ""
+    },
+    "uncaught_signal_exception_type": {
+      "name": "Class name for an uncaught system signal exception",
+      "code": ""
+    },
+    "base_warning_type": {
+      "name": "Base class name for a generic warning",
+      "code": ""
+    },
+    "deprecation_warning_type": {
+      "name": "Class name for a deprecated statement/function warning",
+      "code": ""
+    }
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "language": "csharp",
+    "language_version": "9.0",
+    "language_name": "C#"
+  },
+  "categories": {
+    "Ordered, Mutable Lists": [
+      "name_of_ordered_mutable_list",
+      "create_a_ordered_mutable_list",
+      "ordered_mutable_list_start_number",
+      "ordered_mutable_list_can_be_appended",
+      "ordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_ordered_mutable_list",
+      "insert_into_beginning_of_ordered_mutable_list",
+      "insert_into_end_of_ordered_mutable_list",
+      "insert_into_middle_of_ordered_mutable_list",
+      "erase_element_at_beginning_of_ordered_mutable_list",
+      "erase_element_at_end_of_ordered_mutable_list",
+      "erase_element_in_middle_of_ordered_mutable_list",
+      "swap_elements_in_ordered_mutable_list",
+      "delete_ordered_mutable_list"
+    ],
+    "Unordered, Mutable Lists": [
+      "name_of_unordered_mutable_list",
+      "create_a_unordered_mutable_list",
+      "unordered_mutable_list_start_number",
+      "unordered_mutable_list_can_be_appended",
+      "unordered_mutable_list_can_be_inserted_in_middle",
+      "access_element_in_unordered_mutable_list",
+      "insert_into_beginning_of_unordered_mutable_list",
+      "insert_into_end_of_unordered_mutable_list",
+      "insert_into_middle_of_unordered_mutable_list",
+      "erase_element_at_beginning_of_unordered_mutable_list",
+      "erase_element_at_end_of_unordered_mutable_list",
+      "erase_element_in_middle_of_unordered_mutable_list",
+      "swap_elements_in_unordered_mutable_list",
+      "delete_unordered_mutable_list"
+    ],
+    "Ordered, Immutable Lists": [
+      "name_of_ordered_immutable_list",
+      "create_a_ordered_immutable_list",
+      "ordered_immutable_list_start_number",
+      "access_element_in_ordered_immutable_list",
+      "delete_ordered_immutable_list"
+    ],
+    "Unordered, Immutable Lists": [
+      "name_of_unordered_immutable_list",
+      "create_a_unordered_immutable_list",
+      "unordered_immutable_list_start_number",
+      "access_element_in_unordered_immutable_list",
+      "delete_unordered_immutable_list"
+    ],
+    "Mutable Hashed Lists": [
+      "name_of_mutable_hashed_list",
+      "create_a_mutable_hashed_list",
+      "insert_element_to_mutable_hashed_list",
+      "erase_element_from_mutable_hashed_list",
+      "delete_mutable_hashed_list"
+    ],
+    "Immutable Hashed Lists": [
+      "name_of_immutable_hashed_list",
+      "create_a_immutable_hashed_list",
+      "insert_element_to_immutable_hashed_list",
+      "erase_element_from_immutable_hashed_list",
+      "delete_immutable_hashed_list"
+    ],
+    "Mutable Key/Value Sets": [
+      "create_a_mutable_set",
+      "get_key_from_mutable_set",
+      "get_value_from_mutable_set",
+      "get_all_keys_from_mutable_set",
+      "get_all_values_from_mutable_set",
+      "swap_key_and_value_in_mutable_set",
+      "delete_mutable_set"
+    ],
+    "Immutable Key/Value Sets": [
+      "create_a_immutable_set",
+      "get_key_from_immutable_set",
+      "get_value_from_immutable_set",
+      "get_all_keys_from_immutable_set",
+      "get_all_values_from_immutable_set",
+      "swap_key_and_value_in_immutable_set",
+      "delete_immutable_set"
+    ],
+    "Find/Search Functions": [
+      "find_element_by_value",
+      "find_minimum_element",
+      "find_maximum_element",
+      "convert_list_to_string"
+    ],
+    "Splitting/Joining Lists": [
+      "concatenate_two_lists",
+      "split_list_at_index",
+      "split_list_at_value"
+    ],
+    "Copying Lists": [
+      "duplicate_a_list",
+      "duplicate_subset_of_list"
+    ],
+    "Sizing/Resizing Lists": [
+      "get_list_length",
+      "resize_list"
+    ],
+    "Comparing/Equality": [
+      "do_two_lists_match_exactly",
+      "do_two_lists_contain_same_items",
+      "does_list_satisfy_some_expression",
+      "does_list_not_satisfy_an_expression"
+    ],
+    "Sorting/Shuffling Lists": [
+      "sort_list",
+      "shuffle_list",
+      "reverse_list"
+    ],
+    "Functions On List Elements": [
+      "map",
+      "filter",
+      "reduce_left",
+      "reduce_right"
+    ]
+  },
+  "lists": {
+    "name_of_ordered_mutable_list": {
+      "code": "SortedList"
+    },
+    "create_a_ordered_mutable_list": {
+      "code": "SortedList sortedListName = new SortedList();"
+    },
+    "ordered_mutable_list_start_number": {
+      "code": "0"
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "code": "Yes"
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "code": "No"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "code": "sortedListName[index]"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": "sortedListName.RemoveAt(0)"
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": "sortedListName.RemoveAt(sortedList.Count - 1)"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "code": "sortedListName.RemoveAt(index)"
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_ordered_mutable_list": {
+      "code": "sortedListName.Clear()"
+    },
+    "name_of_unordered_mutable_list": {
+      "code": "List<T>"
+    },
+    "create_a_unordered_mutable_list": {
+      "code": "List<T> listName = new List<T>();"
+    },
+    "unordered_mutable_list_start_number": {
+      "code": "0"
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "code": "Yes"
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "code": "Yes"
+    },
+    "access_element_in_unordered_mutable_list": {
+      "code": "listName[index]"
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "code": "listName.Prepend(value)"
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "code": "listName.Append(value)"
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "code": "listName.Index(index, value)"
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "code": "listName.RemoveAt(0)"
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "code": "listName.RemoveAt(listName.Count - 1)"
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "code": "listName.RemoveAt(index)"
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_unordered_mutable_list": {
+      "code": "listName.Clear()"
+    },
+    "name_of_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "create_a_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "ordered_immutable_list_start_number": {
+      "not-implemented": "true"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_unordered_immutable_list": {
+      "code": "ImmutableList<T>"
+    },
+    "create_a_unordered_immutable_list": {
+      "code": "ImmutableList<T> immutableListName = new ImmutableList<T>();"
+    },
+    "unordered_immutable_list_start_number": {
+      "code": "0"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "code": "immutableListName[index]"
+    },
+    "delete_unordered_immutable_list": {
+      "code": "immutableListName.Clear()"
+    },
+    "name_of_mutable_hashed_list": {
+      "code": "HashSet<T>"
+    },
+    "create_a_mutable_hashed_list": {
+      "code": "HashSet<T> hashSetName = new HashSet<T>();"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "code": "hashSetName.Add(value)"
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "code": "hashSetName.Remove(value)"
+    },
+    "delete_mutable_hashed_list": {
+      "code": "hashSetName.Clear()"
+    },
+    "name_of_immutable_hashed_list": {
+      "code": "ImmutableHashSet"
+    },
+    "create_a_immutable_hashed_list": {
+      "code": "ImmutableHashSet<T> immutableHashSetName = new ImmutableHashSet<T>();"
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "code": "immutableHashSetName.Add(value)"
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "code": "immutableHashSetName.Remove(value)"
+    },
+    "delete_immutable_hashed_list": {
+      "code": "immutableHashSetName.Clear()"
+    },
+    "create_a_mutable_set": {
+      "code": "Dictionary<TKey, TValue> dictionaryName = new Dictionary<TKey, TValue>();"
+    },
+    "get_key_from_mutable_set": {
+      "code": "dictionaryName.Keys[index]"
+    },
+    "get_value_from_mutable_set": {
+      "code": "dictionaryName[key]"
+    },
+    "get_all_keys_from_mutable_set": {
+      "code": "dictionaryName.Keys"
+    },
+    "get_all_values_from_mutable_set": {
+      "code": "dictionaryName.Values"
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "not-implemented": "true"
+    },
+    "delete_mutable_set": {
+      "code": "dictionaryName.Clear()"
+    },
+    "create_a_immutable_set": {
+      "code": "ImmutableDictionary<T> immutableDictionaryName = new ImmutableDictionary<T>();"
+    },
+    "get_key_from_immutable_set": {
+      "code": "immutableDictionaryName.Keys[index]"
+    },
+    "get_value_from_immutable_set": {
+      "code": "immutableDictionaryName[key]"
+    },
+    "get_all_keys_from_immutable_set": {
+      "code": "immutableDictionaryName.Keys"
+    },
+    "get_all_values_from_immutable_set": {
+      "code": "immutableDictionaryName.Values"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "not-implemented": "true"
+    },
+    "delete_immutable_set": {
+      "code": "immutableDictionaryName.Clear()"
+    },
+    "find_element_at_position": {
+      "code": "listName[index]"
+    },
+    "find_element_by_value": {
+      "code": "listName.Find(x => x == value)"
+    },
+    "find_minimum_element": {
+      "code": "listName.Min()"
+    },
+    "find_maximum_element": {
+      "code": "listName.Max()"
+    },
+    "convert_list_to_string": {
+      "code": "string.Join(\",\",listName)"
+    },
+    "concatenate_two_lists": {
+      "code": "listName.Join(secondListName)"
+    },
+    "split_list_at_index": {
+      "not-implemented": true
+    },
+    "split_list_at_value": {
+      "not-implemented": true
+    },
+    "duplicate_a_list": {
+      "code": "List<T> newList = new List<T>(listName);"
+    },
+    "duplicate_subset_of_list": {
+      "code": "listName.GetRange(startIndex, numberOfElements)"
+    },
+    "get_list_length": {
+      "code": "listName.Count()"
+    },
+    "resize_list": {
+      "not-implemented": true
+    },
+    "do_two_lists_match_exactly": {
+      "code": "listName.SequenceEqual(secondListName)"
+    },
+    "do_two_lists_contain_same_items": {
+      "code": "listName.SequenceEqualsIgnoreOrder(secondListName)"
+    },
+    "does_list_satisfy_some_expression": {
+      "code": "listName.Any(item => expression)"
+    },
+    "does_list_not_satisfy_an_expression": {
+      "code": "listName.All(item => expression)"
+    },
+    "sort_list": {
+      "code": "listName.Sort()"
+    },
+    "shuffle_list": {
+      "not-implemented": true
+    },
+    "reverse_list": {
+      "code": "listName.Reverse()"
+    },
+    "map": {
+      "code": "listName.Select(item => expression)"
+    },
+    "filter": {
+      "code": "listName.Where(item => expression)"
+    },
+    "reduce_left": {
+      "code": "listName.Aggregate((startValue, item) => expression)"
+    },
+    "reduce_right": {
+      "code": "listName.Reverse().Aggregate((startValue, item) => expression)"
+    }
+  }
+}
