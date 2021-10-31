@@ -74,3 +74,24 @@ class TestTemplates(TestCase):
             "    </div>\n"
             "</div>"
         )
+
+        # md url in comment
+        rendered_template_5 = render_to_string(
+            "comparecard.html",
+            {
+                "comment": "I am a [url](http://url.com), I am not a url.py"
+            }
+        ).strip()
+        self.assertEquals(
+            rendered_template_5,
+            "<div class=\"card\">\n"
+            "    <div class=\"card-body\">\n"
+            "    \n"
+            "    \n"
+            "        <div>\n"
+            "            I am a <a href=\"http://url.com\">url</a>, I am not a url.py\n"
+            "        </div>\n"
+            "    \n"
+            "    </div>\n"
+            "</div>"
+        )
