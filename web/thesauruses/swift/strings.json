@@ -84,7 +84,7 @@
       "code": "Yes"
     },
     "import": {
-      "code": "Not required"
+      "not-implemented": "true"
     },
     "default_string_byte_encoding": {
       "code": "UTF-16"
