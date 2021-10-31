@@ -39,7 +39,7 @@
   },
   "data_types": {
     "boolean": {
-      "code": "",
+      "not-implemented": true,
       "comment": "Use a scalar. Perl does not require to pre-declare variable type."
     },
     "signed_integer_8_bit": {
@@ -67,7 +67,7 @@
       "not-implemented": true
     },
     "signed_integer_as_object": {
-      "code": "",
+      "not-implemented": true,
       "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
     },
     "unsigned_integer_as_object": {
@@ -92,7 +92,7 @@
       "not-implemented": true
     },
     "signed_float_as_object": {
-      "code": "",
+      "not-implemented": true,
       "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
     },
     "unsigned_float_as_object": {
@@ -102,7 +102,7 @@
       "not-implemented": true
     },
     "string_as_object": {
-      "code": "",
+      "not-implemented": true,
       "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
     },
     "string_as_array": {
