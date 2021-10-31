@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "nim",
-    "language_version": "1.6",
-    "language_name": "Nim"
+    "language": "perl",
+    "language_version": "5.34",
+    "language_name": "Perl"
   },
   "categories": {
     "Arithmetic Operators": [
@@ -85,118 +85,124 @@
       "code": "/="
     },
     "integer_division": {
-      "code": "div"
+      "code": "/"
     },
     "integer_division_assignment": {
-      "not-implemented": "true"
+      "code": "/="
     },
     "modulus": {
-      "code": "mod"
+      "code": "%"
     },
     "modulus_assignment": {
-      "not-implemented": "true"
+      "code": "%="
     },
     "unary_plus": {
-      "code": "+Infinite"
+      "code": "+"
     },
     "unary_minus": {
-      "code": "-Infinite"
+      "code": "-"
     },
     "increment": {
-      "code": "inc"
+      "code": "++"
     },
     "decrement": {
-      "code": "dec"
+      "code": "--"
     },
     "exponential": {
-      "code": "^"
+      "code": "**"
     },
     "factorial": {
-      "code": "fac"
+      "not-implemented": true
     },
     "absolute_value": {
-      "code": "abs"
+      "not-implemented": true
     },
     "percentage": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "equal_to": {
-      "code": "=="
+      "code": "==\neq",
+      "comment": "Use == for numerical comparision and eq for string comparison"
     },
     "not_equal_to": {
-      "code": "!="
+      "code": "!=\nne",
+      "comment": "Use != for numerical comparision and ne for string comparison"
     },
     "less_than": {
-      "code": "<"
+      "code": "<\nlt",
+      "comment": "Use < for numerical comparision and lt for string comparison"
     },
     "less_than_or_equal_to": {
-      "code": "<="
+      "code": "<=\nle",
+      "comment": "Use <= for numerical comparision and le for string comparison"
     },
     "greater_than": {
-      "code": ">"
+      "code": ">\ngt",
+      "comment": "Use > for numerical comparision and gt for string comparison"
     },
     "greater_than_or_equal_to": {
-      "code": ">="
+      "code": ">=\nge",
+      "comment": "Use >= for numerical comparision and ge for string comparison"
     },
     "null_coalescing": {
-      "code": "?.",
-      "comment": "'not null' annotation allows null-free programming"
+      "code": "//"
     },
     "is": {
-      "code": "is"
+      "not-implemented": true
     },
     "is_not": {
-      "code": "isnot"
+      "not-implemented": true
     },
     "and": {
-      "code": "and"
+      "code": "and",
+      "comment": "Alternative C like option is: &&"
     },
     "and_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "or": {
-      "code": "or"
+      "code": "or",
+      "comment": "Alternative C like option is: ||"
     },
     "or_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "not": {
       "code": "not"
     },
     "not_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "xor": {
       "code": "xor"
     },
     "xor_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "xnor": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "xnor_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "left_shift": {
-      "code": "shl"
+      "code": "<<"
     },
     "left_shift_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "right_shift": {
-      "code": "shr"
+      "code": ">>"
     },
     "right_shift_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "ternary": {
-      "code": "if conditional: value0 else: value1",
-      "comment": "Ternary operator is just if...else inline"
+      "name": "Ternary operator",
+      "code": "? :"
     },
     "null_forgiving": {
-      "not-implemented": "true",
-      "comment": "'not null' annotation allows null-free programming"
+      "not-implemented": true
     }
   }
 }

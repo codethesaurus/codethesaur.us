@@ -31,59 +31,59 @@
   "functions": {
     "void_function_no_parameters": {
       "name": "Function that does not return a value and takes no parameters",
-      "code": ""
+      "code": [""]
     },
     "void_function_with_parameters": {
       "name": "Function that does not return a value and that takes 1 or more defined parameters",
-      "code": ""
+      "code": [""]
     },
     "void_function_with_keyword_parameters": {
       "name": "Function that does not return a value and that takes 0 or more defined keyword parameters",
-      "code": ""
+      "code": [""]
     },
     "void_function_variable_parameters": {
       "name": "Function that does not return a value and function that takes an unknown number of parameters",
-      "code": ""
+      "code": [""]
     },
     "return_value_function_no_parameters": {
       "name": "Function that returns a value and takes no parameters",
-      "code": ""
+      "code": [""]
     },
     "return_value_function_with_parameters": {
       "name": "Function that returns a value and takes 1 or more defined parameters",
-      "code": ""
+      "code": [""]
     },
     "return_value_function_with_keyword_parameters": {
       "name": "Function that returns a value and takes 0 or more defined keyword parameters",
-      "code": ""
+      "code": [""]
     },
     "return_value_function_variable_parameters": {
       "name": "Function that returns a value and takes an unknown number of parameters",
-      "code": ""
+      "code": [""]
     },
     "anonymous_function_no_parameters": {
       "name": "Anonymous function that takes no parameters",
-      "code": ""
+      "code": [""]
     },
     "anonymous_function_with_parameters": {
       "name": "Anonymous function that takes 1 or more defined parameters",
-      "code": ""
+      "code": [""]
     },
     "anonymous_function_with_keyword_parameters": {
       "name": "Anonymous function that takes 0 or more defined keyword parameters",
-      "code": ""
+      "code": [""]
     },
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
-      "code": ""
+      "code": [""]
     },
     "call_subroutine": {
       "name": "Call subroutine",
-      "code": ""
+      "code": [""]
     },
     "return_from_subroutine": {
       "name": "Return from subroutine",
-      "code": ""
+      "code": [""]
     }
   }
 }
