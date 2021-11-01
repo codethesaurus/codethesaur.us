@@ -62,7 +62,7 @@ Think you can tackle an issue? Great!
 1. First, fork the repo so you have your own copy of it
 1. Create a new branch. You can name it whatever you want, but I'd recommend something descriptive, like `issue-123-fix-string-exception`
 1. Make your changes! I suggest committing early and often.
-1. Make sure you test the changes. Check out how to run the project on the [`README.md`](https://github.com/codethesaurus/codethesaur.us/README.md) page.
+1. Make sure you test the changes. Check out how to run the project on the [`README.md`](https://github.com/codethesaurus/codethesaur.us/blob/main/README.md) page.
 1. If you can test the changes and they work reliably, then create a new pull request. Be sure to either add `Fixes #1234` or `Closes #1234` so GitHub can link your issue number automatically.
 1. The CI/CD system should run tests (if applicable) and spin up a sample deploy of the app.
 1. I'll review it and leave any comments for things that may need to change. Changes aren't intended because your code is bad but more a consideration towards how it may work with other parts of the project or ways the user might interact with it.
