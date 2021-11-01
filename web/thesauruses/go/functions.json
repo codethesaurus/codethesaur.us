@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "language": "go",
+    "language_version": "1.16",
+    "language_name": "Go"
+  },
+  "categories": {
+    "Void Functions": [
+      "void_function_no_parameters",
+      "void_function_with_parameters",
+      "void_function_with_keyword_parameters",
+      "void_function_variable_parameters"
+    ],
+    "Return Value Functions": [
+      "return_value_function_no_parameters",
+      "return_value_function_with_parameters",
+      "return_value_function_with_keyword_parameters",
+      "return_value_function_variable_parameters"
+    ],
+    "Lambda/Anonymous Functions": [
+      "anonymous_function_no_parameters",
+      "anonymous_function_with_parameters",
+      "anonymous_function_with_keyword_parameters",
+      "anonymous_function_variable_parameters"
+    ],
+    "Subroutines": [
+      "call_subroutine",
+      "return_from_subroutine"
+    ]
+  },
+  "functions": {
+    "void_function_no_parameters": {
+      "code": "func function_name() {}"
+    },
+    "void_function_with_parameters": {
+      "code": "func function_name(x int, y string) {}"
+    },
+    "void_function_with_keyword_parameters": {
+     "code": "type keywordArgs struct {A, B, C int}\n\nfunc function_name(args *keywordArgs) {}"
+    },
+    "void_function_variable_parameters": {
+      "code": "func function_name (x ...int) {}"
+    },
+    "return_value_function_no_parameters": {
+      "code": "func function_name () return_type {return value}"
+    },
+    "return_value_function_with_parameters": {
+      "code": "func function_name (x int, y string) return_type {return value}"
+    },
+    "return_value_function_with_keyword_parameters": {
+      "code": "type keywordArgs struct {A, B, C int}\n\nfunc function_name(args *keywordArgs) return_type {return value}"
+    },
+    "return_value_function_variable_parameters": {
+      "code": "func (x ...int) return_type {return value}"
+    },
+    "anonymous_function_no_parameters": {
+      "code": "func () {}"
+    },
+    "anonymous_function_with_parameters": {
+      "code": "func (x int, y string) {}"
+    },
+    "anonymous_function_with_keyword_parameters": {
+      "code": "type keywordArgs struct {A, B, C int}\n\nfunc (args *keywordArgs) {}"
+    },
+    "anonymous_function_variable_parameters": {
+      "code": "func (x ...int) {}"
+    },
+    "call_subroutine": {
+      "code": "func_name()"
+    },
+    "return_from_subroutine": {
+      "code": "return"
+    }
+  }
+}

@@ -1,7 +1,8 @@
-FROM python:3
+FROM python:3-slim
 ENV PYTHONBUFFERED=1
 WORKDIR /code
-copy requirements.txt /code/
-RUN pip install -r requirements.txt
+COPY requirements.txt /code/
+RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-CMD python manage.py runserver 0:8000
+EXPOSE 8000
+CMD python manage.py runserver 0.0.0.0:8000

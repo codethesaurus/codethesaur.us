@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "nim",
-    "language_version": "1.6",
-    "language_name": "Nim"
+    "language": "bash",
+    "language_version": "bash-5.1",
+    "language_name": "BASH"
   },
   "categories": {
     "Arithmetic Operators": [
@@ -14,12 +14,8 @@
       "multiplication_assignment",
       "division",
       "division_assignment",
-      "integer_division",
-      "integer_division_assignment",
       "modulus",
       "modulus_assignment",
-      "unary_plus",
-      "unary_minus",
       "increment",
       "decrement",
       "exponential",
@@ -54,123 +50,109 @@
       "right_shift",
       "right_shift_assignment"
     ],
-    "Conditional Operators": [
-      "ternary",
-      "null_forgiving"
-    ]
+    "Conditional Operators": ["ternary", "null_forgiving"]
   },
   "operators": {
     "addition": {
-      "code": "+"
+      "code": "(( 8+4 ))"
     },
     "addition_assignment": {
-      "code": "+="
+      "code": "(( a+=4 ))"
     },
     "subtraction": {
-      "code": "-"
+      "code": "(( 8-4 ))"
     },
     "subtraction_assignment": {
-      "code": "-="
+      "code": "(( a-=4 ))"
     },
     "multiplication": {
-      "code": "*"
+      "code": "(( 8*4 ))"
     },
     "multiplication_assignment": {
-      "code": "*="
+      "code": "(( a*=4 ))"
     },
     "division": {
-      "code": "/"
+      "code": "(( 8/4 ))"
     },
     "division_assignment": {
-      "code": "/="
-    },
-    "integer_division": {
-      "code": "div"
-    },
-    "integer_division_assignment": {
-      "not-implemented": "true"
+      "code": "(( a/=4 ))"
     },
     "modulus": {
-      "code": "mod"
+      "code": "(( 8%4 ))"
     },
     "modulus_assignment": {
-      "not-implemented": "true"
-    },
-    "unary_plus": {
-      "code": "+Infinite"
-    },
-    "unary_minus": {
-      "code": "-Infinite"
+      "code": "(( a%=4 ))"
     },
     "increment": {
-      "code": "inc"
+      "code": "++",
+      "comment": "There are two types of increment: pre-increment ((++x)) and post-increment ((x++)). "
     },
     "decrement": {
-      "code": "dec"
+      "code": "--",
+      "comment": "There are two types of decrement: pre-decrement ((--x)) and post-decrement ((x--)). "
     },
     "exponential": {
-      "code": "^"
+      "not-implemented": "true"
     },
     "factorial": {
-      "code": "fac"
+      "not-implemented": "true"
     },
     "absolute_value": {
-      "code": "abs"
+      "not-implemented": "true"
     },
     "percentage": {
       "not-implemented": "true"
     },
     "equal_to": {
-      "code": "=="
+      "code": "(( $a==$b ))"
     },
     "not_equal_to": {
-      "code": "!="
+      "code": "(( $a!=$b ))"
     },
     "less_than": {
-      "code": "<"
+      "code": "(( $a<$b ))"
     },
     "less_than_or_equal_to": {
-      "code": "<="
+      "code": "(( $a<=$b ))"
     },
     "greater_than": {
-      "code": ">"
+      "code": "(( $a>$b ))"
     },
     "greater_than_or_equal_to": {
-      "code": ">="
+      "code": "(( $a>=$b ))"
     },
     "null_coalescing": {
-      "code": "?.",
-      "comment": "'not null' annotation allows null-free programming"
+      "code": "${a:-20}"
     },
     "is": {
-      "code": "is"
+      "not-implemented": "true"
     },
     "is_not": {
-      "code": "isnot"
+      "not-implemented": "true"
     },
     "and": {
-      "code": "and"
+      "code": "expression1 && expressions2"
     },
     "and_assignment": {
       "not-implemented": "true"
     },
     "or": {
-      "code": "or"
+      "code": "expression1 || expressions2"
     },
     "or_assignment": {
       "not-implemented": "true"
     },
     "not": {
-      "code": "not"
+      "code": "!expression"
     },
     "not_assignment": {
       "not-implemented": "true"
     },
     "xor": {
-      "code": "xor"
+      "code": "(( a^b ))"
     },
     "xor_assignment": {
-      "not-implemented": "true"
+      "code": "(( a^=3 ))"
     },
     "xnor": {
       "not-implemented": "true"
@@ -179,24 +161,23 @@
       "not-implemented": "true"
     },
     "left_shift": {
-      "code": "shl"
+      "code": "(( a<<1 ))"
     },
     "left_shift_assignment": {
-      "not-implemented": "true"
+      "code": "(( a<<=1 ))"
     },
     "right_shift": {
-      "code": "shr"
+      "code": "(( a>>1 ))"
     },
     "right_shift_assignment": {
-      "not-implemented": "true"
+      "code": "(( a>>=1 ))"
     },
     "ternary": {
-      "code": "if conditional: value0 else: value1",
-      "comment": "Ternary operator is just if...else inline"
+      "comment": "Ternary operator only exists for arithmetic expressions:",
+      "code": "(( a>=5 ? 6 : 4 ))"
     },
     "null_forgiving": {
-      "not-implemented": "true",
-      "comment": "'not null' annotation allows null-free programming"
+      "not-implemented": "true"
     }
   }
 }
