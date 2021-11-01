@@ -27,7 +27,7 @@
       "absolute_value",
       "percentage"
     ],
-    "Equality/Comparison Operators": [
+    "Equality/Comparison/Logical Operators": [
       "equal_to",
       "not_equal_to",
       "less_than",
@@ -36,19 +36,22 @@
       "greater_than_or_equal_to",
       "null_coalescing",
       "is",
-      "is_not"
+      "is_not",
+      "logical_and",
+      "logical_or",
+      "logical_not"
     ],
-    "Logical/Boolean/Bitwise Operators": [
-      "and",
-      "and_assignment",
-      "or",
-      "or_assignment",
-      "not",
-      "not_assignment",
-      "xor",
-      "xor_assignment",
-      "xnor",
-      "xnor_assignment",
+    "Bitwise Operators": [
+      "bitwise_and",
+      "bitwise_and_assignment",
+      "bitwise_or",
+      "bitwise_or_assignment",
+      "bitwise_not",
+      "bitwise_not_assignment",
+      "bitwise_xor",
+      "bitwise_xor_assignment",
+      "bitwise_xnor",
+      "bitwise_xnor_assignment",
       "left_shift",
       "left_shift_assignment",
       "right_shift",
@@ -151,38 +154,6 @@
       "not-implemented": true
     },
     "is_not": {
-      "not-implemented": true
-    },
-    "and": {
-      "code": "and",
-      "comment": "Alternative C like option is: &&"
-    },
-    "and_assignment": {
-      "not-implemented": true
-    },
-    "or": {
-      "code": "or",
-      "comment": "Alternative C like option is: ||"
-    },
-    "or_assignment": {
-      "not-implemented": true
-    },
-    "not": {
-      "code": "not"
-    },
-    "not_assignment": {
-      "not-implemented": true
-    },
-    "xor": {
-      "code": "xor"
-    },
-    "xor_assignment": {
-      "not-implemented": true
-    },
-    "xnor": {
-      "not-implemented": true
-    },
-    "xnor_assignment": {
       "not-implemented": true
     },
     "left_shift": {
