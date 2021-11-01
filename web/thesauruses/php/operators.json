@@ -24,22 +24,35 @@
       "exponential",
       "absolute_value"
     ],
-    "Equality/Comparison Operators": [
+    "Equality/Comparison/Logical Operators": [
       "equal_to",
       "not_equal_to",
       "less_than",
       "less_than_or_equal_to",
       "greater_than",
       "greater_than_or_equal_to",
-      "null_coalescing"
+      "null_coalescing",
+      "is",
+      "is_not",
+      "logical_and",
+      "logical_or",
+      "logical_not"
     ],
-    "Logical/Boolean/Bitwise Operators": [
-      "and",
-      "or",
-      "not",
-      "xor",
+    "Bitwise Operators": [
+      "bitwise_and",
+      "bitwise_and_assignment",
+      "bitwise_or",
+      "bitwise_or_assignment",
+      "bitwise_not",
+      "bitwise_not_assignment",
+      "bitwise_xor",
+      "bitwise_xor_assignment",
+      "bitwise_xnor",
+      "bitwise_xnor_assignment",
       "left_shift",
-      "right_shift"
+      "left_shift_assignment",
+      "right_shift",
+      "right_shift_assignment"
     ],
     "Conditional Operators": ["ternary"]
   },
@@ -115,20 +128,6 @@
     },
     "null_coalescing": {
       "code": "$operand1 ?? $operand2"
-    },
-    "and": {
-      "code": "$operand1 and $operand2 \n  $operand1 && $operand2",
-      "comment": "You can use any of them"
-    },
-    "or": {
-      "code": "$operand1 or $operand2 \n  $operand1 || $operand2",
-      "comment": "You can use any of them"
-    },
-    "not": {
-      "code": "!$operand1"
-    },
-    "xor": {
-      "code": "^$operand1"
     },
     "left_shift": {
       "code": "<<$operand1"

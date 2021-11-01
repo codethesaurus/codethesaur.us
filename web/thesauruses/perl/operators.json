@@ -1,21 +1,31 @@
 {
   "meta": {
-    "language": "ada",
-    "language_version": "2012",
-    "language_name": "Ada"
+    "language": "perl",
+    "language_version": "5.34",
+    "language_name": "Perl"
   },
   "categories": {
     "Arithmetic Operators": [
       "addition",
+      "addition_assignment",
       "subtraction",
+      "subtraction_assignment",
       "multiplication",
+      "multiplication_assignment",
       "division",
+      "division_assignment",
       "integer_division",
+      "integer_division_assignment",
       "modulus",
+      "modulus_assignment",
       "unary_plus",
       "unary_minus",
+      "increment",
+      "decrement",
       "exponential",
-      "absolute_value"
+      "factorial",
+      "absolute_value",
+      "percentage"
     ],
     "Equality/Comparison/Logical Operators": [
       "equal_to",
@@ -47,120 +57,123 @@
       "right_shift",
       "right_shift_assignment"
     ],
-    "Conditional Operators": []
+    "Conditional Operators": [
+      "ternary",
+      "null_forgiving"
+    ]
   },
   "operators": {
     "addition": {
-      "code": "ans := x + y"
+      "code": "+"
     },
     "addition_assignment": {
-      "not-implemented": "true"
+      "code": "+="
     },
     "subtraction": {
-      "code": "ans := x - y"
+      "code": "-"
     },
     "subtraction_assignment": {
-      "not-implemented": "true"
+      "code": "-="
     },
     "multiplication": {
-      "code": "ans := x * y"
+      "code": "*"
     },
     "multiplication_assignment": {
-      "not-implemented": "true"
+      "code": "*="
     },
     "division": {
-      "code": "ans := x / y"
+      "code": "/"
     },
     "division_assignment": {
-      "not-implemented": "true"
+      "code": "/="
     },
     "integer_division": {
-      "code": "ans := x / y",
-      "comment": "if x and y should be integers, then only the answer would be an integer value."
+      "code": "/"
     },
     "integer_division_assignment": {
-      "not-implemented": "true"
+      "code": "/="
     },
     "modulus": {
-      "code": "ans := x mod y \n ans := x rem y",
-      "comment": "if x and y both are positive, then result will be positive for both operators. If x is -x, and y is positive, then 'x mod y' will give positive value, whereas 'x rem y' will produce a negative value."
+      "code": "%"
     },
     "modulus_assignment": {
-      "not-implemented": "true"
+      "code": "%="
     },
     "unary_plus": {
-      "code": "+B",
-      "comment": "for any value of B, output will be B"
+      "code": "+"
     },
     "unary_minus": {
-      "code": "-B",
-      "comment": "if value of B is -5, it will change to +5 and vice versa."
+      "code": "-"
     },
     "increment": {
-      "not-implemented": "true"
+      "code": "++"
     },
     "decrement": {
-      "not-implemented": "true"
+      "code": "--"
     },
     "exponential": {
-      "code": "ans := x ** y",
-      "comment": "value of y cannot be negative" 
+      "code": "**"
     },
     "factorial": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "absolute_value": {
-      "code": "y := abs x"
+      "not-implemented": true
     },
     "percentage": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "equal_to": {
-      "code": "x = y"
+      "code": "==\neq",
+      "comment": "Use == for numerical comparision and eq for string comparison"
     },
     "not_equal_to": {
-      "code": "x /= y"
+      "code": "!=\nne",
+      "comment": "Use != for numerical comparision and ne for string comparison"
     },
     "less_than": {
-      "code": "x < y"
+      "code": "<\nlt",
+      "comment": "Use < for numerical comparision and lt for string comparison"
     },
     "less_than_or_equal_to": {
-      "code": "x <= y"
+      "code": "<=\nle",
+      "comment": "Use <= for numerical comparision and le for string comparison"
     },
     "greater_than": {
-      "code": "x > y"
+      "code": ">\ngt",
+      "comment": "Use > for numerical comparision and gt for string comparison"
     },
     "greater_than_or_equal_to": {
-      "code": "x >= y"
+      "code": ">=\nge",
+      "comment": "Use >= for numerical comparision and ge for string comparison"
     },
     "null_coalescing": {
-      "not-implemented": "true"
+      "code": "//"
     },
     "is": {
-      "code": "x in y"
+      "not-implemented": true
     },
     "is_not": {
-      "code": "x not in y"
+      "not-implemented": true
     },
     "left_shift": {
-		"code":"Shift_Left (x, n)",
-      "comment": "returns Unsigned_8 value by shifting x to n left positions. Requires Byte_IO package and interfaces."
+      "code": "<<"
     },
     "left_shift_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "right_shift": {
-      "code":"Shift_Right (X, N) \n Shift_Right_Arithmetic (X, N)",
-      "comment": "Method 1, returns Unsigned_8 value by shifting x to n right positions. Method 2, performs signed shifting of x to n positions and returns Unsigned_8 value. Requires Byte_IO package and interfaces for both methods."
+      "code": ">>"
     },
     "right_shift_assignment": {
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "ternary": {
-      "not-implemented": "true"
+      "name": "Ternary operator",
+      "code": "? :"
     },
     "null_forgiving": {
-      "not-implemented": "true"
+      "not-implemented": true
     }
   }
 }
