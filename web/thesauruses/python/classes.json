@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "language": "python",
+    "language_version": "3.10",
+    "language_name": "Python"
+  },
+  "categories": {
+    "Defining Classes": [
+      "normal_class",
+      "abstract_class",
+      "interface",
+      "read_only_class",
+      "static_class",
+      "inner_class",
+      "packages",
+      "class_with_generic_type"
+    ],
+    "Adding Private and Public Members": [
+      "private_variables",
+      "protected_variables",
+      "public_variables",
+      "static_variables",
+      "private_functions",
+      "protected_functions",
+      "public_functions",
+      "static_functions"
+    ],
+    "Extending and Implementing Classes": [
+      "extends_class",
+      "extending_interface",
+      "calling_superclass_functions",
+      "overriding_superclass_functions"
+    ],
+    "Creating Objects and Polymorphism": [
+      "instantiating_object",
+      "instantiating_polymorphic_object"
+    ],
+    "Constructors and Deconstructor": [
+      "implement_constructor",
+      "implement_deconstructor"
+    ]
+  },
+  "classes": {
+    "normal_class": {
+      "code": "class class_name:\n  # class body"
+    },
+    "abstract_class": {
+      "code": "from abc import ABC\nclass class_name(ABC):\n  # class body",
+      "comment": "Note that you will need to import ABC in order to be able to use abstract classes."
+    },
+    "interface": {
+      "code": "import abc\nclass class_name:\n   # Way 1\n   def method1(self):\n      # pass\n   # Way 2\n   @abc.abstractmethod\n   def method2(self):\n      raise NotImplementedError",
+      "comment": "Note that way 1 doesn't force the user to define the methods from the abstract class in the derived class, while way 2 enforces that."
+    },
+    "read_only_class": {
+      "code": "",
+      "not-implemented": true
+    },
+    "static_class": {
+      "code": "",
+      "not-implemented": true
+    },
+    "inner_class": {
+      "code": "class outer_class:\n   class inner_class:\n     # inner class body"
+    },
+    "packages": {
+      "code": "import package_name",
+      "comment": "A package directory must have a `__init__.py` file."
+    },
+    "class_with_generic_type": {
+      "code": "from typing import TypeVar, Generic\n\nT = TypeVar('T')\n\nclass class_name(Generic[T]):\n  # class body",
+      "comment": "Because of duck typing, any special syntax is not required to support generics. But still if you want, the above mentioned way can be used."
+    },
+    "private_variables": {
+      "code": "__private_var_name = 'some value'"
+    },
+    "protected_variables": {
+      "code": "_protected_var_name = 'some value'"
+    },
+    "public_variables": {
+      "code": "public_var_name = 'some value'",
+      "comment": "All data members and member functions of a class are public by default."
+    },
+    "static_variables": {
+      "code": "class class_name:\n    static_var = 'cse'                  # Class Variable\n    def __init__(self,var_name):\n        self.non_static_var = var_name            # Instance Variable",
+      "comment": "Static variables are called class variables in python and any variable created outside the constructor is a class variable."
+    },
+    "private_functions": {
+      "code": "class class_name:     \n    def __private_method_name(self):\n      # body"
+    },
+    "protected_functions": {
+      "code": "class class_name:     \n    def _protected_method_name(self):\n      # body"
+    },
+    "public_functions": {
+      "code": "class class_name:\n    def public_method_name(self):\n      # body"
+    },
+    "static_functions": {
+      "code": "@staticmethod\ndef method_name():\n  # method body"
+    },
+    "extends_class": {
+      "code": "class Parent:\n  # class body\n\nclass Child(Parent):\n  # class body"
+    },
+    "extending_interface": {
+      "code": "class Interface:\n  # body\n\nclass My_class(Interface):\n  # body",
+      "comment": "Note that this is similar to inheriting any other class."
+    },
+    "calling_superclass_functions": {
+      "code": "class child(Parent):\n    def __init__(self):\n        self.var_name = super().super_class_fun()",
+      "comment": "super() returns a temporary object of the superclass through which you can access that superclass's methods. "
+    },
+    "overriding_superclass_functions": {
+      "code": "class child(Parent):\n    def superclass_function_name(self):\n      # body",
+      "comment": "You can simply write the definition for the method which you want to override."
+    },
+    "instantiating_object": {
+      "code": "class class_name():\n    def __init__(self,x,y):\n    print x+y\nobject_name = class_name(3,4)"
+    },
+    "instantiating_polymorphic_object": {
+      "code": "class class_name():\n    def __init__(self,x,y):\n    print x+y\nobject_name = class_name(3,4)",
+      "comment": "Similar to any creating any other object."
+    },
+    "implement_constructor": {
+      "code": "def __init__(self):\n  # body of the constructor"
+    },
+    "implement_deconstructor": {
+      "code": "def __del__(self):\n  # body of destructor"
+    }
+  }
+}
