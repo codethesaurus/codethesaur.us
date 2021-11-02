@@ -53,11 +53,9 @@
       "comment": "Note that way 1 doesn't force the user to define the methods from the abstract class in the derived class, while way 2 enforces that."
     },
     "read_only_class": {
-      "code": "",
       "not-implemented": true
     },
     "static_class": {
-      "code": "",
       "not-implemented": true
     },
     "inner_class": {
