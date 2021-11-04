@@ -120,7 +120,7 @@
       "code": "class CustomError(Exception):\n    statements"
     },
     "try_or_operator": {
-      "code": "try:\n    statements\nexcept Exception:\n    statements"
+      "not-implemented": "true"
     },
     "statement_to_start_trying_code": {
       "code": "try:\n    statements"
@@ -144,7 +144,7 @@
       "not-implemented": "true"
     },
     "statement_to_stop_program_if_caught_exception": {
-      "code": "raise"
+      "not-implemented": "true"
     },
     "statement_to_start_code_if_no_exceptions_caught": {
       "code": "else:\n    statements"
