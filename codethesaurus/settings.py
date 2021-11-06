@@ -74,6 +74,14 @@ TEMPLATES = [
     },
 ]
 
+MARKDOWNIFY = {
+    'default': {
+        'LINKIFY_TEXT': {
+            'AUTOLINKS': False
+        }
+    }
+}
+
 WSGI_APPLICATION = 'codethesaurus.wsgi.application'
 
 # Database

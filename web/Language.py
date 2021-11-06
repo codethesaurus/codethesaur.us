@@ -89,7 +89,10 @@ class Language:
         :param concept_key: ID for the concept
         :return: the string containing the concept's code
         """
-        return self.concept(concept_key).get("code")
+        code =  self.concept(concept_key).get("code")
+        if isinstance(code, list):
+            code = "\n".join(code)
+        return code
 
     def concept_comment(self, concept_key):
         """
