@@ -11,9 +11,11 @@
             "read_line",
             "read_char",
             "clear_console_cutput",
-            "change_console_color"
+            "change_console_background_color",
+            "change_console_text_color"
         ],
         "File IO": [
+            "file_functions_lib",
             "list_directory",
             "read_directory_info",
             "create_directory",
@@ -30,6 +32,7 @@
             "move_file"
         ],
         "Network IO": [
+            "network_functions_lib",
             "send_a_get_request",
             "send_a_post_request",
             "add_headers",
@@ -43,6 +46,7 @@
             "read_headers"
         ],
         "Database IO": [
+            "database_functions_lib",
             "open_connection",
             "close_connection",
             "execute_query_single_result_set",
@@ -50,12 +54,14 @@
             "execute_non_query"
         ],
         "JSON": [
+            "json_function_lib",
             "serialize_json",
             "deserialize_json",
             "serialize_json_with_options",
             "deserialize_json_with_options"
         ],
         "XML": [
+            "xml_function_lib",
             "serialize_xml",
             "deserialize_xml",
             "serialize_xml_with_options",
@@ -63,16 +69,20 @@
         ]
     },
     "io": {
+        "file_functions_lib": {
+            "name": "Library containing file IO functions",
+            "code": ""
+        },
         "write_line": {
             "name": "Write a line to the console",
             "code": ""
         },
         "write_line_with_new_line": {
-            "name": "Write a line to the console with a return charactor",
+            "name": "Write a line to the console with a return character",
             "code": ""
         },
         "read_line": {
-            "name": "Read a string of user input from the console",
+            "name": "Read a line of user input from the console",
             "code": ""
         },
         "read_char": {
@@ -83,12 +93,16 @@
             "name": "Clear the console output",
             "code": ""
         },
-        "change_console_color": {
+        "change_console_background_color": {
+            "name": "Change the color of the console",
+            "code": ""
+        },
+        "change_console_text_color": {
             "name": "Change the color of the console",
             "code": ""
         },
         "list_directory": {
-            "name": "List the items in the current directory",
+            "name": "List of the items in the current directory",
             "code": ""
         },
         "read_directory_info": {
@@ -143,6 +157,10 @@
             "name": "Move a file to a new location",
             "code": ""
         },
+        "network_functions_lib": {
+            "name": "Library containing network IO functions",
+            "code": ""
+        },
         "send_a_get_request": {
             "name": "Send a HTTP GET request",
             "code": ""
@@ -187,6 +205,10 @@
             "name": "Read headers from a HTTP response",
             "code": ""
         },
+        "database_functions_lib": {
+            "name": "Library containing database IO functions",
+            "code": ""
+        },
         "open_connection": {
             "name": "Open a database connection",
             "code": ""
@@ -207,6 +229,10 @@
             "name": "Execute a non query (update, delete)",
             "code": ""
         },
+        "json_function_lib": {
+            "name": "Library containing JSON functions",
+            "code": ""
+        },
         "serialize_json": {
             "name": "Serialize an object to JSON",
             "code": ""
@@ -221,6 +247,10 @@
         },
         "deserialize_json_with_options": {
             "name": "Deserialize a string from JSON with options",
+            "code": ""
+        },
+        "xml_function_lib": {
+            "name": "Library containing XML functions",
             "code": ""
         },
         "serialize_xml": {
