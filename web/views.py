@@ -256,13 +256,17 @@ def reference(request):
 
     categories = []
     concepts = []
-    for category_key in lang.categories:
+    
+    all_category_keys = list(meta_structure.categories.keys())
+    all_concept_keys = list(meta_structure.concepts.keys())
+
+    for category_key in all_category_keys:
         categories.append({
             "id": category_key,
             "concepts": meta_structure.categories[category_key]  # meta_lang_categories[category_key]
         })
 
-    for concept_key in lang.concepts:
+    for concept_key in all_concept_keys:
         concepts.append({
             "id": concept_key,
             "name": meta_structure.concepts[concept_key]["name"],
