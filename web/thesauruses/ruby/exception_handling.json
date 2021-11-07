@@ -126,7 +126,7 @@
       "code": "begin\n  # try statements"
     },
     "statement_to_start_catching_exceptions": {
-      "code": "rescue => exception\n  # catch statements"
+      "not-implemented": "true"
     },
     "statement_to_catch_generic_exception": {
       "code": "rescue => exception\n  # catch statements"
