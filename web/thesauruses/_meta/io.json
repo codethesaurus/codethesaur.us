@@ -33,8 +33,16 @@
         ],
         "Network IO": [
             "network_functions_lib",
+            "send_a_http_request",
             "send_a_get_request",
             "send_a_post_request",
+            "send_a_put_request",
+            "send_a_patch_request",
+            "send_a_delete_request",
+            "send_a_head_request",
+            "send_a_options_request",
+            "send_a_connect_request",
+            "send_a_trace_request",
             "add_headers",
             "add_query_params",
             "inbuilt_url_class",
@@ -66,6 +74,14 @@
             "deserialize_xml",
             "serialize_xml_with_options",
             "deserialize_xml_with_options"
+        ],
+        "CSV": [
+            "csv_function_lib",
+            "read_csv_file",
+            "read_csv_to_type",
+            "write_csv_file",
+            "append_csv_file",
+            "set_csv_delimiter"
         ]
     },
     "io": {
@@ -161,12 +177,44 @@
             "name": "Library containing network IO functions",
             "code": ""
         },
+        "send_a_http_request": {
+            "name": "Send a HTTP request",
+            "code": ""
+        },
         "send_a_get_request": {
             "name": "Send a HTTP GET request",
             "code": ""
         },
         "send_a_post_request": {
             "name": "Send a HTTP POST request",
+            "code": ""
+        },
+        "send_a_put_request": {
+            "name": "Send a HTTP PUT request",
+            "code": ""
+        },
+        "send_a_patch_request": {
+            "name": "Send a HTTP PATCH request",
+            "code": ""
+        },
+        "send_a_delete_request": {
+            "name": "Send a HTTP DELETE request",
+            "code": ""
+        },
+        "send_a_head_request": {
+            "name": "Send a HTTP HEAD request",
+            "code": ""
+        },
+        "send_a_options_request": {
+            "name": "Send a HTTP OPTIONS request",
+            "code": ""
+        },
+        "send_a_connect_request": {
+            "name": "Send a HTTP CONNECT request",
+            "code": ""
+        },
+        "send_a_trace_request": {
+            "name": "Send a HTTP TRACE request",
             "code": ""
         },
         "add_headers": {
@@ -267,6 +315,30 @@
         },
         "deserialize_xml_with_options": {
             "name": "Deserialize a string from XML with options",
+            "code": ""
+        },
+        "csv_function_lib": {
+            "name": "Library containing CSV functions",
+            "code": ""
+        },
+        "read_csv_file": {
+            "name": "Reading a CSV file",
+            "code": ""
+        },
+        "read_csv_to_type": {
+            "name": "Reading a CSV file to a typed array",
+            "code": ""
+        },
+        "write_csv_file": {
+            "name": "Write a new CSV file",
+            "code": ""
+        },
+        "append_csv_file": {
+            "name": "Append to end of CSV file",
+            "code": ""
+        },
+        "set_csv_delimiter": {
+            "name": "Set the CSV delitmiter to use when reading/writing",
             "code": ""
         }
     }
