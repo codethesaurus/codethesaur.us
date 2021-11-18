@@ -121,8 +121,11 @@ def compare(request):
     except Exception:
         error_message = ""
         if lang1.lang_exists():
-            error_message = f"There is no entry about this structure/concept for the \
-                first language ({lang1.key}) yet.<br />"
+             error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
+                first language ({lang1.key}) yet.<br /><br /> \
+                Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
+                Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}'>https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}</a>"
+
         else:
             error_message = f"The first language ({lang1.key}) isn't valid. \
                 Double-check your URL and try again.<br />"
@@ -138,8 +141,10 @@ def compare(request):
     except Exception:
         error_message = ""
         if lang2.lang_exists():
-            error_message = f"There is no entry about this structure/concept for the \
-                second language ({lang2.key}) yet.<br />"
+            error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
+               second language ({lang2.key} yet.<br /><br /> \
+               Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
+               Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang2.key}'>https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang2.key}</a>"
         else:
             error_message = f"The second language ({lang2.key}) isn't valid. \
                 Double-check your URL and try again.<br />"
@@ -234,8 +239,12 @@ def reference(request):
     except Exception:
         error_message = ""
         if lang.lang_exists():
-            error_message = f"There is no entry about this structure/concept for the \
-                language ({lang.key}) yet.<br />"
+            error_message = f"There is no entry about this structure/concept ({structure_query_string}) for the \
+                language ({lang.key}) yet.<br /><br /> \
+                Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
+                Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at \
+                <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang.key}'> \
+                https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang.key}</a>"
         else:
             error_message = f"The language ({lang.key}) isn't valid. \
                 Double-check your URL and try again.<br />"
@@ -247,13 +256,17 @@ def reference(request):
 
     categories = []
     concepts = []
-    for category_key in lang.categories:
+    
+    all_category_keys = list(meta_structure.categories.keys())
+    all_concept_keys = list(meta_structure.concepts.keys())
+
+    for category_key in all_category_keys:
         categories.append({
             "id": category_key,
             "concepts": meta_structure.categories[category_key]  # meta_lang_categories[category_key]
         })
 
-    for concept_key in lang.concepts:
+    for concept_key in all_concept_keys:
         concepts.append({
             "id": concept_key,
             "name": meta_structure.concepts[concept_key]["name"],

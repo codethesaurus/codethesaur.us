@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "language": "perl",
+    "language_version": "5.34",
+    "language_name": "Perl"
+  },
+  "categories": {
+    "Conditional Statements (ifs)": [
+      "if_conditional",
+      "if_else_conditional",
+      "if_elseif_conditional",
+      "if_elseif_else_conditional",
+      "switch_statement",
+      "ternary_conditional"
+    ],
+    "Loops": [
+      "while_loop",
+      "do_while_loop",
+      "until_loop",
+      "do_until_loop",
+      "for_loop",
+      "foreach_loop",
+      "list_comprehension"
+    ],
+    "Iterations": [
+      "each_iteration",
+      "map_iteration",
+      "filter_iteration",
+      "fold_iteration"
+    ]
+  },
+  "control_structures": {
+    "if_conditional": {
+      "code": "if( condition ) {\n\t# statement\n}"
+    },
+    "if_else_conditional": {
+      "code": "if( condition ) {\n\t# statement\n} else {\n\t# else statement\n}"
+    },
+    "if_elseif_conditional": {
+      "code": "if( condition ) {\n\t# statements\n} elsif( condition ) {\n\t# else if statements\n}"
+    },
+    "if_elseif_else_conditional": {
+      "code": "if( condition ) {\n\t# statements\n} elsif( condition ) {\n\t# else if statements\n} else {\n\t# else statements\n}"
+    },
+    "switch_statement": {
+      "code": "switch( argument ) {\n\tcase 1 { # statements }\n\tcase \"a\" { # statements }\n\telse { # else statements }\n }",
+      "comment": "The Switch module must be included (aka use Switch;)."
+    },
+    "ternary_conditional": {
+      "code": "condition ? trueExpression : falseExpression"
+    },
+    "while_loop": {
+      "code": "while( condition ) {\n\t# statements\n}"
+    },
+    "do_while_loop": {
+      "code": "do {\n\t# statements\n} while( condition );"
+    },
+    "until_loop": {
+      "code": "until( condition ) {\n\t# statements\n}"
+    },
+    "do_until_loop": {
+      "not-implemented": true
+    },
+    "for_loop": {
+      "code": "for( init; condition; increment )\n{\n\t# statements\n}"
+    },
+    "foreach_loop": {
+      "code": "foreach $item ( @list ) {\n\t# statements\n}"
+    },
+    "list_comprehension": {
+      "not-implemented": true
+    },
+    "each_iteration": {
+      "not-implemented": true
+    },
+    "map_iteration": {
+      "code": "my @newArray = map { expression } @oldArray;"
+    },
+    "filter_iteration": {
+      "code": "my @newArray = grep { expresssion } @oldArray;"
+    },
+    "fold_iteration": {
+      "not-implemented": true
+    }
+  }
+}

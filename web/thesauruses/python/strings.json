@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "language": "Python",
+    "language_version": "3.7",
+    "language_name": "Python"
+  },
+  "categories": {
+    "Creating/Destroying Strings": [
+      "is_primitive_or_not",
+      "import",
+      "default_string_byte_encoding",
+      "create_new_string",
+      "create_multiline_string",
+      "assign_new_string",
+      "destroy_string"
+    ],
+    "String Basics": [
+      "length_of_string",
+      "max_length_of_string",
+      "clear_string",
+      "is_empty",
+      "concatenate_two_strings",
+      "concatenate_many_strings",
+      "is_all_alphabetical",
+      "is_all_numerical",
+      "is_all_alphanumeric",
+      "is_decimal",
+      "is_all_whitespaces",
+      "is_all_uppercase",
+      "is_all_lowercase",
+      "is_in_titlecase"
+    ],
+    "Find and Search": [
+      "does_substring_exist",
+      "find_start_index_of_substring",
+      "find_start_index_of_additional_substring",
+      "find_start_index_of_substring_from_end",
+      "count_occurrences_of_substring",
+      "get_leftmost_characters",
+      "get_rightmost_characters",
+      "get_substring_from_start_and_end_index",
+      "get_substring_from_start_index_and_length"
+    ],
+    "Manipulating Strings": [
+      "convert_to_uppercase",
+      "convert_to_lowercase",
+      "convert_to_title_case",
+      "capitalize_string",
+      "remove_whitespace",
+      "replace_substring",
+      "replace_all_substring",
+      "split_at_index",
+      "split_at_newlines",
+      "split_at_substring",
+      "merge_lists_into_string",
+      "encode_html_entities",
+      "decode_html_entities",
+      "encode_url_percent",
+      "decode_url_percent",
+      "encode_to_base64",
+      "decode_from_base64"
+    ],
+    "String Formatting": [
+      "format_string_function",
+      "parameter_format_in_order",
+      "parameter_format_numerical",
+      "parameter_format_by_name",
+      "format_as_integer",
+      "format_as_decimal",
+      "format_as_fixed_decimal",
+      "format_as_currency",
+      "format_as_percentage",
+      "format_number_with_separators",
+      "format_number_with_positive_negative_sign",
+      "format_number_in_scientific_notation_little_e",
+      "format_number_in_scientific_notation_big_e",
+      "format_number_in_binary",
+      "format_number_in_octal",
+      "format_number_in_hexadecimal"
+    ]
+  },
+  "strings": {
+    "is_primitive_or_not": {
+      "name": "Is this a built-in type in this language?",
+      "code": "Yes"
+    },
+    "import": {
+      "name": "Import the string class",
+      "not-implemented": true
+    },
+    "default_string_byte_encoding": {
+      "name": "Default byte encoding (ex: ASCII, UTF-8, UTF-16, etc.)",
+      "not-implemented": true
+    },
+    "create_new_string": {
+      "name": "Create new string",
+      "code": "'New String Example' \n\"New String Example 2\"  "
+    },
+    "create_multiline_string": {
+      "name": "Create new multi-line string",
+      "not-implemented": true
+    },
+    "assign_new_string": {
+      "name": "Assign string from another string",
+      "not-implemented": true
+    },
+    "destroy_string": {
+      "name": "Destroy string",
+      "not-implemented": true
+    },
+    "length_of_string": {
+      "name": "Length of string",
+      "code": "len(str)"
+    },
+    "max_length_of_string": {
+      "name": "Maximum length of string",
+      "not-implemented": true
+    },
+    "clear_string": {
+      "name": "Clear/empty string",
+      "not-implemented": true
+    },
+    "is_empty": {
+      "name": "Is string empty?",
+      "code": "if not my_string:"
+    },
+    "concatenate_two_strings": {
+      "name": "Concatenate/join two strings",
+      "code": "str1 + str2"
+    },
+    "concatenate_many_strings": {
+      "name": "Concatenate/join many strings",
+      "code": "str1 + str2 + str3 + str4"
+    },
+    "is_all_alphabetical": {
+      "name": "Is string all alphabetical characters?",
+      "code": "str.isalpha()"
+    },
+    "is_all_numerical": {
+      "name": "Is string all numerical characters?",
+      "code": "str.isnumeric()"
+    },
+    "is_all_alphanumeric": {
+      "name": "Is string all alphanumeric characters?",
+      "code": "str.isalnum()"
+    },
+    "is_decimal": {
+      "name": "Is string a decimal number?",
+      "code": "str.isdecimal()"
+    },
+    "is_all_whitespaces": {
+      "name": "Is string all whitespace characters?",
+      "not-implemented": true
+    },
+    "is_all_uppercase": {
+      "name": "Is string all uppercase characters?",
+      "code": "str.isupper()"
+    },
+    "is_all_lowercase": {
+      "name": "Is string all lowercase characters?",
+      "code": "str.islower()"
+    },
+    "is_in_titlecase": {
+      "name": "Is string formatted in title case?",
+      "code": "str.istitle()"
+    },
+    "does_substring_exist": {
+      "name": "Does a substring exist in a string?",
+      "code": "txt = 'This is a search string' \ntxt.find('is')"
+    },
+    "find_start_index_of_substring": {
+      "name": "Find index of where a substring starts",
+      "code": "txt = 'This is a search string' \ntxt.index('is')"
+    },
+    "find_start_index_of_additional_substring": {
+      "name": "Find index of an additional substring (or starting at another index)",
+      "not-implemented": true
+    },
+    "find_start_index_of_substring_from_end": {
+      "name": "Find substring index starting at end",
+      "code": "str.find(substring, start, end)"
+    },
+    "count_occurrences_of_substring": {
+      "name": "Find number of occurences of a substring",
+      "code": "str.count(substring)"
+    },
+    "get_leftmost_characters": {
+      "name": "Get a specified number of characters from the left",
+      "code": "txt = 'Hello World!!' \n#Get 5 characters from left\ntxt[0:5] "
+    },
+    "get_rightmost_characters": {
+      "name": "Get a specified number of characters from the right",
+      "code": "txt = 'Hello World!!' \n#Get 5 characters from right \ntxt[-5:] "
+    },
+    "get_substring_from_start_and_end_index": {
+      "name": "Return a substring from a string based on starting and ending indices",
+      "code": "str[start:end]"
+    },
+    "get_substring_from_start_index_and_length": {
+      "name": "Return a substring from a string based on starting index and size of substring",
+      "not-implemented": true
+    },
+    "convert_to_uppercase": {
+      "name": "Convert string to all uppercase",
+      "code": "str.upper()"
+    },
+    "convert_to_lowercase": {
+      "name": "Convert string to all lowercase",
+      "code": "str.lower()"
+    },
+    "convert_to_title_case": {
+      "name": "Convert string to title case",
+      "code": "str.title()"
+    },
+    "capitalize_string": {
+      "name": "Capitalize first letter of a string",
+      "code": "str.capitalize()"
+    },
+    "remove_whitespace": {
+      "name": "Remove all whitespaces from string",
+      "code": "string.strip()"
+    },
+    "replace_substring": {
+      "name": "Replace a substring with another string",
+      "code": "str.replace(substr, new_substr)"
+    },
+    "replace_all_substring": {
+      "name": "Replace all substring matches with another string",
+      "not-implemented": true
+    },
+    "split_at_index": {
+      "name": "Split string into a list of strings at a given index",
+      "not-implemented": true
+    },
+    "split_at_newlines": {
+      "name": "Split string into a list of strings at every new line character",
+      "code": "str.split(\"\\n\")"
+    },
+    "split_at_substring": {
+      "name": "Split string by locating all substrings",
+      "code": "str.split(substring)"
+    },
+    "merge_lists_into_string": {
+      "name": "Merge a list of strings into one string",
+      "not-implemented": true
+    },
+    "encode_html_entities": {
+      "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
+      "not-implemented": true
+    },
+    "decode_html_entities": {
+      "name": "Decode HTML entitles into characters",
+      "not-implemented": true
+    },
+    "encode_url_percent": {
+      "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
+      "not-implemented": true
+    },
+    "decode_url_percent": {
+      "name": "Decode URL percent encoding",
+      "not-implemented": true
+    },
+    "encode_to_base64": {
+      "name": "Encode string into Base64 format",
+      "not-implemented": true
+    },
+    "decode_from_base64": {
+      "name": "Decode string from Base64 format",
+      "not-implemented": true
+    },
+    "format_string_function": {
+      "name": "Function to format a string",
+      "not-implemented": true
+    },
+    "parameter_format_in_order": {
+      "name": "Parameter used in format function if they're used in order",
+      "not-implemented": true
+    },
+    "parameter_format_numerical": {
+      "name": "Parameter used in format function if they're numerically numbered",
+      "not-implemented": true
+    },
+    "parameter_format_by_name": {
+      "name": "Paramater used in format function if they're named variables",
+      "not-implemented": true
+    },
+    "format_as_integer": {
+      "name": "Format parameter as an integer",
+      "not-implemented": true
+    },
+    "format_as_decimal": {
+      "name": "Format parameter as a decimal number",
+      "not-implemented": true
+    },
+    "format_as_fixed_decimal": {
+      "name": "Format parameter as a fixed-point decimal number",
+      "code": "'{:.2f}'.format(number_string)"
+    },
+    "format_as_currency": {
+      "name": "Format parameter as a currency number",
+      "code": "'${:,.2f}'.format(number_string)"
+    },
+    "format_as_percentage": {
+      "name": "Format parameter as a percentage number",
+      "code": "format(number, '%')"
+    },
+    "format_number_with_separators": {
+      "name": "Format number with thousand separators",
+      "code": "format(number, ',')"
+    },
+    "format_number_with_positive_negative_sign": {
+      "name": "Format number with positive/negative signs",
+      "code": " '{0:+}'.format(number)"
+    },
+    "format_number_in_scientific_notation_little_e": {
+      "name": "Format number with scientific notation with 'e'",
+      "code": "format(number, 'e')"
+    },
+    "format_number_in_scientific_notation_big_e": {
+      "name": "Format number with scientific notation with 'E'",
+      "code": "format(number, 'E')"
+    },
+    "format_number_in_binary": {
+      "name": "Format number into binary",
+      "code": "format(value, 'b')"
+    },
+    "format_number_in_octal": {
+      "name": "Format number into octal",
+      "code": "format(number, 'o')"
+    },
+    "format_number_in_hexadecimal": {
+      "name": "Format number into hexadecimal",
+      "code": "format(number, 'x')"
+    }
+  }
+}
