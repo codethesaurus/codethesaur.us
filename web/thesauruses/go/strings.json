@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "language": "go",
+    "language_version": "1.14",
+    "language_name": "Go"
+  },
+  "categories": {
+    "Creating/Destroying Strings": [
+      "is_primitive_or_not",
+      "import",
+      "default_string_byte_encoding",
+      "create_new_string",
+      "create_multiline_string",
+      "assign_new_string",
+      "destroy_string"
+    ],
+    "String Basics": [
+      "length_of_string",
+      "max_length_of_string",
+      "clear_string",
+      "is_empty",
+      "concatenate_two_strings",
+      "concatenate_many_strings",
+      "is_all_alphabetical",
+      "is_all_numerical",
+      "is_all_alphanumeric",
+      "is_decimal",
+      "is_all_whitespaces",
+      "is_all_uppercase",
+      "is_all_lowercase",
+      "is_in_titlecase"
+    ],
+    "Find and Search": [
+      "does_substring_exist",
+      "find_start_index_of_substring",
+      "find_start_index_of_additional_substring",
+      "find_start_index_of_substring_from_end",
+      "count_occurrences_of_substring",
+      "get_leftmost_characters",
+      "get_rightmost_characters",
+      "get_substring_from_start_and_end_index",
+      "get_substring_from_start_index_and_length"
+    ],
+    "Manipulating Strings": [
+      "convert_to_uppercase",
+      "convert_to_lowercase",
+      "convert_to_title_case",
+      "capitalize_string",
+      "remove_whitespace",
+      "replace_substring",
+      "replace_all_substring",
+      "split_at_index",
+      "split_at_newlines",
+      "split_at_substring",
+      "merge_lists_into_string",
+      "encode_html_entities",
+      "decode_html_entities",
+      "encode_url_percent",
+      "decode_url_percent",
+      "encode_to_base64",
+      "decode_from_base64"
+    ],
+    "String Formatting": [
+      "format_string_function",
+      "parameter_format_in_order",
+      "parameter_format_numerical",
+      "parameter_format_by_name",
+      "format_as_integer",
+      "format_as_decimal",
+      "format_as_fixed_decimal",
+      "format_as_currency",
+      "format_as_percentage",
+      "format_number_with_separators",
+      "format_number_with_positive_negative_sign",
+      "format_number_in_scientific_notation_little_e",
+      "format_number_in_scientific_notation_big_e",
+      "format_number_in_binary",
+      "format_number_in_octal",
+      "format_number_in_hexadecimal"
+    ]
+  },
+  "strings": {
+    "is_primitive_or_not": {
+      "code": ["Yes"]
+    },
+    "import": {
+      "not-implemented": true
+    },
+    "default_string_byte_encoding": {
+      "code": ["UTF-8"]
+    },
+    "create_new_string": {
+      "code": ["example := \"New String Example\""]
+    },
+    "create_multiline_string": {
+      "code": ["example := `New\nMulti-line\nString`"]
+    },
+    "assign_new_string": {
+      "code": ["example := \"New String Example\"\nanother = example"]
+    },
+    "destroy_string": {
+      "not-implemented": true
+    },
+    "length_of_string": {
+      "code": ["len(str)"]
+    },
+    "max_length_of_string": {
+      "not-implemented": true
+    },
+    "clear_string": {
+      "not-implemented": true
+    },
+    "is_empty": {
+      "code": ["if s == \"\":"]
+    },
+    "concatenate_two_strings": {
+      "code": ["s1 := \"Hello\"\ns2 := \"World\"\ns3 := s1 + s2"]
+    },
+    "concatenate_many_strings": {
+      "code": ["s1 := \"foo\"\ns2 :=\"bar\"\ns3 :=\"baz\"\ns4 := s1 + s2 + s3"]
+    },
+    "is_all_alphabetical": {
+      "not-implemented": true
+    },
+    "is_all_numerical": {
+
+      "not-implemented": true
+    },
+    "is_all_alphanumeric": {
+      "not-implemented": true
+    },
+    "is_decimal": {
+      "not-implemented": true
+    },
+    "is_all_whitespaces": {
+      "not-implemented": true
+    },
+    "is_all_uppercase": {
+      "not-implemented": true
+    },
+    "is_all_lowercase": {
+      "not-implemented": true
+    },
+    "is_in_titlecase": {
+      "not-implemented": true
+    },
+    "does_substring_exist": {
+      "code": ["s := \"Hello, World!\"\nexist := strings.Contains(s, \"llo\")"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "find_start_index_of_substring": {
+      "code": ["s := \"Hello, World!\"\nindex := strings.Index(s, \"llo\")"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "find_start_index_of_additional_substring": {
+      "not-implemented": true
+    },
+    "find_start_index_of_substring_from_end": {
+      "not-implemented": true
+    },
+    "count_occurrences_of_substring": {
+      "code": ["s := \"Hello, World!\"\ncount := strings.Index(s, \"l\")"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "get_leftmost_characters": {
+      "code": ["s := \"Hello, World!\"\nres := s[:5]"]
+    },
+    "get_rightmost_characters": {
+      "code": ["s := \"Hello, World!\"\nres := s[len(s)-6:]"]
+    },
+    "get_substring_from_start_and_end_index": {
+      "code": ["s := \"Hello, World!\"\nres := s[3:6]"]
+    },
+    "get_substring_from_start_index_and_length": {
+      "not-implemented": true
+    },
+    "convert_to_uppercase": {
+      "code": ["s := \"Hello, World!\"\nres := strings.ToUpper(s)"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "convert_to_lowercase": {
+      "code": ["s := \"Hello, World!\"\nres := strings.ToLower(s)"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "convert_to_title_case": {
+      "code": ["s := \"Hello, World!\"\nres := strings.ToTitle(s)"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "capitalize_string": {
+      "not-implemented": true
+    },
+    "remove_whitespace": {
+      "not-implemented": true
+    },
+    "replace_substring": {
+      "code": ["s := \"Hello, World!\"\nres := strings.Replace(s, \"World\", \"Universe\", 1)"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "replace_all_substring": {
+      "code": ["s := \"Hello, World World World!\"\nres := strings.ReplaceAll(s, \"World\", \"Universe\")"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "split_at_index": {
+      "not-implemented": true
+    },
+    "split_at_newlines": {
+      "code": ["s := `Hello, World\nWorld\nWorld!`\nres := strings.Split(s, \"\n\")"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "split_at_substring": {
+      "code": ["s := \"Hello, World World World!\"\nres := strings.Split(s, \"World\")"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "merge_lists_into_string": {
+      "code": ["s := []string{\"foo\", \"bar\", \"baz\"}\nres := strings.Join(s, \", \")"],
+      "comment": "Need to import standard library \"strings\""
+    },
+    "encode_html_entities": {
+      "not-implemented": true
+    },
+    "decode_html_entities": {
+      "not-implemented": true
+    },
+    "encode_url_percent": {
+      "not-implemented": true
+    },
+    "decode_url_percent": {
+      "not-implemented": true
+    },
+    "encode_to_base64": {
+      "code": ["data := []byte(\"any + old & data\")\ns := base64.StdEncoding.EncodeToString(data)"],
+      "comment": "Need to import standard library \"base64\""
+    },
+    "decode_from_base64": {
+      "code": ["s := \"c29tZSBkYXRhIHdpdGggACBhbmQg77u/\"\ndata, err := base64.StdEncoding.DecodeString(s)"],
+      "comment": "Need to import standard library \"base64\""
+    },
+    "format_string_function": {
+      "code": ["fmt.Sprintf()"]
+    },
+    "parameter_format_in_order": {
+      "code": ["fmt.Sprintf(\"Hello, %s! And Hello, %s!\", \"World\", \"Universe\")"]
+    },
+    "parameter_format_numerical": {
+      "code": ["fmt.Sprintf(\"%[2]d %[1]d\\n\", 11, 22)"]
+    },
+    "parameter_format_by_name": {
+      "not-implemented": true
+    },
+    "format_as_integer": {
+      "code": ["fmt.Sprintf(\"%d\", num)"]
+    },
+    "format_as_decimal": {
+      "code": ["fmt.Sprintf(\"%d\", num)"]
+    },
+    "format_as_fixed_decimal": {
+      "code": ["fmt.Sprintf(\"%.2f\", num)"]
+    },
+    "format_as_currency": {
+      "not-implemented": true
+    },
+    "format_as_percentage": {
+      "code": ["fmt.Sprintf(\"%d%%\", num)"]
+    },
+    "format_number_with_separators": {
+      "not-implemented": true
+    },
+    "format_number_with_positive_negative_sign": {
+      "not-implemented": true
+    },
+    "format_number_in_scientific_notation_little_e": {
+      "code": ["fmt.Sprintf(\"%e\", num)"]
+    },
+    "format_number_in_scientific_notation_big_e": {
+      "code": ["fmt.Sprintf(\"%E\", num)"]
+    },
+    "format_number_in_binary": {
+      "code": ["fmt.Sprintf(\"%E\", num)"]
+    },
+    "format_number_in_octal": {
+      "code": ["fmt.Sprintf(\"%o\", num)"]
+    },
+    "format_number_in_hexadecimal": {
+      "code": ["fmt.Sprintf(\"%x\", num)"]
+    }
+  }
+}

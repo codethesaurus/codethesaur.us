@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "language": "perl",
+    "language_version": "5.34",
+    "language_name": "Perl"
+  },
+  "categories": {
+    "Arithmetic Operators": [
+      "addition",
+      "addition_assignment",
+      "subtraction",
+      "subtraction_assignment",
+      "multiplication",
+      "multiplication_assignment",
+      "division",
+      "division_assignment",
+      "integer_division",
+      "integer_division_assignment",
+      "modulus",
+      "modulus_assignment",
+      "unary_plus",
+      "unary_minus",
+      "increment",
+      "decrement",
+      "exponential",
+      "factorial",
+      "absolute_value",
+      "percentage"
+    ],
+    "Equality/Comparison/Logical Operators": [
+      "equal_to",
+      "not_equal_to",
+      "less_than",
+      "less_than_or_equal_to",
+      "greater_than",
+      "greater_than_or_equal_to",
+      "null_coalescing",
+      "is",
+      "is_not",
+      "logical_and",
+      "logical_or",
+      "logical_not"
+    ],
+    "Bitwise Operators": [
+      "bitwise_and",
+      "bitwise_and_assignment",
+      "bitwise_or",
+      "bitwise_or_assignment",
+      "bitwise_not",
+      "bitwise_not_assignment",
+      "bitwise_xor",
+      "bitwise_xor_assignment",
+      "bitwise_xnor",
+      "bitwise_xnor_assignment",
+      "left_shift",
+      "left_shift_assignment",
+      "right_shift",
+      "right_shift_assignment"
+    ],
+    "Conditional Operators": [
+      "ternary",
+      "null_forgiving"
+    ]
+  },
+  "operators": {
+    "addition": {
+      "code": "+"
+    },
+    "addition_assignment": {
+      "code": "+="
+    },
+    "subtraction": {
+      "code": "-"
+    },
+    "subtraction_assignment": {
+      "code": "-="
+    },
+    "multiplication": {
+      "code": "*"
+    },
+    "multiplication_assignment": {
+      "code": "*="
+    },
+    "division": {
+      "code": "/"
+    },
+    "division_assignment": {
+      "code": "/="
+    },
+    "integer_division": {
+      "code": "/"
+    },
+    "integer_division_assignment": {
+      "code": "/="
+    },
+    "modulus": {
+      "code": "%"
+    },
+    "modulus_assignment": {
+      "code": "%="
+    },
+    "unary_plus": {
+      "code": "+"
+    },
+    "unary_minus": {
+      "code": "-"
+    },
+    "increment": {
+      "code": "++"
+    },
+    "decrement": {
+      "code": "--"
+    },
+    "exponential": {
+      "code": "**"
+    },
+    "factorial": {
+      "not-implemented": true
+    },
+    "absolute_value": {
+      "not-implemented": true
+    },
+    "percentage": {
+      "not-implemented": true
+    },
+    "equal_to": {
+      "code": "==\neq",
+      "comment": "Use == for numerical comparision and eq for string comparison"
+    },
+    "not_equal_to": {
+      "code": "!=\nne",
+      "comment": "Use != for numerical comparision and ne for string comparison"
+    },
+    "less_than": {
+      "code": "<\nlt",
+      "comment": "Use < for numerical comparision and lt for string comparison"
+    },
+    "less_than_or_equal_to": {
+      "code": "<=\nle",
+      "comment": "Use <= for numerical comparision and le for string comparison"
+    },
+    "greater_than": {
+      "code": ">\ngt",
+      "comment": "Use > for numerical comparision and gt for string comparison"
+    },
+    "greater_than_or_equal_to": {
+      "code": ">=\nge",
+      "comment": "Use >= for numerical comparision and ge for string comparison"
+    },
+    "null_coalescing": {
+      "code": "//"
+    },
+    "is": {
+      "not-implemented": true
+    },
+    "is_not": {
+      "not-implemented": true
+    },
+    "left_shift": {
+      "code": "<<"
+    },
+    "left_shift_assignment": {
+      "not-implemented": true
+    },
+    "right_shift": {
+      "code": ">>"
+    },
+    "right_shift_assignment": {
+      "not-implemented": true
+    },
+    "ternary": {
+      "name": "Ternary operator",
+      "code": "? :"
+    },
+    "null_forgiving": {
+      "not-implemented": true
+    }
+  }
+}

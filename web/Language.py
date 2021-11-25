@@ -12,7 +12,6 @@ class Language:
         # Add an empty string to convert SafeString to str
         self.key = str(key + "")
         self.friendly_name = None
-        self.categories = None
         self.concepts = None
 
     def has_key(self):
@@ -44,12 +43,11 @@ class Language:
             file_json = json.loads(data)
 
             self.friendly_name = file_json["meta"]["language_name"]
-            self.categories = file_json["categories"]
             self.concepts = file_json[structure_key]
 
     def concept(self, concept_key):
         """
-        Get the concept (including code and comment) from the concept file for that Lanugage
+        Get the concept (including code and comment) from the concept file for that Language
         :param concept_key: key for the concept to look up
         :returns: a dict containing the code and comment, and possibly the 'not-implemented' flag. They are empty strings if not specified
         :rtype: object
@@ -89,7 +87,10 @@ class Language:
         :param concept_key: ID for the concept
         :return: the string containing the concept's code
         """
-        return self.concept(concept_key).get("code")
+        code =  self.concept(concept_key).get("code")
+        if isinstance(code, list):
+            code = "\n".join(code)
+        return code
 
     def concept_comment(self, concept_key):
         """

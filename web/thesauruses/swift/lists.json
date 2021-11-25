@@ -1,0 +1,399 @@
+{
+	"meta": {
+		"language": "swift",
+		"language_version": "5.3.3",
+		"language_name": "Swift"
+	},
+	"categories": {
+		"Ordered, Mutable Lists": [
+			"name_of_ordered_mutable_list",
+			"create_a_ordered_mutable_list",
+			"ordered_mutable_list_start_number",
+			"ordered_mutable_list_can_be_appended",
+			"ordered_mutable_list_can_be_inserted_in_middle",
+			"access_element_in_ordered_mutable_list",
+			"insert_into_beginning_of_ordered_mutable_list",
+			"insert_into_end_of_ordered_mutable_list",
+			"insert_into_middle_of_ordered_mutable_list",
+			"erase_element_at_beginning_of_ordered_mutable_list",
+			"erase_element_at_end_of_ordered_mutable_list",
+			"erase_element_in_middle_of_ordered_mutable_list",
+			"swap_elements_in_ordered_mutable_list",
+			"delete_ordered_mutable_list"
+		],
+		"Unordered, Mutable Lists": [
+			"name_of_unordered_mutable_list",
+			"create_a_unordered_mutable_list",
+			"unordered_mutable_list_start_number",
+			"unordered_mutable_list_can_be_appended",
+			"unordered_mutable_list_can_be_inserted_in_middle",
+			"access_element_in_unordered_mutable_list",
+			"insert_into_beginning_of_unordered_mutable_list",
+			"insert_into_end_of_unordered_mutable_list",
+			"insert_into_middle_of_unordered_mutable_list",
+			"erase_element_at_beginning_of_unordered_mutable_list",
+			"erase_element_at_end_of_unordered_mutable_list",
+			"erase_element_in_middle_of_unordered_mutable_list",
+			"swap_elements_in_unordered_mutable_list",
+			"delete_unordered_mutable_list"
+		],
+		"Ordered, Immutable Lists": [
+			"name_of_ordered_immutable_list",
+			"create_a_ordered_immutable_list",
+			"ordered_immutable_list_start_number",
+			"access_element_in_ordered_immutable_list",
+			"delete_ordered_immutable_list"
+		],
+		"Unordered, Immutable Lists": [
+			"name_of_unordered_immutable_list",
+			"create_a_unordered_immutable_list",
+			"unordered_immutable_list_start_number",
+			"access_element_in_unordered_immutable_list",
+			"delete_unordered_immutable_list"
+		],
+		"Mutable Hashed Lists": [
+			"name_of_mutable_hashed_list",
+			"create_a_mutable_hashed_list",
+			"insert_element_to_mutable_hashed_list",
+			"erase_element_from_mutable_hashed_list",
+			"delete_mutable_hashed_list"
+		],
+		"Immutable Hashed Lists": [
+			"name_of_immutable_hashed_list",
+			"create_a_immutable_hashed_list",
+			"insert_element_to_immutable_hashed_list",
+			"erase_element_from_immutable_hashed_list",
+			"delete_immutable_hashed_list"
+		],
+		"Mutable Key/Value Sets": [
+			"create_a_mutable_set",
+			"get_key_from_mutable_set",
+			"get_value_from_mutable_set",
+			"get_all_keys_from_mutable_set",
+			"get_all_values_from_mutable_set",
+			"swap_key_and_value_in_mutable_set",
+			"delete_mutable_set"
+		],
+		"Immutable Key/Value Sets": [
+			"create_a_immutable_set",
+			"get_key_from_immutable_set",
+			"get_value_from_immutable_set",
+			"get_all_keys_from_immutable_set",
+			"get_all_values_from_immutable_set",
+			"swap_key_and_value_in_immutable_set",
+			"delete_immutable_set"
+		],
+		"Find/Search Functions": [
+			"find_element_by_value",
+			"find_minimum_element",
+			"find_maximum_element",
+			"convert_list_to_string"
+		],
+		"Splitting/Joining Lists": [
+			"concatenate_two_lists",
+			"split_list_at_index",
+			"split_list_at_value"
+		],
+		"Copying Lists": [
+			"duplicate_a_list",
+			"duplicate_subset_of_list"
+		],
+		"Sizing/Resizing Lists": [
+			"get_list_length",
+			"resize_list"
+		],
+		"Comparing/Equality": [
+			"do_two_lists_match_exactly",
+			"do_two_lists_contain_same_items",
+			"does_list_satisfy_some_expression",
+			"does_list_not_satisfy_an_expression"
+		],
+		"Sorting/Shuffling Lists": [
+			"sort_list",
+			"shuffle_list",
+			"reverse_list"
+		],
+		"Functions On List Elements": [
+			"map",
+			"filter",
+			"reduce_left",
+			"reduce_right"
+		]
+	},
+	"lists": {
+		"name_of_ordered_mutable_list": {
+			"code": "Array[type]",
+			"comment": "This is mutable only when it is assigned to a variable"
+		},
+		"create_a_ordered_mutable_list": {
+			"code": "var someArray:Array<Int> = [-1, 122, 190]\n var someArray:[Int] = [-1, 122, 190]\n",
+			"comment": "You can use either of them"
+		},
+		"ordered_mutable_list_start_number": {
+			"code": "0"
+		},
+		"ordered_mutable_list_can_be_appended": {
+			"code": "someArray += [-23]"
+		},
+		"ordered_mutable_list_can_be_inserted_in_middle": {
+			"code": "someArray.insert(13, at: 1)"
+		},
+		"access_element_in_ordered_mutable_list": {
+			"code": "someArray[3]"
+		},
+		"insert_into_beginning_of_ordered_mutable_list": {
+			"code": "someArray.insert(23, at: 0)"
+		},
+		"insert_into_end_of_ordered_mutable_list": {
+			"code": "someArray += [-23]"
+		},
+		"insert_into_middle_of_ordered_mutable_list": {
+			"code": "someArray.insert(23, at: 4)"
+		},
+		"erase_element_at_beginning_of_ordered_mutable_list": {
+			"code": "someArray.remove(at: 0)"
+		},
+		"erase_element_at_end_of_ordered_mutable_list": {
+			"code": "someArray.removeLast()"
+		},
+		"erase_element_in_middle_of_ordered_mutable_list": {
+			"code": "someArray.remove(at: 4)"
+		},
+		"swap_elements_in_ordered_mutable_list": {
+			"code": "someArray.swapAt(2, 3)"
+		},
+		"delete_ordered_mutable_list": {
+			"not-implemented": "true"
+		},
+		"name_of_unordered_mutable_list": {
+			"code": "Dictionary<Key, Value>"
+		},
+		"create_a_unordered_mutable_list": {
+			"code": "var someList: [Int: String] = [:]"
+		},
+		"unordered_mutable_list_start_number": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"unordered_mutable_list_can_be_appended": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"unordered_mutable_list_can_be_inserted_in_middle": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"access_element_in_unordered_mutable_list": {
+			"code": "someList[26]"
+		},
+		"insert_into_beginning_of_unordered_mutable_list": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"insert_into_end_of_unordered_mutable_list": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"insert_into_middle_of_unordered_mutable_list": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"erase_element_at_beginning_of_unordered_mutable_list": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"erase_element_at_end_of_unordered_mutable_list": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"erase_element_in_middle_of_unordered_mutable_list": {
+			"code": "someList[1] = nil"
+		},
+		"swap_elements_in_unordered_mutable_list": {
+			"not-implemented": "true"
+		},
+		"delete_unordered_mutable_list": {
+			"not-implemented": "true"
+		},
+		"name_of_ordered_immutable_list": {
+			"code": "Array[type]",
+			"comment": "This is only immutable when it is assigned to a constant"
+		},
+		"create_a_ordered_immutable_list": {
+			"code": "let someArray:Array<Int> = [-1, 122, 190]\n let someArray:[Int] = [-1, 122, 190]\n"
+		},
+		"ordered_immutable_list_start_number": {
+			"code": "0"
+		},
+		"access_element_in_ordered_immutable_list": {
+			"code": "someArray[5]"
+		},
+		"delete_ordered_immutable_list": {
+			"not-implemented": "true"
+		},
+		"name_of_unordered_immutable_list": {
+			"code": "Dictionary<Key, Value>",
+			"comment": "It is only immutable when assigned to a constant"
+		},
+		"create_a_unordered_immutable_list": {
+			"code": "let someList:[Int: String] = [:]"
+		},
+		"unordered_immutable_list_start_number": {
+			"not-implemented": "true",
+			"comment": "This operation is not necessary as the elements are accessed by the key"
+		},
+		"access_element_in_unordered_immutable_list": {
+			"code": "someList[4]"
+		},
+		"delete_unordered_immutable_list": {
+			"not-implemented": "true"
+		},
+		"name_of_mutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"create_a_mutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"insert_element_to_mutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"erase_element_from_mutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"delete_mutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"name_of_immutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"create_a_immutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"insert_element_to_immutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"erase_element_from_immutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"delete_immutable_hashed_list": {
+			"not-implemented": "true"
+		},
+		"create_a_mutable_set": {
+			"code": "var someDictionary:[int: String] = [0: \"Zero\", 1: \"One\"]",
+			"comment": "This is only mutable when assigned to a variable"
+		},
+		"get_key_from_mutable_set": {
+			"code": "someDictionary.keys[2]"
+		},
+		"get_value_from_mutable_set": {
+			"code": "someDictionary[0]\n someDictionary.values[0]"
+		},
+		"get_all_keys_from_mutable_set": {
+			"code": "someDictionary.keys"
+		},
+		"get_all_values_from_mutable_set": {
+			"code": "someDictionary.values"
+		},
+		"swap_key_and_value_in_mutable_set": {
+			"not-implemented": "true"
+		},
+		"delete_mutable_set": {
+			"not-implemented": "true"
+		},
+		"create_a_immutable_set": {
+			"code": "let someDictionary:[int: String] = [0: \"Zero\", 1: \"One\"]",
+			"comment": "This is only immutable when assigned to a constant"
+		},
+		"get_key_from_immutable_set": {
+			"code": "someDictionary.keys[2]"
+		},
+		"get_value_from_immutable_set": {
+			"code": "someDictionary[0]\n someDictionary.values[0]"
+		},
+		"get_all_keys_from_immutable_set": {
+			"code": "someDictionary.keys"
+		},
+		"get_all_values_from_immutable_set": {
+			"code": "someDictionary.values"
+		},
+		"swap_key_and_value_in_immutable_set": {
+			"not-implemented": "true"
+		},
+		"delete_immutable_set": {
+			"not-implemented": "true"
+		},
+		"find_element_at_position": {
+			"code": "someArray[2]"
+		},
+		"find_element_by_value": {
+			"code": "someArray.firstIndex(of: \"blue\")"
+		},
+		"find_minimum_element": {
+			"code": "someArray.min()"
+		},
+		"find_maximum_element": {
+			"code": "someArray.max()"
+		},
+		"convert_list_to_string": {
+			"code": "let codes = [\"abc\",\"def\",\"ghi\"] \nlet codesAsText = codes.reduce(\"\", +)"
+		},
+		"concatenate_two_lists": {
+			"code": "someArray1 + someArray2"
+		},
+		"split_list_at_index": {
+			"not-implemented": "true"
+		},
+		"split_list_at_value": {
+			"not-implemented": "true"
+		},
+		"duplicate_a_list": {
+			"code": "",
+			"comment": "Beyond the scope of this tool"
+		},
+		"duplicate_subset_of_list": {
+			"not-implemented": "true"
+		},
+		"get_list_length": {
+			"code": "someArray.count"
+		},
+		"resize_list": {
+			"not-implemented": "true"
+		},
+		"do_two_lists_match_exactly": {
+			"code": "someArray1.elementsEqual(someArray2)"
+		},
+		"do_two_lists_contain_same_items": {
+			"code": "someArray1 == someArray2"
+		},
+		"does_list_satisfy_some_expression": {
+			"code": "someArray1.allSatisfy(func<>)"
+		},
+		"does_list_not_satisfy_an_expression": {
+			"code": "!someArray1.allSatisfy(func<>)"
+		},
+		"sort_list": {
+			"code": "someArray.sort()\n let array2 = someArray.sort()",
+			"comment": "The first example sorts in place"
+		},
+		"shuffle_list": {
+			"code": "someArray.shuffle()\n let array2 = someArray.shuffle()",
+			"comment": "The first example shuffles in place"
+		},
+		"reverse_list": {
+			"code": "someArray.reverse()\n let array2 = someArray.reverse()",
+			"comment": "The first example reverses in place"
+		},
+		"map": {
+			"code": "let doubled = sameArray.map{ $0 * 2 }"
+		},
+		"filter": {
+			"code": "let filtered = someArray.filter { func }"
+		},
+		"reduce_left": {
+			"code": "let codes = [\"abc\",\"def\",\"ghi\"] \nlet concatenatedText = codes.reduce(\"\", +)"
+		},
+		"reduce_right": {
+			"not-implemented": "true"
+		}
+	}
+}

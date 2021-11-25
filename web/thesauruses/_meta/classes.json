@@ -43,99 +43,99 @@
   "classes": {
     "normal_class": {
       "name": "Normal class",
-      "code": ""
+      "code": [""]
     },
     "abstract_class": {
       "name": "Abstract class",
-      "code": ""
+      "code": [""]
     },
     "interface": {
       "name": "Interface",
-      "code": ""
+      "code": [""]
     },
     "read_only_class": {
       "name": "Read-only class",
-      "code": ""
+      "code": [""]
     },
     "static_class": {
       "name": "Static class",
-      "code": ""
+      "code": [""]
     },
     "inner_class": {
       "name": "Inner class",
-      "code": ""
+      "code": [""]
     },
     "packages": {
-      "name": "Normal class",
-      "code": ""
+      "name": "Packages",
+      "code": [""]
     },
     "class_with_generic_type": {
       "name": "Class with a generic type",
-      "code": ""
+      "code": [""]
     },
     "private_variables": {
-      "name": "Defining public variables",
-      "code": ""
+      "name": "Defining private variables",
+      "code": [""]
     },
     "protected_variables": {
       "name": "Defining protected variables",
-      "code": ""
+      "code": [""]
     },
     "public_variables": {
       "name": "Defining public variables",
-      "code": ""
+      "code": [""]
     },
     "static_variables": {
       "name": "Defining static variables",
-      "code": ""
+      "code": [""]
     },
     "private_functions": {
       "name": "Defining private functions",
-      "code": ""
+      "code": [""]
     },
     "protected_functions": {
       "name": "Defining protected functions",
-      "code": ""
+      "code": [""]
     },
     "public_functions": {
-      "name": "Defining private functions",
-      "code": ""
+      "name": "Defining public functions",
+      "code": [""]
     },
     "static_functions": {
       "name": "Defining static functions",
-      "code": ""
+      "code": [""]
     },
     "extends_class": {
       "name": "Class that inherits/extends another class",
-      "code": ""
+      "code": [""]
     },
     "extending_interface": {
       "name": "Class/Interface that inherits/extends another class/interface",
-      "code": ""
+      "code": [""]
     },
     "calling_superclass_functions": {
       "name": "Calling a superclass function",
-      "code": ""
+      "code": [""]
     },
     "overriding_superclass_functions": {
       "name": "Overriding a superclass function",
-      "code": ""
+      "code": [""]
     },
     "instantiating_object": {
       "name": "Instantiating a new object",
-      "code": ""
+      "code": [""]
     },
     "instantiating_polymorphic_object": {
       "name": "Instantiating a polymorphic object",
-      "code": ""
+      "code": [""]
     },
     "implement_constructor": {
       "name": "Implementing a class constructor",
-      "code": ""
+      "code": [""]
     },
     "implement_deconstructor": {
       "name": "Implementing a class deconstructor",
-      "code": ""
+      "code": [""]
     }
   }
 }
