@@ -123,343 +123,343 @@
   "lists": {
     "name_of_ordered_mutable_list": {
       "name": "What is a ordered, mutable list called?",
-      "code": ""
+      "code": [""]
     },
     "create_a_ordered_mutable_list": {
       "name": "Create the list",
-      "code": ""
+      "code": [""]
     },
     "ordered_mutable_list_start_number": {
       "name": "What number does it start at?",
-      "code": ""
+      "code": [""]
     },
     "ordered_mutable_list_can_be_appended": {
       "name": "Can you append to it?",
-      "code": ""
+      "code": [""]
     },
     "ordered_mutable_list_can_be_inserted_in_middle": {
       "name": "Can you insert into the middle of it?",
-      "code": ""
+      "code": [""]
     },
     "access_element_in_ordered_mutable_list": {
       "name": "Access element by index",
-      "code": ""
+      "code": [""]
     },
     "insert_into_beginning_of_ordered_mutable_list": {
       "name": "Insert element at beginning",
-      "code": ""
+      "code": [""]
     },
     "insert_into_end_of_ordered_mutable_list": {
       "name": "Insert element at end",
-      "code": ""
+      "code": [""]
     },
     "insert_into_middle_of_ordered_mutable_list": {
       "name": "Insert element in middle",
-      "code": ""
+      "code": [""]
     },
     "erase_element_at_beginning_of_ordered_mutable_list": {
       "name": "Erase first element",
-      "code": ""
+      "code": [""]
     },
     "erase_element_at_end_of_ordered_mutable_list": {
       "name": "Erase last element",
-      "code": ""
+      "code": [""]
     },
     "erase_element_in_middle_of_ordered_mutable_list": {
       "name": "Erase element in the middle",
-      "code": ""
+      "code": [""]
     },
     "swap_elements_in_ordered_mutable_list": {
       "name": "Swap two elements",
-      "code": ""
+      "code": [""]
     },
     "delete_ordered_mutable_list": {
       "name": "Delete the list",
-      "code": ""
+      "code": [""]
     },
     "name_of_unordered_mutable_list": {
       "name": "What is a unordered, mutable list called?",
-      "code": ""
+      "code": [""]
     },
     "create_a_unordered_mutable_list": {
       "name": "unordered",
-      "code": ""
+      "code": [""]
     },
     "unordered_mutable_list_start_number": {
       "name": "What number does it start at?",
-      "code": ""
+      "code": [""]
     },
     "unordered_mutable_list_can_be_appended": {
       "name": "Can you append to it?",
-      "code": ""
+      "code": [""]
     },
     "unordered_mutable_list_can_be_inserted_in_middle": {
       "name": "Can you insert into the middle of it?",
-      "code": ""
+      "code": [""]
     },
     "access_element_in_unordered_mutable_list": {
       "name": "Access element by index",
-      "code": ""
+      "code": [""]
     },
     "insert_into_beginning_of_unordered_mutable_list": {
       "name": "Insert element at beginning",
-      "code": ""
+      "code": [""]
     },
     "insert_into_end_of_unordered_mutable_list": {
       "name": "Insert element at end",
-      "code": ""
+      "code": [""]
     },
     "insert_into_middle_of_unordered_mutable_list": {
       "name": "Insert element in middle",
-      "code": ""
+      "code": [""]
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
       "name": "Erase first element",
-      "code": ""
+      "code": [""]
     },
     "erase_element_at_end_of_unordered_mutable_list": {
       "name": "Erase last element",
-      "code": ""
+      "code": [""]
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
       "name": "Erase element in the middle",
-      "code": ""
+      "code": [""]
     },
     "swap_elements_in_unordered_mutable_list": {
       "name": "Swap two elements",
-      "code": ""
+      "code": [""]
     },
     "delete_unordered_mutable_list": {
       "name": "Delete the list",
-      "code": ""
+      "code": [""]
     },
     "name_of_ordered_immutable_list": {
       "name": "What is a ordered, immutable list called?",
-      "code": ""
+      "code": [""]
     },
     "create_a_ordered_immutable_list": {
       "name": "Create the list",
-      "code": ""
+      "code": [""]
     },
     "ordered_immutable_list_start_number": {
       "name": "What number does it start at?",
-      "code": ""
+      "code": [""]
     },
     "access_element_in_ordered_immutable_list": {
       "name": "Access element by index",
-      "code": ""
+      "code": [""]
     },
     "delete_ordered_immutable_list": {
       "name": "Delete the list",
-      "code": ""
+      "code": [""]
     },
     "name_of_unordered_immutable_list": {
       "name": "What is a unordered, immutable list called?",
-      "code": ""
+      "code": [""]
     },
     "create_a_unordered_immutable_list": {
       "name": "Create the list",
-      "code": ""
+      "code": [""]
     },
     "unordered_immutable_list_start_number": {
       "name": "What number does it start at?",
-      "code": ""
+      "code": [""]
     },
     "access_element_in_unordered_immutable_list": {
       "name": "Access element by index",
-      "code": ""
+      "code": [""]
     },
     "delete_unordered_immutable_list": {
       "name": "Delete the list",
-      "code": ""
+      "code": [""]
     },
     "name_of_mutable_hashed_list": {
       "name": "What is a mutable hashed list called?",
-      "code": ""
+      "code": [""]
     },
     "create_a_mutable_hashed_list": {
       "name": "Create the list",
-      "code": ""
+      "code": [""]
     },
     "insert_element_to_mutable_hashed_list": {
       "name": "Insert an element",
-      "code": ""
+      "code": [""]
     },
     "erase_element_from_mutable_hashed_list": {
       "name": "Erase an element from the list",
-      "code": ""
+      "code": [""]
     },
     "delete_mutable_hashed_list": {
       "name": "Delete the list",
-      "code": ""
+      "code": [""]
     },
     "name_of_immutable_hashed_list": {
       "name": "What is an immutable hashed list called?",
-      "code": ""
+      "code": [""]
     },
     "create_a_immutable_hashed_list": {
       "name": "Create the list",
-      "code": ""
+      "code": [""]
     },
     "insert_element_to_immutable_hashed_list": {
       "name": "Insert an element",
-      "code": ""
+      "code": [""]
     },
     "erase_element_from_immutable_hashed_list": {
       "name": "Erase an element from the list",
-      "code": ""
+      "code": [""]
     },
     "delete_immutable_hashed_list": {
       "name": "Delete the list",
-      "code": ""
+      "code": [""]
     },
     "create_a_mutable_set": {
       "name": "Create a mutable key/value set",
-      "code": ""
+      "code": [""]
     },
     "get_key_from_mutable_set": {
       "name": "Get key",
-      "code": ""
+      "code": [""]
     },
     "get_value_from_mutable_set": {
       "name": "Get value",
-      "code": ""
+      "code": [""]
     },
     "get_all_keys_from_mutable_set": {
       "name": "Get all keys",
-      "code": ""
+      "code": [""]
     },
     "get_all_values_from_mutable_set": {
       "name": "Get all values",
-      "code": ""
+      "code": [""]
     },
     "swap_key_and_value_in_mutable_set": {
       "name": "Swap a key and value",
-      "code": ""
+      "code": [""]
     },
     "delete_mutable_set": {
       "name": "Delete the set",
-      "code": ""
+      "code": [""]
     },
     "create_a_immutable_set": {
       "name": "Create an immutable key/value set",
-      "code": ""
+      "code": [""]
     },
     "get_key_from_immutable_set": {
       "name": "Get key",
-      "code": ""
+      "code": [""]
     },
     "get_value_from_immutable_set": {
       "name": "Get value",
-      "code": ""
+      "code": [""]
     },
     "get_all_keys_from_immutable_set": {
       "name": "Get all keys",
-      "code": ""
+      "code": [""]
     },
     "get_all_values_from_immutable_set": {
       "name": "Get all values",
-      "code": ""
+      "code": [""]
     },
     "swap_key_and_value_in_immutable_set": {
       "name": "Swap a key and value",
-      "code": ""
+      "code": [""]
     },
     "delete_immutable_set": {
       "name": "Delete the set",
-      "code": ""
+      "code": [""]
     },
     "find_element_at_position": {
       "name": "Find/search for an element at an index position",
-      "code": ""
+      "code": [""]
     },
     "find_element_by_value": {
       "name": "Find/search for an element by value",
-      "code": ""
+      "code": [""]
     },
     "find_minimum_element": {
       "name": "Find the minimum value in a list",
-      "code": ""
+      "code": [""]
     },
     "find_maximum_element": {
       "name": "Find the maximum value in a list",
-      "code": ""
+      "code": [""]
     },
     "convert_list_to_string": {
       "name": "Convert a list to a string",
-      "code": ""
+      "code": [""]
     },
     "concatenate_two_lists": {
       "name": "Concatenate two lists together",
-      "code": ""
+      "code": [""]
     },
     "split_list_at_index": {
       "name": "Split lists at an index",
-      "code": ""
+      "code": [""]
     },
     "split_list_at_value": {
       "name": "Split list at a value",
-      "code": ""
+      "code": [""]
     },
     "duplicate_a_list": {
       "name": "Duplicate a list",
-      "code": ""
+      "code": [""]
     },
     "duplicate_subset_of_list": {
       "name": "Duplicate a portion/subset of a list",
-      "code": ""
+      "code": [""]
     },
     "get_list_length": {
       "name": "Get list length",
-      "code": ""
+      "code": [""]
     },
     "resize_list": {
       "name": "Increase/decrease list size",
-      "code": ""
+      "code": [""]
     },
     "do_two_lists_match_exactly": {
       "name": "Do two lists match every element?",
-      "code": ""
+      "code": [""]
     },
     "do_two_lists_contain_same_items": {
       "name": "Do two lists contain all the same items?",
-      "code": ""
+      "code": [""]
     },
     "does_list_satisfy_some_expression": {
       "name": "Does a list satisfy some expression?",
-      "code": ""
+      "code": [""]
     },
     "does_list_not_satisfy_an_expression": {
       "name": "Does a list entirely not satisfy an expression?",
-      "code": ""
+      "code": [""]
     },
     "sort_list": {
       "name": "Sort a list",
-      "code": ""
+      "code": [""]
     },
     "shuffle_list": {
       "name": "Shuffle list elements",
-      "code": ""
+      "code": [""]
     },
     "reverse_list": {
       "name": "Reverse order of list elements",
-      "code": ""
+      "code": [""]
     },
     "map": {
       "name": "Map function across list",
-      "code": ""
+      "code": [""]
     },
     "filter": {
       "name": "Filter a list based on criteria",
-      "code": ""
+      "code": [""]
     },
     "reduce_left": {
       "name": "Reduce a list left-to-right",
-      "code": ""
+      "code": [""]
     },
     "reduce_right": {
       "name": "Reduce a list right-to-left",
-      "code": ""
+      "code": [""]
     }
   }
 }

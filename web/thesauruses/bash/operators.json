@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "language": "bash",
+    "language_version": "bash-5.1",
+    "language_name": "BASH"
+  },
+  "categories": {
+    "Arithmetic Operators": [
+      "addition",
+      "addition_assignment",
+      "subtraction",
+      "subtraction_assignment",
+      "multiplication",
+      "multiplication_assignment",
+      "division",
+      "division_assignment",
+      "modulus",
+      "modulus_assignment",
+      "increment",
+      "decrement",
+      "exponential",
+      "factorial",
+      "absolute_value",
+      "percentage"
+    ],
+    "Equality/Comparison/Logical Operators": [
+      "equal_to",
+      "not_equal_to",
+      "less_than",
+      "less_than_or_equal_to",
+      "greater_than",
+      "greater_than_or_equal_to",
+      "null_coalescing",
+      "is",
+      "is_not",
+      "logical_and",
+      "logical_or",
+      "logical_not"
+    ],
+    "Bitwise Operators": [
+      "bitwise_and",
+      "bitwise_and_assignment",
+      "bitwise_or",
+      "bitwise_or_assignment",
+      "bitwise_not",
+      "bitwise_not_assignment",
+      "bitwise_xor",
+      "bitwise_xor_assignment",
+      "bitwise_xnor",
+      "bitwise_xnor_assignment",
+      "left_shift",
+      "left_shift_assignment",
+      "right_shift",
+      "right_shift_assignment"
+    ],
+    "Conditional Operators": ["ternary", "null_forgiving"]
+  },
+  "operators": {
+    "addition": {
+      "code": "(( 8+4 ))"
+    },
+    "addition_assignment": {
+      "code": "(( a+=4 ))"
+    },
+    "subtraction": {
+      "code": "(( 8-4 ))"
+    },
+    "subtraction_assignment": {
+      "code": "(( a-=4 ))"
+    },
+    "multiplication": {
+      "code": "(( 8*4 ))"
+    },
+    "multiplication_assignment": {
+      "code": "(( a*=4 ))"
+    },
+    "division": {
+      "code": "(( 8/4 ))"
+    },
+    "division_assignment": {
+      "code": "(( a/=4 ))"
+    },
+    "modulus": {
+      "code": "(( 8%4 ))"
+    },
+    "modulus_assignment": {
+      "code": "(( a%=4 ))"
+    },
+    "increment": {
+      "code": "++",
+      "comment": "There are two types of increment: pre-increment ((++x)) and post-increment ((x++)). "
+    },
+    "decrement": {
+      "code": "--",
+      "comment": "There are two types of decrement: pre-decrement ((--x)) and post-decrement ((x--)). "
+    },
+    "exponential": {
+      "not-implemented": "true"
+    },
+    "factorial": {
+      "not-implemented": "true"
+    },
+    "absolute_value": {
+      "not-implemented": "true"
+    },
+    "percentage": {
+      "not-implemented": "true"
+    },
+    "equal_to": {
+      "code": "(( $a==$b ))"
+    },
+    "not_equal_to": {
+      "code": "(( $a!=$b ))"
+    },
+    "less_than": {
+      "code": "(( $a<$b ))"
+    },
+    "less_than_or_equal_to": {
+      "code": "(( $a<=$b ))"
+    },
+    "greater_than": {
+      "code": "(( $a>$b ))"
+    },
+    "greater_than_or_equal_to": {
+      "code": "(( $a>=$b ))"
+    },
+    "null_coalescing": {
+      "code": "${a:-20}"
+    },
+    "is": {
+      "not-implemented": "true"
+    },
+    "is_not": {
+      "not-implemented": "true"
+    },
+    "left_shift": {
+      "code": "(( a<<1 ))"
+    },
+    "left_shift_assignment": {
+      "code": "(( a<<=1 ))"
+    },
+    "right_shift": {
+      "code": "(( a>>1 ))"
+    },
+    "right_shift_assignment": {
+      "code": "(( a>>=1 ))"
+    },
+    "ternary": {
+      "comment": "Ternary operator only exists for arithmetic expressions:",
+      "code": "(( a>=5 ? 6 : 4 ))"
+    },
+    "null_forgiving": {
+      "not-implemented": "true"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "language": "ada",
+    "language_version": "2012",
+    "language_name": "Ada"
+  },
+  "categories": {
+    "Arithmetic Operators": [
+      "addition",
+      "subtraction",
+      "multiplication",
+      "division",
+      "integer_division",
+      "modulus",
+      "unary_plus",
+      "unary_minus",
+      "exponential",
+      "absolute_value"
+    ],
+    "Equality/Comparison/Logical Operators": [
+      "equal_to",
+      "not_equal_to",
+      "less_than",
+      "less_than_or_equal_to",
+      "greater_than",
+      "greater_than_or_equal_to",
+      "null_coalescing",
+      "is",
+      "is_not",
+      "logical_and",
+      "logical_or",
+      "logical_not"
+    ],
+    "Bitwise Operators": [
+      "bitwise_and",
+      "bitwise_and_assignment",
+      "bitwise_or",
+      "bitwise_or_assignment",
+      "bitwise_not",
+      "bitwise_not_assignment",
+      "bitwise_xor",
+      "bitwise_xor_assignment",
+      "bitwise_xnor",
+      "bitwise_xnor_assignment",
+      "left_shift",
+      "left_shift_assignment",
+      "right_shift",
+      "right_shift_assignment"
+    ],
+    "Conditional Operators": []
+  },
+  "operators": {
+    "addition": {
+      "code": "ans := x + y"
+    },
+    "addition_assignment": {
+      "not-implemented": "true"
+    },
+    "subtraction": {
+      "code": "ans := x - y"
+    },
+    "subtraction_assignment": {
+      "not-implemented": "true"
+    },
+    "multiplication": {
+      "code": "ans := x * y"
+    },
+    "multiplication_assignment": {
+      "not-implemented": "true"
+    },
+    "division": {
+      "code": "ans := x / y"
+    },
+    "division_assignment": {
+      "not-implemented": "true"
+    },
+    "integer_division": {
+      "code": "ans := x / y",
+      "comment": "if x and y should be integers, then only the answer would be an integer value."
+    },
+    "integer_division_assignment": {
+      "not-implemented": "true"
+    },
+    "modulus": {
+      "code": "ans := x mod y \n ans := x rem y",
+      "comment": "if x and y both are positive, then result will be positive for both operators. If x is -x, and y is positive, then 'x mod y' will give positive value, whereas 'x rem y' will produce a negative value."
+    },
+    "modulus_assignment": {
+      "not-implemented": "true"
+    },
+    "unary_plus": {
+      "code": "+B",
+      "comment": "for any value of B, output will be B"
+    },
+    "unary_minus": {
+      "code": "-B",
+      "comment": "if value of B is -5, it will change to +5 and vice versa."
+    },
+    "increment": {
+      "not-implemented": "true"
+    },
+    "decrement": {
+      "not-implemented": "true"
+    },
+    "exponential": {
+      "code": "ans := x ** y",
+      "comment": "value of y cannot be negative" 
+    },
+    "factorial": {
+      "not-implemented": "true"
+    },
+    "absolute_value": {
+      "code": "y := abs x"
+    },
+    "percentage": {
+      "not-implemented": "true"
+    },
+    "equal_to": {
+      "code": "x = y"
+    },
+    "not_equal_to": {
+      "code": "x /= y"
+    },
+    "less_than": {
+      "code": "x < y"
+    },
+    "less_than_or_equal_to": {
+      "code": "x <= y"
+    },
+    "greater_than": {
+      "code": "x > y"
+    },
+    "greater_than_or_equal_to": {
+      "code": "x >= y"
+    },
+    "null_coalescing": {
+      "not-implemented": "true"
+    },
+    "is": {
+      "code": "x in y"
+    },
+    "is_not": {
+      "code": "x not in y"
+    },
+    "left_shift": {
+		"code":"Shift_Left (x, n)",
+      "comment": "returns Unsigned_8 value by shifting x to n left positions. Requires Byte_IO package and interfaces."
+    },
+    "left_shift_assignment": {
+      "not-implemented": "true"
+    },
+    "right_shift": {
+      "code":"Shift_Right (X, N) \n Shift_Right_Arithmetic (X, N)",
+      "comment": "Method 1, returns Unsigned_8 value by shifting x to n right positions. Method 2, performs signed shifting of x to n positions and returns Unsigned_8 value. Requires Byte_IO package and interfaces for both methods."
+    },
+    "right_shift_assignment": {
+      "not-implemented": "true"
+    },
+    "ternary": {
+      "not-implemented": "true"
+    },
+    "null_forgiving": {
+      "not-implemented": "true"
+    }
+  }
+}

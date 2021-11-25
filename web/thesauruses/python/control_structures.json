@@ -1,7 +1,7 @@
 {
   "meta": {
     "language": "python",
-    "language_version": "3.7",
+    "language_version": "3.10",
     "language_name": "Python"
   },
   "categories": {
@@ -10,12 +10,14 @@
       "if_else_conditional",
       "if_elseif_conditional",
       "if_elseif_else_conditional",
+      "switch_statement",
       "ternary_conditional"
     ],
     "Loops": [
       "while_loop",
       "for_loop",
-      "foreach_loop"
+      "foreach_loop",
+      "list_comprehension"
     ],
     "Iterations": [
       "map_iteration",
@@ -35,14 +37,24 @@
     "if_elseif_else_conditional": {
       "code": "if condition:\n    statements\nelif condition:\n    statements\nelse:\n    statements"
     },
+    "switch_statement": {
+      "comment": "This control structure was introduced with Python 3.10 and is more powerful than shown here.",
+      "code": "match condition:\n    case value1:\n        statements\n    case value2:\n        statements"
+    },
     "ternary_conditional": {
       "code": "expression_if_true if condition else expression_if_false"
     },
     "while_loop": {
-      "code": "while condition:\n    statements"
+      "comment": "Two ways to use while loops. The second block illustrates the use of `break` to break out of the while loop.",
+      "code": "while condition:\n    statements\n\nwhile True:\n    statements\n    if(conditional):\n        break"
     },
     "foreach_loop": {
-      "code": "for iterator in iterable:\n    statements"
+      "comment": "Two ways to use the for-each loop. The second block illustrates the use of for-each when the iterable contains tuples of 2 items.",
+      "code": "for iterator in iterable:\n    statements\n\nfor first, second in iterable_of_tuples:\n    foo(first)\n    bar(second)"
+    },
+    "list_comprehension": {
+      "comment": "The second block illustrates the use of `if` to filter items in the list comprehension.",
+      "code": "new_list = [foo(item) for item in iterable]\nnew_list = [foo(item) for item in iterable if conditional(item)]"
     },
     "map_iteration": {
       "code": "map(function, iterable)"
