@@ -11,6 +11,7 @@ class MetaInfo:
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
             meta_data = meta_file.read()
         self.data_structures = json.loads(meta_data)["structures"]
+        self.languages = json.loads(meta_data)["languages"]
 
     def structure_friendly_name(self, structure_key):
         """
