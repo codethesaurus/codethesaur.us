@@ -12,7 +12,6 @@ class Language:
         # Add an empty string to convert SafeString to str
         self.key = str(key + "")
         self.friendly_name = None
-        self.categories = None
         self.concepts = None
 
     def has_key(self):
@@ -44,7 +43,6 @@ class Language:
             file_json = json.loads(data)
 
             self.friendly_name = file_json["meta"]["language_name"]
-            self.categories = file_json["categories"]
             self.concepts = file_json[structure_key]
 
     def concept(self, concept_key):
