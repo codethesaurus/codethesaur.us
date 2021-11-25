@@ -1,9 +1,8 @@
-# Open meta info file
-from django.core.management.base import BaseCommand, CommandError
 import os
+import json
 
+from django.core.management.base import BaseCommand, CommandError
 from web.MetaInfo import MetaInfo
-
 
 class Command(BaseCommand):
     help = "Validates JSON language files with the meta language files"
@@ -40,17 +39,47 @@ class Command(BaseCommand):
                 errors.append("web/thesauruses/_meta/" + meta_file + " is not listed as a structure in meta_info.json")
 
         # Open up thesaurus directory
-        # language_dirs = os.listdir("web/thesauruses/")
-        # for lang_dir in language_dirs:
-        #     if os.path.isfile("web/thesauruses/" + lang_dir):
-        #         continue
+        language_dirs = os.listdir("web/thesauruses/")
+        for lang_dir in language_dirs:
+            if lang_dir == "_meta":
+                continue
+            if os.path.isfile("web/thesauruses/" + lang_dir):
+                continue
 
         #    Open up each structures file
-        #         structure_files = os.listdir("web/thesauruses/" + lang_dir)
-
-
+            structure_files = os.listdir("web/thesauruses/" + lang_dir)
+            for structure_file in structure_files:
+                structure = structure_file[:-5]
+                metastructure = metainfo.structure(structure)
 
         #       Ensure valid lang/version/name
+                meta_structure_file_path = os.path.join(
+                    "web", "thesauruses", lang_dir, structure) + ".json"
+                with open(meta_structure_file_path, 'r') as meta_structure_file:
+                    data = meta_structure_file.read()
+                    # parse file
+                    meta_structure_file_json = json.loads(data)
+
+                    language = meta_structure_file_json["meta"]["language"]
+                    language_version = meta_structure_file_json["meta"]["language_version"]
+                    language_name = meta_structure_file_json["meta"]["language_name"]
+                    if not language:
+                        errors.append(lang_dir + "/" + structure + ".json has an empty language attribute and needs to be updated")
+                    elif language == "language_id":
+                        errors.append(lang_dir + "/" + structure + ".json has the default language attribute and needs to be updated")
+                    elif not language == lang_dir:
+                        errors.append(lang_dir + "/" + structure + ".json has a language attribute that should be '" + lang_dir + "' and needs to be updated")
+
+                    if not language_version:
+                        errors.append(lang_dir + "/" + structure + ".json has an empty language_version attribute and needs to be updated")
+                    elif language_version == "version.number":
+                        errors.append(lang_dir + "/" + structure + ".json has the default language_version attribute and needs to be updated")
+
+                    if not language_name:
+                        errors.append(lang_dir + "/" + structure + ".json has an empty language_name attribute and needs to be updated")
+                    elif language_name == "Human-Friendly Language Name":
+                        errors.append(lang_dir + "/" + structure + ".json has the default language_name attribute and needs to be updated")
+
         #       Ensure categories aren't in file
         #       Ensure name lines are removed
         #       Ensure there's either code or not-implemented
