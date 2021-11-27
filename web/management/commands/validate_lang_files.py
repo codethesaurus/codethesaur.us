@@ -9,6 +9,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         errors = []
+        warnings = []
 
         metainfo = MetaInfo()
 
@@ -56,9 +57,9 @@ class Command(BaseCommand):
                 meta_structure_file_path = os.path.join(
                     "web", "thesauruses", lang_dir, structure) + ".json"
                 with open(meta_structure_file_path, 'r') as meta_structure_file:
-                    data = meta_structure_file.read()
+                    raw_file_data = meta_structure_file.read()
                     # parse file
-                    meta_structure_file_json = json.loads(data)
+                    meta_structure_file_json = json.loads(raw_file_data)
 
                     language = meta_structure_file_json["meta"]["language"]
                     language_version = meta_structure_file_json["meta"]["language_version"]
@@ -81,12 +82,51 @@ class Command(BaseCommand):
                         errors.append(lang_dir + "/" + structure + ".json has the default language_name attribute and needs to be updated")
 
         #       Ensure categories aren't in file
+                # This works, uncomment to turn back on
+        #             if "categories" in meta_structure_file_json:
+        #                 errors.append(lang_dir + "/" + structure + ".json has categories in it, which are no longer needed in language files")
+
         #       Ensure name lines are removed
+                    for item in meta_structure_file_json[structure]:
+                        structure_item_data = meta_structure_file_json[structure][item]
+
+                        # if "name" in structure_item_data:
+                        #     errors.append(
+                        #         lang_dir + "/" + structure + ".json, ID:" + item + " has a name line that can be removed")
+
         #       Ensure there's either code or not-implemented
+                        has_code = "code" in structure_item_data
+                        has_not_implemented = "not-implemented" in structure_item_data
+                        has_comment = "comment" in structure_item_data
+                        if (has_code and has_not_implemented):
+                            errors.append(
+                                lang_dir + "/" + structure + ".json, ID:" + item + " should have 'code' or 'not-implemented', not both")
+                        elif (not has_code and not has_not_implemented):
+                            errors.append(
+                                lang_dir + "/" + structure + ".json, ID:" + item + " is missing a needed 'code' or 'not-implemented' line")
         #       Ensure if not-implemented, there's no code line
+                        elif has_not_implemented and structure_item_data["not-implemented"] is True and has_code:
+                            errors.append(
+                                lang_dir + "/" + structure + ".json, ID:" + item +
+                                "is not implemented, but has a 'code' line that should be removed")
         #       Ensure if code, there's no not-implemented
+                        elif has_code and not structure_item_data["code"] and not has_not_implemented:
+                            errors.append(
+                                lang_dir + "/" + structure + ".json, ID:" + item +
+                                " has an empty 'code' line but doesn't have 'not-implemented' instead")
         #       Code can be string or array (maybe warn if string)
+                        elif has_code and isinstance(structure_item_data["code"], str):
+                            warnings.append(
+                                lang_dir + "/" + structure + ".json, ID:" + item +
+                                " has a 'code' line that's a string and could be an array")
         #       There can be a comment
+                # nothing to check, so no code
         #       There shouldn't be any other fields
+                        for key in structure_item_data:
+                            if not (key == "code" or key == "comment" or key == "not-implemented"):
+                                warnings.append(
+                                    lang_dir + "/" + structure + ".json, ID:" + item +
+                                    " has a line '" + key + "' that's unknown")
+
         print(errors)
         print("I'm done!")
