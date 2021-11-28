@@ -41,7 +41,6 @@ class TestMetaStructures(TestCase):
 		self.assertIsNotNone(language)
 		self.assertIsNotNone(language.key)
 		self.assertIsNone(language.friendly_name)
-		self.assertIsNone(language.categories)
 		self.assertIsNone(language.concepts)
 
 	def test_language_bad_key_and_lang_exists(self):
@@ -71,14 +70,12 @@ class TestMetaStructures(TestCase):
 		language_id = "abcdefg"
 		language_friendly_name = "Alphabet language!"
 
-		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
 		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
 		# This is like the manual work of calling language.load_structure()
 		language.friendly_name = language_friendly_name
-		language.categories = categories
 		language.concepts = concepts
 
 		# 	# Test unknown concept
@@ -96,14 +93,12 @@ class TestMetaStructures(TestCase):
 		language_id = "abcdefg"
 		langauge_friendly_name = "Alphabet language!"
 
-		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
 		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
 		# This is like the manual work of calling language.load_structure()
 		language.friendly_name = langauge_friendly_name
-		language.categories = categories
 		language.concepts = concepts
 
 		# Test unknown concept
@@ -118,14 +113,12 @@ class TestMetaStructures(TestCase):
 		language_id = "abcdefg"
 		langauge_friendly_name = "Alphabet language!"
 
-		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
 		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
 		# This is like the manual work of calling language.load_structure()
 		language.friendly_name = langauge_friendly_name
-		language.categories = categories
 		language.concepts = concepts
 
 		# Test unknown concept
@@ -141,14 +134,12 @@ class TestMetaStructures(TestCase):
 		language_id = "abcdefg"
 		langauge_friendly_name = "Alphabet language!"
 
-		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
 		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
 		# This is like the manual work of calling language.load_structure()
 		language.friendly_name = langauge_friendly_name
-		language.categories = categories
 		language.concepts = concepts
 
 		# Test unknown concept
@@ -164,14 +155,12 @@ class TestMetaStructures(TestCase):
 		language_id = "abcdefg"
 		langauge_friendly_name = "Alphabet language!"
 
-		categories = json.loads("{\"category1\": [\"concept1\",\"concept2\",\"concept3\"]}")
 		concepts = json.loads("{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
 
 		language = Language(language_id)
 
 		# This is like the manual work of calling language.load_structure()
 		language.friendly_name = langauge_friendly_name
-		language.categories = categories
 		language.concepts = concepts
 
 		# Test unknown concept
