@@ -159,5 +159,4 @@ class Command(BaseCommand):
             #     print(str(warning_count) + " warnings found.")
             if error_count:
                 print(str(error_count) + " errors found.")
-                # raise CommandError(str(error_count) + " errors found.")
-                sys.exit(1)
+                raise CommandError(str(error_count) + " errors found.")

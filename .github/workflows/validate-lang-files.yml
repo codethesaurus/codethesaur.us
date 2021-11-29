@@ -48,3 +48,10 @@ If there are errors, you should fix those before the PR will pass.
 
 If there are warnings, those are optional and you should consider whether to change them or not.
 '
+
+      - name: Check for command failures
+        if: "${{ contains(steps.validate_output.outputs.content, 'errors found') }}"
+        with:
+          fail_ci_if_error: true
+        run: |
+          exit 1
