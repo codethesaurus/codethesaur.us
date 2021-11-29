@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "concepts": {
+    "name_of_ordered_mutable_list": {
+      "code": [""]
+    },
+    "create_a_ordered_mutable_list": {
+      "code": [""]
+    },
+    "ordered_mutable_list_start_number": {
+      "code": [""]
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "code": [""]
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "code": [""]
+    },
+    "access_element_in_ordered_mutable_list": {
+      "code": [""]
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "code": [""]
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "code": [""]
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "code": [""]
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": [""]
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": [""]
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "code": [""]
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "code": [""]
+    },
+    "delete_ordered_mutable_list": {
+      "code": [""]
+    },
+    "name_of_unordered_mutable_list": {
+      "code": [""]
+    },
+    "create_a_unordered_mutable_list": {
+      "code": [""]
+    },
+    "unordered_mutable_list_start_number": {
+      "code": [""]
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "code": [""]
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "code": [""]
+    },
+    "access_element_in_unordered_mutable_list": {
+      "code": [""]
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "code": [""]
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "code": [""]
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "code": [""]
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "code": [""]
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "code": [""]
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "code": [""]
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "code": [""]
+    },
+    "delete_unordered_mutable_list": {
+      "code": [""]
+    },
+    "name_of_ordered_immutable_list": {
+      "code": [""]
+    },
+    "create_a_ordered_immutable_list": {
+      "code": [""]
+    },
+    "ordered_immutable_list_start_number": {
+      "code": [""]
+    },
+    "access_element_in_ordered_immutable_list": {
+      "code": [""]
+    },
+    "delete_ordered_immutable_list": {
+      "code": [""]
+    },
+    "name_of_unordered_immutable_list": {
+      "code": [""]
+    },
+    "create_a_unordered_immutable_list": {
+      "code": [""]
+    },
+    "unordered_immutable_list_start_number": {
+      "code": [""]
+    },
+    "access_element_in_unordered_immutable_list": {
+      "code": [""]
+    },
+    "delete_unordered_immutable_list": {
+      "code": [""]
+    },
+    "name_of_mutable_hashed_list": {
+      "code": [""]
+    },
+    "create_a_mutable_hashed_list": {
+      "code": [""]
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "code": [""]
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "code": [""]
+    },
+    "delete_mutable_hashed_list": {
+      "code": [""]
+    },
+    "name_of_immutable_hashed_list": {
+      "code": [""]
+    },
+    "create_a_immutable_hashed_list": {
+      "code": [""]
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "code": [""]
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "code": [""]
+    },
+    "delete_immutable_hashed_list": {
+      "code": [""]
+    },
+    "create_a_mutable_set": {
+      "code": [""]
+    },
+    "get_key_from_mutable_set": {
+      "code": [""]
+    },
+    "get_value_from_mutable_set": {
+      "code": [""]
+    },
+    "get_all_keys_from_mutable_set": {
+      "code": [""]
+    },
+    "get_all_values_from_mutable_set": {
+      "code": [""]
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "code": [""]
+    },
+    "delete_mutable_set": {
+      "code": [""]
+    },
+    "create_a_immutable_set": {
+      "code": [""]
+    },
+    "get_key_from_immutable_set": {
+      "code": [""]
+    },
+    "get_value_from_immutable_set": {
+      "code": [""]
+    },
+    "get_all_keys_from_immutable_set": {
+      "code": [""]
+    },
+    "get_all_values_from_immutable_set": {
+      "code": [""]
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "code": [""]
+    },
+    "delete_immutable_set": {
+      "code": [""]
+    },
+    "find_element_at_position": {
+      "code": [""]
+    },
+    "find_element_by_value": {
+      "code": [""]
+    },
+    "find_minimum_element": {
+      "code": [""]
+    },
+    "find_maximum_element": {
+      "code": [""]
+    },
+    "convert_list_to_string": {
+      "code": [""]
+    },
+    "concatenate_two_lists": {
+      "code": [""]
+    },
+    "split_list_at_index": {
+      "code": [""]
+    },
+    "split_list_at_value": {
+      "code": [""]
+    },
+    "duplicate_a_list": {
+      "code": [""]
+    },
+    "duplicate_subset_of_list": {
+      "code": [""]
+    },
+    "get_list_length": {
+      "code": [""]
+    },
+    "resize_list": {
+      "code": [""]
+    },
+    "do_two_lists_match_exactly": {
+      "code": [""]
+    },
+    "do_two_lists_contain_same_items": {
+      "code": [""]
+    },
+    "does_list_satisfy_some_expression": {
+      "code": [""]
+    },
+    "does_list_not_satisfy_an_expression": {
+      "code": [""]
+    },
+    "sort_list": {
+      "code": [""]
+    },
+    "shuffle_list": {
+      "code": [""]
+    },
+    "reverse_list": {
+      "code": [""]
+    },
+    "map": {
+      "code": [""]
+    },
+    "filter": {
+      "code": [""]
+    },
+    "reduce_left": {
+      "code": [""]
+    },
+    "reduce_right": {
+      "code": [""]
+    }
+  }
+}

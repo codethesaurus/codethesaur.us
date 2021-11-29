@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "concepts": {
+    "if_conditional": {
+      "code": [""]
+    },
+    "if_else_conditional": {
+      "code": [""]
+    },
+    "if_elseif_conditional": {
+      "code": [""]
+    },
+    "if_elseif_else_conditional": {
+      "code": [""]
+    },
+    "switch_statement": {
+      "code": [""]
+    },
+    "ternary_conditional": {
+      "code": [""]
+    },
+    "while_loop": {
+      "code": [""]
+    },
+    "do_while_loop": {
+      "code": [""]
+    },
+    "until_loop": {
+      "code": [""]
+    },
+    "do_until_loop": {
+      "code": [""]
+    },
+    "for_loop": {
+      "code": [""]
+    },
+    "foreach_loop": {
+      "code": [""]
+    },
+    "list_comprehension": {
+      "code": [""]
+    },
+    "each_iteration": {
+      "code": [""]
+    },
+    "map_iteration": {
+      "code": [""]
+    },
+    "filter_iteration": {
+      "code": [""]
+    },
+    "fold_iteration": {
+      "code": [""]
+    }
+  }
+}

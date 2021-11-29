@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "concepts": {
+    "statement_to_import_exception_handling": {
+      "code": ""
+    },
+    "are_exception_types_functions": {
+      "code": ""
+    },
+    "are_exception_types_objects": {
+      "code": ""
+    },
+    "are_exception_types_gotos": {
+      "code": ""
+    },
+    "base_exception_type": {
+      "code": ""
+    },
+    "define_new_exception_type": {
+      "code": ""
+    },
+    "try_or_operator": {
+      "code": ""
+    },
+    "statement_to_start_trying_code": {
+      "code": ""
+    },
+    "statement_to_start_catching_exceptions": {
+      "code": ""
+    },
+    "statement_to_catch_generic_exception": {
+      "code": ""
+    },
+    "statement_to_catch_specific_exception": {
+      "code": ""
+    },
+    "statement_to_catch_multiple_exceptions": {
+      "code": ""
+    },
+    "statement_to_break_out_if_caught_exception": {
+      "code": ""
+    },
+    "statement_to_stop_program_if_caught_exception": {
+      "code": ""
+    },
+    "statement_to_start_code_if_no_exceptions_caught": {
+      "code": ""
+    },
+    "statement_to_start_cleaning_up_after_exception": {
+      "code": ""
+    },
+    "order_to_call_all_statements": {
+      "code": ""
+    },
+    "statement_to_end_trying_code": {
+      "code": ""
+    },
+    "property_with_exception_code": {
+      "code": ""
+    },
+    "property_with_exception_message": {
+      "code": ""
+    },
+    "property_with_stack_trace": {
+      "code": ""
+    },
+    "property_containing_other_info": {
+      "code": ""
+    },
+    "throw_generic_exception": {
+      "code": ""
+    },
+    "throw_exception_as_text": {
+      "code": ""
+    },
+    "throw_specific_exception_type": {
+      "code": ""
+    },
+    "base_data_type_exception_type": {
+      "code": ""
+    },
+    "invalid_data_type_exception_type": {
+      "code": ""
+    },
+    "variable_not_found_exception_type": {
+      "code": ""
+    },
+    "object_not_found_exception_type": {
+      "code": ""
+    },
+    "index_out_of_bounds_exception_type": {
+      "code": ""
+    },
+    "key_name_not_found_exception_type": {
+      "code": ""
+    },
+    "invalid_encoding_exception_type": {
+      "code": ""
+    },
+    "base_mathematical_exception_type": {
+      "code": ""
+    },
+    "overflow_exception_type": {
+      "code": ""
+    },
+    "floating_point_exception_type": {
+      "code": ""
+    },
+    "divide_by_zero_exception_type": {
+      "code": ""
+    },
+    "cannot_cast_types_exception_type": {
+      "code": ""
+    },
+    "base_memory_exception_type": {
+      "code": ""
+    },
+    "cannot_allocate_memory_exception_type": {
+      "code": ""
+    },
+    "out_of_memory_exception_type": {
+      "code": ""
+    },
+    "stack_overflow_exception_type": {
+      "code": ""
+    },
+    "cannot_access_pointer_exception_type": {
+      "code": ""
+    },
+    "base_file_exception_type": {
+      "code": ""
+    },
+    "end_of_file_exception_type": {
+      "code": ""
+    },
+    "file_does_not_exist_exception_type": {
+      "code": ""
+    },
+    "file_already_exists_exception_type": {
+      "code": ""
+    },
+    "item_is_actually_directory_exception_type": {
+      "code": ""
+    },
+    "item_is_not_a_directory_exception_type": {
+      "code": ""
+    },
+    "cannot_access_file_exception_type": {
+      "code": ""
+    },
+    "drive_disconnected_exception_type": {
+      "code": ""
+    },
+    "file_no_longer_available_exception_type": {
+      "code": ""
+    },
+    "file_timeout_exception": {
+      "code": ""
+    },
+    "base_network_exception_type": {
+      "code": ""
+    },
+    "connection_refused_exception_type": {
+      "code": ""
+    },
+    "connection_broken_exception_type": {
+      "code": ""
+    },
+    "invalid_hostname_exception": {
+      "code": ""
+    },
+    "cannot_establish_connection_exception_type": {
+      "code": ""
+    },
+    "connection_timed_out_exception_type": {
+      "code": ""
+    },
+    "bad_certificate_exception_type": {
+      "code": ""
+    },
+    "expired_certificate_exception_type": {
+      "code": ""
+    },
+    "base_test_assertion_exception_type": {
+      "code": ""
+    },
+    "child_process_could_not_be_created_exception_type": {
+      "code": ""
+    },
+    "child_process_unexpected_ending_exception_type": {
+      "code": ""
+    },
+    "process_not_found_exception_type": {
+      "code": ""
+    },
+    "import_not_found_exception_type": {
+      "code": ""
+    },
+    "keyboard_interrupt_exception_type": {
+      "code": ""
+    },
+    "syntax_exception_type": {
+      "code": ""
+    },
+    "uncaught_signal_exception_type": {
+      "code": ""
+    },
+    "base_warning_type": {
+      "code": ""
+    },
+    "deprecation_warning_type": {
+      "code": ""
+    }
+  }
+}

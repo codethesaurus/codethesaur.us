@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "concepts": {
+    "void_function_no_parameters": {
+      "code": [""]
+    },
+    "void_function_with_parameters": {
+      "code": [""]
+    },
+    "void_function_with_keyword_parameters": {
+      "code": [""]
+    },
+    "void_function_variable_parameters": {
+      "code": [""]
+    },
+    "return_value_function_no_parameters": {
+      "code": [""]
+    },
+    "return_value_function_with_parameters": {
+      "code": [""]
+    },
+    "return_value_function_with_keyword_parameters": {
+      "code": [""]
+    },
+    "return_value_function_variable_parameters": {
+      "code": [""]
+    },
+    "anonymous_function_no_parameters": {
+      "code": [""]
+    },
+    "anonymous_function_with_parameters": {
+      "code": [""]
+    },
+    "anonymous_function_with_keyword_parameters": {
+      "code": [""]
+    },
+    "anonymous_function_variable_parameters": {
+      "code": [""]
+    },
+    "call_subroutine": {
+      "code": [""]
+    },
+    "return_from_subroutine": {
+      "code": [""]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
+  },
+  "concepts": {
+    "boolean": {
+      "code": [""]
+    },
+    "signed_integer_8_bit": {
+      "code": [""]
+    },
+    "unsigned_integer_8_bit": {
+      "code": [""]
+    },
+    "signed_integer_16_bit": {
+      "code": [""]
+    },
+    "unsigned_integer_16_bit": {
+      "code": [""]
+    },
+    "signed_integer_32_bit": {
+      "code": [""]
+    },
+    "unsigned_integer_32_bit": {
+      "code": [""]
+    },
+    "signed_integer_64_bit": {
+      "code": [""]
+    },
+    "unsigned_integer_64_bit": {
+      "code": [""]
+    },
+    "signed_integer_as_object": {
+      "code": [""]
+    },
+    "unsigned_integer_as_object": {
+      "code": [""]
+    },
+    "signed_float_16_bit": {
+      "code": [""]
+    },
+    "unsigned_float_16_bit": {
+      "code": [""]
+    },
+    "signed_float_32_bit": {
+      "code": [""]
+    },
+    "unsigned_float_32_bit": {
+      "code": [""]
+    },
+    "signed_float_64_bit": {
+      "code": [""]
+    },
+    "unsigned_float_64_bit": {
+      "code": [""]
+    },
+    "signed_float_as_object": {
+      "code": [""]
+    },
+    "unsigned_float_as_object": {
+      "code": [""]
+    },
+    "character": {
+      "code": [""]
+    },
+    "string_as_object": {
+      "code": [""]
+    },
+    "string_as_array": {
+      "code": [""]
+    },
+    "complex_as_object": {
+      "code": [""]
+    },
+    "real_number_part": {
+      "code": [""]
+    },
+    "imaginary_number_part": {
+      "code": [""]
+    }
+  }
+}
