@@ -12,36 +12,6 @@ from web.Language import Language
 from web.MetaInfo import MetaInfo
 
 
-def format_code_for_display(concept_key, lang):
-    """
-    Returns the formatted HTML formatted syntax-highlighted text for a concept key (from a meta language file) and a language
-    :param concept_key: name of the key to format
-    :param lang: language to format it (in meta language/syntax highlighter format)
-    :return: string with code with applied HTML formatting
-    """
-    if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
-        return "Unknown"
-    if lang.concept_implemented(concept_key):
-        return highlight(
-            lang.concept_code(concept_key),
-            get_lexer_by_name(lang.key, startinline=True),
-            HtmlFormatter()
-        )
-    return None
-
-
-def format_comment_for_display(concept_key, lang):
-    """
-    Returns the formatted HTML formatted comment text for a concept key (from a meta language file) and a language
-    :param concept_key: the concept key located in the meta language JSON file
-    :param lang: the ID of the language to fetch concept key from
-    :return: formatted HTML for the comment
-    """
-    if not lang.concept_implemented(concept_key) and lang.concept_comment(concept_key) == "":
-        return "Not Implemented In This Language"
-    return lang.concept_comment(concept_key)
-
-
 def index(request):
     """
     Renders the home page (/)
@@ -121,7 +91,7 @@ def compare(request):
     except Exception:
         error_message = ""
         if lang1.lang_exists():
-             error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
+            error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
                 first language ({lang1.key}) yet.<br /><br /> \
                 Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
                 Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}'>https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}</a>"
@@ -159,30 +129,15 @@ def compare(request):
     # Ideally we should set default value of lang dict here
     # and not in template now that issue #27 is resolved
 
-    all_category_keys = list(meta_structure.categories.keys())
-    all_concept_keys = list(meta_structure.concepts.keys())
 
-    for category_key in all_category_keys:
+    for (category_key, category) in meta_structure.categories.items():
+        concepts = [concept_comparision(id, name, lang1, lang2) for (id, name) in category.items()]
+
         both_categories.append({
             "id": category_key,
-            "concepts": meta_structure.categories[category_key]
+            "concepts": concepts
         })
 
-    # Start Building Response Structure
-    for concept_key in all_concept_keys:
-        both_concepts.append({
-            "id": concept_key,
-            "name": meta_structure.concepts[concept_key]["name"],
-            "code1": format_code_for_display(concept_key, lang1),
-            "code2": format_code_for_display(concept_key, lang2),
-            "comment1": format_comment_for_display(concept_key, lang1),
-            "comment2": format_comment_for_display(concept_key, lang2)
-        })
-
-    # establish order listing across all languages
-    # common_concepts.sort(key=lambda x: x["key"])
-
-    # DB equivalent of full outer join
     response = {
         "title": "Comparing " + lang1.friendly_name + " and " + lang2.friendly_name,
         "concept": meta_structure.key,
@@ -192,7 +147,6 @@ def compare(request):
         "lang1_friendlyname": lang1.friendly_name,
         "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
-        "concepts": both_concepts,
         "description": "Code Thesaurus: Comparing " + lang1.friendly_name + " and " + lang2.friendly_name
     }
 
@@ -255,23 +209,12 @@ def reference(request):
         return HttpResponseNotFound(response)
 
     categories = []
-    concepts = []
-    
-    all_category_keys = list(meta_structure.categories.keys())
-    all_concept_keys = list(meta_structure.concepts.keys())
 
-    for category_key in all_category_keys:
+    for (category_key, category) in meta_structure.categories.items():
+        concepts = [concept_reference(id, name, lang) for (id, name) in category.items()]
         categories.append({
             "id": category_key,
-            "concepts": meta_structure.categories[category_key]  # meta_lang_categories[category_key]
-        })
-
-    for concept_key in all_concept_keys:
-        concepts.append({
-            "id": concept_key,
-            "name": meta_structure.concepts[concept_key]["name"],
-            "code": format_code_for_display(concept_key, lang),
-            "comment": format_comment_for_display(concept_key, lang)
+            "concepts": concepts
         })
 
     response = {
@@ -281,7 +224,6 @@ def reference(request):
         "lang": lang.key,
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
-        "concepts": concepts,
         "description": "Code Thesaurus: Reference for " + lang.key
     }
 
@@ -332,3 +274,69 @@ def error_handler_500_server_error(request):
     """
     response = render(request, 'error500.html')
     return HttpResponseServerError(response)
+
+
+# Helper functions
+def format_code_for_display(concept_key, lang):
+    """
+    Returns the formatted HTML formatted syntax-highlighted text for a concept key (from a meta language file) and a language
+    :param concept_key: name of the key to format
+    :param lang: language to format it (in meta language/syntax highlighter format)
+    :return: string with code with applied HTML formatting
+    """
+    if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
+        return "Unknown"
+    if lang.concept_implemented(concept_key):
+        return highlight(
+            lang.concept_code(concept_key),
+            get_lexer_by_name(lang.key, startinline=True),
+            HtmlFormatter()
+        )
+    return None
+
+
+def format_comment_for_display(concept_key, lang):
+    """
+    Returns the formatted HTML formatted comment text for a concept key (from a meta language file) and a language
+    :param concept_key: the concept key located in the meta language JSON file
+    :param lang: the ID of the language to fetch concept key from
+    :return: formatted HTML for the comment
+    """
+    if not lang.concept_implemented(concept_key) and lang.concept_comment(concept_key) == "":
+        return "Not Implemented In This Language"
+    return lang.concept_comment(concept_key)
+
+
+def concept_comparision(id, name, lang1, lang2):
+    """
+    Generates the comparision object of a single concept
+    :param id: id of the concept
+    :param name: name of the concept
+    :param lang1: first language to compare
+    :param lang2: other language to compare
+    :return: string with code with applied HTML formatting
+    """
+    return {
+        "id": id,
+        "name": name,
+        "code1": format_code_for_display(id, lang1),
+        "code2": format_code_for_display(id, lang2),
+        "comment1": format_comment_for_display(id, lang1),
+        "comment2": format_comment_for_display(id, lang2)
+    }
+
+
+def concept_reference(id, name, lang):
+    """
+    Generates the reference object of a single concept
+    :param id: id of the concept
+    :param name: name of the concept
+    :param lang: language to get the reference for
+    :return: string with code with applied HTML formatting
+    """
+    return {
+        "id": id,
+        "name": name,
+        "code": format_code_for_display(id, lang),
+        "comment": format_comment_for_display(id, lang)
+    }

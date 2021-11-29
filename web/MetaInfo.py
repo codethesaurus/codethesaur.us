@@ -1,4 +1,5 @@
 import json
+import os
 from web.MetaStructure import MetaStructure
 
 
@@ -8,7 +9,9 @@ class MetaInfo:
         Initializes MetaInfo object with meta language information
         :rtype: None
         """
-        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+        meta_info_file_path = os.path.join(
+            "web", "thesauruses", "meta_info.json")
+        with open(meta_info_file_path, 'r') as meta_file:
             meta_data = meta_file.read()
         self.data_structures = json.loads(meta_data)["structures"]
 

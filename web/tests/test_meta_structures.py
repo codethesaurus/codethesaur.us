@@ -33,7 +33,6 @@ class TestMetaStructures(TestCase):
 		metastructure = MetaStructure(self.sample_structure_id, self.sample_friendly_name)
 
 		self.assertIsNotNone(metastructure.categories)
-		self.assertIsNotNone(metastructure.concepts)
 
 	def test_language_init(self):
 		language = Language(self.sample_language_id)
