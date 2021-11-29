@@ -50,6 +50,6 @@ If there are warnings, those are optional and you should consider whether to cha
 '
 
       - name: Check for command failures
-          if: "${{ contains(steps.validate_output.outputs.content, 'errors found') }}"
-          run: |
-            exit 1
+        if: "${{ contains(steps.validate_output.outputs.content, 'errors found') }}"
+        run: |
+          exit 1
