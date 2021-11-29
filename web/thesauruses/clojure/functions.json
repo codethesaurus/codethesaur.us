@@ -38,7 +38,7 @@
       "comment": "There can be one \"variadic\" parameter, and it must appear in the last position."
     },
     "return_value_function_no_parameters": {
-      "code": "(defn return-val-no-params []\n  (rand-int 100))\n\n;; call it\n(return-val-no-params)\n49",
+      "code": "(defn return-val-no-params []\n  (rand-int 100))",
       "comment": "The value returned by a function is the value that its last form yields. In this case, that is the value from `rand-int`."
     },
     "return_value_function_with_parameters": {
@@ -60,7 +60,7 @@
       "comment": "Just as with named functions, the variadic parameter must be in the last position."
     },
     "call_subroutine": {
-      "code": "(defn plus-one [n]\n  (inc x))\n\n;; call it\n(plus-one 41)\n=> 42",
+      "code": "(defn plus-one [n]\n  (inc x))",
       "comment": "Named functions are called by wrapping in parens. Anonymous functions can also be called this way."
     },
     "return_from_subroutine": {
