@@ -4,52 +4,7 @@
     "language_version": "2012",
     "language_name": "Ada"
   },
-  "categories": {
-    "Arithmetic Operators": [
-      "addition",
-      "subtraction",
-      "multiplication",
-      "division",
-      "integer_division",
-      "modulus",
-      "unary_plus",
-      "unary_minus",
-      "exponential",
-      "absolute_value"
-    ],
-    "Equality/Comparison/Logical Operators": [
-      "equal_to",
-      "not_equal_to",
-      "less_than",
-      "less_than_or_equal_to",
-      "greater_than",
-      "greater_than_or_equal_to",
-      "null_coalescing",
-      "is",
-      "is_not",
-      "logical_and",
-      "logical_or",
-      "logical_not"
-    ],
-    "Bitwise Operators": [
-      "bitwise_and",
-      "bitwise_and_assignment",
-      "bitwise_or",
-      "bitwise_or_assignment",
-      "bitwise_not",
-      "bitwise_not_assignment",
-      "bitwise_xor",
-      "bitwise_xor_assignment",
-      "bitwise_xnor",
-      "bitwise_xnor_assignment",
-      "left_shift",
-      "left_shift_assignment",
-      "right_shift",
-      "right_shift_assignment"
-    ],
-    "Conditional Operators": []
-  },
-  "operators": {
+  "concepts": {
     "addition": {
       "code": "ans := x + y"
     },
@@ -104,7 +59,7 @@
     },
     "exponential": {
       "code": "ans := x ** y",
-      "comment": "value of y cannot be negative" 
+      "comment": "value of y cannot be negative"
     },
     "factorial": {
       "not-implemented": "true"
@@ -143,14 +98,14 @@
       "code": "x not in y"
     },
     "left_shift": {
-		"code":"Shift_Left (x, n)",
+      "code": "Shift_Left (x, n)",
       "comment": "returns Unsigned_8 value by shifting x to n left positions. Requires Byte_IO package and interfaces."
     },
     "left_shift_assignment": {
       "not-implemented": "true"
     },
     "right_shift": {
-      "code":"Shift_Right (X, N) \n Shift_Right_Arithmetic (X, N)",
+      "code": "Shift_Right (X, N) \n Shift_Right_Arithmetic (X, N)",
       "comment": "Method 1, returns Unsigned_8 value by shifting x to n right positions. Method 2, performs signed shifting of x to n positions and returns Unsigned_8 value. Requires Byte_IO package and interfaces for both methods."
     },
     "right_shift_assignment": {

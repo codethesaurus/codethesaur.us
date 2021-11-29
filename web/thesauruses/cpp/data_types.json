@@ -4,27 +4,7 @@
     "language_version": "C++17",
     "language_name": "C++"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit"
-    ],
-    "Characters and Strings": [
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
       "name": "Boolean",
       "code": "bool"

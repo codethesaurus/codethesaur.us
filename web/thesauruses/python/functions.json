@@ -4,24 +4,7 @@
     "language_version": "3.10",
     "language_name": "Python"
   },
-  "categories": {
-    "Void Functions": [
-      "void_function_no_parameters",
-      "void_function_with_parameters",
-      "void_function_variable_parameters"
-    ],
-    "Return Value Functions": [
-      "return_value_function_no_parameters",
-      "return_value_function_with_parameters",
-      "return_value_function_variable_parameters"
-    ],
-    "Lambda/Anonymous Functions": [
-      "anonymous_function_no_parameters",
-      "anonymous_function_with_parameters",
-      "anonymous_function_variable_parameters"
-    ]
-  },
-  "functions": {
+  "concepts": {
     "void_function_no_parameters": {
       "code": "def function_name():\n    statements"
     },

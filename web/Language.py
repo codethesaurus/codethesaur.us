@@ -43,7 +43,7 @@ class Language:
             file_json = json.loads(data)
 
             self.friendly_name = file_json["meta"]["language_name"]
-            self.concepts = file_json[structure_key]
+            self.concepts = file_json["concepts"]
 
     def concept(self, concept_key):
         """

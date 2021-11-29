@@ -4,28 +4,7 @@
     "language_version": "2.13.x",
     "language_name": "Scala"
   },
-  "categories": {
-    "Void Functions": [
-      "void_function_no_parameters",
-      "void_function_with_parameters",
-      "void_function_variable_parameters"
-    ],
-    "Return Value Functions": [
-      "return_value_function_no_parameters",
-      "return_value_function_with_parameters",
-      "return_value_function_variable_parameters"
-    ],
-    "Lambda/Anonymous Functions": [
-      "anonymous_function_no_parameters",
-      "anonymous_function_with_parameters",
-      "anonymous_function_variable_parameters"
-    ],
-    "Subroutines": [
-      "call_subroutine",
-      "return_from_subroutine"
-    ]
-  },
-  "functions": {
+  "concepts": {
     "void_function_no_parameters": {
       "code": "// For simple expressions, simply give the expression:\ndef methodName(): Unit = expression\n\n// For more complex expressions, or to make local definitions,\n// use a block instead:\ndef methodName(): Unit = {\n  expressions and definitions\n}",
       "comment": "Blocks (which may contain multiple expressions and definitions and evaluate to the value of the last expression) are a kind of expression."

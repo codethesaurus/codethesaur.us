@@ -4,28 +4,7 @@
     "language_version": "5.5",
     "language_name": "Swift"
   },
-  "categories": {
-    "Void Functions": [
-      "void_function_no_parameters",
-      "void_function_with_parameters",
-      "void_function_variable_parameters"
-    ],
-    "Return Value Functions": [
-      "return_value_function_no_parameters",
-      "return_value_function_with_parameters",
-      "return_value_function_variable_parameters"
-    ],
-    "Lambda/Anonymous Functions": [
-      "anonymous_function_no_parameters",
-      "anonymous_function_with_parameters",
-      "anonymous_function_variable_parameters"
-    ],
-    "Subroutines": [
-      "call_subroutine",
-      "return_from_subroutine"
-    ]
-  },
-  "functions": {
+  "concepts": {
     "void_function_no_parameters": {
       "code": "func functionName() {\n    statements\n}"
     },
@@ -56,7 +35,6 @@
     "anonymous_function_variable_parameters": {
       "code": "{ (parameter: Type...) -> ReturnType in\n    return expression\n}",
       "comment": "Depending on what Swift can infer from the context, return type may be optional."
-
     },
     "call_subroutine": {
       "code": "// No parameters\nfoo()\n\n// With named parameters\nfoo(parameterName: argument)",

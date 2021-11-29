@@ -4,39 +4,7 @@
     "language_version": "1.6",
     "language_name": "Nim"
   },
-  "categories": {
-    "Defining Classes": [
-      "normal_class",
-      "abstract_class",
-      "interface",
-      "read_only_class",
-      "static_class",
-      "inner_class"
-    ],
-    "Adding Private and Public Members": [
-      "private_variables",
-      "protected_variables",
-      "public_variables",
-      "static_variables",
-      "private_functions",
-      "protected_functions",
-      "public_functions",
-      "static_functions"
-    ],
-    "Extending and Implementing Classes": [
-      "extends_class",
-      "extending_interface",
-      "calling_superclass_functions"
-    ],
-    "Creating Objects and Polymorphism": [
-      "instantiating_object",
-      "instantiating_polymorphic_object"
-    ],
-    "Constructors and Deconstructor": [
-      "implement_constructor"
-    ]
-  },
-  "classes": {
+  "concepts": {
     "normal_class": {
       "code": "type Name = object"
     },

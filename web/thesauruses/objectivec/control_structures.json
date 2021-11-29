@@ -4,32 +4,7 @@
     "language_version": "2.0",
     "language_name": "Objective-C"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "switch_statement",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "until_loop",
-      "do_until_loop",
-      "for_loop",
-      "foreach_loop",
-      "list_comprehension"
-    ],
-    "Iterations": [
-      "each_iteration",
-      "map_iteration",
-      "filter_iteration",
-      "fold_iteration"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
       "code": "if (condition) {\n    statements;\n}"
     },
@@ -73,7 +48,7 @@
       "not-implemented": true
     },
     "map_iteration": {
-      "code" : "NSLog(@\"%@\", [array map:^id(id obj) { return [(NSString *)obj operation]; }]);"
+      "code": "NSLog(@\"%@\", [array map:^id(id obj) { return [(NSString *)obj operation]; }]);"
     },
     "filter_iteration": {
       "code": "NSLog(@\"%@\", [array filter:^BOOL(id obj) { return [(NSString *)obj condition:@\"o\"]; }]);"

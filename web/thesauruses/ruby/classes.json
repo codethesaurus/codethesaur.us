@@ -4,26 +4,7 @@
     "language_version": "3.0",
     "language_name": "Ruby"
   },
-  "categories": {
-    "Defining Classes": [
-      "normal_class"
-    ],
-    "Adding Private and Public Members": [
-      "public_variables",
-      "static_variables",
-      "public_functions"
-    ],
-    "Extending and Implementing Classes": [
-      "extends_class"
-    ],
-    "Creating Objects and Polymorphism": [
-      "instantiating_object"
-    ],
-    "Constructors and Deconstructor": [
-      "implement_constructor"
-    ]
-  },
-  "classes": {
+  "concepts": {
     "normal_class": {
       "code": "class Car\n  # class body\nend"
     },

@@ -4,47 +4,14 @@
     "language_version": "2010",
     "language_name": "Haskell"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit",
-      "signed_float_as_object",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_integer_8_bit",
-      "signed_integer_as_object",
-      "unsigned_float_16_bit",
-      "unsigned_float_32_bit",
-      "unsigned_float_64_bit",
-      "unsigned_float_as_object",
-      "unsigned_integer_16_bit",
-      "unsigned_integer_32_bit",
-      "unsigned_integer_64_bit",
-      "unsigned_integer_8_bit",
-      "unsigned_integer_as_object"
-    ],
-    "Characters and Strings": [
-      "character",
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
-    "boolean" : {
+  "concepts": {
+    "boolean": {
       "code": "Bool"
     },
-    "signed_integer_8_bit" : {
+    "signed_integer_8_bit": {
       "code": "import Data.Int\nInt8"
     },
-    "signed_integer_16_bit" : {
+    "signed_integer_16_bit": {
       "code": "import Data.Int\nInt16"
     },
     "signed_integer_32_bit": {
@@ -68,10 +35,10 @@
     "signed_float_as_object": {
       "not-implemented": true
     },
-    "unsigned_integer_8_bit" : {
+    "unsigned_integer_8_bit": {
       "code": "import Data.Word\nWord8"
     },
-    "unsigned_integer_16_bit" : {
+    "unsigned_integer_16_bit": {
       "code": "import Data.Word\nWord16"
     },
     "unsigned_integer_32_bit": {

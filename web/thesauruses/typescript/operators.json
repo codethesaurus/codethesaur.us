@@ -1,155 +1,104 @@
 {
-	"meta": {
-		"language": "typescript",
-		"language_version": "4.2.4",
-		"language_name": "TypeScript"
-	},
-	"categories": {
-		"Arithmetic Operators": [
-			"addition",
-			"addition_assignment",
-			"subtraction",
-			"subtraction_assignment",
-			"multiplication",
-			"multiplication_assignment",
-			"division",
-			"division_assignment",
-			"modulus",
-			"modulus_assignment",
-			"increment",
-			"decrement",
-			"exponential",
-			"factorial",
-			"absolute_value",
-			"percentage"
-		],
-    "Equality/Comparison/Logical Operators": [
-      "equal_to",
-      "not_equal_to",
-      "less_than",
-      "less_than_or_equal_to",
-      "greater_than",
-      "greater_than_or_equal_to",
-      "null_coalescing",
-      "is",
-      "is_not",
-      "logical_and",
-      "logical_or",
-      "logical_not"
-    ],
-    "Bitwise Operators": [
-      "bitwise_and",
-      "bitwise_and_assignment",
-      "bitwise_or",
-      "bitwise_or_assignment",
-      "bitwise_not",
-      "bitwise_not_assignment",
-      "bitwise_xor",
-      "bitwise_xor_assignment",
-      "bitwise_xnor",
-      "bitwise_xnor_assignment",
-      "left_shift",
-      "left_shift_assignment",
-      "right_shift",
-      "right_shift_assignment"
-    ],
-		"Conditional Operators": ["ternary", "null_forgiving"]
-	},
-	"operators": {
-		"addition": {
-			"code": "+"
-		},
-		"addition_assignment": {
-			"code": "+="
-		},
-		"subtraction": {
-			"code": "-"
-		},
-		"subtraction_assignment": {
-			"code": "-="
-		},
-		"multiplication": {
-			"code": "*"
-		},
-		"multiplication_assignment": {
-			"code": "*="
-		},
-		"division": {
-			"code": "/"
-		},
-		"division_assignment": {
-			"code": "/="
-		},
-		"modulus": {
-			"code": "%"
-		},
-		"modulus_assignment": {
-			"code": "%="
-		},
-		"increment": {
-			"code": "++"
-		},
-		"decrement": {
-			"code": "--"
-		},
-		"exponential": {
-			"code": "**"
-		},
-		"factorial": {
-			"not-implemented": "true"
-		},
-		"absolute_value": {
-			"not-implemented": "true"
-		},
-		"percentage": {
-			"not-implemented": "true"
-		},
-		"equal_to": {
-			"code": "==",
-			"comment": "There is also === which means strict equality"
-		},
-		"not_equal_to": {
-			"code": "!==",
-			"comment": "There is also !== which means strict inequality"
-		},
-		"less_than": {
-			"code": "<"
-		},
-		"less_than_or_equal_to": {
-			"code": "<="
-		},
-		"greater_than": {
-			"code": ">"
-		},
-		"greater_than_or_equal_to": {
-			"code": ">="
-		},
-		"null_coalescing": {
-			"code": "??"
-		},
-		"is": {
-			"not-implemented": "true"
-		},
-		"is_not": {
-			"not-implemented": "true"
-		},
-		"left_shift": {
-			"code": "<<"
-		},
-		"left_shift_assignment": {
-			"code": "<<="
-		},
-		"right_shift": {
-			"code": ">>"
-		},
-		"right_shift_assignment": {
-			"code": ">>="
-		},
-		"ternary": {
-			"code": "?:"
-		},
-		"null_forgiving": {
-			"not-implemented": "true"
-		}
-	}
+  "meta": {
+    "language": "typescript",
+    "language_version": "4.2.4",
+    "language_name": "TypeScript"
+  },
+  "concepts": {
+    "addition": {
+      "code": "+"
+    },
+    "addition_assignment": {
+      "code": "+="
+    },
+    "subtraction": {
+      "code": "-"
+    },
+    "subtraction_assignment": {
+      "code": "-="
+    },
+    "multiplication": {
+      "code": "*"
+    },
+    "multiplication_assignment": {
+      "code": "*="
+    },
+    "division": {
+      "code": "/"
+    },
+    "division_assignment": {
+      "code": "/="
+    },
+    "modulus": {
+      "code": "%"
+    },
+    "modulus_assignment": {
+      "code": "%="
+    },
+    "increment": {
+      "code": "++"
+    },
+    "decrement": {
+      "code": "--"
+    },
+    "exponential": {
+      "code": "**"
+    },
+    "factorial": {
+      "not-implemented": "true"
+    },
+    "absolute_value": {
+      "not-implemented": "true"
+    },
+    "percentage": {
+      "not-implemented": "true"
+    },
+    "equal_to": {
+      "code": "==",
+      "comment": "There is also === which means strict equality"
+    },
+    "not_equal_to": {
+      "code": "!==",
+      "comment": "There is also !== which means strict inequality"
+    },
+    "less_than": {
+      "code": "<"
+    },
+    "less_than_or_equal_to": {
+      "code": "<="
+    },
+    "greater_than": {
+      "code": ">"
+    },
+    "greater_than_or_equal_to": {
+      "code": ">="
+    },
+    "null_coalescing": {
+      "code": "??"
+    },
+    "is": {
+      "not-implemented": "true"
+    },
+    "is_not": {
+      "not-implemented": "true"
+    },
+    "left_shift": {
+      "code": "<<"
+    },
+    "left_shift_assignment": {
+      "code": "<<="
+    },
+    "right_shift": {
+      "code": ">>"
+    },
+    "right_shift_assignment": {
+      "code": ">>="
+    },
+    "ternary": {
+      "code": "?:"
+    },
+    "null_forgiving": {
+      "not-implemented": "true"
+    }
+  }
 }

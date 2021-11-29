@@ -1,132 +1,98 @@
 {
-   "meta": {
-     "language": "language_id",
-     "language_version": "version.number",
-     "language_name": "Objective-C"
-   },
-   "categories": {
-     "Numerical": [
-       "boolean",
-       "signed_integer_8_bit",
-       "unsigned_integer_8_bit",
-       "signed_integer_16_bit",
-       "unsigned_integer_16_bit",
-       "signed_integer_32_bit",
-       "unsigned_integer_32_bit",
-       "signed_integer_64_bit",
-       "unsigned_integer_64_bit",
-       "signed_integer_as_object",
-       "unsigned_integer_as_object",
-       "signed_float_16_bit",
-       "unsigned_float_16_bit",
-       "signed_float_32_bit",
-       "unsigned_float_32_bit",
-       "signed_float_64_bit",
-       "unsigned_float_64_bit",
-       "signed_float_as_object",
-       "unsigned_float_as_object"
-     ],
-     "Characters and Strings": [
-       "character",
-       "string_as_object",
-       "string_as_array"
-     ],
-     "Complex Numbers": [
-       "complex_as_object",
-       "real_number_part",
-       "imaginary_number_part"
-     ]
-   },
-   "data_types": {
-     "boolean": {
-       "code": "BOOL",
-       "comment": "As opposed to true and false, Objective-C stores boolean values as YES and NO, respectively."
-     },
-     "signed_integer_8_bit": {
-       "not-implemented": true
-     },
-     "unsigned_integer_8_bit": {
+  "meta": {
+    "language": "language_id",
+    "language_version": "version.number",
+    "language_name": "Objective-C"
+  },
+  "concepts": {
+    "boolean": {
+      "code": "BOOL",
+      "comment": "As opposed to true and false, Objective-C stores boolean values as YES and NO, respectively."
+    },
+    "signed_integer_8_bit": {
       "not-implemented": true
-     },
-     "signed_integer_16_bit": {
-       "code": "short int",
-       "comment": "Signed short integers range from -32768 to 32767."
-     },
-     "unsigned_integer_16_bit": {
-       "code": "unsigned short int",
-       "comment": "Unsigned short integers range from 0 to 65535."
-     },
-     "signed_integer_32_bit": {
-       "code": "int",
-       "comment": "Integers range from -2147483648 to 2147483647."
-     },
-     "unsigned_integer_32_bit": {
-       "code": "unsigned int",
-       "comment": "Unsigned integers range from 0 to 4294967295."
-     },
-     "signed_integer_64_bit": {
-       "code": "long int",
-       "comment": "Long integers range from -9223372036854775808 to 9223372036854775807."
-     },
-     "unsigned_integer_64_bit": {
-       "code": "unsigned long int",
-       "comment": "Unsigned long integers range from 0 to 18446744073709551615."
-     },
-     "signed_integer_as_object": {
+    },
+    "unsigned_integer_8_bit": {
+      "not-implemented": true
+    },
+    "signed_integer_16_bit": {
+      "code": "short int",
+      "comment": "Signed short integers range from -32768 to 32767."
+    },
+    "unsigned_integer_16_bit": {
+      "code": "unsigned short int",
+      "comment": "Unsigned short integers range from 0 to 65535."
+    },
+    "signed_integer_32_bit": {
+      "code": "int",
+      "comment": "Integers range from -2147483648 to 2147483647."
+    },
+    "unsigned_integer_32_bit": {
+      "code": "unsigned int",
+      "comment": "Unsigned integers range from 0 to 4294967295."
+    },
+    "signed_integer_64_bit": {
+      "code": "long int",
+      "comment": "Long integers range from -9223372036854775808 to 9223372036854775807."
+    },
+    "unsigned_integer_64_bit": {
+      "code": "unsigned long int",
+      "comment": "Unsigned long integers range from 0 to 18446744073709551615."
+    },
+    "signed_integer_as_object": {
       "code": "NSNumber",
       "comment": "NSNumber can store any integer, float, or double. However, it is not commonly used to store floats or doubles because it has a subclass called NSDecimalNumber, which is more precise."
-     },
-     "unsigned_integer_as_object": {
+    },
+    "unsigned_integer_as_object": {
       "not-implemented": true
-     },
-     "signed_float_16_bit": {
+    },
+    "signed_float_16_bit": {
       "not-implemented": true
-     },
-     "unsigned_float_16_bit": {
+    },
+    "unsigned_float_16_bit": {
       "not-implemented": true
-     },
-     "signed_float_32_bit": {
-       "code": "float",
-       "comment": "Floats in Objective-C are precise up to 7 digits."
-     },
-     "unsigned_float_32_bit": {
+    },
+    "signed_float_32_bit": {
+      "code": "float",
+      "comment": "Floats in Objective-C are precise up to 7 digits."
+    },
+    "unsigned_float_32_bit": {
       "not-implemented": true
-     },
-     "signed_float_64_bit": {
+    },
+    "signed_float_64_bit": {
       "code": "double",
       "comment": "Doubles in Objective-C are precise up to 15 digits."
-     },
-     "unsigned_float_64_bit": {
+    },
+    "unsigned_float_64_bit": {
       "not-implemented": true
-     },
-     "signed_float_as_object": {
+    },
+    "signed_float_as_object": {
       "code": "NSDecimalNumber",
       "comment": "NSDecimalNumber is often used in situations when precision is key, such as storing a user's bank balance."
-     },
-     "unsigned_float_as_object": {
+    },
+    "unsigned_float_as_object": {
       "not-implemented": true
-     },
-     "character": {
-       "code": "char",
-       "comment": "Using %c to output the character value and %i to output the ASCII value."
-     },
-     "string_as_object": {
-       "code": "NSString",
-       "comment": "NSString is immutable, however, Objective-C has a mutable string object called NSMutableString"
-     },
-     "string_as_array": {
+    },
+    "character": {
+      "code": "char",
+      "comment": "Using %c to output the character value and %i to output the ASCII value."
+    },
+    "string_as_object": {
+      "code": "NSString",
+      "comment": "NSString is immutable, however, Objective-C has a mutable string object called NSMutableString"
+    },
+    "string_as_array": {
       "code": "NSString",
       "comment": "NSString is built on the C version of strings, which are arrays of characters. When using an NSString, you can use index notation to access specific characters."
-     },
-     "complex_as_object": {
+    },
+    "complex_as_object": {
       "not-implemented": true
-     },
-     "real_number_part": {
+    },
+    "real_number_part": {
       "not-implemented": true
-     },
-     "imaginary_number_part": {
+    },
+    "imaginary_number_part": {
       "not-implemented": true
-     }
-   }
- }
- 
+    }
+  }
+}

@@ -4,21 +4,7 @@
     "language_version": "1.16",
     "language_name": "Go"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "switch_statement"
-    ],
-    "Loops": [
-      "for_loop",
-      "foreach_loop"
-    ],
-    "Iterations": []
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
       "code": "if condition {\n    // code to be executed if condition is true\n}"
     },

@@ -4,23 +4,7 @@
     "language_version": "c++17",
     "language_name": "C++"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "switch_statement",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "for_loops",
-      "foreach_loops"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
       "code": "if (condition) {\n    statements;\n}"
     },

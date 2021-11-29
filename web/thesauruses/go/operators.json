@@ -4,65 +4,7 @@
     "language_version": "1.17.1",
     "language_name": "Golang"
   },
-  "categories": {
-    "Arithmetic Operators": [
-      "addition",
-      "addition_assignment",
-      "subtraction",
-      "subtraction_assignment",
-      "multiplication",
-      "multiplication_assignment",
-      "division",
-      "division_assignment",
-      "integer_division",
-      "integer_division_assignment",
-      "modulus",
-      "modulus_assignment",
-      "unary_plus",
-      "unary_minus",
-      "increment",
-      "decrement",
-      "exponential",
-      "factorial",
-      "absolute_value",
-      "percentage"
-    ],
-    "Equality/Comparison/Logical Operators": [
-      "equal_to",
-      "not_equal_to",
-      "less_than",
-      "less_than_or_equal_to",
-      "greater_than",
-      "greater_than_or_equal_to",
-      "null_coalescing",
-      "is",
-      "is_not",
-      "logical_and",
-      "logical_or",
-      "logical_not"
-    ],
-    "Bitwise Operators": [
-      "bitwise_and",
-      "bitwise_and_assignment",
-      "bitwise_or",
-      "bitwise_or_assignment",
-      "bitwise_not",
-      "bitwise_not_assignment",
-      "bitwise_xor",
-      "bitwise_xor_assignment",
-      "bitwise_xnor",
-      "bitwise_xnor_assignment",
-      "left_shift",
-      "left_shift_assignment",
-      "right_shift",
-      "right_shift_assignment"
-    ],
-    "Conditional Operators": [
-      "ternary",
-      "null_forgiving"
-    ]
-  },
-  "operators": {
+  "concepts": {
     "addition": {
       "code": "+"
     },
@@ -171,13 +113,13 @@
     "bitwise_and_assignment": {
       "not-implemented": "true"
     },
-    "bitwise_or":{
+    "bitwise_or": {
       "code": "|"
     },
-    "bitwise_or_assignment":{
+    "bitwise_or_assignment": {
       "code": "|="
     },
-    "bitwise_not":{
+    "bitwise_not": {
       "code": "^number"
     },
     "not_assignment": {
@@ -194,7 +136,7 @@
     },
     "bitwise_xnor_assignment": {
       "not-implemented": "true"
-    },    
+    },
     "left_shift": {
       "code": "<<"
     },

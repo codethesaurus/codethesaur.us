@@ -4,31 +4,7 @@
     "language_version": "ES2020",
     "language_name": "JavaScript"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "switch_statement",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "until_loop",
-      "do_until_loop",
-      "for_loop",
-      "foreach_loop"
-    ],
-    "Iterations": [
-      "each_iteration",
-      "map_iteration",
-      "filter_iteration",
-      "fold_iteration"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
       "code": "if (condition) {\n    statements;\n}"
     },

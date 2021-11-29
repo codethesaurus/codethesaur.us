@@ -4,31 +4,7 @@
     "language_version": "2.13.x",
     "language_name": "Scala"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "switch_statement",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "until_loop",
-      "do_until_loop",
-      "for_loop",
-      "foreach_loop"
-    ],
-    "Iterations": [
-      "each_iteration",
-      "map_iteration",
-      "filter_iteration",
-      "fold_iteration"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
       "code": "// For simple expressions, simply give an expression:\nif (condition) expression\n\n// For more complex expressions, or to make local definitions,\n// use a block instead:\nif (condition) {\n  expressions and definitions\n}",
       "comment": "Blocks (which may contain multiple expressions and definitions and evaluate to the value of the last expression) are a kind of expression.\n\nConditionals, like everything else in Scala, are expressions.\n\nWhen there's no `else` branch, the `else` branch evaluates to `()` (aka unit)."

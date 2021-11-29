@@ -4,102 +4,7 @@
     "language_version": "ES2020",
     "language_name": "JavaScript"
   },
-  "categories": {
-    "Imports": [
-      "statement_to_import_exception_handling"
-    ],
-    "Defining Errors/Exceptions": [
-      "are_exception_types_functions",
-      "are_exception_types_objects",
-      "are_exception_types_gotos",
-      "base_exception_type",
-      "define_new_exception_type"
-    ],
-    "Error Capture Blocks": [
-      "try_or_operator",
-      "statement_to_start_trying_code",
-      "statement_to_start_catching_exceptions",
-      "statement_to_catch_generic_exception",
-      "statement_to_catch_specific_exception",
-      "statement_to_catch_multiple_exceptions",
-      "statement_to_break_out_if_caught_exception",
-      "statement_to_stop_program_if_caught_exception",
-      "statement_to_start_code_if_no_exceptions_caught",
-      "statement_to_start_cleaning_up_after_exception",
-      "order_to_call_all_statements",
-      "statement_to_end_trying_code",
-      "property_with_exception_code",
-      "property_with_exception_message",
-      "property_with_stack_trace",
-      "property_containing_other_info"
-    ],
-    "Manually Throwing exceptions": [
-      "throw_generic_exception",
-      "throw_exception_as_text",
-      "throw_specific_exception_type"
-    ],
-    "Data Type Errors/Exceptions": [
-      "base_data_type_exception_type",
-      "invalid_data_type_exception_type",
-      "variable_not_found_exception_type",
-      "object_not_found_exception_type",
-      "index_out_of_bounds_exception_type",
-      "key_name_not_found_exception_type",
-      "invalid_encoding_exception_type"
-    ],
-    "Mathematical Errors/Exceptions": [
-      "base_mathematical_exception_type",
-      "overflow_exception_type",
-      "floating_point_exception_type",
-      "divide_by_zero_exception_type",
-      "cannot_cast_types_exception_type"
-    ],
-    "Memory Errors/Exceptions": [
-      "base_memory_exception_type",
-      "cannot_allocate_memory_exception_type",
-      "out_of_memory_exception_type",
-      "stack_overflow_exception_type",
-      "cannot_access_pointer_exception_type"
-    ],
-    "File Input/Output Errors/Exceptions": [
-      "base_file_exception_type",
-      "end_of_file_exception_type",
-      "file_does_not_exist_exception_type",
-      "file_already_exists_exception_type",
-      "item_is_actually_directory_exception_type",
-      "item_is_not_a_directory_exception_type",
-      "cannot_access_file_exception_type",
-      "drive_disconnected_exception_type",
-      "file_no_longer_available_exception_type",
-      "file_timeout_exception"
-    ],
-    "Network Input/Output Errors/Exceptions": [
-      "base_network_exception_type",
-      "connection_refused_exception_type",
-      "connection_broken_exception_type",
-      "invalid_hostname_exception",
-      "cannot_establish_connection_exception_type",
-      "connection_timed_out_exception_type",
-      "bad_certificate_exception_type",
-      "expired_certificate_exception_type"
-    ],
-    "Operating System Errors/Exceptions": [
-      "child_process_could_not_be_created_exception_type",
-      "child_process_unexpected_ending_exception_type",
-      "process_not_found_exception_type"
-    ],
-    "Other Errors/Exception Types": [
-      "import_not_found_exception_type",
-      "keyboard_interrupt_exception_type",
-      "syntax_exception_type",
-      "uncaught_signal_exception_type"
-    ],
-    "Warnings": [
-      "base_warning_type",
-      "deprecation_warning_type"
-    ]
-  },
-  "exception_handling": {
+  "concepts": {
     "statement_to_import_exception_handling": {
       "not-implemented": "true"
     },
@@ -135,7 +40,7 @@
     },
     "statement_to_catch_multiple_exceptions": {
       "not-implemented": "true",
-      "comment" : "JavaScript supports to catch only one exception"
+      "comment": "JavaScript supports to catch only one exception"
     },
     "statement_to_break_out_if_caught_exception": {
       "not-implemented": "true"
@@ -276,10 +181,10 @@
       "not-implemented": "true"
     },
     "bad_certificate_exception_type": {
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "expired_certificate_exception_type": {
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "base_test_assertion_exception_type": {
       "not-implemented": "true"

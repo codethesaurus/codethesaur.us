@@ -4,28 +4,7 @@
     "language_version": "2010",
     "language_name": "Haskell"
   },
-  "categories": {
-    "Void Functions": [
-      "void_function_no_parameters",
-      "void_function_with_parameters",
-      "void_function_variable_parameters"
-    ],
-    "Return Value Functions": [
-      "return_value_function_no_parameters",
-      "return_value_function_with_parameters",
-      "return_value_function_variable_parameters"
-    ],
-    "Lambda/Anonymous Functions": [
-      "anonymous_function_no_parameters",
-      "anonymous_function_with_parameters",
-      "anonymous_function_variable_parameters"
-    ],
-    "Subroutines": [
-      "call_subroutine",
-      "return_from_subroutine"
-    ]
-  },
-  "functions": {
+  "concepts": {
     "void_function_no_parameters": {
       "not-implemented": true
     },

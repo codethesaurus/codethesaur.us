@@ -4,27 +4,7 @@
     "language_version": "3.10",
     "language_name": "Python"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "switch_statement",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "for_loop",
-      "foreach_loop",
-      "list_comprehension"
-    ],
-    "Iterations": [
-      "map_iteration",
-      "filter_iteration"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
       "code": "if condition:\n    statements"
     },

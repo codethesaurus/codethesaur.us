@@ -4,40 +4,7 @@
     "language_version": "EC2021",
     "language_name": "JavaScript"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_8_bit",
-      "unsigned_integer_8_bit",
-      "signed_integer_16_bit",
-      "unsigned_integer_16_bit",
-      "signed_integer_32_bit",
-      "unsigned_integer_32_bit",
-      "signed_integer_64_bit",
-      "unsigned_integer_64_bit",
-      "signed_integer_as_object",
-      "unsigned_integer_as_object",
-      "signed_float_16_bit",
-      "unsigned_float_16_bit",
-      "signed_float_32_bit",
-      "unsigned_float_32_bit",
-      "signed_float_64_bit",
-      "unsigned_float_64_bit",
-      "signed_float_as_object",
-      "unsigned_float_as_object"
-    ],
-    "Characters and Strings": [
-      "character",
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
       "code": "Boolean",
       "comment": "The type is an object wrapper for the boolean primitive data type"

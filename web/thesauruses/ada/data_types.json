@@ -4,27 +4,7 @@
     "language_version": "2012",
     "language_name": "Ada"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_8_bit",
-      "signed_integer_as_object",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit",
-      "signed_float_as_object"
-    ],
-    "Characters and Strings": [
-      "character",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
       "code": "boolean"
     },

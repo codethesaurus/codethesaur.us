@@ -4,106 +4,43 @@
     "language_version": "4.2.4",
     "language_name": "TypeScript"
   },
-  "categories": {
-    "Creating/Destroying Strings": [
-      "is_primitive_or_not",
-      "import",
-      "default_string_byte_encoding",
-      "create_new_string",
-      "create_multiline_string",
-      "assign_new_string",
-      "destroy_string"
-    ],
-    "String Basics": [
-      "length_of_string",
-      "max_length_of_string",
-      "clear_string",
-      "is_empty",
-      "concatenate_two_strings",
-      "concatenate_many_strings",
-      "is_all_alphabetical",
-      "is_all_numerical",
-      "is_all_alphanumeric",
-      "is_decimal",
-      "is_all_whitespaces",
-      "is_all_uppercase",
-      "is_all_lowercase",
-      "is_in_titlecase"
-    ],
-    "Find and Search": [
-      "does_substring_exist",
-      "find_start_index_of_substring",
-      "find_start_index_of_additional_substring",
-      "find_start_index_of_substring_from_end",
-      "count_occurrences_of_substring",
-      "get_leftmost_characters",
-      "get_rightmost_characters",
-      "get_substring_from_start_and_end_index",
-      "get_substring_from_start_index_and_length"
-    ],
-    "Manipulating Strings": [
-      "convert_to_uppercase",
-      "convert_to_lowercase",
-      "convert_to_title_case",
-      "capitalize_string",
-      "remove_whitespace",
-      "replace_substring",
-      "replace_all_substring",
-      "split_at_index",
-      "split_at_newlines",
-      "split_at_substring",
-      "merge_lists_into_string",
-      "encode_html_entities",
-      "decode_html_entities",
-      "encode_url_percent",
-      "decode_url_percent",
-      "encode_to_base64",
-      "decode_from_base64"
-    ],
-    "String Formatting": [
-      "format_string_function",
-      "parameter_format_in_order",
-      "parameter_format_numerical",
-      "parameter_format_by_name",
-      "format_as_integer",
-      "format_as_decimal",
-      "format_as_fixed_decimal",
-      "format_as_currency",
-      "format_as_percentage",
-      "format_number_with_separators",
-      "format_number_with_positive_negative_sign",
-      "format_number_in_scientific_notation_little_e",
-      "format_number_in_scientific_notation_big_e",
-      "format_number_in_binary",
-      "format_number_in_octal",
-      "format_number_in_hexadecimal"
-    ]
-  },
-  "strings": {
+  "concepts": {
     "is_primitive_or_not": {
-      "code": ["Yes"]
+      "code": [
+        "Yes"
+      ]
     },
     "import": {
       "not-implemented": true
     },
     "default_string_byte_encoding": {
-      "code": ["UTF-16"]
+      "code": [
+        "UTF-16"
+      ]
     },
     "create_new_string": {
-      "code": ["let newString = \"Hello World!\";\nlet newString2 = '';"],
+      "code": [
+        "let newString = \"Hello World!\";\nlet newString2 = '';"
+      ],
       "comment": "Double and single quotes can be used interchangeably for creating strings."
     },
     "create_multiline_string": {
-      "code": ["let multilineString = `Hello\nWorld\n`;"]
+      "code": [
+        "let multilineString = `Hello\nWorld\n`;"
+      ]
     },
     "assign_new_string": {
-      "code": ["let s1 = 'Hello World!';\nlet s2 = s1;"]
+      "code": [
+        "let s1 = 'Hello World!';\nlet s2 = s1;"
+      ]
     },
     "destroy_string": {
       "not-implemented": true
     },
     "length_of_string": {
-      "code": ["'four'.length;"]
+      "code": [
+        "'four'.length;"
+      ]
     },
     "max_length_of_string": {
       "not-implemented": true,
@@ -113,7 +50,9 @@
       "not-implemented": true
     },
     "is_empty": {
-      "code": ["if ('') {\n    'Not Empty';\n} else {\n    'Empty';\n}"]
+      "code": [
+        "if ('') {\n    'Not Empty';\n} else {\n    'Empty';\n}"
+      ]
     },
     "concatenate_two_strings": {
       "code": [
@@ -121,7 +60,9 @@
       ]
     },
     "concatenate_many_strings": {
-      "code": ["['Hello', ' ', 'World'].join('');"]
+      "code": [
+        "['Hello', ' ', 'World'].join('');"
+      ]
     },
     "is_all_alphabetical": {
       "not-implemented": true
@@ -139,7 +80,9 @@
       "not-implemented": true
     },
     "is_all_whitespaces": {
-      "code": ["if (str.trim() === '')\n    'Is all whitespace'"]
+      "code": [
+        "if (str.trim() === '')\n    'Is all whitespace'"
+      ]
     },
     "is_all_uppercase": {
       "not-implemented": true
@@ -156,19 +99,29 @@
       ]
     },
     "find_start_index_of_substring": {
-      "code": ["str.indexOf('subString');"]
+      "code": [
+        "str.indexOf('subString');"
+      ]
     },
     "find_start_index_of_additional_substring": {
-      "code": ["str.indexOf('subString', startIndex);"]
+      "code": [
+        "str.indexOf('subString', startIndex);"
+      ]
     },
     "find_start_index_of_substring_from_end": {
-      "code": ["str.lastIndexOf('subString');"]
+      "code": [
+        "str.lastIndexOf('subString');"
+      ]
     },
     "count_occurrences_of_substring": {
-      "code": ["str.match('regex').length;"]
+      "code": [
+        "str.match('regex').length;"
+      ]
     },
     "get_leftmost_characters": {
-      "code": ["str.substr(0, numberOfCharacters);"]
+      "code": [
+        "str.substr(0, numberOfCharacters);"
+      ]
     },
     "get_rightmost_characters": {
       "code": [
@@ -176,16 +129,24 @@
       ]
     },
     "get_substring_from_start_and_end_index": {
-      "code": ["str.substring(startIndex, endIndex);"]
+      "code": [
+        "str.substring(startIndex, endIndex);"
+      ]
     },
     "get_substring_from_start_index_and_length": {
-      "code": ["str.substr(startIndex, numberOfCharacters);"]
+      "code": [
+        "str.substr(startIndex, numberOfCharacters);"
+      ]
     },
     "convert_to_uppercase": {
-      "code": ["str.toUpperCase();"]
+      "code": [
+        "str.toUpperCase();"
+      ]
     },
     "convert_to_lowercase": {
-      "code": ["str.toLowerCase();"]
+      "code": [
+        "str.toLowerCase();"
+      ]
     },
     "convert_to_title_case": {
       "not-implemented": true
@@ -203,19 +164,27 @@
       "not-implemented": true
     },
     "replace_all_substring": {
-      "code": ["str.replace(substring, newString);"]
+      "code": [
+        "str.replace(substring, newString);"
+      ]
     },
     "split_at_index": {
       "not-implemented": true
     },
     "split_at_newlines": {
-      "code": ["str.split('\\n');"]
+      "code": [
+        "str.split('\\n');"
+      ]
     },
     "split_at_substring": {
-      "code": ["str.split(subString);"]
+      "code": [
+        "str.split(subString);"
+      ]
     },
     "merge_lists_into_string": {
-      "code": ["[ 'a', 'b', 'c' ].join(delimiter);"]
+      "code": [
+        "[ 'a', 'b', 'c' ].join(delimiter);"
+      ]
     },
     "encode_html_entities": {
       "not-implemented": true
@@ -224,16 +193,24 @@
       "not-implemented": true
     },
     "encode_url_percent": {
-      "code": ["encodeURI(str);"]
+      "code": [
+        "encodeURI(str);"
+      ]
     },
     "decode_url_percent": {
-      "code": ["decodeURI(str);"]
+      "code": [
+        "decodeURI(str);"
+      ]
     },
     "encode_to_base64": {
-      "code": ["btoa(str);"]
+      "code": [
+        "btoa(str);"
+      ]
     },
     "decode_from_base64": {
-      "code": ["atob(str);"]
+      "code": [
+        "atob(str);"
+      ]
     },
     "format_string_function": {
       "not-implemented": true
@@ -251,7 +228,9 @@
       "not-implemented": true
     },
     "format_as_decimal": {
-      "code": ["new Intl.NumberFormat(locale, { style: 'decimal' });"]
+      "code": [
+        "new Intl.NumberFormat(locale, { style: 'decimal' });"
+      ]
     },
     "format_as_fixed_decimal": {
       "not-implemented": true
@@ -262,30 +241,44 @@
       ]
     },
     "format_as_percentage": {
-      "code": ["new Intl.NumberFormat(locale, { style: 'percent' });"]
+      "code": [
+        "new Intl.NumberFormat(locale, { style: 'percent' });"
+      ]
     },
     "format_number_with_separators": {
-      "code": ["new Intl.NumberFormat('en-US');"],
+      "code": [
+        "new Intl.NumberFormat('en-US');"
+      ],
       "comment": "Other locales are avalible to achive this."
     },
     "format_number_with_positive_negative_sign": {
-      "code": ["new Intl.NumberFormat(locale, { signDisplay: 'always' });"]
+      "code": [
+        "new Intl.NumberFormat(locale, { signDisplay: 'always' });"
+      ]
     },
     "format_number_in_scientific_notation_little_e": {
       "not-implemented": true
     },
     "format_number_in_scientific_notation_big_e": {
-      "code": ["new Intl.NumberFormat(locale, { notation: 'scientific' });"]
+      "code": [
+        "new Intl.NumberFormat(locale, { notation: 'scientific' });"
+      ]
     },
     "format_number_in_binary": {
-      "code": ["(number >>> 0).toString(2);"],
+      "code": [
+        "(number >>> 0).toString(2);"
+      ],
       "comment": "Shift right used to unsign the number so negatives are returned as their 32-bit two's complement representation"
     },
     "format_number_in_octal": {
-      "code": ["num.toString(8);"]
+      "code": [
+        "num.toString(8);"
+      ]
     },
     "format_number_in_hexadecimal": {
-      "code": ["num.toString(16);"]
+      "code": [
+        "num.toString(16);"
+      ]
     }
   }
 }

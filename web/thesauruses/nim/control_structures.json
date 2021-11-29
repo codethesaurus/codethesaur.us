@@ -4,27 +4,7 @@
     "language_version": "1.6",
     "language_name": "Nim"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "ternary_conditional",
-      "switch_statement"
-    ],
-    "Loops": [
-      "while_loop",
-      "for_loop"
-    ],
-    "Iterations": [
-      "each_iteration",
-      "map_iteration",
-      "filter_iteration",
-      "fold_iteration"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
       "code": "if condition:\n  statements"
     },

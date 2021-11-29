@@ -4,43 +4,7 @@
     "language_version": "3.10",
     "language_name": "Python"
   },
-  "categories": {
-    "Defining Classes": [
-      "normal_class",
-      "abstract_class",
-      "interface",
-      "read_only_class",
-      "static_class",
-      "inner_class",
-      "packages",
-      "class_with_generic_type"
-    ],
-    "Adding Private and Public Members": [
-      "private_variables",
-      "protected_variables",
-      "public_variables",
-      "static_variables",
-      "private_functions",
-      "protected_functions",
-      "public_functions",
-      "static_functions"
-    ],
-    "Extending and Implementing Classes": [
-      "extends_class",
-      "extending_interface",
-      "calling_superclass_functions",
-      "overriding_superclass_functions"
-    ],
-    "Creating Objects and Polymorphism": [
-      "instantiating_object",
-      "instantiating_polymorphic_object"
-    ],
-    "Constructors and Deconstructor": [
-      "implement_constructor",
-      "implement_deconstructor"
-    ]
-  },
-  "classes": {
+  "concepts": {
     "normal_class": {
       "code": "class class_name:\n  # class body"
     },
