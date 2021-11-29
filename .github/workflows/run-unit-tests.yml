@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  run_tests:
+  run:
     name: Run Django Unit Tests
     runs-on: ubuntu-latest
     steps:
