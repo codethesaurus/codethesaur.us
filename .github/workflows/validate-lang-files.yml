@@ -51,7 +51,5 @@ If there are warnings, those are optional and you should consider whether to cha
 
       - name: Check for command failures
         if: "${{ contains(steps.validate_output.outputs.content, 'errors found') }}"
-        with:
-          fail_ci_if_error: true
         run: |
           exit 1
