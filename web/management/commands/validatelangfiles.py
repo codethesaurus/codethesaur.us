@@ -1,5 +1,6 @@
 import os
 import json
+import sys
 
 from django.core.management.base import BaseCommand, CommandError
 from web.MetaInfo import MetaInfo
@@ -24,21 +25,22 @@ class Command(BaseCommand):
             if os.path.isdir(path):
 
                 if not dir in list(metainfo.languages.values()):
-                    print("[Error] " +path + " is not listed as a language in `meta_info.json`")
+                    print("[Error] " + path + " is not listed as a language in `meta_info.json`")
                     error_count += 1
 
                 files = os.listdir("web/thesauruses/" + dir)
                 for file in files:
                     path = "web/thesauruses/" + dir + "/" + file
                     if file not in meta_files:
-                        print("[Error] `" +path + "` is not a valid concept filename")
+                        print("[Error] `" + path + "` is not a valid concept filename")
                         error_count += 1
 
         # Also check structures are in MetaInfo
         for meta_file in meta_files:
             structure_name = meta_file[:-5]
             if structure_name not in list(metainfo.data_structures.values()):
-                print("[Error] " +"`web/thesauruses/_meta/" + meta_file + "` is not listed as a structure in `meta_info.json`")
+                print(
+                    "[Error] " + "`web/thesauruses/_meta/" + meta_file + "` is not listed as a structure in `meta_info.json`")
                 error_count += 1
 
         # Open up thesaurus directory
@@ -68,39 +70,39 @@ class Command(BaseCommand):
                     language_name = meta_structure_file_json["meta"]["language_name"]
                     if not language:
                         print("[Error] `" +
-                            lang_dir + "/" + structure + ".json` has an empty `language` attribute and needs to be updated")
+                              lang_dir + "/" + structure + ".json` has an empty `language` attribute and needs to be updated")
                         error_count += 1
                     elif language == "language_id":
                         print("[Error] `" +
-                            lang_dir + "/" + structure + ".json` has the default `language` attribute and needs to be updated")
+                              lang_dir + "/" + structure + ".json` has the default `language` attribute and needs to be updated")
                         error_count += 1
                     elif not language == lang_dir:
                         print("[Error] `" +
-                            lang_dir + "/" + structure + ".json` has a `language` attribute that should be `" + lang_dir + "` and needs to be updated")
+                              lang_dir + "/" + structure + ".json` has a `language` attribute that should be `" + lang_dir + "` and needs to be updated")
                         error_count += 1
 
                     if not language_version:
                         print("[Error] `" +
-                            lang_dir + "/" + structure + ".json` has an empty `language_version` attribute and needs to be updated")
+                              lang_dir + "/" + structure + ".json` has an empty `language_version` attribute and needs to be updated")
                         error_count += 1
                     elif language_version == "version.number":
                         print("[Error] `" +
-                            lang_dir + "/" + structure + ".json` has the default `language_version` attribute and needs to be updated")
+                              lang_dir + "/" + structure + ".json` has the default `language_version` attribute and needs to be updated")
                         error_count += 1
 
                     if not language_name:
                         print("[Error] `" +
-                            lang_dir + "/" + structure + ".json` has an empty `language_name` attribute and needs to be updated")
+                              lang_dir + "/" + structure + ".json` has an empty `language_name` attribute and needs to be updated")
                         error_count += 1
                     elif language_name == "Human-Friendly Language Name":
                         print("[Error] `" +
-                            lang_dir + "/" + structure + ".json` has the default `language_name` attribute and needs to be updated")
+                              lang_dir + "/" + structure + ".json` has the default `language_name` attribute and needs to be updated")
                         error_count += 1
 
                     #       Ensure categories aren't in file
                     if "categories" in meta_structure_file_json:
                         print("[Error] `" +
-                            lang_dir + "/" + structure + ".json` has a `categories` section in it, which are no longer needed in language files")
+                              lang_dir + "/" + structure + ".json` has a `categories` section in it, which are no longer needed in language files")
                         error_count += 1
 
                     #       Ensure name lines are removed
@@ -109,7 +111,7 @@ class Command(BaseCommand):
 
                         if "name" in structure_item_data:
                             print("[Error] `" +
-                                lang_dir + "/" + structure + ".json`, ID: `" + item + "` has a `name` line that can be removed")
+                                  lang_dir + "/" + structure + ".json`, ID: `" + item + "` has a `name` line that can be removed")
                             error_count += 1
 
                         #       Ensure there's either code or not-implemented
@@ -118,23 +120,23 @@ class Command(BaseCommand):
                         has_comment = "comment" in structure_item_data
                         if (has_code and has_not_implemented):
                             print("[Error] `" +
-                                lang_dir + "/" + structure + ".json`, ID: `" + item + "` should have `code` or `not-implemented`, not both")
+                                  lang_dir + "/" + structure + ".json`, ID: `" + item + "` should have `code` or `not-implemented`, not both")
                             error_count += 1
                         elif (not has_code and not has_not_implemented):
                             print("[Error] `" +
-                                lang_dir + "/" + structure + ".json`, ID: `" + item + "` is missing a needed `code` or `not-implemented` line")
+                                  lang_dir + "/" + structure + ".json`, ID: `" + item + "` is missing a needed `code` or `not-implemented` line")
                             error_count += 1
                         #       Ensure if not-implemented, there's no code line
                         elif has_not_implemented and structure_item_data["not-implemented"] is True and has_code:
                             print("[Error] `" +
-                                lang_dir + "/" + structure + ".json`, ID: `" + item +
-                                "` is not implemented, but has a `code` line that should be removed")
+                                  lang_dir + "/" + structure + ".json`, ID: `" + item +
+                                  "` is not implemented, but has a `code` line that should be removed")
                             error_count += 1
                         #       Ensure if code, there's no not-implemented
                         elif has_code and not structure_item_data["code"] and not has_not_implemented:
                             print("[Error] `" +
-                                lang_dir + "/" + structure + ".json`, ID: `" + item +
-                                "` has an empty `code` line but doesn't have `not-implemented` instead")
+                                  lang_dir + "/" + structure + ".json`, ID: `" + item +
+                                  "` has an empty `code` line but doesn't have `not-implemented` instead")
                             error_count += 1
 
                         #       Code can be string or array (maybe warn if string)
@@ -157,3 +159,4 @@ class Command(BaseCommand):
             #     print(str(warning_count) + " warnings found.")
             if error_count:
                 raise CommandError(str(error_count) + " errors found.")
+                sys.exit(1)
