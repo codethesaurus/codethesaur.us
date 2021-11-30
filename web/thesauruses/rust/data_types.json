@@ -2,7 +2,8 @@
   "meta": {
     "language": "rust",
     "language_version": "1",
-    "language_name": "Rust"
+    "language_name": "Rust",
+    "structure": "data_types"
   },
   "concepts": {
     "boolean": {

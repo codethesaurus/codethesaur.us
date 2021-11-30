@@ -2,7 +2,8 @@
   "meta": {
     "language": "php",
     "language_version": "7.4",
-    "language_name": "PHP"
+    "language_name": "PHP",
+    "structure": "control_structures"
   },
   "concepts": {
     "if_conditional": {

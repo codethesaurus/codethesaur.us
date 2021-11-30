@@ -2,7 +2,8 @@
   "meta": {
     "language": "csharp",
     "language_version": "9.0",
-    "language_name": "C#"
+    "language_name": "C#",
+    "structure": "control_structures"
   },
   "concepts": {
     "if_conditional": {

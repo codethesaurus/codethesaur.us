@@ -2,7 +2,8 @@
   "meta": {
     "language": "ada",
     "language_version": "2012",
-    "language_name": "Ada"
+    "language_name": "Ada",
+    "structure": "lists"
   },
   "concepts": {
     "name_of_ordered_mutable_list": {

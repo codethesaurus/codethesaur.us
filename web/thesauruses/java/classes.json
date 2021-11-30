@@ -2,7 +2,8 @@
   "meta": {
     "language": "java",
     "language_version": "15",
-    "language_name": "Java"
+    "language_name": "Java",
+    "structure": "classes"
   },
   "concepts": {
     "normal_class": {

@@ -2,7 +2,8 @@
   "meta": {
     "language": "rust",
     "language_version": "1.55.0",
-    "language_name": "Rust"
+    "language_name": "Rust",
+    "structure": "operators"
   },
   "concepts": {
     "addition": {

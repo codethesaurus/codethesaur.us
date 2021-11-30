@@ -2,7 +2,8 @@
   "meta": {
     "language": "swift",
     "language_version": "5.3.3",
-    "language_name": "Swift"
+    "language_name": "Swift",
+    "structure": "classes"
   },
   "concepts": {
     "normal_class": {

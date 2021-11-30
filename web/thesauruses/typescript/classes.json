@@ -2,7 +2,8 @@
   "meta": {
     "language": "typescript",
     "language_version": "4.2",
-    "language_name": "TypeScript"
+    "language_name": "TypeScript",
+    "structure": "classes"
   },
   "concepts": {
     "normal_class": {

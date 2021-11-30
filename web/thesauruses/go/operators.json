@@ -2,7 +2,8 @@
   "meta": {
     "language": "go",
     "language_version": "1.17.1",
-    "language_name": "Golang"
+    "language_name": "Golang",
+    "structure": "operators"
   },
   "concepts": {
     "addition": {

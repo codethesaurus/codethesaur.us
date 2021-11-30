@@ -2,7 +2,8 @@
   "meta": {
     "language": "csharp",
     "language_version": "9.0",
-    "language_name": "C#"
+    "language_name": "C#",
+    "structure": "functions"
   },
   "concepts": {
     "void_function_no_parameters": {

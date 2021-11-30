@@ -2,7 +2,8 @@
   "meta": {
     "language": "perl",
     "language_version": "5.34",
-    "language_name": "Perl"
+    "language_name": "Perl",
+    "structure": "data_types"
   },
   "concepts": {
     "boolean": {

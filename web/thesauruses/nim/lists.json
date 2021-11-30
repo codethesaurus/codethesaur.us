@@ -2,7 +2,8 @@
   "meta": {
     "language": "nim",
     "language_version": "1.6",
-    "language_name": "Nim"
+    "language_name": "Nim",
+    "structure": "lists"
   },
   "concepts": {
     "name_of_ordered_mutable_list": {

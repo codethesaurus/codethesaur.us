@@ -2,7 +2,8 @@
   "meta": {
     "language": "python",
     "language_version": "3.9",
-    "language_name": "Python"
+    "language_name": "Python",
+    "structure": "operators"
   },
   "concepts": {
     "addition": {

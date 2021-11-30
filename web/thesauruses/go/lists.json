@@ -2,7 +2,8 @@
   "meta": {
     "language": "go",
     "language_version": "1.16",
-    "language_name": "Go"
+    "language_name": "Go",
+    "structure": "lists"
   },
   "concepts": {
     "name_of_ordered_mutable_list": {

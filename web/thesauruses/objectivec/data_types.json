@@ -2,7 +2,8 @@
   "meta": {
     "language": "language_id",
     "language_version": "version.number",
-    "language_name": "Objective-C"
+    "language_name": "Objective-C",
+    "structure": "data_types"
   },
   "concepts": {
     "boolean": {

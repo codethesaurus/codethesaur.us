@@ -1,116 +1,121 @@
 {
-  "Ordered, Mutable Lists": {
-    "name_of_ordered_mutable_list": "What is a ordered mutable list called?",
-    "create_a_ordered_mutable_list": "Create the list",
-    "ordered_mutable_list_start_number": "What number does it start at?",
-    "ordered_mutable_list_can_be_appended": "Can you append to it?",
-    "ordered_mutable_list_can_be_inserted_in_middle": "Can you insert into the middle of it?",
-    "access_element_in_ordered_mutable_list": "Access element by index",
-    "insert_into_beginning_of_ordered_mutable_list": "Insert element at beginning",
-    "insert_into_end_of_ordered_mutable_list": "Insert element at end",
-    "insert_into_middle_of_ordered_mutable_list": "Insert element in middle",
-    "erase_element_at_beginning_of_ordered_mutable_list": "Erase first element",
-    "erase_element_at_end_of_ordered_mutable_list": "Erase last element",
-    "erase_element_in_middle_of_ordered_mutable_list": "Erase element in the middle",
-    "swap_elements_in_ordered_mutable_list": "Swap two elements",
-    "delete_ordered_mutable_list": "Delete the list"
+  "meta": {
+    "structure": "lists"
   },
-  "Unordered, Mutable Lists": {
-    "name_of_unordered_mutable_list": "What is a unordered mutable list called?",
-    "create_a_unordered_mutable_list": "unordered",
-    "unordered_mutable_list_start_number": "What number does it start at?",
-    "unordered_mutable_list_can_be_appended": "Can you append to it?",
-    "unordered_mutable_list_can_be_inserted_in_middle": "Can you insert into the middle of it?",
-    "access_element_in_unordered_mutable_list": "Access element by index",
-    "insert_into_beginning_of_unordered_mutable_list": "Insert element at beginning",
-    "insert_into_end_of_unordered_mutable_list": "Insert element at end",
-    "insert_into_middle_of_unordered_mutable_list": "Insert element in middle",
-    "erase_element_at_beginning_of_unordered_mutable_list": "Erase first element",
-    "erase_element_at_end_of_unordered_mutable_list": "Erase last element",
-    "erase_element_in_middle_of_unordered_mutable_list": "Erase element in the middle",
-    "swap_elements_in_unordered_mutable_list": "Swap two elements",
-    "delete_unordered_mutable_list": "Delete the list"
-  },
-  "Ordered, Immutable Lists": {
-    "name_of_ordered_immutable_list": "What is a ordered immutable list called?",
-    "create_a_ordered_immutable_list": "Create the list",
-    "ordered_immutable_list_start_number": "What number does it start at?",
-    "access_element_in_ordered_immutable_list": "Access element by index",
-    "delete_ordered_immutable_list": "Delete the list"
-  },
-  "Unordered, Immutable Lists": {
-    "name_of_unordered_immutable_list": "What is a unordered immutable list called?",
-    "create_a_unordered_immutable_list": "Create the list",
-    "unordered_immutable_list_start_number": "What number does it start at?",
-    "access_element_in_unordered_immutable_list": "Access element by index",
-    "delete_unordered_immutable_list": "Delete the list"
-  },
-  "Mutable Hashed Lists": {
-    "name_of_mutable_hashed_list": "What is a mutable hashed list called?",
-    "create_a_mutable_hashed_list": "Create the list",
-    "insert_element_to_mutable_hashed_list": "Insert an element",
-    "erase_element_from_mutable_hashed_list": "Erase an element from the list",
-    "delete_mutable_hashed_list": "Delete the list"
-  },
-  "Immutable Hashed Lists": {
-    "name_of_immutable_hashed_list": "What is an immutable hashed list called?",
-    "create_a_immutable_hashed_list": "Create the list",
-    "insert_element_to_immutable_hashed_list": "Insert an element",
-    "erase_element_from_immutable_hashed_list": "Erase an element from the list",
-    "delete_immutable_hashed_list": "Delete the list"
-  },
-  "Mutable Key/Value Sets": {
-    "create_a_mutable_set": "Create a mutable key/value set",
-    "get_key_from_mutable_set": "Get key",
-    "get_value_from_mutable_set": "Get value",
-    "get_all_keys_from_mutable_set": "Get all keys",
-    "get_all_values_from_mutable_set": "Get all values",
-    "swap_key_and_value_in_mutable_set": "Swap a key and value",
-    "delete_mutable_set": "Delete the set"
-  },
-  "Immutable Key/Value Sets": {
-    "create_a_immutable_set": "Create an immutable key/value set",
-    "get_key_from_immutable_set": "Get key",
-    "get_value_from_immutable_set": "Get value",
-    "get_all_keys_from_immutable_set": "Get all keys",
-    "get_all_values_from_immutable_set": "Get all values",
-    "swap_key_and_value_in_immutable_set": "Swap a key and value",
-    "delete_immutable_set": "Delete the set"
-  },
-  "Find/Search Functions": {
-    "find_element_by_value": "Find/search for an element by value",
-    "find_minimum_element": "Find the minimum value in a list",
-    "find_maximum_element": "Find the maximum value in a list",
-    "convert_list_to_string": "Convert a list to a string"
-  },
-  "Splitting/Joining Lists": {
-    "concatenate_two_lists": "Concatenate two lists together",
-    "split_list_at_index": "Split lists at an index",
-    "split_list_at_value": "Split list at a value"
-  },
-  "Copying Lists": {
-    "duplicate_a_list": "Duplicate a list",
-    "duplicate_subset_of_list": "Duplicate a portion/subset of a list"
-  },
-  "Sizing/Resizing Lists": {
-    "get_list_length": "Get list length",
-    "resize_list": "Increase/decrease list size"
-  },
-  "Comparing/Equality": {
-    "do_two_lists_match_exactly": "Do two lists match every element?",
-    "do_two_lists_contain_same_items": "Do two lists contain all the same items?",
-    "does_list_satisfy_some_expression": "Does a list satisfy some expression?",
-    "does_list_not_satisfy_an_expression": "Does a list entirely not satisfy an expression?"
-  },
-  "Sorting/Shuffling Lists": {
-    "sort_list": "Sort a list",
-    "shuffle_list": "Shuffle list elements",
-    "reverse_list": "Reverse order of list elements"
-  },
-  "Functions On List Elements": {
-    "map": "Map function across list",
-    "filter": "Filter a list based on criteria",
-    "reduce_left": "Reduce a list left-to-right",
-    "reduce_right": "Reduce a list right-to-left"
+  "categories": {
+    "Ordered, Mutable Lists": {
+      "name_of_ordered_mutable_list": "What is a ordered mutable list called?",
+      "create_a_ordered_mutable_list": "Create the list",
+      "ordered_mutable_list_start_number": "What number does it start at?",
+      "ordered_mutable_list_can_be_appended": "Can you append to it?",
+      "ordered_mutable_list_can_be_inserted_in_middle": "Can you insert into the middle of it?",
+      "access_element_in_ordered_mutable_list": "Access element by index",
+      "insert_into_beginning_of_ordered_mutable_list": "Insert element at beginning",
+      "insert_into_end_of_ordered_mutable_list": "Insert element at end",
+      "insert_into_middle_of_ordered_mutable_list": "Insert element in middle",
+      "erase_element_at_beginning_of_ordered_mutable_list": "Erase first element",
+      "erase_element_at_end_of_ordered_mutable_list": "Erase last element",
+      "erase_element_in_middle_of_ordered_mutable_list": "Erase element in the middle",
+      "swap_elements_in_ordered_mutable_list": "Swap two elements",
+      "delete_ordered_mutable_list": "Delete the list"
+    },
+    "Unordered, Mutable Lists": {
+      "name_of_unordered_mutable_list": "What is a unordered mutable list called?",
+      "create_a_unordered_mutable_list": "unordered",
+      "unordered_mutable_list_start_number": "What number does it start at?",
+      "unordered_mutable_list_can_be_appended": "Can you append to it?",
+      "unordered_mutable_list_can_be_inserted_in_middle": "Can you insert into the middle of it?",
+      "access_element_in_unordered_mutable_list": "Access element by index",
+      "insert_into_beginning_of_unordered_mutable_list": "Insert element at beginning",
+      "insert_into_end_of_unordered_mutable_list": "Insert element at end",
+      "insert_into_middle_of_unordered_mutable_list": "Insert element in middle",
+      "erase_element_at_beginning_of_unordered_mutable_list": "Erase first element",
+      "erase_element_at_end_of_unordered_mutable_list": "Erase last element",
+      "erase_element_in_middle_of_unordered_mutable_list": "Erase element in the middle",
+      "swap_elements_in_unordered_mutable_list": "Swap two elements",
+      "delete_unordered_mutable_list": "Delete the list"
+    },
+    "Ordered, Immutable Lists": {
+      "name_of_ordered_immutable_list": "What is a ordered immutable list called?",
+      "create_a_ordered_immutable_list": "Create the list",
+      "ordered_immutable_list_start_number": "What number does it start at?",
+      "access_element_in_ordered_immutable_list": "Access element by index",
+      "delete_ordered_immutable_list": "Delete the list"
+    },
+    "Unordered, Immutable Lists": {
+      "name_of_unordered_immutable_list": "What is a unordered immutable list called?",
+      "create_a_unordered_immutable_list": "Create the list",
+      "unordered_immutable_list_start_number": "What number does it start at?",
+      "access_element_in_unordered_immutable_list": "Access element by index",
+      "delete_unordered_immutable_list": "Delete the list"
+    },
+    "Mutable Hashed Lists": {
+      "name_of_mutable_hashed_list": "What is a mutable hashed list called?",
+      "create_a_mutable_hashed_list": "Create the list",
+      "insert_element_to_mutable_hashed_list": "Insert an element",
+      "erase_element_from_mutable_hashed_list": "Erase an element from the list",
+      "delete_mutable_hashed_list": "Delete the list"
+    },
+    "Immutable Hashed Lists": {
+      "name_of_immutable_hashed_list": "What is an immutable hashed list called?",
+      "create_a_immutable_hashed_list": "Create the list",
+      "insert_element_to_immutable_hashed_list": "Insert an element",
+      "erase_element_from_immutable_hashed_list": "Erase an element from the list",
+      "delete_immutable_hashed_list": "Delete the list"
+    },
+    "Mutable Key/Value Sets": {
+      "create_a_mutable_set": "Create a mutable key/value set",
+      "get_key_from_mutable_set": "Get key",
+      "get_value_from_mutable_set": "Get value",
+      "get_all_keys_from_mutable_set": "Get all keys",
+      "get_all_values_from_mutable_set": "Get all values",
+      "swap_key_and_value_in_mutable_set": "Swap a key and value",
+      "delete_mutable_set": "Delete the set"
+    },
+    "Immutable Key/Value Sets": {
+      "create_a_immutable_set": "Create an immutable key/value set",
+      "get_key_from_immutable_set": "Get key",
+      "get_value_from_immutable_set": "Get value",
+      "get_all_keys_from_immutable_set": "Get all keys",
+      "get_all_values_from_immutable_set": "Get all values",
+      "swap_key_and_value_in_immutable_set": "Swap a key and value",
+      "delete_immutable_set": "Delete the set"
+    },
+    "Find/Search Functions": {
+      "find_element_by_value": "Find/search for an element by value",
+      "find_minimum_element": "Find the minimum value in a list",
+      "find_maximum_element": "Find the maximum value in a list",
+      "convert_list_to_string": "Convert a list to a string"
+    },
+    "Splitting/Joining Lists": {
+      "concatenate_two_lists": "Concatenate two lists together",
+      "split_list_at_index": "Split lists at an index",
+      "split_list_at_value": "Split list at a value"
+    },
+    "Copying Lists": {
+      "duplicate_a_list": "Duplicate a list",
+      "duplicate_subset_of_list": "Duplicate a portion/subset of a list"
+    },
+    "Sizing/Resizing Lists": {
+      "get_list_length": "Get list length",
+      "resize_list": "Increase/decrease list size"
+    },
+    "Comparing/Equality": {
+      "do_two_lists_match_exactly": "Do two lists match every element?",
+      "do_two_lists_contain_same_items": "Do two lists contain all the same items?",
+      "does_list_satisfy_some_expression": "Does a list satisfy some expression?",
+      "does_list_not_satisfy_an_expression": "Does a list entirely not satisfy an expression?"
+    },
+    "Sorting/Shuffling Lists": {
+      "sort_list": "Sort a list",
+      "shuffle_list": "Shuffle list elements",
+      "reverse_list": "Reverse order of list elements"
+    },
+    "Functions On List Elements": {
+      "map": "Map function across list",
+      "filter": "Filter a list based on criteria",
+      "reduce_left": "Reduce a list left-to-right",
+      "reduce_right": "Reduce a list right-to-left"
+    }
   }
 }

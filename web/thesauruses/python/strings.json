@@ -2,7 +2,8 @@
   "meta": {
     "language": "Python",
     "language_version": "3.7",
-    "language_name": "Python"
+    "language_name": "Python",
+    "structure": "strings"
   },
   "concepts": {
     "is_primitive_or_not": {

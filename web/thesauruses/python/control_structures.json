@@ -2,7 +2,8 @@
   "meta": {
     "language": "python",
     "language_version": "3.10",
-    "language_name": "Python"
+    "language_name": "Python",
+    "structure": "control_structures"
   },
   "concepts": {
     "if_conditional": {

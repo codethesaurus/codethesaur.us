@@ -2,7 +2,8 @@
   "meta": {
     "language": "ada",
     "language_version": "2012",
-    "language_name": "Ada"
+    "language_name": "Ada",
+    "structure": "functions"
   },
   "concepts": {
     "void_function_no_parameters": {

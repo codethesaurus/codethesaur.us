@@ -2,7 +2,8 @@
   "meta": {
     "language": "Java",
     "language_version": "15",
-    "language_name": "Java"
+    "language_name": "Java",
+    "structure": "control_structures"
   },
   "concepts": {
     "if_conditional": {

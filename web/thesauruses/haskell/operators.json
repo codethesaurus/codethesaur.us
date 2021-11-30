@@ -2,7 +2,8 @@
   "meta": {
     "language": "haskell",
     "language_version": "2010",
-    "language_name": "Haskell"
+    "language_name": "Haskell",
+    "structure": "operators"
   },
   "concepts": {
     "addition": {

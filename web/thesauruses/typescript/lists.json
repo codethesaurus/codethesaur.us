@@ -2,7 +2,8 @@
   "meta": {
     "language": "typescript",
     "language_version": "4.4",
-    "language_name": "Typescript"
+    "language_name": "Typescript",
+    "structure": "lists"
   },
   "concepts": {
     "name_of_ordered_mutable_list": {

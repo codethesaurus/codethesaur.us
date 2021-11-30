@@ -2,7 +2,8 @@
   "meta": {
     "language": "vbnet",
     "language_version": "16.0",
-    "language_name": "Visual Basic"
+    "language_name": "Visual Basic",
+    "structure": "control_structures"
   },
   "concepts": {
     "if_conditional": {

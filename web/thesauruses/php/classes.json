@@ -2,7 +2,8 @@
   "meta": {
     "language": "php",
     "language_version": "8.0",
-    "language_name": "PHP"
+    "language_name": "PHP",
+    "structure": "classes"
   },
   "concepts": {
     "normal_class": {

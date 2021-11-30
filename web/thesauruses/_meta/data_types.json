@@ -1,33 +1,38 @@
 {
-  "Numerical": {
-    "boolean": "Boolean",
-    "signed_integer_8_bit": "Signed 8-bit integer",
-    "unsigned_integer_8_bit": "Unsigned 8-bit integer",
-    "signed_integer_16_bit": "Signed 16-bit integer",
-    "unsigned_integer_16_bit": "Unsigned 16-bit integer",
-    "signed_integer_32_bit": "Signed 32-bit integer",
-    "unsigned_integer_32_bit": "Unsigned 32-bit integer",
-    "signed_integer_64_bit": "Signed 64-bit integer",
-    "unsigned_integer_64_bit": "Unsigned 64-bit integer",
-    "signed_integer_as_object": "Signed object-based Integer",
-    "unsigned_integer_as_object": "Unsigned object-based Integer",
-    "signed_float_16_bit": "Signed 16-bit floating point",
-    "unsigned_float_16_bit": "Unsigned 16-bit floating point",
-    "signed_float_32_bit": "Signed 32-bit floating point",
-    "unsigned_float_32_bit": "Unsigned 32-bit floating point",
-    "signed_float_64_bit": "Signed 64-bit floating point",
-    "unsigned_float_64_bit": "Unsigned 64-bit floating point",
-    "signed_float_as_object": "Signed object-based floating point",
-    "unsigned_float_as_object": "Unsigned object-based floating point"
+  "meta": {
+    "structure": "data_types"
   },
-  "Characters and Strings": {
-    "character": "Character",
-    "string_as_object": "String as an object",
-    "string_as_array": "String as an array of characters"
-  },
-  "Complex Numbers": {
-    "complex_as_object": "Complex Number as an object",
-    "real_number_part": "Complex number real part",
-    "imaginary_number_part": "Complex number imaginary part"
+  "categories": {
+    "Numerical": {
+      "boolean": "Boolean",
+      "signed_integer_8_bit": "Signed 8-bit integer",
+      "unsigned_integer_8_bit": "Unsigned 8-bit integer",
+      "signed_integer_16_bit": "Signed 16-bit integer",
+      "unsigned_integer_16_bit": "Unsigned 16-bit integer",
+      "signed_integer_32_bit": "Signed 32-bit integer",
+      "unsigned_integer_32_bit": "Unsigned 32-bit integer",
+      "signed_integer_64_bit": "Signed 64-bit integer",
+      "unsigned_integer_64_bit": "Unsigned 64-bit integer",
+      "signed_integer_as_object": "Signed object-based Integer",
+      "unsigned_integer_as_object": "Unsigned object-based Integer",
+      "signed_float_16_bit": "Signed 16-bit floating point",
+      "unsigned_float_16_bit": "Unsigned 16-bit floating point",
+      "signed_float_32_bit": "Signed 32-bit floating point",
+      "unsigned_float_32_bit": "Unsigned 32-bit floating point",
+      "signed_float_64_bit": "Signed 64-bit floating point",
+      "unsigned_float_64_bit": "Unsigned 64-bit floating point",
+      "signed_float_as_object": "Signed object-based floating point",
+      "unsigned_float_as_object": "Unsigned object-based floating point"
+    },
+    "Characters and Strings": {
+      "character": "Character",
+      "string_as_object": "String as an object",
+      "string_as_array": "String as an array of characters"
+    },
+    "Complex Numbers": {
+      "complex_as_object": "Complex Number as an object",
+      "real_number_part": "Complex number real part",
+      "imaginary_number_part": "Complex number imaginary part"
+    }
   }
 }

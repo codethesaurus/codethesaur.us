@@ -2,7 +2,8 @@
   "meta": {
     "language": "scala",
     "language_version": "2.13.x",
-    "language_name": "Scala"
+    "language_name": "Scala",
+    "structure": "functions"
   },
   "concepts": {
     "void_function_no_parameters": {

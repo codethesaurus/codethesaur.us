@@ -2,7 +2,8 @@
   "meta": {
     "language": "bash",
     "language_version": "3.2.57",
-    "language_name": "BASH"
+    "language_name": "BASH",
+    "structure": "functions"
   },
   "concepts": {
     "void_function_no_parameters": {

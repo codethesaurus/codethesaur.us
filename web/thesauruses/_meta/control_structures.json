@@ -1,25 +1,30 @@
 {
-  "Conditional Statements (ifs)": {
-    "if_conditional": "If conditional",
-    "if_else_conditional": "If/Else conditional",
-    "if_elseif_conditional": "If/ElseIf conditional",
-    "if_elseif_else_conditional": "If/ElseIf/Else conditional",
-    "switch_statement": "Switch statement",
-    "ternary_conditional": "Ternary conditional"
+  "meta": {
+    "structure": "control_structures"
   },
-  "Loops": {
-    "while_loop": "While loop",
-    "do_while_loop": "Do/While loop",
-    "until_loop": "Until loop",
-    "do_until_loop": "Do/Until loop",
-    "for_loop": "For loop",
-    "foreach_loop": "Foreach loop",
-    "list_comprehension": "List Comprehension"
-  },
-  "Iterations": {
-    "each_iteration": "Each iteration",
-    "map_iteration": "Map iteration",
-    "filter_iteration": "Filter iteration",
-    "fold_iteration": "Fold iteration"
+  "categories": {
+    "Conditional Statements (ifs)": {
+      "if_conditional": "If conditional",
+      "if_else_conditional": "If/Else conditional",
+      "if_elseif_conditional": "If/ElseIf conditional",
+      "if_elseif_else_conditional": "If/ElseIf/Else conditional",
+      "switch_statement": "Switch statement",
+      "ternary_conditional": "Ternary conditional"
+    },
+    "Loops": {
+      "while_loop": "While loop",
+      "do_while_loop": "Do/While loop",
+      "until_loop": "Until loop",
+      "do_until_loop": "Do/Until loop",
+      "for_loop": "For loop",
+      "foreach_loop": "Foreach loop",
+      "list_comprehension": "List Comprehension"
+    },
+    "Iterations": {
+      "each_iteration": "Each iteration",
+      "map_iteration": "Map iteration",
+      "filter_iteration": "Filter iteration",
+      "fold_iteration": "Fold iteration"
+    }
   }
 }

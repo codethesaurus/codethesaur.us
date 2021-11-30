@@ -2,7 +2,8 @@
   "meta": {
     "language": "javascript",
     "language_version": "ES2020",
-    "language_name": "JavaScript"
+    "language_name": "JavaScript",
+    "structure": "control_structures"
   },
   "concepts": {
     "if_conditional": {

@@ -2,7 +2,8 @@
   "meta": {
     "language": "swift",
     "language_version": "5.5",
-    "language_name": "Swift"
+    "language_name": "Swift",
+    "structure": "functions"
   },
   "concepts": {
     "void_function_no_parameters": {

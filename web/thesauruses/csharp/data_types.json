@@ -2,7 +2,8 @@
   "meta": {
     "language": "CSharp",
     "language_version": "9.0",
-    "language_name": "C#"
+    "language_name": "C#",
+    "structure": "data_types"
   },
   "concepts": {
     "boolean": {

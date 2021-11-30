@@ -2,7 +2,8 @@
   "meta": {
     "language": "ruby",
     "language_version": "3.0",
-    "language_name": "Ruby"
+    "language_name": "Ruby",
+    "structure": "classes"
   },
   "concepts": {
     "normal_class": {

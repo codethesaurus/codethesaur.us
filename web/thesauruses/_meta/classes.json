@@ -1,36 +1,41 @@
 {
-  "Defining Classes": {
-    "normal_class": "Normal class",
-    "abstract_class": "Abstract class",
-    "interface": "Interface",
-    "read_only_class": "Read-only class",
-    "static_class": "Static class",
-    "inner_class": "Inner class",
-    "packages": "Packages",
-    "class_with_generic_type": "Class with a generic type"
+  "meta": {
+    "structure": "classes"
   },
-  "Adding Private and Public Members": {
-    "private_variables": "Defining private variables",
-    "protected_variables": "Defining protected variables",
-    "public_variables": "Defining public variables",
-    "static_variables": "Defining static variables",
-    "private_functions": "Defining private functions",
-    "protected_functions": "Defining protected functions",
-    "public_functions": "Defining public functions",
-    "static_functions": "Defining static functions"
-  },
-  "Extending and Implementing Classes": {
-    "extends_class": "Class that inherits/extends another class",
-    "extending_interface": "Class/Interface that inherits/extends another class/interface",
-    "calling_superclass_functions": "Calling a superclass function",
-    "overriding_superclass_functions": "Overriding a superclass function"
-  },
-  "Creating Objects and Polymorphism": {
-    "instantiating_object": "Instantiating a new object",
-    "instantiating_polymorphic_object": "Instantiating a polymorphic object"
-  },
-  "Constructors and Deconstructor": {
-    "implement_constructor": "Implementing a class constructor",
-    "implement_deconstructor": "Implementing a class deconstructor"
+  "categories": {
+    "Defining Classes": {
+      "normal_class": "Normal class",
+      "abstract_class": "Abstract class",
+      "interface": "Interface",
+      "read_only_class": "Read-only class",
+      "static_class": "Static class",
+      "inner_class": "Inner class",
+      "packages": "Packages",
+      "class_with_generic_type": "Class with a generic type"
+    },
+    "Adding Private and Public Members": {
+      "private_variables": "Defining private variables",
+      "protected_variables": "Defining protected variables",
+      "public_variables": "Defining public variables",
+      "static_variables": "Defining static variables",
+      "private_functions": "Defining private functions",
+      "protected_functions": "Defining protected functions",
+      "public_functions": "Defining public functions",
+      "static_functions": "Defining static functions"
+    },
+    "Extending and Implementing Classes": {
+      "extends_class": "Class that inherits/extends another class",
+      "extending_interface": "Class/Interface that inherits/extends another class/interface",
+      "calling_superclass_functions": "Calling a superclass function",
+      "overriding_superclass_functions": "Overriding a superclass function"
+    },
+    "Creating Objects and Polymorphism": {
+      "instantiating_object": "Instantiating a new object",
+      "instantiating_polymorphic_object": "Instantiating a polymorphic object"
+    },
+    "Constructors and Deconstructor": {
+      "implement_constructor": "Implementing a class constructor",
+      "implement_deconstructor": "Implementing a class deconstructor"
+    }
   }
 }
