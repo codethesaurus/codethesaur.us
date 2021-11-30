@@ -1,6 +1,6 @@
 {
 	"meta": {
-		"language": "ts",
+		"language": "typescript",
 		"language_version": "4.2.4",
 		"language_name": "TypeScript"
 	},
