@@ -87,259 +87,259 @@
     "io": {
         "file_functions_lib": {
             "name": "Library containing file IO functions",
-            "code": ""
+            "code": [""]
         },
         "write_line": {
             "name": "Write a line to the console",
-            "code": ""
+            "code": [""]
         },
         "write_line_with_new_line": {
             "name": "Write a line to the console with a return character",
-            "code": ""
+            "code": [""]
         },
         "read_line": {
             "name": "Read a line of user input from the console",
-            "code": ""
+            "code": [""]
         },
         "read_char": {
             "name": "Read a single char of user input from the console",
-            "code": ""
+            "code": [""]
         },
         "clear_console_cutput": {
             "name": "Clear the console output",
-            "code": ""
+            "code": [""]
         },
         "change_console_background_color": {
             "name": "Change the color of the console",
-            "code": ""
+            "code": [""]
         },
         "change_console_text_color": {
             "name": "Change the color of the console",
-            "code": ""
+            "code": [""]
         },
         "list_directory": {
             "name": "List of the items in the current directory",
-            "code": ""
+            "code": [""]
         },
         "read_directory_info": {
             "name": "Get infomation about the current directory (number of items, size, etc)",
-            "code": ""
+            "code": [""]
         },
         "create_directory": {
             "name": "Create a directory",
-            "code": ""
+            "code": [""]
         },
         "delete_directory": {
             "name": "Delete a directory",
-            "code": ""
+            "code": [""]
         },
         "rename_directory": {
             "name": "Rename a directory",
-            "code": ""
+            "code": [""]
         },
         "move_directory": {
             "name": "Move a directory to another locaiton",
-            "code": ""
+            "code": [""]
         },
         "update_directory_permissions": {
             "name": "Update the permissions a user, group, or application has to a directory",
-            "code": ""
+            "code": [""]
         },
         "read_line_of_file": {
             "name": "Read a single line from a file",
-            "code": ""
+            "code": [""]
         },
         "read_lines_of_file": {
             "name": "Read all the lines in a file",
-            "code": ""
+            "code": [""]
         },
         "read_file_stream": {
             "name": "Read the file into a stream",
-            "code": ""
+            "code": [""]
         },
         "create_file": {
             "name": "Create a file",
-            "code": ""
+            "code": [""]
         },
         "delete_file": {
             "name": "Delete a file",
-            "code": ""
+            "code": [""]
         },
         "update_file": {
             "name": "Update a file",
-            "code": ""
+            "code": [""]
         },
         "move_file": {
             "name": "Move a file to a new location",
-            "code": ""
+            "code": [""]
         },
         "network_functions_lib": {
             "name": "Library containing network IO functions",
-            "code": ""
+            "code": [""]
         },
         "send_a_http_request": {
             "name": "Send a HTTP request",
-            "code": ""
+            "code": [""]
         },
         "send_a_get_request": {
             "name": "Send a HTTP GET request",
-            "code": ""
+            "code": [""]
         },
         "send_a_post_request": {
             "name": "Send a HTTP POST request",
-            "code": ""
+            "code": [""]
         },
         "send_a_put_request": {
             "name": "Send a HTTP PUT request",
-            "code": ""
+            "code": [""]
         },
         "send_a_patch_request": {
             "name": "Send a HTTP PATCH request",
-            "code": ""
+            "code": [""]
         },
         "send_a_delete_request": {
             "name": "Send a HTTP DELETE request",
-            "code": ""
+            "code": [""]
         },
         "send_a_head_request": {
             "name": "Send a HTTP HEAD request",
-            "code": ""
+            "code": [""]
         },
         "send_a_options_request": {
             "name": "Send a HTTP OPTIONS request",
-            "code": ""
+            "code": [""]
         },
         "send_a_connect_request": {
             "name": "Send a HTTP CONNECT request",
-            "code": ""
+            "code": [""]
         },
         "send_a_trace_request": {
             "name": "Send a HTTP TRACE request",
-            "code": ""
+            "code": [""]
         },
         "add_headers": {
             "name": "Add headers to a HTTP request",
-            "code": ""
+            "code": [""]
         },
         "add_query_params": {
             "name": "Add query parameters to a HTTP request",
-            "code": ""
+            "code": [""]
         },
         "inbuilt_url_class": {
             "name": "The inbuilt URL class",
-            "code": ""
+            "code": [""]
         },
         "open_a_socket": {
             "name": "Open a network socket",
-            "code": ""
+            "code": [""]
         },
         "close_a_socket": {
             "name": "Close a network socket",
-            "code": ""
+            "code": [""]
         },
         "add_authorization_headers": {
             "name": "Add an authorization header",
-            "code": ""
+            "code": [""]
         },
         "add_cookies": {
             "name": "Add cookies to a HTTP request",
-            "code": ""
+            "code": [""]
         },
         "read_cookies": {
             "name": "Read cookies from a HTTP response",
-            "code": ""
+            "code": [""]
         },
         "read_headers": {
             "name": "Read headers from a HTTP response",
-            "code": ""
+            "code": [""]
         },
         "database_functions_lib": {
             "name": "Library containing database IO functions",
-            "code": ""
+            "code": [""]
         },
         "open_connection": {
             "name": "Open a database connection",
-            "code": ""
+            "code": [""]
         },
         "close_connection": {
             "name": "Close a database connection",
-            "code": ""
+            "code": [""]
         },
         "execute_query_single_result_set": {
             "name": "Execute a query returning a single result set",
-            "code": ""
+            "code": [""]
         },
         "execute_query_multiple_result_sets": {
             "name": "Execute a query returning a multiple result sets",
-            "code": ""
+            "code": [""]
         },
         "execute_non_query": {
             "name": "Execute a non query (update, delete)",
-            "code": ""
+            "code": [""]
         },
         "json_function_lib": {
             "name": "Library containing JSON functions",
-            "code": ""
+            "code": [""]
         },
         "serialize_json": {
             "name": "Serialize an object to JSON",
-            "code": ""
+            "code": [""]
         },
         "deserialize_json": {
             "name": "Deserialize a string from JSON",
-            "code": ""
+            "code": [""]
         },
         "serialize_json_with_options": {
             "name": "Serialize an object to JSON with options",
-            "code": ""
+            "code": [""]
         },
         "deserialize_json_with_options": {
             "name": "Deserialize a string from JSON with options",
-            "code": ""
+            "code": [""]
         },
         "xml_function_lib": {
             "name": "Library containing XML functions",
-            "code": ""
+            "code": [""]
         },
         "serialize_xml": {
             "name": "Serialize an object to XML",
-            "code": ""
+            "code": [""]
         },
         "deserialize_xml": {
             "name": "Deserialize a string from XML",
-            "code": ""
+            "code": [""]
         },
         "serialize_xml_with_options": {
             "name": "Serialize an object to XML with options",
-            "code": ""
+            "code": [""]
         },
         "deserialize_xml_with_options": {
             "name": "Deserialize a string from XML with options",
-            "code": ""
+            "code": [""]
         },
         "csv_function_lib": {
             "name": "Library containing CSV functions",
-            "code": ""
+            "code": [""]
         },
         "read_csv_file": {
             "name": "Reading a CSV file",
-            "code": ""
+            "code": [""]
         },
         "read_csv_to_type": {
             "name": "Reading a CSV file to a typed array",
-            "code": ""
+            "code": [""]
         },
         "write_csv_file": {
             "name": "Write a new CSV file",
-            "code": ""
+            "code": [""]
         },
         "append_csv_file": {
             "name": "Append to end of CSV file",
-            "code": ""
+            "code": [""]
         },
         "set_csv_delimiter": {
             "name": "Set the CSV delitmiter to use when reading/writing",
-            "code": ""
+            "code": [""]
         }
     }
 }
