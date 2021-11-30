@@ -2,7 +2,7 @@ import json
 from web.MetaInfo import MetaInfo
 
 
-def generate_language_template(language_id, structure_id, version):
+def generate_language_template(language_id, structure_id, version=None):
     meta_info = MetaInfo()
     if structure_id not in meta_info.data_structures:
         raise ValueError

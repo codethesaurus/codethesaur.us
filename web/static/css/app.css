@@ -126,3 +126,13 @@ a.toTop {
   border-bottom-left-radius: 0.25rem;
   border: 1px solid rgba(0,0,0,.125);
 }
+
+textarea {
+  height: 38vh;
+  width: 100%;
+  font-family: monospace;
+  resize: both;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+}

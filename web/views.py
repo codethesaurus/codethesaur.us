@@ -10,6 +10,7 @@ from pygments.lexers import get_lexer_by_name
 
 from web.Language import Language
 from web.MetaInfo import MetaInfo
+from web.thesaurus_template_generators import generate_language_template
 
 
 def index(request):
@@ -91,15 +92,18 @@ def compare(request):
         return HttpResponseNotFound(response)
 
     try:
-        lang1 = Language(lang1_string, metainfo.language_friendly_name(lang1_string))
+        lang1 = Language(
+            lang1_string, metainfo.language_friendly_name(lang1_string))
         lang1.load_concepts(meta_structure.key)
     except (FileNotFoundError):
         response = render(request, "error_missing_structure.html", {
-            "structures": [{
-                "name": meta_structure.friendly_name,
-                "lang": lang1_string,
-                "key": meta_structure.key
-            }]
+            "name": meta_structure.friendly_name,
+            "lang": lang1_string,
+            "key": meta_structure.key,
+            "template": generate_language_template(
+                lang1_string,
+                meta_structure.key
+            )
         })
         return HttpResponseNotFound(response)
     except (KeyError):
@@ -111,15 +115,18 @@ def compare(request):
         return HttpResponseNotFound(response)
 
     try:
-        lang2 = Language(lang2_string, metainfo.language_friendly_name(lang2_string))
+        lang2 = Language(
+            lang2_string, metainfo.language_friendly_name(lang2_string))
         lang2.load_concepts(meta_structure.key)
     except (FileNotFoundError):
         response = render(request, "error_missing_structure.html", {
-            "structures": [{
-                "name": meta_structure.friendly_name,
-                "lang": lang2_string,
-                "key": meta_structure.key
-            }]
+            "name": meta_structure.friendly_name,
+            "lang": lang2_string,
+            "key": meta_structure.key,
+            "template": generate_language_template(
+                lang2_string,
+                meta_structure.key
+            )
         })
         return HttpResponseNotFound(response)
     except (KeyError):
@@ -131,11 +138,10 @@ def compare(request):
         return HttpResponseNotFound(response)
 
     both_categories = []
-    both_concepts = []
-
 
     for (category_key, category) in meta_structure.categories.items():
-        concepts = [concept_comparision(id, name, lang1, lang2) for (id, name) in category.items()]
+        concepts = [concept_comparision(id, name, lang1, lang2)
+                    for (id, name) in category.items()]
 
         both_categories.append({
             "id": category_key,
@@ -198,7 +204,11 @@ def reference(request):
         ctx = {
             "name": meta_structure.friendly_name,
             "lang": lang_string,
-            "key": meta_structure.key
+            "key": meta_structure.key,
+            "template": generate_language_template(
+                lang_string,
+                meta_structure.key
+            )
         }
         response = render(request, "error_missing_structure.html", ctx)
         return HttpResponseNotFound(response)
@@ -213,7 +223,8 @@ def reference(request):
     categories = []
 
     for (category_key, category) in meta_structure.categories.items():
-        concepts = [concept_reference(id, name, lang) for (id, name) in category.items()]
+        concepts = [concept_reference(id, name, lang)
+                    for (id, name) in category.items()]
         categories.append({
             "id": category_key,
             "concepts": meta_structure.categories[category_key]
