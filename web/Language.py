@@ -3,7 +3,7 @@ import os
 
 
 class Language:
-    def __init__(self, key):
+    def __init__(self, key, friendly_name):
         """
         Initialize the Language object, which will contain concepts for a given structure
         :param key: ID of the language in the meta_info.json file
@@ -11,26 +11,17 @@ class Language:
 
         # Add an empty string to convert SafeString to str
         self.key = str(key + "")
-        self.friendly_name = None
+        self.friendly_name = friendly_name
         self.concepts = None
 
-    def has_key(self):
-        """
-        Returns a Boolean if the language key exists or not
-        :rtype: bool
-        """
-
-        # Empty string is falsy, but text is truthy, but would return return text
-        return bool(self.key)
-
-    def lang_exists(self):
+    def __bool__(self):
         """
         Returns a Boolean if the language (self.key) exists in the thesauruses or not
         :rtype: bool
         """
         return os.path.exists(os.path.join("web", "thesauruses", self.key))
 
-    def load_structure(self, structure_key):
+    def load_concepts(self, structure_key):
         """
         Loads the structure file into the Language object
         :param structure_key: the ID for the structure to load
@@ -87,7 +78,7 @@ class Language:
         :param concept_key: ID for the concept
         :return: the string containing the concept's code
         """
-        code =  self.concept(concept_key).get("code")
+        code = self.concept(concept_key).get("code")
         if isinstance(code, list):
             code = "\n".join(code)
         return code
@@ -99,4 +90,3 @@ class Language:
         :return: the string containing the concept's comment
         """
         return self.concept(concept_key).get("comment", "")
-

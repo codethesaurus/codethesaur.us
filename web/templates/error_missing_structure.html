@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="bg-light p-5 rounded">
+    <h1>Oops!</h1>
+    <p class="lead">
+      There is no entry about <strong>{{name}}</strong> for <strong>{{lang}}</strong> yet.
+      <br /><br />
+      Would you like to add it? Check out our <a href='https://docs.codethesaur.us/contributing/'>contribution guidelines</a>.
+      <br />
+      Then, when you're ready, you can start by adding a file named `{{key}}.json` on <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{{lang}}?filename={{key}}.json'>github</a>
+      {% endfor %}
+    </p>
+    <a class="btn btn-lg btn-primary" href="/" role="button">Go to the Home Page &raquo;</a>
+  </div>
+</div>
+
+{% endblock content %}

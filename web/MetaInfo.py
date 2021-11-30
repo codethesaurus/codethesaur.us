@@ -13,7 +13,17 @@ class MetaInfo:
             "web", "thesauruses", "meta_info.json")
         with open(meta_info_file_path, 'r') as meta_file:
             meta_data = meta_file.read()
-        self.data_structures = json.loads(meta_data)["structures"]
+        meta_info_json = json.loads(meta_data)
+        self.data_structures = meta_info_json["structures"]
+        self.languages = meta_info_json["languages"]
+
+    def language_friendly_name(self, language_key):
+        """
+        Given a structure key (from meta_info.json), returns the language's human-friendly name
+        :param language_key: ID of the language located in the meta_info.json file
+        :return: string with the human-friendly name
+        """
+        return self.languages[language_key]["name"]
 
     def structure_friendly_name(self, structure_key):
         """
@@ -21,8 +31,7 @@ class MetaInfo:
         :param structure_key: ID of the structure located in the meta_info.json file
         :return: string with the human-friendly name
         """
-        index = list(self.data_structures.values()).index(structure_key)
-        return list(self.data_structures.keys())[index]
+        return self.data_structures[structure_key]
 
     def structure(self, structure_key):
         """

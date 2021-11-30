@@ -20,14 +20,20 @@ def index(request):
     """
     with open("web/thesauruses/meta_info.json", 'r') as meta_file:
         meta_data = meta_file.read()
-    meta_data_langs = json.loads(meta_data)["languages"]
-    meta_structures = json.loads(meta_data)["structures"]
+    meta_info = json.loads(meta_data)
+    meta_data_langs = {
+        id: {
+            "name": lang["name"],
+            "versions": ", ".join(lang["versions"])
+        }
+        for (id, lang) in meta_info["languages"].items()
+    }
     random_langs = random.sample(list(meta_data_langs.values()), k=3)
 
     content = {
         'title': 'Welcome',
         'languages': meta_data_langs,
-        'structures': meta_structures,
+        'structures': meta_info["structures"],
         'randomLanguages': random_langs,
         'description': 'Code Thesaurus: A polyglot developer reference tool'
     }
@@ -53,21 +59,21 @@ def compare(request):
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
-    lang1 = Language(escape(strip_tags(request.GET.get('lang1', ''))))
-    lang2 = Language(escape(strip_tags(request.GET.get('lang2', ''))))
+    lang1_string = escape(strip_tags(request.GET.get('lang1', '')))
+    lang2_string = escape(strip_tags(request.GET.get('lang2', '')))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
 
-    error_message = ""
+    errors = []
     if not structure_query_string:
-        error_message = "The URL didn't specify a structure/concept to look up.<br />"
-    if not lang1.has_key():
-        error_message = error_message + "The URL didn't specify a first language to look up.<br />"
-    if not lang2.has_key():
-        error_message = error_message + "The URL didn't specify a second language to look up.<br />"
+        errors.append("The URL didn't specify a structure/concept to look up.")
+    if not lang1_string:
+        errors.append("The URL didn't specify a first language to look up.")
+    if not lang2_string:
+        errors.append("The URL didn't specify a second language to look up.")
 
-    if error_message:
+    if errors:
         error_page_data = {
-            "message": error_message
+            "errors": errors
         }
         response = render(request, 'errormisc.html', error_page_data)
 
@@ -76,58 +82,56 @@ def compare(request):
     try:
         metainfo = MetaInfo()
         meta_structure = metainfo.structure(structure_query_string)
-    # pylint: disable=broad-except
-    except Exception:
+    except (FileNotFoundError):
         error_page_data = {
-            "message": "The structure/concept isn't valid. Double-check your URL and try again.<br />"
+            "errors": ["The structure/concept isn't valid. Double-check your URL and try again."]
         }
         response = render(request, "errormisc.html", error_page_data)
 
         return HttpResponseNotFound(response)
 
     try:
-        lang1.load_structure(meta_structure.key)
-    # pylint: disable=broad-except
-    except Exception:
-        error_message = ""
-        if lang1.lang_exists():
-            error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
-                first language ({lang1.key}) yet.<br /><br /> \
-                Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
-                Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}'>https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}</a>"
-
-        else:
-            error_message = f"The first language ({lang1.key}) isn't valid. \
-                Double-check your URL and try again.<br />"
+        lang1 = Language(lang1_string, metainfo.language_friendly_name(lang1_string))
+        lang1.load_concepts(meta_structure.key)
+    except (FileNotFoundError):
+        response = render(request, "error_missing_structure.html", {
+            "structures": [{
+                "name": meta_structure.friendly_name,
+                "lang": lang1_string,
+                "key": meta_structure.key
+            }]
+        })
+        return HttpResponseNotFound(response)
+    except (KeyError):
         error_page_data = {
-            "message": error_message
+            "errors": [f"The first language ({lang1_string}) isn't valid. \
+                Double-check your URL and try again."]
         }
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
 
     try:
-        lang2.load_structure(meta_structure.key)
-    # pylint: disable=broad-except
-    except Exception:
-        error_message = ""
-        if lang2.lang_exists():
-            error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
-               second language ({lang2.key} yet.<br /><br /> \
-               Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
-               Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang2.key}'>https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang2.key}</a>"
-        else:
-            error_message = f"The second language ({lang2.key}) isn't valid. \
-                Double-check your URL and try again.<br />"
+        lang2 = Language(lang2_string, metainfo.language_friendly_name(lang2_string))
+        lang2.load_concepts(meta_structure.key)
+    except (FileNotFoundError):
+        response = render(request, "error_missing_structure.html", {
+            "structures": [{
+                "name": meta_structure.friendly_name,
+                "lang": lang2_string,
+                "key": meta_structure.key
+            }]
+        })
+        return HttpResponseNotFound(response)
+    except (KeyError):
         error_page_data = {
-            "message": error_message
+            "errors": [f"The second language ({lang2_string}) isn't valid. \
+                Double-check your URL and try again."]
         }
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
 
     both_categories = []
     both_concepts = []
-    # Ideally we should set default value of lang dict here
-    # and not in template now that issue #27 is resolved
 
 
     for (category_key, category) in meta_structure.categories.items():
@@ -147,7 +151,7 @@ def compare(request):
         "lang1_friendlyname": lang1.friendly_name,
         "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
-        "description": "Code Thesaurus: Comparing " + lang1.friendly_name + " and " + lang2.friendly_name
+        "description": f"Code Thesaurus: Comparing {lang1.friendly_name} and {lang2.friendly_name}"
     }
 
     return render(request, 'compare.html', response)
@@ -159,17 +163,17 @@ def reference(request):
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
-    lang = Language(escape(strip_tags(request.GET.get('lang', ''))))
+    lang_string = escape(strip_tags(request.GET.get('lang', '')))
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
 
-    error_message = ""
+    errors = []
     if not structure_query_string:
-        error_message = "The URL didn't specify a structure/concept to look up.<br />"
-    if not lang.has_key():
-        error_message = error_message + "The URL didn't specify a language to look up.<br />"
-    if error_message:
+        errors.append("The URL didn't specify a structure/concept to look up.")
+    if not lang_string:
+        errors.append("Thr URL didn't specify a language to look up.")
+    if errors:
         error_page_data = {
-            "message": error_message
+            "errors": errors
         }
         response = render(request, 'errormisc.html', error_page_data)
 
@@ -178,32 +182,30 @@ def reference(request):
     try:
         metainfo = MetaInfo()
         meta_structure = metainfo.structure(structure_query_string)
-    # pylint: disable=broad-except
-    except Exception:
+    except (FileNotFoundError):
         error_page_data = {
-            "message": "The structure/concept isn't valid. Double-check your URL and try again.<br />"
+            "errors": ["The structure/concept isn't valid. Double-check your URL and try again."]
         }
         response = render(request, "errormisc.html", error_page_data)
 
         return HttpResponseNotFound(response)
 
     try:
-        lang.load_structure(meta_structure.key)
-    # pylint: disable=broad-except
-    except Exception:
-        error_message = ""
-        if lang.lang_exists():
-            error_message = f"There is no entry about this structure/concept ({structure_query_string}) for the \
-                language ({lang.key}) yet.<br /><br /> \
-                Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
-                Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at \
-                <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang.key}'> \
-                https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang.key}</a>"
-        else:
-            error_message = f"The language ({lang.key}) isn't valid. \
-                Double-check your URL and try again.<br />"
+        lang = Language(
+            lang_string, metainfo.language_friendly_name(lang_string))
+        lang.load_concepts(meta_structure.key)
+    except (FileNotFoundError):
+        ctx = {
+            "name": meta_structure.friendly_name,
+            "lang": lang_string,
+            "key": meta_structure.key
+        }
+        response = render(request, "error_missing_structure.html", ctx)
+        return HttpResponseNotFound(response)
+    except (KeyError):
         error_page_data = {
-            "message": error_message
+            "errors": [f"The language ({lang_string}) isn't valid. \
+                        Double-check your URL and try again."]
         }
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
@@ -214,7 +216,7 @@ def reference(request):
         concepts = [concept_reference(id, name, lang) for (id, name) in category.items()]
         categories.append({
             "id": category_key,
-            "concepts": concepts
+            "concepts": meta_structure.categories[category_key]
         })
 
     response = {
