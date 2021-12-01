@@ -227,7 +227,7 @@ def reference(request):
                     for (id, name) in category.items()]
         categories.append({
             "id": category_key,
-            "concepts": meta_structure.categories[category_key]
+            "concepts": concepts
         })
 
     response = {
