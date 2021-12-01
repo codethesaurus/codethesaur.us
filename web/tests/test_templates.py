@@ -10,7 +10,7 @@ class TestTemplates(TestCase):
         """test the concept_card template"""
         # no code and no comment
         rendered_template_1 = render_to_string("concept_card.html", {}).strip()
-        self.assertEquals(
+        self.assertEqual(
             rendered_template_1,
             "<div class=\"card\">\n"
             "    <div class=\"card-body\">\n"
@@ -24,7 +24,7 @@ class TestTemplates(TestCase):
         rendered_template_2 = render_to_string(
             "concept_card.html", {"code": "<b>I am bold!</b>"}
         ).strip()
-        self.assertEquals(
+        self.assertEqual(
             rendered_template_2,
             "<div class=\"card\">\n"
             "    <div class=\"card-body\">\n"
@@ -40,7 +40,7 @@ class TestTemplates(TestCase):
         rendered_template_3 = render_to_string(
             "concept_card.html", {"comment": "I am **bold** and *italic*, `let x = 1`."}
         ).strip()
-        self.assertEquals(
+        self.assertEqual(
             rendered_template_3,
             "<div class=\"card\">\n"
             "    <div class=\"card-body\">\n"
@@ -62,7 +62,7 @@ class TestTemplates(TestCase):
                 "comment": "I am **bold** and *italic*, `let x = 1`."
             }
         ).strip()
-        self.assertEquals(
+        self.assertEqual(
             rendered_template_4,
             "<div class=\"card\">\n"
             "    <div class=\"card-body\">\n"
@@ -85,7 +85,7 @@ class TestTemplates(TestCase):
                 "comment": "I am a [url](http://url.com), I am not a url.py"
             }
         ).strip()
-        self.assertEquals(
+        self.assertEqual(
             rendered_template_5,
             "<div class=\"card\">\n"
             "    <div class=\"card-body\">\n"

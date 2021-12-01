@@ -1,3 +1,4 @@
+"""Urls provided by codethesaur.us"""
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static

@@ -3,6 +3,7 @@ import json
 import os
 
 
+# pylint: disable=too-few-public-methods
 class MetaStructure:
     """
     Holds info about how the structure is divided into categories and
@@ -22,7 +23,7 @@ class MetaStructure:
         self.friendly_name = friendly_name
         meta_structure_file_path = os.path.join(
             "web", "thesauruses", "_meta", structure_key) + ".json"
-        with open(meta_structure_file_path, 'r') as meta_structure_file:
+        with open(meta_structure_file_path, 'r', encoding='UTF-8') as meta_structure_file:
             data = meta_structure_file.read()
             # parse file
             meta_structure_file_json = json.loads(data)
@@ -77,7 +78,7 @@ class Language:
         """
         file_path = os.path.join(
             "web", "thesauruses", self.key, structure_key) + ".json"
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='UTF-8') as file:
             data = file.read()
             # parse file
             file_json = json.loads(data)
@@ -157,7 +158,11 @@ class MetaInfo:
 
         :rtype: None
         """
-        with open("web/thesauruses/meta_info.json", 'r') as meta_file:
+        with open(
+            "web/thesauruses/meta_info.json",
+            'r',
+            encoding='UTF-8'
+        ) as meta_file:
             meta_data = meta_file.read()
         self.data_structures = json.loads(meta_data)["structures"]
 

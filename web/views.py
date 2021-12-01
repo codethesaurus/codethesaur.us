@@ -1,7 +1,13 @@
+"""codethesaur.us views"""
 import json
 import random
 
-from django.http import HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound, HttpResponseServerError
+from django.http import (
+    HttpResponseBadRequest,
+    HttpResponseForbidden,
+    HttpResponseNotFound,
+    HttpResponseServerError
+)
 from django.shortcuts import render
 from django.utils.html import escape, strip_tags
 from pygments import highlight
@@ -13,12 +19,18 @@ from web.models import Language, MetaInfo
 
 def format_code_for_display(concept_key, lang):
     """
-    Returns the formatted HTML formatted syntax-highlighted text for a concept key (from a meta language file) and a language
+    Returns the formatted HTML formatted syntax-highlighted text for a concept
+    key (from a meta language file) and a language
+
     :param concept_key: name of the key to format
-    :param lang: language to format it (in meta language/syntax highlighter format)
+    :param lang: language to format it (in meta language/syntax highlighter
+            format)
     :return: string with code with applied HTML formatting
     """
-    if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
+    if (
+            lang.concept_unknown(concept_key) or
+            lang.concept_code(concept_key) is None
+    ):
         return "Unknown"
     if lang.concept_implemented(concept_key):
         return highlight(
@@ -31,7 +43,9 @@ def format_code_for_display(concept_key, lang):
 
 def format_comment_for_display(concept_key, lang):
     """
-    Returns the formatted HTML formatted comment text for a concept key (from a meta language file) and a language
+    Returns the formatted HTML formatted comment text for a concept key (from a
+            meta language file) and a language
+
     :param concept_key: the concept key located in the meta language JSON file
     :param lang: the ID of the language to fetch concept key from
     :return: formatted HTML for the comment
@@ -44,6 +58,7 @@ def format_comment_for_display(concept_key, lang):
 def index(request):
     """
     Renders the home page (/)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -66,6 +81,7 @@ def index(request):
 def about(request):
     """
     Renders the about page (/about)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -76,9 +92,11 @@ def about(request):
     return render(request, 'about.html', content)
 
 
+# pylint: disable=too-many-branches
 def compare(request):
     """
     Renders the page comparing two language structures (/compare)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -120,7 +138,7 @@ def compare(request):
     except Exception:
         error_message = ""
         if lang1.lang_exists():
-             error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
+            error_message = f"There is no entry about this structure/concept ({meta_structure.key}) for the \
                 first language ({lang1.key}) yet.<br /><br /> \
                 Would you like to add it? Check out our contribution guidelines <a href='https://docs.codethesaur.us/contributing/'>here</a>.<br />\
                 Then, when you're ready, you can start by adding a file named `{meta_structure.key}.json` at <a href='https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}'>https://github.com/codethesaurus/codethesaur.us/new/main/web/thesauruses/{lang1.key}</a>"
@@ -183,7 +201,7 @@ def compare(request):
 
     # DB equivalent of full outer join
     response = {
-        "title": "Comparing " + lang1.friendly_name + " and " + lang2.friendly_name,
+        "title": f"Comparing {lang1.friendly_name} and {lang2.friendly_name}",
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
         "lang1": lang1.key,
@@ -192,7 +210,8 @@ def compare(request):
         "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
         "concepts": both_concepts,
-        "description": "Code Thesaurus: Comparing " + lang1.friendly_name + " and " + lang2.friendly_name
+        "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
+                and {lang2.friendly_name}"
     }
 
     return render(request, 'compare.html', response)
@@ -201,6 +220,7 @@ def compare(request):
 def reference(request):
     """
     Renders the page showing one language structure for reference (/reference)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -255,14 +275,15 @@ def reference(request):
 
     categories = []
     concepts = []
-    
+
     all_category_keys = list(meta_structure.categories.keys())
     all_concept_keys = list(meta_structure.concepts.keys())
 
     for category_key in all_category_keys:
         categories.append({
             "id": category_key,
-            "concepts": meta_structure.categories[category_key]  # meta_lang_categories[category_key]
+            # meta_lang_categories[category_key]
+            "concepts": meta_structure.categories[category_key]
         })
 
     for concept_key in all_concept_keys:
@@ -274,23 +295,23 @@ def reference(request):
         })
 
     response = {
-        "title": "Reference for " + lang.key,
+        "title": f"Reference for {lang.key}",
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
         "lang": lang.key,
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
         "concepts": concepts,
-        "description": "Code Thesaurus: Reference for " + lang.key
+        "description": f"Code Thesaurus: Reference for {lang.key}"
     }
 
     return render(request, 'reference.html', response)
 
 
-# pylint: disable=unused-argument
-def error_handler_400_bad_request(request, exception):
+def error_handler_400_bad_request(request, _exception):
     """
     Renders the page for a generic client error (HTTP 400)
+
     :param request: HttpRequest object
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
@@ -299,10 +320,10 @@ def error_handler_400_bad_request(request, exception):
     return HttpResponseBadRequest(response)
 
 
-# pylint: disable=unused-argument
-def error_handler_403_forbidden(request, exception):
+def error_handler_403_forbidden(request, _exception):
     """
     Renders the page for a forbidden error (HTTP 403)
+
     :param request: HttpRequest object
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
@@ -311,10 +332,10 @@ def error_handler_403_forbidden(request, exception):
     return HttpResponseForbidden(response)
 
 
-# pylint: disable=unused-argument
-def error_handler_404_not_found(request, exception):
+def error_handler_404_not_found(request, _exception):
     """
     Renders the page for a file not found error (HTTP 404)
+
     :param request: HttpRequest object
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
@@ -326,6 +347,7 @@ def error_handler_404_not_found(request, exception):
 def error_handler_500_server_error(request):
     """
     Renders the page for a generic server error (HTTP 500)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
