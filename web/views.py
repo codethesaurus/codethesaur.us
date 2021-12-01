@@ -8,8 +8,7 @@ from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 
-from web.Language import Language
-from web.MetaInfo import MetaInfo
+from web.models import Language, MetaInfo
 
 
 def format_code_for_display(concept_key, lang):
