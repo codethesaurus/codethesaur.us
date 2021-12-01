@@ -1,11 +1,19 @@
+"""models of codethesaur.us"""
 import json
 import os
 
 
 class Language:
+    """
+    Represents a programming language and knows how to fetch concepts for a
+    structure key
+    """
+
     def __init__(self, key):
         """
-        Initialize the Language object, which will contain concepts for a given structure
+        Initialize the Language object, which will contain concepts for a given
+        structure
+
         :param key: ID of the language in the meta_info.json file
         """
 
@@ -17,15 +25,18 @@ class Language:
     def has_key(self):
         """
         Returns a Boolean if the language key exists or not
+
         :rtype: bool
         """
 
-        # Empty string is falsy, but text is truthy, but would return return text
+        # Empty string is falsy, but text is truthy, but would return text
         return bool(self.key)
 
     def lang_exists(self):
         """
-        Returns a Boolean if the language (self.key) exists in the thesauruses or not
+        Returns a Boolean if the language (self.key) exists in the thesauruses
+        or not
+
         :rtype: bool
         """
         return os.path.exists(os.path.join("web", "thesauruses", self.key))
@@ -33,6 +44,7 @@ class Language:
     def load_structure(self, structure_key):
         """
         Loads the structure file into the Language object
+
         :param structure_key: the ID for the structure to load
         """
         file_path = os.path.join(
@@ -47,9 +59,12 @@ class Language:
 
     def concept(self, concept_key):
         """
-        Get the concept (including code and comment) from the concept file for that Language
+        Get the concept (including code and comment) from the concept file for
+        that Language
+
         :param concept_key: key for the concept to look up
-        :returns: a dict containing the code and comment, and possibly the 'not-implemented' flag. They are empty strings if not specified
+        :returns: a dict containing the code and comment, and possibly the
+            'not-implemented' flag. They are empty strings if not specified
         :rtype: object
         """
         if self.concepts.get(concept_key) is None:
@@ -68,6 +83,7 @@ class Language:
     def concept_unknown(self, concept_key):
         """
         Returns a Boolean if the concept is not known
+
         :param concept_key: ID for the concept
         :return: Boolean if the concept is not known
         """
@@ -76,18 +92,20 @@ class Language:
     def concept_implemented(self, concept_key):
         """
         Returns a Boolean if the concept is implemented
+
         :param concept_key: ID for the concept
         :return: Boolean if the language defines this concept
         """
-        return self.concept(concept_key).get("not-implemented", False) is False
+        return not self.concept(concept_key).get("not-implemented", False)
 
     def concept_code(self, concept_key):
         """
         Returns the code portion of the provided concept
+
         :param concept_key: ID for the concept
         :return: the string containing the concept's code
         """
-        code =  self.concept(concept_key).get("code")
+        code = self.concept(concept_key).get("code")
         if isinstance(code, list):
             code = "\n".join(code)
         return code
@@ -95,8 +113,8 @@ class Language:
     def concept_comment(self, concept_key):
         """
         Returns the comment portion of the provided concept
+
         :param concept_key: ID for the concept
         :return: the string containing the concept's comment
         """
         return self.concept(concept_key).get("comment", "")
-
