@@ -3,11 +3,18 @@ import os
 
 
 class MetaStructure:
+    """
+    Holds info about how the structure is divided into categories and
+    concepts
+    """
     def __init__(self, structure_key, friendly_name):
         """
-        Inits the MetaStructure object by loading in the concepts and categories from a language's structure file
+        Inits the MetaStructure object by loading in the concepts and
+        categories from a language's structure file
+
         :param structure_key: key for the structure
-        :param friendly_name: the human-friendly name for the specified structure
+        :param friendly_name: the human-friendly name for the specified
+            structure
         """
         self.key = structure_key
         self.friendly_name = friendly_name
