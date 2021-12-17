@@ -4,6 +4,7 @@
     "BASH (version 3.2.57):": "bash",
     "C++ (version C++17, generic)": "cpp",
     "C# (version 9)": "csharp",
+    "Clojure (version 1.10.3)": "clojure",
     "Go (version 1.16)": "go",
     "Haskell (version 2010)": "haskell",
     "Java (version 15)": "java",
