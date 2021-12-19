@@ -1,8 +1,10 @@
+"""Generator functions for thesaurus files"""
 import json
 from web.MetaInfo import MetaInfo
 
 
 def generate_language_template(language_id, structure_id, version=None):
+    """Generate a template for the given language and structure"""
     meta_info = MetaInfo()
     if structure_id not in meta_info.data_structures:
         raise ValueError
@@ -20,7 +22,10 @@ def generate_language_template(language_id, structure_id, version=None):
         meta['language_version'] = version
 
     concepts = {
-        id: {'code': [""]}
+        id: {
+            'name': name,
+            'code': [""],
+        }
         for category in meta_info.structure(structure_id).categories.values()
         for (id, name) in category.items()
     }
@@ -29,6 +34,7 @@ def generate_language_template(language_id, structure_id, version=None):
 
 
 def generate_meta_template(structure_id, structure_name):
+    """Generate a template for a `meta file`"""
     meta = {
         'structure': structure_id,
         'structure_name': structure_name,
