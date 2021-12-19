@@ -8,65 +8,81 @@
   "concepts": {
     "if_conditional": {
       "code": "if (condition) {\n    statements;\n}",
-      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+      "comment": "Note that `condition` is truthy and not a strict boolean expression.",
+      "name": "If conditional"
     },
     "if_else_conditional": {
       "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}",
-      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+      "comment": "Note that `condition` is truthy and not a strict boolean expression.",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
       "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}",
-      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+      "comment": "Note that `condition` is truthy and not a strict boolean expression.",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
       "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n    statements;\n}",
-      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+      "comment": "Note that `condition` is truthy and not a strict boolean expression.",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
       "code": "switch (expression) {\n  case x:\n    statements;\n    break;\n  case y:\n    statements;\n    break;\n  default:\n    statements;\n}",
-      "comment": "Expression is compared with cases using the strict === comparator."
+      "comment": "Expression is compared with cases using the strict === comparator.",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
       "code": "condition ? exprIfTrue : exprIfFalse",
-      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+      "comment": "Note that `condition` is truthy and not a strict boolean expression.",
+      "name": "Ternary conditional"
     },
     "while_loop": {
       "code": "while (condition) {\n    statements;\n}",
-      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+      "comment": "Note that `condition` is truthy and not a strict boolean expression.",
+      "name": "While loop"
     },
     "do_while_loop": {
       "code": "do {\n    statements;\n} while (condition);",
-      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+      "comment": "Note that `condition` is truthy and not a strict boolean expression.",
+      "name": "Do/While loop"
     },
     "until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Do/Until loop"
     },
     "for_loop": {
       "code": "for (initialization_statement; condition; update_statement) {\n    statements;\n}",
-      "comment": "Note that `condition` is truthy and not a strict boolean expression."
+      "comment": "Note that `condition` is truthy and not a strict boolean expression.",
+      "name": "For loop"
     },
     "foreach_loop": {
       "code": "// Example 1\nfor(const element of array) {\n    statements;\n}\n// Example 2\nfor(const propertyName in object) {\n    statements;\n}",
-      "comment": "The for...of loop is intended for arrays and provides the entire element. The for...in loop works on objects and arrays and returns the key, requiring the value to be dereferenced such as object[propertyName]."
+      "comment": "The for...of loop is intended for arrays and provides the entire element. The for...in loop works on objects and arrays and returns the key, requiring the value to be dereferenced such as object[propertyName].",
+      "name": "Foreach loop"
     },
     "each_iteration": {
       "code": "array.forEach((currentValue: Type, index: number, arr: Type): void => {\n    /* operate on array element */\n}, thisValue)",
-      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function."
+      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function.",
+      "name": "Each iteration"
     },
     "map_iteration": {
       "code": "array.map((currentValue: OldType, index: number, arr: OldType[]): NewType => {\n    /* return new value/type for this array index */\n}, thisValue)",
-      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function."
+      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function.",
+      "name": "Map iteration"
     },
     "filter_iteration": {
       "code": "array.filter((currentValue: Type, index: number, arr: Type[]): boolean => {\n    /* return true if this value should remain in the array */\n}, thisValue)",
-      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function."
+      "comment": "The object passed as `thisValue` will become the value of `this` for operations within the function.",
+      "name": "Filter iteration"
     },
     "fold_iteration": {
       "code": "array.reduce((accumulator: NewType, currentValue: OldType, index: number, array: OldType[]) => {\n    return accumulator\n}, initialValue)",
-      "comment": "The function body can be anything, but the return value will be used as the accumulator for the next array value processed. The initialValue is of `NewType`."
+      "comment": "The function body can be anything, but the return value will be used as the accumulator for the next array value processed. The initialValue is of `NewType`.",
+      "name": "Fold iteration"
     }
   }
 }

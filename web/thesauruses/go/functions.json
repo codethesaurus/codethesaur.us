@@ -7,46 +7,60 @@
   },
   "concepts": {
     "void_function_no_parameters": {
-      "code": "func function_name() {}"
+      "code": "func function_name() {}",
+      "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
-      "code": "func function_name(x int, y string) {}"
+      "code": "func function_name(x int, y string) {}",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_with_keyword_parameters": {
-      "code": "type keywordArgs struct {A, B, C int}\n\nfunc function_name(args *keywordArgs) {}"
+      "code": "type keywordArgs struct {A, B, C int}\n\nfunc function_name(args *keywordArgs) {}",
+      "name": "Function that does not return a value and that takes 0 or more defined keyword parameters"
     },
     "void_function_variable_parameters": {
-      "code": "func function_name (x ...int) {}"
+      "code": "func function_name (x ...int) {}",
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "return_value_function_no_parameters": {
-      "code": "func function_name () return_type {return value}"
+      "code": "func function_name () return_type {return value}",
+      "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
-      "code": "func function_name (x int, y string) return_type {return value}"
+      "code": "func function_name (x int, y string) return_type {return value}",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "return_value_function_with_keyword_parameters": {
-      "code": "type keywordArgs struct {A, B, C int}\n\nfunc function_name(args *keywordArgs) return_type {return value}"
+      "code": "type keywordArgs struct {A, B, C int}\n\nfunc function_name(args *keywordArgs) return_type {return value}",
+      "name": "Function that returns a value and takes 0 or more defined keyword parameters"
     },
     "return_value_function_variable_parameters": {
-      "code": "func (x ...int) return_type {return value}"
+      "code": "func (x ...int) return_type {return value}",
+      "name": "Function that returns a value and takes an unknown number of parameters"
     },
     "anonymous_function_no_parameters": {
-      "code": "func () {}"
+      "code": "func () {}",
+      "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
-      "code": "func (x int, y string) {}"
+      "code": "func (x int, y string) {}",
+      "name": "Anonymous function that takes 1 or more defined parameters"
     },
     "anonymous_function_with_keyword_parameters": {
-      "code": "type keywordArgs struct {A, B, C int}\n\nfunc (args *keywordArgs) {}"
+      "code": "type keywordArgs struct {A, B, C int}\n\nfunc (args *keywordArgs) {}",
+      "name": "Anonymous function that takes 0 or more defined keyword parameters"
     },
     "anonymous_function_variable_parameters": {
-      "code": "func (x ...int) {}"
+      "code": "func (x ...int) {}",
+      "name": "Anonymous function that takes an unknown number of parameters"
     },
     "call_subroutine": {
-      "code": "func_name()"
+      "code": "func_name()",
+      "name": "Call subroutine"
     },
     "return_from_subroutine": {
-      "code": "return"
+      "code": "return",
+      "name": "Return from subroutine"
     }
   }
 }

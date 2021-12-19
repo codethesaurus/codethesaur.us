@@ -8,56 +8,72 @@
   "concepts": {
     "if_conditional": {
       "not-implemented": true,
-      "comment": "Everything in Haskell is an expression and has to return something thus there needs to be a `else` clause"
+      "comment": "Everything in Haskell is an expression and has to return something thus there needs to be a `else` clause",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if condition\n    then expression\n    else expression"
+      "code": "if condition\n    then expression\n    else expression",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
       "not-implemented": true,
-      "comment": "See \"If conditional\""
+      "comment": "See \"If conditional\"",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if condition\n    then expression\n    else if condition\n        then expression\n        else expression"
+      "code": "if condition\n    then expression\n    else if condition\n        then expression\n        else expression",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
-      "code": "case expression of\n    \"value1\" -> expression\n    \"value2\" | guard -> expression\n    \"value2\" | another_guard -> expression\n    _ -> expression -- default case"
+      "code": "case expression of\n    \"value1\" -> expression\n    \"value2\" | guard -> expression\n    \"value2\" | another_guard -> expression\n    _ -> expression -- default case",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
-      "code": "if condition\n    then expression\n    else expression"
+      "code": "if condition\n    then expression\n    else expression",
+      "name": "Ternary conditional"
     },
     "while_loop": {
       "comment": "while `whileM` is not exactly a loop it allows for very similar code, `monadBool` is a monad that returns a Bool and gets run until it returns `False`",
-      "code": "whileM monadBool"
+      "code": "whileM monadBool",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Do/While loop"
     },
     "until_loop": {
       "comment": "like `whileM` this only behaves similarly to a until loop",
-      "code": "untilJustM monadMaybeA"
+      "code": "untilJustM monadMaybeA",
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Do/Until loop"
     },
     "for_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "For loop"
     },
     "foreach_loop": {
-      "code": "forM traversable function"
+      "code": "forM traversable function",
+      "name": "Foreach loop"
     },
     "each_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Each iteration"
     },
     "map_iteration": {
-      "code": "map function list"
+      "code": "map function list",
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "code": "filter function list"
+      "code": "filter function list",
+      "name": "Filter iteration"
     },
     "fold_iteration": {
       "comment": "haskell also supplies `foldl` and `foldl'` to provide folding with left association",
-      "code": "foldr function start foldable"
+      "code": "foldr function start foldable",
+      "name": "Fold iteration"
     }
   }
 }

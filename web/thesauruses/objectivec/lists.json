@@ -7,267 +7,351 @@
   },
   "concepts": {
     "name_of_ordered_mutable_list": {
-      "code": "NSMutableArray"
+      "code": "NSMutableArray",
+      "name": "What is a ordered mutable list called?"
     },
     "create_a_ordered_mutable_list": {
-      "code": "NSMutable *fullName = [NSMutableArray arrWtihObj: @\"Jack\",@\"Sparrow\",nil]"
+      "code": "NSMutable *fullName = [NSMutableArray arrWtihObj: @\"Jack\",@\"Sparrow\",nil]",
+      "name": "Create the list"
     },
     "ordered_mutable_list_start_number": {
-      "code": "0 Based indexing"
+      "code": "0 Based indexing",
+      "name": "What number does it start at?"
     },
     "ordered_mutable_list_can_be_appended": {
-      "code": "Yes"
+      "code": "Yes",
+      "name": "Can you append to it?"
     },
     "ordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "Yes"
+      "code": "Yes",
+      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_ordered_mutable_list": {
-      "code": "NSMutableArray arr = [Array1 objectAtIndex:i] objectIndex:j];"
+      "code": "NSMutableArray arr = [Array1 objectAtIndex:i] objectIndex:j];",
+      "name": "Access element by index"
     },
     "insert_into_beginning_of_ordered_mutable_list": {
       "code": "insert(_:at:)",
-      "comment": "Inserts a given object into the array’s contents at a given index."
+      "comment": "Inserts a given object into the array\u2019s contents at a given index.",
+      "name": "Insert element at beginning"
     },
     "insert_into_end_of_ordered_mutable_list": {
       "code": "add(_:)",
-      "comment": "Inserts a given object at the end of the array."
+      "comment": "Inserts a given object at the end of the array.",
+      "name": "Insert element at end"
     },
     "insert_into_middle_of_ordered_mutable_list": {
       "code": "insert(_:at:)",
-      "comment": "Inserts a given object into the array’s contents at a given index."
+      "comment": "Inserts a given object into the array\u2019s contents at a given index.",
+      "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_ordered_mutable_list": {
       "code": "removeObject(at:)",
-      "comment": "Removes the object at index."
+      "comment": "Removes the object at index.",
+      "name": "Erase first element"
     },
     "erase_element_at_end_of_ordered_mutable_list": {
       "code": "removeLastObject()",
-      "comment": "Removes the object with the highest-valued index in the array"
+      "comment": "Removes the object with the highest-valued index in the array",
+      "name": "Erase last element"
     },
     "erase_element_in_middle_of_ordered_mutable_list": {
       "code": "removeObject(at:)",
-      "comment": "Removes the object at index."
+      "comment": "Removes the object at index.",
+      "name": "Erase element in the middle"
     },
     "swap_elements_in_ordered_mutable_list": {
       "code": "exchangeObjectAtIndex:withObjectAtIndex",
-      "comment": "Exchanges the objects in the array at given indexes."
+      "comment": "Exchanges the objects in the array at given indexes.",
+      "name": "Swap two elements"
     },
     "delete_ordered_mutable_list": {
       "code": "removeObjectsInArray",
-      "comment": "Removes from the receiving array the objects in another given array."
+      "comment": "Removes from the receiving array the objects in another given array.",
+      "name": "Delete the list"
     },
     "name_of_unordered_mutable_list": {
-      "code": "NSMutableSet"
+      "code": "NSMutableSet",
+      "name": "What is a unordered mutable list called?"
     },
     "create_a_unordered_mutable_list": {
-      "code": "NSMutableSet *set = [NSMutableSet setWithCapacity:2];NSLog(@\"%@\",set);"
+      "code": "NSMutableSet *set = [NSMutableSet setWithCapacity:2];NSLog(@\"%@\",set);",
+      "name": "unordered"
     },
     "unordered_mutable_list_start_number": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What number does it start at?"
     },
     "unordered_mutable_list_can_be_appended": {
-      "code": "Yes"
+      "code": "Yes",
+      "name": "Can you append to it?"
     },
     "unordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Access element by index"
     },
     "insert_into_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert element at beginning"
     },
     "insert_into_end_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert element at end"
     },
     "insert_into_middle_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase first element"
     },
     "erase_element_at_end_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase last element"
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase element in the middle"
     },
     "swap_elements_in_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Swap two elements"
     },
     "delete_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "name_of_ordered_immutable_list": {
-      "code": "NSArray"
+      "code": "NSArray",
+      "name": "What is a ordered immutable list called?"
     },
     "create_a_ordered_immutable_list": {
-      "code": "let array: NSArray = [someObject, \"Hello, World!\", 42]"
+      "code": "let array: NSArray = [someObject, \"Hello, World!\", 42]",
+      "name": "Create the list"
     },
     "ordered_immutable_list_start_number": {
-      "code": "0 based Indexing"
+      "code": "0 based Indexing",
+      "name": "What number does it start at?"
     },
     "access_element_in_ordered_immutable_list": {
-      "code": "object(at:)"
+      "code": "object(at:)",
+      "name": "Access element by index"
     },
     "delete_ordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "name_of_unordered_immutable_list": {
-      "code": "NSset"
+      "code": "NSset",
+      "name": "What is a unordered immutable list called?"
     },
     "create_a_unordered_immutable_list": {
-      "code": "NSSet *set = [NSSet set];NSLog(@\"%@\",set);"
+      "code": "NSSet *set = [NSSet set];NSLog(@\"%@\",set);",
+      "name": "Create the list"
     },
     "unordered_immutable_list_start_number": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What number does it start at?"
     },
     "access_element_in_unordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Access element by index"
     },
     "delete_unordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "name_of_mutable_hashed_list": {
-      "code": "NSHashTable"
+      "code": "NSHashTable",
+      "name": "What is a mutable hashed list called?"
     },
     "create_a_mutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create the list"
     },
     "insert_element_to_mutable_hashed_list": {
-      "code": "add(_:)"
+      "code": "add(_:)",
+      "name": "Insert an element"
     },
     "erase_element_from_mutable_hashed_list": {
-      "code": "remove(_:)"
+      "code": "remove(_:)",
+      "name": "Erase an element from the list"
     },
     "delete_mutable_hashed_list": {
-      "code": "removeAllObjects()"
+      "code": "removeAllObjects()",
+      "name": "Delete the list"
     },
     "name_of_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What is an immutable hashed list called?"
     },
     "create_a_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create the list"
     },
     "insert_element_to_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert an element"
     },
     "erase_element_from_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase an element from the list"
     },
     "delete_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "create_a_mutable_set": {
-      "code": "NSMutableSet"
+      "code": "NSMutableSet",
+      "name": "Create a mutable key/value set"
     },
     "get_key_from_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get key"
     },
     "get_value_from_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get value"
     },
     "get_all_keys_from_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get all keys"
     },
     "get_all_values_from_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get all values"
     },
     "swap_key_and_value_in_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Swap a key and value"
     },
     "delete_mutable_set": {
-      "code": "remove(_:)"
+      "code": "remove(_:)",
+      "name": "Delete the set"
     },
     "create_a_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create an immutable key/value set"
     },
     "get_key_from_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get key"
     },
     "get_value_from_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get value"
     },
     "get_all_keys_from_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get all keys"
     },
     "get_all_values_from_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get all values"
     },
     "swap_key_and_value_in_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Swap a key and value"
     },
     "delete_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the set"
     },
     "find_element_at_position": {
       "code": "indexOfObjectIdenticalTo:"
     },
     "find_element_by_value": {
-      "code": "containsObject:"
+      "code": "containsObject:",
+      "name": "Find/search for an element by value"
     },
     "find_minimum_element": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Find the minimum value in a list"
     },
     "find_maximum_element": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Find the maximum value in a list"
     },
     "convert_list_to_string": {
-      "code": "NSString * result = [[array valueForKey:@\"description\"] componentsJoinedByString:@\"\"];"
+      "code": "NSString * result = [[array valueForKey:@\"description\"] componentsJoinedByString:@\"\"];",
+      "name": "Convert a list to a string"
     },
     "concatenate_two_lists": {
-      "code": "NSArray *newArray=[firstArray arrayByAddingObjectsFromArray:secondArray];"
+      "code": "NSArray *newArray=[firstArray arrayByAddingObjectsFromArray:secondArray];",
+      "name": "Concatenate two lists together"
     },
     "split_list_at_index": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Split lists at an index"
     },
     "split_list_at_value": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Split list at a value"
     },
     "duplicate_a_list": {
-      "code": "NSMutableArray *copy = [[NSMutableArray alloc] initWithArray:originalArray copyItems:YES];"
+      "code": "NSMutableArray *copy = [[NSMutableArray alloc] initWithArray:originalArray copyItems:YES];",
+      "name": "Duplicate a list"
     },
     "duplicate_subset_of_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Duplicate a portion/subset of a list"
     },
     "get_list_length": {
-      "code": "var count: Int { get }"
+      "code": "var count: Int { get }",
+      "name": "Get list length"
     },
     "resize_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Increase/decrease list size"
     },
     "do_two_lists_match_exactly": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Do two lists match every element?"
     },
     "do_two_lists_contain_same_items": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Do two lists contain all the same items?"
     },
     "does_list_satisfy_some_expression": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Does a list satisfy some expression?"
     },
     "does_list_not_satisfy_an_expression": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Does a list entirely not satisfy an expression?"
     },
     "sort_list": {
-      "code": "sortedArrayUsingSelector:"
+      "code": "sortedArrayUsingSelector:",
+      "name": "Sort a list"
     },
     "shuffle_list": {
-      "code": "exchangeObject(at:withObjectAt:)"
+      "code": "exchangeObject(at:withObjectAt:)",
+      "name": "Shuffle list elements"
     },
     "reverse_list": {
-      "code": "reverse()"
+      "code": "reverse()",
+      "name": "Reverse order of list elements"
     },
     "map": {
-      "code": "objectEnumerator()"
+      "code": "objectEnumerator()",
+      "name": "Map function across list"
     },
     "filter": {
-      "code": "predicateWithBlock:"
+      "code": "predicateWithBlock:",
+      "name": "Filter a list based on criteria"
     },
     "reduce_left": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Reduce a list left-to-right"
     },
     "reduce_right": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Reduce a list right-to-left"
     }
   }
 }

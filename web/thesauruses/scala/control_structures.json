@@ -8,62 +8,78 @@
   "concepts": {
     "if_conditional": {
       "code": "// For simple expressions, simply give an expression:\nif (condition) expression\n\n// For more complex expressions, or to make local definitions,\n// use a block instead:\nif (condition) {\n  expressions and definitions\n}",
-      "comment": "Blocks (which may contain multiple expressions and definitions and evaluate to the value of the last expression) are a kind of expression.\n\nConditionals, like everything else in Scala, are expressions.\n\nWhen there's no `else` branch, the `else` branch evaluates to `()` (aka unit)."
+      "comment": "Blocks (which may contain multiple expressions and definitions and evaluate to the value of the last expression) are a kind of expression.\n\nConditionals, like everything else in Scala, are expressions.\n\nWhen there's no `else` branch, the `else` branch evaluates to `()` (aka unit).",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if (condition) expression else expression"
+      "code": "if (condition) expression else expression",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
       "code": "if (condition) {\n  expressions and defintions\n} else if (condition) {\n  expressions and definitions\n}",
-      "comment": "When using `else if`, blocks are typically used instead of bare expressions, since things are getting complicated."
+      "comment": "When using `else if`, blocks are typically used instead of bare expressions, since things are getting complicated.",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if (condition) {\n  expressions and definitions\n} else if (condition) {\n  expressions and definitions\n} else {\n  expressions and definitions\n}"
+      "code": "if (condition) {\n  expressions and definitions\n} else if (condition) {\n  expressions and definitions\n} else {\n  expressions and definitions\n}",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
       "code": "expression match {\n  case \"value1\" => expressions and definitions\n  case \"value2\" if condition =>\n    expressions and definitions\n  case \"value2\" if condition => expressions and definitions\n  case _ => expressions and definitions // default case\n}",
-      "comment": "`match` provides powerful destructuring pattern-matching capabilities, not only switching based on conditions and constant values. What follows `match` _must_ be a block with `case`s."
+      "comment": "`match` provides powerful destructuring pattern-matching capabilities, not only switching based on conditions and constant values. What follows `match` _must_ be a block with `case`s.",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
       "comment": "All conditional expressions, including `if` and `match` expressions, may be used to produce a value in a larger expression.",
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Ternary conditional"
     },
     "while_loop": {
       "code": "// For simple expressions, simply give an expression:\nwhile (condition) expression\n\n// For more complex expressions, or to make local definitions,\n// use a block instead:\nwhile (condition) {\n  expressions and definitions\n}",
-      "comment": "Blocks (which may contain multiple expressions and definitions and evaluate to the value of the last expression) are a kind of expression. Loops evaluate to `()` (aka unit). Note that `for` comprehensions with `yield` are not loops, and do produce values."
+      "comment": "Blocks (which may contain multiple expressions and definitions and evaluate to the value of the last expression) are a kind of expression. Loops evaluate to `()` (aka unit). Note that `for` comprehensions with `yield` are not loops, and do produce values.",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "do expression while (condition)"
+      "code": "do expression while (condition)",
+      "name": "Do/While loop"
     },
     "until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Do/Until loop"
     },
     "for_loop": {
       "code": "for ( i <- 0 to 5 ) expression",
-      "comment": "`0 to 5` produces an iterable `Range` object for simple loops."
+      "comment": "`0 to 5` produces an iterable `Range` object for simple loops.",
+      "name": "For loop"
     },
     "foreach_loop": {
       "code": "// You may iterate over a single iterable value:\nfor ( item <- iterable ) expression\n\n// You may use a single for loop to do a nested iteration\n// over multiple iterable values:\nfor ( item1 <- iterable1; item2 <- iterable2 ) expression\n\n// You may filter your iteration to include only combinations\n// of items that satisfy a condition:\nfor {\n  item1 <- iterable1\n  item2 <- iterable2\n  if condition\n} {\n  expressions\n}",
-      "comment": "`for` loops in Scala can use a general comprehension syntax (whether between parentheses or braces), iterating over multiple inputs and even filtering with `if`."
+      "comment": "`for` loops in Scala can use a general comprehension syntax (whether between parentheses or braces), iterating over multiple inputs and even filtering with `if`.",
+      "name": "Foreach loop"
     },
     "each_iteration": {
       "code": "// You may call the foreach method on a value:\niterable.foreach(function)\n\n// Or you may use a for loop that also calls foreach on the value:\nfor ( item <- iterable ) function(item)",
-      "comment": "In general, `for` loops without `yield` are translated into calls to `foreach` and other collection-related methods."
+      "comment": "In general, `for` loops without `yield` are translated into calls to `foreach` and other collection-related methods.",
+      "name": "Each iteration"
     },
     "map_iteration": {
       "code": "// You may call the map method on a value:\niterable.map(function)\n\n// Or you may use a for comprehension with yield that also\n// calls map on the value:\nfor { item <- iterable } yield function(item)",
-      "comment": "In general, `for` comprehensions with `yield` are translated into calls to `map` or `flatMap` and other collection-related methods."
+      "comment": "In general, `for` comprehensions with `yield` are translated into calls to `map` or `flatMap` and other collection-related methods.",
+      "name": "Map iteration"
     },
     "filter_iteration": {
       "code": "// You may call the filter method on a value:\niterable.filter(function)\n\n// Or you may use a for comprehension with if that also\n// calls filter on the value:\nfor { item <- iterable; if function(item) } yield item",
-      "comment": "In general, `for` loops and comprehensions including `if` are translated into calls to `filter` or `withFilter` and other collection-related methods."
+      "comment": "In general, `for` loops and comprehensions including `if` are translated into calls to `filter` or `withFilter` and other collection-related methods.",
+      "name": "Filter iteration"
     },
     "fold_iteration": {
       "code": "// You may fold left as in f(...f(f(init, x1), x2), ... xn):\niterable.foldLeft(init)(function)\n\n// Or you may fold right as in f(x1, f(x2, ... f(xn, init)...)):\niterable.foldRight(init)(function)\n\n// Or you may leave the order unspecified:\niterable.fold(init)(function)",
-      "comment": "The evaluation order for `fold` is unspecified, and so the operation should probably be commutative. `reduce` operations are also available for commutative operations."
+      "comment": "The evaluation order for `fold` is unspecified, and so the operation should probably be commutative. `reduce` operations are also available for commutative operations.",
+      "name": "Fold iteration"
     }
   }
 }

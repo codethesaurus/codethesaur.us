@@ -7,55 +7,72 @@
   },
   "concepts": {
     "if_conditional": {
-      "code": "if (condition) {\n    statements;\n}"
+      "code": "if (condition) {\n    statements;\n}",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}"
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n   statements;\n}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n   statements;\n}",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
-      "code": "switch (expression) {\n    case constant-expression:\n    statements;\n    break;\n  default:\n    statements;\n}"
+      "code": "switch (expression) {\n    case constant-expression:\n    statements;\n    break;\n  default:\n    statements;\n}",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
-      "code": "condition ? expression_if_true : expression_if_false"
+      "code": "condition ? expression_if_true : expression_if_false",
+      "name": "Ternary conditional"
     },
     "while_loop": {
-      "code": "while (condition) {\n    statements;\n}"
+      "code": "while (condition) {\n    statements;\n}",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "do {\n    statements;\n} while (condition);"
+      "code": "do {\n    statements;\n} while (condition);",
+      "name": "Do/While loop"
     },
     "until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Do/Until loop"
     },
     "for_loop": {
-      "code": "for (initialization; condition; increment) {\n    statements;\n}"
+      "code": "for (initialization; condition; increment) {\n    statements;\n}",
+      "name": "For loop"
     },
     "foreach_loop": {
-      "code": "for (key in someDictionary) {\n    statements;\n}"
+      "code": "for (key in someDictionary) {\n    statements;\n}",
+      "name": "Foreach loop"
     },
     "list_comprehension": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "List Comprehension"
     },
     "each_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Each iteration"
     },
     "map_iteration": {
-      "code": "NSLog(@\"%@\", [array map:^id(id obj) { return [(NSString *)obj operation]; }]);"
+      "code": "NSLog(@\"%@\", [array map:^id(id obj) { return [(NSString *)obj operation]; }]);",
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "code": "NSLog(@\"%@\", [array filter:^BOOL(id obj) { return [(NSString *)obj condition:@\"o\"]; }]);"
+      "code": "NSLog(@\"%@\", [array filter:^BOOL(id obj) { return [(NSString *)obj condition:@\"o\"]; }]);",
+      "name": "Filter iteration"
     },
     "fold_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Fold iteration"
     }
   }
 }

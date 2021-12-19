@@ -11,27 +11,27 @@
       "code": "bool"
     },
     "signed_integer_16_bit": {
-      "name": "16-bit integer",
+      "name": "Signed 16-bit integer",
       "code": "int"
     },
     "signed_integer_32_bit": {
-      "name": "32-bit integer",
+      "name": "Signed 32-bit integer",
       "code": "long"
     },
     "signed_integer_64_bit": {
-      "name": "64-bit integer",
+      "name": "Signed 64-bit integer",
       "code": "long long"
     },
     "signed_float_16_bit": {
-      "name": "16-bit floating point",
+      "name": "Signed 16-bit floating point",
       "code": "float"
     },
     "signed_float_32_bit": {
-      "name": "32-bit floating point",
+      "name": "Signed 32-bit floating point",
       "code": "double"
     },
     "signed_float_64_bit": {
-      "name": "64-bit floating point",
+      "name": "Signed 64-bit floating point",
       "code": "long double"
     },
     "string_as_object": {
@@ -39,7 +39,7 @@
       "code": "string"
     },
     "string_as_array": {
-      "name": "String as an array",
+      "name": "String as an array of characters",
       "code": "char[]"
     },
     "complex_as_object": {

@@ -7,206 +7,269 @@
   },
   "concepts": {
     "is_primitive_or_not": {
-      "code": "Yes"
+      "code": "Yes",
+      "name": "Is this a built-in type in this language?"
     },
     "import": {
       "code": "using  System;",
-      "comment": "`string` will be avalible without this using but `String` will not be."
+      "comment": "`string` will be avalible without this using but `String` will not be.",
+      "name": "Import the string class"
     },
     "default_string_byte_encoding": {
-      "code": "UTF-16"
+      "code": "UTF-16",
+      "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)"
     },
     "create_new_string": {
-      "code": "var newString = \".... . .-.. .-.. ---\";"
+      "code": "var newString = \".... . .-.. .-.. ---\";",
+      "name": "Create new string"
     },
     "create_multiline_string": {
-      "code": "var multiLineString = @\"Line 1\n    Line 2\n     Line 3\";"
+      "code": "var multiLineString = @\"Line 1\n    Line 2\n     Line 3\";",
+      "name": "Create new multi-line string"
     },
     "assign_new_string": {
-      "code": "var s1 = \"String 1\";\nvar s2 = s1;"
+      "code": "var s1 = \"String 1\";\nvar s2 = s1;",
+      "name": "Assign string from another string"
     },
     "destroy_string": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Destroy string"
     },
     "length_of_string": {
-      "code": "\"Four\".Length;"
+      "code": "\"Four\".Length;",
+      "name": "Length of string"
     },
     "max_length_of_string": {
-      "code": "1073741823"
+      "code": "1073741823",
+      "name": "Maximum length of string"
     },
     "clear_string": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Clear/empty string"
     },
     "is_empty": {
       "code": "string.IsNullOrEmpty(str);\nstring.IsNullOrWhiteSpace(str);",
-      "comment": "string.IsNullOrWhiteSpace() will return true when the string is null or the string contains any whitespace character as specified in the Unicode standard."
+      "comment": "string.IsNullOrWhiteSpace() will return true when the string is null or the string contains any whitespace character as specified in the Unicode standard.",
+      "name": "Is string empty?"
     },
     "concatenate_two_strings": {
-      "code": "var s1 = \"Hello\";\ns2 = \"World\";\n\nvar interpolation = $\"{s1}{s2}\"\nvar s3 = s1 + s2;\ns1 += s2;"
+      "code": "var s1 = \"Hello\";\ns2 = \"World\";\n\nvar interpolation = $\"{s1}{s2}\"\nvar s3 = s1 + s2;\ns1 += s2;",
+      "name": "Concatenate/join two strings"
     },
     "concatenate_many_strings": {
-      "code": "var sb = new System.Text.StringBuilder();\nfor (int i = 0; i < 20; i++)\n{\n    sb.AppendLine(i.ToString());\n}\nvar result = sb.ToString();"
+      "code": "var sb = new System.Text.StringBuilder();\nfor (int i = 0; i < 20; i++)\n{\n    sb.AppendLine(i.ToString());\n}\nvar result = sb.ToString();",
+      "name": "Concatenate/join many strings"
     },
     "is_all_alphabetical": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string all alphabetical characters?"
     },
     "is_all_numerical": {
       "code": "bool isNumber = int.TryParse(str, out integer);",
-      "comment": "This will also work with other numeric types such as byte, decimal, long, etc."
+      "comment": "This will also work with other numeric types such as byte, decimal, long, etc.",
+      "name": "Is string all numerical characters?"
     },
     "is_all_alphanumeric": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string all alphanumeric characters?"
     },
     "is_decimal": {
-      "code": "bool isNumber = decimal.TryParse(str, out integer);"
+      "code": "bool isNumber = decimal.TryParse(str, out integer);",
+      "name": "Is string a decimal number?"
     },
     "is_all_whitespaces": {
-      "code": "string.IsNullOrWhiteSpace(str);"
+      "code": "string.IsNullOrWhiteSpace(str);",
+      "name": "Is string all whitespace characters?"
     },
     "is_all_uppercase": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string all uppercase characters?"
     },
     "is_all_lowercase": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string all lowercase characters?"
     },
     "is_in_titlecase": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string formatted in title case?"
     },
     "does_substring_exist": {
-      "code": "str.Contains(subString);"
+      "code": "str.Contains(subString);",
+      "name": "Does a substring exist in a string?"
     },
     "find_start_index_of_substring": {
-      "code": "str.IndexOf(subString);"
+      "code": "str.IndexOf(subString);",
+      "name": "Find index of where a substring starts"
     },
     "find_start_index_of_additional_substring": {
-      "code": "str.IndexOf(subString, startIndex);"
+      "code": "str.IndexOf(subString, startIndex);",
+      "name": "Find index of an additional substring (or starting at another index)"
     },
     "find_start_index_of_substring_from_end": {
-      "code": "str.LastIndexOf(subString, startIndex);"
+      "code": "str.LastIndexOf(subString, startIndex);",
+      "name": "Find substring index starting at end"
     },
     "count_occurrences_of_substring": {
       "code": "Regex.Matches(str, pattern).Count;",
-      "comment": "Requires use of System.Text.RegularExpressions."
+      "comment": "Requires use of System.Text.RegularExpressions.",
+      "name": "Find number of occurences of a substring"
     },
     "get_leftmost_characters": {
-      "code": "str.Substring(startIndex, numberOfCharacters);"
+      "code": "str.Substring(startIndex, numberOfCharacters);",
+      "name": "Get a specified number of characters from the left"
     },
     "get_rightmost_characters": {
-      "code": "str.Substring(str.Length - numberOfCharacters, numberOfCharacters);"
+      "code": "str.Substring(str.Length - numberOfCharacters, numberOfCharacters);",
+      "name": "Get a specified number of characters from the right"
     },
     "get_substring_from_start_and_end_index": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Return a substring from a string based on starting and ending indices"
     },
     "get_substring_from_start_index_and_length": {
-      "code": "str.Substring(startIndex, numberOfCharacters);"
+      "code": "str.Substring(startIndex, numberOfCharacters);",
+      "name": "Return a substring from a string based on starting index and size of substring"
     },
     "convert_to_uppercase": {
-      "code": "str.ToUpper();"
+      "code": "str.ToUpper();",
+      "name": "Convert string to all uppercase"
     },
     "convert_to_lowercase": {
-      "code": "str.ToLower();"
+      "code": "str.ToLower();",
+      "name": "Convert string to all lowercase"
     },
     "convert_to_title_case": {
       "code": "var textInfo = new CultureInfo(culture).TextInfo;\ntextInfo.ToTitleCase(str);",
-      "comment": "Requires use of System.Globalization."
+      "comment": "Requires use of System.Globalization.",
+      "name": "Convert string to title case"
     },
     "capitalize_string": {
-      "code": "var s1 = \"hello.\";\nvar s1Capitalised = Char.ToUpper(s1[0]) + s1.Substring(1);"
+      "code": "var s1 = \"hello.\";\nvar s1Capitalised = Char.ToUpper(s1[0]) + s1.Substring(1);",
+      "name": "Capitalize first letter of a string"
     },
     "remove_whitespace": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Remove all whitespaces from string"
     },
     "replace_substring": {
       "code": "Regex regex = new Regex(pattern);\nregex.Replace(subString, newString, numberToReplace);",
-      "comment": "Requires use of System.Text.RegularExpressions."
+      "comment": "Requires use of System.Text.RegularExpressions.",
+      "name": "Replace a substring with another string"
     },
     "replace_all_substring": {
-      "code": "str.Replace(substring, newString);"
+      "code": "str.Replace(substring, newString);",
+      "name": "Replace all substring matches with another string"
     },
     "split_at_index": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Split string into a list of strings at a given index"
     },
     "split_at_newlines": {
-      "code": "str.Split('\\n');"
+      "code": "str.Split('\\n');",
+      "name": "Split string into a list of strings at every new line character"
     },
     "split_at_substring": {
-      "code": "str.Split(substring);"
+      "code": "str.Split(substring);",
+      "name": "Split string by locating all substrings"
     },
     "merge_lists_into_string": {
-      "code": "string.Join(delimiter, stringList);"
+      "code": "string.Join(delimiter, stringList);",
+      "name": "Merge a list of strings into one string"
     },
     "encode_html_entities": {
       "code": "HttpUtility.HtmlEncode(str);",
-      "comment": "Requires use of System.Web."
+      "comment": "Requires use of System.Web.",
+      "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)"
     },
     "decode_html_entities": {
       "code": "HttpUtility.HtmlDecode(str);",
-      "comment": "Requires use of System.Web."
+      "comment": "Requires use of System.Web.",
+      "name": "Decode HTML entitles into characters"
     },
     "encode_url_percent": {
       "code": "HttpUtility.UrlEncode(str);",
-      "comment": "Requires use of System.Web."
+      "comment": "Requires use of System.Web.",
+      "name": "Encode URL percent encoding into string (ex: ' ' to %20)"
     },
     "decode_url_percent": {
       "code": "HttpUtility.UrlDecode(str);",
-      "comment": "Requires use of System.Web."
+      "comment": "Requires use of System.Web.",
+      "name": "Decode URL percent encoding"
     },
     "encode_to_base64": {
       "code": "Convert.ToBase64String(Encoding.UTF8.GetBytes(str));",
-      "comment": "Requires use of System.Web."
+      "comment": "Requires use of System.Web.",
+      "name": "Encode string into Base64 format"
     },
     "decode_from_base64": {
       "code": "Convert.FromBase64String(str);",
-      "comment": "Requires use of System.Web."
+      "comment": "Requires use of System.Web.",
+      "name": "Decode string from Base64 format"
     },
     "format_string_function": {
-      "code": "string.Format();"
+      "code": "string.Format();",
+      "name": "Function to format a string"
     },
     "parameter_format_in_order": {
-      "code": "{index}"
+      "code": "{index}",
+      "name": "Parameter used in format function if they're used in order"
     },
     "parameter_format_numerical": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Parameter used in format function if they're numerically numbered"
     },
     "parameter_format_by_name": {
       "code": "$\"{s1} {s2}\"",
-      "comment": "Note this is string interpolation and does not use string.Format(). All format parameters below can also be used in interpolated strings with {variableName:formatter}."
+      "comment": "Note this is string interpolation and does not use string.Format(). All format parameters below can also be used in interpolated strings with {variableName:formatter}.",
+      "name": "Paramater used in format function if they're named variables"
     },
     "format_as_integer": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Format parameter as an integer"
     },
     "format_as_decimal": {
-      "code": "{0:D}"
+      "code": "{0:D}",
+      "name": "Format parameter as a decimal number"
     },
     "format_as_fixed_decimal": {
-      "code": "{0:F}"
+      "code": "{0:F}",
+      "name": "Format parameter as a fixed-point decimal number"
     },
     "format_as_currency": {
-      "code": "{0:C}"
+      "code": "{0:C}",
+      "name": "Format parameter as a currency number"
     },
     "format_as_percentage": {
-      "code": "{0:P}"
+      "code": "{0:P}",
+      "name": "Format parameter as a percentage number"
     },
     "format_number_with_separators": {
-      "code": "{0:N}"
+      "code": "{0:N}",
+      "name": "Format number with thousand separators"
     },
     "format_number_with_positive_negative_sign": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Format number with positive/negative signs"
     },
     "format_number_in_scientific_notation_little_e": {
-      "code": "{0:e}"
+      "code": "{0:e}",
+      "name": "Format number with scientific notation with 'e'"
     },
     "format_number_in_scientific_notation_big_e": {
-      "code": "{0:E}"
+      "code": "{0:E}",
+      "name": "Format number with scientific notation with 'E'"
     },
     "format_number_in_binary": {
-      "code": "Convert.ToString(int.Parse(str), 2);"
+      "code": "Convert.ToString(int.Parse(str), 2);",
+      "name": "Format number into binary"
     },
     "format_number_in_octal": {
-      "code": "Convert.ToString(int.Parse(str), 8);"
+      "code": "Convert.ToString(int.Parse(str), 8);",
+      "name": "Format number into octal"
     },
     "format_number_in_hexadecimal": {
-      "code": "{0:X}"
+      "code": "{0:X}",
+      "name": "Format number into hexadecimal"
     }
   }
 }

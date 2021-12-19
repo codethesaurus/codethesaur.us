@@ -7,54 +7,70 @@
   },
   "concepts": {
     "if_conditional": {
-      "code": "if condition; then statements; fi"
+      "code": "if condition; then statements; fi",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if condition; then statements; else statements; fi"
+      "code": "if condition; then statements; else statements; fi",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if condition; then statements; elif condition; then statements; fi"
+      "code": "if condition; then statements; elif condition; then statements; fi",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if condition; then statements; elif condition; then statements; else statements; fi"
+      "code": "if condition; then statements; elif condition; then statements; else statements; fi",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
-      "code": "case expression in\n  pattern1 )\n    statements ;;\n  pattern2 )\n    statements;;\nesac"
+      "code": "case expression in\n  pattern1 )\n    statements ;;\n  pattern2 )\n    statements;;\nesac",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
-      "not_implemented": true
+      "not_implemented": true,
+      "name": "Ternary conditional"
     },
     "while_loop": {
       "code": "while test-commands; do consequent-commands; done",
-      "comment": "Execute consequent-commands as long as test-commands has an exit status of zero."
+      "comment": "Execute consequent-commands as long as test-commands has an exit status of zero.",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "not_implemented": true
+      "not_implemented": true,
+      "name": "Do/While loop"
     },
     "until_loop": {
       "code": "until test-commands; do consequent-commands; done",
-      "comment": "Execute 'consequent-commands' as long as 'test-commands' has an exit status which is not zero."
+      "comment": "Execute 'consequent-commands' as long as 'test-commands' has an exit status which is not zero.",
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "not_implemented": true
+      "not_implemented": true,
+      "name": "Do/Until loop"
     },
     "for_loop": {
-      "code": "for (initialization_statements ; condition ; update_statements) ; do commands ; done"
+      "code": "for (initialization_statements ; condition ; update_statements) ; do commands ; done",
+      "name": "For loop"
     },
     "foreach_loop": {
-      "code": "for item in list ;  do commands; done"
+      "code": "for item in list ;  do commands; done",
+      "name": "Foreach loop"
     },
     "each_iteration": {
-      "not_implemented": true
+      "not_implemented": true,
+      "name": "Each iteration"
     },
     "map_iteration": {
-      "not_implemented": true
+      "not_implemented": true,
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "not_implemented": true
+      "not_implemented": true,
+      "name": "Filter iteration"
     },
     "fold_iteration": {
-      "not_implemented": true
+      "not_implemented": true,
+      "name": "Fold iteration"
     }
   }
 }

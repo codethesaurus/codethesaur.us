@@ -7,127 +7,162 @@
   },
   "concepts": {
     "addition": {
-      "code": "+"
+      "code": "+",
+      "name": "Addition operator"
     },
     "addition_assignment": {
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-"
+      "code": "-",
+      "name": "Subtraction operator"
     },
     "subtraction_assignment": {
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*"
+      "code": "*",
+      "name": "Multiplication operator"
     },
     "multiplication_assignment": {
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Multiplication and assignment operator"
     },
     "division": {
-      "code": "/"
+      "code": "/",
+      "name": "Division operator"
     },
     "division_assignment": {
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Division and assignment operator"
     },
     "integer_division": {
-      "code": "div x y"
+      "code": "div x y",
+      "name": "Integer division operator"
     },
     "integer_division_assignment": {
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Integer division and assignment operator"
     },
     "modulus": {
-      "code": "mod x y"
+      "code": "mod x y",
+      "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Modulus and assignment operator"
     },
     "unary_plus": {
       "comment": "There is only 1 unary operator in Haskell, unary minus",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unary plus operator"
     },
     "unary_minus": {
-      "code": "-x"
+      "code": "-x",
+      "name": "Unary minus operator"
     },
     "increment": {
       "comment": "Haskell is a functional language, so it does not have an operator for incrementing in place.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Increment (add 1) operator"
     },
     "decrement": {
       "comment": "Haskell is a functional language, so it does not have an operator for decrementing in place.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
       "comment": "There are 3 exponentiation operators in Haskell, for integers, floating point numbers, and rational numbers respectively",
-      "code": "x^y\nx^^y\nx**y"
+      "code": "x^y\nx^^y\nx**y",
+      "name": "Exponential operator"
     },
     "factorial": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Factorial operator"
     },
     "absolute_value": {
-      "code": "abs (-x)"
+      "code": "abs (-x)",
+      "name": "Absolute value operator"
     },
     "percentage": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "x == y"
+      "code": "x == y",
+      "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "x /= y"
+      "code": "x /= y",
+      "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "x < y"
+      "code": "x < y",
+      "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "x <= y"
+      "code": "x <= y",
+      "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": "x > y"
+      "code": "x > y",
+      "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": "x >= y"
+      "code": "x >= y",
+      "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
       "comment": "Haskell does not have null references",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Null coalescing operator"
     },
     "is": {
       "comment": "Haskell doesn't have a notion of identity/reference equality.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is operator"
     },
     "is_not": {
       "comment": "Haskell doesn't have a notion of identity/reference equality.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is not operator"
     },
     "left_shift": {
       "comment": "Haskell does not include bitwise operators by default, so you need to import the built-in Data.Bits module. This command shifts left if y is positive.",
-      "code": "import Data.Bits\nshift x y"
+      "code": "import Data.Bits\nshift x y",
+      "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Left shift assignment operator"
     },
     "right_shift": {
       "comment": "Haskell does not include bitwise operators by default, so you need to import the built-in Data.Bits module. This command shifts right if y is negative.",
-      "code": "import Data.Bits\nshift x (-y)"
+      "code": "import Data.Bits\nshift x (-y)",
+      "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
       "comment": "Haskell is a functional language, so it does not allow variable reassignment.",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Right shift assignment operator"
     },
     "ternary": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Ternary operator"
     },
     "null_forgiving": {
       "comment": "Haskell does not have null references",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
     }
   }
 }

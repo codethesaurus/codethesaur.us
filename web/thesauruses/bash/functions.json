@@ -7,37 +7,48 @@
   },
   "concepts": {
     "void_function_no_parameters": {
-      "code": "function_name () {\n    statements\n}"
+      "code": "function_name () {\n    statements\n}",
+      "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
-      "code": "function_name () {\n    $1   #Use $1 as a variable representing input 1\n    $2   #Use $2 as a variable representing input 2\n    statements\n}\n \nfunction_name parameter1 parameter2"
+      "code": "function_name () {\n    $1   #Use $1 as a variable representing input 1\n    $2   #Use $2 as a variable representing input 2\n    statements\n}\n \nfunction_name parameter1 parameter2",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_variable_parameters": {
-      "code": "function_name () {\n    $@   #Use $@ to represent an array of all inputs\n    statements\n}\n \nfunction_name parameter1 ... parameterN"
+      "code": "function_name () {\n    $@   #Use $@ to represent an array of all inputs\n    statements\n}\n \nfunction_name parameter1 ... parameterN",
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "return_value_function_no_parameters": {
-      "code": "function_name () {\n    statements\n    return expression\n}"
+      "code": "function_name () {\n    statements\n    return expression\n}",
+      "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
-      "code": "function_name () {\n    $1   #Use $1 as a variable representing input 1\n    $2   #Use $2 as a variable representing input 2\n    statements\n    return expression\n}\n \nfunction_name parameter1 parameter2"
+      "code": "function_name () {\n    $1   #Use $1 as a variable representing input 1\n    $2   #Use $2 as a variable representing input 2\n    statements\n    return expression\n}\n \nfunction_name parameter1 parameter2",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "return_value_function_variable_parameters": {
-      "code": "function_name () {\n    $@   #Use $@ to represent an array of all inputs\n    statements\n    return expression\n}\n \nfunction_name parameter1 ... parameterN"
+      "code": "function_name () {\n    $@   #Use $@ to represent an array of all inputs\n    statements\n    return expression\n}\n \nfunction_name parameter1 ... parameterN",
+      "name": "Function that returns a value and takes an unknown number of parameters"
     },
     "anonymous_function_no_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Anonymous function that takes 1 or more defined parameters"
     },
     "anonymous_function_variable_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Anonymous function that takes an unknown number of parameters"
     },
     "call_subroutine": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Call subroutine"
     },
     "return_from_subroutine": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Return from subroutine"
     }
   }
 }

@@ -8,92 +8,117 @@
   "concepts": {
     "boolean": {
       "code": "BOOL",
-      "comment": "As opposed to true and false, Objective-C stores boolean values as YES and NO, respectively."
+      "comment": "As opposed to true and false, Objective-C stores boolean values as YES and NO, respectively.",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 8-bit integer"
     },
     "unsigned_integer_8_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 8-bit integer"
     },
     "signed_integer_16_bit": {
       "code": "short int",
-      "comment": "Signed short integers range from -32768 to 32767."
+      "comment": "Signed short integers range from -32768 to 32767.",
+      "name": "Signed 16-bit integer"
     },
     "unsigned_integer_16_bit": {
       "code": "unsigned short int",
-      "comment": "Unsigned short integers range from 0 to 65535."
+      "comment": "Unsigned short integers range from 0 to 65535.",
+      "name": "Unsigned 16-bit integer"
     },
     "signed_integer_32_bit": {
       "code": "int",
-      "comment": "Integers range from -2147483648 to 2147483647."
+      "comment": "Integers range from -2147483648 to 2147483647.",
+      "name": "Signed 32-bit integer"
     },
     "unsigned_integer_32_bit": {
       "code": "unsigned int",
-      "comment": "Unsigned integers range from 0 to 4294967295."
+      "comment": "Unsigned integers range from 0 to 4294967295.",
+      "name": "Unsigned 32-bit integer"
     },
     "signed_integer_64_bit": {
       "code": "long int",
-      "comment": "Long integers range from -9223372036854775808 to 9223372036854775807."
+      "comment": "Long integers range from -9223372036854775808 to 9223372036854775807.",
+      "name": "Signed 64-bit integer"
     },
     "unsigned_integer_64_bit": {
       "code": "unsigned long int",
-      "comment": "Unsigned long integers range from 0 to 18446744073709551615."
+      "comment": "Unsigned long integers range from 0 to 18446744073709551615.",
+      "name": "Unsigned 64-bit integer"
     },
     "signed_integer_as_object": {
       "code": "NSNumber",
-      "comment": "NSNumber can store any integer, float, or double. However, it is not commonly used to store floats or doubles because it has a subclass called NSDecimalNumber, which is more precise."
+      "comment": "NSNumber can store any integer, float, or double. However, it is not commonly used to store floats or doubles because it has a subclass called NSDecimalNumber, which is more precise.",
+      "name": "Signed object-based Integer"
     },
     "unsigned_integer_as_object": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned object-based Integer"
     },
     "signed_float_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 16-bit floating point"
     },
     "unsigned_float_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 16-bit floating point"
     },
     "signed_float_32_bit": {
       "code": "float",
-      "comment": "Floats in Objective-C are precise up to 7 digits."
+      "comment": "Floats in Objective-C are precise up to 7 digits.",
+      "name": "Signed 32-bit floating point"
     },
     "unsigned_float_32_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 32-bit floating point"
     },
     "signed_float_64_bit": {
       "code": "double",
-      "comment": "Doubles in Objective-C are precise up to 15 digits."
+      "comment": "Doubles in Objective-C are precise up to 15 digits.",
+      "name": "Signed 64-bit floating point"
     },
     "unsigned_float_64_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 64-bit floating point"
     },
     "signed_float_as_object": {
       "code": "NSDecimalNumber",
-      "comment": "NSDecimalNumber is often used in situations when precision is key, such as storing a user's bank balance."
+      "comment": "NSDecimalNumber is often used in situations when precision is key, such as storing a user's bank balance.",
+      "name": "Signed object-based floating point"
     },
     "unsigned_float_as_object": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned object-based floating point"
     },
     "character": {
       "code": "char",
-      "comment": "Using %c to output the character value and %i to output the ASCII value."
+      "comment": "Using %c to output the character value and %i to output the ASCII value.",
+      "name": "Character"
     },
     "string_as_object": {
       "code": "NSString",
-      "comment": "NSString is immutable, however, Objective-C has a mutable string object called NSMutableString"
+      "comment": "NSString is immutable, however, Objective-C has a mutable string object called NSMutableString",
+      "name": "String as an object"
     },
     "string_as_array": {
       "code": "NSString",
-      "comment": "NSString is built on the C version of strings, which are arrays of characters. When using an NSString, you can use index notation to access specific characters."
+      "comment": "NSString is built on the C version of strings, which are arrays of characters. When using an NSString, you can use index notation to access specific characters.",
+      "name": "String as an array of characters"
     },
     "complex_as_object": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex Number as an object"
     },
     "real_number_part": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex number real part"
     },
     "imaginary_number_part": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex number imaginary part"
     }
   }
 }

@@ -15,7 +15,7 @@
       "not-implemented": true
     },
     "default_string_byte_encoding": {
-      "name": "Default byte encoding (ex: ASCII, UTF-8, UTF-16, etc.)",
+      "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
       "not-implemented": true
     },
     "create_new_string": {
@@ -171,7 +171,7 @@
       "not-implemented": true
     },
     "encode_html_entities": {
-      "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
+      "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)",
       "not-implemented": true
     },
     "decode_html_entities": {

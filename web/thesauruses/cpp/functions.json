@@ -8,45 +8,56 @@
   "concepts": {
     "void_function_no_parameters": {
       "code": "void foo() { return; }",
-      "comment": "Return statement is optional."
+      "comment": "Return statement is optional.",
+      "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
       "code": "void foo(char c, int i, double d) { return; }",
-      "comment": "Return statement is optional."
+      "comment": "Return statement is optional.",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_variable_parameters": {
       "code": "template <typename ... Ts> void foo(Ts ... args){ return; }",
-      "comment": "Argument types are deduced at compile time."
+      "comment": "Argument types are deduced at compile time.",
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "return_value_function_no_parameters": {
       "code": "int foo() { return 1; }",
-      "comment": "Return value is converted to return type if a conversion is available."
+      "comment": "Return value is converted to return type if a conversion is available.",
+      "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
       "code": "int foo(int x, int y){ return x + y; }",
-      "comment": "Return value is converted to return type if a conversion is available."
+      "comment": "Return value is converted to return type if a conversion is available.",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "return_value_function_variable_parameters": {
-      "code": "template <typename ... Ts> int foo(Ts ... args){ return (args + ...); }"
+      "code": "template <typename ... Ts> int foo(Ts ... args){ return (args + ...); }",
+      "name": "Function that returns a value and takes an unknown number of parameters"
     },
     "anonymous_function_no_parameters": {
       "code": "[]{ return; };",
-      "comment": "If the function returns a non-void value, then the type is deduced at compile-time."
+      "comment": "If the function returns a non-void value, then the type is deduced at compile-time.",
+      "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
       "code": "[](char c, int i){ return; }",
-      "comment": "If the function returns a non-void value, then the type is deduced at compile-time."
+      "comment": "If the function returns a non-void value, then the type is deduced at compile-time.",
+      "name": "Anonymous function that takes 1 or more defined parameters"
     },
     "anonymous_function_variable_parameters": {
       "code": "[](auto ... args){ return; }",
-      "comment": "If the function returns a non-void value, then the type is deduced at compile-time."
+      "comment": "If the function returns a non-void value, then the type is deduced at compile-time.",
+      "name": "Anonymous function that takes an unknown number of parameters"
     },
     "call_subroutine": {
       "code": "foo()",
-      "comment": "Calls the function 'foo' - must be defined first."
+      "comment": "Calls the function 'foo' - must be defined first.",
+      "name": "Call subroutine"
     },
     "return_from_subroutine": {
-      "code": "return"
+      "code": "return",
+      "name": "Return from subroutine"
     }
   }
 }

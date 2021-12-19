@@ -7,34 +7,44 @@
   },
   "concepts": {
     "if_conditional": {
-      "code": "if condition:\n  statements"
+      "code": "if condition:\n  statements",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if condition:\n  statements\nelse:\n  statements"
+      "code": "if condition:\n  statements\nelse:\n  statements",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if condition:\n  statements\nelif:\n  statements"
+      "code": "if condition:\n  statements\nelif:\n  statements",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if condition:\n  statements\nelif condition:\n  statements\nelse:\n  statements"
+      "code": "if condition:\n  statements\nelif condition:\n  statements\nelse:\n  statements",
+      "name": "If/ElseIf/Else conditional"
     },
     "ternary_conditional": {
-      "code": "if condition:\n  exprIfTrue else:\n  exprIfFalse"
+      "code": "if condition:\n  exprIfTrue else:\n  exprIfFalse",
+      "name": "Ternary conditional"
     },
     "switch_statement": {
-      "code": "case expression\nof expressionOrRange:\n    statements\nelse:\n    statements"
+      "code": "case expression\nof expressionOrRange:\n    statements\nelse:\n    statements",
+      "name": "Switch statement"
     },
     "while_loop": {
-      "code": "while condition:\n  statements"
+      "code": "while condition:\n  statements",
+      "name": "While loop"
     },
     "for_loop": {
-      "code": "for item in iterable:\n  statements"
+      "code": "for item in iterable:\n  statements",
+      "name": "For loop"
     },
     "map_iteration": {
-      "code": "iterable.map function"
+      "code": "iterable.map function",
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "code": "iterable.filter function"
+      "code": "iterable.filter function",
+      "name": "Filter iteration"
     }
   }
 }

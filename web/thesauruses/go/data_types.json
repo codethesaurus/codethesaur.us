@@ -7,83 +7,108 @@
   },
   "concepts": {
     "boolean": {
-      "code": "bool"
+      "code": "bool",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "code": "int8"
+      "code": "int8",
+      "name": "Signed 8-bit integer"
     },
     "unsigned_integer_8_bit": {
-      "code": "uint8"
+      "code": "uint8",
+      "name": "Unsigned 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "code": "int16"
+      "code": "int16",
+      "name": "Signed 16-bit integer"
     },
     "unsigned_integer_16_bit": {
-      "code": "uint16"
+      "code": "uint16",
+      "name": "Unsigned 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "code": "int32"
+      "code": "int32",
+      "name": "Signed 32-bit integer"
     },
     "unsigned_integer_32_bit": {
-      "code": "uint32"
+      "code": "uint32",
+      "name": "Unsigned 32-bit integer"
     },
     "signed_integer_64_bit": {
-      "code": "int64"
+      "code": "int64",
+      "name": "Signed 64-bit integer"
     },
     "unsigned_integer_64_bit": {
-      "code": "uint64"
+      "code": "uint64",
+      "name": "Unsigned 64-bit integer"
     },
     "signed_integer_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Signed object-based Integer"
     },
     "unsigned_integer_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned object-based Integer"
     },
     "signed_float_16_bit": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Signed 16-bit floating point"
     },
     "unsigned_float_16_bit": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned 16-bit floating point"
     },
     "signed_float_32_bit": {
       "code": "float32",
-      "comment": "float32 uses single-precision floating point format to store values. Basically it is the set of all IEEE-754 32-bit floating-point numbers. The 32 bits are divided into – 1 bit sign, 8 bits exponent, and 23 bits mantissa. float 32 take half much size as float 64 and are comparatively faster on some machine architectures"
+      "comment": "float32 uses single-precision floating point format to store values. Basically it is the set of all IEEE-754 32-bit floating-point numbers. The 32 bits are divided into \u2013 1 bit sign, 8 bits exponent, and 23 bits mantissa. float 32 take half much size as float 64 and are comparatively faster on some machine architectures",
+      "name": "Signed 32-bit floating point"
     },
     "unsigned_float_32_bit": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned 32-bit floating point"
     },
     "signed_float_64_bit": {
       "code": "float64",
-      "comment": "float64 uses a double-precision floating-point format to store values. Basically it is the set of all IEEE-754 64-bit floating-point numbers. The 64 bits are divided into 1-bit sign, 11 bits exponent, 52 bits mantissa. float64 takes twice as much size compared to float32 but can represent numbers more accurately than float32."
+      "comment": "float64 uses a double-precision floating-point format to store values. Basically it is the set of all IEEE-754 64-bit floating-point numbers. The 64 bits are divided into 1-bit sign, 11 bits exponent, 52 bits mantissa. float64 takes twice as much size compared to float32 but can represent numbers more accurately than float32.",
+      "name": "Signed 64-bit floating point"
     },
     "unsigned_float_64_bit": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned 64-bit floating point"
     },
     "signed_float_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Signed object-based floating point"
     },
     "unsigned_float_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned object-based floating point"
     },
     "character": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Character"
     },
     "string_as_object": {
       "not-implemented": "true",
-      "comment": "unknown"
+      "comment": "unknown",
+      "name": "String as an object"
     },
     "string_as_array": {
       "code": "string",
-      "comment": "string is a read only slice of bytes in golang"
+      "comment": "string is a read only slice of bytes in golang",
+      "name": "String as an array of characters"
     },
     "complex_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Complex Number as an object"
     },
     "real_number_part": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Complex number real part"
     },
     "imaginary_number_part": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Complex number imaginary part"
     }
   }
 }

@@ -11,39 +11,39 @@
       "code": "boolean"
     },
     "signed_integer_8_bit": {
-      "name": "8-bit integer",
+      "name": "Signed 8-bit integer",
       "code": "byte"
     },
     "signed_integer_16_bit": {
-      "name": "16-bit integer",
+      "name": "Signed 16-bit integer",
       "code": "short"
     },
     "signed_integer_32_bit": {
-      "name": "32-bit integer",
+      "name": "Signed 32-bit integer",
       "code": "int"
     },
     "signed_integer_64_bit": {
-      "name": "64-bit integer",
+      "name": "Signed 64-bit integer",
       "code": "long"
     },
     "signed_integer_as_object": {
-      "name": "Object-based Integer",
+      "name": "Signed object-based Integer",
       "code": "Integer"
     },
     "signed_float_16_bit": {
-      "name": "16-bit floating point",
+      "name": "Signed 16-bit floating point",
       "not-implemented": true
     },
     "signed_float_32_bit": {
-      "name": "32-bit floating point",
+      "name": "Signed 32-bit floating point",
       "code": "float"
     },
     "signed_float_64_bit": {
-      "name": "64-bit floating point",
+      "name": "Signed 64-bit floating point",
       "code": "double"
     },
     "signed_float_as_object": {
-      "name": "Object-based floating point",
+      "name": "Signed object-based floating point",
       "code": "Float"
     },
     "string_as_object": {
@@ -51,7 +51,7 @@
       "code": "String"
     },
     "string_as_array": {
-      "name": "String as an array",
+      "name": "String as an array of characters",
       "code": "char[]"
     },
     "complex_as_object": {

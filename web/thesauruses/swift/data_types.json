@@ -7,84 +7,109 @@
   },
   "concepts": {
     "boolean": {
-      "code": "Bool"
+      "code": "Bool",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "code": "Int8"
+      "code": "Int8",
+      "name": "Signed 8-bit integer"
     },
     "unsigned_integer_8_bit": {
-      "code": "UInt8"
+      "code": "UInt8",
+      "name": "Unsigned 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "code": "Int16"
+      "code": "Int16",
+      "name": "Signed 16-bit integer"
     },
     "unsigned_integer_16_bit": {
-      "code": "UInt16"
+      "code": "UInt16",
+      "name": "Unsigned 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "code": "Int32"
+      "code": "Int32",
+      "name": "Signed 32-bit integer"
     },
     "unsigned_integer_32_bit": {
-      "code": "UInt32"
+      "code": "UInt32",
+      "name": "Unsigned 32-bit integer"
     },
     "signed_integer_64_bit": {
-      "code": "Int64"
+      "code": "Int64",
+      "name": "Signed 64-bit integer"
     },
     "unsigned_integer_64_bit": {
-      "code": "UInt64"
+      "code": "UInt64",
+      "name": "Unsigned 64-bit integer"
     },
     "signed_integer_as_object": {
       "code": "Int",
-      "comment": "`Int` is used in situations where the platform size may not be known. On a 32-bit platform, `Int` can store 32-bit integers."
+      "comment": "`Int` is used in situations where the platform size may not be known. On a 32-bit platform, `Int` can store 32-bit integers.",
+      "name": "Signed object-based Integer"
     },
     "unsigned_integer_as_object": {
       "code": "UInt",
-      "comment": "`UInt` is used for unsigned integers and the size adapts to platform size. `UInt` can store on 64-bit integers on a 64-bit platform, for example."
+      "comment": "`UInt` is used for unsigned integers and the size adapts to platform size. `UInt` can store on 64-bit integers on a 64-bit platform, for example.",
+      "name": "Unsigned object-based Integer"
     },
     "signed_float_16_bit": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Signed 16-bit floating point"
     },
     "unsigned_float_16_bit": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned 16-bit floating point"
     },
     "signed_float_32_bit": {
       "code": "Float",
-      "comment": "Floats in Swift are precise up to 7 digits."
+      "comment": "Floats in Swift are precise up to 7 digits.",
+      "name": "Signed 32-bit floating point"
     },
     "unsigned_float_32_bit": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned 32-bit floating point"
     },
     "signed_float_64_bit": {
       "code": "Double",
-      "comment": "Doubles in Swift are precise up to 15 digits."
+      "comment": "Doubles in Swift are precise up to 15 digits.",
+      "name": "Signed 64-bit floating point"
     },
     "unsigned_float_64_bit": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned 64-bit floating point"
     },
     "signed_float_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Signed object-based floating point"
     },
     "unsigned_float_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Unsigned object-based floating point"
     },
     "character": {
-      "code": "Character"
+      "code": "Character",
+      "name": "Character"
     },
     "string_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "String as an object"
     },
     "string_as_array": {
       "code": "String",
-      "comment": "`String` in Swift bridges to Foundation's `NSString` class, so developers have a wide variety of string methods available to them."
+      "comment": "`String` in Swift bridges to Foundation's `NSString` class, so developers have a wide variety of string methods available to them.",
+      "name": "String as an array of characters"
     },
     "complex_as_object": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Complex Number as an object"
     },
     "real_number_part": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Complex number real part"
     },
     "imaginary_number_part": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Complex number imaginary part"
     }
   }
 }

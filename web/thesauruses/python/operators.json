@@ -7,97 +7,128 @@
   },
   "concepts": {
     "addition": {
-      "code": "+"
+      "code": "+",
+      "name": "Addition operator"
     },
     "addition_assignment": {
-      "code": "+="
+      "code": "+=",
+      "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-"
+      "code": "-",
+      "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "code": "-="
+      "code": "-=",
+      "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*"
+      "code": "*",
+      "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "code": "*="
+      "code": "*=",
+      "name": "Multiplication and assignment operator"
     },
     "division": {
-      "code": "/"
+      "code": "/",
+      "name": "Division operator"
     },
     "division_assignment": {
-      "code": "/="
+      "code": "/=",
+      "name": "Division and assignment operator"
     },
     "modulus": {
-      "code": "%"
+      "code": "%",
+      "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
-      "code": "%="
+      "code": "%=",
+      "name": "Modulus and assignment operator"
     },
     "increment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Increment (add 1) operator"
     },
     "decrement": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
-      "code": "**"
+      "code": "**",
+      "name": "Exponential operator"
     },
     "factorial": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Factorial operator"
     },
     "absolute_value": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Absolute value operator"
     },
     "percentage": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "=="
+      "code": "==",
+      "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "!="
+      "code": "!=",
+      "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "<"
+      "code": "<",
+      "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "<="
+      "code": "<=",
+      "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": ">"
+      "code": ">",
+      "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": ">="
+      "code": ">=",
+      "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Null coalescing operator"
     },
     "is": {
-      "code": "is"
+      "code": "is",
+      "name": "Is operator"
     },
     "is_not": {
-      "code": "is not"
+      "code": "is not",
+      "name": "Is not operator"
     },
     "left_shift": {
-      "code": "<<"
+      "code": "<<",
+      "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "<<="
+      "code": "<<=",
+      "name": "Left shift assignment operator"
     },
     "right_shift": {
-      "code": ">>"
+      "code": ">>",
+      "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "code": ">>="
+      "code": ">>=",
+      "name": "Right shift assignment operator"
     },
     "ternary": {
-      "code": "value1 if condition else value2"
+      "code": "value1 if condition else value2",
+      "name": "Ternary operator"
     },
     "null_forgiving": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
     }
   }
 }

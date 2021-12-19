@@ -7,40 +7,52 @@
   },
   "concepts": {
     "if_conditional": {
-      "code": "if condition {\n    statements;\n}"
+      "code": "if condition {\n    statements;\n}",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if condition {\n    statements;\n} else {\n    statements;\n}"
+      "code": "if condition {\n    statements;\n} else {\n    statements;\n}",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if condition {\n    statements;\n} else if condition2 {\n    statements;\n}"
+      "code": "if condition {\n    statements;\n} else if condition2 {\n    statements;\n}",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if condition {\n    statements;\n} else if condition2 {\n    statements;\n} else {\n    statements;\n}"
+      "code": "if condition {\n    statements;\n} else if condition2 {\n    statements;\n} else {\n    statements;\n}",
+      "name": "If/ElseIf/Else conditional"
     },
     "ternary_conditional": {
-      "code": "if condition { expression } else { expression }"
+      "code": "if condition { expression } else { expression }",
+      "name": "Ternary conditional"
     },
     "switch_statement": {
-      "code": "match expression {\n    pattern => { statements }\n    _ => { statements } // the special pattern _ matches all cases\n}"
+      "code": "match expression {\n    pattern => { statements }\n    _ => { statements } // the special pattern _ matches all cases\n}",
+      "name": "Switch statement"
     },
     "while_loop": {
-      "code": "while condition {\n    statements;\n}"
+      "code": "while condition {\n    statements;\n}",
+      "name": "While loop"
     },
     "foreach_loop": {
-      "code": "for variable in iterable {\n    statements;\n}"
+      "code": "for variable in iterable {\n    statements;\n}",
+      "name": "Foreach loop"
     },
     "each_iteration": {
-      "code": "iter.for_each(|item| {\n    statements;\n});"
+      "code": "iter.for_each(|item| {\n    statements;\n});",
+      "name": "Each iteration"
     },
     "map_iteration": {
-      "code": "iter.map(|item| {\n    expression\n}"
+      "code": "iter.map(|item| {\n    expression\n}",
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "code": "iter.filter(|item| {\n    boolean_expression\n}"
+      "code": "iter.filter(|item| {\n    boolean_expression\n}",
+      "name": "Filter iteration"
     },
     "fold_iteration": {
-      "code": "iter.fold(init, |acc, x| {\n    expression\n}"
+      "code": "iter.fold(init, |acc, x| {\n    expression\n}",
+      "name": "Fold iteration"
     }
   }
 }

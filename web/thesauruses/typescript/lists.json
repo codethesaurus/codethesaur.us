@@ -7,269 +7,353 @@
   },
   "concepts": {
     "name_of_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "What is a ordered mutable list called?"
     },
     "create_a_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Create the list"
     },
     "ordered_mutable_list_start_number": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "What number does it start at?"
     },
     "ordered_mutable_list_can_be_appended": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Can you append to it?"
     },
     "ordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Access element by index"
     },
     "insert_into_beginning_of_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Insert element at beginning"
     },
     "insert_into_end_of_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Insert element at end"
     },
     "insert_into_middle_of_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Erase first element"
     },
     "erase_element_at_end_of_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Erase last element"
     },
     "erase_element_in_middle_of_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Erase element in the middle"
     },
     "swap_elements_in_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Swap two elements"
     },
     "delete_ordered_mutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Delete the list"
     },
     "name_of_unordered_mutable_list": {
-      "code": "Array"
+      "code": "Array",
+      "name": "What is a unordered mutable list called?"
     },
     "create_a_unordered_mutable_list": {
       "code": "let arrayName: type[] = [];",
-      "comment": "Examples: let scores : (string | number)[1,2,3,'hi'];"
+      "comment": "Examples: let scores : (string | number)[1,2,3,'hi'];",
+      "name": "unordered"
     },
     "unordered_mutable_list_start_number": {
-      "code": "0"
+      "code": "0",
+      "name": "What number does it start at?"
     },
     "unordered_mutable_list_can_be_appended": {
-      "code": "Yes"
+      "code": "Yes",
+      "name": "Can you append to it?"
     },
     "unordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "Yes"
+      "code": "Yes",
+      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_unordered_mutable_list": {
       "code": "arrayName[index]",
-      "comment": "index must be of type integer"
+      "comment": "index must be of type integer",
+      "name": "Access element by index"
     },
     "insert_into_beginning_of_unordered_mutable_list": {
       "code": "arrayName.unshift(value)",
-      "comment": "value must be of the same datatype(s) used to define the array"
+      "comment": "value must be of the same datatype(s) used to define the array",
+      "name": "Insert element at beginning"
     },
     "insert_into_end_of_unordered_mutable_list": {
       "code": "arrayName.push(value)",
-      "comment": "value must be of the same datatype(s) used to define the array"
+      "comment": "value must be of the same datatype(s) used to define the array",
+      "name": "Insert element at end"
     },
     "insert_into_middle_of_unordered_mutable_list": {
       "code": "arrayName.splice(index,0,item)",
-      "comment": "item must of the same datatype(s) used to define the array"
+      "comment": "item must of the same datatype(s) used to define the array",
+      "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
-      "code": "arrayName.shift()"
+      "code": "arrayName.shift()",
+      "name": "Erase first element"
     },
     "erase_element_at_end_of_unordered_mutable_list": {
-      "code": "arrayName.pop()"
+      "code": "arrayName.pop()",
+      "name": "Erase last element"
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
-      "code": "arrayName.splice(index,1)"
+      "code": "arrayName.splice(index,1)",
+      "name": "Erase element in the middle"
     },
     "swap_elements_in_unordered_mutable_list": {
-      "code": "[array[index1], array[index2]] = [array[index2], array[index1]];"
+      "code": "[array[index1], array[index2]] = [array[index2], array[index1]];",
+      "name": "Swap two elements"
     },
     "delete_unordered_mutable_list": {
-      "code": "arrayName.length = 0"
+      "code": "arrayName.length = 0",
+      "name": "Delete the list"
     },
     "name_of_ordered_immutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "What is a ordered immutable list called?"
     },
     "create_a_ordered_immutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Create the list"
     },
     "ordered_immutable_list_start_number": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "What number does it start at?"
     },
     "access_element_in_ordered_immutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Access element by index"
     },
     "delete_ordered_immutable_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Delete the list"
     },
     "name_of_unordered_immutable_list": {
-      "code": "Array"
+      "code": "Array",
+      "name": "What is a unordered immutable list called?"
     },
     "create_a_unordered_immutable_list": {
       "code": "const arrayName: ReadonlyArray<number> = [1, 2];\nconst arrayName: readonly number[] = [1, 2];\nconst list: ReadonlyArray<number> = Object.freeze([1, 2]);",
-      "comment": "Using Object.freeze prevents it from being deleted, so use with caution."
+      "comment": "Using Object.freeze prevents it from being deleted, so use with caution.",
+      "name": "Create the list"
     },
     "unordered_immutable_list_start_number": {
-      "code": "0"
+      "code": "0",
+      "name": "What number does it start at?"
     },
     "access_element_in_unordered_immutable_list": {
-      "code": "arrayName[index];"
+      "code": "arrayName[index];",
+      "name": "Access element by index"
     },
     "delete_unordered_immutable_list": {
-      "code": "arrayName.length = 0"
+      "code": "arrayName.length = 0",
+      "name": "Delete the list"
     },
     "name_of_mutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "What is a mutable hashed list called?"
     },
     "create_a_mutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Create the list"
     },
     "insert_element_to_mutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Insert an element"
     },
     "erase_element_from_mutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Erase an element from the list"
     },
     "delete_mutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Delete the list"
     },
     "name_of_immutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "What is an immutable hashed list called?"
     },
     "create_a_immutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Create the list"
     },
     "insert_element_to_immutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Insert an element"
     },
     "erase_element_from_immutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Erase an element from the list"
     },
     "delete_immutable_hashed_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Delete the list"
     },
     "create_a_mutable_set": {
-      "code": "let map = new Map();\nmap.set(key, value);"
+      "code": "let map = new Map();\nmap.set(key, value);",
+      "name": "Create a mutable key/value set"
     },
     "get_key_from_mutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Get key"
     },
     "get_value_from_mutable_set": {
-      "code": "map.get(key)"
+      "code": "map.get(key)",
+      "name": "Get value"
     },
     "get_all_keys_from_mutable_set": {
       "code": "map.keys()\nfor (let key of map.keys()) {console.log(key);}",
-      "comment": "It returns an iterable, so it must be used in a for loop."
+      "comment": "It returns an iterable, so it must be used in a for loop.",
+      "name": "Get all keys"
     },
     "get_all_values_from_mutable_set": {
       "code": "map.values()\nfor (let value of map.values()) {console.log(value);}",
-      "comment": "It returns an iterable, so it must be used in a for loop."
+      "comment": "It returns an iterable, so it must be used in a for loop.",
+      "name": "Get all values"
     },
     "swap_key_and_value_in_mutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Swap a key and value"
     },
     "delete_mutable_set": {
-      "code": "map.clear()"
+      "code": "map.clear()",
+      "name": "Delete the set"
     },
     "create_a_immutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Create an immutable key/value set"
     },
     "get_key_from_immutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Get key"
     },
     "get_value_from_immutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Get value"
     },
     "get_all_keys_from_immutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Get all keys"
     },
     "get_all_values_from_immutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Get all values"
     },
     "swap_key_and_value_in_immutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Swap a key and value"
     },
     "delete_immutable_set": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Delete the set"
     },
     "find_element_at_position": {
       "not-implemented": true
     },
     "find_element_by_value": {
-      "code": "array.indexOf(searchElement[, fromIndex])"
+      "code": "array.indexOf(searchElement[, fromIndex])",
+      "name": "Find/search for an element by value"
     },
     "find_minimum_element": {
-      "code": "Math.min.apply(null, array)\nOR\nMath.min(...array)"
+      "code": "Math.min.apply(null, array)\nOR\nMath.min(...array)",
+      "name": "Find the minimum value in a list"
     },
     "find_maximum_element": {
-      "code": "Math.max.apply(null, array)\nOR\nMath.max(...array)"
+      "code": "Math.max.apply(null, array)\nOR\nMath.max(...array)",
+      "name": "Find the maximum value in a list"
     },
     "convert_list_to_string": {
-      "code": "array.toString()"
+      "code": "array.toString()",
+      "name": "Convert a list to a string"
     },
     "concatenate_two_lists": {
-      "code": "let newArray = array1.concat(array2,array3,...)\nreturn newArray"
+      "code": "let newArray = array1.concat(array2,array3,...)\nreturn newArray",
+      "name": "Concatenate two lists together"
     },
     "split_list_at_index": {
       "code": "let arr = [ ... ];\nlet part1 = arr.slice(0,index);\nlet part2 = arr.slice(index);",
-      "comment": "There is no inbuilt function that takes an index and returns two arrays"
+      "comment": "There is no inbuilt function that takes an index and returns two arrays",
+      "name": "Split lists at an index"
     },
     "split_list_at_value": {
       "code": "let arr = [ ... ];\nlet part1 = arr.slice(0,arr.indexOf(value));\nlet part2 = arr.slice(arr.indexOf(value));",
-      "comment": "There is no inbuilt function that takes an index and returns two arrays"
+      "comment": "There is no inbuilt function that takes an index and returns two arrays",
+      "name": "Split list at a value"
     },
     "duplicate_a_list": {
-      "code": "let array2 = Array.from(array1)"
+      "code": "let array2 = Array.from(array1)",
+      "name": "Duplicate a list"
     },
     "duplicate_subset_of_list": {
-      "code": "let array2 = array1.slice(start,end)"
+      "code": "let array2 = array1.slice(start,end)",
+      "name": "Duplicate a portion/subset of a list"
     },
     "get_list_length": {
-      "code": "array.length"
+      "code": "array.length",
+      "name": "Get list length"
     },
     "resize_list": {
-      "code": "array.length = value"
+      "code": "array.length = value",
+      "name": "Increase/decrease list size"
     },
     "do_two_lists_match_exactly": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Do two lists match every element?"
     },
     "do_two_lists_contain_same_items": {
-      "code": "const isEqual:boolean = array1.every(e => array2.indexOf(e) >= 0) && (array1.length === array2.length)\nreturn isEqual"
+      "code": "const isEqual:boolean = array1.every(e => array2.indexOf(e) >= 0) && (array1.length === array2.length)\nreturn isEqual",
+      "name": "Do two lists contain all the same items?"
     },
     "does_list_satisfy_some_expression": {
-      "code": "array.some((element, index) => { ... } )"
+      "code": "array.some((element, index) => { ... } )",
+      "name": "Does a list satisfy some expression?"
     },
     "does_list_not_satisfy_an_expression": {
-      "code": "array.every((element, index) => { ... } )"
+      "code": "array.every((element, index) => { ... } )",
+      "name": "Does a list entirely not satisfy an expression?"
     },
     "sort_list": {
-      "code": "array.sort()"
+      "code": "array.sort()",
+      "name": "Sort a list"
     },
     "shuffle_list": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Shuffle list elements"
     },
     "reverse_list": {
-      "code": "array.reverse()"
+      "code": "array.reverse()",
+      "name": "Reverse order of list elements"
     },
     "map": {
-      "code": "array.map((element, index) => { ... } )"
+      "code": "array.map((element, index) => { ... } )",
+      "name": "Map function across list"
     },
     "filter": {
-      "code": "array.filter((element, index) => { ... } )"
+      "code": "array.filter((element, index) => { ... } )",
+      "name": "Filter a list based on criteria"
     },
     "reduce_left": {
-      "code": "array.reduce((previousValue, currentValue, currentIndex) => { ... } )"
+      "code": "array.reduce((previousValue, currentValue, currentIndex) => { ... } )",
+      "name": "Reduce a list left-to-right"
     },
     "reduce_right": {
-      "code": "array.reduceRight((previousValue, currentValue, index) => { ... } )"
+      "code": "array.reduceRight((previousValue, currentValue, index) => { ... } )",
+      "name": "Reduce a list right-to-left"
     }
   }
 }

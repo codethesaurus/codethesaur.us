@@ -7,83 +7,107 @@
   },
   "concepts": {
     "normal_class": {
-      "code": "class ClassName {\n //Class body containing variables and methods \n}"
+      "code": "class ClassName {\n //Class body containing variables and methods \n}",
+      "name": "Normal class"
     },
     "abstract_class": {
-      "code": "abstract class ClassName {\n //Class body containing methods (atleast one of which is abstract) \n}"
+      "code": "abstract class ClassName {\n //Class body containing methods (atleast one of which is abstract) \n}",
+      "name": "Abstract class"
     },
     "interface": {
-      "code": "interface InterfaceName {\n //Interface body containing method declarations \n}"
+      "code": "interface InterfaceName {\n //Interface body containing method declarations \n}",
+      "name": "Interface"
     },
     "read_only_class": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Read-only class"
     },
     "static_class": {
-      "code": "class ClassName {\n //Class body containing static variables and static methods \n}"
+      "code": "class ClassName {\n //Class body containing static variables and static methods \n}",
+      "name": "Static class"
     },
     "inner_class": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Inner class"
     },
     "packages": {
       "comment": "Composer can be used to create and manage PHP Packages. (https://getcomposer.org)",
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Packages"
     },
     "class_with_generic_type": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Class with a generic type"
     },
     "private_variables": {
       "code": "private data_type $variable_name = value;",
-      "comment": "Data types are optional in PHP"
+      "comment": "Data types are optional in PHP",
+      "name": "Defining private variables"
     },
     "protected_variables": {
       "code": "protected data_type $variable_name = value;",
-      "comment": "Data types are optional in PHP"
+      "comment": "Data types are optional in PHP",
+      "name": "Defining protected variables"
     },
     "public_variables": {
       "code": "public data_type $variable_name = value;",
-      "comment": "Data types are optional in PHP"
+      "comment": "Data types are optional in PHP",
+      "name": "Defining public variables"
     },
     "static_variables": {
       "code": "access-modifier static data_type $variable_name = value;",
-      "comment": "Data types are optional in PHP"
+      "comment": "Data types are optional in PHP",
+      "name": "Defining static variables"
     },
     "private_functions": {
-      "code": "private function methodName(){\n //Method Body \n}"
+      "code": "private function methodName(){\n //Method Body \n}",
+      "name": "Defining private functions"
     },
     "protected_functions": {
-      "code": "protected function methodName(){\n //Method Body \n}"
+      "code": "protected function methodName(){\n //Method Body \n}",
+      "name": "Defining protected functions"
     },
     "public_functions": {
-      "code": "public function methodName(){\n //Method Body \n}"
+      "code": "public function methodName(){\n //Method Body \n}",
+      "name": "Defining public functions"
     },
     "static_functions": {
-      "code": "access-modifier static function methodName(){\n //Method Body \n}"
+      "code": "access-modifier static function methodName(){\n //Method Body \n}",
+      "name": "Defining static functions"
     },
     "extends_class": {
-      "code": "class ChildClassName extends ParentClassName {\n //Class body containing variables and methods \n}"
+      "code": "class ChildClassName extends ParentClassName {\n //Class body containing variables and methods \n}",
+      "name": "Class that inherits/extends another class"
     },
     "extending_interface": {
-      "code": "class ClassName implements InterfaceName {\n //Class body containing variables and methods \n}"
+      "code": "class ClassName implements InterfaceName {\n //Class body containing variables and methods \n}",
+      "name": "Class/Interface that inherits/extends another class/interface"
     },
     "calling_superclass_functions": {
-      "code": "parent::methodName();"
+      "code": "parent::methodName();",
+      "name": "Calling a superclass function"
     },
     "overriding_superclass_functions": {
-      "code": "class ParentClassName {\n public function methodName() {\n  //Method body \n } \n} \nclass ChildClassName extends ParentClassName {\n public function methodName() {\n  //Method body \n } \n}"
+      "code": "class ParentClassName {\n public function methodName() {\n  //Method body \n } \n} \nclass ChildClassName extends ParentClassName {\n public function methodName() {\n  //Method body \n } \n}",
+      "name": "Overriding a superclass function"
     },
     "instantiating_object": {
       "code": "ClassName $object_name = new ClassName();",
-      "comment": "ClassName data type is optional when declaring a variable."
+      "comment": "ClassName data type is optional when declaring a variable.",
+      "name": "Instantiating a new object"
     },
     "instantiating_polymorphic_object": {
       "code": "InterfaceName $object_name = new ClassName();",
-      "comment": "InterfaceName data type is optional when declaring a variable. ClassName class must implement the interface InterfaceName"
+      "comment": "InterfaceName data type is optional when declaring a variable. ClassName class must implement the interface InterfaceName",
+      "name": "Instantiating a polymorphic object"
     },
     "implement_constructor": {
-      "code": "public function __construct() {\n //Method body \n}"
+      "code": "public function __construct() {\n //Method body \n}",
+      "name": "Implementing a class constructor"
     },
     "implement_deconstructor": {
-      "code": "public function __destruct() {\n //Method body \n}"
+      "code": "public function __destruct() {\n //Method body \n}",
+      "name": "Implementing a class deconstructor"
     }
   }
 }

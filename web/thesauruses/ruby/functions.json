@@ -8,42 +8,53 @@
   "concepts": {
     "void_function_no_parameters": {
       "code": "",
-      "comment": "By default, Ruby returns whatever the last statement returns. Ruby always returns a value, even if it's nil."
+      "comment": "By default, Ruby returns whatever the last statement returns. Ruby always returns a value, even if it's nil.",
+      "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
       "code": "",
-      "comment": "Ruby always returns a value, even if it's nil."
+      "comment": "Ruby always returns a value, even if it's nil.",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_variable_parameters": {
       "code": "",
-      "comment": "Ruby always returns a value, even if it's nil."
+      "comment": "Ruby always returns a value, even if it's nil.",
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "return_value_function_no_parameters": {
       "code": "def method_name\n  expression\nend",
-      "comment": "It's common practice to end method names that return booleans in a question mark, eg valid?, enabled?, nil? Parenthesis at the end of the method are optional."
+      "comment": "It's common practice to end method names that return booleans in a question mark, eg valid?, enabled?, nil? Parenthesis at the end of the method are optional.",
+      "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
       "code": "def method_name(positional_param_1)\n  expressions\nend",
-      "comment": "Ruby returns the value of the last expression by default. `return val` is optional."
+      "comment": "Ruby returns the value of the last expression by default. `return val` is optional.",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "return_value_function_variable_parameters": {
-      "code": "def method_name(*params)\n  expressions\nend"
+      "code": "def method_name(*params)\n  expressions\nend",
+      "name": "Function that returns a value and takes an unknown number of parameters"
     },
     "anonymous_function_no_parameters": {
       "code": "-> { expression }\n# or...\nlambda do\n  expressions\nend\n# or...\nProc.new do\n  expressions\nend",
-      "comment": "You can do any way, normally lambda or Proc.new is used for multi-line expressions."
+      "comment": "You can do any way, normally lambda or Proc.new is used for multi-line expressions.",
+      "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
-      "code": "->(param) { expression }\n# or...\nlambda do |param|\n  expressions\nend\n# or...\nProc.new do |param|\n  expressions\nend"
+      "code": "->(param) { expression }\n# or...\nlambda do |param|\n  expressions\nend\n# or...\nProc.new do |param|\n  expressions\nend",
+      "name": "Anonymous function that takes 1 or more defined parameters"
     },
     "anonymous_function_variable_parameters": {
-      "code": "->(*params) { expression }\n# or...\nlambda do |*params|\n  expressions\nend\n# or...\nProc.new do |*params|\n  expressions\nend"
+      "code": "->(*params) { expression }\n# or...\nlambda do |*params|\n  expressions\nend\n# or...\nProc.new do |*params|\n  expressions\nend",
+      "name": "Anonymous function that takes an unknown number of parameters"
     },
     "call_subroutine": {
-      "code": ""
+      "code": "",
+      "name": "Call subroutine"
     },
     "return_from_subroutine": {
-      "code": ""
+      "code": "",
+      "name": "Return from subroutine"
     }
   }
 }

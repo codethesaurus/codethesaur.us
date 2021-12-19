@@ -7,56 +7,73 @@
   },
   "concepts": {
     "if_conditional": {
-      "code": "if( condition ) {\n\t# statement\n}"
+      "code": "if( condition ) {\n\t# statement\n}",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if( condition ) {\n\t# statement\n} else {\n\t# else statement\n}"
+      "code": "if( condition ) {\n\t# statement\n} else {\n\t# else statement\n}",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if( condition ) {\n\t# statements\n} elsif( condition ) {\n\t# else if statements\n}"
+      "code": "if( condition ) {\n\t# statements\n} elsif( condition ) {\n\t# else if statements\n}",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if( condition ) {\n\t# statements\n} elsif( condition ) {\n\t# else if statements\n} else {\n\t# else statements\n}"
+      "code": "if( condition ) {\n\t# statements\n} elsif( condition ) {\n\t# else if statements\n} else {\n\t# else statements\n}",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
       "code": "switch( argument ) {\n\tcase 1 { # statements }\n\tcase \"a\" { # statements }\n\telse { # else statements }\n }",
-      "comment": "The Switch module must be included (aka use Switch;)."
+      "comment": "The Switch module must be included (aka use Switch;).",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
-      "code": "condition ? trueExpression : falseExpression"
+      "code": "condition ? trueExpression : falseExpression",
+      "name": "Ternary conditional"
     },
     "while_loop": {
-      "code": "while( condition ) {\n\t# statements\n}"
+      "code": "while( condition ) {\n\t# statements\n}",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "do {\n\t# statements\n} while( condition );"
+      "code": "do {\n\t# statements\n} while( condition );",
+      "name": "Do/While loop"
     },
     "until_loop": {
-      "code": "until( condition ) {\n\t# statements\n}"
+      "code": "until( condition ) {\n\t# statements\n}",
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Do/Until loop"
     },
     "for_loop": {
-      "code": "for( init; condition; increment )\n{\n\t# statements\n}"
+      "code": "for( init; condition; increment )\n{\n\t# statements\n}",
+      "name": "For loop"
     },
     "foreach_loop": {
-      "code": "foreach $item ( @list ) {\n\t# statements\n}"
+      "code": "foreach $item ( @list ) {\n\t# statements\n}",
+      "name": "Foreach loop"
     },
     "list_comprehension": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "List Comprehension"
     },
     "each_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Each iteration"
     },
     "map_iteration": {
-      "code": "my @newArray = map { expression } @oldArray;"
+      "code": "my @newArray = map { expression } @oldArray;",
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "code": "my @newArray = grep { expresssion } @oldArray;"
+      "code": "my @newArray = grep { expresssion } @oldArray;",
+      "name": "Filter iteration"
     },
     "fold_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Fold iteration"
     }
   }
 }

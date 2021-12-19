@@ -8,82 +8,107 @@
   "concepts": {
     "boolean": {
       "not-implemented": true,
-      "comment": "Use a scalar. Perl does not require to pre-declare variable type."
+      "comment": "Use a scalar. Perl does not require to pre-declare variable type.",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 8-bit integer"
     },
     "unsigned_integer_8_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 16-bit integer"
     },
     "unsigned_integer_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 32-bit integer"
     },
     "unsigned_integer_32_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 32-bit integer"
     },
     "signed_integer_64_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 64-bit integer"
     },
     "unsigned_integer_64_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 64-bit integer"
     },
     "signed_integer_as_object": {
       "not-implemented": true,
-      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
+      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type.",
+      "name": "Signed object-based Integer"
     },
     "unsigned_integer_as_object": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned object-based Integer"
     },
     "signed_float_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 16-bit floating point"
     },
     "unsigned_float_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 16-bit floating point"
     },
     "signed_float_32_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 32-bit floating point"
     },
     "unsigned_float_32_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 32-bit floating point"
     },
     "signed_float_64_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 64-bit floating point"
     },
     "unsigned_float_64_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned 64-bit floating point"
     },
     "signed_float_as_object": {
       "not-implemented": true,
-      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
+      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type.",
+      "name": "Signed object-based floating point"
     },
     "unsigned_float_as_object": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Unsigned object-based floating point"
     },
     "character": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Character"
     },
     "string_as_object": {
       "not-implemented": true,
-      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type."
+      "comment": "Use a scalar variable. Perl does not require to pre-declare variable type.",
+      "name": "String as an object"
     },
     "string_as_array": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "String as an array of characters"
     },
     "complex_as_object": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex Number as an object"
     },
     "real_number_part": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex number real part"
     },
     "imaginary_number_part": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex number imaginary part"
     }
   }
 }

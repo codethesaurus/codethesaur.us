@@ -7,25 +7,27 @@
   },
   "concepts": {
     "boolean": {
-      "code": "bool"
+      "code": "bool",
+      "name": "Boolean"
     },
     "signed_integer_16_bit": {
-      "code": "short"
+      "code": "short",
+      "name": "Signed 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "name": "32-bit integer",
+      "name": "Signed 32-bit integer",
       "code": "int"
     },
     "signed_integer_64_bit": {
-      "name": "64-bit integer",
+      "name": "Signed 64-bit integer",
       "code": "long"
     },
     "signed_float_32_bit": {
-      "name": "32-bit floating point",
+      "name": "Signed 32-bit floating point",
       "code": "float"
     },
     "signed_float_64_bit": {
-      "name": "64-bit floating point",
+      "name": "Signed 64-bit floating point",
       "code": "double"
     }
   }

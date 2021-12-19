@@ -7,25 +7,32 @@
   },
   "concepts": {
     "void_function_no_parameters": {
-      "code": "def function_name():\n    statements"
+      "code": "def function_name():\n    statements",
+      "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
-      "code": "def function_name(parameter, parameter_1):\n    statements"
+      "code": "def function_name(parameter, parameter_1):\n    statements",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_variable_parameters": {
-      "code": "def function_name(*parameter_name):\n    statements"
+      "code": "def function_name(*parameter_name):\n    statements",
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "return_value_function_no_parameters": {
-      "code": "def function_name():\n    statements\n    return expression"
+      "code": "def function_name():\n    statements\n    return expression",
+      "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
-      "code": "def function_name(parameter, parameter_1):\n    statements\n    return expression"
+      "code": "def function_name(parameter, parameter_1):\n    statements\n    return expression",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "return_value_function_variable_parameters": {
-      "code": "def function_name(*parameter_name):\n    statements\n    return expression"
+      "code": "def function_name(*parameter_name):\n    statements\n    return expression",
+      "name": "Function that returns a value and takes an unknown number of parameters"
     },
     "anonymous_function_no_parameters": {
-      "code": "lambda: expression"
+      "code": "lambda: expression",
+      "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
       "name": "Anonymous function that takes 1 or more defined parameters",

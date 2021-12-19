@@ -7,59 +7,76 @@
   },
   "concepts": {
     "if_conditional": {
-      "code": "if (condition)\n{\n     statements;\n}"
+      "code": "if (condition)\n{\n     statements;\n}",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if (condition)\n{\n     statements;\n} \nelse\n{\n     statements;\n}"
+      "code": "if (condition)\n{\n     statements;\n} \nelse\n{\n     statements;\n}",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}"
+      "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}\nelse\n{\n    statements;\n}"
+      "code": "if (condition)\n{\n    statements;\n} \nelse if (condition)\n{\n    statements;\n}\nelse\n{\n    statements;\n}",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
-      "code": "switch (expression)\n{\n    case x:\n        statements;\n        break;\n    case y:\n        statements;\n        break;\n    default:\n        statements;\n        break;\n}"
+      "code": "switch (expression)\n{\n    case x:\n        statements;\n        break;\n    case y:\n        statements;\n        break;\n    default:\n        statements;\n        break;\n}",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
-      "code": "condition ? trueExpression : falseExpression"
+      "code": "condition ? trueExpression : falseExpression",
+      "name": "Ternary conditional"
     },
     "while_loop": {
-      "code": "while (condition)\n{\n    statements;\n}"
+      "code": "while (condition)\n{\n    statements;\n}",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "do\n{\n    statements;\n}\nwhile(condition)"
+      "code": "do\n{\n    statements;\n}\nwhile(condition)",
+      "name": "Do/While loop"
     },
     "until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Do/Until loop"
     },
     "for_loop": {
-      "code": "for(variables; conditions; expressionAfterIteration)\n{\n    statements;\n}"
+      "code": "for(variables; conditions; expressionAfterIteration)\n{\n    statements;\n}",
+      "name": "For loop"
     },
     "foreach_loop": {
-      "code": "foreach(item in object)\n{\n    statements;\n}"
+      "code": "foreach(item in object)\n{\n    statements;\n}",
+      "name": "Foreach loop"
     },
     "list_comprehension": {
       "code": "var newList = list.Select(x => function(x));",
-      "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
+      "comment": "Requires use of the System.Linq namespace in the System.Core assembly.",
+      "name": "List Comprehension"
     },
     "each_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Each iteration"
     },
     "map_iteration": {
       "code": "var newList = list.Select(x => function(x));",
-      "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
+      "comment": "Requires use of the System.Linq namespace in the System.Core assembly.",
+      "name": "Map iteration"
     },
     "filter_iteration": {
       "code": "var newList = list.Where(x => condition);",
-      "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
+      "comment": "Requires use of the System.Linq namespace in the System.Core assembly.",
+      "name": "Filter iteration"
     },
     "fold_iteration": {
       "code": "var result = list.Aggregate((x, y) => expression)",
-      "comment": "Requires use of the System.Linq namespace in the System.Core assembly."
+      "comment": "Requires use of the System.Linq namespace in the System.Core assembly.",
+      "name": "Fold iteration"
     }
   }
 }

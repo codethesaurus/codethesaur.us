@@ -7,37 +7,48 @@
   },
   "concepts": {
     "void_function_no_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_variable_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "return_value_function_no_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
-      "code": "function_name parameter parameter2 = expression"
+      "code": "function_name parameter parameter2 = expression",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "return_value_function_variable_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Function that returns a value and takes an unknown number of parameters"
     },
     "anonymous_function_no_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
-      "code": "\\parameter parameter2 -> expression"
+      "code": "\\parameter parameter2 -> expression",
+      "name": "Anonymous function that takes 1 or more defined parameters"
     },
     "anonymous_function_variable_parameters": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Anonymous function that takes an unknown number of parameters"
     },
     "call_subroutine": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Call subroutine"
     },
     "return_from_subroutine": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Return from subroutine"
     }
   }
 }

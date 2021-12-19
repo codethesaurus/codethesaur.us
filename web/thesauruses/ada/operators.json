@@ -7,116 +7,151 @@
   },
   "concepts": {
     "addition": {
-      "code": "ans := x + y"
+      "code": "ans := x + y",
+      "name": "Addition operator"
     },
     "addition_assignment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "ans := x - y"
+      "code": "ans := x - y",
+      "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "ans := x * y"
+      "code": "ans := x * y",
+      "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Multiplication and assignment operator"
     },
     "division": {
-      "code": "ans := x / y"
+      "code": "ans := x / y",
+      "name": "Division operator"
     },
     "division_assignment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Division and assignment operator"
     },
     "integer_division": {
       "code": "ans := x / y",
-      "comment": "if x and y should be integers, then only the answer would be an integer value."
+      "comment": "if x and y should be integers, then only the answer would be an integer value.",
+      "name": "Integer division operator"
     },
     "integer_division_assignment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Integer division and assignment operator"
     },
     "modulus": {
       "code": "ans := x mod y \n ans := x rem y",
-      "comment": "if x and y both are positive, then result will be positive for both operators. If x is -x, and y is positive, then 'x mod y' will give positive value, whereas 'x rem y' will produce a negative value."
+      "comment": "if x and y both are positive, then result will be positive for both operators. If x is -x, and y is positive, then 'x mod y' will give positive value, whereas 'x rem y' will produce a negative value.",
+      "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Modulus and assignment operator"
     },
     "unary_plus": {
       "code": "+B",
-      "comment": "for any value of B, output will be B"
+      "comment": "for any value of B, output will be B",
+      "name": "Unary plus operator"
     },
     "unary_minus": {
       "code": "-B",
-      "comment": "if value of B is -5, it will change to +5 and vice versa."
+      "comment": "if value of B is -5, it will change to +5 and vice versa.",
+      "name": "Unary minus operator"
     },
     "increment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Increment (add 1) operator"
     },
     "decrement": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
       "code": "ans := x ** y",
-      "comment": "value of y cannot be negative"
+      "comment": "value of y cannot be negative",
+      "name": "Exponential operator"
     },
     "factorial": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Factorial operator"
     },
     "absolute_value": {
-      "code": "y := abs x"
+      "code": "y := abs x",
+      "name": "Absolute value operator"
     },
     "percentage": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "x = y"
+      "code": "x = y",
+      "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "x /= y"
+      "code": "x /= y",
+      "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "x < y"
+      "code": "x < y",
+      "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "x <= y"
+      "code": "x <= y",
+      "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": "x > y"
+      "code": "x > y",
+      "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": "x >= y"
+      "code": "x >= y",
+      "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Null coalescing operator"
     },
     "is": {
-      "code": "x in y"
+      "code": "x in y",
+      "name": "Is operator"
     },
     "is_not": {
-      "code": "x not in y"
+      "code": "x not in y",
+      "name": "Is not operator"
     },
     "left_shift": {
       "code": "Shift_Left (x, n)",
-      "comment": "returns Unsigned_8 value by shifting x to n left positions. Requires Byte_IO package and interfaces."
+      "comment": "returns Unsigned_8 value by shifting x to n left positions. Requires Byte_IO package and interfaces.",
+      "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Left shift assignment operator"
     },
     "right_shift": {
       "code": "Shift_Right (X, N) \n Shift_Right_Arithmetic (X, N)",
-      "comment": "Method 1, returns Unsigned_8 value by shifting x to n right positions. Method 2, performs signed shifting of x to n positions and returns Unsigned_8 value. Requires Byte_IO package and interfaces for both methods."
+      "comment": "Method 1, returns Unsigned_8 value by shifting x to n right positions. Method 2, performs signed shifting of x to n positions and returns Unsigned_8 value. Requires Byte_IO package and interfaces for both methods.",
+      "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Right shift assignment operator"
     },
     "ternary": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Ternary operator"
     },
     "null_forgiving": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
     }
   }
 }

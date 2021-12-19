@@ -7,261 +7,345 @@
   },
   "concepts": {
     "name_of_ordered_mutable_list": {
-      "code": "Array"
+      "code": "Array",
+      "name": "What is a ordered mutable list called?"
     },
     "create_a_ordered_mutable_list": {
       "code": "$array = array(...) \n $array=[]",
-      "comment": "You can use any of them"
+      "comment": "You can use any of them",
+      "name": "Create the list"
     },
     "ordered_mutable_list_start_number": {
-      "code": "0"
+      "code": "0",
+      "name": "What number does it start at?"
     },
     "ordered_mutable_list_can_be_appended": {
-      "code": "array_push($array,$value)"
+      "code": "array_push($array,$value)",
+      "name": "Can you append to it?"
     },
     "ordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_ordered_mutable_list": {
-      "code": "$array[0]"
+      "code": "$array[0]",
+      "name": "Access element by index"
     },
     "insert_into_beginning_of_ordered_mutable_list": {
-      "code": "array_unshift($array, $element);"
+      "code": "array_unshift($array, $element);",
+      "name": "Insert element at beginning"
     },
     "insert_into_end_of_ordered_mutable_list": {
-      "code": "array_push($array,$value)"
+      "code": "array_push($array,$value)",
+      "name": "Insert element at end"
     },
     "insert_into_middle_of_ordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_ordered_mutable_list": {
-      "code": "array_shift($array)"
+      "code": "array_shift($array)",
+      "name": "Erase first element"
     },
     "erase_element_at_end_of_ordered_mutable_list": {
-      "code": "array_pop($array)"
+      "code": "array_pop($array)",
+      "name": "Erase last element"
     },
     "erase_element_in_middle_of_ordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase element in the middle"
     },
     "swap_elements_in_ordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Swap two elements"
     },
     "delete_ordered_mutable_list": {
-      "code": "unset($array)"
+      "code": "unset($array)",
+      "name": "Delete the list"
     },
     "name_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What is a unordered mutable list called?"
     },
     "create_a_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "unordered"
     },
     "unordered_mutable_list_start_number": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What number does it start at?"
     },
     "unordered_mutable_list_can_be_appended": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Can you append to it?"
     },
     "unordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Access element by index"
     },
     "insert_into_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert element at beginning"
     },
     "insert_into_end_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert element at end"
     },
     "insert_into_middle_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase first element"
     },
     "erase_element_at_end_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase last element"
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase element in the middle"
     },
     "swap_elements_in_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Swap two elements"
     },
     "delete_unordered_mutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "name_of_ordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What is a ordered immutable list called?"
     },
     "create_a_ordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create the list"
     },
     "ordered_immutable_list_start_number": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What number does it start at?"
     },
     "access_element_in_ordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Access element by index"
     },
     "delete_ordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "name_of_unordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What is a unordered immutable list called?"
     },
     "create_a_unordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create the list"
     },
     "unordered_immutable_list_start_number": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What number does it start at?"
     },
     "access_element_in_unordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Access element by index"
     },
     "delete_unordered_immutable_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "name_of_mutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What is a mutable hashed list called?"
     },
     "create_a_mutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create the list"
     },
     "insert_element_to_mutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert an element"
     },
     "erase_element_from_mutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase an element from the list"
     },
     "delete_mutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "name_of_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "What is an immutable hashed list called?"
     },
     "create_a_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create the list"
     },
     "insert_element_to_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Insert an element"
     },
     "erase_element_from_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Erase an element from the list"
     },
     "delete_immutable_hashed_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the list"
     },
     "create_a_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create a mutable key/value set"
     },
     "get_key_from_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get key"
     },
     "get_value_from_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get value"
     },
     "get_all_keys_from_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get all keys"
     },
     "get_all_values_from_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get all values"
     },
     "swap_key_and_value_in_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Swap a key and value"
     },
     "delete_mutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the set"
     },
     "create_a_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Create an immutable key/value set"
     },
     "get_key_from_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get key"
     },
     "get_value_from_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get value"
     },
     "get_all_keys_from_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get all keys"
     },
     "get_all_values_from_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Get all values"
     },
     "swap_key_and_value_in_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Swap a key and value"
     },
     "delete_immutable_set": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Delete the set"
     },
     "find_element_at_position": {
       "code": "$array[$n]"
     },
     "find_element_by_value": {
-      "code": "array_search($element,$array)"
+      "code": "array_search($element,$array)",
+      "name": "Find/search for an element by value"
     },
     "find_minimum_element": {
-      "code": "min($array)"
+      "code": "min($array)",
+      "name": "Find the minimum value in a list"
     },
     "find_maximum_element": {
-      "code": "max($array)"
+      "code": "max($array)",
+      "name": "Find the maximum value in a list"
     },
     "convert_list_to_string": {
-      "code": "implode($array)"
+      "code": "implode($array)",
+      "name": "Convert a list to a string"
     },
     "concatenate_two_lists": {
-      "code": "array_merge($array1,$array2)"
+      "code": "array_merge($array1,$array2)",
+      "name": "Concatenate two lists together"
     },
     "split_list_at_index": {
-      "code": "array_slice($array,$index)"
+      "code": "array_slice($array,$index)",
+      "name": "Split lists at an index"
     },
     "split_list_at_value": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Split list at a value"
     },
     "duplicate_a_list": {
-      "code": "$copy = $array"
+      "code": "$copy = $array",
+      "name": "Duplicate a list"
     },
     "duplicate_subset_of_list": {
-      "code": "$copy = array_slice($array, $offset, $length); "
+      "code": "$copy = array_slice($array, $offset, $length); ",
+      "name": "Duplicate a portion/subset of a list"
     },
     "get_list_length": {
-      "code": "count($array)"
+      "code": "count($array)",
+      "name": "Get list length"
     },
     "resize_list": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Increase/decrease list size"
     },
     "do_two_lists_match_exactly": {
-      "code": "$array1 === $array2"
+      "code": "$array1 === $array2",
+      "name": "Do two lists match every element?"
     },
     "do_two_lists_contain_same_items": {
-      "code": "$array1 == $array2"
+      "code": "$array1 == $array2",
+      "name": "Do two lists contain all the same items?"
     },
     "does_list_satisfy_some_expression": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Does a list satisfy some expression?"
     },
     "does_list_not_satisfy_an_expression": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Does a list entirely not satisfy an expression?"
     },
     "sort_list": {
       "code": "asort($array, sorttype)",
-      "comment": "sorttype is optional\n possible values are\n0 = SORT_REGULAR - Default. Compare items normally (don't change types) \n 1 = SORT_NUMERIC - Compare items numerically\n2 = SORT_STRING - Compare items as strings\n3 = SORT_LOCALE_STRING - Compare items as strings, based on current locale\n4 = SORT_NATURAL - Compare items as strings using natural ordering\n5 = SORT_FLAG_CASE -"
+      "comment": "sorttype is optional\n possible values are\n0 = SORT_REGULAR - Default. Compare items normally (don't change types) \n 1 = SORT_NUMERIC - Compare items numerically\n2 = SORT_STRING - Compare items as strings\n3 = SORT_LOCALE_STRING - Compare items as strings, based on current locale\n4 = SORT_NATURAL - Compare items as strings using natural ordering\n5 = SORT_FLAG_CASE -",
+      "name": "Sort a list"
     },
     "shuffle_list": {
-      "code": "shuffle($array)"
+      "code": "shuffle($array)",
+      "name": "Shuffle list elements"
     },
     "reverse_list": {
-      "code": "array_reverse($array)"
+      "code": "array_reverse($array)",
+      "name": "Reverse order of list elements"
     },
     "map": {
-      "code": "array_map(function,$array)"
+      "code": "array_map(function,$array)",
+      "name": "Map function across list"
     },
     "filter": {
-      "code": "array_filter($array,function)"
+      "code": "array_filter($array,function)",
+      "name": "Filter a list based on criteria"
     },
     "reduce_left": {
-      "code": "array_reduce($array,function)"
+      "code": "array_reduce($array,function)",
+      "name": "Reduce a list left-to-right"
     },
     "reduce_right": {
-      "code": "array_reduce($array,function,-1)"
+      "code": "array_reduce($array,function,-1)",
+      "name": "Reduce a list right-to-left"
     }
   }
 }

@@ -7,41 +7,52 @@
   },
   "concepts": {
     "if_conditional": {
-      "code": "if condition:\n    statements"
+      "code": "if condition:\n    statements",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if condition:\n    statements\nelse:\n    statements"
+      "code": "if condition:\n    statements\nelse:\n    statements",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if condition:\n    statements\nelif:\n    statements"
+      "code": "if condition:\n    statements\nelif:\n    statements",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if condition:\n    statements\nelif condition:\n    statements\nelse:\n    statements"
+      "code": "if condition:\n    statements\nelif condition:\n    statements\nelse:\n    statements",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
       "comment": "This control structure was introduced with Python 3.10 and is more powerful than shown here.",
-      "code": "match condition:\n    case value1:\n        statements\n    case value2:\n        statements"
+      "code": "match condition:\n    case value1:\n        statements\n    case value2:\n        statements",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
-      "code": "expression_if_true if condition else expression_if_false"
+      "code": "expression_if_true if condition else expression_if_false",
+      "name": "Ternary conditional"
     },
     "while_loop": {
       "comment": "Two ways to use while loops. The second block illustrates the use of `break` to break out of the while loop.",
-      "code": "while condition:\n    statements\n\nwhile True:\n    statements\n    if(conditional):\n        break"
+      "code": "while condition:\n    statements\n\nwhile True:\n    statements\n    if(conditional):\n        break",
+      "name": "While loop"
     },
     "foreach_loop": {
       "comment": "Two ways to use the for-each loop. The second block illustrates the use of for-each when the iterable contains tuples of 2 items.",
-      "code": "for iterator in iterable:\n    statements\n\nfor first, second in iterable_of_tuples:\n    foo(first)\n    bar(second)"
+      "code": "for iterator in iterable:\n    statements\n\nfor first, second in iterable_of_tuples:\n    foo(first)\n    bar(second)",
+      "name": "Foreach loop"
     },
     "list_comprehension": {
       "comment": "The second block illustrates the use of `if` to filter items in the list comprehension.",
-      "code": "new_list = [foo(item) for item in iterable]\nnew_list = [foo(item) for item in iterable if conditional(item)]"
+      "code": "new_list = [foo(item) for item in iterable]\nnew_list = [foo(item) for item in iterable if conditional(item)]",
+      "name": "List Comprehension"
     },
     "map_iteration": {
-      "code": "map(function, iterable)"
+      "code": "map(function, iterable)",
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "code": "filter(function, iterable)"
+      "code": "filter(function, iterable)",
+      "name": "Filter iteration"
     }
   }
 }

@@ -8,52 +8,68 @@
   "concepts": {
     "boolean": {
       "code": "",
-      "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalseClass`, which both inherits from `Object`."
+      "comment": "`true` and `false` are implemented a bit differently than in other languages. They are instances of `TrueClass` and `FalseClass`, which both inherits from `Object`.",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "code": ""
+      "code": "",
+      "name": "Signed 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "code": ""
+      "code": "",
+      "name": "Signed 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "code": ""
+      "code": "",
+      "name": "Signed 32-bit integer"
     },
     "signed_integer_64_bit": {
-      "code": ""
+      "code": "",
+      "name": "Signed 64-bit integer"
     },
     "signed_integer_as_object": {
-      "code": "Integer"
+      "code": "Integer",
+      "name": "Signed object-based Integer"
     },
     "signed_float_16_bit": {
-      "code": ""
+      "code": "",
+      "name": "Signed 16-bit floating point"
     },
     "signed_float_32_bit": {
-      "code": ""
+      "code": "",
+      "name": "Signed 32-bit floating point"
     },
     "signed_float_64_bit": {
-      "code": ""
+      "code": "",
+      "name": "Signed 64-bit floating point"
     },
     "signed_float_as_object": {
-      "code": "Float"
+      "code": "Float",
+      "name": "Signed object-based floating point"
     },
     "character": {
-      "code": ""
+      "code": "",
+      "name": "Character"
     },
     "string_as_object": {
-      "code": "String"
+      "code": "String",
+      "name": "String as an object"
     },
     "string_as_array": {
-      "code": ""
+      "code": "",
+      "name": "String as an array of characters"
     },
     "complex_as_object": {
-      "code": "Complex"
+      "code": "Complex",
+      "name": "Complex Number as an object"
     },
     "real_number_part": {
-      "code": ""
+      "code": "",
+      "name": "Complex number real part"
     },
     "imaginary_number_part": {
-      "code": ""
+      "code": "",
+      "name": "Complex number imaginary part"
     }
   }
 }
