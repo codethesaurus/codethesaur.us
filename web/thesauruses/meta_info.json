@@ -24,6 +24,12 @@
         "9"
       ]
     },
+    "clojure": {
+      "name": "Clojure",
+      "versions": [
+        "1.10.3"
+      ]
+    },
     "go": {
       "name": "Go",
       "versions": [
@@ -51,7 +57,7 @@
     "nim": {
       "name": "Nim",
       "versions": [
-        "1.4"
+        "1.6"
       ]
     },
     "objectivec": {
