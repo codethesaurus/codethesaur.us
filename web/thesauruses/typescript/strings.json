@@ -2,290 +2,347 @@
   "meta": {
     "language": "ts",
     "language_version": "4.2.4",
-    "language_name": "TypeScript"
+    "language_name": "TypeScript",
+    "structure": "strings"
   },
-  "categories": {
-    "Creating/Destroying Strings": [
-      "is_primitive_or_not",
-      "import",
-      "default_string_byte_encoding",
-      "create_new_string",
-      "create_multiline_string",
-      "assign_new_string",
-      "destroy_string"
-    ],
-    "String Basics": [
-      "length_of_string",
-      "max_length_of_string",
-      "clear_string",
-      "is_empty",
-      "concatenate_two_strings",
-      "concatenate_many_strings",
-      "is_all_alphabetical",
-      "is_all_numerical",
-      "is_all_alphanumeric",
-      "is_decimal",
-      "is_all_whitespaces",
-      "is_all_uppercase",
-      "is_all_lowercase",
-      "is_in_titlecase"
-    ],
-    "Find and Search": [
-      "does_substring_exist",
-      "find_start_index_of_substring",
-      "find_start_index_of_additional_substring",
-      "find_start_index_of_substring_from_end",
-      "count_occurrences_of_substring",
-      "get_leftmost_characters",
-      "get_rightmost_characters",
-      "get_substring_from_start_and_end_index",
-      "get_substring_from_start_index_and_length"
-    ],
-    "Manipulating Strings": [
-      "convert_to_uppercase",
-      "convert_to_lowercase",
-      "convert_to_title_case",
-      "capitalize_string",
-      "remove_whitespace",
-      "replace_substring",
-      "replace_all_substring",
-      "split_at_index",
-      "split_at_newlines",
-      "split_at_substring",
-      "merge_lists_into_string",
-      "encode_html_entities",
-      "decode_html_entities",
-      "encode_url_percent",
-      "decode_url_percent",
-      "encode_to_base64",
-      "decode_from_base64"
-    ],
-    "String Formatting": [
-      "format_string_function",
-      "parameter_format_in_order",
-      "parameter_format_numerical",
-      "parameter_format_by_name",
-      "format_as_integer",
-      "format_as_decimal",
-      "format_as_fixed_decimal",
-      "format_as_currency",
-      "format_as_percentage",
-      "format_number_with_separators",
-      "format_number_with_positive_negative_sign",
-      "format_number_in_scientific_notation_little_e",
-      "format_number_in_scientific_notation_big_e",
-      "format_number_in_binary",
-      "format_number_in_octal",
-      "format_number_in_hexadecimal"
-    ]
-  },
-  "strings": {
+  "concepts": {
     "is_primitive_or_not": {
-      "code": ["Yes"]
+      "code": [
+        "Yes"
+      ],
+      "name": "Is this a built-in type in this language?"
     },
     "import": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Import the string class"
     },
     "default_string_byte_encoding": {
-      "code": ["UTF-16"]
+      "code": [
+        "UTF-16"
+      ],
+      "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)"
     },
     "create_new_string": {
-      "code": ["let newString = \"Hello World!\";\nlet newString2 = '';"],
-      "comment": "Double and single quotes can be used interchangeably for creating strings."
+      "code": [
+        "let newString = \"Hello World!\";\nlet newString2 = '';"
+      ],
+      "comment": "Double and single quotes can be used interchangeably for creating strings.",
+      "name": "Create new string"
     },
     "create_multiline_string": {
-      "code": ["let multilineString = `Hello\nWorld\n`;"]
+      "code": [
+        "let multilineString = `Hello\nWorld\n`;"
+      ],
+      "name": "Create new multi-line string"
     },
     "assign_new_string": {
-      "code": ["let s1 = 'Hello World!';\nlet s2 = s1;"]
+      "code": [
+        "let s1 = 'Hello World!';\nlet s2 = s1;"
+      ],
+      "name": "Assign string from another string"
     },
     "destroy_string": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Destroy string"
     },
     "length_of_string": {
-      "code": ["'four'.length;"]
+      "code": [
+        "'four'.length;"
+      ],
+      "name": "Length of string"
     },
     "max_length_of_string": {
       "not-implemented": true,
-      "comment": "Depends on the browser being used."
+      "comment": "Depends on the browser being used.",
+      "name": "Maximum length of string"
     },
     "clear_string": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Clear/empty string"
     },
     "is_empty": {
-      "code": ["if ('') {\n    'Not Empty';\n} else {\n    'Empty';\n}"]
+      "code": [
+        "if ('') {\n    'Not Empty';\n} else {\n    'Empty';\n}"
+      ],
+      "name": "Is string empty?"
     },
     "concatenate_two_strings": {
       "code": [
         "let s1 = 'Hello';\ns2 = 'World';\n\nlet interpolation = `${s1}${s2}`\nlet s3 = s1 + s2;\ns1 += s2;"
-      ]
+      ],
+      "name": "Concatenate/join two strings"
     },
     "concatenate_many_strings": {
-      "code": ["['Hello', ' ', 'World'].join('');"]
+      "code": [
+        "['Hello', ' ', 'World'].join('');"
+      ],
+      "name": "Concatenate/join many strings"
     },
     "is_all_alphabetical": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string all alphabetical characters?"
     },
     "is_all_numerical": {
       "code": [
         "if (isNaN(Number('123'))) {\n    'Not a number';\n} else {\n    'Is a Number';\n}"
       ],
-      "comment": "parseInt(x), parseFloat(x), and +x can also be used but all convert differently.\nCheck here for conversions https://stackoverflow.com/questions/17106681/parseint-vs-unary-plus-when-to-use-which/17106702#17106702"
+      "comment": "parseInt(x), parseFloat(x), and +x can also be used but all convert differently.\nCheck here for conversions https://stackoverflow.com/questions/17106681/parseint-vs-unary-plus-when-to-use-which/17106702#17106702",
+      "name": "Is string all numerical characters?"
     },
     "is_all_alphanumeric": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string all alphanumeric characters?"
     },
     "is_decimal": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string a decimal number?"
     },
     "is_all_whitespaces": {
-      "code": ["if (str.trim() === '')\n    'Is all whitespace'"]
+      "code": [
+        "if (str.trim() === '')\n    'Is all whitespace'"
+      ],
+      "name": "Is string all whitespace characters?"
     },
     "is_all_uppercase": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string all uppercase characters?"
     },
     "is_all_lowercase": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string all lowercase characters?"
     },
     "is_in_titlecase": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Is string formatted in title case?"
     },
     "does_substring_exist": {
       "code": [
         "if (str.indexOf('subString') > -1)\n    'Str contains subString';"
-      ]
+      ],
+      "name": "Does a substring exist in a string?"
     },
     "find_start_index_of_substring": {
-      "code": ["str.indexOf('subString');"]
+      "code": [
+        "str.indexOf('subString');"
+      ],
+      "name": "Find index of where a substring starts"
     },
     "find_start_index_of_additional_substring": {
-      "code": ["str.indexOf('subString', startIndex);"]
+      "code": [
+        "str.indexOf('subString', startIndex);"
+      ],
+      "name": "Find index of an additional substring (or starting at another index)"
     },
     "find_start_index_of_substring_from_end": {
-      "code": ["str.lastIndexOf('subString');"]
+      "code": [
+        "str.lastIndexOf('subString');"
+      ],
+      "name": "Find substring index starting at end"
     },
     "count_occurrences_of_substring": {
-      "code": ["str.match('regex').length;"]
+      "code": [
+        "str.match('regex').length;"
+      ],
+      "name": "Find number of occurences of a substring"
     },
     "get_leftmost_characters": {
-      "code": ["str.substr(0, numberOfCharacters);"]
+      "code": [
+        "str.substr(0, numberOfCharacters);"
+      ],
+      "name": "Get a specified number of characters from the left"
     },
     "get_rightmost_characters": {
       "code": [
         "str.substr(str.Length - numberOfCharacters, numberOfCharacters);"
-      ]
+      ],
+      "name": "Get a specified number of characters from the right"
     },
     "get_substring_from_start_and_end_index": {
-      "code": ["str.substring(startIndex, endIndex);"]
+      "code": [
+        "str.substring(startIndex, endIndex);"
+      ],
+      "name": "Return a substring from a string based on starting and ending indices"
     },
     "get_substring_from_start_index_and_length": {
-      "code": ["str.substr(startIndex, numberOfCharacters);"]
+      "code": [
+        "str.substr(startIndex, numberOfCharacters);"
+      ],
+      "name": "Return a substring from a string based on starting index and size of substring"
     },
     "convert_to_uppercase": {
-      "code": ["str.toUpperCase();"]
+      "code": [
+        "str.toUpperCase();"
+      ],
+      "name": "Convert string to all uppercase"
     },
     "convert_to_lowercase": {
-      "code": ["str.toLowerCase();"]
+      "code": [
+        "str.toLowerCase();"
+      ],
+      "name": "Convert string to all lowercase"
     },
     "convert_to_title_case": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Convert string to title case"
     },
     "capitalize_string": {
       "code": [
         "let str = 'hello World';",
         "let strCapitalised = str[0].toUpperCase() + str.substr(1);"
-      ]
+      ],
+      "name": "Capitalize first letter of a string"
     },
     "remove_whitespace": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Remove all whitespaces from string"
     },
     "replace_substring": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Replace a substring with another string"
     },
     "replace_all_substring": {
-      "code": ["str.replace(substring, newString);"]
+      "code": [
+        "str.replace(substring, newString);"
+      ],
+      "name": "Replace all substring matches with another string"
     },
     "split_at_index": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Split string into a list of strings at a given index"
     },
     "split_at_newlines": {
-      "code": ["str.split('\\n');"]
+      "code": [
+        "str.split('\\n');"
+      ],
+      "name": "Split string into a list of strings at every new line character"
     },
     "split_at_substring": {
-      "code": ["str.split(subString);"]
+      "code": [
+        "str.split(subString);"
+      ],
+      "name": "Split string by locating all substrings"
     },
     "merge_lists_into_string": {
-      "code": ["[ 'a', 'b', 'c' ].join(delimiter);"]
+      "code": [
+        "[ 'a', 'b', 'c' ].join(delimiter);"
+      ],
+      "name": "Merge a list of strings into one string"
     },
     "encode_html_entities": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)"
     },
     "decode_html_entities": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Decode HTML entitles into characters"
     },
     "encode_url_percent": {
-      "code": ["encodeURI(str);"]
+      "code": [
+        "encodeURI(str);"
+      ],
+      "name": "Encode URL percent encoding into string (ex: ' ' to %20)"
     },
     "decode_url_percent": {
-      "code": ["decodeURI(str);"]
+      "code": [
+        "decodeURI(str);"
+      ],
+      "name": "Decode URL percent encoding"
     },
     "encode_to_base64": {
-      "code": ["btoa(str);"]
+      "code": [
+        "btoa(str);"
+      ],
+      "name": "Encode string into Base64 format"
     },
     "decode_from_base64": {
-      "code": ["atob(str);"]
+      "code": [
+        "atob(str);"
+      ],
+      "name": "Decode string from Base64 format"
     },
     "format_string_function": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Function to format a string"
     },
     "parameter_format_in_order": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Parameter used in format function if they're used in order"
     },
     "parameter_format_numerical": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Parameter used in format function if they're numerically numbered"
     },
     "parameter_format_by_name": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Paramater used in format function if they're named variables"
     },
     "format_as_integer": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Format parameter as an integer"
     },
     "format_as_decimal": {
-      "code": ["new Intl.NumberFormat(locale, { style: 'decimal' });"]
+      "code": [
+        "new Intl.NumberFormat(locale, { style: 'decimal' });"
+      ],
+      "name": "Format parameter as a decimal number"
     },
     "format_as_fixed_decimal": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Format parameter as a fixed-point decimal number"
     },
     "format_as_currency": {
       "code": [
         "new Intl.NumberFormat(locale, { style: 'currency', currency: currencyCode });"
-      ]
+      ],
+      "name": "Format parameter as a currency number"
     },
     "format_as_percentage": {
-      "code": ["new Intl.NumberFormat(locale, { style: 'percent' });"]
+      "code": [
+        "new Intl.NumberFormat(locale, { style: 'percent' });"
+      ],
+      "name": "Format parameter as a percentage number"
     },
     "format_number_with_separators": {
-      "code": ["new Intl.NumberFormat('en-US');"],
-      "comment": "Other locales are avalible to achive this."
+      "code": [
+        "new Intl.NumberFormat('en-US');"
+      ],
+      "comment": "Other locales are avalible to achive this.",
+      "name": "Format number with thousand separators"
     },
     "format_number_with_positive_negative_sign": {
-      "code": ["new Intl.NumberFormat(locale, { signDisplay: 'always' });"]
+      "code": [
+        "new Intl.NumberFormat(locale, { signDisplay: 'always' });"
+      ],
+      "name": "Format number with positive/negative signs"
     },
     "format_number_in_scientific_notation_little_e": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Format number with scientific notation with 'e'"
     },
     "format_number_in_scientific_notation_big_e": {
-      "code": ["new Intl.NumberFormat(locale, { notation: 'scientific' });"]
+      "code": [
+        "new Intl.NumberFormat(locale, { notation: 'scientific' });"
+      ],
+      "name": "Format number with scientific notation with 'E'"
     },
     "format_number_in_binary": {
-      "code": ["(number >>> 0).toString(2);"],
-      "comment": "Shift right used to unsign the number so negatives are returned as their 32-bit two's complement representation"
+      "code": [
+        "(number >>> 0).toString(2);"
+      ],
+      "comment": "Shift right used to unsign the number so negatives are returned as their 32-bit two's complement representation",
+      "name": "Format number into binary"
     },
     "format_number_in_octal": {
-      "code": ["num.toString(8);"]
+      "code": [
+        "num.toString(8);"
+      ],
+      "name": "Format number into octal"
     },
     "format_number_in_hexadecimal": {
-      "code": ["num.toString(16);"]
+      "code": [
+        "num.toString(16);"
+      ],
+      "name": "Format number into hexadecimal"
     }
   }
 }

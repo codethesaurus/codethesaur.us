@@ -2,40 +2,33 @@
   "meta": {
     "language": "javascript",
     "language_version": "ES2020",
-    "language_name": "JavaScript"
+    "language_name": "JavaScript",
+    "structure": "functions"
   },
-  "categories": {
-    "Void Functions": [
-      "void_function_no_parameters",
-      "void_function_with_parameters"
-    ],
-    "Return Value Functions": [
-      "return_value_function_no_parameters",
-      "return_value_function_with_parameters"
-    ],
-    "Lambda/Anonymous Functions": [
-      "anonymous_function_no_parameters",
-      "anonymous_function_with_parameters"
-    ]
-  },
-  "functions": {
+  "concepts": {
     "void_function_no_parameters": {
-      "code": "function funcName() {\n    function_body();\n}"
+      "code": "function funcName() {\n    function_body();\n}",
+      "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
-      "code": "function funcName(param1, param2) {\n    function_body();\n}"
+      "code": "function funcName(param1, param2) {\n    function_body();\n}",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "return_value_function_no_parameters": {
-      "code": "function funcName() {\n    function_body();\n    return something\n}"
+      "code": "function funcName() {\n    function_body();\n    return something\n}",
+      "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
-      "code": "function funcName(param1, param2) {\n    function_body();\n    return something\n}"
+      "code": "function funcName(param1, param2) {\n    function_body();\n    return something\n}",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "anonymous_function_no_parameters": {
-      "code": "() => { function_body(); }"
+      "code": "() => { function_body(); }",
+      "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
-      "code": "(param1, param2) => { function_body() }"
+      "code": "(param1, param2) => { function_body() }",
+      "name": "Anonymous function that takes 1 or more defined parameters"
     }
   }
 }

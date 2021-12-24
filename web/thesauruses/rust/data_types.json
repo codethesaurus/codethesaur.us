@@ -2,69 +2,48 @@
   "meta": {
     "language": "rust",
     "language_version": "1",
-    "language_name": "Rust"
+    "language_name": "Rust",
+    "structure": "data_types"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_8_bit",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_integer_as_object",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit",
-      "signed_float_as_object"
-    ],
-    "Characters and Strings": [
-      "character",
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
-      "code": "bool"
+      "code": "bool",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "code": "i8"
+      "code": "i8",
+      "name": "Signed 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "name": "16-bit integer",
+      "name": "Signed 16-bit integer",
       "code": "i16"
     },
     "signed_integer_32_bit": {
-      "name": "32-bit integer",
+      "name": "Signed 32-bit integer",
       "code": "i32"
     },
     "signed_integer_64_bit": {
-      "name": "64-bit integer",
+      "name": "Signed 64-bit integer",
       "code": "i64"
     },
     "signed_integer_as_object": {
-      "name": "Object-based Integer",
+      "name": "Signed object-based Integer",
       "code": ""
     },
     "signed_float_16_bit": {
-      "name": "16-bit floating point",
+      "name": "Signed 16-bit floating point",
       "code": ""
     },
     "signed_float_32_bit": {
-      "name": "32-bit floating point",
+      "name": "Signed 32-bit floating point",
       "code": "f32"
     },
     "signed_float_64_bit": {
-      "name": "64-bit floating point",
+      "name": "Signed 64-bit floating point",
       "code": "f64"
     },
     "signed_float_as_object": {
-      "name": "Object-based floating point",
+      "name": "Signed object-based floating point",
       "code": ""
     },
     "character": {
@@ -76,7 +55,7 @@
       "code": "str"
     },
     "string_as_array": {
-      "name": "String as an array",
+      "name": "String as an array of characters",
       "code": "String"
     },
     "complex_as_object": {
