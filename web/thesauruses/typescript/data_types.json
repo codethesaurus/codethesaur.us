@@ -2,83 +2,76 @@
   "meta": {
     "language": "typescript",
     "language_version": "4.2",
-    "language_name": "TypeScript"
+    "language_name": "TypeScript",
+    "structure": "data_types"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_8_bit",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_integer_as_object",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit",
-      "signed_float_as_object"
-    ],
-    "Characters and Strings": [
-      "character",
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
-      "code": "boolean"
+      "code": "boolean",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 32-bit integer"
     },
     "signed_integer_64_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 64-bit integer"
     },
     "signed_integer_as_object": {
       "code": "BigInt",
-      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value"
+      "comment": "The type is an object wrapper for a corresponding (untyped) primitive value",
+      "name": "Signed object-based Integer"
     },
     "signed_float_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 16-bit floating point"
     },
     "signed_float_32_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 32-bit floating point"
     },
     "signed_float_64_bit": {
-      "code": "number"
+      "code": "number",
+      "name": "Signed 64-bit floating point"
     },
     "signed_float_as_object": {
-      "code": "Number"
+      "code": "Number",
+      "name": "Signed object-based floating point"
     },
     "character": {
       "not-implemented": true,
-      "comment": "It's possible to use single-character strings, such as the output of String.prototype.charAt()"
+      "comment": "It's possible to use single-character strings, such as the output of String.prototype.charAt()",
+      "name": "Character"
     },
     "string_as_object": {
-      "code": "string"
+      "code": "string",
+      "name": "String as an object"
     },
     "string_as_array": {
       "code": "string",
-      "comment": "String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods"
+      "comment": "String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods",
+      "name": "String as an array of characters"
     },
     "complex_as_object": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex Number as an object"
     },
     "real_number_part": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex number real part"
     },
     "imaginary_number_part": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Complex number imaginary part"
     }
   }
 }

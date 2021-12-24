@@ -2,46 +2,41 @@
   "meta": {
     "language": "ada",
     "language_version": "2012",
-    "language_name": "Ada"
+    "language_name": "Ada",
+    "structure": "control_structures"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "for_loop"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
-      "code": "if condition then\n    statements;\nend if;"
+      "code": "if condition then\n    statements;\nend if;",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if condition then\n    statements;\nelse\n    statements;\nend if;"
+      "code": "if condition then\n    statements;\nelse\n    statements;\nend if;",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if condition then\n    statements;\nelsif condition then\n    statements;\nend if;"
+      "code": "if condition then\n    statements;\nelsif condition then\n    statements;\nend if;",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if condition then\n    statements;\nelsif condition then\n    statements;\nelse\n    statements;\nend if;"
+      "code": "if condition then\n    statements;\nelsif condition then\n    statements;\nelse\n    statements;\nend if;",
+      "name": "If/ElseIf/Else conditional"
     },
     "ternary_conditional": {
-      "code": "Variable := (if condition\n    then expression\n    else expression);"
+      "code": "Variable := (if condition\n    then expression\n    else expression);",
+      "name": "Ternary conditional"
     },
     "while_loop": {
-      "code": "while condition loop\n    statements;\nend loop;"
+      "code": "while condition loop\n    statements;\nend loop;",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "loop\n    statements;\n    exit when not condition;\nend loop;"
+      "code": "loop\n    statements;\n    exit when not condition;\nend loop;",
+      "name": "Do/While loop"
     },
     "for_loop": {
-      "code": "for I in First_Index .. Last_Index loop\n    statements;\nend loop;"
+      "code": "for I in First_Index .. Last_Index loop\n    statements;\nend loop;",
+      "name": "For loop"
     }
   }
 }

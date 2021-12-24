@@ -2,56 +2,49 @@
   "meta": {
     "language": "Java",
     "language_version": "15",
-    "language_name": "Java"
+    "language_name": "Java",
+    "structure": "control_structures"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "ternary_conditional",
-      "switch_statement"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "for_loop"
-    ],
-    "Iterations": [
-      "foreach_loop"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
-      "code": "if (condition) {\n    statements;\n}"
+      "code": "if (condition) {\n    statements;\n}",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}"
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else{\n    statements;\n}"
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else{\n    statements;\n}",
+      "name": "If/ElseIf/Else conditional"
     },
     "ternary_conditional": {
-      "code": "condition ? statementIfTrue : statementIfFalse"
+      "code": "condition ? statementIfTrue : statementIfFalse",
+      "name": "Ternary conditional"
     },
     "switch_statement": {
-      "code": "switch (expression) {\n  case constant-expression:\n    statements;\n    break;\n  default:\n    statements;\n}"
+      "code": "switch (expression) {\n  case constant-expression:\n    statements;\n    break;\n  default:\n    statements;\n}",
+      "name": "Switch statement"
     },
     "while_loop": {
-      "code": "while (condition) {\n    statements;\n}"
+      "code": "while (condition) {\n    statements;\n}",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "do{\n    statements;\n}\nwhile(condition);"
+      "code": "do{\n    statements;\n}\nwhile(condition);",
+      "name": "Do/While loop"
     },
     "for_loop": {
-      "code": "for (initialization_statements; condition; update_statements) {\n    statements;\n}"
+      "code": "for (initialization_statements; condition; update_statements) {\n    statements;\n}",
+      "name": "For loop"
     },
     "foreach_loop": {
-      "code": "for(item : array of type item){\n    statements;\n}"
+      "code": "for(item : array of type item){\n    statements;\n}",
+      "name": "Foreach loop"
     }
   }
 }

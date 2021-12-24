@@ -2,60 +2,48 @@
   "meta": {
     "language": "scala",
     "language_version": "2.13.x",
-    "language_name": "Scala"
+    "language_name": "Scala",
+    "structure": "data_types"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_integer_as_object",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit",
-      "signed_float_as_object"
-    ],
-    "Characters and Strings": [
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
-      "code": "Boolean"
+      "code": "Boolean",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "code": "Byte"
+      "code": "Byte",
+      "name": "Signed 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "code": "Short"
+      "code": "Short",
+      "name": "Signed 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "code": "Int"
+      "code": "Int",
+      "name": "Signed 32-bit integer"
     },
     "signed_integer_64_bit": {
-      "code": "Long"
+      "code": "Long",
+      "name": "Signed 64-bit integer"
     },
     "signed_integer_as_object": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed object-based Integer"
     },
     "signed_float_16_bit": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Signed 16-bit floating point"
     },
     "signed_float_32_bit": {
-      "code": "Float"
+      "code": "Float",
+      "name": "Signed 32-bit floating point"
     },
     "signed_float_64_bit": {
-      "code": "Double"
+      "code": "Double",
+      "name": "Signed 64-bit floating point"
     },
     "signed_float_as_object": {
-      "name": "Object-based floating point",
+      "name": "Signed object-based floating point",
       "code": "Float"
     },
     "string_as_object": {
@@ -63,7 +51,7 @@
       "code": "String"
     },
     "string_as_array": {
-      "name": "String as an array",
+      "name": "String as an array of characters",
       "not-implemented": true
     },
     "complex_as_object": {

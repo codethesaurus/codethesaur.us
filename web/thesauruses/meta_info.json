@@ -1,34 +1,134 @@
 {
   "languages": {
-    "Ada (version 2012)": "ada",
-    "BASH (version 3.2.57):": "bash",
-    "C++ (version C++17, generic)": "cpp",
-    "C# (version 9)": "csharp",
-    "Clojure (version 1.10.3)": "clojure",
-    "Go (version 1.16)": "go",
-    "Haskell (version 2010)": "haskell",
-    "Java (version 15)": "java",
-    "JavaScript (version ES2020)": "javascript",
-    "Nim (version 1.6)": "nim",
-    "Objective-C (version 2.0)": "objectivec",
-    "Perl(version 5.34)": "perl",
-    "PHP (version 7.4)": "php",
-    "Python (version 3.10)": "python",
-    "Ruby (version 3.0)": "ruby",
-    "Rust (version 1)": "rust",
-    "Scala (version 2.13)": "scala",
-    "Swift (version 5.3.3)": "swift",
-    "TypeScript (version 4.2)": "typescript",
-    "Visual Basic (version 16)": "vbnet"
+    "ada": {
+      "name": "Ada",
+      "versions": [
+        "2012"
+      ]
+    },
+    "bash": {
+      "name": "BASH",
+      "versions": [
+        "3.2.57"
+      ]
+    },
+    "cpp": {
+      "name": "C++",
+      "versions": [
+        "C++17, generic"
+      ]
+    },
+    "csharp": {
+      "name": "C#",
+      "versions": [
+        "9"
+      ]
+    },
+    "clojure": {
+      "name": "Clojure",
+      "versions": [
+        "1.10.3"
+      ]
+    },
+    "go": {
+      "name": "Go",
+      "versions": [
+        "1.16"
+      ]
+    },
+    "haskell": {
+      "name": "Haskell",
+      "versions": [
+        "2010"
+      ]
+    },
+    "java": {
+      "name": "Java",
+      "versions": [
+        "15"
+      ]
+    },
+    "javascript": {
+      "name": "JavaScript",
+      "versions": [
+        "ES2020"
+      ]
+    },
+    "nim": {
+      "name": "Nim",
+      "versions": [
+        "1.6"
+      ]
+    },
+    "objectivec": {
+      "name": "Objective-C",
+      "versions": [
+        "2.0"
+      ]
+    },
+    "perl": {
+      "name": "Perl",
+      "versions": [
+        "5.34"
+      ]
+    },
+    "php": {
+      "name": "PHP",
+      "versions": [
+        "7.4"
+      ]
+    },
+    "python": {
+      "name": "Python",
+      "versions": [
+        "3.10"
+      ]
+    },
+    "ruby": {
+      "name": "Ruby",
+      "versions": [
+        "3.0"
+      ]
+    },
+    "rust": {
+      "name": "Rust",
+      "versions": [
+        "1"
+      ]
+    },
+    "scala": {
+      "name": "Scala",
+      "versions": [
+        "2.13"
+      ]
+    },
+    "swift": {
+      "name": "Swift",
+      "versions": [
+        "5.3.3"
+      ]
+    },
+    "typescript": {
+      "name": "TypeScript",
+      "versions": [
+        "4.2"
+      ]
+    },
+    "vbnet": {
+      "name": "Visual Basic",
+      "versions": [
+        "16"
+      ]
+    }
   },
   "structures": {
-    "Classes": "classes",
-    "Control Structures": "control_structures",
-    "Data Types": "data_types",
-    "Exception Handling": "exception_handling",
-    "Functions, Methods, and Subroutines": "functions",
-    "Lists, Arrays, and Hashed Lists": "lists",
-    "Logical and Mathematical/Arithmetic Operators": "operators",
-    "Strings": "strings"
+    "classes": "Classes",
+    "control_structures": "Control Structures",
+    "data_types": "Data Types",
+    "exception_handling": "Exception Handling",
+    "functions": "Functions, Methods, and Subroutines",
+    "lists": "Lists, Arrays, and Hashed Lists",
+    "operators": "Logical and Mathematical/Arithmetic Operators",
+    "strings": "Strings"
   }
 }

@@ -2,51 +2,32 @@
   "meta": {
     "language": "CSharp",
     "language_version": "9.0",
-    "language_name": "C#"
+    "language_name": "C#",
+    "structure": "data_types"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_integer_as_object",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit",
-      "signed_float_as_object"
-    ],
-    "Characters and Strings": [
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
-      "code": "bool"
+      "code": "bool",
+      "name": "Boolean"
     },
     "signed_integer_16_bit": {
-      "code": "short"
+      "code": "short",
+      "name": "Signed 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "name": "32-bit integer",
+      "name": "Signed 32-bit integer",
       "code": "int"
     },
     "signed_integer_64_bit": {
-      "name": "64-bit integer",
+      "name": "Signed 64-bit integer",
       "code": "long"
     },
     "signed_float_32_bit": {
-      "name": "32-bit floating point",
+      "name": "Signed 32-bit floating point",
       "code": "float"
     },
     "signed_float_64_bit": {
-      "name": "64-bit floating point",
+      "name": "Signed 64-bit floating point",
       "code": "double"
     }
   }
