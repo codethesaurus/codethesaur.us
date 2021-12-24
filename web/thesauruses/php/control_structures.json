@@ -2,63 +2,57 @@
   "meta": {
     "language": "php",
     "language_version": "7.4",
-    "language_name": "PHP"
+    "language_name": "PHP",
+    "structure": "control_structures"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "for_loop",
-      "foreach_loop"
-    ],
-    "Iterations": [
-      "map_iteration",
-      "filter_iteration"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
-      "code": "if( $true_condition ) {\n    //statement\n}"
+      "code": "if( $true_condition ) {\n    //statement\n}",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if( $condition ) {\n    // statement\n} else {\n    // else statement\n}"
+      "code": "if( $condition ) {\n    // statement\n} else {\n    // else statement\n}",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n}"
+      "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n}",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n} else {\n    // else statement\n}"
+      "code": "if( $condition ) {\n    // statement\n} elseif ( $othercondition ) {\n    // elseif statement\n} else {\n    // else statement\n}",
+      "name": "If/ElseIf/Else conditional"
     },
     "ternary_conditional": {
-      "code": "$value ? $value : $other_value;\n$value ?: $other_value;"
+      "code": "$value ? $value : $other_value;\n$value ?: $other_value;",
+      "name": "Ternary conditional"
     },
     "switch_statement": {
-      "code": "switch ($i) {\n    case 0:\n        echo \"i equals 0\";\n        break;\n    case 1:\n        echo \"i equals 1\";\n        break;\n    case 2:\n        echo \"i equals 2\";\n        break;\n    default:\n        echo \"no previous match\"\n}"
+      "code": "switch ($i) {\n    case 0:\n        echo \"i equals 0\";\n        break;\n    case 1:\n        echo \"i equals 1\";\n        break;\n    case 2:\n        echo \"i equals 2\";\n        break;\n    default:\n        echo \"no previous match\"\n}",
+      "name": "Switch statement"
     },
     "while_loop": {
-      "code": "while( $condition ) {\n    // code to be executed\n}"
+      "code": "while( $condition ) {\n    // code to be executed\n}",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "do {\n    //executable code\n} while ( $condition );"
+      "code": "do {\n    //executable code\n} while ( $condition );",
+      "name": "Do/While loop"
     },
     "for_loop": {
-      "code": "for ( $intial_counter; $test_counter; $increment ) {\n    // executable code\n}"
+      "code": "for ( $intial_counter; $test_counter; $increment ) {\n    // executable code\n}",
+      "name": "For loop"
     },
     "foreach_loop": {
-      "code": "foreach ( $iterable as $item ) {\n    // executable code}"
+      "code": "foreach ( $iterable as $item ) {\n    // executable code}",
+      "name": "Foreach loop"
     },
     "map_iteration": {
-      "code": "array_map( function( $element ) {\n    // transform element\n}, $array );"
+      "code": "array_map( function( $element ) {\n    // transform element\n}, $array );",
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "code": "array_filter( $array, function( $element ) { // return a bool } );"
+      "code": "array_filter( $array, function( $element ) { // return a bool } );",
+      "name": "Filter iteration"
     }
   }
 }

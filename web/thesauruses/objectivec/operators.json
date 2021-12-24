@@ -2,177 +2,155 @@
   "meta": {
     "language": "objectivec",
     "language_version": "2.0",
-    "language_name": "Objective-C"
+    "language_name": "Objective-C",
+    "structure": "operators"
   },
-  "categories": {
-    "Arithmetic Operators": [
-      "addition",
-      "addition_assignment",
-      "subtraction",
-      "subtraction_assignment",
-      "multiplication",
-      "multiplication_assignment",
-      "division",
-      "division_assignment",
-      "modulus",
-      "modulus_assignment",
-      "unary_plus",
-      "unary_minus",
-      "increment",
-      "decrement",
-      "exponential",
-      "factorial",
-      "absolute_value",
-      "percentage"
-    ],
-    "Equality/Comparison/Logical Operators": [
-      "equal_to",
-      "not_equal_to",
-      "less_than",
-      "less_than_or_equal_to",
-      "greater_than",
-      "greater_than_or_equal_to",
-      "null_coalescing",
-      "is",
-      "is_not",
-      "logical_and",
-      "logical_or",
-      "logical_not"
-    ],
-    "Bitwise Operators": [
-      "bitwise_and",
-      "bitwise_and_assignment",
-      "bitwise_or",
-      "bitwise_or_assignment",
-      "bitwise_not",
-      "bitwise_not_assignment",
-      "bitwise_xor",
-      "bitwise_xor_assignment",
-      "bitwise_xnor",
-      "bitwise_xnor_assignment",
-      "left_shift",
-      "left_shift_assignment",
-      "right_shift",
-      "right_shift_assignment"
-    ],
-    "Conditional Operators": [
-      "ternary",
-      "null_forgiving"
-    ]
-  },
-  "operators": {
+  "concepts": {
     "addition": {
-      "code": "+"
+      "code": "+",
+      "name": "Addition operator"
     },
     "addition_assignment": {
       "code": "+=",
-      "comment": "a += 20 is same as a = a + 20"
+      "comment": "a += 20 is same as a = a + 20",
+      "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-"
+      "code": "-",
+      "name": "Subtraction operator"
     },
     "subtraction_assignment": {
       "code": "-=",
-      "comment": "a -= 20 is same as a = a - 20"
+      "comment": "a -= 20 is same as a = a - 20",
+      "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*"
+      "code": "*",
+      "name": "Multiplication operator"
     },
     "multiplication_assignment": {
       "code": "*=",
-      "comment": "a *= 20 is same as a = a * 20"
+      "comment": "a *= 20 is same as a = a * 20",
+      "name": "Multiplication and assignment operator"
     },
     "division": {
       "code": "/",
-      "comment": "Returns integer quotient i.e. 31/2 gives 15"
+      "comment": "Returns integer quotient i.e. 31/2 gives 15",
+      "name": "Division operator"
     },
     "division_assignment": {
       "code": "/=",
-      "comment": "a /= 20 is same as a = a / 20"
+      "comment": "a /= 20 is same as a = a / 20",
+      "name": "Division and assignment operator"
     },
     "modulus": {
       "code": "%",
-      "comment": "Gives remainder of division"
+      "comment": "Gives remainder of division",
+      "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
-      "code": "%="
+      "code": "%=",
+      "name": "Modulus and assignment operator"
     },
     "unary_plus": {
       "code": "int a = 12",
-      "comment": "Value of a is positive 12"
+      "comment": "Value of a is positive 12",
+      "name": "Unary plus operator"
     },
     "unary_minus": {
       "code": "int a = -12",
-      "comment": "Value of a is negative 12"
+      "comment": "Value of a is negative 12",
+      "name": "Unary minus operator"
     },
     "increment": {
       "code": "int a = 10; a++;",
-      "comment": "Value of a is 11"
+      "comment": "Value of a is 11",
+      "name": "Increment (add 1) operator"
     },
     "decrement": {
       "code": "int a = 10; a--;",
-      "comment": "Value of a is 9"
+      "comment": "Value of a is 9",
+      "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
       "code": "^",
-      "comment": "Value of 5^3 is 125"
+      "comment": "Value of 5^3 is 125",
+      "name": "Exponential operator"
     },
     "factorial": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Factorial operator"
     },
     "absolute_value": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Absolute value operator"
     },
     "percentage": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "=="
+      "code": "==",
+      "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "!="
+      "code": "!=",
+      "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "<"
+      "code": "<",
+      "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "<="
+      "code": "<=",
+      "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": ">"
+      "code": ">",
+      "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": ">="
+      "code": ">=",
+      "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Null coalescing operator"
     },
     "is": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is operator"
     },
     "is_not": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is not operator"
     },
     "left_shift": {
       "code": "int a = 1 << 2",
-      "comment": "Shifts the specified bits to left, so a equals to 4"
+      "comment": "Shifts the specified bits to left, so a equals to 4",
+      "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "<<="
+      "code": "<<=",
+      "name": "Left shift assignment operator"
     },
     "right_shift": {
       "code": "int a = 4 >> 2",
-      "comment": "Shifts specified bits to right side, 2 bits in this case so a equals to 1"
+      "comment": "Shifts specified bits to right side, 2 bits in this case so a equals to 1",
+      "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "code": ">>="
+      "code": ">>=",
+      "name": "Right shift assignment operator"
     },
     "ternary": {
       "code": "int a = (5 == 6) ? 60 : 80",
-      "comment": "If (5 == 6) true, then value of a is 60 else 80."
+      "comment": "If (5 == 6) true, then value of a is 60 else 80.",
+      "name": "Ternary operator"
     },
     "null_forgiving": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
     }
   }
 }

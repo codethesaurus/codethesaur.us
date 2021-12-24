@@ -2,65 +2,44 @@
   "meta": {
     "language": "python",
     "language_version": "3.10",
-    "language_name": "Python"
+    "language_name": "Python",
+    "structure": "data_types"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_integer_as_object",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit",
-      "signed_float_as_object"
-    ],
-    "Characters and Strings": [
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
       "name": "Boolean",
       "code": "bool"
     },
     "signed_integer_16_bit": {
-      "name": "16-bit integer",
+      "name": "Signed 16-bit integer",
       "not-implemented": true
     },
     "signed_integer_32_bit": {
-      "name": "32-bit integer",
+      "name": "Signed 32-bit integer",
       "not-implemented": true
     },
     "signed_integer_64_bit": {
-      "name": "64-bit integer",
+      "name": "Signed 64-bit integer",
       "not-implemented": true
     },
     "signed_integer_as_object": {
-      "name": "Object-based Integer",
+      "name": "Signed object-based Integer",
       "code": "int"
     },
     "signed_float_16_bit": {
-      "name": "16-bit floating point",
+      "name": "Signed 16-bit floating point",
       "not-implemented": true
     },
     "signed_float_32_bit": {
-      "name": "32-bit floating point",
+      "name": "Signed 32-bit floating point",
       "not-implemented": true
     },
     "signed_float_64_bit": {
-      "name": "64-bit floating point",
+      "name": "Signed 64-bit floating point",
       "not-implemented": true
     },
     "signed_float_as_object": {
-      "name": "Object-based floating point",
+      "name": "Signed object-based floating point",
       "code": "float"
     },
     "string_as_object": {
@@ -68,7 +47,7 @@
       "code": "str"
     },
     "string_as_array": {
-      "name": "String as an array",
+      "name": "String as an array of characters",
       "not-implemented": true
     },
     "complex_as_object": {

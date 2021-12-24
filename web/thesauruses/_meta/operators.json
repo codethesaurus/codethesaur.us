@@ -1,259 +1,63 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "structure": "operators"
   },
   "categories": {
-    "Arithmetic Operators": [
-      "addition",
-      "addition_assignment",
-      "subtraction",
-      "subtraction_assignment",
-      "multiplication",
-      "multiplication_assignment",
-      "division",
-      "division_assignment",
-      "integer_division",
-      "integer_division_assignment",
-      "modulus",
-      "modulus_assignment",
-      "unary_plus",
-      "unary_minus",
-      "increment",
-      "decrement",
-      "exponential",
-      "factorial",
-      "absolute_value",
-      "percentage"
-    ],
-    "Equality/Comparison/Logical Operators": [
-      "equal_to",
-      "not_equal_to",
-      "less_than",
-      "less_than_or_equal_to",
-      "greater_than",
-      "greater_than_or_equal_to",
-      "null_coalescing",
-      "is",
-      "is_not",
-      "logical_and",
-      "logical_or",
-      "logical_not"
-    ],
-    "Bitwise Operators": [
-      "bitwise_and",
-      "bitwise_and_assignment",
-      "bitwise_or",
-      "bitwise_or_assignment",
-      "bitwise_not",
-      "bitwise_not_assignment",
-      "bitwise_xor",
-      "bitwise_xor_assignment",
-      "bitwise_xnor",
-      "bitwise_xnor_assignment",
-      "left_shift",
-      "left_shift_assignment",
-      "right_shift",
-      "right_shift_assignment"
-    ],
-    "Conditional Operators": [
-      "ternary",
-      "null_forgiving"
-    ]
-  },
-  "operators": {
-    "addition": {
-      "name": "Addition operator",
-      "code": [""]
+    "Arithmetic Operators": {
+      "addition": "Addition operator",
+      "addition_assignment": "Addition and assignment operator",
+      "subtraction": "Subtraction operator",
+      "subtraction_assignment": "Subtraction and assignment operator",
+      "multiplication": "Multiplication operator",
+      "multiplication_assignment": "Multiplication and assignment operator",
+      "division": "Division operator",
+      "division_assignment": "Division and assignment operator",
+      "integer_division": "Integer division operator",
+      "integer_division_assignment": "Integer division and assignment operator",
+      "modulus": "Modulus (remainder) operator",
+      "modulus_assignment": "Modulus and assignment operator",
+      "unary_plus": "Unary plus operator",
+      "unary_minus": "Unary minus operator",
+      "increment": "Increment (add 1) operator",
+      "decrement": "Decrement (subtract 1) operator",
+      "exponential": "Exponential operator",
+      "factorial": "Factorial operator",
+      "absolute_value": "Absolute value operator",
+      "percentage": "Percentage operator"
     },
-    "addition_assignment": {
-      "name": "Addition and assignment operator",
-      "code": [""]
+    "Equality/Comparison/Logical Operators": {
+      "equal_to": "Equality operator",
+      "not_equal_to": "Not equal to operator",
+      "less_than": "Less than operator",
+      "less_than_or_equal_to": "Less than or equal to operator",
+      "greater_than": "Greater than operator",
+      "greater_than_or_equal_to": "Greater than or equal to operator",
+      "null_coalescing": "Null coalescing operator",
+      "is": "Is operator",
+      "is_not": "Is not operator",
+      "logical_and": "Logical AND operator",
+      "logical_or": "Logical OR operator",
+      "logical_not": "Logical NOT operator"
     },
-    "subtraction": {
-      "name": "Subtraction operator",
-      "code": [""]
+    "Bitwise Operators": {
+      "bitwise_and": "Bitwise AND operator",
+      "bitwise_and_assignment": "Bitwise AND and assignment operator",
+      "bitwise_or": "Bitwise OR operator",
+      "bitwise_or_assignment": "Bitwise OR and assignment operator",
+      "bitwise_not": "Bitwise NOT operator",
+      "bitwise_xor": "Bitwise XOR operator",
+      "bitwise_xor_assignment": "Bitwise XOR and assignment operator",
+      "bitwise_xnor": "Bitwise XNOR operator",
+      "bitwise_xnor_assignment": "Bitwise XNOR and assignment operator",
+      "left_shift": "Left shift bitwise operator",
+      "left_shift_assignment": "Left shift assignment operator",
+      "right_shift": "Right shift bitwise operator",
+      "right_shift_assignment": "Right shift assignment operator",
+      "not_assignment": "Bitwise NOT and assignment operator"
     },
-    "subtraction_assignment": {
-      "name": "Subtraction and assignment operator",
-      "code": [""]
-    },
-    "multiplication": {
-      "name": "Multiplication operator",
-      "code": [""]
-    },
-    "multiplication_assignment": {
-      "name": "Multiplication and assignment operator",
-      "code": [""]
-    },
-    "division": {
-      "name": "Division operator",
-      "code": [""]
-    },
-    "division_assignment": {
-      "name": "Division and assignment operator",
-      "code": [""]
-    },
-    "integer_division": {
-      "name": "Integer division operator",
-      "code": [""]
-    },
-    "integer_division_assignment": {
-      "name": "Integer division and assignment operator",
-      "code": [""]
-    },
-    "modulus": {
-      "name": "Modulus (remainder) operator",
-      "code": [""]
-    },
-    "modulus_assignment": {
-      "name": "Modulus and assignment operator",
-      "code": [""]
-    },
-    "unary_plus": {
-      "name": "Unary plus operator",
-      "code": [""]
-    },
-    "unary_minus": {
-      "name": "Unary minus operator",
-      "code": [""]
-    },
-    "increment": {
-      "name": "Increment (add 1) operator",
-      "code": [""]
-    },
-    "decrement": {
-      "name": "Decrement (subtract 1) operator",
-      "code": [""]
-    },
-    "exponential": {
-      "name": "Exponential operator",
-      "code": [""]
-    },
-    "factorial": {
-      "name": "Factorial operator",
-      "code": [""]
-    },
-    "absolute_value": {
-      "name": "Absolute value operator",
-      "code": [""]
-    },
-    "percentage": {
-      "name": "Percentage operator",
-      "code": [""]
-    },
-    "equal_to": {
-      "name": "Equality operator",
-      "code": [""]
-    },
-    "not_equal_to": {
-      "name": "Not equal to operator",
-      "code": [""]
-    },
-    "less_than": {
-      "name": "Less than operator",
-      "code": [""]
-    },
-    "less_than_or_equal_to": {
-      "name": "Less than or equal to operator",
-      "code": [""]
-    },
-    "greater_than": {
-      "name": "Greater than operator",
-      "code": [""]
-    },
-    "greater_than_or_equal_to": {
-      "name": "Greater than or equal to operator",
-      "code": [""]
-    },
-    "null_coalescing": {
-      "name": "Null coalescing operator",
-      "code": [""]
-    },
-    "is": {
-      "name": "Is operator",
-      "code": [""]
-    },
-    "is_not": {
-      "name": "Is not operator",
-      "code": [""]
-    },
-    "logical_and": {
-      "name": "Logical AND operator",
-      "code": [""]
-    },
-    "logical_or": {
-      "name": "Logical OR operator",
-      "code": [""]
-    },
-    "logical_not": {
-      "name": "Logical NOT operator",
-      "code": [""]
-    },
-    "bitwise_and": {
-      "name": "Bitwise AND operator",
-      "code": [""]
-    },
-    "bitwise_and_assignment": {
-      "name": "Bitwise AND and assignment operator",
-      "code": [""]
-    },
-    "bitwise_or": {
-      "name": "Bitwise OR operator",
-      "code": [""]
-    },
-    "bitwise_or_assignment": {
-      "name": "Bitwise OR and assignment operator",
-      "code": [""]
-    },
-    "bitwise_not": {
-      "name": "Bitwise NOT operator",
-      "code": [""]
-    },
-    "not_assignment": {
-      "name": "Bitwise NOT and assignment operator",
-      "code": [""]
-    },
-    "bitwise_xor": {
-      "name": "Bitwise XOR operator",
-      "code": [""]
-    },
-    "bitwise_xor_assignment": {
-      "name": "Bitwise XOR and assignment operator",
-      "code": [""]
-    },
-    "bitwise_xnor": {
-      "name": "Bitwise XNOR operator",
-      "code": [""]
-    },
-    "bitwise_xnor_assignment": {
-      "name": "Bitwise XNOR and assignment operator",
-      "code": [""]
-    },
-    "left_shift": {
-      "name": "Left shift bitwise operator",
-      "code": [""]
-    },
-    "left_shift_assignment": {
-      "name": "Left shift assignment operator",
-      "code": [""]
-    },
-    "right_shift": {
-      "name": "Right shift bitwise operator",
-      "code": [""]
-    },
-    "right_shift_assignment": {
-      "name": "Right shift assignment operator",
-      "code": [""]
-    },
-    "ternary": {
-      "name": "Ternary operator",
-      "code": [""]
-    },
-    "null_forgiving": {
-      "name": "Null forgiving operator",
-      "code": [""]
+    "Conditional Operators": {
+      "ternary": "Ternary operator",
+      "null_forgiving": "Null forgiving operator"
     }
   }
 }
