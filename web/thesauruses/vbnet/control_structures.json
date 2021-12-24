@@ -2,85 +2,78 @@
   "meta": {
     "language": "vbnet",
     "language_version": "16.0",
-    "language_name": "Visual Basic"
+    "language_name": "Visual Basic",
+    "structure": "control_structures"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "switch_statement",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "until_loop",
-      "do_until_loop",
-      "for_loop",
-      "foreach_loop",
-      "list_comprehension"
-    ],
-    "Iterations": [
-      "each_iteration",
-      "map_iteration",
-      "filter_iteration",
-      "fold_iteration"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
-      "code": "If condition Then\n     statements\nEnd If"
+      "code": "If condition Then\n     statements\nEnd If",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "If condition Then\n     statements\nElse\n     statements\nEnd If"
+      "code": "If condition Then\n     statements\nElse\n     statements\nEnd If",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "If condition Then\n     statements\nElseIf condition Then\n     statements\nEnd If"
+      "code": "If condition Then\n     statements\nElseIf condition Then\n     statements\nEnd If",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "If condition Then\n     statements\nElse if condition Then\n     statements\nElse\n     statements\nEnd If"
+      "code": "If condition Then\n     statements\nElse if condition Then\n     statements\nElse\n     statements\nEnd If",
+      "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
-      "code": "Select Case expression\n     Case x\n          statements\n     Case y\n          statements\n     Case Else\n          statements\nEnd Select"
+      "code": "Select Case expression\n     Case x\n          statements\n     Case y\n          statements\n     Case Else\n          statements\nEnd Select",
+      "name": "Switch statement"
     },
     "ternary_conditional": {
-      "code": "If(condition, trueExpression, falseExpression)"
+      "code": "If(condition, trueExpression, falseExpression)",
+      "name": "Ternary conditional"
     },
     "while_loop": {
-      "code": "Do While condition\n     statements\nLoop"
+      "code": "Do While condition\n     statements\nLoop",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "Do\n     statements\nLoop While condition"
+      "code": "Do\n     statements\nLoop While condition",
+      "name": "Do/While loop"
     },
     "until_loop": {
-      "code": "Do Until condition\n     statements\nLoop"
+      "code": "Do Until condition\n     statements\nLoop",
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "code": "Do\n     statements\nLoop Until condition"
+      "code": "Do\n     statements\nLoop Until condition",
+      "name": "Do/Until loop"
     },
     "for_loop": {
       "code": "For expression To end\n     statements\nNext",
-      "comment": "Can also set a step: `For number as Double = 2 To 0 Step -0.25`"
+      "comment": "Can also set a step: `For number as Double = 2 To 0 Step -0.25`",
+      "name": "For loop"
     },
     "foreach_loop": {
-      "code": "For Each item in object\n     statements\nNext"
+      "code": "For Each item in object\n     statements\nNext",
+      "name": "Foreach loop"
     },
     "list_comprehension": {
-      "code": "Dim new_list = From item In iterable\n               Where condition"
+      "code": "Dim new_list = From item In iterable\n               Where condition",
+      "name": "List Comprehension"
     },
     "each_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Each iteration"
     },
     "map_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Filter iteration"
     },
     "fold_iteration": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Fold iteration"
     }
   }
 }

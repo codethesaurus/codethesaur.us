@@ -32,22 +32,18 @@
                 </div>
             </div>
 
-    {% for concept_item in category.concepts %}
-        {% for c in concepts %}
-            {% if c.id == concept_item %}
-                <div class="card-group">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="strong">
-                                {{ c.name|default:"Unsupported or Not Needed"|linebreaksbr }}
-                            </div>
-                        </div>
+    {% for concept in category.concepts %}
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="strong">
+                        {{ concept.name|default:"Unsupported or Not Needed"|linebreaksbr }}
                     </div>
-                    {% comparecard c.code1 c.comment1 %}
-                    {% comparecard c.code2 c.comment2 %}
                 </div>
-            {% endif %}
-        {% endfor %}
+            </div>
+            {% comparecard concept.code1 concept.comment1 %}
+            {% comparecard concept.code2 concept.comment2 %}
+        </div>
     {% endfor %}
 {% endfor %}
 

@@ -2,277 +2,265 @@
   "meta": {
     "language": "swift",
     "language_version": "5.3",
-    "language_name": "Swift"
+    "language_name": "Swift",
+    "structure": "strings"
   },
-  "categories": {
-    "Creating/Destroying Strings": [
-      "is_primitive_or_not",
-      "import",
-      "default_string_byte_encoding",
-      "create_new_string",
-      "create_multiline_string",
-      "assign_new_string",
-      "destroy_string"
-    ],
-    "String Basics": [
-      "length_of_string",
-      "max_length_of_string",
-      "clear_string",
-      "is_empty",
-      "concatenate_two_strings",
-      "concatenate_many_strings",
-      "is_all_alphabetical",
-      "is_all_numerical",
-      "is_all_alphanumeric",
-      "is_decimal",
-      "is_all_whitespaces",
-      "is_all_uppercase",
-      "is_all_lowercase",
-      "is_in_titlecase"
-    ],
-    "Find and Search": [
-      "does_substring_exist",
-      "find_start_index_of_substring",
-      "find_start_index_of_additional_substring",
-      "find_start_index_of_substring_from_end",
-      "count_occurrences_of_substring",
-      "get_leftmost_characters",
-      "get_rightmost_characters",
-      "get_substring_from_start_and_end_index",
-      "get_substring_from_start_index_and_length"
-    ],
-    "Manipulating Strings": [
-      "convert_to_uppercase",
-      "convert_to_lowercase",
-      "convert_to_title_case",
-      "capitalize_string",
-      "remove_whitespace",
-      "replace_substring",
-      "replace_all_substring",
-      "split_at_index",
-      "split_at_newlines",
-      "split_at_substring",
-      "merge_lists_into_string",
-      "encode_html_entities",
-      "decode_html_entities",
-      "encode_url_percent",
-      "decode_url_percent",
-      "encode_to_base64",
-      "decode_from_base64"
-    ],
-    "String Formatting": [
-      "format_string_function",
-      "parameter_format_in_order",
-      "parameter_format_numerical",
-      "parameter_format_by_name",
-      "format_as_integer",
-      "format_as_decimal",
-      "format_as_fixed_decimal",
-      "format_as_currency",
-      "format_as_percentage",
-      "format_number_with_separators",
-      "format_number_with_positive_negative_sign",
-      "format_number_in_scientific_notation_little_e",
-      "format_number_in_scientific_notation_big_e",
-      "format_number_in_binary",
-      "format_number_in_octal",
-      "format_number_in_hexadecimal"
-    ]
-  },
-  "strings": {
+  "concepts": {
     "is_primitive_or_not": {
-      "code": "Yes"
+      "code": "Yes",
+      "name": "Is this a built-in type in this language?"
     },
     "import": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Import the string class"
     },
     "default_string_byte_encoding": {
-      "code": "UTF-16"
+      "code": "UTF-16",
+      "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)"
     },
     "create_new_string": {
-      "code": "var someString = \"value\""
+      "code": "var someString = \"value\"",
+      "name": "Create new string"
     },
     "create_multiline_string": {
-      "code": "var string1 = string2 + \"\\n\""
+      "code": "var string1 = string2 + \"\\n\"",
+      "name": "Create new multi-line string"
     },
     "assign_new_string": {
-      "code": "var string1 = string2"
+      "code": "var string1 = string2",
+      "name": "Assign string from another string"
     },
     "destroy_string": {
-      "code": "string2 = nil"
+      "code": "string2 = nil",
+      "name": "Destroy string"
     },
     "length_of_string": {
-      "code": "string1.count"
+      "code": "string1.count",
+      "name": "Length of string"
     },
     "max_length_of_string": {
-      "code": "2 to the power of 62"
+      "code": "2 to the power of 62",
+      "name": "Maximum length of string"
     },
     "clear_string": {
-      "code": "string1 = \"\" or string1 = String()"
+      "code": "string1 = \"\" or string1 = String()",
+      "name": "Clear/empty string"
     },
     "is_empty": {
-      "code": "string1.isEmpty"
+      "code": "string1.isEmpty",
+      "name": "Is string empty?"
     },
     "concatenate_two_strings": {
-      "code": "var string3 = string1 + string2"
+      "code": "var string3 = string1 + string2",
+      "name": "Concatenate/join two strings"
     },
     "concatenate_many_strings": {
-      "code": "var joined = array.joined(separator, stringArray)" 
+      "code": "var joined = array.joined(separator, stringArray)",
+      "name": "Concatenate/join many strings"
     },
     "is_all_alphabetical": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is string all alphabetical characters?"
     },
     "is_all_numerical": {
-      "code": "string1.isNumber"
+      "code": "string1.isNumber",
+      "name": "Is string all numerical characters?"
     },
     "is_all_alphanumeric": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is string all alphanumeric characters?"
     },
     "is_decimal": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is string a decimal number?"
     },
     "is_all_whitespaces": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is string all whitespace characters?"
     },
     "is_all_uppercase": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is string all uppercase characters?"
     },
     "is_all_lowercase": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is string all lowercase characters?"
     },
     "is_in_titlecase": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Is string formatted in title case?"
     },
     "does_substring_exist": {
-      "code": "string.contains(\"jkl\")"
+      "code": "string.contains(\"jkl\")",
+      "name": "Does a substring exist in a string?"
     },
     "find_start_index_of_substring": {
-      "code": "let matchedIndex = alphabet.firstIndex(of: \"x\")"
+      "code": "let matchedIndex = alphabet.firstIndex(of: \"x\")",
+      "name": "Find index of where a substring starts"
     },
     "find_start_index_of_additional_substring": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Find index of an additional substring (or starting at another index)"
     },
     "find_start_index_of_substring_from_end": {
-      "code": "let matchedIndex = alphabet.lastIndex(of: \"x\")"
+      "code": "let matchedIndex = alphabet.lastIndex(of: \"x\")",
+      "name": "Find substring index starting at end"
     },
     "count_occurrences_of_substring": {
-      "code": "let count = string1.components(separatedBy:string).count - 1"
+      "code": "let count = string1.components(separatedBy:string).count - 1",
+      "name": "Find number of occurences of a substring"
     },
     "get_leftmost_characters": {
-      "code": "let startText = string1.index(string1.startIndex, offsetBy: 0)"
+      "code": "let startText = string1.index(string1.startIndex, offsetBy: 0)",
+      "name": "Get a specified number of characters from the left"
     },
     "get_rightmost_characters": {
-      "code": "let endText = string1.index(string1.endIndex, offsetBy: -3)"
+      "code": "let endText = string1.index(string1.endIndex, offsetBy: -3)",
+      "name": "Get a specified number of characters from the right"
     },
     "get_substring_from_start_and_end_index": {
-      "code": "let midText = string1[5..8]"
+      "code": "let midText = string1[5..8]",
+      "name": "Return a substring from a string based on starting and ending indices"
     },
     "get_substring_from_start_index_and_length": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Return a substring from a string based on starting index and size of substring"
     },
     "convert_to_uppercase": {
-      "code": "let uppercase = string1.uppercased()"
+      "code": "let uppercase = string1.uppercased()",
+      "name": "Convert string to all uppercase"
     },
     "convert_to_lowercase": {
-      "code": "let lowercase = string1.lowercased()"
+      "code": "let lowercase = string1.lowercased()",
+      "name": "Convert string to all lowercase"
     },
     "convert_to_title_case": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Convert string to title case"
     },
     "capitalize_string": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Capitalize first letter of a string"
     },
     "remove_whitespace": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Remove all whitespaces from string"
     },
     "replace_substring": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Replace a substring with another string"
     },
     "replace_all_substring": {
-      "code": "let replaced = str.replacingOccurrences(of: \"4.0\", with: \"5.0\")"
+      "code": "let replaced = str.replacingOccurrences(of: \"4.0\", with: \"5.0\")",
+      "name": "Replace all substring matches with another string"
     },
     "split_at_index": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Split string into a list of strings at a given index"
     },
     "split_at_newlines": {
-      "code": "let stringList = myString.split(separator: \"\\n\")"
+      "code": "let stringList = myString.split(separator: \"\\n\")",
+      "name": "Split string into a list of strings at every new line character"
     },
     "split_at_substring": {
-      "code": "let components = str.components(separatedBy: \"something\")"
+      "code": "let components = str.components(separatedBy: \"something\")",
+      "name": "Split string by locating all substrings"
     },
     "merge_lists_into_string": {
-      "code": "let joined = stringArray.joined(separator: \"\")"
+      "code": "let joined = stringArray.joined(separator: \"\")",
+      "name": "Merge a list of strings into one string"
     },
     "encode_html_entities": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)"
     },
     "decode_html_entities": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Decode HTML entitles into characters"
     },
     "encode_url_percent": {
-      "code": "let escapedString = originalString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)"
+      "code": "let escapedString = originalString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)",
+      "name": "Encode URL percent encoding into string (ex: ' ' to %20)"
     },
     "decode_url_percent": {
-      "code": "let originalString = escapedString.removingPercentEncoding()"
+      "code": "let originalString = escapedString.removingPercentEncoding()",
+      "name": "Decode URL percent encoding"
     },
     "encode_to_base64": {
-      "code": "let encoded = string.data(using: .utf8)?.base64EncodedString()"
+      "code": "let encoded = string.data(using: .utf8)?.base64EncodedString()",
+      "name": "Encode string into Base64 format"
     },
     "decode_from_base64": {
       "name": "Decode string from Base64 format",
       "code": "let decoded = String(data: Data(someString), encoding: .utf8)"
     },
     "format_string_function": {
-      "code": "let aStr = String(format: \"%@%x\", \"timeNow in hex: \", time(nil))"
+      "code": "let aStr = String(format: \"%@%x\", \"timeNow in hex: \", time(nil))",
+      "name": "Function to format a string"
     },
     "parameter_format_in_order": {
-      "code": "let aStr = String(format: \"%@%x\", \"timeNow in hex: \", time(nil))"
+      "code": "let aStr = String(format: \"%@%x\", \"timeNow in hex: \", time(nil))",
+      "name": "Parameter used in format function if they're used in order"
     },
     "parameter_format_numerical": {
-      "code": " String(format: format, arguments: substringsArray)"
+      "code": " String(format: format, arguments: substringsArray)",
+      "name": "Parameter used in format function if they're numerically numbered"
     },
     "parameter_format_by_name": {
-      "code": "let str = String(format:\"%d, %f, %ld\", INT_VALUE, FLOAT_VALUE, DOUBLE_VALUE)"
+      "code": "let str = String(format:\"%d, %f, %ld\", INT_VALUE, FLOAT_VALUE, DOUBLE_VALUE)",
+      "name": "Paramater used in format function if they're named variables"
     },
     "format_as_integer": {
-      "code": "let str = String(format:\"%d\", INT_VALUE)"
+      "code": "let str = String(format:\"%d\", INT_VALUE)",
+      "name": "Format parameter as an integer"
     },
     "format_as_decimal": {
-      "code": "let str = String(format:\"%f\", DECIMAL_VALUE)"
+      "code": "let str = String(format:\"%f\", DECIMAL_VALUE)",
+      "name": "Format parameter as a decimal number"
     },
     "format_as_fixed_decimal": {
       "code": "let str = String(format:\"%.2f\", DECIMAL_VALUE)",
-			"comment": "Format to 2 decimal places"
+      "comment": "Format to 2 decimal places",
+      "name": "Format parameter as a fixed-point decimal number"
     },
     "format_as_currency": {
       "not-implemented": "true",
-      "comment": "There is no built-in method, you have to use the NumberFormatter class with various parameters"
+      "comment": "There is no built-in method, you have to use the NumberFormatter class with various parameters",
+      "name": "Format parameter as a currency number"
     },
     "format_as_percentage": {
       "not-implemented": "true",
-      "comment": "There is no built-in method, you have to use the NumberFormatter class with various parameters"
+      "comment": "There is no built-in method, you have to use the NumberFormatter class with various parameters",
+      "name": "Format parameter as a percentage number"
     },
     "format_number_with_separators": {
       "not-implemented": "true",
-      "comment": "There is no built-in method, you have to use the NumberFormatter class with various parameters"
+      "comment": "There is no built-in method, you have to use the NumberFormatter class with various parameters",
+      "name": "Format number with thousand separators"
     },
     "format_number_with_positive_negative_sign": {
-      "code": "let str = String(format:\"+%d\", INT_VALUE)"
+      "code": "let str = String(format:\"+%d\", INT_VALUE)",
+      "name": "Format number with positive/negative signs"
     },
     "format_number_in_scientific_notation_little_e": {
-      "code": "let str = String(format:\"%e\", DECIMAL_VALUE)"
+      "code": "let str = String(format:\"%e\", DECIMAL_VALUE)",
+      "name": "Format number with scientific notation with 'e'"
     },
     "format_number_in_scientific_notation_big_e": {
-      "code": "let str = String(format:\"%E\", DECIMAL_VALUE)"
+      "code": "let str = String(format:\"%E\", DECIMAL_VALUE)",
+      "name": "Format number with scientific notation with 'E'"
     },
     "format_number_in_binary": {
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Format number into binary"
     },
     "format_number_in_octal": {
-      "code": "let str = String(format:\"%o\", DECIMAL_VALUE)"
+      "code": "let str = String(format:\"%o\", DECIMAL_VALUE)",
+      "name": "Format number into octal"
     },
     "format_number_in_hexadecimal": {
-      "code": "let str = String(format:\"%x\", DECIMAL_VALUE)"
+      "code": "let str = String(format:\"%x\", DECIMAL_VALUE)",
+      "name": "Format number into hexadecimal"
     }
   }
 }

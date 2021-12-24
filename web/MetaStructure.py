@@ -18,5 +18,4 @@ class MetaStructure:
             # parse file
             meta_structure_file_json = json.loads(data)
 
-            self.categories = meta_structure_file_json["categories"]
-            self.concepts = meta_structure_file_json[structure_key]
+            self.categories = meta_structure_file_json['categories']
