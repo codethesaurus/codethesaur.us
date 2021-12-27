@@ -2,55 +2,36 @@
   "meta": {
     "language": "cpp",
     "language_version": "C++17",
-    "language_name": "C++"
+    "language_name": "C++",
+    "structure": "data_types"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_16_bit",
-      "signed_integer_32_bit",
-      "signed_integer_64_bit",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit"
-    ],
-    "Characters and Strings": [
-      "string_as_object",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
       "name": "Boolean",
       "code": "bool"
     },
     "signed_integer_16_bit": {
-      "name": "16-bit integer",
+      "name": "Signed 16-bit integer",
       "code": "int"
     },
     "signed_integer_32_bit": {
-      "name": "32-bit integer",
+      "name": "Signed 32-bit integer",
       "code": "long"
     },
     "signed_integer_64_bit": {
-      "name": "64-bit integer",
+      "name": "Signed 64-bit integer",
       "code": "long long"
     },
     "signed_float_16_bit": {
-      "name": "16-bit floating point",
+      "name": "Signed 16-bit floating point",
       "code": "float"
     },
     "signed_float_32_bit": {
-      "name": "32-bit floating point",
+      "name": "Signed 32-bit floating point",
       "code": "double"
     },
     "signed_float_64_bit": {
-      "name": "64-bit floating point",
+      "name": "Signed 64-bit floating point",
       "code": "long double"
     },
     "string_as_object": {
@@ -58,7 +39,7 @@
       "code": "string"
     },
     "string_as_array": {
-      "name": "String as an array",
+      "name": "String as an array of characters",
       "code": "char[]"
     },
     "complex_as_object": {

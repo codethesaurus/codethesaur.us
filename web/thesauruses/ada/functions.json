@@ -2,19 +2,10 @@
   "meta": {
     "language": "ada",
     "language_version": "2012",
-    "language_name": "Ada"
+    "language_name": "Ada",
+    "structure": "functions"
   },
-  "categories": {
-    "Void Functions": [
-      "void_function_no_parameters",
-      "void_function_with_parameters"
-    ],
-    "Return Value Functions": [
-      "return_value_function_no_parameters",
-      "return_value_function_with_parameters"
-    ]
-  },
-  "functions": {
+  "concepts": {
     "void_function_no_parameters": {
       "name": "Function that does not return a value and takes no parameters",
       "code": "procedure Procedure_Name is\n    Type_Declaration: Integer;\nbegin\n    statements;\nend Procedure_Name;"

@@ -29,7 +29,6 @@ class MetaStructure:
             meta_structure_file_json = json.loads(data)
 
             self.categories = meta_structure_file_json["categories"]
-            self.concepts = meta_structure_file_json[structure_key]
 
 
 class Language:
@@ -38,7 +37,7 @@ class Language:
     structure key
     """
 
-    def __init__(self, key):
+    def __init__(self, key, friendly_name):
         """
         Initialize the Language object, which will contain concepts for a given
         structure
@@ -48,20 +47,10 @@ class Language:
 
         # Add an empty string to convert SafeString to str
         self.key = str(key + "")
-        self.friendly_name = None
+        self.friendly_name = friendly_name
         self.concepts = None
 
-    def has_key(self):
-        """
-        Returns a Boolean if the language key exists or not
-
-        :rtype: bool
-        """
-
-        # Empty string is falsy, but text is truthy, but would return text
-        return bool(self.key)
-
-    def lang_exists(self):
+    def __bool__(self):
         """
         Returns a Boolean if the language (self.key) exists in the thesauruses
         or not
@@ -70,7 +59,7 @@ class Language:
         """
         return os.path.exists(os.path.join("web", "thesauruses", self.key))
 
-    def load_structure(self, structure_key):
+    def load_concepts(self, structure_key):
         """
         Loads the structure file into the Language object
 
@@ -84,7 +73,7 @@ class Language:
             file_json = json.loads(data)
 
             self.friendly_name = file_json["meta"]["language_name"]
-            self.concepts = file_json[structure_key]
+            self.concepts = file_json["concepts"]
 
     def concept(self, concept_key):
         """
@@ -158,13 +147,22 @@ class MetaInfo:
 
         :rtype: None
         """
-        with open(
-            "web/thesauruses/meta_info.json",
-            'r',
-            encoding='UTF-8'
-        ) as meta_file:
+        meta_info_file_path = os.path.join(
+            "web", "thesauruses", "meta_info.json")
+        with open(meta_info_file_path, 'r', encoding='UTF-8') as meta_file:
             meta_data = meta_file.read()
-        self.data_structures = json.loads(meta_data)["structures"]
+        meta_info_json = json.loads(meta_data)
+        self.data_structures = meta_info_json["structures"]
+        self.languages = meta_info_json["languages"]
+
+    def language_friendly_name(self, language_key):
+        """
+        Given a structure key (from meta_info.json), returns the language's human-friendly name
+
+        :param language_key: ID of the language located in the meta_info.json file
+        :return: string with the human-friendly name
+        """
+        return self.languages[language_key]["name"]
 
     def structure_friendly_name(self, structure_key):
         """
@@ -176,8 +174,7 @@ class MetaInfo:
         :return: string with the human-friendly name
         :rtype: String
         """
-        index = list(self.data_structures.values()).index(structure_key)
-        return list(self.data_structures.keys())[index]
+        return self.data_structures[structure_key]
 
     def structure(self, structure_key):
         """

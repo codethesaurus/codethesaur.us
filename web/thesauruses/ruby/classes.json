@@ -2,61 +2,54 @@
   "meta": {
     "language": "ruby",
     "language_version": "3.0",
-    "language_name": "Ruby"
+    "language_name": "Ruby",
+    "structure": "classes"
   },
-  "categories": {
-    "Defining Classes": [
-      "normal_class"
-    ],
-    "Adding Private and Public Members": [
-      "public_variables",
-      "static_variables",
-      "public_functions"
-    ],
-    "Extending and Implementing Classes": [
-      "extends_class"
-    ],
-    "Creating Objects and Polymorphism": [
-      "instantiating_object"
-    ],
-    "Constructors and Deconstructor": [
-      "implement_constructor"
-    ]
-  },
-  "classes": {
+  "concepts": {
     "normal_class": {
-      "code": "class Car\n  # class body\nend"
+      "code": "class Car\n  # class body\nend",
+      "name": "Normal class"
     },
     "inner_class": {
-      "code": "class Car\n \n  class CarPart\n    # car part body\n  end\nend"
+      "code": "class Car\n \n  class CarPart\n    # car part body\n  end\nend",
+      "name": "Inner class"
     },
     "public_variables": {
-      "code": "class Car\n  attr_accessor :model_name\n\nend"
+      "code": "class Car\n  attr_accessor :model_name\n\nend",
+      "name": "Defining public variables"
     },
     "public_functions": {
-      "code": "class Car\n  def drive\n    # drive implementation\n  end\n\nend"
+      "code": "class Car\n  def drive\n    # drive implementation\n  end\n\nend",
+      "name": "Defining public functions"
     },
     "static_variables": {
-      "code": "class Car\n  class << self\n    attr_accessor :makes\n  end\nend"
+      "code": "class Car\n  class << self\n    attr_accessor :makes\n  end\nend",
+      "name": "Defining static variables"
     },
     "static_functions": {
-      "code": "class Car\n  def.class_method\n    # method body\n  end\n\n#OR\n\n  class << self\n    def class_method\n      # method body\n    end\n  end\nend"
+      "code": "class Car\n  def.class_method\n    # method body\n  end\n\n#OR\n\n  class << self\n    def class_method\n      # method body\n    end\n  end\nend",
+      "name": "Defining static functions"
     },
     "extends_class": {
-      "code": "class Sedan < Car\n  # class body\nend"
+      "code": "class Sedan < Car\n  # class body\nend",
+      "name": "Class that inherits/extends another class"
     },
     "calling_superclass_functions": {
-      "code": "class Sedan < Car\n  def drive\n    super\n\n    # custom drive implementation\n  end\nend"
+      "code": "class Sedan < Car\n  def drive\n    super\n\n    # custom drive implementation\n  end\nend",
+      "name": "Calling a superclass function"
     },
     "overriding_superclass_functions": {
       "code": "class Sedan < Car\n  def drive\n    # override drive implementation\n  end\nend",
-      "comment": "No special notation is needed to override super class functions in ruby"
+      "comment": "No special notation is needed to override super class functions in ruby",
+      "name": "Overriding a superclass function"
     },
     "instantiating_object": {
-      "code": "class Car\nend\n\ncar = Car.new"
+      "code": "class Car\nend\n\ncar = Car.new",
+      "name": "Instantiating a new object"
     },
     "implement_constructor": {
-      "code": "class Car\n  def initialize\n    # create new instance\n  end\nend"
+      "code": "class Car\n  def initialize\n    # create new instance\n  end\nend",
+      "name": "Implementing a class constructor"
     }
   }
 }

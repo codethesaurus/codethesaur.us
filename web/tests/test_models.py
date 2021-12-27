@@ -17,11 +17,26 @@ class TestMetaStructures(TestCase):
         self.data_structures = json.loads(meta_data)["structures"]
         self.languages = json.loads(meta_data)["languages"]
 
-        self.sample_friendly_name = list(self.data_structures.keys())[0]
-        self.sample_structure_id = \
-            self.data_structures[self.sample_friendly_name]
-        self.sample_language_name = list(self.languages.keys())[0]
-        self.sample_language_id = self.languages[self.sample_language_name]
+        self.sample = {}
+        self.sample["structure_id"] = list(self.data_structures.keys())[0]
+        self.sample["friendly_name"] = self.data_structures[self.sample["structure_id"]]
+        self.sample["language_id"] = list(self.languages.keys())[0]
+        self.sample["language_name"] = self.languages[self.sample["language_id"]]
+
+        # generate a dummy language
+        language_id = "abcdefg"
+        language_name = "Alphabet language!"
+        concepts = {
+            "concept1": {"code": "abc"},
+            "concept2": {"code": "abc", "comment": "My comment"},
+            "concept3": {"not-implemented": "true"},
+            "concept4": {"code": ["line1", "line2"]}
+        }
+        language = Language(language_id, language_name)
+
+        # This is like the manual work of calling language.load_structure()
+        language.concepts = concepts
+        self.dummy_language = language
 
     def test_metainfo_structure(self):
         """test MetaInfo creation"""
@@ -30,37 +45,33 @@ class TestMetaStructures(TestCase):
     def test_metainfo_structure_friendly_name(self):
         """test MetaInfo#friendly_name"""
         test_key = self.metainfo.structure_friendly_name(
-            self.sample_structure_id)
+            self.sample["structure_id"])
 
-        self.assertEqual(test_key, self.sample_friendly_name)
+        self.assertEqual(test_key, self.sample["friendly_name"])
 
     def test_metastructure_init(self):
         """test MetaStructure creation"""
         metastructure = MetaStructure(
-            self.sample_structure_id, self.sample_friendly_name)
+            self.sample["structure_id"], self.sample["friendly_name"])
 
         self.assertIsNotNone(metastructure.categories)
-        self.assertIsNotNone(metastructure.concepts)
 
     def test_language_init(self):
         """test Language creation"""
-        language = Language(self.sample_language_id)
+        language = Language(self.sample["language_id"], self.sample["language_name"])
 
         self.assertIsNotNone(language)
         self.assertIsNotNone(language.key)
-        self.assertIsNone(language.friendly_name)
         self.assertIsNone(language.concepts)
 
     def test_language_bad_key_and_lang_exists(self):
         """test Language behaviour with bad language key"""
-        bad_language_id = "abcdefg"
-        language = Language(bad_language_id)
+        language = self.dummy_language
 
-        self.assertEqual(language.lang_exists(), False)
+        self.assertEqual(bool(language), False)
         self.assertRaises(FileNotFoundError,
-                          language.load_structure, bad_language_id)
+                          language.load_concepts,  "notastructure")
 
-        self.assertEqual(language.has_key(), True)
 
     # Commented out as the function *technically* works, but it can't
     # ensure that the sample concept and language actually exist. So
@@ -68,34 +79,23 @@ class TestMetaStructures(TestCase):
 
     # def test_language_has_key_and_lang_exists(self):
     #     """test Language behaviour with good key and existing structure"""
-    #     language = Language(self.sample_language_id)
+    #     language = Language(self.sample["language_id"])
     #
     #     self.assertEqual(language.has_key(), True)
     #     self.assertEqual(language.lang_exists(), True)
     #
-    #     language.load_structure(self.sample_structure_id)
+    #     language.load_structure(self.sample["structure_id"])
     #     self.assertEqual(language.has_key(), True)
 
     def test_language_get_concept(self):
         """test concept retrieval of a Language"""
-        language_id = "abcdefg"
-        language_friendly_name = "Alphabet language!"
-
-        concepts = json.loads(
-            "{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
-
-        language = Language(language_id)
-
-        # This is like the manual work of calling language.load_structure()
-        language.friendly_name = language_friendly_name
-        language.concepts = concepts
-
-        # 	# Test unknown concept
+        language = self.dummy_language
+        # Test unknown concept
         self.assertEqual(language.concept("12345"), dict({
             "code": "",
             "comment": ""
         }))
-        # 	# Test known concept
+        # Test known concept
         self.assertEqual(language.concept("concept1"), dict({"code": "abc"}))
         self.assertEqual(language.concept("concept2"), dict(
             {"code": "abc", "comment": "My comment"}))
@@ -106,17 +106,8 @@ class TestMetaStructures(TestCase):
 
     def test_language_concept_unknown(self):
         """test unknown concepts"""
-        language_id = "abcdefg"
-        langauge_friendly_name = "Alphabet language!"
 
-        concepts = json.loads(
-            "{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
-
-        language = Language(language_id)
-
-        # This is like the manual work of calling language.load_structure()
-        language.friendly_name = langauge_friendly_name
-        language.concepts = concepts
+        language = self.dummy_language
 
         # Test unknown concept
         self.assertEqual(language.concept_unknown("12345"), True)
@@ -128,17 +119,7 @@ class TestMetaStructures(TestCase):
 
     def test_language_concept_implemented(self):
         """test Language#concept_implemented"""
-        language_id = "abcdefg"
-        langauge_friendly_name = "Alphabet language!"
-
-        concepts = json.loads(
-            "{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
-
-        language = Language(language_id)
-
-        # This is like the manual work of calling language.load_structure()
-        language.friendly_name = langauge_friendly_name
-        language.concepts = concepts
+        language = self.dummy_language
 
         # Test unknown concept
         self.assertEqual(language.concept_implemented(
@@ -152,17 +133,7 @@ class TestMetaStructures(TestCase):
 
     def test_language_get_concept_code(self):
         """test Language#get_concept_code"""
-        language_id = "abcdefg"
-        langauge_friendly_name = "Alphabet language!"
-
-        concepts = json.loads(
-            "{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
-
-        language = Language(language_id)
-
-        # This is like the manual work of calling language.load_structure()
-        language.friendly_name = langauge_friendly_name
-        language.concepts = concepts
+        language = self.dummy_language
 
         # Test unknown concept
         self.assertEqual(language.concept_code("12345"), "")
@@ -175,17 +146,7 @@ class TestMetaStructures(TestCase):
 
     def test_language_get_concept_comment(self):
         """test Language#get_concept_comment"""
-        language_id = "abcdefg"
-        langauge_friendly_name = "Alphabet language!"
-
-        concepts = json.loads(
-            "{\"concept1\": {\"code\": \"abc\"},\"concept2\": {\"code\": \"abc\",\"comment\": \"My comment\"},\"concept3\":{\"not-implemented\": \"true\"},\"concept4\":{\"code\":[\"line1\",\"line2\"]}}")
-
-        language = Language(language_id)
-
-        # This is like the manual work of calling language.load_structure()
-        language.friendly_name = langauge_friendly_name
-        language.concepts = concepts
+        language = self.dummy_language
 
         # Test unknown concept
         self.assertEqual(language.concept_comment("12345"), "")
