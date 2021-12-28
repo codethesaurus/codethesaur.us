@@ -1,6 +1,6 @@
 """Generator functions for thesaurus files"""
 import json
-from web.MetaInfo import MetaInfo
+from web.models import MetaInfo
 
 
 def generate_language_template(language_id, structure_id, version=None):
