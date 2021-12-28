@@ -3,7 +3,7 @@ import json
 
 from django.test import TestCase
 
-from web.models import Language, MetaInfo, MetaStructure
+from web.models import Language, MetaInfo, MetaStructure, StructureFileNotFound
 
 
 class TestMetaStructures(TestCase):
@@ -13,13 +13,13 @@ class TestMetaStructures(TestCase):
         """prepare sample data for the tests"""
         self.metainfo = MetaInfo()
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-            meta_data = meta_file.read()
-        self.data_structures = json.loads(meta_data)["structures"]
-        self.languages = json.loads(meta_data)["languages"]
+            meta_data = json.load(meta_file)
+        self.structures = meta_data["structures"]
+        self.languages = meta_data["languages"]
 
-        self.sample = {}
-        self.sample["structure_id"] = list(self.data_structures.keys())[0]
-        self.sample["friendly_name"] = self.data_structures[self.sample["structure_id"]]
+        self.sample = dict()
+        self.sample["structure_id"] = list(self.structures.keys())[0]
+        self.sample["friendly_name"] = self.structures[self.sample["structure_id"]]
         self.sample["language_id"] = list(self.languages.keys())[0]
         self.sample["language_name"] = self.languages[self.sample["language_id"]]
 
@@ -62,14 +62,14 @@ class TestMetaStructures(TestCase):
 
         self.assertIsNotNone(language)
         self.assertIsNotNone(language.key)
-        self.assertIsNone(language.concepts)
+        self.assertEqual(language.concepts, dict())
 
     def test_language_bad_key_and_lang_exists(self):
         """test Language behaviour with bad language key"""
         language = self.dummy_language
 
         self.assertEqual(bool(language), False)
-        self.assertRaises(FileNotFoundError,
+        self.assertRaises(StructureFileNotFound,
                           language.load_concepts,  "notastructure")
 
 

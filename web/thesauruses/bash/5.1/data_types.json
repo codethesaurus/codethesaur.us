@@ -1,8 +1,8 @@
 {
   "meta": {
     "language": "bash",
-    "language_version": "bash-5.1",
-    "language_name": "BASH",
+    "language_version": "5.1",
+    "language_name": "Bash",
     "structure": "data_types"
   },
   "concepts": {

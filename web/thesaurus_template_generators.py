@@ -6,12 +6,12 @@ from web.models import MetaInfo
 def generate_language_template(language_id, structure_id, version=None):
     """Generate a template for the given language and structure"""
     meta_info = MetaInfo()
-    if structure_id not in meta_info.data_structures:
+    if structure_id not in meta_info.structures:
         raise ValueError
     language_name = meta_info.languages.get(
         language_id,
-        {'name': 'Human-Readable Language Name'}
-    )['name']
+        'Human-Readable Language Name'
+    )
     meta = {
         'language': language_id,
         'language_name': language_name,

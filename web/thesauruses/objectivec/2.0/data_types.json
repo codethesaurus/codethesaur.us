@@ -1,14 +1,14 @@
 {
   "meta": {
-    "language": "javascript",
-    "language_version": "EC2021",
-    "language_name": "JavaScript",
+    "language": "language_id",
+    "language_version": "2.0",
+    "language_name": "Objective-C",
     "structure": "data_types"
   },
   "concepts": {
     "boolean": {
-      "code": "Boolean",
-      "comment": "The type is an object wrapper for the boolean primitive data type",
+      "code": "BOOL",
+      "comment": "As opposed to true and false, Objective-C stores boolean values as YES and NO, respectively.",
       "name": "Boolean"
     },
     "signed_integer_8_bit": {
@@ -20,32 +20,38 @@
       "name": "Unsigned 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "not-implemented": true,
+      "code": "short int",
+      "comment": "Signed short integers range from -32768 to 32767.",
       "name": "Signed 16-bit integer"
     },
     "unsigned_integer_16_bit": {
-      "not-implemented": true,
+      "code": "unsigned short int",
+      "comment": "Unsigned short integers range from 0 to 65535.",
       "name": "Unsigned 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "not-implemented": true,
+      "code": "int",
+      "comment": "Integers range from -2147483648 to 2147483647.",
       "name": "Signed 32-bit integer"
     },
     "unsigned_integer_32_bit": {
-      "not-implemented": true,
+      "code": "unsigned int",
+      "comment": "Unsigned integers range from 0 to 4294967295.",
       "name": "Unsigned 32-bit integer"
     },
     "signed_integer_64_bit": {
-      "not-implemented": true,
+      "code": "long int",
+      "comment": "Long integers range from -9223372036854775808 to 9223372036854775807.",
       "name": "Signed 64-bit integer"
     },
     "unsigned_integer_64_bit": {
-      "not-implemented": true,
+      "code": "unsigned long int",
+      "comment": "Unsigned long integers range from 0 to 18446744073709551615.",
       "name": "Unsigned 64-bit integer"
     },
     "signed_integer_as_object": {
-      "code": "BigInt",
-      "comment": "The type is an object wrapper for the bigint primitive data type",
+      "code": "NSNumber",
+      "comment": "NSNumber can store any integer, float, or double. However, it is not commonly used to store floats or doubles because it has a subclass called NSDecimalNumber, which is more precise.",
       "name": "Signed object-based Integer"
     },
     "unsigned_integer_as_object": {
@@ -61,7 +67,8 @@
       "name": "Unsigned 16-bit floating point"
     },
     "signed_float_32_bit": {
-      "not-implemented": true,
+      "code": "float",
+      "comment": "Floats in Objective-C are precise up to 7 digits.",
       "name": "Signed 32-bit floating point"
     },
     "unsigned_float_32_bit": {
@@ -69,8 +76,8 @@
       "name": "Unsigned 32-bit floating point"
     },
     "signed_float_64_bit": {
-      "code": "Number",
-      "comment": "The Number wrapper object is represented by a double-precision 64-bit float under the hood. All the 'Not-a-Number' values in the IEEE Standard specification are clubbed into a single special NaN value in javascript.",
+      "code": "double",
+      "comment": "Doubles in Objective-C are precise up to 15 digits.",
       "name": "Signed 64-bit floating point"
     },
     "unsigned_float_64_bit": {
@@ -78,8 +85,8 @@
       "name": "Unsigned 64-bit floating point"
     },
     "signed_float_as_object": {
-      "code": "Number",
-      "comment": "The type is an object wrapper for the number primitive data type",
+      "code": "NSDecimalNumber",
+      "comment": "NSDecimalNumber is often used in situations when precision is key, such as storing a user's bank balance.",
       "name": "Signed object-based floating point"
     },
     "unsigned_float_as_object": {
@@ -87,17 +94,18 @@
       "name": "Unsigned object-based floating point"
     },
     "character": {
-      "not-implemented": true,
+      "code": "char",
+      "comment": "Using %c to output the character value and %i to output the ASCII value.",
       "name": "Character"
     },
     "string_as_object": {
-      "code": "String",
-      "comment": "The type is an object wrapper for the string primitive data type",
+      "code": "NSString",
+      "comment": "NSString is immutable, however, Objective-C has a mutable string object called NSMutableString",
       "name": "String as an object"
     },
     "string_as_array": {
-      "code": "String",
-      "comment": "String is implemented as a set of ordered sequences of zero or more 16-bit unsigned integer values (each treated as UTF-16 code unit). String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods",
+      "code": "NSString",
+      "comment": "NSString is built on the C version of strings, which are arrays of characters. When using an NSString, you can use index notation to access specific characters.",
       "name": "String as an array of characters"
     },
     "complex_as_object": {
