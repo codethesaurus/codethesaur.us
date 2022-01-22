@@ -4,13 +4,7 @@ a {
   color: #304ffe;
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
 .navbar-nav {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
