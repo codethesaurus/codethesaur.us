@@ -2,80 +2,73 @@
   "meta": {
     "language": "ruby",
     "language_version": "3.0",
-    "language_name": "Ruby"
+    "language_name": "Ruby",
+    "structure": "control_structures"
   },
-  "categories": {
-    "Conditional Statements (ifs)": [
-      "if_conditional",
-      "if_else_conditional",
-      "if_elseif_conditional",
-      "if_elseif_else_conditional",
-      "ternary_conditional"
-    ],
-    "Loops": [
-      "while_loop",
-      "do_while_loop",
-      "until_loop",
-      "do_until_loop",
-      "for_loop",
-      "foreach_loop"
-    ],
-    "Iterations": [
-      "each_iteration",
-      "map_iteration",
-      "filter_iteration",
-      "fold_iteration"
-    ]
-  },
-  "control_structures": {
+  "concepts": {
     "if_conditional": {
       "code": "if (true)\n  expression\nend",
-      "comments": "The parenthesis around the conditional are optional."
+      "comments": "The parenthesis around the conditional are optional.",
+      "name": "If conditional"
     },
     "if_else_conditional": {
-      "code": "if true\n  expressions\nelse\n  expressions\nend"
+      "code": "if true\n  expressions\nelse\n  expressions\nend",
+      "name": "If/Else conditional"
     },
     "if_elseif_conditional": {
-      "code": "if true\n  expressions\nelsif true\n  expressions\nend"
+      "code": "if true\n  expressions\nelsif true\n  expressions\nend",
+      "name": "If/ElseIf conditional"
     },
     "if_elseif_else_conditional": {
-      "code": "if condition\n  expressions\nelsif condition\n  expressions\nelse\n  expressionss\nend"
+      "code": "if condition\n  expressions\nelsif condition\n  expressions\nelse\n  expressionss\nend",
+      "name": "If/ElseIf/Else conditional"
     },
     "ternary_conditional": {
-      "code": "conditional ? true : false"
+      "code": "conditional ? true : false",
+      "name": "Ternary conditional"
     },
     "while_loop": {
-      "code": "while conditional\n  expressions\nend"
+      "code": "while conditional\n  expressions\nend",
+      "name": "While loop"
     },
     "do_while_loop": {
-      "code": "loop do\n  expressions\n  break unless conditional\nend"
+      "code": "loop do\n  expressions\n  break unless conditional\nend",
+      "name": "Do/While loop"
     },
     "until_loop": {
-      "code": "until conditional\n  expressions\nend"
+      "code": "until conditional\n  expressions\nend",
+      "name": "Until loop"
     },
     "do_until_loop": {
-      "code": "loop do\n  expressions\n  break if conditional\nend"
+      "code": "loop do\n  expressions\n  break if conditional\nend",
+      "name": "Do/Until loop"
     },
     "for_loop": {
       "code": "for i in (0...5) do |i|\n  expressions\nend",
-      "comment": "`.each` is preferred. For is not normally used."
+      "comment": "`.each` is preferred. For is not normally used.",
+      "name": "For loop"
     },
     "foreach_loop": {
       "code": "for i in arr do\n  puts i\nend",
-      "comment": "`.each` is preferred. For is not normally used."
+      "comment": "`.each` is preferred. For is not normally used.",
+      "name": "Foreach loop"
     },
     "each_iteration": {
-      "code": "[].each do |item|\n  expressions\nend\n# or...\n[].each_with_index do |item, index|\n  expressions\nend"
+      "code": "[].each do |item|\n  expressions\nend\n# or...\n[].each_with_index do |item, index|\n  expressions\nend",
+      "name": "Each iteration"
     },
     "map_iteration": {
-      "code": "[].map(&:magic!)\n# OR...\n[].map do |item|\n  item.magic!\nend\n# OR...\n[].map { |item| item.magic! }"
+      "code": "[].map(&:magic!)\n# OR...\n[].map do |item|\n  item.magic!\nend\n# OR...\n[].map { |item| item.magic! }",
+      "name": "Map iteration"
     },
     "filter_iteration": {
-      "code": "[].select { |item| condition }"
+      "code": "[].select { |item| condition }",
+      "name": "Filter iteration"
     },
     "fold_iteration": {
       "code": "[].reduce(:+)",
-      "comment": "Inject and reduce handle this."
+      "comment": "Inject and reduce handle this.",
+      "name": "Fold iteration"
     }
   }
 }

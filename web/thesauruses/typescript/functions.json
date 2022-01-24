@@ -2,67 +2,58 @@
   "meta": {
     "language": "typescript",
     "language_version": "4.2",
-    "language_name": "TypeScript"
+    "language_name": "TypeScript",
+    "structure": "functions"
   },
-  "categories": {
-    "Void Functions": [
-      "void_function_no_parameters",
-      "void_function_with_parameters",
-      "void_function_variable_parameters"
-    ],
-    "Return Value Functions": [
-      "return_value_function_no_parameters",
-      "return_value_function_with_parameters",
-      "return_value_function_variable_parameters"
-    ],
-    "Lambda/Anonymous Functions": [
-      "anonymous_function_no_parameters",
-      "anonymous_function_with_parameters",
-      "anonymous_function_variable_parameters"
-    ],
-    "Subroutines": [
-      "call_subroutine",
-      "return_from_subroutine"
-    ]
-  },
-  "functions": {
+  "concepts": {
     "void_function_no_parameters": {
-      "code": "const fn: () => void = () => {\n    statements;\n}\n// Within a class this can be\nclass MyClass {\n    fn(): void {\n        statements;\n    }\n}"
+      "code": "const fn: () => void = () => {\n    statements;\n}\n// Within a class this can be\nclass MyClass {\n    fn(): void {\n        statements;\n    }\n}",
+      "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
-      "code": "const fn: (s: string, n: number) => void =\n(s: string, n: number) => {\n    statements;\n}\n// Within a class this can be\nclass MyClass {\n    fn(s: string, n: number): void {\n        /* do stuff*/\n    }\n}"
+      "code": "const fn: (s: string, n: number) => void =\n(s: string, n: number) => {\n    statements;\n}\n// Within a class this can be\nclass MyClass {\n    fn(s: string, n: number): void {\n        /* do stuff*/\n    }\n}",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_variable_parameters": {
       "code": "fn(s: string, n: number, ...others: any[]): void {\n    statements;\n}",
-      "comment": "This is the syntax for defining a class method which is used here for better readability. The `others` parameter is provided as an array to the function code."
+      "comment": "This is the syntax for defining a class method which is used here for better readability. The `others` parameter is provided as an array to the function code.",
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "return_value_function_no_parameters": {
-      "code": "fn(): number {\n    return 42;\n}"
+      "code": "fn(): number {\n    return 42;\n}",
+      "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
       "code": "fn(s: string, n: number): {name: string, age: number} {\n    return { name: s, age: n }\n}",
-      "comment": "In TypeScript it's important to note the similarity between the `prop: type` notation in a type definition and the `prop: value` notation in an object literal, such as the one being returned in this example."
+      "comment": "In TypeScript it's important to note the similarity between the `prop: type` notation in a type definition and the `prop: value` notation in an object literal, such as the one being returned in this example.",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "return_value_function_variable_parameters": {
       "code": "sum(...nums: number[]): number {\n    return nums.reduce((a, b) => a + b, 0);\n}",
-      "comment": "The method in this example returns the sum of all values provided. Can be called like `sum(1, 13, 43, 15)` which would return 72."
+      "comment": "The method in this example returns the sum of all values provided. Can be called like `sum(1, 13, 43, 15)` which would return 72.",
+      "name": "Function that returns a value and takes an unknown number of parameters"
     },
     "anonymous_function_no_parameters": {
-      "code": "() => { statements; }"
+      "code": "() => { statements; }",
+      "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
       "code": "(name: string, age: number) => ({name, age})",
-      "comment": "This method returns an object literal containing `name` and `age` properties."
+      "comment": "This method returns an object literal containing `name` and `age` properties.",
+      "name": "Anonymous function that takes 1 or more defined parameters"
     },
     "anonymous_function_variable_parameters": {
       "code": "(...params: string[]): void => {\n    statements;\n}",
-      "comment": "The parameter can be any name and any type of array."
+      "comment": "The parameter can be any name and any type of array.",
+      "name": "Anonymous function that takes an unknown number of parameters"
     },
     "call_subroutine": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Call subroutine"
     },
     "return_from_subroutine": {
-      "not-implemented": true
+      "not-implemented": true,
+      "name": "Return from subroutine"
     }
   }
 }

@@ -2,61 +2,52 @@
   "meta": {
     "language": "ada",
     "language_version": "2012",
-    "language_name": "Ada"
+    "language_name": "Ada",
+    "structure": "data_types"
   },
-  "categories": {
-    "Numerical": [
-      "boolean",
-      "signed_integer_8_bit",
-      "signed_integer_as_object",
-      "signed_float_16_bit",
-      "signed_float_32_bit",
-      "signed_float_64_bit",
-      "signed_float_as_object"
-    ],
-    "Characters and Strings": [
-      "character",
-      "string_as_array"
-    ],
-    "Complex Numbers": [
-      "complex_as_object",
-      "real_number_part",
-      "imaginary_number_part"
-    ]
-  },
-  "data_types": {
+  "concepts": {
     "boolean": {
-      "code": "boolean"
+      "code": "boolean",
+      "name": "Boolean"
     },
     "signed_integer_8_bit": {
       "comment": "In Ada you can define your own integer types by declaring it like this with a range, the compiler then chooses a representation that can hold all desired values.",
-      "code": "type My_Int is range -128 .. 127;"
+      "code": "type My_Int is range -128 .. 127;",
+      "name": "Signed 8-bit integer"
     },
     "signed_integer_as_object": {
-      "code": "Integer"
+      "code": "Integer",
+      "name": "Signed object-based Integer"
     },
     "signed_float_64_bit": {
       "comment": "Like with integers Ada let's you create your own floating point types as well by specifying the desired amount of decimal digits",
-      "code": "type My_Float is digits 15;"
+      "code": "type My_Float is digits 15;",
+      "name": "Signed 64-bit floating point"
     },
     "signed_float_as_object": {
-      "code": "Float"
+      "code": "Float",
+      "name": "Signed object-based floating point"
     },
     "character": {
-      "code": "Character"
+      "code": "Character",
+      "name": "Character"
     },
     "string_as_array": {
-      "code": "String"
+      "code": "String",
+      "name": "String as an array of characters"
     },
     "complex_as_object": {
       "comment": "Ada's Complex type is found in the library `Ada.Numerics.Generic_Complex_Types`",
-      "code": "Complex"
+      "code": "Complex",
+      "name": "Complex Number as an object"
     },
     "real_number_part": {
-      "code": "Re (Complex_Number);"
+      "code": "Re (Complex_Number);",
+      "name": "Complex number real part"
     },
     "imaginary_number_part": {
-      "code": "Im (Complex_Number);"
+      "code": "Im (Complex_Number);",
+      "name": "Complex number imaginary part"
     }
   }
 }
