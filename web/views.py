@@ -1,21 +1,27 @@
+"""codethesaur.us views"""
 import json
 import random
 
-from django.http import HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound, HttpResponseServerError
+from django.http import (
+    HttpResponseBadRequest,
+    HttpResponseForbidden,
+    HttpResponseNotFound,
+    HttpResponseServerError
+)
 from django.shortcuts import render
 from django.utils.html import escape, strip_tags
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 
-from web.Language import Language
-from web.MetaInfo import MetaInfo
+from web.models import Language, MetaInfo
 from web.thesaurus_template_generators import generate_language_template
 
 
 def index(request):
     """
     Renders the home page (/)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -44,6 +50,7 @@ def index(request):
 def about(request):
     """
     Renders the about page (/about)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -54,9 +61,12 @@ def about(request):
     return render(request, 'about.html', content)
 
 
+# pylint: disable=too-many-branches
+# pylint: disable=too-many-return-statements
 def compare(request):
     """
     Renders the page comparing two language structures (/compare)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -83,7 +93,7 @@ def compare(request):
     try:
         metainfo = MetaInfo()
         meta_structure = metainfo.structure(structure_query_string)
-    except (FileNotFoundError):
+    except FileNotFoundError:
         error_page_data = {
             "errors": ["The structure/concept isn't valid. Double-check your URL and try again."]
         }
@@ -95,7 +105,7 @@ def compare(request):
         lang1 = Language(
             lang1_string, metainfo.language_friendly_name(lang1_string))
         lang1.load_concepts(meta_structure.key)
-    except (FileNotFoundError):
+    except FileNotFoundError:
         response = render(request, "error_missing_structure.html", {
             "name": meta_structure.friendly_name,
             "lang": lang1_string,
@@ -106,7 +116,7 @@ def compare(request):
             )
         })
         return HttpResponseNotFound(response)
-    except (KeyError):
+    except KeyError:
         error_page_data = {
             "errors": [f"The first language ({lang1_string}) isn't valid. \
                 Double-check your URL and try again."]
@@ -118,7 +128,7 @@ def compare(request):
         lang2 = Language(
             lang2_string, metainfo.language_friendly_name(lang2_string))
         lang2.load_concepts(meta_structure.key)
-    except (FileNotFoundError):
+    except FileNotFoundError:
         response = render(request, "error_missing_structure.html", {
             "name": meta_structure.friendly_name,
             "lang": lang2_string,
@@ -129,7 +139,7 @@ def compare(request):
             )
         })
         return HttpResponseNotFound(response)
-    except (KeyError):
+    except KeyError:
         error_page_data = {
             "errors": [f"The second language ({lang2_string}) isn't valid. \
                 Double-check your URL and try again."]
@@ -149,7 +159,7 @@ def compare(request):
         })
 
     response = {
-        "title": "Comparing " + lang1.friendly_name + " and " + lang2.friendly_name,
+        "title": f"Comparing {lang1.friendly_name} and {lang2.friendly_name}",
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
         "lang1": lang1.key,
@@ -157,7 +167,8 @@ def compare(request):
         "lang1_friendlyname": lang1.friendly_name,
         "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
-        "description": f"Code Thesaurus: Comparing {lang1.friendly_name} and {lang2.friendly_name}"
+        "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
+                and {lang2.friendly_name}"
     }
 
     return render(request, 'compare.html', response)
@@ -166,6 +177,7 @@ def compare(request):
 def reference(request):
     """
     Renders the page showing one language structure for reference (/reference)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -188,7 +200,7 @@ def reference(request):
     try:
         metainfo = MetaInfo()
         meta_structure = metainfo.structure(structure_query_string)
-    except (FileNotFoundError):
+    except FileNotFoundError:
         error_page_data = {
             "errors": ["The structure/concept isn't valid. Double-check your URL and try again."]
         }
@@ -200,7 +212,7 @@ def reference(request):
         lang = Language(
             lang_string, metainfo.language_friendly_name(lang_string))
         lang.load_concepts(meta_structure.key)
-    except (FileNotFoundError):
+    except FileNotFoundError:
         ctx = {
             "name": meta_structure.friendly_name,
             "lang": lang_string,
@@ -212,7 +224,7 @@ def reference(request):
         }
         response = render(request, "error_missing_structure.html", ctx)
         return HttpResponseNotFound(response)
-    except (KeyError):
+    except KeyError:
         error_page_data = {
             "errors": [f"The language ({lang_string}) isn't valid. \
                         Double-check your URL and try again."]
@@ -231,22 +243,22 @@ def reference(request):
         })
 
     response = {
-        "title": "Reference for " + lang.key,
+        "title": f"Reference for {lang.key}",
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
         "lang": lang.key,
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
-        "description": "Code Thesaurus: Reference for " + lang.key
+        "description": f"Code Thesaurus: Reference for {lang.key}"
     }
 
     return render(request, 'reference.html', response)
 
 
-# pylint: disable=unused-argument
-def error_handler_400_bad_request(request, exception):
+def error_handler_400_bad_request(request, _exception):
     """
     Renders the page for a generic client error (HTTP 400)
+
     :param request: HttpRequest object
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
@@ -255,10 +267,10 @@ def error_handler_400_bad_request(request, exception):
     return HttpResponseBadRequest(response)
 
 
-# pylint: disable=unused-argument
-def error_handler_403_forbidden(request, exception):
+def error_handler_403_forbidden(request, _exception):
     """
     Renders the page for a forbidden error (HTTP 403)
+
     :param request: HttpRequest object
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
@@ -267,10 +279,10 @@ def error_handler_403_forbidden(request, exception):
     return HttpResponseForbidden(response)
 
 
-# pylint: disable=unused-argument
-def error_handler_404_not_found(request, exception):
+def error_handler_404_not_found(request, _exception):
     """
     Renders the page for a file not found error (HTTP 404)
+
     :param request: HttpRequest object
     :param exception: details about the exception
     :return: HttpResponse object with rendered object of the page
@@ -282,6 +294,7 @@ def error_handler_404_not_found(request, exception):
 def error_handler_500_server_error(request):
     """
     Renders the page for a generic server error (HTTP 500)
+
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
@@ -292,7 +305,9 @@ def error_handler_500_server_error(request):
 # Helper functions
 def format_code_for_display(concept_key, lang):
     """
-    Returns the formatted HTML formatted syntax-highlighted text for a concept key (from a meta language file) and a language
+    Returns the formatted HTML formatted syntax-highlighted text for a concept key (from a meta
+            language file) and a language
+
     :param concept_key: name of the key to format
     :param lang: language to format it (in meta language/syntax highlighter format)
     :return: string with code with applied HTML formatting
@@ -310,7 +325,9 @@ def format_code_for_display(concept_key, lang):
 
 def format_comment_for_display(concept_key, lang):
     """
-    Returns the formatted HTML formatted comment text for a concept key (from a meta language file) and a language
+    Returns the formatted HTML formatted comment text for a concept key (from a meta language
+            file) and a language
+
     :param concept_key: the concept key located in the meta language JSON file
     :param lang: the ID of the language to fetch concept key from
     :return: formatted HTML for the comment
@@ -320,9 +337,10 @@ def format_comment_for_display(concept_key, lang):
     return lang.concept_comment(concept_key)
 
 
-def concept_comparision(id, name, lang1, lang2):
+def concept_comparision(concept_id, name, lang1, lang2):
     """
     Generates the comparision object of a single concept
+
     :param id: id of the concept
     :param name: name of the concept
     :param lang1: first language to compare
@@ -330,26 +348,27 @@ def concept_comparision(id, name, lang1, lang2):
     :return: string with code with applied HTML formatting
     """
     return {
-        "id": id,
+        "id": concept_id,
         "name": name,
-        "code1": format_code_for_display(id, lang1),
-        "code2": format_code_for_display(id, lang2),
-        "comment1": format_comment_for_display(id, lang1),
-        "comment2": format_comment_for_display(id, lang2)
+        "code1": format_code_for_display(concept_id, lang1),
+        "code2": format_code_for_display(concept_id, lang2),
+        "comment1": format_comment_for_display(concept_id, lang1),
+        "comment2": format_comment_for_display(concept_id, lang2)
     }
 
 
-def concept_reference(id, name, lang):
+def concept_reference(concept_id, name, lang):
     """
     Generates the reference object of a single concept
+
     :param id: id of the concept
     :param name: name of the concept
     :param lang: language to get the reference for
     :return: string with code with applied HTML formatting
     """
     return {
-        "id": id,
+        "id": concept_id,
         "name": name,
-        "code": format_code_for_display(id, lang),
-        "comment": format_comment_for_display(id, lang)
+        "code": format_code_for_display(concept_id, lang),
+        "comment": format_comment_for_display(concept_id, lang)
     }

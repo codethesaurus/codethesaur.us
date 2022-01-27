@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "language": "nim",
+    "language_version": "1.6",
+    "language_name": "Nim"
+  },
+  "categories": {
+    "Imports": [
+      "statement_to_import_exception_handling"
+    ],
+    "Defining Errors/Exceptions": [
+      "are_exception_types_functions",
+      "are_exception_types_objects",
+      "are_exception_types_gotos",
+      "base_exception_type",
+      "define_new_exception_type"
+    ],
+    "Error Capture Blocks": [
+      "try_or_operator",
+      "statement_to_start_trying_code",
+      "statement_to_start_catching_exceptions",
+      "statement_to_catch_generic_exception",
+      "statement_to_catch_specific_exception",
+      "statement_to_catch_multiple_exceptions",
+      "statement_to_break_out_if_caught_exception",
+      "statement_to_stop_program_if_caught_exception",
+      "statement_to_start_code_if_no_exceptions_caught",
+      "statement_to_start_cleaning_up_after_exception",
+      "order_to_call_all_statements",
+      "statement_to_end_trying_code",
+      "property_with_exception_code",
+      "property_with_exception_message",
+      "property_with_stack_trace",
+      "property_containing_other_info"
+    ],
+    "Manually Throwing exceptions": [
+      "throw_generic_exception",
+      "throw_exception_as_text",
+      "throw_specific_exception_type"
+    ],
+    "Data Type Errors/Exceptions": [
+      "base_data_type_exception_type",
+      "invalid_data_type_exception_type",
+      "variable_not_found_exception_type",
+      "object_not_found_exception_type",
+      "index_out_of_bounds_exception_type",
+      "key_name_not_found_exception_type",
+      "invalid_encoding_exception_type"
+    ],
+    "Mathematical Errors/Exceptions": [
+      "base_mathematical_exception_type",
+      "overflow_exception_type",
+      "floating_point_exception_type",
+      "divide_by_zero_exception_type",
+      "cannot_cast_types_exception_type"
+    ],
+    "Memory Errors/Exceptions": [
+      "base_memory_exception_type",
+      "cannot_allocate_memory_exception_type",
+      "out_of_memory_exception_type",
+      "stack_overflow_exception_type",
+      "cannot_access_pointer_exception_type"
+    ],
+    "File Input/Output Errors/Exceptions": [
+      "base_file_exception_type",
+      "end_of_file_exception_type",
+      "file_does_not_exist_exception_type",
+      "file_already_exists_exception_type",
+      "item_is_actually_directory_exception_type",
+      "item_is_not_a_directory_exception_type",
+      "cannot_access_file_exception_type",
+      "drive_disconnected_exception_type",
+      "file_no_longer_available_exception_type",
+      "file_timeout_exception"
+    ],
+    "Network Input/Output Errors/Exceptions": [
+      "base_network_exception_type",
+      "connection_refused_exception_type",
+      "connection_broken_exception_type",
+      "invalid_hostname_exception",
+      "cannot_establish_connection_exception_type",
+      "connection_timed_out_exception_type",
+      "bad_certificate_exception_type",
+      "expired_certificate_exception_type"
+    ],
+    "Operating System Errors/Exceptions": [
+      "child_process_could_not_be_created_exception_type",
+      "child_process_unexpected_ending_exception_type",
+      "process_not_found_exception_type"
+
+    ],
+    "Other Errors/Exception Types": [
+      "import_not_found_exception_type",
+      "keyboard_interrupt_exception_type",
+      "syntax_exception_type",
+      "uncaught_signal_exception_type"
+    ],
+    "Warnings": [
+      "base_warning_type",
+      "deprecation_warning_type"
+    ]
+  },
+  "exception_handling": {
+    "statement_to_import_exception_handling": {
+      "not-implemented": "true"
+    },
+    "are_exception_types_functions": {
+      "code": "No"
+    },
+    "are_exception_types_objects": {
+      "code": "Yes"
+    },
+    "are_exception_types_gotos": {
+      "code": "No"
+    },
+    "base_exception_type": {
+      "code": "system.Exception"
+    },
+    "define_new_exception_type": {
+      "code": "type CustomException = object of Defect"
+    },
+    "try_or_operator": {
+      "not-implemented": "true"
+    },
+    "statement_to_start_trying_code": {
+      "code": "try: statements"
+    },
+    "statement_to_start_catching_exceptions": {
+      "code": "except CustomException: statements",
+      "comment": "instead of \"CustomException\" use respective Exception's type you want to catch"
+    },
+    "statement_to_catch_generic_exception": {
+      "code": "except Exception: statements"
+    },
+    "statement_to_catch_specific_exception": {
+      "code": "except CustomException:\n    statements",
+      "comment": "instead of \"CustomException\" use respective Exception's type you want to catch"
+    },
+    "statement_to_catch_multiple_exceptions": {
+      "code": "except (ExceptionType1, ExceptionType2, ExceptionType3): statements",
+      "comment": "instead of \"ExceptionType1\",\"ExceptionType2\",\"ExceptionType3\" use respective Exception's type you want to catch. You can put as many Exception class names separated by commas as you want."
+    },
+    "statement_to_break_out_if_caught_exception": {
+      "code": "break"
+    },
+    "statement_to_stop_program_if_caught_exception": {
+      "code": "quit",
+      "comment": "Exception hierarchy defines CatchableError and Defect, CatchableError is catchable, Defect is not catchable and panics, panics can be enabled or disabled at compile-time"
+    },
+    "statement_to_start_code_if_no_exceptions_caught": {
+      "not-implemented": "true"
+    },
+    "statement_to_start_cleaning_up_after_exception": {
+      "code": "finally: statements"
+    },
+    "order_to_call_all_statements": {
+      "code": "try:\n    statements\nexcept Exception:\n    statements\nfinally:\n    statements"
+    },
+    "statement_to_end_trying_code": {
+      "code": "break"
+    },
+    "property_with_exception_code": {
+      "code": "getCurrentException()"
+    },
+    "property_with_exception_message": {
+      "code": "getCurrentExceptionMsg()"
+    },
+    "property_with_stack_trace": {
+      "code": "getCurrentException()"
+    },
+    "property_containing_other_info": {
+      "code": "getCurrentException()"
+    },
+    "throw_generic_exception": {
+      "code": "raise"
+    },
+    "throw_exception_as_text": {
+      "code": "raise newException(CatchableError, \"Your error message\")"
+    },
+    "throw_specific_exception_type": {
+      "code": "raise ExceptionType"
+    },
+    "base_data_type_exception_type": {
+      "code": "system.Exception"
+    },
+    "invalid_data_type_exception_type": {
+      "code": "system.Exception"
+    },
+    "variable_not_found_exception_type": {
+      "code": "ValueError"
+    },
+    "object_not_found_exception_type": {
+      "not-implemented": "true"
+    },
+    "index_out_of_bounds_exception_type": {
+      "code": "IndexError"
+    },
+    "key_name_not_found_exception_type": {
+      "code": "KeyError"
+    },
+    "invalid_encoding_exception_type": {
+      "not-implemented": "true"
+    },
+    "base_mathematical_exception_type": {
+      "code": "ArithmeticError"
+    },
+    "overflow_exception_type": {
+      "code": "OverflowError"
+    },
+    "floating_point_exception_type": {
+      "code": "FloatingPointError"
+    },
+    "divide_by_zero_exception_type": {
+      "code": "ZeroDivisonError"
+    },
+    "cannot_cast_types_exception_type": {
+      "code": "ValueError"
+    },
+    "base_memory_exception_type": {
+      "code": "MemoryError"
+    },
+    "cannot_allocate_memory_exception_type": {
+      "code": "MemoryError"
+    },
+    "out_of_memory_exception_type": {
+      "code": "MemoryError"
+    },
+    "stack_overflow_exception_type": {
+      "code": "RecursionError"
+    },
+    "cannot_access_pointer_exception_type": {
+      "not-implemented": "true"
+    },
+    "base_file_exception_type": {
+      "code": "OSError"
+    },
+    "end_of_file_exception_type": {
+      "code": "IOError"
+    },
+    "file_does_not_exist_exception_type": {
+      "code": "IOError"
+    },
+    "file_already_exists_exception_type": {
+      "code": "IOError"
+    },
+    "item_is_actually_directory_exception_type": {
+      "code": "IOError"
+    },
+    "item_is_not_a_directory_exception_type": {
+      "code": "IOError"
+    },
+    "cannot_access_file_exception_type": {
+      "code": "IOError"
+    },
+    "drive_disconnected_exception_type": {
+      "code": "IOError"
+    },
+    "file_no_longer_available_exception_type": {
+      "code": "IOError"
+    },
+    "file_timeout_exception": {
+      "code": "TimeoutError"
+    },
+    "base_network_exception_type": {
+      "code": "ConnectionError"
+    },
+    "connection_refused_exception_type": {
+      "code": "ConnectionRefusedError"
+    },
+    "connection_broken_exception_type": {
+      "code": "ConnectionError"
+    },
+    "invalid_hostname_exception": {
+      "not-implemented": "true"
+    },
+    "cannot_establish_connection_exception_type": {
+      "code": "ConnectionError"
+    },
+    "connection_timed_out_exception_type": {
+      "code": "TimeoutError"
+    },
+    "bad_certificate_exception_type": {
+      "code": "SSLError"
+    },
+    "expired_certificate_exception_type": {
+      "code": "SSLError"
+    },
+    "base_test_assertion_exception_type": {
+      "code": "AssertionError"
+    },
+    "child_process_could_not_be_created_exception_type": {
+      "code": "ProcessError"
+    },
+    "child_process_unexpected_ending_exception_type": {
+      "code": "ProcessError"
+    },
+    "process_not_found_exception_type": {
+      "code": "ProcessLookupError"
+    },
+    "import_not_found_exception_type": {
+      "code": "ProcessError"
+    },
+    "keyboard_interrupt_exception_type": {
+      "code": "KeyboardInterrupt"
+    },
+    "syntax_exception_type": {
+      "code": "SyntaxError"
+    },
+    "uncaught_signal_exception_type": {
+      "not-implemented": "true"
+    },
+    "base_warning_type": {
+      "not-implemented": "true",
+      "comment": "Warning is managed at compile-time by compiler and does not generate code"
+    },
+    "deprecation_warning_type": {
+      "not-implemented": "true",
+      "comment": "Deprecation is managed at compile-time by compiler and does not generate code"
+    }
+  }
+}
