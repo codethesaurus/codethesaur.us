@@ -1,8 +1,8 @@
 {
   "meta": {
-    "language": "language_id",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "language": "java",
+    "language_version": "17",
+    "language_name": "Java"
   },
   "categories": {
     "Creating/Destroying Strings": [
@@ -103,8 +103,8 @@
       "comment": "Multiline literal implementation does not exist in Java."
     },
     "assign_new_string": {
-      "name": "String stringOne = \"A new string.\";\nString stringTwo = stringOne;",
-      "code": ""
+      "name": "Assign string from another string",
+      "code": "String stringOne = \"A new string.\";\nString stringTwo = stringOne;"
     },
     "destroy_string": {
       "name": "Destroy string",
@@ -138,24 +138,24 @@
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
-      "code": "String str = \"abcdABCD\";\nboolean result = str.matches(\"[a-zA-Z]+\");",
-      "comment": "Returns a boolean value of true if the String contains only alphabets, else it returns false." 
+      "code": "StringUtils.isAlpha(stringToCheck)",
+      "comment": "Uses the Apache Common Lang library" 
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "code": "String str = \"10\";\ntry {\n intValue = Integer.parseInt(str);\n  return true;\n} catch (NumberFormatException e) {\n System.out.println(\"Input String cannot be parsed to Integer.\");\n}",
-      "comment": "This can work with Double.parseDouble(str), Float.parseFloat(str), and Long.parseLong(str) as well"
+      "code": "StringUtils.isNumeric(stringToCheck)",
+      "comment": "Uses the Apache Common Lang library. If there is a decimal point, since this is not a Unicode digit, it will return false"
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
-      "code": "String str = \"abcd1234\";\nboolean result = str.matches(\"^[a-zA-Z0-9]*$\");",
-      "comment": "Returns a boolean value of true if the String contains numbers and letters, else it returns false." 
+      "code": "StringUtils.isAlphanumeric(stringToCheck)",
+      "comment": "Uses the Apache Common Lang library." 
 
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "code": "String str = \"10.23\";\ntry {\n doubleValue = Double.parseDouble(str);\n  return true;\n} catch (NumberFormatException e) {\n System.out.println(\"Input String cannot be parsed to Double.\");\n}",
-      "comment": "This can work with  Float.parseFloat(str) as well"
+      "not-implemented": "true",
+      "code": ""
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
@@ -196,23 +196,24 @@
     },
     "count_occurrences_of_substring": {
       "name": "Find number of occurences of a substring",
-      "code": "String str = \"helloslkhellodjladfjhello\";\nString findStr = \"hello\";\nSystem.out.println(StringUtils.countMatches(str, findStr));",
+      "code": "StringUtils.countMatches(str, findStr)",
       "comment": "Requires StringUtils.countMatches from Apache Commons Lang"
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "code": "str.substring(startIndex, numberOfCharacters + 1);",
-      "comment": "Second parameter in substring() is exclusive."
+      "code": "str.left(String str, int len)",
+      "comment": "Gets the leftmost len characters of a String. Uses the Apache Common Lang library."
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "code": "str.substring(str.length() - numberOfCharacters);"
+      "code": "str.right(String str, int len)",
+      "comment": "Gets the rightmost len characters of a String. Uses the Apache Common Lang library."
+
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "code": "str.substring(startIndex, endIndex);",
-      "comment": "Second parameter in substring() is exclusive."
-
+      "not-implemented": "true",
+      "code": ""
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
@@ -230,6 +231,7 @@
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
+      "not-implemented": "true",
       "code": ""
     },
     "capitalize_string": {
@@ -238,15 +240,15 @@
     },
     "remove_whitespace": {
       "name": "Remove all whitespaces from string",
-      "code": "st.replaceAll(\"\\\\s\",\"\")"
+      "code": "str.replaceAll(\"\\\\s\",\"\")"
     },
     "replace_substring": {
       "name": "Replace a substring with another string",
-      "code": "String originalString = \"abcdefghi\";\nString replacedString = originalString.replace(\"abcd\", \"dddd\");"
+      "code": "replace(\"abcd\", \"dddd\");"
     },
     "replace_all_substring": {
       "name": "Replace all substring matches with another string",
-      "code": "String originalString = \"abcdabcdabcd\";\nString replacedString = originalString.replaceAll(\"abcd\", \"dddd\");"
+      "code": "replaceAll(\"abcd\", \"dddd\");"
     },
     "split_at_index": {
       "name": "Split string into a list of strings at a given index",
@@ -266,27 +268,31 @@
     },
     "encode_html_entities": {
       "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
+      "not-implemented": "true",
       "code": ""
     },
     "decode_html_entities": {
       "name": "Decode HTML entitles into characters",
+      "not-implemented": "true",
       "code": ""
     },
     "encode_url_percent": {
       "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
+      "not-implemented": "true",
       "code": ""
     },
     "decode_url_percent": {
       "name": "Decode URL percent encoding",
+      "not-implemented": "true",
       "code": ""
     },
     "encode_to_base64": {
       "name": "Encode string into Base64 format",
-      "code": ""
+      "code": "import java.nio.charset.StandardCharsets;\nimport java.util.Base64;\nString newString = new String(Base64.getDecoder().decode(value), StandardCharsets.UTF_8.toString());"
     },
     "decode_from_base64": {
       "name": "Decode string from Base64 format",
-      "code": ""
+      "code": "import java.nio.charset.StandardCharsets;\nimport java.util.Base64;\nString newString = new String(Base64.getDecoder().decode(value), StandardCharsets.UTF_8.toString());"
     },
     "format_string_function": {
       "name": "Function to format a string",
