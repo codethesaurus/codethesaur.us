@@ -7,7 +7,7 @@
     {% endif %}
     {% if comment %}
         <div>
-            {{ comment|markdownify }}
+            {{ comment|markdownify|linebreaksbr }}
         </div>
     {% endif %}
     </div>
