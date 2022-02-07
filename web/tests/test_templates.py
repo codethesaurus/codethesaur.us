@@ -1,4 +1,3 @@
-"""Tests for the templates"""
 from django.test import TestCase
 from django.template.loader import render_to_string
 
@@ -78,15 +77,37 @@ class TestTemplates(TestCase):
             "</div>"
         )
 
-        # md url in comment
+        # no code and comment (multiple lines)
         rendered_template_5 = render_to_string(
+            "concept_card.html",
+            {
+                "code": "",
+                "comment": "I am a humble\nmulti-line comment in the\nform of a haiku"
+            }
+        ).strip()
+        self.assertEquals(
+            rendered_template_5,
+            "<div class=\"card\">\n"
+            "    <div class=\"card-body\">\n"
+            "    \n"
+            "    \n"
+            "        <div>\n"
+            "            I am a humble<br>multi-line comment in the<br>form of a haiku\n"
+            "        </div>\n"
+            "    \n"
+            "    </div>\n"
+            "</div>"
+        )
+
+        # Markdown url in comment
+        rendered_template_6 = render_to_string(
             "concept_card.html",
             {
                 "comment": "I am a [url](http://url.com), I am not a url.py"
             }
         ).strip()
         self.assertEqual(
-            rendered_template_5,
+            rendered_template_6,
             "<div class=\"card\">\n"
             "    <div class=\"card-body\">\n"
             "    \n"
