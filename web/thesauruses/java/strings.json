@@ -138,18 +138,18 @@
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
-      "code": "StringUtils.isAlpha(stringToCheck)",
-      "comment": "Uses the Apache Common Lang library" 
+      "not-implemented": "true",
+      "code": ""
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "code": "StringUtils.isNumeric(stringToCheck)",
-      "comment": "Uses the Apache Common Lang library. If there is a decimal point, since this is not a Unicode digit, it will return false"
+      "not-implemented": "true",
+      "code": ""
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
-      "code": "StringUtils.isAlphanumeric(stringToCheck)",
-      "comment": "Uses the Apache Common Lang library." 
+      "not-implemented": "true",
+      "code": ""
 
     },
     "is_decimal": {
@@ -201,13 +201,13 @@
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "code": "str.left(String str, int len)",
-      "comment": "Gets the leftmost len characters of a String. Uses the Apache Common Lang library."
+      "not-implemented": "true",
+      "code": ""
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "code": "str.right(String str, int len)",
-      "comment": "Gets the rightmost len characters of a String. Uses the Apache Common Lang library."
+      "not-implemented": "true",
+      "code": ""
 
     },
     "get_substring_from_start_and_end_index": {
