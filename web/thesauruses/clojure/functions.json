@@ -2,7 +2,8 @@
   "meta": {
     "language": "Clojure",
     "language_version": "1.10.3",
-    "language_name": "Clojure"
+    "language_name": "Clojure",
+    "structure": "functions"
   },
   "categories": {
     "Void Functions": [
@@ -25,7 +26,7 @@
       "return_from_subroutine"
     ]
   },
-  "functions": {
+  "concepts": {
     "void_function_no_parameters": {
       "code": "(defn void-no-params []\n  (println \"Function called\"))",
       "comment": "There is no concept of void in idiomatic Clojure, so functions with no meaningful return value simply return `nil` (equivalent to `null` in Java). Invoking `println` yields `nil` after it performs its side effect (which is printing something to standard output)."
