@@ -4,10 +4,7 @@
 {% block content %}
         <div class="container">
             <div class="row mt-5">
-                <h1 class="col-12">Comparing {{ lang1_friendlyname }}'s and {{ lang2_friendlyname }}'s {{ concept_friendly_name }}</h1>
-            </div>
-            <div class="row col-12">
-                The following will eventually be a table of stuff that's populated with things from the languages
+                <h1 class="col-12">{{ title }}</h1>
             </div>
             <div class="row">&nbsp;</div>
 
@@ -20,16 +17,13 @@
                         <h3 class="text-center">Concept</h3>
                     </div>
                 </div>
+                {% for lang in languages %} 
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="text-center">{{ lang1_friendlyname|linebreaksbr }}'s Implementation</h3>
+                        <h3 class="text-center">{{ lang.friendly_name }}'s Implementation</h3>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="text-center">{{ lang2_friendlyname|linebreaksbr }}'s Implementation</h3>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
 
     {% for concept in category.concepts %}
@@ -37,12 +31,13 @@
             <div class="card">
                 <div class="card-body">
                     <div class="strong">
-                        {{ concept.name|default:"Unsupported or Not Needed"|linebreaksbr }}
+                        {{ concept.name | linebreaksbr }}
                     </div>
                 </div>
             </div>
-            {% concept_card concept.code1 concept.comment1 %}
-            {% concept_card concept.code2 concept.comment2 %}
+            {% for d in concept.data %}
+            {% concept_card d.code d.comment %}
+            {% endfor %}
         </div>
     {% endfor %}
 {% endfor %}
@@ -52,20 +47,15 @@
                 <div class="card border-0">
                     <div class="card-body">&nbsp;</div>
                 </div>
+                {% for lang in languages %}
                 <div class="card" id="start-of-row">
                     <div class="card-body">
-                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang1 }}/{{ concept }}.json">
-                            Want to add or correct information for {{ lang1_friendlyname }}?
+                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang.key }}/{{ concept }}.json">
+                            Want to add or correct information for {{ lang.friendly_name }}?
                         </a>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang2 }}/{{ concept }}.json">
-                            Want to add or correct information for {{ lang2_friendlyname }}?
-                        </a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
 
         </div>
