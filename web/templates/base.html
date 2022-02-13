@@ -13,6 +13,21 @@
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="{{request.scheme}}://{{request.META.HTTP_HOST}}/static/images/Logo-Book-Code.png" />
+    
+    <!-- Twitter, Slack, etc. -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CodeThesaurus">
+    <meta name="twitter:title" content="Code Thesaurus - {{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{request.scheme}}://{{request.META.HTTP_HOST}}/static/images/Logo-Book-Code.png">
+    <meta name="twitter:image:alt" content="Code Thesarus logo">
+    <!-- TODO: make these show number of languages/examples? -->
+    <!--
+    <meta name="twitter:label1" content="">
+    <meta name="twitter:data1" content="">
+    <meta name="twitter:label2" content="">
+    <meta name="twitter:data2" content="">
+    -->
 
     <title>Code Thesaurus - {{ title }}</title>
 
