@@ -48,6 +48,7 @@ class Language:
         self.key = str(key + "")
         self.friendly_name = friendly_name
         self.concepts = None
+        self.version = None
         self.language_dir = os.path.join("web", "thesauruses", self.key)
 
 
@@ -88,6 +89,7 @@ class Language:
         with open(file_path, 'r', encoding='UTF-8') as file:
             file_json = json.load(file)
             self.concepts = file_json["concepts"]
+            self.version = version
 
 
     def concept(self, concept_key):

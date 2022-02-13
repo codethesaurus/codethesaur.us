@@ -61,6 +61,8 @@ def index(request):
     """
 
     store_url_info(request)
+    if "lang" in request.GET and "concept" in request.GET:
+        return concepts(request)
 
     meta_info = MetaInfo()
 
@@ -116,8 +118,7 @@ def about(request):
     return render(request, 'about.html', content)
 
 
-# pylint: disable=too-many-return-statements
-def compare(request):
+def concepts(request):
     """
     Renders the page comparing two language structures (/compare)
 
@@ -126,214 +127,103 @@ def compare(request):
     """
     visit = store_url_info(request)
 
-    lang1_string = escape(strip_tags(request.GET.get('lang1', '')))
-    lang2_string = escape(strip_tags(request.GET.get('lang2', '')))
-
+    language_strings = [escape(strip_tags(lang)) for lang in request.GET.getlist('lang')]
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
 
     errors = []
     if not structure_query_string:
         errors.append("The URL didn't specify a structure/concept to look up.")
-    if not lang1_string:
-        errors.append("The URL didn't specify a first language to look up.")
-    if not lang2_string:
-        errors.append("The URL didn't specify a second language to look up.")
-    try:
-        lang1_string, version1 = lang1_string.split(";")
-    except ValueError:
-        errors.append("The URL didn't specify a version for the first language")
-    try:
-        lang2_string, version2 = lang2_string.split(";")
-    except ValueError:
-        errors.append("The URL didn't specify a version for the second language")
-
+    if not language_strings and all(language_strings):
+        # legacy parameter names
+        if "lang1" not in request.GET or "lang2" not in request.GET:
+            errors.append("The URL didn't specify any languages to look up.")
+        else:
+            language_strings = [
+                escape(strip_tags(request.GET['lang1'])),
+                escape(strip_tags(request.GET['lang2']))
+            ]
     if errors:
-        error_page_data = {
-            "errors": errors
-        }
-        response = render(request, 'errormisc.html', error_page_data)
+        return render_errors(request, errors)
 
-        return HttpResponseNotFound(response)
 
     try:
         meta_info = MetaInfo()
         meta_structure = meta_info.structure(structure_query_string)
-    except FileNotFoundError:
-        error_page_data = {
-            "errors": ["The structure/concept isn't valid. Double-check your URL and try again."]
-        }
-        response = render(request, "errormisc.html", error_page_data)
-
-        return HttpResponseNotFound(response)
-
-    try:
-        lang1 = meta_info.language(lang1_string)
-        lang1.load_concepts(meta_structure.key, version1)
-    except FileNotFoundError:
-        response = render(request, "error_missing_structure.html", {
-            "name": meta_structure.friendly_name,
-            "lang": lang1_string,
-            "key": meta_structure.key,
-            "version": version1,
-            "template": generate_language_template(
-                lang1_string,
-                meta_structure.key,
-                version1
-            )
-        })
-        return HttpResponseNotFound(response)
     except KeyError:
-        error_page_data = {
-            "errors": [f"The first language ({lang1_string}) isn't valid. \
-                Double-check your URL and try again."]
-        }
-        response = render(request, "errormisc.html", error_page_data)
-        return HttpResponseNotFound(response)
+        return render_errors(request, ["The structure/concept isn't valid. \
+                Double-check your URL and try again."])
 
-    try:
-        lang2 = meta_info.language(lang2_string)
-        lang2.load_concepts(meta_structure.key, version2)
-    except FileNotFoundError:
-        response = render(request, "error_missing_structure.html", {
-            "name": meta_structure.friendly_name,
-            "lang": lang2_string,
-            "key": meta_structure.key,
-            "version": version2,
-            "template": generate_language_template(
-                lang2_string,
-                meta_structure.key,
-                version2
-            )
-        })
-        return HttpResponseNotFound(response)
-    except KeyError:
-        error_page_data = {
-            "errors": [f"The second language ({lang2_string}) isn't valid. \
-                Double-check your URL and try again."]
-        }
-        response = render(request, "errormisc.html", error_page_data)
-        return HttpResponseNotFound(response)
+    languages = []
+    for language_string in language_strings:
+        try:
+            language_string, version = language_string.split(";")
+            language = meta_info.language(language_string)
+            language.load_concepts(meta_structure.key, version)
+            languages.append(language)
+        except FileNotFoundError:
+            response = render(request, "error_missing_structure.html", {
+                "name": meta_structure.friendly_name,
+                "lang": language_string,
+                "key": meta_structure.key,
+                "version": version,
+                "template": generate_language_template(
+                    language_string,
+                    meta_structure.key,
+                    version
+                )
+            })
+            return HttpResponseNotFound(response)
+        except ValueError:
+            errors.append(f"The URL didn't specify a version for '{language_string}'")
+        except KeyError:
+            errors.append(f"The language \"{language_string}\" isn't valid. \
+                    Double-check your URL and try again.")
 
-    store_lookup_info(request, visit, lang1.key, version1, lang2.key, version2, meta_structure.key)
-
-    both_categories = []
-
-    for (category_key, category) in meta_structure.categories.items():
-        concepts = [concept_comparision(id, name, lang1, lang2)
-                    for (id, name) in category.items()]
-
-        both_categories.append({
-            "id": category_key,
-            "concepts": concepts
-        })
-
-    response = {
-        "title": f"Comparing {lang1.friendly_name} and {lang2.friendly_name}",
-        "concept": meta_structure.key,
-        "concept_friendly_name": meta_structure.friendly_name,
-        "lang1": lang1.key,
-        "lang2": lang2.key,
-        "version1": version1,
-        "version2": version2,
-        "lang1_friendlyname": lang1.friendly_name,
-        "lang2_friendlyname": lang2.friendly_name,
-        "categories": both_categories,
-        "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
-                and {lang2.friendly_name}"
-    }
-
-    return render(request, 'compare.html', response)
-
-
-def reference(request):
-    """
-    Renders the page showing one language structure for reference (/reference)
-
-    :param request: HttpRequest object
-    :return: HttpResponse object with rendered object of the page
-    """
-    visit = store_url_info(request)
-
-    lang_string = escape(strip_tags(request.GET.get('lang', '')))
-    structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
-
-    errors = []
-    if not structure_query_string:
-        errors.append("The URL didn't specify a structure/concept to look up.")
-    if not lang_string:
-        errors.append("Thr URL didn't specify a language to look up.")
-    try:
-        lang_string, version = lang_string.split(";")
-    except ValueError:
-        errors.append("The URL didn't specify a version for the language")
     if errors:
-        error_page_data = {
-            "errors": errors
-        }
-        response = render(request, 'errormisc.html', error_page_data)
+        return render_errors(request, errors)
 
-        return HttpResponseNotFound(response)
+    if len(languages) == 2:
+        store_lookup_info(
+            request,
+            visit,
+            languages[0].key,
+            languages[0].version,
+            languages[1].key,
+            languages[1].version,
+            meta_structure.key
+        )
 
-    try:
-        meta_info = MetaInfo()
-        meta_structure = meta_info.structure(structure_query_string)
-    except FileNotFoundError:
-        error_page_data = {
-            "errors": ["The structure/concept isn't valid. Double-check your URL and try again."]
-        }
-        response = render(request, "errormisc.html", error_page_data)
-
-        return HttpResponseNotFound(response)
-
-    try:
-        lang = meta_info.language(lang_string)
-        lang.load_concepts(meta_structure.key, version)
-    except FileNotFoundError:
-        ctx = {
-            "name": meta_structure.friendly_name,
-            "lang": lang_string,
-            "key": meta_structure.key,
-            "version": version,
-            "template": generate_language_template(
-                lang_string,
-                meta_structure.key,
-                version
-            )
-        }
-        response = render(request, "error_missing_structure.html", ctx)
-        return HttpResponseNotFound(response)
-    except KeyError:
-        error_page_data = {
-            "errors": [f"The language ({lang_string}) isn't valid. \
-                        Double-check your URL and try again."]
-        }
-        response = render(request, "errormisc.html", error_page_data)
-        return HttpResponseNotFound(response)
-
-    store_lookup_info(request, visit, lang.key, version, '', '', meta_structure.key)
-
-    categories = []
+    all_categories = []
 
     for (category_key, category) in meta_structure.categories.items():
-        concepts = [concept_reference(id, name, lang)
-                    for (id, name) in category.items()]
-        categories.append({
+        concepts_list = [concepts_data(key, name, languages) for (key, name) in category.items()]
+
+        all_categories.append({
             "id": category_key,
-            "concepts": concepts
+            "concepts": concepts_list
         })
 
+    title = ""
+    if len(languages) == 1:
+        title = f"Reference for {languages[0].friendly_name}"
+    else:
+        title = f"Comparing {', '.join([l.friendly_name for l in languages[:-1]])}\
+                and {languages[-1].friendly_name}"
+
+
     response = {
-        "title": f"Reference for {lang.key}",
+        "title": title,
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
-        "lang": lang.key,
-        "version": version,
-        "lang_friendlyname": lang.friendly_name,
-        "categories": categories,
-        "description": f"Code Thesaurus: Reference for {lang.key}"
+        "languages": [
+            { "key": language.key, "friendly_name": language.friendly_name }
+            for language in languages
+        ],
+        "categories": all_categories,
+        "description": f"Code Thesaurus: {title}"
     }
 
-    return render(request, 'reference.html', response)
+    return render(request, 'concepts.html', response)
 
 
 def error_handler_400_bad_request(request, _exception):
@@ -401,6 +291,7 @@ def format_code_for_display(concept_key, lang):
     :param lang: language to format it (in meta language/syntax highlighter format)
     :return: string with code with applied HTML formatting
     """
+
     if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
         return "Unknown"
     if lang.concept_implemented(concept_key):
@@ -418,7 +309,7 @@ def format_comment_for_display(concept_key, lang):
             file) and a language
 
     :param concept_key: the concept key located in the meta language JSON file
-    :param lang: the ID of the language to fetch concept key from
+    :param lang: the key of the language to fetch concept key from
     :return: formatted HTML for the comment
     """
     if not lang.concept_implemented(concept_key) and lang.concept_comment(concept_key) == "":
@@ -426,38 +317,30 @@ def format_comment_for_display(concept_key, lang):
     return lang.concept_comment(concept_key)
 
 
-def concept_comparision(concept_id, name, lang1, lang2):
+def concepts_data(key, name, languages):
     """
     Generates the comparision object of a single concept
 
-    :param id: id of the concept
+    :param key: key of the concept
     :param name: name of the concept
-    :param lang1: first language to compare
-    :param lang2: other language to compare
+    :param languages: list of languages to compare / get a reference for
     :return: string with code with applied HTML formatting
     """
     return {
-        "id": concept_id,
+        "id": key,
         "name": name,
-        "code1": format_code_for_display(concept_id, lang1),
-        "code2": format_code_for_display(concept_id, lang2),
-        "comment1": format_comment_for_display(concept_id, lang1),
-        "comment2": format_comment_for_display(concept_id, lang2)
+        "data": [{
+            "code": format_code_for_display(key, lang),
+            "comment": format_comment_for_display(key, lang)
+        } for lang in languages ],
     }
 
 
-def concept_reference(concept_id, name, lang):
-    """
-    Generates the reference object of a single concept
-
-    :param id: id of the concept
-    :param name: name of the concept
-    :param lang: language to get the reference for
-    :return: string with code with applied HTML formatting
-    """
-    return {
-        "id": concept_id,
-        "name": name,
-        "code": format_code_for_display(concept_id, lang),
-        "comment": format_comment_for_display(concept_id, lang)
+def render_errors(request, errors):
+    """Render a list of errors with errormisc template"""
+    error_page_data = {
+        "errors": errors
     }
+    response = render(request, 'errormisc.html', error_page_data)
+
+    return HttpResponseNotFound(response)
