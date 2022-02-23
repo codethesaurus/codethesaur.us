@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "language": "cpp",
+    "language_version": "C++20",
+    "language_name": "C++",
+    "structure": "control_structures"
+  },
+  "concepts": {
+    "if_conditional": {
+      "code": "if (condition) {\n    statements;\n}",
+      "name": "If conditional"
+    },
+    "if_else_conditional": {
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}",
+      "name": "If/Else conditional"
+    },
+    "if_elseif_conditional": {
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}",
+      "name": "If/ElseIf conditional"
+    },
+    "if_elseif_else_conditional": {
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n    statements;\n}",
+      "name": "If/ElseIf/Else conditional"
+    },
+    "ternary_conditional": {
+      "code": "condition ? expression_if_true : expression_if_false",
+      "name": "Ternary conditional"
+    },
+    "switch_statement": {
+      "code": "switch (expression) {\n  case constant-expression:\n    statements;\n    break;\n  default:\n    statements;\n}",
+      "name": "Switch statement"
+    },
+    "while_loop": {
+      "code": "while (condition) {\n    statements;\n}",
+      "name": "While loop"
+    },
+    "do_while_loop": {
+      "code": "do {\n    statements;\n} while (condition);",
+      "name": "Do/While loop"
+    },
+    "for_loop": {
+      "code": "for (initialization; condition; incrementor) {\n    statements;\n}",
+      "name": "For loop"
+    },
+    "foreach_loop": {
+      "code": "for (variable: array/vector) {\n    statements;\n} ",
+      "name": "Foreach loop"
+    }
+  }
+}

@@ -27,7 +27,7 @@ class TestViews(TestCase):
     def test_compare_view_both_valid_languages(self):
         """test if compare with 2 valid languages uses the correct templates"""
         url = reverse('compare') + \
-            '?concept=data_types&lang1=python&lang2=java'
+            '?concept=data_types&lang1=python%3B3&lang2=java%3B17'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, 200)
@@ -82,7 +82,7 @@ class TestViews(TestCase):
 
     def test_reference_view_valid_language(self):
         """test if reference with a valid language uses the corret templates"""
-        url = reverse('reference') + '?concept=data_types&lang=python'
+        url = reverse('reference') + '?concept=data_types&lang=python%3B3'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, 200)

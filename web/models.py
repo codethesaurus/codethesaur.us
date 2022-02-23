@@ -1,7 +1,6 @@
 """models of codethesaur.us"""
 import json
 import os
-from packaging.version import parse as parse_version
 
 
 # pylint: disable=too-few-public-methods
@@ -29,8 +28,6 @@ class MetaStructure:
 
             self.categories = meta_structure_file_json["categories"]
 
-class StructureFileNotFound(Exception):
-    """Thrown if `Language` could not find any structure file"""
 
 class Language:
     """
@@ -38,7 +35,7 @@ class Language:
     structure key
     """
 
-    def __init__(self, key, friendly_name, version = None):
+    def __init__(self, key, friendly_name):
         """
         Initialize the Language object, which will contain concepts for a given
         structure
@@ -50,23 +47,24 @@ class Language:
         # Add an empty string to convert SafeString to str
         self.key = str(key + "")
         self.friendly_name = friendly_name
-        self.concepts = dict()
-        if version is not None:
-            version = parse_version(version)
-        self.language_dir_name = os.path.join("web", "thesauruses", self.key)
+        self.concepts = None
+        self.language_dir = os.path.join("web", "thesauruses", self.key)
 
-        self.versions = dict()
+
+    def versions(self):
+        versions = dict()
         try:
-            for entry in os.scandir(self.language_dir_name):
+            for entry in os.scandir(self.language_dir):
                 if not entry.is_dir():
                     continue
 
-                file_version_string = os.path.basename(entry.path)
-                file_version = parse_version(file_version_string)
-                if version is None or file_version < version:
-                    self.versions[file_version] = entry.path
+                file_version = os.path.basename(entry.path)
+                versions[file_version] = entry.path
         except FileNotFoundError:
             pass
+
+        return versions
+
 
     def __bool__(self):
         """
@@ -75,37 +73,19 @@ class Language:
 
         :rtype: bool
         """
-        return os.path.exists(os.path.join("web", "thesauruses", self.key))
+        return os.path.exists(self.language_dir)
 
-    def load_concepts(self, structure_key):
+    def load_concepts(self, structure_key, version):
         """
-        Loads the structure file(s) into the Language object
+        Loads the structure file into the Language object
 
         :param structure_key: the ID for the structure to load
         """
-
-        found_any = False
         structure_file_name = f"{structure_key}.json"
-        versions = dict(self.versions)
-        # fallback to the base directory
-        versions[parse_version("default")] = self.language_dir_name
-        for version in sorted(versions):
-            structure_file_path = os.path.join(versions.get(version), structure_file_name)
-
-            try:
-                with open(structure_file_path, 'r', encoding='UTF-8') as structure_file:
-                    structure_json = json.load(structure_file)
-            except FileNotFoundError:
-                continue
-
-            found_any = True
-            structure_concepts = structure_json["concepts"]
-            for concept in structure_json["concepts"]:
-                self.concepts[concept] = structure_concepts[concept]
-                self.concepts[concept]["version"] = version
-
-        if not found_any:
-            raise StructureFileNotFound
+        file_path = os.path.join(self.language_dir, version, structure_file_name)
+        with open(file_path, 'r', encoding='UTF-8') as file:
+            file_json = json.load(file)
+            self.concepts = file_json["concepts"]
 
 
     def concept(self, concept_key):
@@ -196,7 +176,7 @@ class MetaInfo:
         """
         return self.languages[language_key]
 
-    def language(self, language_key, version = None):
+    def language(self, language_key):
         """
         Given a language key (from meta_info.json), returns the whole
         Language for it
@@ -209,7 +189,6 @@ class MetaInfo:
         return Language(
             language_key,
             self.language_friendly_name(language_key),
-            version
         )
 
     def structure_friendly_name(self, structure_key):

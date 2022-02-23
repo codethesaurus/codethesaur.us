@@ -14,7 +14,7 @@ from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 
-from web.models import MetaInfo, StructureFileNotFound
+from web.models import MetaInfo
 from web.thesaurus_template_generators import generate_language_template
 
 
@@ -30,10 +30,10 @@ def index(request):
     meta_data_langs = dict()
     for id in meta_info.languages:
         lang = meta_info.language(id)
-        meta_data_langs[id] = {
+        meta_data_langs[id] = [{
             "name": lang.friendly_name,
-            "versions": ", ".join(map(str, sorted(lang.versions)))
-        }
+            "version": version,
+        } for version in lang.versions()]
 
     random_langs = random.sample(list(meta_data_langs.values()), k=3)
 
@@ -72,6 +72,7 @@ def compare(request):
     """
     lang1_string = escape(strip_tags(request.GET.get('lang1', '')))
     lang2_string = escape(strip_tags(request.GET.get('lang2', '')))
+
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
 
     errors = []
@@ -81,6 +82,14 @@ def compare(request):
         errors.append("The URL didn't specify a first language to look up.")
     if not lang2_string:
         errors.append("The URL didn't specify a second language to look up.")
+    try:
+        lang1_string, version1 = lang1_string.split(";")
+    except ValueError:
+        errors.append("The URL didn't specify a version for the first language")
+    try:
+        lang2_string, version2 = lang2_string.split(";")
+    except ValueError:
+        errors.append("The URL didn't specify a version for the second language")
 
     if errors:
         error_page_data = {
@@ -103,15 +112,16 @@ def compare(request):
 
     try:
         lang1 = meta_info.language(lang1_string)
-        lang1.load_concepts(meta_structure.key)
-    except StructureFileNotFound:
+        lang1.load_concepts(meta_structure.key, version1)
+    except FileNotFoundError:
         response = render(request, "error_missing_structure.html", {
             "name": meta_structure.friendly_name,
             "lang": lang1_string,
             "key": meta_structure.key,
             "template": generate_language_template(
                 lang1_string,
-                meta_structure.key
+                meta_structure.key,
+                version1
             )
         })
         return HttpResponseNotFound(response)
@@ -125,15 +135,16 @@ def compare(request):
 
     try:
         lang2 = meta_info.language(lang2_string)
-        lang2.load_concepts(meta_structure.key)
-    except StructureFileNotFound:
+        lang2.load_concepts(meta_structure.key, version2)
+    except FileNotFoundError:
         response = render(request, "error_missing_structure.html", {
             "name": meta_structure.friendly_name,
             "lang": lang2_string,
             "key": meta_structure.key,
             "template": generate_language_template(
                 lang2_string,
-                meta_structure.key
+                meta_structure.key,
+                version2
             )
         })
         return HttpResponseNotFound(response)
@@ -187,6 +198,10 @@ def reference(request):
         errors.append("The URL didn't specify a structure/concept to look up.")
     if not lang_string:
         errors.append("Thr URL didn't specify a language to look up.")
+    try:
+        lang_string, version = lang_string.split(";")
+    except ValueError:
+        errors.append("The URL didn't specify a version for the language")
     if errors:
         error_page_data = {
             "errors": errors
@@ -208,15 +223,16 @@ def reference(request):
 
     try:
         lang = meta_info.language(lang_string)
-        lang.load_concepts(meta_structure.key)
-    except StructureFileNotFound:
+        lang.load_concepts(meta_structure.key, version)
+    except FileNotFoundError:
         ctx = {
             "name": meta_structure.friendly_name,
             "lang": lang_string,
             "key": meta_structure.key,
             "template": generate_language_template(
                 lang_string,
-                meta_structure.key
+                meta_structure.key,
+                version
             )
         }
         response = render(request, "error_missing_structure.html", ctx)

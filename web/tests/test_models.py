@@ -3,7 +3,7 @@ import json
 
 from django.test import TestCase
 
-from web.models import Language, MetaInfo, MetaStructure, StructureFileNotFound
+from web.models import Language, MetaInfo, MetaStructure
 
 
 class TestMetaStructures(TestCase):
@@ -62,15 +62,15 @@ class TestMetaStructures(TestCase):
 
         self.assertIsNotNone(language)
         self.assertIsNotNone(language.key)
-        self.assertEqual(language.concepts, dict())
+        self.assertEqual(language.concepts, None)
 
     def test_language_bad_key_and_lang_exists(self):
         """test Language behaviour with bad language key"""
         language = self.dummy_language
 
         self.assertEqual(bool(language), False)
-        self.assertRaises(StructureFileNotFound,
-                          language.load_concepts,  "notastructure")
+        self.assertRaises(FileNotFoundError,
+                          language.load_concepts,  "notastructure", "notaversion")
 
 
     # Commented out as the function *technically* works, but it can't
