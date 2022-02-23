@@ -116,7 +116,7 @@ def compare(request):
             "name": meta_structure.friendly_name,
             "lang": lang1_string,
             "key": meta_structure.key,
-            "version": version,
+            "version": version1,
             "template": generate_language_template(
                 lang1_string,
                 meta_structure.key,
@@ -140,7 +140,7 @@ def compare(request):
             "name": meta_structure.friendly_name,
             "lang": lang2_string,
             "key": meta_structure.key,
-            "version": version,
+            "version": version2,
             "template": generate_language_template(
                 lang2_string,
                 meta_structure.key,
