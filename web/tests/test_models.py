@@ -62,7 +62,7 @@ class TestMetaStructures(TestCase):
 
         self.assertIsNotNone(language)
         self.assertIsNotNone(language.key)
-        self.assertEqual(language.concepts, None)
+        self.assertIsNone(language.concepts)
 
     def test_language_bad_key_and_lang_exists(self):
         """test Language behaviour with bad language key"""

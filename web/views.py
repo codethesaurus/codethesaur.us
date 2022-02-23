@@ -1,5 +1,4 @@
 """codethesaur.us views"""
-import json
 import random
 
 from django.http import (
@@ -28,9 +27,9 @@ def index(request):
     meta_info = MetaInfo()
 
     meta_data_langs = dict()
-    for id in meta_info.languages:
-        lang = meta_info.language(id)
-        meta_data_langs[id] = [{
+    for key in meta_info.languages:
+        lang = meta_info.language(key)
+        meta_data_langs[key] = [{
             "name": lang.friendly_name,
             "version": version,
         } for version in lang.versions()]
@@ -61,7 +60,6 @@ def about(request):
     return render(request, 'about.html', content)
 
 
-# pylint: disable=too-many-branches
 # pylint: disable=too-many-return-statements
 def compare(request):
     """

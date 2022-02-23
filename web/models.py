@@ -41,7 +41,6 @@ class Language:
         structure
 
         :param key: ID of the language in the meta_info.json file
-        :param version: the version of the language requested
         """
 
         # Add an empty string to convert SafeString to str
@@ -52,6 +51,7 @@ class Language:
 
 
     def versions(self):
+        """Generate all versions and their paths for the Language"""
         versions = dict()
         try:
             for entry in os.scandir(self.language_dir):
@@ -80,6 +80,7 @@ class Language:
         Loads the structure file into the Language object
 
         :param structure_key: the ID for the structure to load
+        :param version: the version of the language
         """
         structure_file_name = f"{structure_key}.json"
         file_path = os.path.join(self.language_dir, version, structure_file_name)
