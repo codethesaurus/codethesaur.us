@@ -24,9 +24,7 @@ class MetaStructure:
         meta_structure_file_path = os.path.join(
             "web", "thesauruses", "_meta", structure_key) + ".json"
         with open(meta_structure_file_path, 'r', encoding='UTF-8') as meta_structure_file:
-            data = meta_structure_file.read()
-            # parse file
-            meta_structure_file_json = json.loads(data)
+            meta_structure_file_json = json.load(meta_structure_file)
 
             self.categories = meta_structure_file_json["categories"]
 
@@ -49,6 +47,24 @@ class Language:
         self.key = str(key + "")
         self.friendly_name = friendly_name
         self.concepts = None
+        self.language_dir = os.path.join("web", "thesauruses", self.key)
+
+
+    def versions(self):
+        """Generate all versions and their paths for the Language"""
+        versions = dict()
+        try:
+            for entry in os.scandir(self.language_dir):
+                if not entry.is_dir():
+                    continue
+
+                file_version = os.path.basename(entry.path)
+                versions[file_version] = entry.path
+        except FileNotFoundError:
+            pass
+
+        return versions
+
 
     def __bool__(self):
         """
@@ -57,23 +73,21 @@ class Language:
 
         :rtype: bool
         """
-        return os.path.exists(os.path.join("web", "thesauruses", self.key))
+        return os.path.exists(self.language_dir)
 
-    def load_concepts(self, structure_key):
+    def load_concepts(self, structure_key, version):
         """
         Loads the structure file into the Language object
 
         :param structure_key: the ID for the structure to load
+        :param version: the version of the language
         """
-        file_path = os.path.join(
-            "web", "thesauruses", self.key, structure_key) + ".json"
+        structure_file_name = f"{structure_key}.json"
+        file_path = os.path.join(self.language_dir, version, structure_file_name)
         with open(file_path, 'r', encoding='UTF-8') as file:
-            data = file.read()
-            # parse file
-            file_json = json.loads(data)
-
-            self.friendly_name = file_json["meta"]["language_name"]
+            file_json = json.load(file)
             self.concepts = file_json["concepts"]
+
 
     def concept(self, concept_key):
         """
@@ -150,9 +164,8 @@ class MetaInfo:
         meta_info_file_path = os.path.join(
             "web", "thesauruses", "meta_info.json")
         with open(meta_info_file_path, 'r', encoding='UTF-8') as meta_file:
-            meta_data = meta_file.read()
-        meta_info_json = json.loads(meta_data)
-        self.data_structures = meta_info_json["structures"]
+            meta_info_json = json.load(meta_file)
+        self.structures = meta_info_json["structures"]
         self.languages = meta_info_json["languages"]
 
     def language_friendly_name(self, language_key):
@@ -162,7 +175,22 @@ class MetaInfo:
         :param language_key: ID of the language located in the meta_info.json file
         :return: string with the human-friendly name
         """
-        return self.languages[language_key]["name"]
+        return self.languages[language_key]
+
+    def language(self, language_key):
+        """
+        Given a language key (from meta_info.json), returns the whole
+        Language for it
+
+        :param language_key: ID of the language located in the meta_info.json
+            file
+        :return: Language for the requested key
+        :rtype: Language
+        """
+        return Language(
+            language_key,
+            self.language_friendly_name(language_key),
+        )
 
     def structure_friendly_name(self, structure_key):
         """
@@ -174,7 +202,7 @@ class MetaInfo:
         :return: string with the human-friendly name
         :rtype: String
         """
-        return self.data_structures[structure_key]
+        return self.structures[structure_key]
 
     def structure(self, structure_key):
         """

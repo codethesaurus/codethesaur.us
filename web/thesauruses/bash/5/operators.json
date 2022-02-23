@@ -1,61 +1,63 @@
 {
   "meta": {
-    "language": "js",
-    "language_version": "ES2021",
-    "language_name": "JavaScript",
+    "language": "bash",
+    "language_version": "5.1",
+    "language_name": "Bash",
     "structure": "operators"
   },
   "concepts": {
     "addition": {
-      "code": "+",
+      "code": "(( 8+4 ))",
       "name": "Addition operator"
     },
     "addition_assignment": {
-      "code": "+=",
+      "code": "(( a+=4 ))",
       "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-",
+      "code": "(( 8-4 ))",
       "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "code": "-=",
+      "code": "(( a-=4 ))",
       "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*",
+      "code": "(( 8*4 ))",
       "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "code": "*=",
+      "code": "(( a*=4 ))",
       "name": "Multiplication and assignment operator"
     },
     "division": {
-      "code": "/",
+      "code": "(( 8/4 ))",
       "name": "Division operator"
     },
     "division_assignment": {
-      "code": "/=",
+      "code": "(( a/=4 ))",
       "name": "Division and assignment operator"
     },
     "modulus": {
-      "code": "%",
+      "code": "(( 8%4 ))",
       "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
-      "code": "%=",
+      "code": "(( a%=4 ))",
       "name": "Modulus and assignment operator"
     },
     "increment": {
       "code": "++",
+      "comment": "There are two types of increment: pre-increment ((++x)) and post-increment ((x++)). ",
       "name": "Increment (add 1) operator"
     },
     "decrement": {
       "code": "--",
+      "comment": "There are two types of decrement: pre-decrement ((--x)) and post-decrement ((x--)). ",
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
-      "code": "**",
+      "not-implemented": "true",
       "name": "Exponential operator"
     },
     "factorial": {
@@ -71,33 +73,31 @@
       "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "==",
-      "comment": "There is also === which means strict equality",
+      "code": "(( $a==$b ))",
       "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "!==",
-      "comment": "There is also !== which means strict inequality",
+      "code": "(( $a!=$b ))",
       "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "<",
+      "code": "(( $a<$b ))",
       "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "<=",
+      "code": "(( $a<=$b ))",
       "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": ">",
+      "code": "(( $a>$b ))",
       "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": ">=",
+      "code": "(( $a>=$b ))",
       "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
-      "code": "??",
+      "code": "${a:-20}",
       "name": "Null coalescing operator"
     },
     "is": {
@@ -109,23 +109,24 @@
       "name": "Is not operator"
     },
     "left_shift": {
-      "code": "<<",
+      "code": "(( a<<1 ))",
       "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "<<=",
+      "code": "(( a<<=1 ))",
       "name": "Left shift assignment operator"
     },
     "right_shift": {
-      "code": ">>",
+      "code": "(( a>>1 ))",
       "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "code": ">>=",
+      "code": "(( a>>=1 ))",
       "name": "Right shift assignment operator"
     },
     "ternary": {
-      "code": "?:",
+      "comment": "Ternary operator only exists for arithmetic expressions:",
+      "code": "(( a>=5 ? 6 : 4 ))",
       "name": "Ternary operator"
     },
     "null_forgiving": {

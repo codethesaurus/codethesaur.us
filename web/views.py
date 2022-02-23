@@ -1,5 +1,4 @@
 """codethesaur.us views"""
-import json
 import random
 
 from django.http import (
@@ -14,7 +13,7 @@ from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 
-from web.models import Language, MetaInfo
+from web.models import MetaInfo
 from web.thesaurus_template_generators import generate_language_template
 
 
@@ -25,22 +24,22 @@ def index(request):
     :param request: HttpRequest object
     :return: HttpResponse object with rendered object of the page
     """
-    with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-        meta_data = meta_file.read()
-    meta_info = json.loads(meta_data)
-    meta_data_langs = {
-        id: {
-            "name": lang["name"],
-            "versions": ", ".join(lang["versions"])
-        }
-        for (id, lang) in meta_info["languages"].items()
-    }
+    meta_info = MetaInfo()
+
+    meta_data_langs = dict()
+    for key in meta_info.languages:
+        lang = meta_info.language(key)
+        meta_data_langs[key] = [{
+            "name": lang.friendly_name,
+            "version": version,
+        } for version in lang.versions()]
+
     random_langs = random.sample(list(meta_data_langs.values()), k=3)
 
     content = {
         'title': 'Welcome',
         'languages': meta_data_langs,
-        'structures': meta_info["structures"],
+        'structures': meta_info.structures,
         'randomLanguages': random_langs,
         'description': 'Code Thesaurus: A polyglot developer reference tool'
     }
@@ -61,7 +60,6 @@ def about(request):
     return render(request, 'about.html', content)
 
 
-# pylint: disable=too-many-branches
 # pylint: disable=too-many-return-statements
 def compare(request):
     """
@@ -72,6 +70,7 @@ def compare(request):
     """
     lang1_string = escape(strip_tags(request.GET.get('lang1', '')))
     lang2_string = escape(strip_tags(request.GET.get('lang2', '')))
+
     structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
 
     errors = []
@@ -81,6 +80,14 @@ def compare(request):
         errors.append("The URL didn't specify a first language to look up.")
     if not lang2_string:
         errors.append("The URL didn't specify a second language to look up.")
+    try:
+        lang1_string, version1 = lang1_string.split(";")
+    except ValueError:
+        errors.append("The URL didn't specify a version for the first language")
+    try:
+        lang2_string, version2 = lang2_string.split(";")
+    except ValueError:
+        errors.append("The URL didn't specify a version for the second language")
 
     if errors:
         error_page_data = {
@@ -91,8 +98,8 @@ def compare(request):
         return HttpResponseNotFound(response)
 
     try:
-        metainfo = MetaInfo()
-        meta_structure = metainfo.structure(structure_query_string)
+        meta_info = MetaInfo()
+        meta_structure = meta_info.structure(structure_query_string)
     except FileNotFoundError:
         error_page_data = {
             "errors": ["The structure/concept isn't valid. Double-check your URL and try again."]
@@ -102,17 +109,18 @@ def compare(request):
         return HttpResponseNotFound(response)
 
     try:
-        lang1 = Language(
-            lang1_string, metainfo.language_friendly_name(lang1_string))
-        lang1.load_concepts(meta_structure.key)
+        lang1 = meta_info.language(lang1_string)
+        lang1.load_concepts(meta_structure.key, version1)
     except FileNotFoundError:
         response = render(request, "error_missing_structure.html", {
             "name": meta_structure.friendly_name,
             "lang": lang1_string,
             "key": meta_structure.key,
+            "version": version1,
             "template": generate_language_template(
                 lang1_string,
-                meta_structure.key
+                meta_structure.key,
+                version1
             )
         })
         return HttpResponseNotFound(response)
@@ -125,17 +133,18 @@ def compare(request):
         return HttpResponseNotFound(response)
 
     try:
-        lang2 = Language(
-            lang2_string, metainfo.language_friendly_name(lang2_string))
-        lang2.load_concepts(meta_structure.key)
+        lang2 = meta_info.language(lang2_string)
+        lang2.load_concepts(meta_structure.key, version2)
     except FileNotFoundError:
         response = render(request, "error_missing_structure.html", {
             "name": meta_structure.friendly_name,
             "lang": lang2_string,
             "key": meta_structure.key,
+            "version": version2,
             "template": generate_language_template(
                 lang2_string,
-                meta_structure.key
+                meta_structure.key,
+                version2
             )
         })
         return HttpResponseNotFound(response)
@@ -189,6 +198,10 @@ def reference(request):
         errors.append("The URL didn't specify a structure/concept to look up.")
     if not lang_string:
         errors.append("Thr URL didn't specify a language to look up.")
+    try:
+        lang_string, version = lang_string.split(";")
+    except ValueError:
+        errors.append("The URL didn't specify a version for the language")
     if errors:
         error_page_data = {
             "errors": errors
@@ -198,8 +211,8 @@ def reference(request):
         return HttpResponseNotFound(response)
 
     try:
-        metainfo = MetaInfo()
-        meta_structure = metainfo.structure(structure_query_string)
+        meta_info = MetaInfo()
+        meta_structure = meta_info.structure(structure_query_string)
     except FileNotFoundError:
         error_page_data = {
             "errors": ["The structure/concept isn't valid. Double-check your URL and try again."]
@@ -209,17 +222,18 @@ def reference(request):
         return HttpResponseNotFound(response)
 
     try:
-        lang = Language(
-            lang_string, metainfo.language_friendly_name(lang_string))
-        lang.load_concepts(meta_structure.key)
+        lang = meta_info.language(lang_string)
+        lang.load_concepts(meta_structure.key, version)
     except FileNotFoundError:
         ctx = {
             "name": meta_structure.friendly_name,
             "lang": lang_string,
             "key": meta_structure.key,
+            "version": version,
             "template": generate_language_template(
                 lang_string,
-                meta_structure.key
+                meta_structure.key,
+                version
             )
         }
         response = render(request, "error_missing_structure.html", ctx)

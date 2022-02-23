@@ -38,16 +38,20 @@
                                 <div class="card-text">
                                     <label class="text-muted py-2" for="lang1">Pick a language you know:</label>
                                     <select class="form-select" id="lang1" name="lang1">
-                                        {% for k, v in languages.items %}
-                                        <option value="{{ k }}">{{ v.name }} (version {{v.versions}})</option>
+                                        {% for k, lang in languages.items %}
+                                        {% for v in lang %}
+                                        <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                        {% endfor %}
                                         {% endfor %}
                                     </select>
                                     <label class="text-muted py-2" for="lang2">Pick a language you
                                         <strong>don't</strong>
                                         know:</label>
                                     <select class="form-select" id="lang2" name="lang2">
-                                        {% for k, v in languages.items %}
-                                        <option value="{{ k }}">{{ v.name }} (version {{v.versions}})</option>
+                                        {% for k, lang in languages.items %}
+                                        {% for v in lang %}
+                                        <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                        {% endfor %}
                                         {% endfor %}
                                     </select>
                                 </div>
@@ -83,8 +87,10 @@
                                 </select>
                                 <label class="text-muted py-2" for="lang">Pick a language:</label>
                                 <select class="form-select" id="lang" name="lang">
-                                    {% for k, v in languages.items %}
-                                    <option value="{{ k }}">{{ v.name }} (version {{v.versions}})</option>
+                                    {% for k, lang in languages.items %}
+                                    {% for v in lang %}
+                                    <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                    {% endfor %}
                                     {% endfor %}
                                 </select>
                             </div>

@@ -1,125 +1,25 @@
 {
   "languages": {
-    "ada": {
-      "name": "Ada",
-      "versions": [
-        "2012"
-      ]
-    },
-    "bash": {
-      "name": "BASH",
-      "versions": [
-        "3.2.57"
-      ]
-    },
-    "cpp": {
-      "name": "C++",
-      "versions": [
-        "C++17, generic"
-      ]
-    },
-    "csharp": {
-      "name": "C#",
-      "versions": [
-        "9"
-      ]
-    },
-    "clojure": {
-      "name": "Clojure",
-      "versions": [
-        "1.10.3"
-      ]
-    },
-    "go": {
-      "name": "Go",
-      "versions": [
-        "1.16"
-      ]
-    },
-    "haskell": {
-      "name": "Haskell",
-      "versions": [
-        "2010"
-      ]
-    },
-    "java": {
-      "name": "Java",
-      "versions": [
-        "15"
-      ]
-    },
-    "javascript": {
-      "name": "JavaScript",
-      "versions": [
-        "ES2020"
-      ]
-    },
-    "nim": {
-      "name": "Nim",
-      "versions": [
-        "1.6"
-      ]
-    },
-    "objectivec": {
-      "name": "Objective-C",
-      "versions": [
-        "2.0"
-      ]
-    },
-    "perl": {
-      "name": "Perl",
-      "versions": [
-        "5.34"
-      ]
-    },
-    "php": {
-      "name": "PHP",
-      "versions": [
-        "7.4"
-      ]
-    },
-    "python": {
-      "name": "Python",
-      "versions": [
-        "3.10"
-      ]
-    },
-    "ruby": {
-      "name": "Ruby",
-      "versions": [
-        "3.0"
-      ]
-    },
-    "rust": {
-      "name": "Rust",
-      "versions": [
-        "1"
-      ]
-    },
-    "scala": {
-      "name": "Scala",
-      "versions": [
-        "2.13"
-      ]
-    },
-    "swift": {
-      "name": "Swift",
-      "versions": [
-        "5.3.3"
-      ]
-    },
-    "typescript": {
-      "name": "TypeScript",
-      "versions": [
-        "4.2"
-      ]
-    },
-    "vbnet": {
-      "name": "Visual Basic",
-      "versions": [
-        "16"
-      ]
-    }
+    "ada": "Ada",
+    "bash": "Bash",
+    "cpp": "C++",
+    "csharp": "C#",
+    "clojure": "Clojure",
+    "go": "Go",
+    "haskell": "Haskell",
+    "java": "Java",
+    "javascript": "JavaScript",
+    "nim": "Nim",
+    "objectivec": "Objective-C",
+    "perl": "Perl",
+    "php": "PHP",
+    "python": "Python",
+    "ruby": "Ruby",
+    "rust": "Rust",
+    "scala": "Scala",
+    "swift": "Swift",
+    "typescript": "TypeScript",
+    "vbnet": "Visual Basic"
   },
   "structures": {
     "classes": "Classes",

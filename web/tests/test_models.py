@@ -13,13 +13,13 @@ class TestMetaStructures(TestCase):
         """prepare sample data for the tests"""
         self.metainfo = MetaInfo()
         with open("web/thesauruses/meta_info.json", 'r') as meta_file:
-            meta_data = meta_file.read()
-        self.data_structures = json.loads(meta_data)["structures"]
-        self.languages = json.loads(meta_data)["languages"]
+            meta_data = json.load(meta_file)
+        self.structures = meta_data["structures"]
+        self.languages = meta_data["languages"]
 
-        self.sample = {}
-        self.sample["structure_id"] = list(self.data_structures.keys())[0]
-        self.sample["friendly_name"] = self.data_structures[self.sample["structure_id"]]
+        self.sample = dict()
+        self.sample["structure_id"] = list(self.structures.keys())[0]
+        self.sample["friendly_name"] = self.structures[self.sample["structure_id"]]
         self.sample["language_id"] = list(self.languages.keys())[0]
         self.sample["language_name"] = self.languages[self.sample["language_id"]]
 
@@ -70,7 +70,7 @@ class TestMetaStructures(TestCase):
 
         self.assertEqual(bool(language), False)
         self.assertRaises(FileNotFoundError,
-                          language.load_concepts,  "notastructure")
+                          language.load_concepts,  "notastructure", "notaversion")
 
 
     # Commented out as the function *technically* works, but it can't
