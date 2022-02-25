@@ -184,6 +184,11 @@ def concepts(request):
             "id": category_key,
             "concepts": concepts_list
         })
+    return render_concepts(request, languages, meta_structure, all_categories)
+
+
+def render_concepts(request, languages, structure, all_categories):
+    """Renders the `structure` page for all `languages`"""
 
     language_name_versions = [f"{l.friendly_name} ({l.version})" for l in languages]
     if len(languages) == 1:
@@ -195,8 +200,8 @@ def concepts(request):
 
     response = {
         "title": title,
-        "concept": meta_structure.key,
-        "concept_friendly_name": meta_structure.friendly_name,
+        "concept": structure.key,
+        "concept_friendly_name": structure.friendly_name,
         "languages": [
             {
                 "key": language.key,
