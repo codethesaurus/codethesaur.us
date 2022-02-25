@@ -18,7 +18,7 @@
 
 {% for category in categories %}
            <div class="row">&nbsp;</div>
-           <div class="row"><h2>{{ category.id }}</h2></div>
+           <div class="row"><h2>{{ category.key }}</h2></div>
            <div class="card-group">
                 <div class="card">
                     <div class="card-body">
@@ -28,7 +28,7 @@
                 {% for lang in languages %} 
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="text-center">{{ lang.friendly_name }}'s Implementation</h3>
+                        <h3 class="text-center">{{ lang.name }}'s Implementation</h3>
                     </div>
                 </div>
                 {% endfor %}
@@ -59,7 +59,7 @@
                 <div class="card" id="start-of-row">
                     <div class="card-body">
                         <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang.key }}/{{ lang.version }}/{{ concept }}.json">
-                            Want to add or correct information for {{ lang.friendly_name }}?
+                            Want to add or correct information for {{ lang.name }}?
                         </a>
                     </div>
                 </div>
