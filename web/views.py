@@ -14,7 +14,7 @@ from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 
-from web.models import MetaInfo, SiteVisit, LookupData
+from web.models import MetaInfo, SiteVisit, LookupData, MissingStructureError, MissingLanguageError
 from web.thesaurus_template_generators import generate_language_template
 
 from codethesaurus.settings import BASE_DIR
@@ -127,57 +127,39 @@ def concepts(request):
     """
     visit = store_url_info(request)
 
-    language_strings = [escape(strip_tags(lang)) for lang in request.GET.getlist('lang')]
-    structure_query_string = escape(strip_tags(request.GET.get('concept', '')))
-
-    errors = []
-    if not structure_query_string:
-        errors.append("The URL didn't specify a structure/concept to look up.")
-    if not language_strings and all(language_strings):
-        # legacy parameter names
-        if "lang1" not in request.GET or "lang2" not in request.GET:
-            errors.append("The URL didn't specify any languages to look up.")
-        else:
-            language_strings = [
-                escape(strip_tags(request.GET['lang1'])),
-                escape(strip_tags(request.GET['lang2']))
-            ]
+    language_strings, structure_key, errors = clean_concepts_parameters(request.GET)
     if errors:
         return render_errors(request, errors)
 
-
+    meta_info = MetaInfo()
     try:
-        meta_info = MetaInfo()
-        meta_structure = meta_info.structure(structure_query_string)
+        meta_structure = meta_info.structure(structure_key)
     except KeyError:
         return render_errors(request, ["The structure/concept isn't valid. \
                 Double-check your URL and try again."])
 
-    languages = []
-    for language_string in language_strings:
-        try:
-            language_string, version = language_string.split(";")
-            language = meta_info.language(language_string)
-            language.load_concepts(meta_structure.key, version)
-            languages.append(language)
-        except FileNotFoundError:
-            response = render(request, "error_missing_structure.html", {
-                "name": meta_structure.friendly_name,
-                "lang": language_string,
-                "key": meta_structure.key,
-                "version": version,
+    try:
+        languages = meta_info.load_languages(language_strings, meta_structure)
+    except MissingStructureError as missing_structure:
+        return HttpResponseNotFound(render(
+            request,
+            "error_missing_structure.html",
+            {
+                "key": missing_structure.structure.key,
+                "name": missing_structure.structure.friendly_name,
+                "lang": missing_structure.language_key,
+                "lang_name": missing_structure.language_name,
+                "version": missing_structure.language_version,
                 "template": generate_language_template(
-                    language_string,
-                    meta_structure.key,
-                    version
+                    missing_structure.language_key,
+                    missing_structure.structure.key,
+                    missing_structure.language_version
                 )
-            })
-            return HttpResponseNotFound(response)
-        except ValueError:
-            errors.append(f"The URL didn't specify a version for '{language_string}'")
-        except KeyError:
-            errors.append(f"The language \"{language_string}\" isn't valid. \
-                    Double-check your URL and try again.")
+            }
+        ))
+    except MissingLanguageError as missing_language:
+        errors.append(f"The language \"{missing_language.key}\" isn't valid. \
+                        Double-check your URL and try again.")
 
     if errors:
         return render_errors(request, errors)
@@ -203,12 +185,12 @@ def concepts(request):
             "concepts": concepts_list
         })
 
-    title = ""
+    language_name_versions = [f"{l.friendly_name} ({l.version})" for l in languages]
     if len(languages) == 1:
-        title = f"Reference for {languages[0].friendly_name}"
+        title = f"Reference for {language_name_versions[0]}"
     else:
-        title = f"Comparing {', '.join([l.friendly_name for l in languages[:-1]])}\
-                and {languages[-1].friendly_name}"
+        title = f"Comparing {', '.join(language_name_versions[:-1])}\
+                and {language_name_versions[-1]}"
 
 
     response = {
@@ -216,7 +198,11 @@ def concepts(request):
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
         "languages": [
-            { "key": language.key, "friendly_name": language.friendly_name }
+            {
+                "key": language.key,
+                "version": language.version,
+                "friendly_name": language.friendly_name
+            }
             for language in languages
         ],
         "categories": all_categories,
@@ -344,3 +330,30 @@ def render_errors(request, errors):
     response = render(request, 'errormisc.html', error_page_data)
 
     return HttpResponseNotFound(response)
+
+
+def clean_concepts_parameters(parameters):
+    """Verify and clean up the parameters for concepts view"""
+
+    language_strings = list(parameters.getlist('lang'))
+    # legacy parameter names
+    if "lang1" in parameters:
+        language_strings.append(parameters['lang1'])
+    if "lang2" in parameters:
+        language_strings.append(parameters['lang2'])
+
+    language_keys_versions = []
+    for lang in language_strings:
+        key_version = escape(strip_tags(lang)).split(";")
+        try:
+            language_keys_versions.append((key_version[0], key_version[1]))
+        except IndexError:
+            language_keys_versions.append((key_version[0], None))
+    structure_key = escape(strip_tags(parameters.get('concept', '')))
+
+    errors = []
+    if not structure_key:
+        errors.append("The URL didn't specify a structure/concept to look up.")
+    if not language_keys_versions:
+        errors.append("The URL didn't specify any languages to look up.")
+    return language_keys_versions, structure_key, errors

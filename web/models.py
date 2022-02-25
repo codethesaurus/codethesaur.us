@@ -155,6 +155,25 @@ class Language:
         return self.concept(concept_key).get("comment", "")
 
 
+class MissingLanguageError(Exception):
+    """Error for when a requested language is not defined in `meta.json`"""
+    def __init__(self, key):
+        super().__init__()
+        self.key = key
+
+
+class MissingStructureError(Exception):
+    """
+    Error that signifies that a specific language & version does not have the structure
+    defined
+    """
+    def __init__(self, structure, language_key, language_version):
+        super().__init__()
+        self.structure = structure
+        self.language_key = language_key
+        self.language_version = language_version
+
+
 class MetaInfo:
     """Holds info about structures and languages"""
 
@@ -194,6 +213,26 @@ class MetaInfo:
             language_key,
             self.language_friendly_name(language_key),
         )
+
+
+    def load_languages(self, languages, meta_structure):
+        """Tries to load all languages from `language_keys` and the requested `structure`"""
+        languages = []
+        for language_key in languages:
+            try:
+                language, version = language_key
+                language.load_concepts(meta_structure.key, version)
+                languages.append(language)
+            except FileNotFoundError as file_not_found:
+                raise MissingStructureError(
+                    meta_structure,
+                    language_key,
+                    version,
+                ) from file_not_found
+            except KeyError as key_error:
+                raise MissingLanguageError(language_key) from key_error
+        return languages
+
 
     def structure_friendly_name(self, structure_key):
         """
