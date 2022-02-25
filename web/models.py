@@ -22,7 +22,7 @@ class MetaStructure:
         self.key = structure_key
         self.friendly_name = friendly_name
         meta_structure_file_path = os.path.join(
-            "web", "thesauruses", "_meta", structure_key) + ".json"
+            "web", "thesauruses", "_meta", f"{structure_key}.json")
         with open(meta_structure_file_path, 'r', encoding='UTF-8') as meta_structure_file:
             meta_structure_file_json = json.load(meta_structure_file)
 
@@ -48,6 +48,7 @@ class Language:
         self.friendly_name = friendly_name
         self.concepts = None
         self.language_dir = os.path.join("web", "thesauruses", self.key)
+        self.version = None
 
 
     def versions(self):
@@ -82,11 +83,11 @@ class Language:
         :param structure_key: the ID for the structure to load
         :param version: the version of the language
         """
-        structure_file_name = f"{structure_key}.json"
-        file_path = os.path.join(self.language_dir, version, structure_file_name)
+        file_path = os.path.join(self.language_dir, version, f"{structure_key}.json")
         with open(file_path, 'r', encoding='UTF-8') as file:
             file_json = json.load(file)
             self.concepts = file_json["concepts"]
+        self.version = version
 
 
     def concept(self, concept_key):
@@ -161,13 +162,14 @@ class MissingLanguageError(Exception):
 
 class MissingStructureError(Exception):
     """
-    Error that signifies that a specific language & version does not have the structure
+    Error that signals that a specific language & version does not have the structure
     defined
     """
-    def __init__(self, structure, language_key, language_version):
+    def __init__(self, structure, language_key, language_name, language_version):
         super().__init__()
         self.structure = structure
         self.language_key = language_key
+        self.language_name = language_name
         self.language_version = language_version
 
 
@@ -212,23 +214,20 @@ class MetaInfo:
         )
 
 
-    def load_languages(self, language_keys, meta_structure):
+    def load_languages(self, language_keys_versions, meta_structure):
         """Tries to load all languages from `language_keys` and the requested `structure`"""
         languages = []
-        for language_key in language_keys:
+        for language_key, version in language_keys_versions:
             try:
-                language_version = language_key.split(";")
-                language = self.language(language_version[0])
-                try:
-                    version = language_version[1]
-                except IndexError:
-                    version = sorted(language.versions())[-1]
+                language = self.language(language_key)
+                version = version or sorted(language.versions())[-1]
                 language.load_concepts(meta_structure.key, version)
                 languages.append(language)
             except FileNotFoundError as file_not_found:
                 raise MissingStructureError(
                     meta_structure,
                     language_key,
+                    self.language_friendly_name(language_key),
                     version,
                 ) from file_not_found
             except KeyError as key_error:
