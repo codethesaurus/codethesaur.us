@@ -10,19 +10,18 @@ class MetaStructure:
     concepts
     """
 
-    def __init__(self, structure_key, friendly_name):
+    def __init__(self, key, name):
         """
         Inits the MetaStructure object by loading in the concepts and
         categories from a language's structure file
 
-        :param structure_key: key for the structure
-        :param friendly_name: the human-friendly name for the specified
-            structure
+        :param key: key for the structure
+        :param name: the human-friendly name for the specified structure
         """
-        self.key = structure_key
-        self.friendly_name = friendly_name
+        self.key = key
+        self.name = name
         meta_structure_file_path = os.path.join(
-            "web", "thesauruses", "_meta", f"{structure_key}.json")
+            "web", "thesauruses", "_meta", f"{key}.json")
         with open(meta_structure_file_path, 'r', encoding='UTF-8') as meta_structure_file:
             meta_structure_file_json = json.load(meta_structure_file)
 
@@ -35,17 +34,18 @@ class Language:
     structure key
     """
 
-    def __init__(self, key, friendly_name):
+    def __init__(self, key, name):
         """
         Initialize the Language object, which will contain concepts for a given
         structure
 
-        :param key: ID of the language in the meta_info.json file
+        :param key: key of the language in the meta_info.json file
+        :param name: the human-friendly name for the specified language
         """
 
         # Add an empty string to convert SafeString to str
         self.key = str(key + "")
-        self.friendly_name = friendly_name
+        self.name = name
         self.concepts = None
         self.language_dir = os.path.join("web", "thesauruses", self.key)
         self.version = None
@@ -80,7 +80,7 @@ class Language:
         """
         Loads the structure file into the Language object
 
-        :param structure_key: the ID for the structure to load
+        :param structure_key: the key for the structure to load
         :param version: the version of the language
         """
         file_path = os.path.join(self.language_dir, version, f"{structure_key}.json")
@@ -117,7 +117,7 @@ class Language:
         """
         Returns a Boolean if the concept is not known
 
-        :param concept_key: ID for the concept
+        :param concept_key: key for the concept
         :return: Boolean if the concept is not known
         """
         return self.concepts.get(concept_key) is None
@@ -126,7 +126,7 @@ class Language:
         """
         Returns a Boolean if the concept is implemented
 
-        :param concept_key: ID for the concept
+        :param concept_key: key for the concept
         :return: Boolean if the language defines this concept
         """
         return not self.concept(concept_key).get("not-implemented", False)
@@ -135,7 +135,7 @@ class Language:
         """
         Returns the code portion of the provided concept
 
-        :param concept_key: ID for the concept
+        :param concept_key: key for the concept
         :return: the string containing the concept's code
         """
         code = self.concept(concept_key).get("code")
@@ -147,7 +147,7 @@ class Language:
         """
         Returns the comment portion of the provided concept
 
-        :param concept_key: ID for the concept
+        :param concept_key: key for the concept
         :return: the string containing the concept's comment
         """
         return self.concept(concept_key).get("comment", "")
@@ -189,11 +189,11 @@ class MetaInfo:
         self.structures = meta_info_json["structures"]
         self.languages = meta_info_json["languages"]
 
-    def language_friendly_name(self, language_key):
+    def language_name(self, language_key):
         """
         Given a structure key (from meta_info.json), returns the language's human-friendly name
 
-        :param language_key: ID of the language located in the meta_info.json file
+        :param language_key: key of the language located in the meta_info.json file
         :return: string with the human-friendly name
         """
         return self.languages[language_key]
@@ -203,14 +203,14 @@ class MetaInfo:
         Given a language key (from meta_info.json), returns the whole
         Language for it
 
-        :param language_key: ID of the language located in the meta_info.json
+        :param language_key: key of the language located in the meta_info.json
             file
         :return: Language for the requested key
         :rtype: Language
         """
         return Language(
             language_key,
-            self.language_friendly_name(language_key),
+            self.language_name(language_key),
         )
 
 
@@ -235,12 +235,12 @@ class MetaInfo:
         return languages
 
 
-    def structure_friendly_name(self, structure_key):
+    def structure_name(self, structure_key):
         """
         Given a structure key (from meta_info.json), returns the structure's
         human-friendly name
 
-        :param structure_key: ID of the structure located in the meta_info.json
+        :param structure_key: key of the structure located in the meta_info.json
             file
         :return: string with the human-friendly name
         :rtype: String
@@ -252,12 +252,12 @@ class MetaInfo:
         Given a structure key (from meta_info.json), returns the whole
         MetaStructure for it
 
-        :param structure_key: ID of the structure located in the meta_info.json
+        :param structure_key: key of the structure located in the meta_info.json
             file
         :return: MetaStructure for the requested key
         :rtype: MetaStructure
         """
         return MetaStructure(
             structure_key,
-            self.structure_friendly_name(structure_key)
+            self.structure_name(structure_key)
         )

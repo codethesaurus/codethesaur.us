@@ -33,7 +33,7 @@ def index(request):
     for key in meta_info.languages:
         lang = meta_info.language(key)
         meta_data_langs[key] = [{
-            "name": lang.friendly_name,
+            "name": lang.name,
             "version": version,
         } for version in lang.versions()]
 
@@ -89,7 +89,7 @@ def concepts(request):
             "error_missing_structure.html",
             {
                 "key": missing_structure.structure.key,
-                "name": missing_structure.structure.friendly_name,
+                "name": missing_structure.structure.name,
                 "lang": missing_structure.language_key,
                 "lang_name": missing_structure.language_name,
                 "version": missing_structure.language_version,
@@ -113,7 +113,7 @@ def concepts(request):
         concepts_list = [concepts_data(key, name, languages) for (key, name) in category.items()]
 
         all_categories.append({
-            "id": category_key,
+            "key": category_key,
             "concepts": concepts_list
         })
     return render_concepts(request, languages, meta_structure, all_categories)
@@ -122,7 +122,7 @@ def concepts(request):
 def render_concepts(request, languages, structure, all_categories):
     """Renders the `structure` page for all `languages`"""
 
-    language_name_versions = [f"{l.friendly_name} ({l.version})" for l in languages]
+    language_name_versions = [f"{l.name} ({l.version})" for l in languages]
     if len(languages) == 1:
         title = f"Reference for {language_name_versions[0]}"
     else:
@@ -133,12 +133,12 @@ def render_concepts(request, languages, structure, all_categories):
     response = {
         "title": title,
         "concept": structure.key,
-        "concept_friendly_name": structure.friendly_name,
+        "concept_name": structure.name,
         "languages": [
             {
                 "key": language.key,
                 "version": language.version,
-                "friendly_name": language.friendly_name
+                "name": language.name
             }
             for language in languages
         ],
@@ -242,7 +242,7 @@ def concepts_data(key, name, languages):
     :return: string with code with applied HTML formatting
     """
     return {
-        "id": key,
+        "key": key,
         "name": name,
         "data": [{
             "code": format_code_for_display(key, lang),

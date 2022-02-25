@@ -1,6 +1,6 @@
 {
     "meta": {
-        "language": "language_id",
+        "language": "language_key",
         "language_version": "version.number",
         "language_name": "Human-Friendly Language Name"
     },
