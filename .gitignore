@@ -6,3 +6,4 @@ venv
 __pycache__
 public_html/
 staticfiles/
+*.sqlite3

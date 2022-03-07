@@ -2,6 +2,7 @@
 import json
 import os
 
+from django.db import models
 
 # pylint: disable=too-few-public-methods
 class MetaStructure:
@@ -218,3 +219,19 @@ class MetaInfo:
             structure_key,
             self.structure_friendly_name(structure_key)
         )
+
+class SiteVisit(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    date_time = models.DateTimeField(auto_now_add=True)
+    url = models.URLField(max_length=300)
+    user_agent = models.CharField(max_length=300)
+    referer = models.CharField(max_length=300)
+
+
+class LookupData(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    date_time = models.DateTimeField
+    language1 = models.CharField(max_length=50)
+    language2 = models.CharField(max_length=50)
+    structure = models.CharField(max_length=50)
+    site_visit = models.ForeignKey(SiteVisit, on_delete=models.CASCADE)
