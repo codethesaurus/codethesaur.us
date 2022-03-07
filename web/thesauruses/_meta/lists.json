@@ -1,6 +1,7 @@
 {
   "meta": {
-    "structure": "lists"
+    "structure": "lists",
+    "structure_name": "Lists, Arrays, and Hashed Lists"
   },
   "categories": {
     "Ordered, Mutable Lists": {

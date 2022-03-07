@@ -27,6 +27,7 @@
     "data_types": "Data Types",
     "exception_handling": "Exception Handling",
     "functions": "Functions, Methods, and Subroutines",
+    "io": "Input and Output",
     "lists": "Lists, Arrays, and Hashed Lists",
     "operators": "Logical and Mathematical/Arithmetic Operators",
     "strings": "Strings"

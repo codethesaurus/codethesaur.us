@@ -1,6 +1,7 @@
 {
   "meta": {
-    "structure": "data_types"
+    "structure": "data_types",
+    "structure_name": "Data Types"
   },
   "categories": {
     "Numerical": {

@@ -1,6 +1,7 @@
 {
   "meta": {
-    "structure": "classes"
+    "structure": "classes",
+    "structure_name": "Classes"
   },
   "categories": {
     "Defining Classes": {

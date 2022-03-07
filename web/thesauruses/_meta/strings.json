@@ -1,6 +1,7 @@
 {
   "meta": {
-    "structure": "strings"
+    "structure": "strings",
+    "structure_name": "Strings"
   },
   "categories": {
     "Creating/Destroying Strings": {
