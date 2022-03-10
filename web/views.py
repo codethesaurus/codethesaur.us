@@ -37,10 +37,12 @@ def store_url_info(request):
     return visit
 
 
-def store_lookup_info(request, visit, language1, language2, structure):
+def store_lookup_info(request, visit, language1, version1, language2, version2, structure):
     info = LookupData(
         language1=language1,
+        version1=version1,
         language2=language2,
+        version2=version2,
         structure=structure,
         site_visit=visit
     )
@@ -193,7 +195,7 @@ def compare(request):
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
 
-    store_lookup_info(request, visit, lang1.key, lang2.key, meta_structure.key)
+    store_lookup_info(request, visit, lang1.key, version1, lang2.key, version2, meta_structure.key)
 
     both_categories = []
 
@@ -287,7 +289,7 @@ def reference(request):
         response = render(request, "errormisc.html", error_page_data)
         return HttpResponseNotFound(response)
 
-    store_lookup_info(request, visit, lang.key, '', meta_structure.key)
+    store_lookup_info(request, visit, lang.key, version, '', '', meta_structure.key)
 
     categories = []
 
