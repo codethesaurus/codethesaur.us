@@ -1,6 +1,7 @@
 {
   "meta": {
-    "structure": "control_structures"
+    "structure": "control_structures",
+    "structure_name": "Control Structures"
   },
   "categories": {
     "Conditional Statements (ifs)": {

@@ -1,6 +1,7 @@
 {
   "meta": {
-    "structure": "functions"
+    "structure": "functions",
+    "structure_name": "Functions, Methods, and Subroutines"
   },
   "categories": {
     "Void Functions": {

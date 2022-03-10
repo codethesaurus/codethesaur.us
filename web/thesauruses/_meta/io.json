@@ -1,345 +1,86 @@
 {
-    "meta": {
-        "language": "language_id",
-        "language_version": "version.number",
-        "language_name": "Human-Friendly Language Name"
+  "meta": {
+    "structure": "io",
+    "structure_name": "Input and Output"
+  },
+  "categories": {
+    "Console IO": {
+      "write_line": "Write a line to the console",
+      "write_line_with_new_line": "Write a line to the console with a return character",
+      "read_line": "Read a line of user input from the console",
+      "read_char": "Read a single char of user input from the console",
+      "clear_console_cutput": "Clear the console output",
+      "change_console_background_color": "Change the color of the console",
+      "change_console_text_color": "Change the color of the console"
     },
-    "categories": {
-        "Console IO": [
-            "write_line",
-            "write_line_with_new_line",
-            "read_line",
-            "read_char",
-            "clear_console_cutput",
-            "change_console_background_color",
-            "change_console_text_color"
-        ],
-        "File IO": [
-            "file_functions_lib",
-            "list_directory",
-            "read_directory_info",
-            "create_directory",
-            "delete_directory",
-            "rename_directory",
-            "move_directory",
-            "update_directory_permissions",
-            "read_line_of_file",
-            "read_lines_of_file",
-            "read_file_stream",
-            "create_file",
-            "delete_file",
-            "update_file",
-            "move_file"
-        ],
-        "Network IO": [
-            "network_functions_lib",
-            "send_a_http_request",
-            "send_a_get_request",
-            "send_a_post_request",
-            "send_a_put_request",
-            "send_a_patch_request",
-            "send_a_delete_request",
-            "send_a_head_request",
-            "send_a_options_request",
-            "send_a_connect_request",
-            "send_a_trace_request",
-            "add_headers",
-            "add_query_params",
-            "inbuilt_url_class",
-            "open_a_socket",
-            "close_a_socket",
-            "add_authorization_headers",
-            "add_cookies",
-            "read_cookies",
-            "read_headers"
-        ],
-        "Database IO": [
-            "database_functions_lib",
-            "open_connection",
-            "close_connection",
-            "execute_query_single_result_set",
-            "execute_query_multiple_result_sets",
-            "execute_non_query"
-        ],
-        "JSON": [
-            "json_function_lib",
-            "serialize_json",
-            "deserialize_json",
-            "serialize_json_with_options",
-            "deserialize_json_with_options"
-        ],
-        "XML": [
-            "xml_function_lib",
-            "serialize_xml",
-            "deserialize_xml",
-            "serialize_xml_with_options",
-            "deserialize_xml_with_options"
-        ],
-        "CSV": [
-            "csv_function_lib",
-            "read_csv_file",
-            "read_csv_to_type",
-            "write_csv_file",
-            "append_csv_file",
-            "set_csv_delimiter"
-        ]
+    "File IO": {
+      "file_functions_lib": "Library containing file IO functions",
+      "list_directory": "List of the items in the current directory",
+      "read_directory_info": "Get infomation about the current directory (number of items, size, etc)",
+      "create_directory": "Create a directory",
+      "delete_directory": "Delete a directory",
+      "rename_directory": "Rename a directory",
+      "move_directory": "Move a directory to another locaiton",
+      "update_directory_permissions": "Update the permissions a user, group, or application has to a directory",
+      "read_line_of_file": "Read a single line from a file",
+      "read_lines_of_file": "Read all the lines in a file",
+      "read_file_stream": "Read the file into a stream",
+      "create_file": "Create a file",
+      "delete_file": "Delete a file",
+      "update_file": "Update a file",
+      "move_file": "Move a file to a new location"
     },
-    "io": {
-        "file_functions_lib": {
-            "name": "Library containing file IO functions",
-            "code": [""]
-        },
-        "write_line": {
-            "name": "Write a line to the console",
-            "code": [""]
-        },
-        "write_line_with_new_line": {
-            "name": "Write a line to the console with a return character",
-            "code": [""]
-        },
-        "read_line": {
-            "name": "Read a line of user input from the console",
-            "code": [""]
-        },
-        "read_char": {
-            "name": "Read a single char of user input from the console",
-            "code": [""]
-        },
-        "clear_console_cutput": {
-            "name": "Clear the console output",
-            "code": [""]
-        },
-        "change_console_background_color": {
-            "name": "Change the color of the console",
-            "code": [""]
-        },
-        "change_console_text_color": {
-            "name": "Change the color of the console",
-            "code": [""]
-        },
-        "list_directory": {
-            "name": "List of the items in the current directory",
-            "code": [""]
-        },
-        "read_directory_info": {
-            "name": "Get infomation about the current directory (number of items, size, etc)",
-            "code": [""]
-        },
-        "create_directory": {
-            "name": "Create a directory",
-            "code": [""]
-        },
-        "delete_directory": {
-            "name": "Delete a directory",
-            "code": [""]
-        },
-        "rename_directory": {
-            "name": "Rename a directory",
-            "code": [""]
-        },
-        "move_directory": {
-            "name": "Move a directory to another locaiton",
-            "code": [""]
-        },
-        "update_directory_permissions": {
-            "name": "Update the permissions a user, group, or application has to a directory",
-            "code": [""]
-        },
-        "read_line_of_file": {
-            "name": "Read a single line from a file",
-            "code": [""]
-        },
-        "read_lines_of_file": {
-            "name": "Read all the lines in a file",
-            "code": [""]
-        },
-        "read_file_stream": {
-            "name": "Read the file into a stream",
-            "code": [""]
-        },
-        "create_file": {
-            "name": "Create a file",
-            "code": [""]
-        },
-        "delete_file": {
-            "name": "Delete a file",
-            "code": [""]
-        },
-        "update_file": {
-            "name": "Update a file",
-            "code": [""]
-        },
-        "move_file": {
-            "name": "Move a file to a new location",
-            "code": [""]
-        },
-        "network_functions_lib": {
-            "name": "Library containing network IO functions",
-            "code": [""]
-        },
-        "send_a_http_request": {
-            "name": "Send a HTTP request",
-            "code": [""]
-        },
-        "send_a_get_request": {
-            "name": "Send a HTTP GET request",
-            "code": [""]
-        },
-        "send_a_post_request": {
-            "name": "Send a HTTP POST request",
-            "code": [""]
-        },
-        "send_a_put_request": {
-            "name": "Send a HTTP PUT request",
-            "code": [""]
-        },
-        "send_a_patch_request": {
-            "name": "Send a HTTP PATCH request",
-            "code": [""]
-        },
-        "send_a_delete_request": {
-            "name": "Send a HTTP DELETE request",
-            "code": [""]
-        },
-        "send_a_head_request": {
-            "name": "Send a HTTP HEAD request",
-            "code": [""]
-        },
-        "send_a_options_request": {
-            "name": "Send a HTTP OPTIONS request",
-            "code": [""]
-        },
-        "send_a_connect_request": {
-            "name": "Send a HTTP CONNECT request",
-            "code": [""]
-        },
-        "send_a_trace_request": {
-            "name": "Send a HTTP TRACE request",
-            "code": [""]
-        },
-        "add_headers": {
-            "name": "Add headers to a HTTP request",
-            "code": [""]
-        },
-        "add_query_params": {
-            "name": "Add query parameters to a HTTP request",
-            "code": [""]
-        },
-        "inbuilt_url_class": {
-            "name": "The inbuilt URL class",
-            "code": [""]
-        },
-        "open_a_socket": {
-            "name": "Open a network socket",
-            "code": [""]
-        },
-        "close_a_socket": {
-            "name": "Close a network socket",
-            "code": [""]
-        },
-        "add_authorization_headers": {
-            "name": "Add an authorization header",
-            "code": [""]
-        },
-        "add_cookies": {
-            "name": "Add cookies to a HTTP request",
-            "code": [""]
-        },
-        "read_cookies": {
-            "name": "Read cookies from a HTTP response",
-            "code": [""]
-        },
-        "read_headers": {
-            "name": "Read headers from a HTTP response",
-            "code": [""]
-        },
-        "database_functions_lib": {
-            "name": "Library containing database IO functions",
-            "code": [""]
-        },
-        "open_connection": {
-            "name": "Open a database connection",
-            "code": [""]
-        },
-        "close_connection": {
-            "name": "Close a database connection",
-            "code": [""]
-        },
-        "execute_query_single_result_set": {
-            "name": "Execute a query returning a single result set",
-            "code": [""]
-        },
-        "execute_query_multiple_result_sets": {
-            "name": "Execute a query returning a multiple result sets",
-            "code": [""]
-        },
-        "execute_non_query": {
-            "name": "Execute a non query (update, delete)",
-            "code": [""]
-        },
-        "json_function_lib": {
-            "name": "Library containing JSON functions",
-            "code": [""]
-        },
-        "serialize_json": {
-            "name": "Serialize an object to JSON",
-            "code": [""]
-        },
-        "deserialize_json": {
-            "name": "Deserialize a string from JSON",
-            "code": [""]
-        },
-        "serialize_json_with_options": {
-            "name": "Serialize an object to JSON with options",
-            "code": [""]
-        },
-        "deserialize_json_with_options": {
-            "name": "Deserialize a string from JSON with options",
-            "code": [""]
-        },
-        "xml_function_lib": {
-            "name": "Library containing XML functions",
-            "code": [""]
-        },
-        "serialize_xml": {
-            "name": "Serialize an object to XML",
-            "code": [""]
-        },
-        "deserialize_xml": {
-            "name": "Deserialize a string from XML",
-            "code": [""]
-        },
-        "serialize_xml_with_options": {
-            "name": "Serialize an object to XML with options",
-            "code": [""]
-        },
-        "deserialize_xml_with_options": {
-            "name": "Deserialize a string from XML with options",
-            "code": [""]
-        },
-        "csv_function_lib": {
-            "name": "Library containing CSV functions",
-            "code": [""]
-        },
-        "read_csv_file": {
-            "name": "Reading a CSV file",
-            "code": [""]
-        },
-        "read_csv_to_type": {
-            "name": "Reading a CSV file to a typed array",
-            "code": [""]
-        },
-        "write_csv_file": {
-            "name": "Write a new CSV file",
-            "code": [""]
-        },
-        "append_csv_file": {
-            "name": "Append to end of CSV file",
-            "code": [""]
-        },
-        "set_csv_delimiter": {
-            "name": "Set the CSV delitmiter to use when reading/writing",
-            "code": [""]
-        }
+    "Network IO": {
+      "network_functions_lib": "Library containing network IO functions",
+      "send_a_http_request": "Send a HTTP request",
+      "send_a_get_request": "Send a HTTP GET request",
+      "send_a_post_request": "Send a HTTP POST request",
+      "send_a_put_request": "Send a HTTP PUT request",
+      "send_a_patch_request": "Send a HTTP PATCH request",
+      "send_a_delete_request": "Send a HTTP DELETE request",
+      "send_a_head_request": "Send a HTTP HEAD request",
+      "send_a_options_request": "Send a HTTP OPTIONS request",
+      "send_a_connect_request": "Send a HTTP CONNECT request",
+      "send_a_trace_request": "Send a HTTP TRACE request",
+      "add_headers": "Add headers to a HTTP request",
+      "add_query_params": "Add query parameters to a HTTP request",
+      "inbuilt_url_class": "The inbuilt URL class",
+      "open_a_socket": "Open a network socket",
+      "close_a_socket": "Close a network socket",
+      "add_authorization_headers": "Add an authorization header",
+      "add_cookies": "Add cookies to a HTTP request",
+      "read_cookies": "Read cookies from a HTTP response",
+      "read_headers": "Read headers from a HTTP response"
+    },
+    "Database IO": {
+      "database_functions_lib": "Library containing database IO functions",
+      "open_connection": "Open a database connection",
+      "close_connection": "Close a database connection",
+      "execute_query_single_result_set": "Execute a query returning a single result set",
+      "execute_query_multiple_result_sets": "Execute a query returning a multiple result sets",
+      "execute_non_query": "Execute a non query (update, delete)"
+    },
+    "JSON": {
+      "json_function_lib": "Library containing JSON functions",
+      "serialize_json": "Serialize an object to JSON",
+      "deserialize_json": "Deserialize a string from JSON",
+      "serialize_json_with_options": "Serialize an object to JSON with options",
+      "deserialize_json_with_options": "Deserialize a string from JSON with options"
+    },
+    "XML": {
+      "xml_function_lib": "Library containing XML functions",
+      "serialize_xml": "Serialize an object to XML",
+      "deserialize_xml": "Deserialize a string from XML",
+      "serialize_xml_with_options": "Serialize an object to XML with options",
+      "deserialize_xml_with_options": "Deserialize a string from XML with options"
+    },
+    "CSV": {
+      "csv_function_lib": "Library containing CSV functions",
+      "read_csv_file": "Reading a CSV file",
+      "read_csv_to_type": "Reading a CSV file to a typed array",
+      "write_csv_file": "Write a new CSV file",
+      "append_csv_file": "Append to end of CSV file",
+      "set_csv_delimiter": "Set the CSV delitmiter to use when reading/writing"
     }
+  }
 }

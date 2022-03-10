@@ -1,6 +1,7 @@
 {
   "meta": {
-    "structure": "operators"
+    "structure": "operators",
+    "structure_name": "Logical and Mathematical/Arithmetic Operators"
   },
   "categories": {
     "Arithmetic Operators": {

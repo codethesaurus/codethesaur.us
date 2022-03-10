@@ -1,6 +1,7 @@
 {
   "meta": {
-    "structure": "exception_handling"
+    "structure": "exception_handling",
+    "structure_name": "Exception Handling"
   },
   "categories": {
     "Imports": {
