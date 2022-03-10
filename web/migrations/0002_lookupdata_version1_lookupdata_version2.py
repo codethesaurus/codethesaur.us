@@ -13,12 +13,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='lookupdata',
             name='version1',
-            field=models.CharField(default=None, max_length=20),
+            field=models.CharField(default='', max_length=20),
 
         ),
         migrations.AddField(
             model_name='lookupdata',
             name='version2',
-            field=models.CharField(default=None, max_length=20),
+            field=models.CharField(default='', max_length=20),
         ),
     ]
