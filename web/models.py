@@ -232,8 +232,8 @@ class LookupData(models.Model):
     id = models.BigAutoField(primary_key=True)
     date_time = models.DateTimeField
     language1 = models.CharField(max_length=50)
-    version1 = models.CharField(max_length=20, default=None)
+    version1 = models.CharField(max_length=20, default='')
     language2 = models.CharField(max_length=50)
-    version2 = models.CharField(max_length=20, default=None)
+    version2 = models.CharField(max_length=20, default='')
     structure = models.CharField(max_length=50)
     site_visit = models.ForeignKey(SiteVisit, on_delete=models.CASCADE)
