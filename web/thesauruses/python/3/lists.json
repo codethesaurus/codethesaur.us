@@ -1,0 +1,577 @@
+{
+  "meta": {
+    "language": "python",
+    "language_name": "Python",
+    "structure": "lists",
+    "language_version": "3"
+  },
+  "concepts": {
+    "name_of_ordered_mutable_list": {
+      "name": "What is a ordered mutable list called?",
+      "code": [
+        "list"
+      ]
+    },
+    "create_a_ordered_mutable_list": {
+      "name": "Create the list",
+      "code": [
+        "list_name = []",
+        "list_name = [value]",
+        "list_name = [value1, value2, ...]"
+      ],
+      "comment": "First line creates an empty list. Second line creates a list with one value. Third line creates a list with multiple values"
+
+    },
+    "ordered_mutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": [
+        "0"
+      ]
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "name": "Can you append to it?",
+      "code": [
+        "Yes"
+      ]
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "name": "Can you insert into the middle of it?",
+      "code": [
+        "Yes"
+      ]
+    },
+    "access_element_in_ordered_mutable_list": {
+      "name": "Access element by index",
+      "code": [
+        "list_name[index]"
+      ]
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "name": "Insert element at beginning",
+      "code": [
+        "list_name.insert(0, value)"
+      ]
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "name": "Insert element at end",
+      "code": [
+        "list_name.append(value)"
+      ]
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "name": "Insert element in middle",
+      "code": [
+        "list_name.insert(index, value)"
+      ]
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "name": "Erase first element",
+      "code": [
+        "list_name.pop(0)"
+      ]
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "name": "Erase last element",
+      "code": [
+        "list_name.pop()"
+      ]
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "name": "Erase element in the middle",
+      "code": [
+        "list_name.pop(index)",
+        "list_name.remove(value)"
+      ],
+      "comment": "First line removes element by index. Second line removes element by value"
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "name": "Swap two elements",
+      "code": [
+        "list_name[index1], list_name[index2] = list_name[index2], list_name[index1]"
+      ]
+    },
+    "delete_ordered_mutable_list": {
+      "name": "Delete the list",
+      "code": [
+        "del list_name"
+      ]
+    },
+    "name_of_unordered_mutable_list": {
+      "name": "What is a unordered mutable list called?",
+      "code": [
+        "set"
+      ]
+    },
+    "create_a_unordered_mutable_list": {
+      "name": "unordered",
+      "code": [
+        "set_name = {}",
+        "set_name = {value}",
+        "set_name = {value1, value2, ...}"
+      ],
+      "comment": "First line creates an empty set. Second line creates a set with one value. Third line creates a set with multiple values"
+    },
+    "unordered_mutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "name": "Can you append to it?",
+      "code": [
+        "No"
+      ]
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "name": "Can you insert into the middle of it?",
+      "code": [
+        "Yes"
+      ],
+      "comment": "Because a set is unordered, the index cannot be specified"
+    },
+    "access_element_in_unordered_mutable_list": {
+      "name": "Access element by index",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "name": "Insert element at beginning",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "name": "Insert element at end",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "name": "Insert element in middle",
+      "code": [
+        "set_name.add(value)"
+      ],
+      "comment": "Because a set is unordered, the index cannot be specified"
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "name": "Erase first element",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "name": "Erase last element",
+      "code": [
+        "set_name.pop()"
+      ],
+      "comment": "This method will technically remove the last element in the set, however, because a set is unordered, this will remove a random element"
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "name": "Erase element in the middle",
+      "code": [
+        "set_name.remove(value)"
+      ]
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "name": "Swap two elements",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "delete_unordered_mutable_list": {
+      "name": "Delete the list",
+      "code": [
+        "del set_name"
+      ]
+    },
+    "name_of_ordered_immutable_list": {
+      "name": "What is a ordered immutable list called?",
+      "code": [
+        "tuple"
+      ]
+    },
+    "create_a_ordered_immutable_list": {
+      "name": "Create the list",
+      "code": [
+        "tuple_name = ()",
+        "tuple_name(value,)",
+        "tuple_name(value1, value2, ...)"
+      ],
+      "comment": "First line creates an empty tuple. Second line creates a tuple with one value. Third line creates a tuple with multiple values"
+    },
+    "ordered_immutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": [
+        "0"
+      ]
+    },
+    "access_element_in_ordered_immutable_list": {
+      "name": "Access element by index",
+      "code": [
+        "tuple_name[index]"
+      ]
+    },
+    "delete_ordered_immutable_list": {
+      "name": "Delete the list",
+      "code": [
+        "del tuple_name"
+      ]
+    },
+    "name_of_unordered_immutable_list": {
+      "name": "What is a unordered immutable list called?",
+      "code": [
+        "frozenset"
+      ]
+    },
+    "create_a_unordered_immutable_list": {
+      "name": "Create the list",
+      "code": [
+        "frozenset_name = frozenset(set_name)"
+      ],
+      "comment": "The frozenset() function can be used on any iterable object. However, to get an unordered immutable list, it should be used on a set."
+    },
+    "unordered_immutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "name": "Access element by index",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "delete_unordered_immutable_list": {
+      "name": "Delete the list",
+      "code": [
+        "del frozenset_name"
+      ]
+    },
+    "name_of_mutable_hashed_list": {
+      "name": "What is a mutable hashed list called?",
+      "code": [
+        "dict"
+      ],
+      "not-implemented": "true"
+    },
+    "create_a_mutable_hashed_list": {
+      "name": "Create the list",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "name": "Insert an element",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "name": "Erase an element from the list",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "delete_mutable_hashed_list": {
+      "name": "Delete the list",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "name_of_immutable_hashed_list": {
+      "name": "What is an immutable hashed list called?",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "create_a_immutable_hashed_list": {
+      "name": "Create the list",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "name": "Insert an element",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "name": "Erase an element from the list",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "delete_immutable_hashed_list": {
+      "name": "Delete the list",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "create_a_mutable_set": {
+      "name": "Create a mutable key/value set",
+      "code": [
+        "dict_name = {}",
+        "dict_name = {key: value}",
+        "dict_name = {key1: value1, key2: value2, ...}"
+      ],
+      "comment": "First line creates an empty dict. Second line creates a dict with one key/value pair. Third line creates a dict with multiple key/value pairs"
+    },
+    "get_key_from_mutable_set": {
+      "name": "Get key",
+      "code": [
+        "list(dict_name.keys())[index]"
+      ]
+    },
+    "get_value_from_mutable_set": {
+      "name": "Get value",
+      "code": [
+        "dict_name[key]",
+        "dict_name.get(key)",
+        "dict_name.get(key, default_value)"
+      ],
+      "comment": "If the key cannot be found, .get(key) returns a default value (or None if not specified), whereas [key] will raise an exception"
+    },
+    "get_all_keys_from_mutable_set": {
+      "name": "Get all keys",
+      "code": [
+        "dict_name.keys()"
+      ]
+    },
+    "get_all_values_from_mutable_set": {
+      "name": "Get all values",
+      "code": [
+        "dict_name.values()"
+      ]
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "name": "Swap a key and value",
+      "code": [
+        "dict_name = dict([(value, key) for key, value in dict_name.items()])"
+      ]
+    },
+    "delete_mutable_set": {
+      "name": "Delete the set",
+      "code": [
+        "del dict_name"
+      ]
+    },
+    "create_a_immutable_set": {
+      "name": "Create an immutable key/value set",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "get_key_from_immutable_set": {
+      "name": "Get key",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "get_value_from_immutable_set": {
+      "name": "Get value",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "get_all_keys_from_immutable_set": {
+      "name": "Get all keys",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "get_all_values_from_immutable_set": {
+      "name": "Get all values",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "name": "Swap a key and value",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "delete_immutable_set": {
+      "name": "Delete the set",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "find_element_by_value": {
+      "name": "Find/search for an element by value",
+      "code": [
+        "value in list_name"
+      ],
+      "comment": "returns a True/False value"
+    },
+    "find_minimum_element": {
+      "name": "Find the minimum value in a list",
+      "code": [
+        "min(list_name)"
+      ]
+    },
+    "find_maximum_element": {
+      "name": "Find the maximum value in a list",
+      "code": [
+        "max(list_name)"
+      ]
+    },
+    "convert_list_to_string": {
+      "name": "Convert a list to a string",
+      "code": [
+        "separator.join(list_name)",
+        ""
+      ],
+      "comment": "the separator can be any string"
+    },
+    "concatenate_two_lists": {
+      "name": "Concatenate two lists together",
+      "code": [
+        "list_name1.extend(list_name2)",
+        "list_name1 = list_name1 + list_name2"
+      ]
+    },
+    "split_list_at_index": {
+      "name": "Split lists at an index",
+      "code": [
+        "list_name[start_index:]",
+        "list_name[:end_index]",
+        "list_name[start_index:end_index]"
+      ]
+    },
+    "split_list_at_value": {
+      "name": "Split list at a value",
+      "code": [
+        "list_name[list_name.index(value):]",
+        "list_name[:list_name.index(value)]",
+        "list_name[list_name.index(value1):list_name.index(value2)]"
+      ]
+    },
+    "duplicate_a_list": {
+      "name": "Duplicate a list",
+      "code": [
+        "list_name.copy()"
+      ]
+    },
+    "duplicate_subset_of_list": {
+      "name": "Duplicate a portion/subset of a list",
+      "code": [
+        "list_name[start_index:]",
+        "list_name[:end_index]",
+        "list_name[start_index:end_index]"
+      ]
+    },
+    "get_list_length": {
+      "name": "Get list length",
+      "code": [
+        "len(list_name)"
+      ]
+    },
+    "resize_list": {
+      "name": "Increase/decrease list size",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "do_two_lists_match_exactly": {
+      "name": "Do two lists match every element?",
+      "code": [
+        "list_name1 == list_name2"
+      ]
+    },
+    "do_two_lists_contain_same_items": {
+      "name": "Do two lists contain all the same items?",
+      "code": [
+        "set(list_name1) == set(list_name2)"
+      ]
+    },
+    "does_list_satisfy_some_expression": {
+      "name": "Does a list satisfy some expression?",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "does_list_not_satisfy_an_expression": {
+      "name": "Does a list entirely not satisfy an expression?",
+      "code": [
+        ""
+      ],
+      "not-implemented": "true"
+    },
+    "sort_list": {
+      "name": "Sort a list",
+      "code": [
+        "list_name.sort()"
+      ]
+    },
+    "shuffle_list": {
+      "name": "Shuffle list elements",
+      "code": [
+        "random.shuffle(list_name)"
+      ],
+      "comment": "Must import the shuffle from random module"
+    },
+    "reverse_list": {
+      "name": "Reverse order of list elements",
+      "code": [
+        "list_name.reverse()"
+      ]
+    },
+    "map": {
+      "name": "Map function across list",
+      "code": [
+        "map(function, list_name)"
+      ]
+    },
+    "filter": {
+      "name": "Filter a list based on criteria",
+      "code": [
+        "filter(function, list_name)"
+      ]
+    },
+    "reduce_left": {
+      "name": "Reduce a list left-to-right",
+      "code": [
+        "reduce(function, list_name)"
+      ],
+      "comment": "Must import reduce from functools module"
+    },
+    "reduce_right": {
+      "name": "Reduce a list right-to-left",
+      "code": [
+        ""
+      ],
+      "not-implemented":"true"
+    }
+  }
+}
