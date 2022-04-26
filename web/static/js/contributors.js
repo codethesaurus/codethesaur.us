@@ -23,11 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         var response = JSON.parse(contributorsRequest.response);
 
-        if (!response.length) {
+        numberOfContributors += response.length;
+
+        if (response.length < 100) {
           document.querySelector("#contributors").innerHTML =
             numberOfContributors;
         } else {
-          numberOfContributors += response.length;
           currentPage++;
           getContributors();
         }
