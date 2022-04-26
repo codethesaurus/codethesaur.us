@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   contributorsRequest.onload = function () {
     if (contributorsRequest.status != 200) {
-      document.querySelector("#contributors").innerHTML = 0;
+      document.querySelector("#contributors").innerHTML = "multiple";
       return;
     }
 
@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       document.querySelector("#contributors").innerHTML = response.length;
     } catch {
-      document.querySelector("#contributors").innerHTML = 0;
+      document.querySelector("#contributors").innerHTML = "multiple";
     }
   };
 
   contributorsRequest.onerror = function () {
-    document.querySelector("#contributors").innerHTML = 0;
+    document.querySelector("#contributors").innerHTML = "multiple";
   };
 });
