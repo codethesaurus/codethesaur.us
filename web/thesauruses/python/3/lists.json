@@ -95,9 +95,6 @@
       "comment": "First line creates an empty set. Second line creates a set with one value. Third line creates a set with multiple values"
     },
     "unordered_mutable_list_start_number": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "unordered_mutable_list_can_be_appended": {
@@ -112,21 +109,12 @@
       "comment": "Because a set is unordered, the index cannot be specified"
     },
     "access_element_in_unordered_mutable_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "insert_into_beginning_of_unordered_mutable_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "insert_into_end_of_unordered_mutable_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "insert_into_middle_of_unordered_mutable_list": {
@@ -136,9 +124,6 @@
       "comment": "Because a set is unordered, the index cannot be specified"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "erase_element_at_end_of_unordered_mutable_list": {
@@ -153,9 +138,6 @@
       ]
     },
     "swap_elements_in_unordered_mutable_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "delete_unordered_mutable_list": {
@@ -203,15 +185,9 @@
       "comment": "The frozenset() function can be used on any iterable object. However, to get an unordered immutable list, it should be used on a set."
     },
     "unordered_immutable_list_start_number": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "access_element_in_unordered_immutable_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "delete_unordered_immutable_list": {
@@ -226,57 +202,30 @@
       "not-implemented": "true"
     },
     "create_a_mutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "insert_element_to_mutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "erase_element_from_mutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "delete_mutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "name_of_immutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "create_a_immutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "insert_element_to_immutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "erase_element_from_immutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "delete_immutable_hashed_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "create_a_mutable_set": {
@@ -321,52 +270,31 @@
       ]
     },
     "create_a_immutable_set": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "get_key_from_immutable_set": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "get_value_from_immutable_set": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "get_all_keys_from_immutable_set": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "get_all_values_from_immutable_set": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "swap_key_and_value_in_immutable_set": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "delete_immutable_set": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "find_element_by_value": {
       "code": [
         "value in list_name"
       ],
-      "comment": "returns a True/False value"
+      "comment": "first line returns a True/False value"
     },
     "find_minimum_element": {
       "code": [
@@ -380,8 +308,7 @@
     },
     "convert_list_to_string": {
       "code": [
-        "separator.join(list_name)",
-        ""
+        "separator.join(list_name)"
       ],
       "comment": "the separator can be any string"
     },
@@ -423,9 +350,6 @@
       ]
     },
     "resize_list": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "do_two_lists_match_exactly": {
@@ -439,15 +363,9 @@
       ]
     },
     "does_list_satisfy_some_expression": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "does_list_not_satisfy_an_expression": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     },
     "sort_list": {
@@ -483,9 +401,6 @@
       "comment": "Must import reduce from functools module"
     },
     "reduce_right": {
-      "code": [
-        ""
-      ],
       "not-implemented": "true"
     }
   }
