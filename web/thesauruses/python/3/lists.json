@@ -295,7 +295,7 @@
         "value in list_name",
         "list_name.index(value)"
       ],
-      "comment": "first line returns a True/False value, second line returns an index if found or a ValueError if not found"
+      "comment": "First line returns a True/False value. Second line returns an index if found or a ValueError if not found"
     },
     "find_minimum_element": {
       "code": [
