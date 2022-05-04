@@ -1,20 +1,46 @@
-$(document).ready(function () {
-  let i = 1;
-  let length = 0;
-  const timer = async () => {
-    jQuery
-      .get(
-        `https://api.github.com/repos/codethesaurus/codethesaur.us/contributors?accept=application/vnd.github.v3+json&per_page=100&page=${i}&anon=1`
-      )
-      .then((data) => {
-        length += data.length;
-        i++;
-        if (data.length === 0) {
-          $("#contributors").text(length);
+document.addEventListener("DOMContentLoaded", function () {
+  var currentPage = 1;
+  var numberOfContributors = 0;
+
+  function getContributors() {
+    var contributorsRequest = new XMLHttpRequest();
+
+    contributorsRequest.open(
+      "GET",
+      "https://api.github.com/repos/codethesaurus/codethesaur.us/contributors?accept=application/vd.github.v3+json&per_page=100&page=" +
+        currentPage +
+        "&anon=1"
+    );
+
+    contributorsRequest.send();
+
+    contributorsRequest.onload = function () {
+      if (contributorsRequest.status != 200) {
+        document.querySelector("#contributors").innerHTML = "multiple";
+        return;
+      }
+
+      try {
+        var response = JSON.parse(contributorsRequest.response);
+
+        numberOfContributors += response.length;
+
+        if (response.length < 100) {
+          document.querySelector("#contributors").innerHTML =
+            numberOfContributors;
         } else {
-          setTimeout(timer, 500);
+          currentPage++;
+          getContributors();
         }
-      });
-  };
-  timer();
+      } catch {
+        document.querySelector("#contributors").innerHTML = "multiple";
+      }
+    };
+
+    contributorsRequest.onerror = function () {
+      document.querySelector("#contributors").innerHTML = "multiple";
+    };
+  }
+
+  getContributors();
 });
