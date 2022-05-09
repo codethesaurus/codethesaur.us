@@ -269,7 +269,6 @@ def reference(request):
     try:
         lang = meta_info.language(lang_string)
         lang.load_concepts(meta_structure.key, version)
-        # import pdb; pdb.set_trace()
     except FileNotFoundError:
         ctx = {
             "name": meta_structure.friendly_name,
