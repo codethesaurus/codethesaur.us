@@ -214,6 +214,8 @@ def compare(request):
         "concept_friendly_name": meta_structure.friendly_name,
         "lang1": lang1.key,
         "lang2": lang2.key,
+        "version1": version1,
+        "version2": version2,
         "lang1_friendlyname": lang1.friendly_name,
         "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
@@ -306,6 +308,7 @@ def reference(request):
         "concept": meta_structure.key,
         "concept_friendly_name": meta_structure.friendly_name,
         "lang": lang.key,
+        "version": version,
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
         "description": f"Code Thesaurus: Reference for {lang.key}"
