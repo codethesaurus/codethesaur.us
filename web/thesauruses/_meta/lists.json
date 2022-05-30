@@ -4,8 +4,8 @@
     "structure_name": "Lists, Arrays, and Hashed Lists"
   },
   "categories": {
-    "Ordered, Mutable Lists": {
-      "name_of_ordered_mutable_list": "What is a ordered mutable list called?",
+    "Ordered Mutable Lists": {
+      "name_of_ordered_mutable_list": "What is a ordered (not sorted) mutable list called?",
       "create_a_ordered_mutable_list": "Create the list",
       "ordered_mutable_list_start_number": "What number does it start at?",
       "ordered_mutable_list_can_be_appended": "Can you append to it?",
@@ -20,8 +20,24 @@
       "swap_elements_in_ordered_mutable_list": "Swap two elements",
       "delete_ordered_mutable_list": "Delete the list"
     },
-    "Unordered, Mutable Lists": {
-      "name_of_unordered_mutable_list": "What is a unordered mutable list called?",
+    "Sorted Mutable Lists": {
+      "name_of_sorted_mutable_list": "What is a sorted mutable list called?",
+      "create_a_sorted_mutable_list": "Create the list",
+      "sorted_mutable_list_start_number": "What number does it start at?",
+      "sorted_mutable_list_can_be_appended": "Can you append to it?",
+      "sorted_mutable_list_can_be_inserted_in_middle": "Can you insert into the middle of it?",
+      "access_element_in_sorted_mutable_list": "Access element by index",
+      "insert_into_beginning_of_sorted_mutable_list": "Insert element at beginning",
+      "insert_into_end_of_sorted_mutable_list": "Insert element at end",
+      "insert_into_middle_of_sorted_mutable_list": "Insert element in middle",
+      "erase_element_at_beginning_of_sorted_mutable_list": "Erase first element",
+      "erase_element_at_end_of_sorted_mutable_list": "Erase last element",
+      "erase_element_in_middle_of_sorted_mutable_list": "Erase element in the middle",
+      "swap_elements_in_sorted_mutable_list": "Swap two elements",
+      "delete_sorted_mutable_list": "Delete the list"
+    },
+    "Unordered Mutable Lists": {
+      "name_of_unordered_mutable_list": "What is a unordered/unsorted mutable list called?",
       "create_a_unordered_mutable_list": "unordered",
       "unordered_mutable_list_start_number": "What number does it start at?",
       "unordered_mutable_list_can_be_appended": "Can you append to it?",
@@ -36,15 +52,22 @@
       "swap_elements_in_unordered_mutable_list": "Swap two elements",
       "delete_unordered_mutable_list": "Delete the list"
     },
-    "Ordered, Immutable Lists": {
-      "name_of_ordered_immutable_list": "What is a ordered immutable list called?",
+    "Ordered Immutable Lists": {
+      "name_of_ordered_immutable_list": "What is a ordered (not sorted) immutable list called?",
       "create_a_ordered_immutable_list": "Create the list",
       "ordered_immutable_list_start_number": "What number does it start at?",
       "access_element_in_ordered_immutable_list": "Access element by index",
       "delete_ordered_immutable_list": "Delete the list"
     },
-    "Unordered, Immutable Lists": {
-      "name_of_unordered_immutable_list": "What is a unordered immutable list called?",
+    "Sorted Immutable Lists": {
+      "name_of_sorted_immutable_list": "What is a sorted immutable list called?",
+      "create_a_sorted_immutable_list": "Create the list",
+      "sorted_immutable_list_start_number": "What number does it start at?",
+      "access_element_in_sorted_immutable_list": "Access element by index",
+      "delete_sorted_immutable_list": "Delete the list"
+    },
+    "Unordered Immutable Lists": {
+      "name_of_unordered_immutable_list": "What is a unordered/unsorted immutable list called?",
       "create_a_unordered_immutable_list": "Create the list",
       "unordered_immutable_list_start_number": "What number does it start at?",
       "access_element_in_unordered_immutable_list": "Access element by index",
