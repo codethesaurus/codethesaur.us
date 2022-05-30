@@ -1,9 +1,10 @@
 import os
 import json
-import sys
+# import sys
 
 from django.core.management.base import BaseCommand, CommandError
-from web.MetaInfo import MetaInfo
+
+from web.models import MetaInfo
 
 
 class Command(BaseCommand):
@@ -38,7 +39,7 @@ class Command(BaseCommand):
         # Also check structures are in MetaInfo
         for meta_file in meta_files:
             structure_name = meta_file[:-5]
-            if structure_name not in list(metainfo.data_structures.values()):
+            if structure_name not in list(metainfo.structures):    # .data_structures.values()):
                 print(
                     "[Error] " + "`web/thesauruses/_meta/" + meta_file + "` is not listed as a structure in `meta_info.json`")
                 error_count += 1
