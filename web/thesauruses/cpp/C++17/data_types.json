@@ -10,17 +10,37 @@
       "name": "Boolean",
       "code": "bool"
     },
+    "signed_integer_8_bit": {
+      "name": "Signed 8-bit integer",
+      "code": "int8_t"
+    },
+    "unsigned_integer_8_bit": {
+      "name": "Unsigned 8-bit integer",
+      "code": "uint8_t"
+    },
     "signed_integer_16_bit": {
       "name": "Signed 16-bit integer",
       "code": "int"
+    },
+    "unsigned_integer_16_bit": {
+      "name": "Unsigned 16-bit integer",
+      "code": "uint16_t"
     },
     "signed_integer_32_bit": {
       "name": "Signed 32-bit integer",
       "code": "long"
     },
+    "unsigned_integer_32_bit": {
+      "name": "Unsigned 32-bit integer",
+      "code": "uint32_t"
+    },
     "signed_integer_64_bit": {
       "name": "Signed 64-bit integer",
       "code": "long long"
+    },
+    "unsigned_integer_64_bit": {
+      "name": "Unsigned 64-bit integer",
+      "code": "uint64_t"
     },
     "signed_float_16_bit": {
       "name": "Signed 16-bit floating point",
@@ -33,6 +53,10 @@
     "signed_float_64_bit": {
       "name": "Signed 64-bit floating point",
       "code": "long double"
+    },
+    "character": {
+      "name": "Character",
+      "code": "char"
     },
     "string_as_object": {
       "name": "String as an object",
