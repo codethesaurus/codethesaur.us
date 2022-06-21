@@ -10,27 +10,27 @@ function main() {
   const secondOption = compLang2.querySelectorAll('option')[1];
   compLang2.value = secondOption.value;
 
-  refConc.addEventListener('change', () => handleDomChanges(refConc, refLang));
-  refLang.addEventListener('change', () => handleDomChanges(refConc, refLang));
-  compConc.addEventListener('change', () => handleDomChanges(compConc, compLang1, compLang2));
+  refConc.addEventListener('change', () => handleAlertDivChanges(refConc, refLang));
+  refLang.addEventListener('change', () => handleAlertDivChanges(refConc, refLang));
+  compConc.addEventListener('change', () => handleAlertDivChanges(compConc, compLang1, compLang2));
   compLang1.addEventListener('change', () => {
-    disableDuplicate(compLang1, compLang2);
-    handleDomChanges(compConc, compLang1, compLang2)
+    disableDuplicateLangs(compLang1, compLang2);
+    handleAlertDivChanges(compConc, compLang1, compLang2)
   });
   compLang2.addEventListener('change', () => {
-    disableDuplicate(compLang2, compLang1);
-    handleDomChanges(compConc, compLang1, compLang2)
+    disableDuplicateLangs(compLang2, compLang1);
+    handleAlertDivChanges(compConc, compLang1, compLang2)
   });
 
-  // Need to check the languages and concepts on the initial load
-  disableDuplicate(compLang1, compLang2);
-  disableDuplicate(compLang2, compLang1);
-  handleDomChanges(refConc, refLang);
-  handleDomChanges(compConc, compLang1, compLang2);
+  // Need to disable duplicate languages and handle the alert div on the initial load
+  disableDuplicateLangs(compLang1, compLang2);
+  disableDuplicateLangs(compLang2, compLang1);
+  handleAlertDivChanges(refConc, refLang);
+  handleAlertDivChanges(compConc, compLang1, compLang2);
 }
 
 
-function disableDuplicate(modifiedSelectElem, unmodifiedSelectElem) {
+function disableDuplicateLangs(modifiedSelectElem, unmodifiedSelectElem) {
   const unmodifiedOptionElems = unmodifiedSelectElem.querySelectorAll('option');
 
   for (let elem of unmodifiedOptionElems) {
@@ -45,7 +45,7 @@ function disableDuplicate(modifiedSelectElem, unmodifiedSelectElem) {
 }
 
 
-async function handleDomChanges(concept, langAndVer1, langAndVer2=null) {
+async function handleAlertDivChanges(concept, langAndVer1, langAndVer2=null) {
   const lang1Value = getSelectValue(langAndVer1);
   const path1 = `/reference/?concept=${getSelectValue(concept)}&lang=${encodeURIComponent(lang1Value)}`;
   const langStatus1 = await doesFileExist(path1).then(data => {return data});
@@ -168,7 +168,7 @@ function changeGoButtonStatus(btn, enableBtn) {
 
 
 function changeAvailabilityText(alertDiv, concept, lang1, lang2=null) {
-  const firstPElem = alertDiv.firstElementChild;
+  const firstPElem = alertDiv.querySelector('p');
   
   if (lang2 === null) {
     firstPElem.textContent = `The "${concept}" concept is not available for "${lang1}"`;
