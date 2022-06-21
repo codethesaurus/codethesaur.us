@@ -7,9 +7,11 @@ function main() {
 
   // Need to change the value of the second select element
   // in the compare card so that they are not duplicates
-  const secondOption = compLang2.querySelectorAll('option')[1];
-  compLang2.value = secondOption.value;
-
+  if (getSelectValue(compLang1) === getSelectValue(compLang2)) {
+    const secondOption = compLang2.querySelectorAll('option')[1];
+    compLang2.value = secondOption.value;
+  }
+  
   refConc.addEventListener('change', () => handleAlertDivChanges(refConc, refLang));
   refLang.addEventListener('change', () => handleAlertDivChanges(refConc, refLang));
   compConc.addEventListener('change', () => handleAlertDivChanges(compConc, compLang1, compLang2));
