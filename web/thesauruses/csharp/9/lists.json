@@ -6,59 +6,59 @@
     "structure": "lists"
   },
   "concepts": {
-    "name_of_ordered_mutable_list": {
+    "name_of_sorted_mutable_list": {
       "code": "SortedList",
       "name": "What is a ordered mutable list called?"
     },
-    "create_a_ordered_mutable_list": {
+    "create_a_sorted_mutable_list": {
       "code": "SortedList sortedListName = new SortedList();",
       "name": "Create the list"
     },
-    "ordered_mutable_list_start_number": {
+    "sorted_mutable_list_start_number": {
       "code": "0",
       "name": "What number does it start at?"
     },
-    "ordered_mutable_list_can_be_appended": {
+    "sorted_mutable_list_can_be_appended": {
       "code": "Yes",
       "name": "Can you append to it?"
     },
-    "ordered_mutable_list_can_be_inserted_in_middle": {
+    "sorted_mutable_list_can_be_inserted_in_middle": {
       "code": "No",
       "name": "Can you insert into the middle of it?"
     },
-    "access_element_in_ordered_mutable_list": {
+    "access_element_in_sorted_mutable_list": {
       "code": "sortedListName[index]",
       "name": "Access element by index"
     },
-    "insert_into_beginning_of_ordered_mutable_list": {
+    "insert_into_beginning_of_sorted_mutable_list": {
       "not-implemented": "true",
       "name": "Insert element at beginning"
     },
-    "insert_into_end_of_ordered_mutable_list": {
+    "insert_into_end_of_sorted_mutable_list": {
       "not-implemented": "true",
       "name": "Insert element at end"
     },
-    "insert_into_middle_of_ordered_mutable_list": {
+    "insert_into_middle_of_sorted_mutable_list": {
       "not-implemented": "true",
       "name": "Insert element in middle"
     },
-    "erase_element_at_beginning_of_ordered_mutable_list": {
+    "erase_element_at_beginning_of_sorted_mutable_list": {
       "code": "sortedListName.RemoveAt(0)",
       "name": "Erase first element"
     },
-    "erase_element_at_end_of_ordered_mutable_list": {
+    "erase_element_at_end_of_sorted_mutable_list": {
       "code": "sortedListName.RemoveAt(sortedList.Count - 1)",
       "name": "Erase last element"
     },
-    "erase_element_in_middle_of_ordered_mutable_list": {
+    "erase_element_in_middle_of_sorted_mutable_list": {
       "code": "sortedListName.RemoveAt(index)",
       "name": "Erase element in the middle"
     },
-    "swap_elements_in_ordered_mutable_list": {
+    "swap_elements_in_sorted_mutable_list": {
       "not-implemented": "true",
       "name": "Swap two elements"
     },
-    "delete_ordered_mutable_list": {
+    "delete_sorted_mutable_list": {
       "code": "sortedListName.Clear()",
       "name": "Delete the list"
     },
