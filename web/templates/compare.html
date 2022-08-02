@@ -4,12 +4,18 @@
 {% block content %}
         <div class="container">
             <div class="row mt-5">
-                <h1 class="col-12">Comparing {{ lang1_friendlyname }}'s and {{ lang2_friendlyname }}'s {{ concept_friendly_name }}</h1>
+                <h1 class="col-12">Comparing {{ lang1_friendlyname }}'s and {{ lang2_friendlyname }}'s
+                    {{ concept_friendly_name }}</h1>
             </div>
             <div class="row col-12">
-                The following will eventually be a table of stuff that's populated with things from the languages
+                <p>The tables below show the syntactically highlighted {{ concept_friendly_name }} topic for the two
+                    languages.</p>
+                <br />
+                <p>If you see any incorrect information, please help us improve! Feel free to either
+                    <a href="https://github.com/codethesaurus/codethesaur.us/issues/new/choose" rel="noopener">create
+                        an issue</a> or use the links at the bottom of the language columns to correct any information.
+                </p>
             </div>
-            <div class="row">&nbsp;</div>
 
 {% for category in categories %}
            <div class="row">&nbsp;</div>
@@ -54,14 +60,14 @@
                 </div>
                 <div class="card" id="start-of-row">
                     <div class="card-body">
-                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang1 }}/{{ concept }}.json">
+                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang1 }}/{{ version1 }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang1_friendlyname }}?
                         </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang2 }}/{{ concept }}.json">
+                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang2 }}/{{ version2 }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang2_friendlyname }}?
                         </a>
                     </div>

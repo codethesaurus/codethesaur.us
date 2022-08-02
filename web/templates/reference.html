@@ -7,7 +7,12 @@
                 <h1 class="col-12">Reference for {{ lang_friendlyname }} for {{ concept_friendly_name | linebreaksbr }}</h1>
             </div>
             <div class="row col-12">
-                The following will eventually be a table of stuff that's populated with things from the languages
+                <p>The tables below show the syntactically highlighted {{ concept_friendly_name }} topic for this
+                    language.</p>
+                <br />
+                <p>If you see any incorrect information, please help us improve! Feel free to either
+                    <a href="https://github.com/codethesaurus/codethesaur.us/issues/new/choose" rel="noopener">create
+                        an issue</a> or use the link at the bottom of the language column to correct any information.</p>
             </div>
 
 {% for category in categories %}
@@ -47,7 +52,7 @@
                 </div>
                 <div class="card" id="start-of-row">
                     <div class="card-body">
-                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang }}/{{ concept }}.json">
+                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang }}/{{ version }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang_friendlyname }}?
                         </a>
                     </div>
