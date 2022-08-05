@@ -38,6 +38,14 @@
       "code": "/=",
       "name": "Division and assignment operator"
     },
+    "integer_division": {
+      "code": "/=",
+      "name": "Integer Division operator"
+    },
+    "integer_division_assignment": {
+      "code": "/=",
+      "name": "Integer Division and assignment operator"
+    },
     "modulus": {
       "code": "%",
       "name": "Modulus (remainder) operator"
@@ -46,6 +54,14 @@
       "code": "%=",
       "name": "Modulus and assignment operator"
     },
+    "unary_plus": {
+      "code" : "+",
+      "name" : "Unary plus operator"
+  },
+    "unary_minus": {
+      "code" : "-",
+      "name" : "Unary minus operator"
+  },
     "increment": {
       "code": "++",
       "name": "Increment (add 1) operator"
@@ -76,7 +92,7 @@
       "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "!==",
+      "code": "!=",
       "comment": "There is also !== which means strict inequality",
       "name": "Not equal to operator"
     },
@@ -108,6 +124,58 @@
       "not-implemented": "true",
       "name": "Is not operator"
     },
+    "logical_and": {
+      "code" : "&&",
+      "name" : "Logical AND Operator"
+  },
+    "logical_or": {
+      "code" : "||",
+      "name" : "Logical OR Operator"
+  },
+  "logical_not": {
+      "code" : "!",
+      "name" : "Logical NOT Operator"
+  },
+"bitwise_and": {
+      "code" : "&",
+      "name" : "Bitwise AND operator"
+  },
+"bitwise_and_assignmnet": {
+      "code" : "&=",
+      "name" : "Bitwise AND and assignment operator"
+  },
+"bitwise_or": {
+      "code" : "|",
+      "name" : "Bitwise OR operator"
+  },
+"bitwise_or_assignment": {
+      "code" : "|=",
+      "name" : "Bitwise OR and assignment operator"
+  },
+"bitwise_not": {
+      "code" : "~",
+      "name" : "Bitwise NOT operator"
+  },
+    "bitwise_not_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise NOT and assignment operator"
+  },
+"bitwise_xor": {
+      "code" : "^",
+      "name" : "Bitwise XOR operator"
+  },
+"bitwise_xor_assignment": {
+      "code" : "^=",
+      "name" : "Bitwise XOR and assignment operator"
+  },
+    "bitwise_xnor": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR operator"
+  },
+    "bitwise_xnor_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR and assignment operator"
+  },
     "left_shift": {
       "code": "<<",
       "name": "Left shift bitwise operator"
