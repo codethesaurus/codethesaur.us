@@ -1,0 +1,97 @@
+{
+    "meta": {
+        "language": "c",
+        "language_version": "17",
+        "language_name": "C",
+        "structure": "io"
+    },
+    "concepts": {
+        "write_line": {
+            "code": "printf(“Format Specifier”, var1, var2, …., varn);",
+            "name": "Write a line to the console"
+        },
+        "write_line_with_new_line" : {
+            "code": "printf(“Format Specifier”, var1, var2, …., varn);",
+            "name": "Write a line to the console with a return character"  
+        },
+        "read_line": {
+        "code": "scanf(“Format Specifier”, &var1, &var2, …., &varn);",
+        "name": "Read a line of user input from the console"
+        },
+        "read_char": {
+            "code": "getchar()",
+            "name": "Read a single char of user input from the console"
+            },
+        "clear_console_output": {
+            "code": "system(cls)",
+            "comment": "system() is defined in stdlib.h and cls should be in double quotes",
+            "name": "Clear the console output"
+        },
+        "change_console_background_color": {
+            "code" : "unknown",
+            "name": "Change the background color of the console"
+        },
+        "change_console_text_color": {
+            "code" : "unknown",
+            "name": "Change the text color of the console"
+        },
+        "file_function_lib": {
+            "code": "#include<stdio.h>",
+            "name": "library containing file IO functions"
+        },
+        "list_directory": {
+            "code": "unknown",
+            "name": "List of the items in the current directory"
+        },
+        "read_directory_info": {
+            "code": "unknown",
+            "name": "Get infomation about the current directory (number of items, size, etc)"
+        },
+        "create_directory": {
+            "code": "unknown",
+            "name": "Create a directory"
+        },
+        "delete_directory": {
+            "code": "unknown",
+            "name": "Delete a directory"
+        },
+        "rename_directory": {
+            "code": "unknown",
+            "name": "Rename a directory"
+        },
+        "move_directory": {
+            "code": "unknown",
+            "name": "Move a directory to another locaiton"
+        },
+        "update_directory_permissions": {
+            "code": "unknown",
+            "name": "Update the permissions a user, group, or application has to a directory"
+        },
+        "read_line_of_file": {
+            "code": "unknown",
+            "name": "Read a single from a file"
+        },
+        "read_line_of_files": {
+            "code": "unknown",
+            "name": "Read all the lines from a file"
+        },
+        "create_file": {
+            "code": "FILE *fopen( const char * filename, const char * mode );",
+            "name": "Create a file"
+        },
+        "delete_file": {
+            "code": "int remove ( const char * filename );",
+            "comment": "returns 0 if file is deleted",
+            "name": "Delete a file"
+        },
+        "update_file": {
+            "code": "FILE *fopen( const char * filename, const char * mode );",
+            "comment": "different file modes are available",
+            "name": "Update a file"
+        },
+        "move_file": {
+            "code": "unknown",
+            "name": "move a file to a new location"
+        }
+    }
+}

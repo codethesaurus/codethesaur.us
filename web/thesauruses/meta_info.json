@@ -2,6 +2,7 @@
   "languages": {
     "ada": "Ada",
     "bash": "Bash",
+    "c": "C",
     "cpp": "C++",
     "csharp": "C#",
     "clojure": "Clojure",
