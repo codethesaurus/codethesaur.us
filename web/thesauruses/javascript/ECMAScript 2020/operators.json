@@ -39,11 +39,11 @@
       "name": "Division and assignment operator"
     },
     "integer_division": {
-      "code": "/=",
+      "not-implemented": "true",
       "name": "Integer Division operator"
     },
     "integer_division_assignment": {
-      "code": "/=",
+      "not-implemented": "true",
       "name": "Integer Division and assignment operator"
     },
     "modulus": {
