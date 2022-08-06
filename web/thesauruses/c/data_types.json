@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "language": "c",
+    "language_version": "17",
+    "language_name": "C",
+    "structure": "data_types"
+  },
+  "concepts": {
+    "signed_integer_8_bit": {
+      "name": "Signed 8-bit integer",
+      "code": "unknown"
+    },
+    "signed_integer_16_bit": {
+      "name": "Signed 16-bit integer",
+      "code": "short"
+    },
+    "signed_integer_32_bit": {
+      "name": "Signed 32-bit integer",
+      "code": "int"
+    },
+    "signed_integer_64_bit": {
+      "name": "Signed 64-bit integer",
+      "code": "long"
+    },
+    "signed_float_32_bit": {
+      "name": "Signed 32-bit floating point",
+      "code": "float"
+    },
+    "signed_float_64_bit": {
+      "name": "Signed 64-bit floating point",
+      "code": "double"
+    },
+    "character": {
+      "name" : "Character",
+      "code" : "char"
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "not-implemented": "true"
+    },
+    "string_as_array": {
+      "name": "String as an array of characters",
+      "code": "char []"
+    }
+  }
+}
