@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "language": "cpp",
+    "language_version": "C++17",
+    "language_name": "C++",
+    "structure": "strings",
+    "structure_name": "Strings"
+  },
+  "concepts": {
+    "Creating/Destroying Strings": {
+      "is_primitive_or_not": "Is this a built-in type in this language?",
+      "import": "Import the string class",
+      "default_string_byte_encoding": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
+      "create_new_string": "Create new string",
+      "create_multiline_string": "Create new multi-line string",
+      "assign_new_string": "Assign string from another string",
+      "destroy_string": "Destroy string"
+    },
+    "String Basics": {
+      "length_of_string": "Length of string",
+      "max_length_of_string": "Maximum length of string",
+      "clear_string": "Clear/empty string",
+      "is_empty": "Is string empty?",
+      "concatenate_two_strings": "Concatenate/join two strings",
+      "concatenate_many_strings": "Concatenate/join many strings",
+      "is_all_alphabetical": "Is string all alphabetical characters?",
+      "is_all_numerical": "Is string all numerical characters?",
+      "is_all_alphanumeric": "Is string all alphanumeric characters?",
+      "is_decimal": "Is string a decimal number?",
+      "is_all_whitespaces": "Is string all whitespace characters?",
+      "is_all_uppercase": "Is string all uppercase characters?",
+      "is_all_lowercase": "Is string all lowercase characters?",
+      "is_in_titlecase": "Is string formatted in title case?"
+    },
+    "Find and Search": {
+      "does_substring_exist": "Does a substring exist in a string?",
+      "find_start_index_of_substring": "Find index of where a substring starts",
+      "find_start_index_of_additional_substring": "Find index of an additional substring (or starting at another index)",
+      "find_start_index_of_substring_from_end": "Find substring index starting at end",
+      "count_occurrences_of_substring": "Find number of occurences of a substring",
+      "get_leftmost_characters": "Get a specified number of characters from the left",
+      "get_rightmost_characters": "Get a specified number of characters from the right",
+      "get_substring_from_start_and_end_index": "Return a substring from a string based on starting and ending indices",
+      "get_substring_from_start_index_and_length": "Return a substring from a string based on starting index and size of substring"
+    },
+    "Manipulating Strings": {
+      "convert_to_uppercase": "Convert string to all uppercase",
+      "convert_to_lowercase": "Convert string to all lowercase",
+      "convert_to_title_case": "Convert string to title case",
+      "capitalize_string": "Capitalize first letter of a string",
+      "remove_whitespace": "Remove all whitespaces from string",
+      "replace_substring": "Replace a substring with another string",
+      "replace_all_substring": "Replace all substring matches with another string",
+      "split_at_index": "Split string into a list of strings at a given index",
+      "split_at_newlines": "Split string into a list of strings at every new line character",
+      "split_at_substring": "Split string by locating all substrings",
+      "merge_lists_into_string": "Merge a list of strings into one string",
+      "encode_html_entities": "Encode HTML entities in a string (ex: ™ to &trade;)",
+      "decode_html_entities": "Decode HTML entitles into characters",
+      "encode_url_percent": "Encode URL percent encoding into string (ex: ' ' to %20)",
+      "decode_url_percent": "Decode URL percent encoding",
+      "encode_to_base64": "Encode string into Base64 format",
+      "decode_from_base64": "Decode string from Base64 format"
+    },
+    "String Formatting": {
+      "format_string_function": "Function to format a string",
+      "parameter_format_in_order": "Parameter used in format function if they're used in order",
+      "parameter_format_numerical": "Parameter used in format function if they're numerically numbered",
+      "parameter_format_by_name": "Paramater used in format function if they're named variables",
+      "format_as_integer": "Format parameter as an integer",
+      "format_as_decimal": "Format parameter as a decimal number",
+      "format_as_fixed_decimal": "Format parameter as a fixed-point decimal number",
+      "format_as_currency": "Format parameter as a currency number",
+      "format_as_percentage": "Format parameter as a percentage number",
+      "format_number_with_separators": "Format number with thousand separators",
+      "format_number_with_positive_negative_sign": "Format number with positive/negative signs",
+      "format_number_in_scientific_notation_little_e": "Format number with scientific notation with 'e'",
+      "format_number_in_scientific_notation_big_e": "Format number with scientific notation with 'E'",
+      "format_number_in_binary": "Format number into binary",
+      "format_number_in_octal": "Format number into octal",
+      "format_number_in_hexadecimal": "Format number into hexadecimal"
+    }
+  }
+}
