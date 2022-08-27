@@ -21,7 +21,7 @@
     },
     "create_new_string": {
       "name": "Create new string",
-      "code": "std::string name = \"Spot\" \n\"New String Example 2\"  "
+      "code": "//default constructor\nstd::string petName;\n\n//from string literal\nstd::string petName = \"Spot\";\n\n//direct initialization\nstd::string petName(\"Rover\");"
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
@@ -29,7 +29,7 @@
     },
     "assign_new_string": {
       "name": "Assign string from another string",
-      "not-implemented": true
+      "code": "std::string petName = \"Spot\";\n\n//direct initialization\nstd::string otherPetName(petName);"
     },
     "destroy_string": {
       "name": "Destroy string",
@@ -37,43 +37,43 @@
     },
     "length_of_string": {
       "name": "Length of string",
-      "code": "len(str)"
+      "code": "numCharacters = petName.length()\n  or\nnumCharacters = petName.size()"
     },
     "max_length_of_string": {
       "name": "Maximum length of string",
-      "not-implemented": true
+      "code": "maxNumCharacters = petName.max_size()"
     },
     "clear_string": {
       "name": "Clear/empty string",
-      "not-implemented": true
+      "code": "petName.clear()"
     },
     "is_empty": {
       "name": "Is string empty?",
-      "code": "if not my_string:"
+      "code": "isEmpty = petName.empty()"
     },
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
-      "code": "str1 + str2"
+      "code": "petName + otherPetName"
     },
     "concatenate_many_strings": {
       "name": "Concatenate/join many strings",
-      "code": "str1 + str2 + str3 + str4"
+      "code": "petName + otherPetName + yetAnotherPetName"
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
-      "code": "str.isalpha()"
+      "code": "-todo- provided in locale"
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "code": "str.isnumeric()"
+      "code": "-todo- provided in locale"
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
-      "code": "str.isalnum()"
+      "code": "-todo- provided in locale"
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "code": "str.isdecimal()"
+      "code": "-todo- may be provided in locale"
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
@@ -81,15 +81,15 @@
     },
     "is_all_uppercase": {
       "name": "Is string all uppercase characters?",
-      "code": "str.isupper()"
+      "code": "-todo- provided in locale"
     },
     "is_all_lowercase": {
       "name": "Is string all lowercase characters?",
-      "code": "str.islower()"
+      "code": "-todo- provided in locale"
     },
     "is_in_titlecase": {
       "name": "Is string formatted in title case?",
-      "code": "str.istitle()"
+      "not-implemented": true
     },
     "does_substring_exist": {
       "name": "Does a substring exist in a string?",
@@ -129,19 +129,19 @@
     },
     "convert_to_uppercase": {
       "name": "Convert string to all uppercase",
-      "code": "str.upper()"
+      "code": "-todo- provided in locale"
     },
     "convert_to_lowercase": {
       "name": "Convert string to all lowercase",
-      "code": "str.lower()"
+      "code": "-todo- provided in locale"
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
-      "code": "str.title()"
+      "not-implemented": true
     },
     "capitalize_string": {
       "name": "Capitalize first letter of a string",
-      "code": "str.capitalize()"
+      "not-implemented": true
     },
     "remove_whitespace": {
       "name": "Remove all whitespaces from string",
