@@ -8,6 +8,8 @@ on:
     branches:
       - main
 
+permissions: write-all
+
 jobs:
   run:
     name: Validate Meta Info File
