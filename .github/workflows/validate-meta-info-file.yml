@@ -1,4 +1,4 @@
-name: Validate Language Files
+name: Validate Meta Info File
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   run:
-    name: Validate Language Files
+    name: Validate Meta Info File
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the branch
@@ -25,7 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run validate command
-        run: python manage.py validatelangfiles | tee validate_output.txt
+        run: python manage.py validatemetainfofile | tee validate_output.txt
       - name: Read output file
         id: validate_output
         uses: juliangruber/read-file-action@v1
