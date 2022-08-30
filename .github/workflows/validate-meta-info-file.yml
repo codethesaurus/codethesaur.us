@@ -27,31 +27,31 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run validate command
-        run: python manage.py validatemetainfofile
-#        run: python manage.py validatemetainfofile | tee validate_output.txt
-#      - name: Read output file
-#        id: validate_output
-#        uses: juliangruber/read-file-action@v1
-#        with:
-#          path: ./validate_output.txt
-#      - name: Comment on pull request
-#        uses: thollander/actions-comment-pull-request@main
-#        if: "${{ contains(steps.validate_output.outputs.content, 'errors found') }}"
-#        with:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          message: '**Validate Language Files**
-#
-#Output:
-#
-#${{ steps.validate_output.outputs.content }}
-#
-#
-#If the output is blank, all checks passed.
-#
-#If there are errors, you should fix those before the PR will pass.
-#
-#If there are warnings, those are optional and you should consider whether to change them or not.
-#'
+#        run: python manage.py validatemetainfofile
+        run: python manage.py validatemetainfofile | tee ./validate_output.txt
+      - name: Read output file
+        id: validate_output
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./validate_output.txt
+      - name: Comment on pull request
+        uses: thollander/actions-comment-pull-request@main
+        if: "${{ !contains(steps.validate_output.outputs.content, 'No errors found') }}"
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          message: '**Validate Meta Language File**
+
+Output:
+
+${{ steps.validate_output.outputs.content }}
+
+
+If the output is blank, all checks passed.
+
+If there are errors, you should fix those before the PR will pass.
+
+If there are warnings, those are optional and you should consider whether to change them or not.
+'
 #
 #      - name: Check for command failures
 #        if: "${{ contains(steps.validate_output.outputs.content, 'errors found') }}"
