@@ -8,7 +8,7 @@
   "concepts": {
     "if_conditional": {
       "code": "if (true)\n  expression\nend",
-      "comments": "The parenthesis around the conditional are optional.",
+      "comment": "The parenthesis around the conditional are optional.",
       "name": "If conditional"
     },
     "if_else_conditional": {

@@ -34,8 +34,7 @@
     },
     "destroy_string": {
       "name": "Destroy string",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "length_of_string": {
       "name": "Length of string",
@@ -64,24 +63,19 @@
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
-      "not-implemented": "true",
-      "code": ""
-
+      "not-implemented": "true"
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
@@ -101,8 +95,7 @@
     },
     "is_in_titlecase": {
       "name": "Is string formatted in title case?",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "does_substring_exist": {
       "name": "Does a substring exist in a string?",
@@ -127,19 +120,15 @@
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "not-implemented": "true",
-      "code": ""
-
+      "not-implemented": "true"
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
@@ -157,8 +146,7 @@
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "capitalize_string": {
       "name": "Capitalize first letter of a string",
@@ -194,23 +182,19 @@
     },
     "encode_html_entities": {
       "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "decode_html_entities": {
       "name": "Decode HTML entitles into characters",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "encode_url_percent": {
       "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "decode_url_percent": {
       "name": "Decode URL percent encoding",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "encode_to_base64": {
       "name": "Encode string into Base64 format",
