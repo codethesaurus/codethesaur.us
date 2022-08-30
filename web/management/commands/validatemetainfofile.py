@@ -26,15 +26,20 @@ class Command(BaseCommand):
             if os.path.isdir(path):
 
                 if not lang in list(metainfo.languages):
-                    print("[Error] " + path + " exists but " + lang + " is not listed as a language in `meta_info.json`")
+                    print("[Error] `" + path + "` exists but " + lang + " is not listed as a language in `meta_info.json`")
                     error_count += 1
 
                 versions = os.listdir(path)
                 for version in versions:
-                    concepts = os.listdir(path + "/" + version)
-                    for concept in concepts:
+                    if os.path.isfile(path + "/" + version):
+                        print("[Error] `" + path + "/" + version + "` is a file but a directory for a version was expected")
+                        error_count += 1
+                        continue
+
+                    structures = os.listdir(path + "/" + version)
+                    for structure in structures:
                         # concept_path = "web/thesauruses/" + lang + "/" + version + concept
-                        if concept not in meta_files:
+                        if structure not in meta_files:
                             print("[Error] `" + path + "` is not a valid concept filename")
                             error_count += 1
 
