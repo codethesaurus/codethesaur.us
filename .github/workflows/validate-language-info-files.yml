@@ -10,7 +10,7 @@ on:
 
 jobs:
   run:
-    name: Validate Meta Info File
+    name: Validate Language Info Files
     runs-on: ubuntu-latest
     steps:
 
