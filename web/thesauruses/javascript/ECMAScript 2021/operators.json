@@ -38,6 +38,14 @@
       "code": "/=",
       "name": "Division and assignment operator"
     },
+    "integer_division": {
+      "not-implemented": "true",
+      "name": "Integer Division operator"
+    },
+    "integer_division_assignment": {
+      "not-implemented": "true",
+      "name": "Integer Division and assignment operator"
+    },
     "modulus": {
       "code": "%",
       "name": "Modulus (remainder) operator"
@@ -148,6 +156,10 @@
       "code" : "~",
       "name" : "Bitwise NOT operator"
   },
+    "bitwise_not_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise NOT and assignment operator"
+  },
 "bitwise_xor": {
       "code" : "^",
       "name" : "Bitwise XOR operator"
@@ -155,6 +167,14 @@
 "bitwise_xor_assignment": {
       "code" : "^=",
       "name" : "Bitwise XOR and assignment operator"
+  },
+    "bitwise_xnor": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR operator"
+  },
+    "bitwise_xnor_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR and assignment operator"
   },
     "left_shift": {
       "code": "<<",
