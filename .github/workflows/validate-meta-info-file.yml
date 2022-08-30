@@ -36,12 +36,14 @@ jobs:
 
       - name: Read output file
         id: validate_output
+        permissions: write-all
         uses: juliangruber/read-file-action@v1
         with:
           path: ./validate_output.txt
 
       - name: Comment on pull request
         uses: thollander/actions-comment-pull-request@v1
+        permissions: write-all
         if: "${{ !contains(steps.validate_output.outputs.content, 'No errors found') }}"
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
