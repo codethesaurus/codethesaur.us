@@ -1,19 +1,22 @@
 {
   "meta": {
     "language": "cpp",
-    "language_version": "C++17",
     "language_name": "C++",
     "structure": "strings",
-    "structure_name": "Strings"
+    "language_version": "C++17"
   },
   "concepts": {
     "is_primitive_or_not": {
       "name": "Is this a built-in type in this language?",
-      "code": "Yes"
+      "code": [
+        "Yes"
+      ]
     },
     "import": {
       "name": "Import the string class",
-      "code": "#include <string>"
+      "code": [
+        "#include <string>"
+      ]
     },
     "default_string_byte_encoding": {
       "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
@@ -21,7 +24,15 @@
     },
     "create_new_string": {
       "name": "Create new string",
-      "code": "//default constructor\nstd::string petName;\n\n//from string literal\nstd::string petName = \"Spot\";\n\n//direct initialization\nstd::string petName(\"Rover\");"
+      "code": [
+        "//default constructor",
+        "std::string petName;",
+        "\n",
+        "//from string literal",
+        "std::string petName = \"Spot\";",
+        "\n",
+        "//direct initialization\nstd::string petName(\"Rover\");"
+      ]
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
@@ -29,7 +40,12 @@
     },
     "assign_new_string": {
       "name": "Assign string from another string",
-      "code": "std::string petName = \"Spot\";\n\n//direct initialization\nstd::string otherPetName(petName);"
+      "code": [
+        "std::string petName = \"Spot\";",
+        "\n",
+        "//direct initialization",
+        "std::string otherPetName(petName);"
+      ]
     },
     "destroy_string": {
       "name": "Destroy string",
@@ -37,43 +53,65 @@
     },
     "length_of_string": {
       "name": "Length of string",
-      "code": "numCharacters = petName.length()\n  or\nnumCharacters = petName.size()"
+      "code": [
+        "numCharacters = petName.length()",
+        "  or",
+        "numCharacters = petName.size()"
+      ]
     },
     "max_length_of_string": {
       "name": "Maximum length of string",
-      "code": "maxNumCharacters = petName.max_size()"
+      "code": [
+        "maxNumCharacters = petName.max_size()"
+      ]
     },
     "clear_string": {
       "name": "Clear/empty string",
-      "code": "petName.clear()"
+      "code": [
+        "petName.clear()"
+      ]
     },
     "is_empty": {
       "name": "Is string empty?",
-      "code": "isEmpty = petName.empty()"
+      "code": [
+        "isEmpty = petName.empty()"
+      ]
     },
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
-      "code": "petName + otherPetName"
+      "code": [
+        "petName + otherPetName"
+      ]
     },
     "concatenate_many_strings": {
       "name": "Concatenate/join many strings",
-      "code": "petName + otherPetName + yetAnotherPetName"
+      "code": [
+        "petName + otherPetName + yetAnotherPetName"
+      ]
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
-      "code": "-todo- provided in locale"
+      "code": [
+        "-todo- provided in locale"
+      ]
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "code": "-todo- provided in locale"
+      "code": [
+        "-todo- provided in locale"
+      ]
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
-      "code": "-todo- provided in locale"
+      "code": [
+        "-todo- provided in locale"
+      ]
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "code": "-todo- may be provided in locale"
+      "code": [
+        "-todo- may be provided in locale"
+      ]
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
@@ -81,11 +119,15 @@
     },
     "is_all_uppercase": {
       "name": "Is string all uppercase characters?",
-      "code": "-todo- provided in locale"
+      "code": [
+        "-todo- provided in locale"
+      ]
     },
     "is_all_lowercase": {
       "name": "Is string all lowercase characters?",
-      "code": "-todo- provided in locale"
+      "code": [
+        "-todo- provided in locale"
+      ]
     },
     "is_in_titlecase": {
       "name": "Is string formatted in title case?",
@@ -93,11 +135,15 @@
     },
     "does_substring_exist": {
       "name": "Does a substring exist in a string?",
-      "code": "txt = 'This is a search string' \ntxt.find('is')"
+      "code": [
+        "txt = 'This is a search string' \ntxt.find('is')"
+      ]
     },
     "find_start_index_of_substring": {
       "name": "Find index of where a substring starts",
-      "code": "txt = 'This is a search string' \ntxt.index('is')"
+      "code": [
+        "txt = 'This is a search string' \ntxt.index('is')"
+      ]
     },
     "find_start_index_of_additional_substring": {
       "name": "Find index of an additional substring (or starting at another index)",
@@ -105,23 +151,33 @@
     },
     "find_start_index_of_substring_from_end": {
       "name": "Find substring index starting at end",
-      "code": "str.find(substring, start, end)"
+      "code": [
+        "str.find(substring, start, end)"
+      ]
     },
     "count_occurrences_of_substring": {
       "name": "Find number of occurences of a substring",
-      "code": "str.count(substring)"
+      "code": [
+        "str.count(substring)"
+      ]
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "code": "txt = 'Hello World!!' \n#Get 5 characters from left\ntxt[0:5] "
+      "code": [
+        "txt = 'Hello World!!' \n#Get 5 characters from left\ntxt[0:5] "
+      ]
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "code": "txt = 'Hello World!!' \n#Get 5 characters from right \ntxt[-5:] "
+      "code": [
+        "txt = 'Hello World!!' \n#Get 5 characters from right \ntxt[-5:] "
+      ]
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "code": "str[start:end]"
+      "code": [
+        "str[start:end]"
+      ]
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
@@ -129,11 +185,15 @@
     },
     "convert_to_uppercase": {
       "name": "Convert string to all uppercase",
-      "code": "-todo- provided in locale"
+      "code": [
+        "-todo- provided in locale"
+      ]
     },
     "convert_to_lowercase": {
       "name": "Convert string to all lowercase",
-      "code": "-todo- provided in locale"
+      "code": [
+        "-todo- provided in locale"
+      ]
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
@@ -145,11 +205,15 @@
     },
     "remove_whitespace": {
       "name": "Remove all whitespaces from string",
-      "code": "string.strip()"
+      "code": [
+        "string.strip()"
+      ]
     },
     "replace_substring": {
       "name": "Replace a substring with another string",
-      "code": "str.replace(substr, new_substr)"
+      "code": [
+        "str.replace(substr, new_substr)"
+      ]
     },
     "replace_all_substring": {
       "name": "Replace all substring matches with another string",
@@ -161,11 +225,15 @@
     },
     "split_at_newlines": {
       "name": "Split string into a list of strings at every new line character",
-      "code": "str.split(\"\\n\")"
+      "code": [
+        "str.split(\"\\n\")"
+      ]
     },
     "split_at_substring": {
       "name": "Split string by locating all substrings",
-      "code": "str.split(substring)"
+      "code": [
+        "str.split(substring)"
+      ]
     },
     "merge_lists_into_string": {
       "name": "Merge a list of strings into one string",
@@ -221,43 +289,63 @@
     },
     "format_as_fixed_decimal": {
       "name": "Format parameter as a fixed-point decimal number",
-      "code": "'{:.2f}'.format(number_string)"
+      "code": [
+        "'{:.2f}'.format(number_string)"
+      ]
     },
     "format_as_currency": {
       "name": "Format parameter as a currency number",
-      "code": "'${:,.2f}'.format(number_string)"
+      "code": [
+        "'${:,.2f}'.format(number_string)"
+      ]
     },
     "format_as_percentage": {
       "name": "Format parameter as a percentage number",
-      "code": "format(number, '%')"
+      "code": [
+        "format(number, '%')"
+      ]
     },
     "format_number_with_separators": {
       "name": "Format number with thousand separators",
-      "code": "format(number, ',')"
+      "code": [
+        "format(number, ',')"
+      ]
     },
     "format_number_with_positive_negative_sign": {
       "name": "Format number with positive/negative signs",
-      "code": " '{0:+}'.format(number)"
+      "code": [
+        " '{0:+}'.format(number)"
+      ]
     },
     "format_number_in_scientific_notation_little_e": {
       "name": "Format number with scientific notation with 'e'",
-      "code": "format(number, 'e')"
+      "code": [
+        "format(number, 'e')"
+      ]
     },
     "format_number_in_scientific_notation_big_e": {
       "name": "Format number with scientific notation with 'E'",
-      "code": "format(number, 'E')"
+      "code": [
+        "format(number, 'E')"
+      ]
     },
     "format_number_in_binary": {
       "name": "Format number into binary",
-      "code": "format(value, 'b')"
+      "code": [
+        "format(value, 'b')"
+      ]
     },
     "format_number_in_octal": {
       "name": "Format number into octal",
-      "code": "format(number, 'o')"
+      "code": [
+        "format(number, 'o')"
+      ]
     },
     "format_number_in_hexadecimal": {
       "name": "Format number into hexadecimal",
-      "code": "format(number, 'x')"
+      "code": [
+        "format(number, 'x')"
+      ]
     }
   }
 }
