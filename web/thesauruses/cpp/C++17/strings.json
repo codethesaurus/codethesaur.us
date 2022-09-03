@@ -92,26 +92,36 @@
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
       "code": [
-        "-todo- provided in locale"
-      ]
+        "#include <locale>",
+        "\n",
+        "std::isalpha(character)",
+        "\n"        
+      ],
+      "comment": "Note that the isalpha only takes a single character at a time."
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
       "code": [
-        "-todo- provided in locale"
-      ]
+        "#include <locale>",
+        "\n",
+        "std::isdigit(character)",
+        "\n"        
+      ],
+      "comment": "Note that the isdigit only takes a single character at a time."
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
       "code": [
-        "-todo- provided in locale"
-      ]
+        "#include <locale>",
+        "\n",
+        "std::isalnum(character)",
+        "\n"        
+      ],
+      "comment": "Note that the isalnum only takes a single character at a time."
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "code": [
-        "-todo- may be provided in locale"
-      ]
+      "not-implemented": true
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
@@ -120,14 +130,22 @@
     "is_all_uppercase": {
       "name": "Is string all uppercase characters?",
       "code": [
-        "-todo- provided in locale"
-      ]
+        "#include <locale>",
+        "\n",
+        "std::isupper(character)",
+        "\n"        
+      ],
+      "comment": "Note that the isupper only takes a single character at a time."
     },
     "is_all_lowercase": {
       "name": "Is string all lowercase characters?",
       "code": [
-        "-todo- provided in locale"
-      ]
+        "#include <locale>",
+        "\n",
+        "std::islower(character)",
+        "\n"        
+      ],
+      "comment": "Note that the islower only takes a single character at a time."
     },
     "is_in_titlecase": {
       "name": "Is string formatted in title case?",
@@ -136,64 +154,57 @@
     "does_substring_exist": {
       "name": "Does a substring exist in a string?",
       "code": [
-        "txt = 'This is a search string' \ntxt.find('is')"
-      ]
+        "std::size_t found_idx = string_to_search.find(substring_to_find);"
+      ],
+      "comment": "If no matches were found, the function returns string::npos, otherwise returns position of the first character of the first match."
     },
     "find_start_index_of_substring": {
       "name": "Find index of where a substring starts",
       "code": [
-        "txt = 'This is a search string' \ntxt.index('is')"
+        "std::size_t found_idx = string_to_search.find(substring_to_find);"
       ]
     },
     "find_start_index_of_additional_substring": {
       "name": "Find index of an additional substring (or starting at another index)",
-      "not-implemented": true
+      "code": [
+        "std::size_t found_idx = string_to_search.find(substring_to_find, index_to_start_search);"
+      ]
     },
     "find_start_index_of_substring_from_end": {
       "name": "Find substring index starting at end",
       "code": [
-        "str.find(substring, start, end)"
+        "std::size_t found_idx = string_to_search.rfind(substring_to_find, index_to_start_search);"
       ]
     },
     "count_occurrences_of_substring": {
       "name": "Find number of occurences of a substring",
-      "code": [
-        "str.count(substring)"
-      ]
+      "not-implemented": true
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "code": [
-        "txt = 'Hello World!!' \n#Get 5 characters from left\ntxt[0:5] "
-      ]
+      "not-implemented": true
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "code": [
-        "txt = 'Hello World!!' \n#Get 5 characters from right \ntxt[-5:] "
-      ]
+      "not-implemented": true
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "code": [
-        "str[start:end]"
-      ]
+      "not-implemented": true
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
-      "not-implemented": true
+      "code": [
+        "std::string newString = originalString.substr(index_of_desired_first_char, size_of_substring);"
+      ]
     },
     "convert_to_uppercase": {
       "name": "Convert string to all uppercase",
-      "code": [
-        "-todo- provided in locale"
-      ]
+      "not-implemented": true
     },
     "convert_to_lowercase": {
       "name": "Convert string to all lowercase",
-      "code": [
-        "-todo- provided in locale"
-      ]
+      "not-implemented": true
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
@@ -212,7 +223,7 @@
     "replace_substring": {
       "name": "Replace a substring with another string",
       "code": [
-        "str.replace(substr, new_substr)"
+        "--- todo ----    this is in...... std::string::replace ......."
       ]
     },
     "replace_all_substring": {
