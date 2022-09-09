@@ -41,14 +41,6 @@
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
       "code": "function( ...$params ) : null {\n    // Code $params is an array of items\n}"
-    },
-    "call_subroutine": {
-      "name": "Call subroutine",
-      "code": ""
-    },
-    "return_from_subroutine": {
-      "name": "Return from subroutine",
-      "code": ""
     }
   }
 }

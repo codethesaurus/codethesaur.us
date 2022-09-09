@@ -212,53 +212,13 @@
       "name": "Parameter used in format function if they're used in order",
       "code": "Locale l, String format, Object... args"
     },
-    "parameter_format_numerical": {
-      "name": "Parameter used in format function if they're numerically numbered",
-      "code": ""
-    },
-    "parameter_format_by_name": {
-      "name": "Paramater used in format function if they're named variables",
-      "code": ""
-    },
     "format_as_integer": {
       "name": "Format parameter as an integer",
       "code": "%d"
     },
-    "format_as_decimal": {
-      "name": "Format parameter as a decimal number",
-      "code": ""
-    },
-    "format_as_fixed_decimal": {
-      "name": "Format parameter as a fixed-point decimal number",
-      "code": ""
-    },
-    "format_as_currency": {
-      "name": "Format parameter as a currency number",
-      "code": ""
-    },
-    "format_as_percentage": {
-      "name": "Format parameter as a percentage number",
-      "code": ""
-    },
-    "format_number_with_separators": {
-      "name": "Format number with thousand separators",
-      "code": ""
-    },
-    "format_number_with_positive_negative_sign": {
-      "name": "Format number with positive/negative signs",
-      "code": ""
-    },
     "format_number_in_scientific_notation_little_e": {
       "name": "Format number with scientific notation with 'e'",
       "code": "%e"
-    },
-    "format_number_in_scientific_notation_big_e": {
-      "name": "Format number with scientific notation with 'E'",
-      "code": ""
-    },
-    "format_number_in_binary": {
-      "name": "Format number into binary",
-      "code": ""
     },
     "format_number_in_octal": {
       "name": "Format number into octal",

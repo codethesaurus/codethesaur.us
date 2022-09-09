@@ -198,65 +198,13 @@
       "name": "Delete the list",
       "code": "Automatic compile-time deterministic memory management"
     },
-    "create_a_mutable_set": {
-      "name": "Create a mutable key/value set",
-      "code": ""
-    },
-    "get_key_from_mutable_set": {
-      "name": "Get key",
-      "code": ""
-    },
-    "get_value_from_mutable_set": {
-      "name": "Get value",
-      "code": ""
-    },
-    "get_all_keys_from_mutable_set": {
-      "name": "Get all keys",
-      "code": ""
-    },
-    "get_all_values_from_mutable_set": {
-      "name": "Get all values",
-      "code": ""
-    },
-    "swap_key_and_value_in_mutable_set": {
-      "name": "Swap a key and value",
-      "code": ""
-    },
     "delete_mutable_set": {
       "name": "Delete the set",
       "code": "Automatic compile-time deterministic memory management"
     },
-    "create_a_immutable_set": {
-      "name": "Create an immutable key/value set",
-      "code": ""
-    },
-    "get_key_from_immutable_set": {
-      "name": "Get key",
-      "code": ""
-    },
-    "get_value_from_immutable_set": {
-      "name": "Get value",
-      "code": ""
-    },
-    "get_all_keys_from_immutable_set": {
-      "name": "Get all keys",
-      "code": ""
-    },
-    "get_all_values_from_immutable_set": {
-      "name": "Get all values",
-      "code": ""
-    },
-    "swap_key_and_value_in_immutable_set": {
-      "name": "Swap a key and value",
-      "code": ""
-    },
     "delete_immutable_set": {
       "name": "Delete the set",
       "code": "Automatic compile-time deterministic memory management"
-    },
-    "find_element_at_position": {
-      "name": "Find/search for an element at an index position",
-      "code": ""
     },
     "find_element_by_value": {
       "name": "Find/search for an element by value",
@@ -278,14 +226,6 @@
       "name": "Concatenate two lists together",
       "code": "list0 & list1"
     },
-    "split_list_at_index": {
-      "name": "Split lists at an index",
-      "code": ""
-    },
-    "split_list_at_value": {
-      "name": "Split list at a value",
-      "code": ""
-    },
     "duplicate_a_list": {
       "name": "Duplicate a list",
       "code": "new_list = list"
@@ -300,7 +240,7 @@
     },
     "resize_list": {
       "name": "Increase/decrease list size",
-      "code": "list.setLen lenght"
+      "code": "list.setLen length"
     },
     "do_two_lists_match_exactly": {
       "name": "Do two lists match every element?",

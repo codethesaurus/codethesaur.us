@@ -301,7 +301,7 @@
       "name": "Split list at a value"
     },
     "duplicate_a_list": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "Beyond the scope of this tool",
       "name": "Duplicate a list"
     },

@@ -115,7 +115,7 @@
       "code": "str.lastIndexOf(subString, startIndex);"
     },
     "count_occurrences_of_substring": {
-      "name": "Find number of occurences of a substring",
+      "name": "Find number of occurrences of a substring",
       "code": "StringUtils.countMatches(str, findStr)",
       "comment": "Requires StringUtils.countMatches from Apache Commons Lang"
     },
@@ -125,20 +125,16 @@
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "not-implemented": "true",
-      "code": ""
-
+      "not-implemented": "true"
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
       "code": "str.substring(startIndex, endIndex.length());",
       "comment": "Second parameter in substring() is exclusive."
-
     },
     "convert_to_uppercase": {
       "name": "Convert string to all uppercase",
@@ -150,8 +146,7 @@
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "capitalize_string": {
       "name": "Capitalize first letter of a string",
@@ -187,23 +182,19 @@
     },
     "encode_html_entities": {
       "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "decode_html_entities": {
       "name": "Decode HTML entitles into characters",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "encode_url_percent": {
       "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "decode_url_percent": {
       "name": "Decode URL percent encoding",
-      "not-implemented": "true",
-      "code": ""
+      "not-implemented": "true"
     },
     "encode_to_base64": {
       "name": "Encode string into Base64 format",
@@ -221,53 +212,13 @@
       "name": "Parameter used in format function if they're used in order",
       "code": "Locale l, String format, Object... args"
     },
-    "parameter_format_numerical": {
-      "name": "Parameter used in format function if they're numerically numbered",
-      "code": ""
-    },
-    "parameter_format_by_name": {
-      "name": "Paramater used in format function if they're named variables",
-      "code": ""
-    },
     "format_as_integer": {
       "name": "Format parameter as an integer",
       "code": "%d"
     },
-    "format_as_decimal": {
-      "name": "Format parameter as a decimal number",
-      "code": ""
-    },
-    "format_as_fixed_decimal": {
-      "name": "Format parameter as a fixed-point decimal number",
-      "code": ""
-    },
-    "format_as_currency": {
-      "name": "Format parameter as a currency number",
-      "code": ""
-    },
-    "format_as_percentage": {
-      "name": "Format parameter as a percentage number",
-      "code": ""
-    },
-    "format_number_with_separators": {
-      "name": "Format number with thousand separators",
-      "code": ""
-    },
-    "format_number_with_positive_negative_sign": {
-      "name": "Format number with positive/negative signs",
-      "code": ""
-    },
     "format_number_in_scientific_notation_little_e": {
       "name": "Format number with scientific notation with 'e'",
       "code": "%e"
-    },
-    "format_number_in_scientific_notation_big_e": {
-      "name": "Format number with scientific notation with 'E'",
-      "code": ""
-    },
-    "format_number_in_binary": {
-      "name": "Format number into binary",
-      "code": ""
     },
     "format_number_in_octal": {
       "name": "Format number into octal",
