@@ -159,3 +159,5 @@ class Command(BaseCommand):
             if error_count:
                 print(str(error_count) + " errors found.")
                 raise CommandError(str(error_count) + " errors found.")
+        else:
+            print("No issues found.")
