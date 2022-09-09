@@ -23,7 +23,7 @@
       "name": "Read-only class"
     },
     "static_class": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "Types are static",
       "name": "Static class"
     },
@@ -44,27 +44,22 @@
       "name": "Defining public variables"
     },
     "static_variables": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "variables are static",
       "name": "Defining static variables"
     },
     "private_functions": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "functions are private by default",
       "name": "Defining private functions"
     },
     "protected_functions": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "functions are protected by default",
       "name": "Defining protected functions"
     },
-    "public_functions": {
-      "code": "",
-      "comment": "functions are private by default",
-      "name": "Defining public functions"
-    },
     "static_functions": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "functions are static",
       "name": "Defining static functions"
     },
@@ -87,11 +82,6 @@
     "instantiating_polymorphic_object": {
       "code": "Name(argument: \"value\", other: 42)",
       "name": "Instantiating a polymorphic object"
-    },
-    "implement_constructor": {
-      "code": "",
-      "comment": "Any function that returns the Type",
-      "name": "Implementing a class constructor"
     }
   }
 }
