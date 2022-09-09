@@ -7,88 +7,88 @@
   },
   "concepts": {
     "boolean": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Boolean"
     },
     "signed_integer_8_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Signed 8-bit integer"
     },
     "unsigned_integer_8_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned 8-bit integer"
     },
     "signed_integer_16_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Signed 16-bit integer"
     },
     "unsigned_integer_16_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned 16-bit integer"
     },
     "signed_integer_32_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Signed 32-bit integer"
     },
     "unsigned_integer_32_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned 32-bit integer"
     },
     "signed_integer_64_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Signed 64-bit integer"
     },
     "unsigned_integer_64_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned 64-bit integer"
     },
     "signed_integer_as_object": {
-      "not_implemented": true,
+      "not-implemented": true,
       "comment": "It is possible to declare a variable as integer using the 'declare' keywords. The variable is stored as a string but it is then operated on like an integer.",
       "name": "Signed object-based Integer"
     },
     "unsigned_integer_as_object": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned object-based Integer"
     },
     "signed_float_16_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Signed 16-bit floating point"
     },
     "unsigned_float_16_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned 16-bit floating point"
     },
     "signed_float_32_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Signed 32-bit floating point"
     },
     "unsigned_float_32_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned 32-bit floating point"
     },
     "signed_float_64_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Signed 64-bit floating point"
     },
     "unsigned_float_64_bit": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned 64-bit floating point"
     },
     "signed_float_as_object": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Signed object-based floating point"
     },
     "unsigned_float_as_object": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Unsigned object-based floating point"
     },
     "character": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Character"
     },
     "string_as_object": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "String as an object"
     },
     "string_as_array": {
@@ -97,15 +97,15 @@
       "name": "String as an array of characters"
     },
     "complex_as_object": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Complex Number as an object"
     },
     "real_number_part": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Complex number real part"
     },
     "imaginary_number_part": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Complex number imaginary part"
     }
   }
