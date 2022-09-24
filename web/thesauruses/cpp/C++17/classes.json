@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "language": "C++",
+    "language_version": "17",
+    "language_name": "C++",
+    "structure": "classes"
+  },
+  "concepts": {
+    "normal_class": {
+      "code": "class ClassName {\n  access-specifier: //Class body containing variables and methods \n}",
+      "name": "Normal class"
+    },
+    "abstract_class": {
+      "code": "class ClassName {\n  access-specifier: \nvirtual method_name(){} \n  } \n}",
+      "name": "Abstract class",
+      "comment":"We can make a cpp class abstract by putting virtual functions inside a normal class"
+    },
+    "interface": {
+      "name": "Interface",
+      "not-implemented":"true"
+    },
+    "read_only_class": {
+      "code": "class ClassName {\n  //Private Data Member Declaration \n  private: data-type variable_name = variable_value; \n  //Defining Getter method to return the value of private properties. \n  public: data-type getter_method() {\n  return variable_name; \n} \n}",
+      "comment": "We can make a class read-only by making all of the data members private.  \n  Please note:  \n  1.If we make a class read-only, then we can\u2019t modify the properties or data members value of the class. \n  2.If we make a class read-only, then we can only read the properties or data members value of the class.  \n  3.The read-only class will contain only getter methods which return the value of the private properties to the main() function. \n  4.The read-only class can contain setter methods if we want to modify the value of the private properties after reading because there is our choice to keep setter method in the class but as per based on the concepts we should not contain.",
+      "name": "Read-only class"
+    },
+    "static_class": {
+      "name": "Static class",
+      "not-implemented":"true"
+    },
+    "inner_class": {
+      "code": "class OuterClassName {\n    //class body containing variables, methods and nested class   \n  class InnerStaticClassName {\n    //class body containing variables and methods \n} \n}",
+      "comment": "C++ inner class or nested class is a class that is declared inside the class.",
+      "name": "Inner class"
+    },
+    "packages": {
+      "name": "Packages",
+      "not-implemented":"true"
+    },
+    "class_with_generic_type": {
+      "name": "Class with a generic type",
+      "not-implemented":"true"
+    },
+    "private_variables": {
+      "code": "private: type varName = value;",
+      "name": "Defining private variables"
+    },
+    "protected_variables": {
+      "code": "protected: data_type variable_name = value;",
+      "name": "Defining protected variables"
+    },
+    "public_variables": {
+      "code": "public: data_type variable_name = value;",
+      "name": "Defining public variables"
+    },
+    "static_variables": {
+      "code": "static data_type variable_name = value;",
+      "name": "Defining static variables"
+    },
+    "private_functions": {
+      "code": "private: data_type method_name(){\n //method body \n}",
+      "name": "Defining private functions"
+    },
+    "protected_functions": {
+      "code": "protected: data_type method_name(){\n //method body \n}",
+      "name": "Defining protected functions"
+    },
+    "public_functions": {
+      "code": "public: data_type method_name(){\n //method body \n}",
+      "name": "Defining public functions"
+    },
+    "static_functions": {
+      "code": "static data_type method_name(){\n //method body \n}",
+      "name": "Defining static functions"
+    },
+    "extends_class": {
+      "code": "class ChildClassName: access-specifier ParentClassName {\n  //Class body containing variables and methods \n}",
+      "name": "Class that inherits another class"
+    },
+    "extending_interface": {
+      "name": "Class/Interface that inherits/extends another class/interface",
+      "not-implemented": "true"
+    },
+    "calling_superclass_functions": {
+      "name": "Calling a superclass function",
+      "not-implemented":"true"
+    },
+    "overriding_superclass_functions": {
+      "code": "class ClassName1 {\n public: data_type method_name() {\n  //method body \n} \n} \n  class ClassName2:access-specifier ClassName1{ \n  public: data_type method_name() {\n  //overriding method body  \n} \n}",
+      "name": "Overriding a superclass function"
+    },
+    "instantiating_object": {
+      "code": "ClassName objName; //Static memory allocation \nClassName *objName = new ClassName(); //Dynamic memory allocation",
+      "name": "Instantiating a new object"
+    },
+    "instantiating_polymorphic_object": {
+      "name": "Instantiating a polymorphic object",
+      "not-implemented":"true"
+    },
+    "implement_constructor": {
+      "code": "class ClassName {\n public: ClassName(){\n //constructor body  \n}  \n}",
+      "name": "Implementing a class constructor"
+    },
+    "implement_deconstructor": {
+      "code": " class ClassName {\n public: ~ClassName(){\n //deconstructor body  \n}  \n}",
+      "name": "Implementing a class deconstructor"
+    }
+  }
+}
