@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "structure": "queues_stacks",
+    "structure_name": "Queues and Stacks"
+  },
+  "categories": {
+    "Creating and Destroying Simple Queues": {
+      "simple_queue_import_statement": "Import statement to add simple queue",
+      "simple_queue_data_type": "Queue data type name",
+      "simple_queue_create_statement": "Create a queue",
+      "simple_queue_destroy_statement": "Destroy/delete a queue"
+    },
+    "Creating and Destroying Circular Queues": {
+      "circular_queue_import_statement": "Import statement to add circular queue",
+      "circular_queue_data_type": "Queue data type name",
+      "circular_queue_create_statement": "Create a queue",
+      "circular_queue_destroy_statement": "Destroy/delete a queue"
+    },
+    "Creating and Destroying Priority Queues": {
+      "priority_queue_import_statement": "Import statement to add priority queue",
+      "priority_queue_data_type": "Queue data type name",
+      "priority_queue_create_statement": "Create a queue",
+      "priority_queue_destroy_statement": "Destroy/delete a queue"
+    },
+    "Creating and Destroying Double Ended Queues": {
+      "double_ended_queue_import_statement": "Import statement to add double-ended queue",
+      "double_ended_queue_data_type": "Queue data type name",
+      "double_ended_queue_create_statement": "Create a queue",
+      "double_ended_queue_destroy_statement": "Destroy/delete a queue"
+    },
+    "Creating and Destroying Stacks": {
+      "stack_import_statement": "Import statement to add stacks",
+      "stack_data_type": "Stack data type name",
+      "stack_create_statement": "Create a stack",
+      "stack_destroy_statement": "Destroy/delete a stack"
+    },
+    "Queue Operations": {
+      "queue_enqueue_an_item": "Enqueue an item (add to end)",
+      "queue_enqueue_priority_item": "Enqueue a high priority item (add to end of priority queue)",
+      "queue_enqueue_from_list": "Enqueue items from a list into queue (add list to end)",
+      "queue_enqueue_priority_from_list": "Enqueue priority items from a list (add list to end of priority queue)",
+      "queue_dequeue_return_an_item": "Dequeue an item (remove from front, return item)",
+      "queue_dequeue_delete_an_item": "Dequeue an item (remove from front, don't return)",
+      "queue_peek_at_next_item": "Look/peek at next available element (from front)",
+      "queue_peek_at_last_item": "Look/peek at last element (from back)",
+      "queue_duplicate_next_item": "Duplicate next item",
+      "queue_swap_two_items": "Swap two items",
+      "queue_get_size": "Get size (number of items) in the queue",
+      "queue_get_capacity": "Check capacity of queue",
+      "queue_clear_all": "Clear out all queue items"
+    },
+    "Stack Operations": {
+      "stack_push_item": "Push an item (add to top)",
+      "stack_pop_return_item": "Pop an item (remove from top, return item)",
+      "stack_pop_delete_item": "Pop an item (remove from top, don't return)",
+      "stack_peek_at_next_item": "Look/peek at next element (from top)",
+      "stack_peek_at_last_item": "Look/peek at last element (from bottom)",
+      "stack_duplicate_next_item": "Duplicate top item",
+      "stack_swap_two_items": "Swap two items",
+      "stack_get_size": "Get size (number of items) on the stack",
+      "stack_get_capacity": "Check capacity of stack",
+      "stack_clear_all": "Clear all queue items"
+    }
+  }
+}
