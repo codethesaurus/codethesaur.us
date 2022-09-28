@@ -104,6 +104,7 @@
     },
     "null_coalescing": {
       "code": "If(leftHandOperand, rightHandOperand)",
+      "comment": "Value of leftHandOperand is returned if it isn't null else rightHandOperand is evaluated and its result is returned",
       "name": "Null coalescing operator"
     },
     "is": {
@@ -188,6 +189,7 @@
     },
     "ternary": {
       "code": "If(condition, Expression1, Expression2)",
+      "comment": "If expression stated by condition is true, result of Expression1 is returned else result of Expression2 is returned",
       "name": "Ternary operator"
     },
     "null_forgiving": {
