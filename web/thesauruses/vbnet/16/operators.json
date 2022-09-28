@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "language": "vbnet",
+    "language_version": "16.0",
+    "language_name": "Visual Basic",
+    "structure": "operators"
+  },
+  "concepts": {
+    "addition": {
+      "code": "+",
+      "name": "Addition operator"
+    },
+    "addition_assignment": {
+      "code": "+=",
+      "name": "Addition and assignment operator"
+    },
+    "subtraction": {
+      "code": "-",
+      "name": "Subtraction operator"
+    },
+    "subtraction_assignment": {
+      "code": "-=",
+      "name": "Subtraction and assignment operator"
+    },
+    "multiplication": {
+      "code": "*",
+      "name": "Multiplication operator"
+    },
+    "multiplication_assignment": {
+      "code": "*=",
+      "name": "Multiplication and assignment operator"
+    },
+    "division": {
+      "code": "/",
+      "name": "Division operator"
+    },
+    "division_assignment": {
+      "code": "/=",
+      "name": "Division and assignment operator"
+    },
+    "modulus": {
+      "code": "Mod",
+      "name": "Modulus (remainder) operator"
+    },
+    "modulus_assignment": {
+      "not-implemented": "true",
+      "name": "Modulus and assignment operator"
+    },
+    "unary_plus": {
+      "code": "+",
+      "name": "Unary plus operator"
+    },
+    "unary_minus": {
+      "code": "-",
+      "name": "Unary minus operator"
+    },
+    "increment": {
+      "not-implemented": "true",
+      "name": "Increment (add 1) operator"
+    },
+    "decrement": {
+      "not-implemented": "true",
+      "name": "Decrement (subtract 1) operator"
+    },
+    "exponential": {
+      "code": "^",
+      "name": "Exponential operator"
+    },
+    "factorial": {
+      "not-implemented": "true",
+      "name": "Factorial operator"
+    },
+    "absolute_value": {
+      "not-implemented": "true",
+      "name": "Absolute value operator"
+    },
+    "percentage": {
+      "not-implemented": "true",
+      "name": "Percentage operator"
+    },
+    "equal_to": {
+      "code": "=",
+      "name": "Equality operator"
+    },
+    "not_equal_to": {
+      "code": "<>",
+      "name": "Not equal to operator"
+    },
+    "less_than": {
+      "code": "<",
+      "name": "Less than operator"
+    },
+    "less_than_or_equal_to": {
+      "code": "<=",
+      "name": "Less than or equal to operator"
+    },
+    "greater_than": {
+      "code": ">",
+      "name": "Greater than operator"
+    },
+    "greater_than_or_equal_to": {
+      "code": ">=",
+      "name": "Greater than or equal to operator"
+    },
+    "null_coalescing": {
+      "code": "If(leftHandOperand, rightHandOperand)",
+      "name": "Null coalescing operator"
+    },
+    "is": {
+      "code": "is",
+      "name": "Is operator"
+    },
+    "is_not": {
+      "code": "IsNot",
+      "name": "Is not operator"
+    },
+    "logical_and": {
+      "code" : "And",
+      "name" : "Logical AND Operator"
+    },
+    "logical_or": {
+      "code" : "Or",
+      "name" : "Logical OR Operator"
+    },
+    "logical_not": {
+      "code" : "Not",
+      "name" : "Logical NOT Operator"
+    },
+    "bitwise_and": {
+      "code" : "And",
+      "name" : "Bitwise AND operator"
+    },
+    "bitwise_and_assignment": {
+      "not-implemented" : "true",
+      "name" : "Bitwise AND and assignment operator"
+    },
+    "bitwise_or": {
+          "code" : "Or",
+          "name" : "Bitwise OR operator"
+    },
+    "bitwise_or_assignment": {
+      "not-implemented" : "true",
+      "name" : "Bitwise OR and assignment operator"
+    },
+    "bitwise_not": {
+      "code" : "Not",
+      "name" : "Bitwise NOT operator"
+    },
+    "bitwise_not_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise NOT and assignment operator"
+    },
+    "bitwise_xor": {
+      "code" : "Xor",
+      "name" : "Bitwise XOR operator"
+    },
+    "bitwise_xor_assignment": {
+      "not-implemented" : "true",
+      "name" : "Bitwise XOR and assignment operator"
+    },
+    "bitwise_xnor": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR operator"
+    },
+    "bitwise_xnor_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR and assignment operator"
+  },
+    "left_shift": {
+      "code": "<<",
+      "name": "Left shift bitwise operator"
+    },
+    "left_shift_assignment": {
+      "code": "<<=",
+      "name": "Left shift assignment operator"
+    },
+    "right_shift": {
+      "code": ">>",
+      "name": "Right shift bitwise operator"
+    },
+    "right_shift_assignment": {
+      "code": ">>=",
+      "name": "Right shift assignment operator"
+    },
+    "not_assignment": {
+      "not-implemented": "true",
+      "name":"Bitwise NOT and assignment operator"
+    },
+    "ternary": {
+      "code": "If(condition, Expression1, Expression2)",
+      "name": "Ternary operator"
+    },
+    "null_forgiving": {
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
+    }
+  }
+}
