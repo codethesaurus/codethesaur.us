@@ -17,7 +17,7 @@ jobs:
           warning_inactive_in_hours: 336 # 14 days
           unassign_inactive_in_hours: 408 # 3 days later
           office_hours: 'n/a'
-          warning_inactive_message: 'If you are still working on this issue, that\'s fine. Please comment here to tell the bot to give you more time.'
+          warning_inactive_message: "If you are still working on this issue, that's fine. Please comment here to tell the bot to give you more time."
       - name: Print the unassigned issues
         run: echo "Unassigned issues = ${{steps.unassign_issues.outputs.unassigned_issues}}"
       - name: Print the warned issues
