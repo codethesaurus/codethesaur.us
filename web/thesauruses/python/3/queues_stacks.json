@@ -1,0 +1,12 @@
+{
+    "meta": {
+      "language": "python",
+      "language_version": "3.10",
+      "language_name": "Python",
+      "structure": "Queue And Stacks"
+    },
+    "concepts": {
+      "queue": {
+        "code": "def function_name():\n    statements",
+        "name": "Function that does not return a value and takes no parameters"
+      },
