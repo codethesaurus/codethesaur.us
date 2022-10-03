@@ -8,343 +8,283 @@
   "concepts": {
     "simple_queue_import_statement": {
       "name": "Import statement to add simple queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "simple_queue_data_type": {
       "name": "Queue data type name",
-			"code": [
-				"Array"
-			]
+      "code": ["Array"]
     },
     "simple_queue_create_statement": {
       "name": "Create a queue",
-			"comment": "A basic queue can be created using an array and array methods.",
+      "comment": "A basic queue can be created using an array and array methods.",
       "code": [
         "const queue = []",
-				"// with explicit types",
-				"const queue: (string | number)[] = []; "
+        "// with explicit types",
+        "const queue: (string | number)[] = []; "
       ]
     },
     "simple_queue_create_copy_statement": {
       "name": "Create a queue from existing queue",
-      "code": [
-				"// using spread operator",
-        "const newQueue = [...queueToCopy]"
-      ]
+      "code": ["// using spread operator", "const newQueue = [...queueToCopy]"]
     },
     "simple_queue_create_copy_from_list_statement": {
       "name": "Create a queue from a list of items",
-      "code": [
-				"// using spread operator",
-        "const queue = [...list]"
-      ]
+      "code": ["// using spread operator", "const queue = [...list]"]
     },
     "simple_queue_destroy_statement": {
       "name": "Destroy/delete a queue",
-      "code": [
-        "queue = undefined"
-      ]
+      "code": ["queue = undefined"]
     },
     "simple_queue_data_structure": {
       "name": "Data structure that backs the simple queue",
-      "code": [
-        "array"
-      ]
+      "code": ["array"]
     },
     "circular_queue_import_statement": {
       "name": "Import statement to add circular queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "circular_queue_data_type": {
       "name": "Queue data type name",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "circular_queue_create_statement": {
       "name": "Create a queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "circular_queue_create_copy_statement": {
       "name": "Create a queue from existing queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "circular_queue_create_copy_from_list_statement": {
       "name": "Create a queue from a list of items",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "circular_queue_destroy_statement": {
       "name": "Destroy/delete a queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "circular_queue_data_structure": {
       "name": "Data structure that backs the simple queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "priority_queue_import_statement": {
       "name": "Import statement to add priority queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "priority_queue_data_type": {
       "name": "Queue data type name",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "priority_queue_create_statement": {
       "name": "Create a queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "priority_queue_create_copy_statement": {
       "name": "Create a queue from existing queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "priority_queue_create_copy_from_list_statement": {
       "name": "Create a queue from a list of items",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "priority_queue_destroy_statement": {
       "name": "Destroy/delete a queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "priority_queue_data_structure": {
       "name": "Data structure that backs the priority queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "double_ended_queue_import_statement": {
       "name": "Import statement to add double-ended queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "double_ended_queue_data_type": {
       "name": "Queue data type name",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "double_ended_queue_create_statement": {
       "name": "Create a queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "double_ended_queue_create_copy_statement": {
       "name": "Create a queue from existing queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "double_ended_queue_create_copy_from_list_statement": {
       "name": "Create a queue from a list",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "double_ended_queue_destroy_statement": {
       "name": "Destroy/delete a queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "double_ended_queue_data_structure": {
       "name": "Data structure that backs the simple queue",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "stack_import_statement": {
       "name": "Import statement to add stacks",
-			"not-implemented": "true"
+      "not-implemented": "true"
     },
     "stack_data_type": {
       "name": "Stack data type name",
-      "code": [
-        "Array"
-      ]
+      "code": ["Array"]
     },
     "stack_create_statement": {
       "name": "Create a stack",
-			"comment": "A basic stack can be created using an array and array methods.",
+      "comment": "A basic stack can be created using an array and array methods.",
       "code": [
         "const stack = []",
-				"// with explicit types",
-				"const stack: (string | number)[] = []"
+        "// with explicit types",
+        "const stack: (string | number)[] = []"
       ]
     },
     "stack_create_copy_statement": {
       "name": "Create a stack from existing stack",
-      "code": [
-				"// using spread operator",
-        "const newStack = [...stackToCopy]"
-      ]
+      "code": ["// using spread operator", "const newStack = [...stackToCopy]"]
     },
     "stack_create_copy_from_list_statement": {
       "name": "Create a stack from a list",
-      "code": [
-				"// using spread operator",
-        "const stack = [...list]"
-      ]
+      "code": ["// using spread operator", "const stack = [...list]"]
     },
     "stack_destroy_statement": {
       "name": "Destroy/delete a stack",
-      "code": [
-        "stack = undefined"
-      ]
+      "code": ["stack = undefined"]
     },
     "stack_data_structure": {
       "name": "Data structure that backs the simple queue",
-      "code": [
-        "array"
-      ]
+      "code": ["array"]
     },
     "queue_enqueue_an_item": {
       "name": "Enqueue an item (add to end)",
-      "code": [
-        "queue.unshift(item)"
-      ]
+      "code": ["queue.unshift(item)"]
     },
     "queue_enqueue_priority_item": {
       "name": "Enqueue a high priority item (add to end of priority queue)",
-			"not-implemented": true
+      "not-implemented": true
     },
     "queue_enqueue_from_list": {
       "name": "Enqueue items from a list into queue (add list to end)",
-      "code": [
-        "list.map((item) => queue.unshift(item))"
-      ]
+      "code": ["list.map((item) => queue.unshift(item))"]
     },
     "queue_enqueue_priority_from_list": {
       "name": "Enqueue priority items from a list (add list to end of priority queue)",
-			"not-implemented": true
+      "not-implemented": true
     },
     "queue_dequeue_return_an_item": {
       "name": "Dequeue an item (remove from front, return item)",
-      "code": [
-        "const first = queue.pop()"
-      ]
+      "code": ["const first = queue.pop()"]
     },
     "queue_dequeue_delete_an_item": {
       "name": "Dequeue an item (remove from front, don't return)",
-      "code": [
-        "queue.pop()"
-      ]
+      "code": ["queue.pop()"]
     },
     "queue_peek_at_next_item": {
       "name": "Look/peek at next available element (from front)",
-			"not-implemented": true
+      "not-implemented": true
     },
     "queue_peek_at_last_item": {
       "name": "Look/peek at last element (from back)",
-			"not-implemented": true
+      "not-implemented": true
     },
     "queue_duplicate_next_item": {
       "name": "Duplicate next item",
-			"not-implemented": true
+      "not-implemented": true
     },
     "queue_swap_two_items": {
       "name": "Swap two items",
       "code": [
-				"// using destructuring",
+        "// using destructuring",
         "[queue[x], queue[y]] = [queue[y] queue[x]]"
       ]
     },
     "queue_get_size": {
       "name": "Get size (number of items) in the queue",
-      "code": [
-        "const length = queue.length"
-      ]
+      "code": ["const length = queue.length"]
     },
     "queue_get_capacity": {
       "name": "Check capacity of queue",
-			"not-implemented": true
+      "not-implemented": true
     },
     "queue_export_to_list": {
       "name": "Export a list of all queue items",
-			"not-implemented": true
+      "not-implemented": true
     },
     "queue_clear_all": {
       "name": "Clear out all queue items",
-      "code": [
-        "queue = []"
-      ]
+      "code": ["queue = []"]
     },
     "stack_push_item": {
       "name": "Push an item (add to top)",
-      "code": [
-        "stack.push(item)"
-      ]
+      "code": ["stack.push(item)"]
     },
     "stack_pop_return_item": {
       "name": "Pop an item (remove from top, return item)",
-      "code": [
-        "const item = stack.pop()"
-      ]
+      "code": ["const item = stack.pop()"]
     },
     "stack_pop_delete_item": {
       "name": "Pop an item (remove from top, don't return)",
-      "code": [
-        "stack.pop()"
-      ]
+      "code": ["stack.pop()"]
     },
     "stack_peek_at_next_item": {
       "name": "Look/peek at next element (from top)",
-			"not-implemented": true
+      "not-implemented": true
     },
     "stack_peek_at_last_item": {
       "name": "Look/peek at last element (from bottom)",
-			"not-implemented": true
+      "not-implemented": true
     },
     "stack_duplicate_next_item": {
       "name": "Duplicate top item",
-      "code": [
-        "stack.push(stack[stack.length - 1])"
-      ]
+      "code": ["stack.push(stack[stack.length - 1])"]
     },
     "stack_swap_two_items": {
       "name": "Swap two items",
       "code": [
-				"// using destructuring",
+        "// using destructuring",
         "[stack[x], stack[y]] = [stack[y] stack[x]]"
       ]
     },
     "stack_get_size": {
       "name": "Get size (number of items) on the stack",
-      "code": [
-        "const size = stack.length"
-      ]
+      "code": ["const size = stack.length"]
     },
     "stack_get_capacity": {
       "name": "Check capacity of stack",
-			"not-implemented": true
+      "not-implemented": true
     },
     "stack_export_to_list": {
       "name": "Export a list of all stack items",
-			"not-implemented": true
+      "not-implemented": true
     },
     "stack_clear_all": {
       "name": "Clear all queue items",
-      "code": [
-        "stack = []"
-      ]
+      "code": ["stack = []"]
     },
     "iterate_pointer_data_type": {
       "name": "Data type of a iterator pointer",
-      "code": [
-        "Number"
-      ]
+      "code": ["Number"]
     },
     "iterate_create_pointer": {
       "name": "Create iterator",
-      "code": [
-        "let current = 0"
-      ]
+      "code": ["let current = 0"]
     },
     "iterate_move_to_next_item": {
       "name": "Move pointer to next item",
-      "code": [
-        "current += 1"
-      ]
+      "code": ["current += 1"]
     },
     "iterate_move_to_previous_item": {
       "name": "Move pointer to previous item",
-      "code": [
-        "current -= 1"
-      ]
+      "code": ["current -= 1"]
     },
     "iterate_move_to_beginning": {
       "name": "Move pointer to beginning of queue/stack",
-			"code": [
-				"curent = 0"
-			]
+      "code": ["curent = 0"]
     },
     "iterate_move_to_end": {
       "name": "Move pointer to end of queue/stack",
-			"code": [
-				"current = queue.length - 1"
-			]
+      "code": ["current = queue.length - 1"]
     }
   }
 }
