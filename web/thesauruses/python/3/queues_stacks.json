@@ -1,0 +1,483 @@
+{
+    "meta": {
+        "language": "python",
+        "language_name": "Python",
+        "structure": "queues_stacks",
+        "language_version": "3"
+    },
+    
+    "concepts": {
+        "simple_queue_import_statement": {
+            "name": "Import statement to add simple queue",
+            "code": [
+                "from collections import deque"
+            ]
+        },
+        "simple_queue_data_type": {
+            "name": "Queue data type name",
+            "code": [
+                "deque"
+            ]
+        },
+        "simple_queue_create_statement": {
+            "name": "Create a queue",
+            "code": [
+                "q1 = deque()"
+            ]
+        },
+        "simple_queue_create_copy_statement": {
+            "name": "Create a queue from existing queue",
+            "code": [
+                "pq2 = deque(q1)"
+            ]
+        },
+        "simple_queue_create_copy_from_list_statement": {
+            "name": "Create a queue from a list of items",
+            "code": [
+                "l1 = ['a', 'b', 'c', 'd']",
+                "q3 = deque(l1)"
+            ]
+        },
+        "simple_queue_destroy_statement": {
+            "name": "Destroy/delete a queue",
+            "code": [
+                "del q3"
+            ]
+        },
+        "simple_queue_data_structure": {
+            "name": "Data structure that backs the simple queue",
+            "code": [
+                "list"
+            ]
+        },
+        "circular_queue_import_statement": {
+            "name": "Import statement to add circular queue",
+            "code": [
+                "There is no special import statement for circular queue"
+            ]
+        },
+        "circular_queue_data_type": {
+            "name": "Queue data type name",
+            "code": [
+                "CircularQueue"
+            ]
+        },
+        "circular_queue_create_statement": {
+            "name": "Create a queue",
+            "code": [
+                "class CircularQueue:",
+                "    def __init__(self, size):",
+                "        self.size = size",
+                "        self.queue = [None for i in range(size)]",
+                "        self.head = self.tail = -1",
+                "    def enqueue(self, data):",
+                "        if ((self.tail + 1) % self.size == self.head):",
+                "            print(\"Queue is Full\")",
+                "        elif (self.head == -1):",
+                "            self.head = 0",
+                "            self.tail = 0",
+                "            self.queue[self.tail] = data",
+                "        else:",
+                "            self.tail = (self.tail + 1) % self.size",
+                "            self.queue[self.tail] = data",
+                "    def dequeue(self):",
+                "        if (self.head == -1):",
+                "            print(\"Queue is Empty\")",
+                "        elif (self.head == self.tail):",
+                "            temp=self.queue[self.head]",
+                "            self.head = -1",
+                "            self.tail = -1",
+                "            return temp",
+                "        else:",
+                "            temp = self.queue[self.head]",
+                "            self.head = (self.head + 1) % self.size",
+                "            return temp",
+                "    def display(self):",
+                "        if(self.head == -1):",
+                "            print(\"Queue is Empty\")",
+                "        elif (self.tail >= self.head):",
+                "            print(\"Elements in the circular queue are:\",",
+                "                  end = \" \")",
+                "            for i in range(self.head, self.tail + 1):",
+                "                print(self.queue[i], end = \" \")",
+                "            print()",
+                "        else:",
+                "             for i in range(self.head, self.size):",
+                "                print(self.queue[i], end = \" \")",
+                "             for i in range(0, self.tail + 1):",
+                "                print(self.queue[i], end = \" \")",
+                "             print()"
+            ]
+        },
+        "circular_queue_create_copy_statement": {
+            "name": "Create a queue from existing queue",
+            "code": [
+                "cq2 = cq"
+            ]
+        },
+        "circular_queue_create_copy_from_list_statement": {
+            "name": "Create a queue from a list of items",
+            "code": [
+                "cq3 = CircularQueue(5)",
+                "list1 = ['a', 'b', 'c', 'd']",
+                "for i in list1:",
+                "    cq3.enqueue(i)"
+            ]
+        },
+        "circular_queue_destroy_statement": {
+            "name": "Destroy/delete a queue",
+            "code": [
+                "del cq",
+                "del cq2"
+            ]
+        },
+        "circular_queue_data_structure": {
+            "name": "Data structure that backs the simple queue",
+            "code": [
+                "list"
+            ]
+        },
+        "priority_queue_import_statement": {
+            "name": "Import statement to add priority queue",
+            "code": [
+                "from queue import PriorityQueue"
+            ]
+        },
+        "priority_queue_data_type": {
+            "name": "Queue data type name",
+            "code": [
+                "PriorityQueue"
+            ]
+        },
+        "priority_queue_create_statement": {
+            "name": "Create a queue",
+            "code": [
+                "pq = PriorityQueue()"
+            ]
+        },
+        "priority_queue_create_copy_statement": {
+            "name": "Create a queue from existing queue",
+            "code": [
+                "pq2 = PriorityQueue()",
+                "pq2.queue = pq.queue.copy()"
+            ]
+        },
+        "priority_queue_create_copy_from_list_statement": {
+            "name": "Create a queue from a list of items",
+            "code": [
+                "pq3 = PriorityQueue()",
+                "list1 = ['a', 'b', 'c', 'd']",
+                "pq3.queue = list1"
+            ]
+        },
+        "priority_queue_destroy_statement": {
+            "name": "Destroy/delete a queue",
+            "code": [
+                "del pq",
+                "del pq2",
+                "del pq3"
+            ]
+        },
+        "priority_queue_data_structure": {
+            "name": "Data structure that backs the simple queue",
+            "code": [
+                "list"
+            ]
+        },
+        "double_ended_queue_import_statement": {
+            "name": "Import statement to add double-ended queue",
+            "code": [
+                "from collections import deque"
+            ]
+        },
+        "double_ended_queue_data_type": {
+            "name": "Queue data type name",
+            "code": [
+                "deque"
+            ]
+        },
+        "double_ended_queue_create_statement": {
+            "name": "Create a queue",
+            "code": [
+                "dq = deque([1, 2, 3, 4, 5])"
+            ]
+        },
+        "double_ended_queue_create_copy_statement": {
+            "name": "Create a queue from existing queue",
+            "code": [
+                "dq2 = dq.copy()"
+            ]
+        },
+        "double_ended_queue_create_copy_from_list_statement": {
+            "name": "Create a queue from a list",
+            "code": [
+                "qlist = [1, 2, 3, 4, 5]",
+                "dq3 = deque(qlist)"
+            ]
+        },
+        "double_ended_queue_destroy_statement": {
+            "name": "Destroy/delete a queue",
+            "code": [
+                "del dq",
+                "del dq2",
+                "del dq3"
+            ]
+        },
+        "double_ended_queue_data_structure": {
+            "name": "Data structure that backs the simple queue",
+            "code": [
+                "list"
+            ]
+        },
+        "stack_import_statement": {
+            "name": "Import statement to add stacks",
+            "code": [
+                "from collections import deque  #deque can also be used as a stack"
+            ]
+        },
+        "stack_data_type": {
+            "name": "Stack data type name",
+            "code": [
+                "deque"
+            ]
+        },
+        "stack_create_statement": {
+            "name": "Create a stack",
+            "code": [
+                "stack1 = deque()",
+                "stack2 = deque([1, 2, 3, 4, 5])"
+            ]
+        },
+        "stack_create_copy_statement": {
+            "name": "Create a stack from existing stack",
+            "code": [
+                "stack3 = stack2.copy()"
+            ]
+        },
+        "stack_create_copy_from_list_statement": {
+            "name": "Create a stack from a list",
+            "code": [
+                "stack4 = deque([1, 2, 3, 4, 5])"
+            ]
+        },
+        "stack_destroy_statement": {
+            "name": "Destroy/delete a stack",
+            "code": [
+                "del stack1",
+                "del stack2",
+                "del stack3",
+                "del stack4"
+            ]
+        },
+        "stack_data_structure": {
+            "name": "Data structure that backs the simple stack",
+            "code": [
+                "list"
+            ]
+        },
+        "queue_enqueue_an_item": {
+            "name": "Enqueue an item (add to end)",
+            "code": [
+                "q.append(1)  #add 1 to the end of the queue (using deque library)"
+            ]
+        },
+        "queue_enqueue_priority_item": {
+            "name": "Enqueue a high priority item (add to end of priority queue)",
+            "code": [
+                "pq = PriorityQueue()",
+                "list1 = ['a', 'b', 'c', 'd']",
+                "pq.put(1, list1.pop())"
+            ]
+        },
+        "queue_enqueue_from_list": {
+            "name": "Enqueue items from a list into queue (add list to end)",
+            "code": [
+                "q2 = deque()",
+                "list1 = ['a', 'b', 'c', 'd']",
+                "q2.extend(list1)"
+            ]
+        },
+        "queue_enqueue_priority_from_list": {
+            "name": "Enqueue priority items from a list (add list to end of priority queue)",
+            "code": [
+                "pq3 = PriorityQueue() #using PriorityQueue library",
+                "list1 = ['a', 'b', 'c', 'd']",
+                "pq3.queue.extend = list1"
+            ]
+        },
+        "queue_dequeue_return_an_item": {
+            "name": "Dequeue an item (remove from front, return item)",
+            "code": [
+                "q1 = deque([1,2,3,5,2,4])",
+                "poppedItem = q1.popleft()  #remove and return the first item in the queue (using deque library)"
+            ]
+        },
+        "queue_dequeue_delete_an_item": {
+            "name": "Dequeue an item (remove from front, don't return)",
+            "code": [
+                "q1.popleft()  #remove the first item in the queue (using deque library)"
+            ]
+        },
+        "queue_peek_at_next_item": {
+            "name": "Look/peek at next available element (from front)",
+            "code": [
+                "nextItem = q1[0]  #look at the first item in the queue (using deque library)",
+                "print(nextItem)"
+            ]
+        },
+        "queue_peek_at_last_item": {
+            "name": "Look/peek at last element (from back)",
+            "code": [
+                "lastItem = q1[-1]  #look at the last item in the queue (using deque library)",
+                "print(lastItem)"
+            ]
+        },
+        "queue_duplicate_next_item": {
+            "name": "Duplicate next item",
+            "code": [
+                "q1.append(q1[0])  #duplicate the first item in the queue (using deque library)"
+            ]
+        },
+        "queue_swap_two_items": {
+            "name": "Swap two items",
+            "code": [
+                "q1[0], q1[1] = q1[1], q1[0]"
+            ]
+        },
+        "queue_get_size": {
+            "name": "Get size (number of items) in the queue",
+            "code": [
+                "q1len = len(q1)"
+            ]
+        },
+        "queue_get_capacity": {
+            "name": "Check capacity of queue",
+            "code": [
+                "q1capacity = len(q1)"
+            ]
+        },
+        "queue_export_to_list": {
+            "name": "Export a list of all queue items",
+            "code": [
+                "q1list = list(q1)"
+            ]
+        },
+        "queue_clear_all": {
+            "name": "Clear out all queue items",
+            "code": [
+                "q1.clear()"
+            ]
+        },
+        "stack_push_item": {
+            "name": "Push an item (add to top)",
+            "code": [
+                "stack1 = deque()",
+                "stack1.append(1)  #add 1 to the top of the stack (using deque library)"
+            ]
+        },
+        "stack_pop_return_item": {
+            "name": "Pop an item (remove from top, return item)",
+            "code": [
+                "stack1 = deque([1,2,3,5,2,4])",
+                "poppedItem = stack1.pop()  #remove and return the top item in the stack (using deque library)"
+            ]
+        },
+        "stack_pop_delete_item": {
+            "name": "Pop an item (remove from top, don't return)",
+            "code": [
+                "stack1.pop()  #remove the top item in the stack (using deque library)"
+            ]
+        },
+        "stack_peek_at_next_item": {
+            "name": "Look/peek at next element (from top)",
+            "code": [
+                "nextItem = stack1[-1]  #look at the top item in the stack (using deque library)",
+                "print(nextItem)"
+            ]
+        },
+        "stack_peek_at_last_item": {
+            "name": "Look/peek at last element (from bottom)",
+            "code": [
+                "lastItem = stack1[0]  #look at the bottom item in the stack (using deque library)",
+                "print(lastItem)"
+            ]
+        },
+        "stack_duplicate_next_item": {
+            "name": "Duplicate top item",
+            "code": [
+                "stack1.append(stack1[-1])  #duplicate the top item in the stack (using deque library)"
+            ]
+        },
+        "stack_swap_two_items": {
+            "name": "Swap two items",
+            "code": [
+                "stack1[-1], stack1[-2] = stack1[-2], stack1[-1] #swap the top two items in the stack (using deque library)"
+            ]
+        },
+        "stack_get_size": {
+            "name": "Get size (number of items) on the stack",
+            "code": [
+                "stack1len = len(stack1)"
+            ]
+        },
+        "stack_get_capacity": {
+            "name": "Check capacity of stack",
+            "code": [
+                "stack1len = len(stack1)"
+            ]
+        },
+        "stack_export_to_list": {
+            "name": "Export a list of all stack items",
+            "code": [
+                "stack1list = list(stack1)"
+            ]
+        },
+        "stack_clear_all": {
+            "name": "Clear all stack items",
+            "code": [
+                "stack1.clear()"
+            ]
+        },
+        "iterate_pointer_data_type": {
+            "name": "Data type of a iterator pointer",
+            "code": [
+                "iterator"
+            ]
+        },
+        "iterate_create_pointer": {
+            "name": "Create iterator",
+            "code": [
+                "list1 = ['a', 'b', 'c', 'd']",
+                "iterator = iter(list1)"
+            ]
+        },
+        "iterate_move_to_next_item": {
+            "name": "Move pointer to next item",
+            "code": [
+                "next(iterator)"
+            ]
+        },
+        "iterate_move_to_previous_item": {
+            "name": "Move pointer to previous item",
+            "code": [
+                "# not possible with iterators in python"
+            ]
+        },
+        "iterate_move_to_beginning": {
+            "name": "Move pointer to beginning of queue/stack",
+            "code": [
+                "# not possible with iterators in python"
+            ]
+        },
+        "iterate_move_to_end": {
+            "name": "Move pointer to end of queue/stack",
+            "code": [
+                "while True:",
+                "    try:",
+                "        next(iterator)",
+                "    except StopIteration:",
+                "        break"
+            ]
+        }
+    }
+}
