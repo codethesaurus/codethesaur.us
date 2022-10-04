@@ -87,7 +87,10 @@
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
       "code": [
-        ""
+        "a = \"String\"",
+        "b = a + \"2\"", 
+        "c = a + b",
+        "puts c # Returns \"StringString2\""
       ]
     },
     "concatenate_many_strings": {
@@ -95,17 +98,14 @@
       "code": [
         "a = \"String\"",
         "b = a + \"2\"", 
-        "c = a + b",
-        "puts c # Returns \"StringString2\""
+        "c = a + \" \" + b",
+        "puts c # Returns \"String String2\""
       ]
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
       "code": [
-        "a = \"String\"",
-        "b = a + \"2\"", 
-        "c = a + \" \" + b",
-        "puts c # Returns \"String String2\""
+        "!string.match(/\\A[a-zA-Z]*\\z/).nil?"
       ]
     },
     "is_all_numerical": {
