@@ -7,6 +7,36 @@
     },
     "concepts": {
       "queue": {
-        "code": "def function_name():\n    statements",
-        "name": "Function that does not return a value and takes no parameters"
+        "code": "Removes Items In Order Of Their Entry",
+        "name": "Queues work on a first-in and first-out principle"
       },
+      "queue_example" : {
+        "code" : "queue = ['value1', 'value2', 'value3']",
+        "name" : "The example queue is"
+      },
+      "queue_append_example" : {
+        "code" : "queue.append('value4')",
+        "name" : "Adds item to the queue"
+      },
+      "queue_pop_example" : {
+        "code" : "queue.pop(0)",
+        "name" : "To remove first value, we use"
+      },
+      "stack" : {
+        "code" : "Removes Items In The Reverse Order Of Their Entry",
+        "name" : "Stacks work on the last-in and first-out principle"
+      },
+      "stack_example" : {
+        "code" : "stack = ['value1', 'value2', 'value3']",
+        "name" : "The example stack is"
+      },
+      "stack_append_example" : {
+        "code" : "stack.append('value4')",
+        "name" : "Adds item to the stack"
+      },
+      "stack_pop_example" : {
+        "code" : "queue.pop()\n # The default is -1",
+        "name" : "To remove last value, we use"
+      }
+    }
+}
