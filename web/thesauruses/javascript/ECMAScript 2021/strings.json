@@ -61,9 +61,7 @@
     },
     "is_empty": {
       "name": "Is string empty?",
-      "code": [
-        "if ('') {\n    'Not Empty';\n} else {\n    'Empty';\n}"
-      ]
+      "not-implemented": true
     },
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
@@ -83,9 +81,7 @@
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "code": [
-        "if (isNaN(Number('123'))) {\n    'Not a number';\n} else {\n    'Is a Number';\n}"
-      ]
+      "not-implemented": true
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
