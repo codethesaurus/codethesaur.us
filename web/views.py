@@ -382,8 +382,10 @@ def format_code_for_display(concept_key, lang):
     :param lang: language to format it (in meta language/syntax highlighter format)
     :return: string with code with applied HTML formatting
     """
-    if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
+    if lang.concept_unknown(concept_key):
         return "Unknown"
+    if lang.concept_code(concept_key) is None:
+        return None
     if lang.concept_implemented(concept_key):
         return highlight(
             lang.concept_code(concept_key),

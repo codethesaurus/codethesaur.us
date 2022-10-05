@@ -139,6 +139,8 @@ class Language:
         :return: the string containing the concept's code
         """
         code = self.concept(concept_key).get("code")
+        if not code:
+            return None
         if isinstance(code, list):
             code = "\n".join(code)
         return code
