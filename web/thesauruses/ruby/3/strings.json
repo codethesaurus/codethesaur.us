@@ -8,56 +8,44 @@
   "concepts": {
     "is_primitive_or_not": {
       "name": "Is this a built-in type in this language?",
-      "code": [
-        "Yes"
-      ]
+      "comment": "Yes"
     },
     "import": {
       "name": "Import the string class",
-      "code": [
+      "comment":
         "Built-in included in the default Modules"
-      ]
     },
     "default_string_byte_encoding": {
       "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
-      "code": [
-        "UTF-8"
-      ]
+      "comment": "UTF-8"
     },
     "create_new_string": {
       "name": "Create new string",
       "code": [
-        "1. varName = \"Hello World\"",
-        "2. varName = 'This also works'",
-        "3. anotherVar = %{another way to do it}\n",
-        "1. & 2. Enclosing a set of characters between quotes/double quotes.",
-        "3. Using the %char-style quoting mechanism generates either a single or doubled quoted string.",
-        "You can preceed the % by a character option and a delimiter",
-        "The most common delimiter is {} like the example, but you can use any non alpha-numerical delimiter."
-      ]
+        "varName = \"Hello World\"",
+        "varName = 'This also works'",
+        "anotherVar = %{another way to do it}\n"
+      ],
+      "comment": "Using the %char-style quoting mechanism generates either a single or doubled quoted string.\nYou can preceed the % by a character option and a delimiter.\nThe most common delimiter is {} like the example, but you can use any non alpha-numerical delimiter."
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
       "code": [
-        "1. text = <<EOM\nLine1\nAnother Line\nNow this is the last line.\nEOM",
-        "2. text = <<-EOM\nLine1\nAnother Line\nNow this is the last line.\n      EOM\n",
-        "1. \"here\" document (heredoc), generates a string, usually a multiline string.",
-        "Uses the << operator followed by a delimiter. The string wont end until the delimiter is founded flush left.",
-        "2. Placing a '-' after the << operator will disable the flush left requirement."
-      ]
+        "text = <<EOM\nLine1\nAnother Line\nNow this is the last line.\nEOM\n",
+        "text = <<-EOM\nLine1\nAnother Line\nNow this is the last line.\n      EOM\n\n"
+      ],
+      "comment": "\"HERE\" document (heredoc), generates a string, usually a multiline string.\nUses the << operator followed by a delimiter. The string wont end until the delimiter is founded flush left.\nPlacing a '-' after the << operator will disable the flush left requirement."
     },
     "assign_new_string": {
       "name": "Assign string from another string",
       "code": [
         "a = \"String\"",
-        "b = a" 
+        "b = a"
       ]
     },
     "destroy_string": {
       "name": "Destroy string",
-      "code": [
-        "Not Implemented In This Language"
-      ]
+      "not-implemented": true
     },
     "length_of_string": {
       "name": "Length of string",
@@ -68,9 +56,7 @@
     },
     "max_length_of_string": {
       "name": "Maximum length of string",
-      "code": [
-        "65,535 characters."
-      ]
+      "comment": "65,535 characters."
     },
     "clear_string": {
       "name": "Clear/empty string",
@@ -273,31 +259,22 @@
     },
     "encode_html_entities": {
       "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)",
-      "code": [
-        "Ruby does not implement this, although you can use the cgi library to do it.",
-        "In Rails you can use the h method, as shown in the example bellow:",
-        "<%= h 'escaping <html>' %>"
-      ]
+      "code": ["<%= h 'escaping <html>' %>"],
+      "comment":
+        "Ruby does not implement this, although you can use the cgi library to do it.\nIn Rails you can use the h method, as shown in the example above."
     },
     "decode_html_entities": {
       "name": "Decode HTML entitles into characters",
-      "code": [
-        "Ruby does not implement this, although you can use the cgi library to do it.",
-        "In Rails you can use the raw method, as shown in the example bellow:",
-        "<%= raw '<html>' %>"
-      ]
+      "code": ["<%= raw '<html>' %>"],
+      "comment": "Ruby does not implement this, although you can use the cgi library to do it.\nIn Rails you can use the raw method, as shown in the example above."
     },
     "encode_url_percent": {
       "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
-      "code": [
-        "Ruby does not implement this, although you can use the cgi library to do it."
-      ]
+      "not-implemented": true
     },
     "decode_url_percent": {
       "name": "Decode URL percent encoding",
-      "code": [
-        "Ruby does not implement this, although you can use the cgi library to do it."
-      ]
+      "not-implemented": true
     },
     "encode_to_base64": {
       "name": "Encode string into Base64 format",
@@ -321,21 +298,15 @@
     },
     "parameter_format_in_order": {
       "name": "Parameter used in format function if they're used in order",
-      "code": [
-        "Not Implemented in Ruby"
-      ]
+      "not-implemented": true
     },
     "parameter_format_numerical": {
       "name": "Parameter used in format function if they're numerically numbered",
-      "code": [
-        "Not Implemented in Ruby"
-      ]
+      "not-implemented": true
     },
     "parameter_format_by_name": {
       "name": "Paramater used in format function if they're named variables",
-      "code": [
-        "Not Implemented in Ruby"
-      ]
+      "not-implemented": true
     },
     "format_as_integer": {
       "name": "Format parameter as an integer",
