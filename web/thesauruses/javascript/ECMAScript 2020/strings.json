@@ -31,7 +31,7 @@
     "create_multiline_string": {
       "name": "Create new multi-line string",
       "code": [
-        "let multilineString = `New Multi-Line String example`;"
+        "let multilineString = `New Multi-Line \nString example`;"
       ]
     },
     "assign_new_string": {
