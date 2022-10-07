@@ -7,39 +7,39 @@
   },
   "concepts": {
     "addition": {
-      "code": "+",
+      "code": "operand1 + operand2",
       "name": "Addition operator"
     },
     "addition_assignment": {
-      "code": "+=",
+      "code": "operand1 += operand2",
       "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-",
+      "code": "operand1 - operand2",
       "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "code": "-=",
+      "code": "operand1 -= operand2",
       "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*",
+      "code": "operand1 * operand2",
       "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "code": "*=",
+      "code": "operand1 *= operand2",
       "name": "Multiplication and assignment operator"
     },
     "division": {
-      "code": "/",
+      "code": "operand1 / operand2",
       "name": "Division operator"
     },
     "division_assignment": {
-      "code": "/=",
+      "code": "operand1 /= operand2",
       "name": "Division and assignment operator"
     },
     "modulus": {
-      "code": "Mod",
+      "code": "operand1 Mod operand2",
       "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
@@ -47,11 +47,11 @@
       "name": "Modulus and assignment operator"
     },
     "unary_plus": {
-      "code": "+",
+      "code": "+operand1",
       "name": "Unary plus operator"
     },
     "unary_minus": {
-      "code": "-",
+      "code": "-operand1",
       "name": "Unary minus operator"
     },
     "increment": {
@@ -63,7 +63,7 @@
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
-      "code": "^",
+      "code": "operand1 ^ operand2",
       "name": "Exponential operator"
     },
     "factorial": {
@@ -79,56 +79,56 @@
       "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "=",
+      "code": "operand1 = operand2",
       "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "<>",
+      "code": "operand1 <> operand2",
       "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "<",
+      "code": "operand1 < operand2",
       "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "<=",
+      "code": "operand1 <= operand2",
       "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": ">",
+      "code": "operand1 > operand2",
       "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": ">=",
+      "code": "operand1 >= operand2",
       "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
-      "code": "If(leftHandOperand, rightHandOperand)",
-      "comment": "Value of leftHandOperand is returned if it isn't null else rightHandOperand is evaluated and its result is returned",
+      "code": "If(operand1, operand2)",
+      "comment": "Value of operand1 is returned if it isn't Nothing else operand2 is evaluated and its result is returned",
       "name": "Null coalescing operator"
     },
     "is": {
-      "code": "is",
+      "code": "operand1 Is operand2",
       "name": "Is operator"
     },
     "is_not": {
-      "code": "IsNot",
+      "code": "operand1 IsNot operand2",
       "name": "Is not operator"
     },
     "logical_and": {
-      "code" : "And",
+      "code" : "operand1 And operand2",
       "name" : "Logical AND Operator"
     },
     "logical_or": {
-      "code" : "Or",
+      "code" : "operand1 Or operand2",
       "name" : "Logical OR Operator"
     },
     "logical_not": {
-      "code" : "Not",
+      "code" : "Not operand1",
       "name" : "Logical NOT Operator"
     },
     "bitwise_and": {
-      "code" : "And",
+      "code" : "operand1 And operand2",
       "name" : "Bitwise AND operator"
     },
     "bitwise_and_assignment": {
@@ -136,7 +136,7 @@
       "name" : "Bitwise AND and assignment operator"
     },
     "bitwise_or": {
-          "code" : "Or",
+          "code" : "operand1 Or operand2",
           "name" : "Bitwise OR operator"
     },
     "bitwise_or_assignment": {
@@ -144,7 +144,7 @@
       "name" : "Bitwise OR and assignment operator"
     },
     "bitwise_not": {
-      "code" : "Not",
+      "code" : "Not operand1",
       "name" : "Bitwise NOT operator"
     },
     "bitwise_not_assignment": {
@@ -152,7 +152,7 @@
       "name" : "Bitwise NOT and assignment operator"
     },
     "bitwise_xor": {
-      "code" : "Xor",
+      "code" : "operand1 Xor operand2",
       "name" : "Bitwise XOR operator"
     },
     "bitwise_xor_assignment": {
@@ -168,19 +168,19 @@
       "name" : "Bitwise XNOR and assignment operator"
   },
     "left_shift": {
-      "code": "<<",
+      "code": "operand1 << operand2",
       "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "<<=",
+      "code": "operand1 <<= operand2",
       "name": "Left shift assignment operator"
     },
     "right_shift": {
-      "code": ">>",
+      "code": "operand1 >> operand2",
       "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "code": ">>=",
+      "code": "operand1 >>= operand2",
       "name": "Right shift assignment operator"
     },
     "not_assignment": {
