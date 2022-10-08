@@ -7,14 +7,14 @@
   },
   "concepts": {
     "is_primitive_or_not": {
-      "comment": "Yes"
+      "code": "Yes"
     },
     "import": {
-      "comment":
+      "code":
         "Built-in included in the default Modules"
     },
     "default_string_byte_encoding": {
-      "comment": "UTF-8"
+      "code": "UTF-8"
     },
     "create_new_string": {
       "code": [
@@ -47,7 +47,7 @@
       ]
     },
     "max_length_of_string": {
-      "comment": "65,535 characters."
+      "code": "65,535 characters."
     },
     "clear_string": {
       "code": [
