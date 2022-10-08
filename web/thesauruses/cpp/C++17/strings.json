@@ -270,27 +270,41 @@
     },
     "format_string_function": {
       "name": "Function to format a string",
-      "not-implemented": true
+      "code": [
+        "std::string newString = std::to_string(123.98934556);",
+        "\n",
+        "or use std::to_wstring if dealing with unicode characters"
+      ]
     },
     "parameter_format_in_order": {
       "name": "Parameter used in format function if they're used in order",
-      "not-implemented": true
+      "code": [
+        "printf(\"my name is %s my clan is %s\", myName, myClan)"
+      ]
     },
     "parameter_format_numerical": {
       "name": "Parameter used in format function if they're numerically numbered",
       "not-implemented": true
     },
     "parameter_format_by_name": {
-      "name": "Paramater used in format function if they're named variables",
+      "name": "Parameter used in format function if they're named variables",
       "not-implemented": true
     },
     "format_as_integer": {
       "name": "Format parameter as an integer",
-      "not-implemented": true
+      "code": [
+        "printf(\"my age is %d\", age)",
+        "\n",
+        "%i can be used instead of %d"
+      ]
     },
     "format_as_decimal": {
       "name": "Format parameter as a decimal number",
-      "not-implemented": true
+      "code": [
+        "printf(\"elapsed time is %f\", time)",
+        "\n",
+        "%F can be used instead of %f"
+      ]
     },
     "format_as_fixed_decimal": {
       "name": "Format parameter as a fixed-point decimal number",
@@ -314,11 +328,15 @@
     },
     "format_number_in_scientific_notation_little_e": {
       "name": "Format number with scientific notation with 'e'",
-      "not-implemented": true
+      "code": [
+        "printf(\"mass of object is %e\", mass)"
+      ]
     },
     "format_number_in_scientific_notation_big_e": {
       "name": "Format number with scientific notation with 'E'",
-      "not-implemented": true
+      "code": [
+        "printf(\"mass of object is %E\", mass)"
+      ]
     },
     "format_number_in_binary": {
       "name": "Format number into binary",
@@ -326,11 +344,17 @@
     },
     "format_number_in_octal": {
       "name": "Format number into octal",
-      "not-implemented": true
+      "code": [
+        "printf(\"bit mask weight is %o\", mask_weight)"
+      ]
     },
     "format_number_in_hexadecimal": {
       "name": "Format number into hexadecimal",
-      "not-implemented": true
+      "code": [
+        "printf(\"memory address is %x\", address)",
+        "\n",
+        "%X can be used instead of %x"
+      ]
     }
   }
 }
