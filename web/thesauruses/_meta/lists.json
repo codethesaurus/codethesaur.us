@@ -38,7 +38,7 @@
     },
     "Unordered Mutable Lists": {
       "name_of_unordered_mutable_list": "What is a unordered/unsorted mutable list called?",
-      "create_a_unordered_mutable_list": "unordered",
+      "create_a_unordered_mutable_list": "Create the list",
       "unordered_mutable_list_start_number": "What number does it start at?",
       "unordered_mutable_list_can_be_appended": "Can you append to it?",
       "unordered_mutable_list_can_be_inserted_in_middle": "Can you insert into the middle of it?",

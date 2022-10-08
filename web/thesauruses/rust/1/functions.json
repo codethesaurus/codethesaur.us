@@ -14,10 +14,6 @@
       "code": "fn function(parameter: type, parameter2: type2) {\n    statements;\n}",
       "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
-    "void_function_variable_parameters": {
-      "code": "",
-      "name": "Function that does not return a value and function that takes an unknown number of parameters"
-    },
     "return_value_function_no_parameters": {
       "code": "fn function() -> return_type {\n    statements;\n    expression\n}",
       "name": "Function that returns a value and takes no parameters"
@@ -26,10 +22,6 @@
       "code": "fn function(parameter: type, parameter2: type2) -> return_type {\n    statements;\n    expression\n}",
       "name": "Function that returns a value and takes 1 or more defined parameters"
     },
-    "return_value_function_variable_parameters": {
-      "code": "",
-      "name": "Function that returns a value and takes an unknown number of parameters"
-    },
     "anonymous_function_no_parameters": {
       "code": "|| { statements; }",
       "name": "Anonymous function that takes no parameters"
@@ -37,10 +29,6 @@
     "anonymous_function_with_parameters": {
       "code": "|parameter, parameter2| { statements; }",
       "name": "Anonymous function that takes 1 or more defined parameters"
-    },
-    "anonymous_function_variable_parameters": {
-      "code": "",
-      "name": "Anonymous function that takes an unknown number of parameters"
     },
     "call_subroutine": {
       "name": "Call subroutine",

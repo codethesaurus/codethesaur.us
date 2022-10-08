@@ -7,17 +7,17 @@
   },
   "concepts": {
     "void_function_no_parameters": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "By default, Ruby returns whatever the last statement returns. Ruby always returns a value, even if it's nil.",
       "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "Ruby always returns a value, even if it's nil.",
       "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_variable_parameters": {
-      "code": "",
+      "not-implemented": "true",
       "comment": "Ruby always returns a value, even if it's nil.",
       "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
@@ -47,14 +47,6 @@
     "anonymous_function_variable_parameters": {
       "code": "->(*params) { expression }\n# or...\nlambda do |*params|\n  expressions\nend\n# or...\nProc.new do |*params|\n  expressions\nend",
       "name": "Anonymous function that takes an unknown number of parameters"
-    },
-    "call_subroutine": {
-      "code": "",
-      "name": "Call subroutine"
-    },
-    "return_from_subroutine": {
-      "code": "",
-      "name": "Return from subroutine"
     }
   }
 }

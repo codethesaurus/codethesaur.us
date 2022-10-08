@@ -1,0 +1,629 @@
+{
+  "meta": {
+    "language": "ruby",
+    "language_name": "Ruby",
+    "structure": "lists",
+    "language_version": "3"
+  },
+  "concepts": {
+    "name_of_ordered_mutable_list": {
+      "name": "What is a ordered (not sorted) mutable list called?",
+      "code": [
+        "array"
+      ]
+    },
+    "create_a_ordered_mutable_list": {
+      "name": "Create the list",
+      "code": [
+        "fruits = []",
+        "fruits = ['apple', 'orange', 'tomato']",
+        "unlucky = ['black cat', 13, ['walking', 'under', 'a', 'ladder'], :broken_mirror]",
+        "arr = Array.new(3) { 'Repetitive' }"
+      ],
+      "comment": "First line creates an empty array. Second line creates an array with 3 string values: 'apple', 'orange', and 'tomato'. Third line shows off that you can put different types in one array. The fourth line creates an array with 3 items, and executes the code in the block to figure out the value at that index. In this case, it always returns the string 'Repetitive', so you have an array of 3 strings: 'Repetetive'."
+    },
+    "ordered_mutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": [
+        "0"
+      ]
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "name": "Can you append to it?",
+      "code": "Yes"
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "name": "Can you insert into the middle of it?",
+      "code": "Yes"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "name": "Access element by index",
+      "code": [
+        "array_name[index]"
+      ]
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "name": "Insert element at beginning",
+      "code": [
+        "arr.unshift('FIRST')",
+        "arr.insert(0, 'No, me first!')"
+      ]
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "name": "Insert element at end",
+      "code": [
+        "arr.push('penultimate')",
+        "arr << 'ultimate'"
+      ]
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "name": "Insert element in middle",
+      "code": [
+        "arr.insert(3, 'fourth')",
+        "arr.insert(arr.length/2, 'Middle')",
+        "arr[2, 0] = 'excuse me'"
+      ],
+      "comment": "The first line inserts the word 'fourth' at the 3 index or the fourth position in the array. The second line inserts the word 'middle' in the exact middle of the array. The third line sets the 2 index of the array to 'excuse me' and replaces 0 positions, resulting in 'excuse me' being added to the array in the third position, and the previous third position being moved to the fourth (and so on)."
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "name": "Erase first element",
+      "code": [
+        "arr.shift",
+        "arr.delete_at(0)"
+      ]
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "name": "Erase last element",
+      "code": [
+        "arr.pop",
+        "arr.delete_at(arr.length - 1)"
+      ]
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "name": "Erase element in the middle",
+      "code": [
+        "arr.delete_at(index)"
+      ]
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "name": "Swap two elements",
+      "code": [
+        "arr[0], arr[1] = arr[1], arr[0]"
+      ]
+    },
+    "delete_ordered_mutable_list": {
+      "name": "Delete the list",
+      "code": [
+        "arr = nil",
+        "arr.clear"
+      ],
+      "comment": "Why delete the list? Line 1 reassigns the variable to nothing. Line 2 empties the array."
+    },
+    "name_of_sorted_mutable_list": {
+      "name": "What is a sorted mutable list called?",
+      "not-implemented": true
+    },
+    "create_a_sorted_mutable_list": {
+      "name": "Create the list",
+      "not-implemented": true
+    },
+    "sorted_mutable_list_start_number": {
+      "name": "What number does it start at?",
+      "not-implemented": true
+    },
+    "sorted_mutable_list_can_be_appended": {
+      "name": "Can you append to it?",
+      "not-implemented": true
+    },
+    "sorted_mutable_list_can_be_inserted_in_middle": {
+      "name": "Can you insert into the middle of it?",
+      "not-implemented": true
+    },
+    "access_element_in_sorted_mutable_list": {
+      "name": "Access element by index",
+      "not-implemented": true
+    },
+    "insert_into_beginning_of_sorted_mutable_list": {
+      "name": "Insert element at beginning",
+      "not-implemented": true
+    },
+    "insert_into_end_of_sorted_mutable_list": {
+      "name": "Insert element at end",
+      "not-implemented": true
+    },
+    "insert_into_middle_of_sorted_mutable_list": {
+      "name": "Insert element in middle",
+      "not-implemented": true
+    },
+    "erase_element_at_beginning_of_sorted_mutable_list": {
+      "name": "Erase first element",
+      "not-implemented": true
+    },
+    "erase_element_at_end_of_sorted_mutable_list": {
+      "name": "Erase last element",
+      "not-implemented": true
+    },
+    "erase_element_in_middle_of_sorted_mutable_list": {
+      "name": "Erase element in the middle",
+      "not-implemented": true
+    },
+    "swap_elements_in_sorted_mutable_list": {
+      "name": "Swap two elements",
+      "not-implemented": true
+    },
+    "delete_sorted_mutable_list": {
+      "name": "Delete the list",
+      "not-implemented": true
+    },
+    "name_of_unordered_mutable_list": {
+      "name": "What is a unordered/unsorted mutable list called?",
+      "code": [
+        "Set"
+      ],
+      "comment": "Set must be imported from the standard lib. It will be available without importing in the near future."
+    },
+    "create_a_unordered_mutable_list": {
+      "name": "Create the list",
+      "code": [
+        "colors = Set['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']",
+        "fruits = [].to_set"
+      ]
+    },
+    "unordered_mutable_list_start_number": {
+      "name": "What number does it start at?",
+      "not-implemented": true
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "name": "Can you append to it?",
+      "code": [
+        "Yes"
+      ]
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "name": "Can you insert into the middle of it?",
+      "not-implemented": true
+    },
+    "access_element_in_unordered_mutable_list": {
+      "name": "Access element by index",
+      "not-implemented": true
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "name": "Insert element at beginning",
+      "not-implemented": true
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "name": "Insert element at end",
+      "code": [
+        "colors.add('pink')",
+        "colors << 'pink'"
+      ],
+      "comment": "sets are \"unordered\", but they always append to the end."
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "name": "Insert element in middle",
+      "not-implemented": true
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "name": "Erase first element",
+      "not-implemented": true
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "name": "Erase last element",
+      "not-implemented": true
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "name": "Erase element in the middle",
+      "code": [
+        "set = Set['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple']",
+        "set.delete('red') # #<Set: {orange,yellow,green,blue,indigo,purple}>",
+        "set.subtract(['orange', 'yellow']) # #<Set: {green,blue,indigo,purple}>"
+      ],
+      "comment": "Learn more about deleting from sets in the Ruby docs: https://docs.ruby-lang.org/en/master/Set.html#class-Set-label-Methods+for+Deleting"
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "name": "Swap two elements",
+      "not-implemented": true
+    },
+    "delete_unordered_mutable_list": {
+      "name": "Delete the list",
+      "code": [
+        "set_name.clear"
+      ],
+      "comment": "Empties the set, and returns an empty set."
+    },
+    "name_of_ordered_immutable_list": {
+      "name": "What is a ordered (not sorted) immutable list called?",
+      "code": [
+        "frozen array"
+      ],
+      "comment": "To make something immutable in Ruby, you freeze it. Ordered immutable lists are arrays that have been frozen."
+    },
+    "create_a_ordered_immutable_list": {
+      "name": "Create the list",
+      "code": [
+        "ICE_CREAMS = ['vanilla', 'chocolate', 'strawberry', 'rocky road'].freeze"
+      ],
+      "comment": "Constants (immutable values) are typically capitalized in Ruby."
+    },
+    "ordered_immutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": [
+        "0"
+      ]
+    },
+    "access_element_in_ordered_immutable_list": {
+      "name": "Access element by index",
+      "code": [
+        "CONSTANT_NAME[0]"
+      ]
+    },
+    "delete_ordered_immutable_list": {
+      "name": "Delete the list",
+      "comment": "Immutable arrays raise an error if `clear` is called on them.",
+      "not-implemented": true
+    },
+    "name_of_sorted_immutable_list": {
+      "name": "What is a sorted immutable list called?",
+      "code": [
+        "sorted frozen array"
+      ],
+      "comment": "Ruby doesn't have a concept for a sorted that stays sorted when items are added or removed. Frozen arrays are immutable, so if the array is sorted before it's frozen, then it will technically maintain its order."
+    },
+    "create_a_sorted_immutable_list": {
+      "name": "Create the list",
+      "code": [
+        "ICE_CREAMS = ['vanilla', 'chocolate', 'strawberry', 'rocky road'].sort.freeze"
+      ],
+      "comment": "Arrays can be sorted before they are frozen."
+    },
+    "sorted_immutable_list_start_number": {
+      "name": "What number does it start at?",
+      "code": [
+        "0"
+      ]
+    },
+    "access_element_in_sorted_immutable_list": {
+      "name": "Access element by index",
+      "code": [
+        "ICE_CREAMS[3]"
+      ]
+    },
+    "delete_sorted_immutable_list": {
+      "name": "Delete the list",
+      "comment": "Immutable arrays raise an error if `clear` is called on them.",
+      "not-implemented": true
+    },
+    "name_of_unordered_immutable_list": {
+      "name": "What is a unordered/unsorted immutable list called?",
+      "not-implemented": true
+    },
+    "create_a_unordered_immutable_list": {
+      "name": "Create the list",
+      "not-implemented": true
+    },
+    "unordered_immutable_list_start_number": {
+      "name": "What number does it start at?",
+      "not-implemented": true
+    },
+    "access_element_in_unordered_immutable_list": {
+      "name": "Access element by index",
+      "not-implemented": true
+    },
+    "delete_unordered_immutable_list": {
+      "name": "Delete the list",
+      "not-implemented": true
+    },
+    "name_of_mutable_hashed_list": {
+      "name": "What is a mutable hashed list called?",
+      "code": [
+        "Hash"
+      ]
+    },
+    "create_a_mutable_hashed_list": {
+      "name": "Create the list",
+      "code": [
+        "popsicle_costs = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }"
+      ],
+      "comment": "Hash keys can be symbols, strings, or any other object. Symbols use the format `key:`. `melon:`, `'lemon':`, and `'root beer':` are symbols in this example. All other key types use hash rockets. For example, 1 and 'orange' which are integer and string keys."
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "name": "Insert an element",
+      "code": [
+        "popsicle_costs[:pineapple] = 4",
+        "popsicle_costs['strawberry'] = 4"
+      ]
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "name": "Erase an element from the list",
+      "code": [
+        "popsicle_costs.delete(1)",
+        "popsicle_costs.delete('orange')"
+      ]
+    },
+    "delete_mutable_hashed_list": {
+      "name": "Delete the list",
+      "code": [
+        "popsicle_costs.clear"
+      ],
+      "comment": "This empties the hash."
+    },
+    "name_of_immutable_hashed_list": {
+      "name": "What is an immutable hashed list called?",
+      "code": [
+        "frozen hash"
+      ],
+      "comment": "To make something immutable in Ruby, you freeze it. Immutable hashed lists are hashes that have been frozen."
+    },
+    "create_a_immutable_hashed_list": {
+      "name": "Create the list",
+      "code": [
+        "POPSICLE_COSTS = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }.frozen"
+      ],
+      "comment": "Constants (immutable values) are typically capitalized in Ruby."
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "name": "Insert an element",
+      "not-implemented": true,
+      "comment": "Immutable hashes cannot be changed."
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "name": "Erase an element from the list",
+      "not-implemented": true,
+      "comment": "Immutable hashes cannot be changed."
+    },
+    "delete_immutable_hashed_list": {
+      "name": "Delete the list",
+      "not-implemented": true,
+      "comment": "Immutable hashes cannot be changed."
+    },
+    "create_a_mutable_set": {
+      "name": "Create a mutable key/value set",
+      "code": [
+        "popsicle_costs = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }"
+      ]
+    },
+    "get_key_from_mutable_set": {
+      "name": "Get key",
+      "code": [
+        "popsicle_costs.keys.first"
+      ],
+      "comment": "Grabs the first key from the list of keys for the hash."
+    },
+    "get_value_from_mutable_set": {
+      "name": "Get value",
+      "code": [
+        "popsicle_costs[:melon] # 5"
+      ]
+    },
+    "get_all_keys_from_mutable_set": {
+      "name": "Get all keys",
+      "code": [
+        "popsicle_costs.keys"
+      ]
+    },
+    "get_all_values_from_mutable_set": {
+      "name": "Get all values",
+      "code": [
+        "popsicle_costs.values"
+      ],
+      "comment": "Returns an array of values with no keys."
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "name": "Swap a key and value",
+      "code": [
+        "popsicle_costs.invert"
+      ],
+      "comment": "If there are multiple keys with the same value, the last key added is the value."
+    },
+    "delete_mutable_set": {
+      "name": "Delete the set",
+      "code": [
+        "popsicle_costs.clear"
+      ],
+      "comment": "Sets the hash to an empty hash."
+    },
+    "create_a_immutable_set": {
+      "name": "Create an immutable key/value set",
+      "code": [
+        "POPSICLE_COSTS = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }.freeze"
+      ],
+      "comment": "To make something immutable in Ruby, you freeze it. Immutable sets are hashes that have been frozen."
+    },
+    "get_key_from_immutable_set": {
+      "name": "Get key",
+      "code": [
+        "POPSICLE_COSTS.keys.first"
+      ]
+    },
+    "get_value_from_immutable_set": {
+      "name": "Get value",
+      "code": [
+        "POPSICLE_COSTS[:lemon] # 3"
+      ]
+    },
+    "get_all_keys_from_immutable_set": {
+      "name": "Get all keys",
+      "code": [
+        "POPSICLE_COSTS.keys"
+      ]
+    },
+    "get_all_values_from_immutable_set": {
+      "name": "Get all values",
+      "code": [
+        "POPSICLE_COSTS.values"
+      ]
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "name": "Swap a key and value",
+      "code": [
+        "price_to_popsicle = POPSICLE_COSTS.invert"
+      ],
+      "comment": "`invert` returns a new value."
+    },
+    "delete_immutable_set": {
+      "name": "Delete the set",
+      "not-implemented": true,
+      "comment": "Immutable hashes cannot be changed."
+    },
+    "find_element_by_value": {
+      "name": "Find/search for an element by value",
+      "code": [
+        "popsicle_costs = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }",
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "fruits.index 'orange'",
+        "popsicle_costs.key 5",
+        "fruits.include? 'tomato'"
+      ],
+      "comment": "First two lines are our array and hash. Third returns the index of orange, 1 in this case. Fourth line gives the key for 5, which is melon. The last line returns true, because a tomato is a fruit."
+    },
+    "find_minimum_element": {
+      "name": "Find the minimum value in a list",
+      "code": [
+        "popsicle_costs = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }",
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "popsicle_costs.values.min",
+        "fruits.min"
+      ]
+    },
+    "find_maximum_element": {
+      "name": "Find the maximum value in a list",
+      "code": [
+        "popsicle_costs = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }",
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "popsicle_costs.values.max",
+        "fruits.max"
+      ]
+    },
+    "convert_list_to_string": {
+      "name": "Convert a list to a string",
+      "code": [
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "fruits.join(', ')"
+      ]
+    },
+    "concatenate_two_lists": {
+      "name": "Concatenate two lists together",
+      "code": [
+        "popsicle_costs = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }",
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "fruits += ['lemon', 'strawberry']",
+        "popsicle_costs.merge({ strawberry: 2 })"
+      ]
+    },
+    "split_list_at_index": {
+      "name": "Split lists at an index",
+      "code": [
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "fruits[0...2]",
+        "fruits[2..-1]",
+        "fruits.slice(0,2) # (start, length)"
+      ]
+    },
+    "split_list_at_value": {
+      "name": "Split list at a value",
+      "code": [
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "fruits.slice_before('tomato').to_a # [['apple', 'orange'], ['tomato', 'cantaloupe']]"
+      ],
+      "comment": "The second line returns an array containing 2 arrays. The array before 'tomato' and the array of 'tomato' and the rest."
+    },
+    "duplicate_a_list": {
+      "name": "Duplicate a list",
+      "code": [
+        "array_name.clone"
+      ]
+    },
+    "duplicate_subset_of_list": {
+      "name": "Duplicate a portion/subset of a list",
+      "code": [
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "fruits[0...2]",
+        "fruits[2..-1]",
+        "fruits.slice(0,2) # (start, length)"
+      ]
+    },
+    "get_list_length": {
+      "name": "Get list length",
+      "code": [
+        "array_name.length"
+      ]
+    },
+    "resize_list": {
+      "name": "Increase/decrease list size",
+      "not-implemented": true
+    },
+    "do_two_lists_match_exactly": {
+      "name": "Do two lists match every element?",
+      "code": [
+        "array_name1 == array_name2",
+        "array_name1.eql? array_name2"
+      ]
+    },
+    "do_two_lists_contain_same_items": {
+      "name": "Do two lists contain all the same items?",
+      "code": [
+        "array_name1.sort == array_name2.sort",
+        "array_name1.sort.eql? array_name2.sort"
+      ]
+    },
+    "does_list_satisfy_some_expression": {
+      "name": "Does a list satisfy some expression?",
+      "code": [
+        "array_name.any? { _1.length > 6 }",
+        "array_name.all? { _1.length > 6 }"
+      ]
+    },
+    "does_list_not_satisfy_an_expression": {
+      "name": "Does a list entirely not satisfy an expression?",
+      "code": [
+        "array_name.none? { _1.length > 6 }"
+      ]
+    },
+    "sort_list": {
+      "name": "Sort a list",
+      "code": [
+        "array_name.sort"
+      ]
+    },
+    "shuffle_list": {
+      "name": "Shuffle list elements",
+      "code": [
+        "array_name.shuffle"
+      ]
+    },
+    "reverse_list": {
+      "name": "Reverse order of list elements",
+      "code": [
+        "array_name.reverse"
+      ]
+    },
+    "map": {
+      "name": "Map function across list",
+      "code": [
+        "array_name.map { _1.length }",
+        "array_name.map { f(_1) }",
+        "array_name.map(&:length)"
+      ]
+    },
+    "filter": {
+      "name": "Filter a list based on criteria",
+      "code": [
+        "array_name.select { _1.length > 5 }",
+        "array_name.filter { _1.length > 5 }",
+        "array_name.reject { _1.length > 5 }"
+      ]
+    },
+    "reduce_left": {
+      "name": "Reduce a list left-to-right",
+      "code": [
+        "array_name.reduce(&:+)"
+      ]
+    },
+    "reduce_right": {
+      "name": "Reduce a list right-to-left",
+      "code": [
+        "array_name.reverse_each.reduce(&:+)"
+      ]
+    }
+  }
+}

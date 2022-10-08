@@ -38,10 +38,6 @@
       "name": "Anonymous function that takes 1 or more defined parameters",
       "code": "(parameterType1 parameterName1, parameterType2 parameterName2) =>\n{\n\t//code\n}"
     },
-    "anonymous_function_variable_parameters": {
-      "name": "Anonymous function that takes an unknown number of parameters",
-      "code": ""
-    },
     "call_subroutine": {
       "name": "Call subroutine",
       "code": "MyClass x = new MyClass();\nx.SubRoutine();"

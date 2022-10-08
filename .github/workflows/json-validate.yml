@@ -1,4 +1,4 @@
-name: JSON Check
+name: JSON Syntax Validator
 
 on:
   push:
@@ -7,7 +7,8 @@ on:
   pull_request:
 
 jobs:
-  test:
+  check:
+    name: Check JSON Files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
