@@ -30,6 +30,7 @@
     "io": "Input and Output",
     "lists": "Lists, Arrays, and Hashed Lists",
     "operators": "Logical and Mathematical/Arithmetic Operators",
+    "queues_stacks": "Queues and Stacks",
     "strings": "Strings"
   }
 }

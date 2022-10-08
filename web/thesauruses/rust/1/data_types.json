@@ -26,14 +26,6 @@
       "name": "Signed 64-bit integer",
       "code": "i64"
     },
-    "signed_integer_as_object": {
-      "name": "Signed object-based Integer",
-      "code": ""
-    },
-    "signed_float_16_bit": {
-      "name": "Signed 16-bit floating point",
-      "code": ""
-    },
     "signed_float_32_bit": {
       "name": "Signed 32-bit floating point",
       "code": "f32"
@@ -41,10 +33,6 @@
     "signed_float_64_bit": {
       "name": "Signed 64-bit floating point",
       "code": "f64"
-    },
-    "signed_float_as_object": {
-      "name": "Signed object-based floating point",
-      "code": ""
     },
     "character": {
       "name": "Character",

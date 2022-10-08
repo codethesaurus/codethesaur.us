@@ -1,6 +1,6 @@
 {
   "meta": {
-    "language": "language_id",
+    "language": "objectivec",
     "language_version": "2.0",
     "language_name": "Objective-C",
     "structure": "data_types"
