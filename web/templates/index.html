@@ -40,7 +40,7 @@
                                     <select class="form-select" id="lang1" name="lang1">
                                         {% for k, lang in languages.items %}
                                         {% for v in lang %}
-                                        <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                        <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                         {% endfor %}
                                         {% endfor %}
                                     </select>
@@ -50,7 +50,7 @@
                                     <select class="form-select" id="lang2" name="lang2">
                                         {% for k, lang in languages.items %}
                                         {% for v in lang %}
-                                        <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                        <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                         {% endfor %}
                                         {% endfor %}
                                     </select>
@@ -89,7 +89,7 @@
                                 <select class="form-select" id="lang" name="lang">
                                     {% for k, lang in languages.items %}
                                     {% for v in lang %}
-                                    <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                    <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                     {% endfor %}
                                     {% endfor %}
                                 </select>
