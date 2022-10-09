@@ -90,45 +90,45 @@
       ]
     },
     
-    "priority_queue_import_statement": {
-      "name": "Import statement to add priority queue",
+    "not-implementedrity_queue_import_statement": {
+      "name": "Import statement to add not-implementedrity queue",
       
-      "not_implmented":"true"
+      "not-implemented":"true"
     },
-    "priority_queue_data_type": {
+    "not-implementedrity_queue_data_type": {
       "name": "Queue data type name",
       "code": [
         "Array [] or class"
       ]
     },
-    "priority_queue_create_statement": {
+    "not-implementedrity_queue_create_statement": {
       "name": "Create a queue",
       "code": [
-        "//Using array\nlet queue = [['item1',priority],['item2',priority],['item3',priority]]\n//Using linked list\n data = priority_queue()"
+        "//Using array\nlet queue = [['item1',not-implementedrity],['item2',not-implementedrity],['item3',not-implementedrity]]\n//Using linked list\n data = not-implementedrity_queue()"
       ]
     },
-    "priority_queue_create_copy_statement": {
+    "not-implementedrity_queue_create_copy_statement": {
       "name": "Create a queue from existing queue",
       "code": [
         "//Using slice method\n let copyqueue=queue.slice()\n//Using spread operator\n let copyqueue = [...queue]\n//For linked list(implementation down below)\n copyqueue=prevqueue.copy()"
       ]
     },
-    "priority_queue_create_copy_from_list_statement": {
+    "not-implementedrity_queue_create_copy_from_list_statement": {
       "name": "Create a queue from a list of items",
       "code": [
         "//Using slice method\n let copyqueue=datalist.slice()\n//Using spread operator\n let copyqueue = [...datalist]\n//Using linked list\n copyqueue = queue(datalist) "
       ]
     },
-    "priority_queue_destroy_statement": {
+    "not-implementedrity_queue_destroy_statement": {
       "name": "Destroy/delete a queue",
       "code": [
         "queue = [] \n//Using linked list(implementation below) dataqueue.delete()"
       ]
     },
-    "priority_queue_data_structure": {
-      "name": "Data structure that backs the priority queue",
+    "not-implementedrity_queue_data_structure": {
+      "name": "Data structure that backs the not-implementedrity queue",
       "code": [
-        "let pr_queue=[]\n//Using linked list\nclass node\n {\n constructor(value,priority){\n this.value=value\n this.next=null\n this.priority=priority\n }\n }\n \n class priority_queue\n {\n constructor(){\n this.front=null;\n this.rear=null;\n this.max_priority=0;\n }\n push(n,priority){\n let temp = new node(n,priority);\n if(this.front == null){\n this.front = temp;\n this.rear = temp;\n }\n else{\n if(priority>this.max_priority){\n this.rear.next = temp;\n this.rear = temp;\n this.max_priority=priority;\n }\n else{\n let iterator = this.front;\n let more_priority_node = this.front.next\n while(iterator.next.priority<priority){\n iterator=iterator.next\n more_priority_node=more_priority_node.next\n }\n iterator.next=temp;\n temp.next=more_priority_node;\n }\n }\n }\n display(){\n let temp = this.front;\n while(temp!=null){\n console.log(temp.value+' ');\n temp=temp.next\n }\n }\n pop(){\n if(this.front!=null){\n this.front=this.front.next;\n }\n }\n delete(){\n this.front=null;\n this.rear=null;\n }\n }\n"
+        "let pr_queue=[]\n//Using linked list\nclass node\n {\n constructor(value,not-implementedrity){\n this.value=value\n this.next=null\n this.not-implementedrity=not-implementedrity\n }\n }\n \n class not-implementedrity_queue\n {\n constructor(){\n this.front=null;\n this.rear=null;\n this.max_not-implementedrity=0;\n }\n push(n,not-implementedrity){\n let temp = new node(n,not-implementedrity);\n if(this.front == null){\n this.front = temp;\n this.rear = temp;\n }\n else{\n if(not-implementedrity>this.max_not-implementedrity){\n this.rear.next = temp;\n this.rear = temp;\n this.max_not-implementedrity=not-implementedrity;\n }\n else{\n let iterator = this.front;\n let more_not-implementedrity_node = this.front.next\n while(iterator.next.not-implementedrity<not-implementedrity){\n iterator=iterator.next\n more_not-implementedrity_node=more_not-implementedrity_node.next\n }\n iterator.next=temp;\n temp.next=more_not-implementedrity_node;\n }\n }\n }\n display(){\n let temp = this.front;\n while(temp!=null){\n console.log(temp.value+' ');\n temp=temp.next\n }\n }\n pop(){\n if(this.front!=null){\n this.front=this.front.next;\n }\n }\n delete(){\n this.front=null;\n this.rear=null;\n }\n }\n"
       ]
     },
     "double_ended_queue_import_statement": {
@@ -219,10 +219,10 @@
         "queuedata.push(data)"
       ]
     },
-    "queue_enqueue_priority_item": {
-      "name": "Enqueue a high priority item (add to end of priority queue)",
+    "queue_enqueue_not-implementedrity_item": {
+      "name": "Enqueue a high not-implementedrity item (add to end of not-implementedrity queue)",
       "code": [
-        "queuedata.push(data,priority)"
+        "queuedata.push(data,not-implementedrity)"
       ]
     },
     "queue_enqueue_from_list": {
@@ -230,8 +230,8 @@
       
       "not-implemented":"true"
     },
-    "queue_enqueue_priority_from_list": {
-      "name": "Enqueue priority items from a list (add list to end of priority queue)",
+    "queue_enqueue_not-implementedrity_from_list": {
+      "name": "Enqueue not-implementedrity items from a list (add list to end of not-implementedrity queue)",
       "code": [
         ""
       ]
