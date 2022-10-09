@@ -8,7 +8,7 @@
   "concepts": {
     "simple_queue_import_statement": {
       "name": "Import statement to add simple queue",
-      "not_implemented":"true",
+      "not-implemented":"true",
       "comment":"There is no queue library in JavaScript"
     },
     "simple_queue_data_type": {
@@ -50,7 +50,7 @@
     "circular_queue_import_statement": {
       "name": "Import statement to add simple queue",
       
-      "not_implemented":"true",
+      "not-implemented":"true",
       "comment":"There is no queue library in JavaScript"
     },
     "circular_queue_data_type": {
@@ -134,7 +134,7 @@
     "double_ended_queue_import_statement": {
       "name": "Import statement to add double-ended queue",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "double_ended_queue_data_type": {
       "name": "Queue data type name",
@@ -175,7 +175,7 @@
     "stack_import_statement": {
       "name": "Import statement to add stacks",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "stack_data_type": {
       "name": "Stack data type name",
@@ -228,7 +228,7 @@
     "queue_enqueue_from_list": {
       "name": "Enqueue items from a list into queue (add list to end)",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "queue_enqueue_priority_from_list": {
       "name": "Enqueue priority items from a list (add list to end of priority queue)",
@@ -245,7 +245,7 @@
     "queue_dequeue_delete_an_item": {
       "name": "Dequeue an item (remove from front, don't return)",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
       
     },
     "queue_peek_at_next_item": {
@@ -263,12 +263,12 @@
     "queue_duplicate_next_item": {
       "name": "Duplicate next item",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "queue_swap_two_items": {
       "name": "Swap two items",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "queue_get_size": {
       "name": "Get size (number of items) in the queue",
@@ -279,12 +279,12 @@
     "queue_get_capacity": {
       "name": "Check capacity of queue",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "queue_export_to_list": {
       "name": "Export a list of all queue items",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "queue_clear_all": {
       "name": "Clear out all queue items",
@@ -307,7 +307,7 @@
     "stack_pop_delete_item": {
       "name": "Pop an item (remove from top, don't return)",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "stack_peek_at_next_item": {
       "name": "Look/peek at next element (from top)",
@@ -324,12 +324,12 @@
     "stack_duplicate_next_item": {
       "name": "Duplicate top item",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
     },
     "stack_swap_two_items": {
       "name": "Swap two items",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
 
     },
     "stack_get_size": {
@@ -347,7 +347,7 @@
     "stack_export_to_list": {
       "name": "Export a list of all stack items",
       
-      "not_implemented":"true"
+      "not-implemented":"true"
 
     },
     "stack_clear_all": {
@@ -364,7 +364,7 @@
     },
     "iterate_create_pointer": {
       "name": "Create iterator",
-      "not_implemented":"true"
+      "not-implemented":"true"
 
     },
     "iterate_move_to_next_item": {
@@ -381,12 +381,12 @@
     },
     "iterate_move_to_beginning": {
       "name": "Move pointer to beginning of queue/stack",
-      "not_implemented":"true"
+      "not-implemented":"true"
 
     },
     "iterate_move_to_end": {
       "name": "Move pointer to end of queue/stack",
-      "not_implemented":"true"
+      "not-implemented":"true"
     }
   }
 }
