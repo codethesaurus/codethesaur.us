@@ -170,7 +170,7 @@
     },
     "split_at_newlines": {
       "name": "Split string into a list of strings at every new line character",
-      "code": "List stringList = strings.split(\"\\\n\");"
+      "code": "List stringList = strings.split(\"\\n\");"
     },
     "split_at_substring": {
       "name": "Split string by locating all substrings",
