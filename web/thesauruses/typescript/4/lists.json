@@ -233,7 +233,7 @@
     "create_a_immutable_set": {
       "name": "Create an immutable key/value set",
       "code": "const myObject: Readonly<Record<string, number>> = {\"property1\": 3, \"property2\": 7}",
-      "comments": "Multiple ways to implement this.  You can also use `as const`.  IE: `const myObject: MyObjectType = {\"property1\": 3, \"property2\": 7} as const`"
+      "comment": "Multiple ways to implement this.  You can also use `as const`.  IE: `const myObject: MyObjectType = {\"property1\": 3, \"property2\": 7} as const`"
     },
     "get_key_from_immutable_set": {
       "code": "Object.keys(myObject).find((key) => myObject[key] === value)",
