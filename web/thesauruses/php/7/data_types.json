@@ -22,10 +22,6 @@
       "name": "Signed 64-bit integer",
       "code": "int"
     },
-    "signed_integer_as_object": {
-      "name": "Signed object-based Integer",
-      "code": ""
-    },
     "signed_float_16_bit": {
       "name": "Signed 16-bit floating point",
       "code": "float"
@@ -37,34 +33,6 @@
     "signed_float_64_bit": {
       "name": "Signed 64-bit floating point",
       "code": "float"
-    },
-    "signed_float_as_object": {
-      "name": "Signed object-based floating point",
-      "code": ""
-    },
-    "character": {
-      "name": "Character",
-      "code": ""
-    },
-    "string_as_object": {
-      "name": "String as an object",
-      "code": ""
-    },
-    "string_as_array": {
-      "name": "String as an array of characters",
-      "code": ""
-    },
-    "complex_as_object": {
-      "name": "Complex Number as an object",
-      "code": ""
-    },
-    "real_number_part": {
-      "name": "Complex number real part",
-      "code": ""
-    },
-    "imaginary_number_part": {
-      "name": "Complex number imaginary part",
-      "code": ""
     }
   }
 }

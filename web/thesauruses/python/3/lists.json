@@ -198,8 +198,7 @@
     "name_of_mutable_hashed_list": {
       "code": [
         "dict"
-      ],
-      "not-implemented": "true"
+      ]
     },
     "create_a_mutable_hashed_list": {
       "not-implemented": "true"

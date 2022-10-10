@@ -1,18 +1,22 @@
 {
   "meta": {
-    "language": "python",
-    "language_version": "3.7",
-    "language_name": "Python",
-    "structure": "strings"
+    "language": "cpp",
+    "language_name": "C++",
+    "structure": "strings",
+    "language_version": "C++17"
   },
   "concepts": {
     "is_primitive_or_not": {
       "name": "Is this a built-in type in this language?",
-      "code": "Yes"
+      "code": [
+        "Yes"
+      ]
     },
     "import": {
       "name": "Import the string class",
-      "not-implemented": true
+      "code": [
+        "#include <string>"
+      ]
     },
     "default_string_byte_encoding": {
       "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
@@ -20,7 +24,15 @@
     },
     "create_new_string": {
       "name": "Create new string",
-      "code": "'New String Example' \n\"New String Example 2\"  "
+      "code": [
+        "//default constructor",
+        "std::string petName;",
+        "\n",
+        "//from string literal",
+        "std::string petName = \"Spot\";",
+        "\n",
+        "//direct initialization\nstd::string petName(\"Rover\");"
+      ]
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
@@ -28,7 +40,12 @@
     },
     "assign_new_string": {
       "name": "Assign string from another string",
-      "not-implemented": true
+      "code": [
+        "std::string petName = \"Spot\";",
+        "\n",
+        "//direct initialization",
+        "std::string otherPetName(petName);"
+      ]
     },
     "destroy_string": {
       "name": "Destroy string",
@@ -36,43 +53,75 @@
     },
     "length_of_string": {
       "name": "Length of string",
-      "code": "len(str)"
+      "code": [
+        "numCharacters = petName.length()",
+        "  or",
+        "numCharacters = petName.size()"
+      ]
     },
     "max_length_of_string": {
       "name": "Maximum length of string",
-      "not-implemented": true
+      "code": [
+        "maxNumCharacters = petName.max_size()"
+      ]
     },
     "clear_string": {
       "name": "Clear/empty string",
-      "not-implemented": true
+      "code": [
+        "petName.clear()"
+      ]
     },
     "is_empty": {
       "name": "Is string empty?",
-      "code": "if not my_string:"
+      "code": [
+        "isEmpty = petName.empty()"
+      ]
     },
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
-      "code": "str1 + str2"
+      "code": [
+        "petName + otherPetName"
+      ]
     },
     "concatenate_many_strings": {
       "name": "Concatenate/join many strings",
-      "code": "str1 + str2 + str3 + str4"
+      "code": [
+        "petName + otherPetName + yetAnotherPetName"
+      ]
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
-      "code": "str.isalpha()"
+      "code": [
+        "#include <locale>",
+        "\n",
+        "std::isalpha(character)",
+        "\n"        
+      ],
+      "comment": "Note that the isalpha only takes a single character at a time."
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "code": "str.isnumeric()"
+      "code": [
+        "#include <locale>",
+        "\n",
+        "std::isdigit(character)",
+        "\n"        
+      ],
+      "comment": "Note that the isdigit only takes a single character at a time."
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
-      "code": "str.isalnum()"
+      "code": [
+        "#include <locale>",
+        "\n",
+        "std::isalnum(character)",
+        "\n"        
+      ],
+      "comment": "Note that the isalnum only takes a single character at a time."
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "code": "str.isdecimal()"
+      "not-implemented": true
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
@@ -80,75 +129,100 @@
     },
     "is_all_uppercase": {
       "name": "Is string all uppercase characters?",
-      "code": "str.isupper()"
+      "code": [
+        "#include <locale>",
+        "\n",
+        "std::isupper(character)",
+        "\n"        
+      ],
+      "comment": "Note that the isupper only takes a single character at a time."
     },
     "is_all_lowercase": {
       "name": "Is string all lowercase characters?",
-      "code": "str.islower()"
+      "code": [
+        "#include <locale>",
+        "\n",
+        "std::islower(character)",
+        "\n"        
+      ],
+      "comment": "Note that the islower only takes a single character at a time."
     },
     "is_in_titlecase": {
       "name": "Is string formatted in title case?",
-      "code": "str.istitle()"
+      "not-implemented": true
     },
     "does_substring_exist": {
       "name": "Does a substring exist in a string?",
-      "code": "txt = 'This is a search string' \ntxt.find('is')"
+      "code": [
+        "std::size_t found_idx = string_to_search.find(substring_to_find);"
+      ],
+      "comment": "If no matches were found, the function returns string::npos, otherwise returns position of the first character of the first match."
     },
     "find_start_index_of_substring": {
       "name": "Find index of where a substring starts",
-      "code": "txt = 'This is a search string' \ntxt.index('is')"
+      "code": [
+        "std::size_t found_idx = string_to_search.find(substring_to_find);"
+      ]
     },
     "find_start_index_of_additional_substring": {
       "name": "Find index of an additional substring (or starting at another index)",
-      "not-implemented": true
+      "code": [
+        "std::size_t found_idx = string_to_search.find(substring_to_find, index_to_start_search);"
+      ]
     },
     "find_start_index_of_substring_from_end": {
       "name": "Find substring index starting at end",
-      "code": "str.find(substring, start, end)"
+      "code": [
+        "std::size_t found_idx = string_to_search.rfind(substring_to_find, index_to_start_search);"
+      ]
     },
     "count_occurrences_of_substring": {
       "name": "Find number of occurences of a substring",
-      "code": "str.count(substring)"
+      "not-implemented": true
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "code": "txt = 'Hello World!!' \n#Get 5 characters from left\ntxt[0:5] "
+      "not-implemented": true
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "code": "txt = 'Hello World!!' \n#Get 5 characters from right \ntxt[-5:] "
+      "not-implemented": true
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "code": "str[start:end]"
+      "not-implemented": true
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
-      "not-implemented": true
+      "code": [
+        "std::string newString = originalString.substr(index_of_desired_first_char, size_of_substring);"
+      ]
     },
     "convert_to_uppercase": {
       "name": "Convert string to all uppercase",
-      "code": "str.upper()"
+      "not-implemented": true
     },
     "convert_to_lowercase": {
       "name": "Convert string to all lowercase",
-      "code": "str.lower()"
+      "not-implemented": true
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
-      "code": "str.title()"
+      "not-implemented": true
     },
     "capitalize_string": {
       "name": "Capitalize first letter of a string",
-      "code": "str.capitalize()"
+      "not-implemented": true
     },
     "remove_whitespace": {
       "name": "Remove all whitespaces from string",
-      "code": "string.strip()"
+      "not-implemented": true
     },
     "replace_substring": {
       "name": "Replace a substring with another string",
-      "code": "str.replace(substr, new_substr)"
+      "code": [
+        "std::string newString = name.replace(position_to_start, num_chars_to_place, str_to_copy);"
+      ]
     },
     "replace_all_substring": {
       "name": "Replace all substring matches with another string",
@@ -160,11 +234,11 @@
     },
     "split_at_newlines": {
       "name": "Split string into a list of strings at every new line character",
-      "code": "str.split(\"\\n\")"
+      "not-implemented": true
     },
     "split_at_substring": {
       "name": "Split string by locating all substrings",
-      "code": "str.split(substring)"
+      "not-implemented": true
     },
     "merge_lists_into_string": {
       "name": "Merge a list of strings into one string",
@@ -196,67 +270,91 @@
     },
     "format_string_function": {
       "name": "Function to format a string",
-      "not-implemented": true
+      "code": [
+        "std::string newString = std::to_string(123.98934556);",
+        "\n",
+        "or use std::to_wstring if dealing with unicode characters"
+      ]
     },
     "parameter_format_in_order": {
       "name": "Parameter used in format function if they're used in order",
-      "not-implemented": true
+      "code": [
+        "printf(\"my name is %s my clan is %s\", myName, myClan)"
+      ]
     },
     "parameter_format_numerical": {
       "name": "Parameter used in format function if they're numerically numbered",
       "not-implemented": true
     },
     "parameter_format_by_name": {
-      "name": "Paramater used in format function if they're named variables",
+      "name": "Parameter used in format function if they're named variables",
       "not-implemented": true
     },
     "format_as_integer": {
       "name": "Format parameter as an integer",
-      "not-implemented": true
+      "code": [
+        "printf(\"my age is %d\", age)",
+        "\n",
+        "%i can be used instead of %d"
+      ]
     },
     "format_as_decimal": {
       "name": "Format parameter as a decimal number",
-      "not-implemented": true
+      "code": [
+        "printf(\"elapsed time is %f\", time)",
+        "\n",
+        "%F can be used instead of %f"
+      ]
     },
     "format_as_fixed_decimal": {
       "name": "Format parameter as a fixed-point decimal number",
-      "code": "'{:.2f}'.format(number_string)"
+      "not-implemented": true
     },
     "format_as_currency": {
       "name": "Format parameter as a currency number",
-      "code": "'${:,.2f}'.format(number_string)"
+      "not-implemented": true
     },
     "format_as_percentage": {
       "name": "Format parameter as a percentage number",
-      "code": "format(number, '%')"
+      "not-implemented": true
     },
     "format_number_with_separators": {
       "name": "Format number with thousand separators",
-      "code": "format(number, ',')"
+      "not-implemented": true
     },
     "format_number_with_positive_negative_sign": {
       "name": "Format number with positive/negative signs",
-      "code": " '{0:+}'.format(number)"
+      "not-implemented": true
     },
     "format_number_in_scientific_notation_little_e": {
       "name": "Format number with scientific notation with 'e'",
-      "code": "format(number, 'e')"
+      "code": [
+        "printf(\"mass of object is %e\", mass)"
+      ]
     },
     "format_number_in_scientific_notation_big_e": {
       "name": "Format number with scientific notation with 'E'",
-      "code": "format(number, 'E')"
+      "code": [
+        "printf(\"mass of object is %E\", mass)"
+      ]
     },
     "format_number_in_binary": {
       "name": "Format number into binary",
-      "code": "format(value, 'b')"
+      "not-implemented": true
     },
     "format_number_in_octal": {
       "name": "Format number into octal",
-      "code": "format(number, 'o')"
+      "code": [
+        "printf(\"bit mask weight is %o\", mask_weight)"
+      ]
     },
     "format_number_in_hexadecimal": {
       "name": "Format number into hexadecimal",
-      "code": "format(number, 'x')"
+      "code": [
+        "printf(\"memory address is %x\", address)",
+        "\n",
+        "%X can be used instead of %x"
+      ]
     }
   }
 }

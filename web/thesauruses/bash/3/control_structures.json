@@ -27,7 +27,7 @@
       "name": "Switch statement"
     },
     "ternary_conditional": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Ternary conditional"
     },
     "while_loop": {
@@ -36,7 +36,7 @@
       "name": "While loop"
     },
     "do_while_loop": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Do/While loop"
     },
     "until_loop": {
@@ -45,7 +45,7 @@
       "name": "Until loop"
     },
     "do_until_loop": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Do/Until loop"
     },
     "for_loop": {
@@ -57,19 +57,19 @@
       "name": "Foreach loop"
     },
     "each_iteration": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Each iteration"
     },
     "map_iteration": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Map iteration"
     },
     "filter_iteration": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Filter iteration"
     },
     "fold_iteration": {
-      "not_implemented": true,
+      "not-implemented": true,
       "name": "Fold iteration"
     }
   }

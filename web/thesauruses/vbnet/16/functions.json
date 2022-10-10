@@ -1,50 +1,50 @@
 {
   "meta": {
-    "language": "csharp",
-    "language_version": "9.0",
-    "language_name": "C#",
+    "language": "vbnet",
+    "language_version": "16.0",
+    "language_name": "Visual Basic",
     "structure": "functions"
   },
   "concepts": {
     "void_function_no_parameters": {
-      "code": "void FunctionName()\n{\n\t//code\n}",
+      "code": "Sub FunctionName()\n\t//code\nEnd Sub",
       "name": "Function that does not return a value and takes no parameters"
     },
     "void_function_with_parameters": {
-      "code": "void FunctionName(parameterType1 parameterName1, parameterType2 parameterName2)\n{\n\t//code\n}",
+      "code": "Sub FunctionName(ByVal ParameterName1 As String, ByVal ParameterName2 As Integer)\n\t//code\nEnd Sub",
       "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
     "void_function_variable_parameters": {
-      "code": "void FunctionName(params parameterType[] parameterName)\n{\n//code\n}",
+      "code": "Sub FunctionName(ByVal ParameterArray ParameterName() As String)\n//code\nEnd Sub",
       "name": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "return_value_function_no_parameters": {
-      "code": "returnValueType FunctionName()\n{\n\t//code\n\treturn returnValue;\n}",
+      "code": "Function FunctionName() As String\n\t//code\n\treturn \"Hello, World\"\nEnd Function",
       "name": "Function that returns a value and takes no parameters"
     },
     "return_value_function_with_parameters": {
-      "code": "returnValueType FunctionName(parameterType1 parameterName1, parameterType2 parameterName2)\n{\n\t//code\n\treturn returnValue;\n}",
+      "code": "Function FunctionName As String(ByVal ParameterName1 As String, ByVal ParameterName2 As Integer)\n\t//code\n\treturn \"Hello, World\"\n End Function",
       "name": "Function that returns a value and takes 1 or more defined parameters"
     },
     "return_value_function_variable_parameters": {
       "name": "Function that returns a value and takes an unknown number of parameters",
-      "code": "returnValueType FunctionName(params parameterType[] parameterName)\n{\n//code\n\treturn returnValue;\n}"
+      "code": "Function FunctionName As String(ByVal ParameterArray ParameterName() As String)\n//code\nEnd Function"
     },
     "anonymous_function_no_parameters": {
       "name": "Anonymous function that takes no parameters",
-      "code": "() =>\n{\n\t//code\n}"
+      "code": "Dim FunctionName = Function() \"Hello, World\""
     },
     "anonymous_function_with_parameters": {
       "name": "Anonymous function that takes 1 or more defined parameters",
-      "code": "(parameterType1 parameterName1, parameterType2 parameterName2) =>\n{\n\t//code\n}"
+      "code": "Dim FunctionName = Function(x) x + 1"
     },
     "call_subroutine": {
       "name": "Call subroutine",
-      "code": "MyClass x = new MyClass();\nx.SubRoutine();"
+      "code": "Dim ClassName1 AS MyClass = new MyClass()\nClassName1.SubRoutine()"
     },
     "return_from_subroutine": {
       "name": "Return from subroutine",
-      "code": "MyClass x = new MyClass();\nSubRoutineReturnType y = x.SubRoutine();"
+      "code": "Dim ClassName1 AS MyClass = new MyClass()\nDim VariableName As String = ClassName1.SubRoutine()"
     }
   }
 }
