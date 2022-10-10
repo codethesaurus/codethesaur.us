@@ -10,7 +10,7 @@ jobs:
     name: Unassign issues
     steps:
       - name: Unassign issues
-        uses: wroblewskialex/configurable-unassign-issues@main
+        uses: wroblewskialex/configurable-unassign-issues@v0.1.0
         id: unassign_issues
         with:
           token: ${{secrets.GITHUB_TOKEN}}
