@@ -319,39 +319,27 @@
     },
     "csv_function_lib": {
       "name": "Library containing CSV functions",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "read_csv_file": {
       "name": "Reading a CSV file",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "read_csv_to_type": {
       "name": "Reading a CSV file to a typed array",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "write_csv_file": {
       "name": "Write a new CSV file",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "append_csv_file": {
       "name": "Append to end of CSV file",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "set_csv_delimiter": {
       "name": "Set the CSV delitmiter to use when reading/writing",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     }
   }
 }
