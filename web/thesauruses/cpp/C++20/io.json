@@ -51,86 +51,81 @@
     },
     "list_directory": {
       "name": "List of the items in the current directory",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "read_directory_info": {
       "name": "Get infomation about the current directory (number of items, size, etc)",
       "code": [
-        ""
+        "filesystem::current_path();"
       ]
     },
     "create_directory": {
       "name": "Create a directory",
       "code": [
-        ""
+        "filesystem::create_directory(const filesystem::path& p);"
       ]
     },
     "delete_directory": {
       "name": "Delete a directory",
       "code": [
-        ""
+        "filesystem::remove(const filesystem::path& p);"
       ]
     },
     "rename_directory": {
       "name": "Rename a directory",
       "code": [
-        ""
+        "filesystem::rename(const filesystem::path& old_path, const filesystem::path& new_path);"
       ]
     },
     "move_directory": {
       "name": "Move a directory to another locaiton",
       "code": [
-        ""
+        "filesystem::rename(const filesystem::path& old_path, const filesystem::path& new_path);"
       ]
     },
     "update_directory_permissions": {
       "name": "Update the permissions a user, group, or application has to a directory",
       "code": [
-        ""
+        "filesystem::permissions(const filesystem::path& p, const filesystem::perms& perms, const filesystem::perm_options& opts);"
       ]
     },
     "read_line_of_file": {
       "name": "Read a single line from a file",
       "code": [
-        ""
+        "getline(fstream f, string s);"
       ]
     },
     "read_lines_of_file": {
       "name": "Read all the lines in a file",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "read_file_stream": {
       "name": "Read the file into a stream",
       "code": [
-        ""
+        "stringstream buffer;",
+        "buffer << file.rdbuf();"
       ]
     },
     "create_file": {
       "name": "Create a file",
       "code": [
-        ""
+        "ofstream variable_name(file_name);"
       ]
     },
     "delete_file": {
       "name": "Delete a file",
       "code": [
-        ""
+        "remove(file_name);"
       ]
     },
     "update_file": {
       "name": "Update a file",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "move_file": {
       "name": "Move a file to a new location",
       "code": [
-        ""
+        "filesystem::rename(old_filename, new_filename);"
       ]
     },
     "network_functions_lib": {
