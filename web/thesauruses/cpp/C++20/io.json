@@ -255,99 +255,67 @@
     },
     "database_functions_lib": {
       "name": "Library containing database IO functions",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "open_connection": {
       "name": "Open a database connection",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "close_connection": {
       "name": "Close a database connection",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "execute_query_single_result_set": {
       "name": "Execute a query returning a single result set",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "execute_query_multiple_result_sets": {
       "name": "Execute a query returning a multiple result sets",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "execute_non_query": {
       "name": "Execute a non query (update, delete)",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "json_function_lib": {
       "name": "Library containing JSON functions",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "serialize_json": {
       "name": "Serialize an object to JSON",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "deserialize_json": {
       "name": "Deserialize a string from JSON",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "serialize_json_with_options": {
       "name": "Serialize an object to JSON with options",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "deserialize_json_with_options": {
       "name": "Deserialize a string from JSON with options",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "xml_function_lib": {
       "name": "Library containing XML functions",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "serialize_xml": {
       "name": "Serialize an object to XML",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "deserialize_xml": {
       "name": "Deserialize a string from XML",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "serialize_xml_with_options": {
       "name": "Serialize an object to XML with options",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "deserialize_xml_with_options": {
       "name": "Deserialize a string from XML with options",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "csv_function_lib": {
       "name": "Library containing CSV functions",
