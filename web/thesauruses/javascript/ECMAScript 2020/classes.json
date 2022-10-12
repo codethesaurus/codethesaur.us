@@ -52,7 +52,7 @@
     },
     "public_variables": {
       "code": "class ClassName {\n publicField = 0;\n}",
-      "comment": "Field `publicField` is accessible at `instance.publicField`, where`instance` is the instance of the class `ClassName`.",
+      "comment": "Field `publicField` is accessible at `instance.publicField`, where `instance` is the instance of the class `ClassName`.",
       "name": "Defining public variables"
     },
     "static_variables": {
@@ -71,7 +71,7 @@
     },
     "public_functions": {
       "code": "class ClassName {\n publicMethod() {\n  // Method body\n }\n}",
-      "comment": "Method `publicMethod` is accessible at `instance.publicMethod()`, where`instance` is the instance of the class `ClassName`.",
+      "comment": "Method `publicMethod` is accessible at `instance.publicMethod()`, where `instance` is the instance of the class `ClassName`.",
       "name": "Defining public functions"
     },
     "static_functions": {
