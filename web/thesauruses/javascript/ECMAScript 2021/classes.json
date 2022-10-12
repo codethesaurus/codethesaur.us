@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "language": "javascript",
+    "language_version": "ECMAScript 2021",
+    "language_name": "JavaScript",
+    "structure": "classes"
+  },
+  "concepts": {
+    "normal_class": {
+      "code": "class ClassName {\n // Class body containing variables and methods \n}",
+      "comment": "Newer versions of Javascript permit class but are prototypes (an alternative approach to the object concept) which is the core concept of Javascript.",
+      "name": "Normal class"
+    },
+    "abstract_class": {
+      "not-implemented": true,
+      "name": "Abstract class"
+    },
+    "interface": {
+      "not-implemented": true,
+      "name": "Interface"
+    },
+    "read_only_class": {
+      "not-implemented": true,
+      "name": "Read-only class"
+    },
+    "static_class": {
+      "not-implemented": true,
+      "name": "Static class"
+    },
+    "inner_class": {
+      "not-implemented": true,
+      "name": "Inner class"
+    },
+    "packages": {
+      "comment": "A package manager like NPM (https://www.npmjs.com/) or Deno (https://deno.land/) can be used to create and manage Javascript packages.",
+      "not-implemented": true,
+      "name": "Packages"
+    },
+    "class_with_generic_type": {
+      "not-implemented": true,
+      "name": "Class with a generic type"
+    },
+    "private_variables": {
+      "code": "class ClassName {\n #privateField = 0;\n}",
+      "name": "Defining private variables"
+    },
+    "protected_variables": {
+      "not-implemented": true,
+      "name": "Defining protected variables"
+    },
+    "public_variables": {
+      "code": "class ClassName {\n publicField = 0;\n}",
+      "name": "Defining public variables"
+    },
+    "static_variables": {
+      "code": "class ClassName {\n static staticField = 0;\n}",
+      "name": "Defining static variables"
+    },
+    "private_functions": {
+      "code": "class ClassName {\n #privateMethod() {\n  // Method body\n }\n}",
+      "name": "Defining private functions"
+    },
+    "protected_functions": {
+      "not-implemented": true,
+      "name": "Defining protected functions"
+    },
+    "public_functions": {
+      "code": "class ClassName {\n publicMethod() {\n  // Method body\n }\n}",
+      "name": "Defining public functions"
+    },
+    "static_functions": {
+      "code": "class ClassName {\n static staticMethod() {\n  // Method body\n }\n}",
+      "name": "Defining static functions"
+    },
+    "extends_class": {
+      "code": "class ChildClassName extends ParentClassName {\n // Class body containing variables and methods \n}\nclass ParentClassName {\n // Class body containing variables and methods \n}",
+      "name": "Class that inherits/extends another class"
+    },
+    "extending_interface": {
+      "not-implemented": true,
+      "name": "Class/Interface that inherits/extends another class/interface"
+    },
+    "calling_superclass_functions": {
+      "code": "super.methodName();",
+      "name": "Calling a superclass function"
+    },
+    "overriding_superclass_functions": {
+      "code": "class ChildClassName extends ParentClassName {\n publicMethod() {\n  // Method body\n  // This overrides publicMethod() in the parent class\n }\n}\nclass ParentClassName {\n publicMethod() {\n  // Method body\n }\n}",
+      "name": "Overriding a superclass function"
+    },
+    "instantiating_object": {
+      "code": "const objectName = new ClassName();",
+      "name": "Instantiating a new object"
+    },
+    "instantiating_polymorphic_object": {
+      "not-implemented": true,
+      "name": "Instantiating a polymorphic object"
+    },
+    "implement_constructor": {
+      "code": "class ClassName {\n constructor() {\n  // Constructor body\n }\n}",
+      "name": "Implementing a class constructor"
+    },
+    "implement_deconstructor": {
+      "not-implemented": true,
+      "name": "Implementing a class deconstructor"
+    }
+  }
+}

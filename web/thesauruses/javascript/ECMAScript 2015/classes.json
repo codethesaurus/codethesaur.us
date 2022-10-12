@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "language": "javascript",
+    "language_version": "ECMAScript 2015",
+    "language_name": "JavaScript",
+    "structure": "classes"
+  },
+  "concepts": {
+    "normal_class": {
+      "code": "function ClassName() {\n // Constructor body\n}\nClassName.prototype.publicMethod = function() {\n // Method body\n}\nClassName.prototype.publicField = 0;",
+      "comment": "Classes are not present in ECMAScript 2015 and below versions but can be simulated using functions and prototypes.",
+      "name": "Normal class"
+    },
+    "abstract_class": {
+      "not-implemented": true,
+      "name": "Abstract class"
+    },
+    "interface": {
+      "not-implemented": true,
+      "name": "Interface"
+    },
+    "read_only_class": {
+      "not-implemented": true,
+      "name": "Read-only class"
+    },
+    "static_class": {
+      "not-implemented": true,
+      "name": "Static class"
+    },
+    "inner_class": {
+      "not-implemented": true,
+      "name": "Inner class"
+    },
+    "packages": {
+      "comment": "A package manager like NPM (https://www.npmjs.com/) or Deno (https://deno.land/) can be used to create and manage Javascript packages.",
+      "not-implemented": true,
+      "name": "Packages"
+    },
+    "class_with_generic_type": {
+      "not-implemented": true,
+      "name": "Class with a generic type"
+    },
+    "private_variables": {
+      "code": "var ClassName = (function() {\n var privateField = 0;\n // privateField is accessible in this scope only.\n function ClassName() {\n  // Constructor body\n }\n return ClassName;\n})();",
+      "name": "Defining private variables"
+    },
+    "protected_variables": {
+      "not-implemented": true,
+      "name": "Defining protected variables"
+    },
+    "public_variables": {
+      "code": "function ClassName() {\n // Constructor body\n this.publicField = 0\n}\nClassName.prototype.anotherPublicField = 0;",
+      "name": "Defining public variables"
+    },
+    "static_variables": {
+      "code": "var ClassName = (function() {\n function ClassName() {\n  // Constructor body\n }\n ClassName.staticField = 0;\n return ClassName;\n})();",
+      "name": "Defining static variables"
+    },
+    "private_functions": {
+      "code": "var ClassName = (function() {\n var privateMethod = function() {\n  // Method body\n }\n // privateMethod is accessible in this scope only.\n function ClassName() {\n  // Constructor body\n }\n return ClassName;\n})();",
+      "name": "Defining private functions"
+    },
+    "protected_functions": {
+      "not-implemented": true,
+      "name": "Defining protected functions"
+    },
+    "public_functions": {
+      "code": "var ClassName = (function() {\n function ClassName() {\n  // Constructor body\n }\n ClassName.prototype.publicMethod = function() {\n  // Method body\n }\n return ClassName;\n})();",
+      "name": "Defining public functions"
+    },
+    "static_functions": {
+      "code": "var ClassName = (function() {\n function ClassName() {\n  // Constructor body\n }\n ClassName.staticMethod = function() {\n  // Method body\n }\n return ClassName;\n})();",
+      "name": "Defining static functions"
+    },
+    "extends_class": {
+      "code": "var ParentClassName = function ParentClassName() {\n // Constructor body\n}\nvar ChildClassName = (function() {\n function ChildClassName() {\n  // Call the parent class constructor, should be first line of constructor\n  ParentClassName.call(this);\n  // Constructor body\n }\n // Copy the prototype from the parent class\n ChildClassName.prototype = Object.create(ParentClassName.prototype);\n // Set the constructor to refer to this class\n ChildClassName.prototype.constructor = ChildClassName;\n return ChildClassName;\n})();",
+      "name": "Class that inherits/extends another class"
+    },
+    "extending_interface": {
+      "not-implemented": true,
+      "name": "Class/Interface that inherits/extends another class/interface"
+    },
+    "calling_superclass_functions": {
+      "code": "var ParentClassName = function ParentClassName() {\n // Parent class constructor\n};\nParentClassName.prototype.publicMethod = function() {\n // Method body\n};\nvar ChildClassName = (function() {\n function ChildClassName() {\n  // Call the parent class constructor, should be first line of constructor\n  ParentClassName.call(this);\n }\n // Copy the prototype from the parent class\n ChildClassName.prototype = Object.create(ParentClassName.prototype);\n // Set the constructor to refer to this class\n ChildClassName.prototype.constructor = ChildClassName;\n // Override the publicMethod function\n ChildClassName.prototype.publicMethod = function() {\n  // Call the superclass function, which is publicMethod of ParentClassName prototype.\n  ParentClassName.prototype.publicMethod.call(this);\n};\n return ChildClassName;\n})();",
+      "name": "Calling a superclass function"
+    },
+    "overriding_superclass_functions": {
+      "code": "var ChildClassName = (function() {\n function ChildClassName() {\n  // Call the parent class constructor and should be the first line in the child class constructor\n  ParentClassName.call(this);\n }\n ChildClassName.prototype = Object.create(ParentClassName.prototype);\n ChildClassName.prototype.constructor = ChildClassName;\n ChildClassName.prototype.publicMethod = function() {\n  // Method body\n  // This overrides publicMethod() in the parent class\n }\n return ChildClassName;\n})();\n\nvar ParentClassName = (function() {\n function ParentClassName() {\n  // Parent class constructor\n }\n ParentClassName.prototype.publicMethod = function() {\n  // Method body\n }\n return ParentClassName;\n})();",
+      "name": "Overriding a superclass function"
+    },
+    "instantiating_object": {
+      "code": "var objectName = new ClassName();",
+      "name": "Instantiating a new object"
+    },
+    "instantiating_polymorphic_object": {
+      "not-implemented": true,
+      "name": "Instantiating a polymorphic object"
+    },
+    "implement_constructor": {
+      "code": "function ClassName() {\n // Constructor body\n}",
+      "name": "Implementing a class constructor"
+    },
+    "implement_deconstructor": {
+      "not-implemented": true,
+      "name": "Implementing a class deconstructor"
+    }
+  }
+}
