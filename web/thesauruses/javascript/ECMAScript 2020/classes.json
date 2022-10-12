@@ -42,22 +42,27 @@
     },
     "private_variables": {
       "code": "class ClassName {\n #privateField = 0;\n}",
+      "comment": "Private fields are pretty new features : some users may not be able to use them.",
       "name": "Defining private variables"
     },
     "protected_variables": {
       "not-implemented": true,
+      "comment": "Public and private are the only access modifiers available in Javascript.",
       "name": "Defining protected variables"
     },
     "public_variables": {
       "code": "class ClassName {\n publicField = 0;\n}",
+      "comment": "Field `publicField` is accessible at `instance.publicField`, where`instance` is the instance of the class `ClassName`.",
       "name": "Defining public variables"
     },
     "static_variables": {
       "code": "class ClassName {\n static staticField = 0;\n}",
+      "comment": "Static field `staticField` is accessible at `ClassName.staticField`.",
       "name": "Defining static variables"
     },
     "private_functions": {
       "code": "class ClassName {\n #privateMethod() {\n  // Method body\n }\n}",
+      "comment": "Private methods are pretty new features : some users may not be able to use them.",
       "name": "Defining private functions"
     },
     "protected_functions": {
@@ -66,10 +71,12 @@
     },
     "public_functions": {
       "code": "class ClassName {\n publicMethod() {\n  // Method body\n }\n}",
+      "comment": "Method `publicMethod` is accessible at `instance.publicMethod()`, where`instance` is the instance of the class `ClassName`.",
       "name": "Defining public functions"
     },
     "static_functions": {
       "code": "class ClassName {\n static staticMethod() {\n  // Method body\n }\n}",
+      "comment": "Static method `staticMethod` is accessible at `ClassName.staticMethod()`.",
       "name": "Defining static functions"
     },
     "extends_class": {
@@ -82,6 +89,7 @@
     },
     "calling_superclass_functions": {
       "code": "super.methodName();",
+      "comment": "The `super` keyword is used to call a method of the parent class. To use it, the class must extend another class and the method must be defined in the parent class.",
       "name": "Calling a superclass function"
     },
     "overriding_superclass_functions": {

@@ -1,14 +1,14 @@
 {
   "meta": {
     "language": "javascript",
-    "language_version": "ECMAScript 2015",
+    "language_version": "ECMAScript 2009",
     "language_name": "JavaScript",
     "structure": "classes"
   },
   "concepts": {
     "normal_class": {
       "code": "function ClassName() {\n // Constructor body\n}\nClassName.prototype.publicMethod = function() {\n // Method body\n}\nClassName.prototype.publicField = 0;",
-      "comment": "Classes are not present in ECMAScript 2015 and below versions but can be simulated using functions and prototypes.",
+      "comment": "Classes are not present in ECMAScript 2009 and below versions but can be simulated using functions and prototypes.",
       "name": "Normal class"
     },
     "abstract_class": {
