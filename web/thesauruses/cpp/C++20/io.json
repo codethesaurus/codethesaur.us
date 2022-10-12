@@ -9,26 +9,26 @@
     "write_line": {
       "name": "Write a line to the console",
       "code": [
-        "cout << \"...\";"
+        "std::cout << \"...\";"
       ]
     },
     "write_line_with_new_line": {
       "name": "Write a line to the console with a return character",
       "code": [
-        "cout << \"...\" << endl;"
+        "std::cout << \"...\" << std::endl;"
       ]
     },
     "read_line": {
       "name": "Read a line of user input from the console",
       "code": [
-        "cin >> variable_name;"
+        "std::cin >> variable_name;"
       ]
     },
     "read_char": {
       "name": "Read a single char of user input from the console",
       "code": [
         "char variable_name[1];",
-        "cin.get(variable_name, 2);"
+        "std::cin.get(variable_name, 2);"
       ]
     },
     "clear_console_cutput": {
@@ -56,43 +56,43 @@
     "read_directory_info": {
       "name": "Get infomation about the current directory (number of items, size, etc)",
       "code": [
-        "filesystem::current_path();"
+        "std::filesystem::current_path();"
       ]
     },
     "create_directory": {
       "name": "Create a directory",
       "code": [
-        "filesystem::create_directory(const filesystem::path& p);"
+        "std::filesystem::create_directory(const std::filesystem::path& p);"
       ]
     },
     "delete_directory": {
       "name": "Delete a directory",
       "code": [
-        "filesystem::remove(const filesystem::path& p);"
+        "std::filesystem::remove(const std::filesystem::path& p);"
       ]
     },
     "rename_directory": {
       "name": "Rename a directory",
       "code": [
-        "filesystem::rename(const filesystem::path& old_path, const filesystem::path& new_path);"
+        "std::filesystem::rename(const std::filesystem::path& old_path, const std::filesystem::path& new_path);"
       ]
     },
     "move_directory": {
       "name": "Move a directory to another locaiton",
       "code": [
-        "filesystem::rename(const filesystem::path& old_path, const filesystem::path& new_path);"
+        "std::filesystem::rename(const std::filesystem::path& old_path, const std::filesystem::path& new_path);"
       ]
     },
     "update_directory_permissions": {
       "name": "Update the permissions a user, group, or application has to a directory",
       "code": [
-        "filesystem::permissions(const filesystem::path& p, const filesystem::perms& perms, const filesystem::perm_options& opts);"
+        "std::filesystem::permissions(const std::filesystem::path& p, const std::filesystem::perms& perms, const std::filesystem::perm_options& opts);"
       ]
     },
     "read_line_of_file": {
       "name": "Read a single line from a file",
       "code": [
-        "getline(fstream f, string s);"
+        "std::getline(std::istream f, std::string s);"
       ]
     },
     "read_lines_of_file": {
@@ -102,20 +102,20 @@
     "read_file_stream": {
       "name": "Read the file into a stream",
       "code": [
-        "stringstream buffer;",
+        "std::stringstream buffer;",
         "buffer << file.rdbuf();"
       ]
     },
     "create_file": {
       "name": "Create a file",
       "code": [
-        "ofstream variable_name(file_name);"
+        "std::ofstream variable_name(file_name);"
       ]
     },
     "delete_file": {
       "name": "Delete a file",
       "code": [
-        "remove(file_name);"
+        "std::filesystem::remove(file_name);"
       ]
     },
     "update_file": {
@@ -125,128 +125,88 @@
     "move_file": {
       "name": "Move a file to a new location",
       "code": [
-        "filesystem::rename(old_filename, new_filename);"
+        "std::filesystem::rename(old_filename, new_filename);"
       ]
     },
     "network_functions_lib": {
       "name": "Library containing network IO functions",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_http_request": {
       "name": "Send a HTTP request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_get_request": {
       "name": "Send a HTTP GET request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_post_request": {
       "name": "Send a HTTP POST request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_put_request": {
       "name": "Send a HTTP PUT request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_patch_request": {
       "name": "Send a HTTP PATCH request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_delete_request": {
       "name": "Send a HTTP DELETE request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_head_request": {
       "name": "Send a HTTP HEAD request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_options_request": {
       "name": "Send a HTTP OPTIONS request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_connect_request": {
       "name": "Send a HTTP CONNECT request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "send_a_trace_request": {
       "name": "Send a HTTP TRACE request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "add_headers": {
       "name": "Add headers to a HTTP request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "add_query_params": {
       "name": "Add query parameters to a HTTP request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "inbuilt_url_class": {
       "name": "The inbuilt URL class",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "open_a_socket": {
       "name": "Open a network socket",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "close_a_socket": {
       "name": "Close a network socket",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "add_authorization_headers": {
       "name": "Add an authorization header",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "add_cookies": {
       "name": "Add cookies to a HTTP request",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "read_cookies": {
       "name": "Read cookies from a HTTP response",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "read_headers": {
       "name": "Read headers from a HTTP response",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "database_functions_lib": {
       "name": "Library containing database IO functions",
