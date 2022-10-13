@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "language": "rust",
+    "language_version": "1",
+    "language_name": "Rust",
+    "structure": "strings"
+  },
+  "concepts": {
+    "is_primitive_or_not": {
+      "code": "Yes"
+    },
+    "import": {
+      "not-implemented": true
+    },
+    "default_string_byte_encoding": {
+      "code": "UTF-8"
+    },
+    "create_new_string": {
+      "code": "let foo = \"string\";"
+    },
+    "create_multiline_string": {
+      "code": "let foo = \"line 1 \\\nline 2\";"
+    },
+    "assign_new_string": {
+      "code": "let a = \"a\";\nlet b = a;"
+    },
+    "destroy_string": {
+      "code": "let foo = \"x\";\ndrop(foo);"
+    },
+    "length_of_string": {
+      "code": "let foo = \"stringText\".len();"
+    },
+    "max_length_of_string": {
+      "not-implemented": true
+    },
+    "clear_string": {
+      "code": "let mut foo = \"bar\";\nfoo = \"\";"
+    },
+    "is_empty": {
+      "code": "foo.is_empty()"
+    },
+    "concatenate_two_strings": {
+      "code": "let foo = \"foo\";\nlet bar = \"bar\";\nlet foobar = foo.to_owned() + bar;"
+    },
+    "concatenate_many_strings": {
+      "code": "let foo = \"foo\";\nlet bar = \"bar\";\nlet x = \"x\";\nlet y = \"y\";\nlet foobar = foo.to_owned() + bar + x + y;"
+    },
+    "is_all_alphabetical": {
+      "code": "\"foo\".chars().all(char::is_alphabetic)"
+    },
+    "is_all_numerical": {
+      "code": "\"111\".chars().all(char::is_numeric)"
+    },
+    "is_all_alphanumeric": {
+      "code": "\"foo1\".chars().all(char::is_alphanumeric)"
+    },
+    "is_decimal": {
+      "not-implemented": true
+    },
+    "is_all_whitespaces": {
+      "code": "\"     \".chars().all(char::is_whitespace)"
+    },
+    "is_all_uppercase": {
+      "code": "\"FOO\".chars().all(char::is_uppercase)"
+    },
+    "is_all_lowercase": {
+      "code": "\"foo\".chars().all(char::is_lowercase)"
+    },
+    "is_in_titlecase": {
+      "not-implemented": true
+    },
+    "does_substring_exist": {
+      "code": "foo.contains(\"foo\")"
+    },
+    "find_start_index_of_substring": {
+      "not-implemented": true
+    },
+    "find_start_index_of_additional_substring": {
+      "not-implemented": true
+    },
+    "find_start_index_of_substring_from_end": {
+      "not-implemented": true
+    },
+    "count_occurrences_of_substring": {
+      "not-implemented": true
+    },
+    "get_leftmost_characters": {
+      "code": "let foo = \"string\";\n&foo[..2];"
+    },
+    "get_rightmost_characters": {
+      "code": "let foo = \"string\";\n&x[x.len()-2..];"
+    },
+    "get_substring_from_start_and_end_index": {
+      "code": "let foo = \"string\";\n&foo[2..4];"
+    },
+    "get_substring_from_start_index_and_length": {
+      "not-implemented": true
+    },
+    "convert_to_uppercase": {
+      "code": "str.to_uppercase()"
+    },
+    "convert_to_lowercase": {
+      "code": "str.to_lowercase()"
+    },
+    "convert_to_title_case": {
+      "code": "extern crate inflector;\nuse inflector::Inflector;\n\"foo\".to_title_case();"
+    },
+    "capitalize_string": {
+      "code": "extern crate inflector;\nuse inflector::Inflector;\n\"foo\".to_sentence_case();"
+    },
+    "remove_whitespace": {
+      "code": "\" foo    bar \".split_whitespace().collect::<String>()"
+    },
+    "replace_substring": {
+      "code": "\"foo\".replace(\"foo\", \"bar\")"
+    },
+    "replace_all_substring": {
+      "not-implemented": true
+    },
+    "split_at_index": {
+      "not-implemented": true
+    },
+    "split_at_newlines": {
+      "code": "str.split(\"\\n\")"
+    },
+    "split_at_substring": {
+      "code": "\"foobar\".split(\"foo\")"
+    },
+    "merge_lists_into_string": {
+      "code": "vec![\"Foo\",\"bar\"].join(\" \")"
+    },
+    "encode_html_entities": {
+      "not-implemented": true
+    },
+    "decode_html_entities": {
+      "not-implemented": true
+    },
+    "encode_url_percent": {
+      "code": "use urlencoding::encode;\nlet encoded = encode(\"foo bar\");"
+    },
+    "decode_url_percent": {
+      "code": "use urlencoding::decode;\nlet decoded = decode(\"foo%20bar\").expect(\"UTF-8\");"
+    },
+    "encode_to_base64": {
+      "code": "base64::encode(b\"foobar\");"
+    },
+    "decode_from_base64": {
+      "code": "str::from_utf8(&base64::decode(\"Zm9vYmFy\").unwrap()).unwrap()"
+    },
+    "format_string_function": {
+      "code": "format!(\"foo bar {}\");"
+    },
+    "parameter_format_in_order": {
+      "code": "format!(\"foo bar {} {}\", 1, 2);"
+    },
+    "parameter_format_numerical": {
+      "not-implemented": true
+    },
+    "parameter_format_by_name": {
+      "code": "let x = \"foo\";\nformat!(\"Value is: {x}\");"
+    },
+    "format_as_integer": {
+      "code": "format!(\"foo bar {}\", 1);"
+    },
+    "format_as_decimal": {
+      "code": "format!(\"foo bar {}\", 1.23456789);"
+    },
+    "format_as_fixed_decimal": {
+      "comment": "Specifies precision of 5",
+      "code": "format!(\"{:.5}\", 0.01);"
+    },
+    "format_as_currency": {
+      "code": "format!(\"${:.2}\", 123.45);"
+    },
+    "format_as_percentage": {
+      "code": "format!(\"{}%\", 95);"
+    },
+    "format_number_with_separators": {
+      "not-implemented": true
+    },
+    "format_number_with_positive_negative_sign": {
+      "code": "format!(\"{:+}\", -95);"
+    },
+    "format_number_in_scientific_notation_little_e": {
+      "code": "format!(\"{:+.2e}\", -1.34e+5_f32);"
+    },
+    "format_number_in_scientific_notation_big_e": {
+      "code": "format!(\"{:+.2E}\", -1.34e+5_f32);"
+    },
+    "format_number_in_binary": {
+      "code": "format!(\"{:b}\", 123)"
+    },
+    "format_number_in_octal": {
+      "code": "format!(\"{:o}\", 123)"
+    },
+    "format_number_in_hexadecimal": {
+      "code": "format!(\"{:x}\", 123)"
+    }
+  }
+}
