@@ -57,7 +57,7 @@
       "name": "Defining static variables"
     },
     "private_functions": {
-      "code": "class ClassName {\n #privateMethod() {\n  // Method body\n }\n}",
+      "not-implemented": true,
       "name": "Defining private functions"
     },
     "protected_functions": {
@@ -73,7 +73,7 @@
       "name": "Defining static functions"
     },
     "extends_class": {
-      "code": "class ChildClassName extends ParentClassName {\n // Class body containing variables and methods \n}\nclass ParentClassName {\n // Class body containing variables and methods \n}",
+      "code": "class ChildClassName extends ParentClassName {\n // Class body containing variables and methods \n}",
       "name": "Class that inherits/extends another class"
     },
     "extending_interface": {
@@ -85,7 +85,7 @@
       "name": "Calling a superclass function"
     },
     "overriding_superclass_functions": {
-      "code": "class ChildClassName extends ParentClassName {\n publicMethod() {\n  // Method body\n  // This overrides publicMethod() in the parent class\n }\n}\nclass ParentClassName {\n publicMethod() {\n  // Method body\n }\n}",
+      "code": "class ChildClassName extends ParentClassName {\n publicMethod() {\n // Method body\n // This overrides publicMethod() in the parent class\n }\n}",
       "name": "Overriding a superclass function"
     },
     "instantiating_object": {

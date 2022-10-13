@@ -8,7 +8,6 @@
   "concepts": {
     "normal_class": {
       "code": "class ClassName {\n // Class body containing variables and methods \n}",
-      "comment": "Newer versions of Javascript permit class but are prototypes (an alternative approach to the object concept) which is the core concept of Javascript.",
       "name": "Normal class"
     },
     "abstract_class": {
@@ -41,8 +40,7 @@
       "name": "Class with a generic type"
     },
     "private_variables": {
-      "code": "class ClassName {\n #privateField = 0;\n}",
-      "comment": "Private fields are pretty new features : some users may not be able to use them.",
+      "not-implemented": true,
       "name": "Defining private variables"
     },
     "protected_variables": {
@@ -61,8 +59,7 @@
       "name": "Defining static variables"
     },
     "private_functions": {
-      "code": "class ClassName {\n #privateMethod() {\n  // Method body\n }\n}",
-      "comment": "Private methods are pretty new features : some users may not be able to use them.",
+      "not-implemented": true,
       "name": "Defining private functions"
     },
     "protected_functions": {
@@ -93,7 +90,7 @@
       "name": "Calling a superclass function"
     },
     "overriding_superclass_functions": {
-      "code": "class ChildClassName extends ParentClassName {\n publicMethod() {\n  // Method body\n  // This overrides publicMethod() in the parent class\n }\n}\nclass ParentClassName {\n publicMethod() {\n  // Method body\n }\n}",
+      "code": "class ChildClassName extends ParentClassName {\n publicMethod() {\n  // Method body\n  // This overrides publicMethod() in the parent class\n }\n}",
       "name": "Overriding a superclass function"
     },
     "instantiating_object": {
