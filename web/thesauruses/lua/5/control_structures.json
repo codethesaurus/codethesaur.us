@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "language": "lua",
+    "language_name": "Human-Readable Language Name",
+    "structure": "control_structures",
+    "language_version": "5.1"
+  },
+  "concepts": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": [
+        "if condition then",
+        "    statements",
+        "end"
+      ]
+    },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": [
+        "if condition then",
+        "    statements",
+        "else",
+        "    statements",
+        "end"
+      ]
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": [
+        "if condition then",
+        "    statements",
+        "elseif condition then",
+        "    statements",
+        "end"
+      ]
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": [
+        "if condition then",
+        "    statements",
+        "elseif condition then",
+        "    statements",
+        "else",
+        "    statements",
+        "end"
+      ]
+    },
+    "switch_statement": {
+      "name": "Switch statement",
+      "not-implemented": true
+    },
+    "ternary_conditional": {
+      "name": "Ternary conditional",
+      "not-implemented": true
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": [
+        "while condition do",
+        "    statements",
+        "end"
+      ]
+    },
+    "do_while_loop": {
+      "name": "Do/While loop",
+      "not-implemented": true
+    },
+    "until_loop": {
+      "name": "Until loop",
+      "not-implemented": true
+    },
+    "do_until_loop": {
+      "name": "Do/Until loop",
+      "code": [
+        "repeat",
+        "    statements",
+        "until condition"
+      ]
+    },
+    "for_loop": {
+      "name": "For loop",
+      "code": [
+        "for v = var, limit, step do",
+        "    statements",
+        "end"
+      ],
+      "comment": "You can omit step in which case it defaults to 1."
+    },
+    "foreach_loop": {
+      "name": "Foreach loop",
+      "code": [
+        "for name1, name2, andMoreNames in exp1, exp2, andMoreExps do",
+        "    statements",
+        "end"
+      ],
+      "comment": "the loop will break once the first exp1 runs out of elements"
+    },
+    "list_comprehension": {
+      "name": "List Comprehension",
+      "not-implemented": true
+    },
+    "each_iteration": {
+      "name": "Each iteration",
+      "not-implemented": true
+    },
+    "map_iteration": {
+      "name": "Map iteration",
+      "not-implemented": true
+    },
+    "filter_iteration": {
+      "name": "Filter iteration",
+      "not-implemented": true
+    },
+    "fold_iteration": {
+      "name": "Fold iteration",
+      "not-implemented": true
+    }
+  }
+}
