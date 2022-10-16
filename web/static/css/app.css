@@ -86,12 +86,12 @@ a {
 #contribution-alert {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
 }
 
 #contribution-alert .alert {
-  width: 30rem;
+  width: fit-content;
   text-align: center;
+  margin: 0;
 }
 
 #contribution-alert p {
