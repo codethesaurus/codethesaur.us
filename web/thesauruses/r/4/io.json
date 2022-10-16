@@ -21,7 +21,9 @@
       },
       "read_line": {
         "name": "Read a line of user input from the console",
-        "comment": "readline(prompt = '')"
+        "code": [
+            "readline(prompt = '')"
+        ]
       },
       "read_char": {
         "name": "Read a single char of user input from the console",
@@ -332,18 +334,22 @@
       },
       "serialize_xml": {
         "name": "Serialize an object to XML",
+        "not-implemented":true,
         "comment":"use package xml"
       },
       "deserialize_xml": {
         "name": "Deserialize a string from XML",
+        "not-implemented":true,
         "comment":"use package xml"
       },
       "serialize_xml_with_options": {
         "name": "Serialize an object to XML with options",
+        "not-implemented":true,
         "comment":"use package xml"
       },
       "deserialize_xml_with_options": {
         "name": "Deserialize a string from XML with options",
+        "not-implemented":true,
         "comment":"use package xml"
       },
       "csv_function_lib": {

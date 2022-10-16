@@ -105,6 +105,9 @@
       },
       "overriding_superclass_functions": {
         "name": "Overriding a superclass function",
+        "code":[
+          "theFuncToOverride <-function(x){\n#your implementation\n}"
+        ],
         "comment": "Define the same method in your class."
       },
       "instantiating_object": {
