@@ -8,18 +8,20 @@
     "concepts": {
       "simple_queue_import_statement": {
         "name": "Import statement to add simple queue",
-        "not-implemented": "true"
+        "code": [
+          "from queue import Queue"
+        ]
       },
       "simple_queue_data_type": {
         "name": "Queue data type name",
         "code": [
-          "list"
+          "queue.Queue"
         ]
       },
       "simple_queue_create_statement": {
         "name": "Create a queue",
         "code": [
-          "queue = ['One', 'Two', 'Three']"
+          "queue = Queue()"
         ]
       },
       "simple_queue_create_copy_statement": {
@@ -30,20 +32,18 @@
       },
       "simple_queue_create_copy_from_list_statement": {
         "name": "Create a queue from a list of items",
-        "code": [
-          "queue = mylist"
-        ]
+        "not-implemented": "true"
       },
       "simple_queue_destroy_statement": {
         "name": "Destroy/delete a queue",
         "code": [
-          "queue.clear()"
+          "del(queue)"
         ]
       },
       "simple_queue_data_structure": {
         "name": "Data structure that backs the simple queue",
         "code": [
-          "list"
+          "linear data structure"
         ]
       },
       "circular_queue_import_statement": {
@@ -107,20 +107,18 @@
       },
       "priority_queue_create_copy_from_list_statement": {
         "name": "Create a queue from a list of items",
-        "code": [
-          "from queue import PriorityQueue\nimport itertools\n\nqueue = PriorityQueue()\n\npriorities = [1, 2, 3]\n\nmylist = ['One', 'Two', 'Three']\n\nfor priority, item in list(zip(priorities, mylist)):\n\tqueue.put((priority, item))"
-        ]
+        "not-implemented": "true"
       },
       "priority_queue_destroy_statement": {
         "name": "Destroy/delete a queue",
         "code": [
-          "for item in range(queue.qsize()):\n\tqueue.get()"
+          "del(queue)"
         ]
       },
       "priority_queue_data_structure": {
         "name": "Data structure that backs the priority queue",
         "code": [
-          "list"
+          "heap data structure"
         ]
       },
       "double_ended_queue_import_statement": {
@@ -162,48 +160,48 @@
       "double_ended_queue_data_structure": {
         "name": "Data structure that backs the simple queue",
         "code": [
-          "list"
+          "linear data structure"
         ]
       },
       "stack_import_statement": {
         "name": "Import statement to add stacks",
-        "not-implemented": "true"
+        "code": [
+          "from queue import LifoQueue"
+        ]
 
       },
       "stack_data_type": {
         "name": "Stack data type name",
         "code": [
-          "list"
+          "queue.LifoQueue"
         ]
       },
       "stack_create_statement": {
         "name": "Create a stack",
         "code": [
-          "stack = ['One','Two','Three']"
+          "queue = LifoQueue()"
         ]
       },
       "stack_create_copy_statement": {
         "name": "Create a stack from existing stack",
         "code": [
-          "new_stack = stack"
+          "new_queue = queue"
         ]
       },
       "stack_create_copy_from_list_statement": {
         "name": "Create a stack from a list",
-        "code": [
-          "mylist = ['One','Two','Three']\nstack = mylist"
-        ]
+        "not-implemented": "true"
       },
       "stack_destroy_statement": {
         "name": "Destroy/delete a stack",
         "code": [
-          "stack.clear()"
+          "del(queue)"
         ]
       },
       "stack_data_structure": {
         "name": "Data structure that backs the stack",
         "code": [
-          "list"
+          "linear data structure"
         ]
       },
       "queue_enqueue_an_item": {
@@ -260,9 +258,7 @@
       },
       "queue_swap_two_items": {
         "name": "Swap two items",
-        "code": [
-          "mylist = ['One','Two','Three', 'Four']\npos1, pos2  = 0, 2\nmylist[pos1], mylist[pos2] = mylist[pos2], mylist[pos1]"
-        ]
+        "not-implemented": "true"
       },
       "queue_get_size": {
         "name": "Get size (number of items) in the queue",
@@ -277,13 +273,13 @@
       "queue_export_to_list": {
         "name": "Export a list of all queue items",
         "code": [
-          "mylist = queue"
+          "mylist = stack"
         ]
       },
       "queue_clear_all": {
         "name": "Clear out all queue items",
         "code": [
-          "queue.clear()"
+          "stack.clear()"
         ]
       },
       "stack_push_item": {
@@ -324,9 +320,7 @@
       },
       "stack_swap_two_items": {
         "name": "Swap two items",
-        "code": [
-          "stack = ['One','Two','Three', 'Four']\npos1, pos2  = 0, 2\nstack[pos1], stack[pos2] = stack[pos2], stack[pos1]"
-        ]
+        "not-implemented": "true"
       },
       "stack_get_size": {
         "name": "Get size (number of items) on the stack",
@@ -347,7 +341,7 @@
       "stack_clear_all": {
         "name": "Clear all queue items",
         "code": [
-          "stack.clear("
+          "stack.clear()"
         ]
       },
       "iterate_pointer_data_type": {
@@ -356,33 +350,23 @@
       },
       "iterate_create_pointer": {
         "name": "Create iterator",
-        "code": [
-          "pointer = 0"
-        ]
+        "not-implemented": "true"
       },
       "iterate_move_to_next_item": {
         "name": "Move pointer to next item",
-        "code": [
-          "pointer += 1"
-        ]
+        "not-implemented": "true"
       },
       "iterate_move_to_previous_item": {
         "name": "Move pointer to previous item",
-        "code": [
-          "pointer -= 1"
-        ]
+        "not-implemented": "true"
       },
       "iterate_move_to_beginning": {
         "name": "Move pointer to beginning of queue/stack",
-        "code": [
-          "pointer = 0"
-        ]
+        "not-implemented": "true"
       },
       "iterate_move_to_end": {
         "name": "Move pointer to end of queue/stack",
-        "code": [
-          "pointer = -1"
-        ]
+        "not-implemented": "true"
       }
     }
   }
