@@ -9,9 +9,9 @@
       "normal_class": {
         "name": "Normal class",
         "code": [
-          "a_cat <- list(name='example',age=5\n class(a_cat) <- 'cats' # S3",
-          "setClass('cats', slots=list(name='character',age='numeric')) # S4",
-          "setRefClass('cats', fields = list(name='character',age='numeric')) # Reference"
+          "#S3 implementation\na_cat <- list(name='example',age=5\n class(a_cat) <- 'cats' ",
+          "#S4 implentation \nsetClass('cats', \nslots=list(name='character',age='numeric')\n)",
+          "#Reference implementation\nsetRefClass('cats', \nfields = list(name='character',age='numeric')\n)"
         ],
         "comment": "There are three ways of setting class in R: S3, S4, and Reference. The S3 class is the original implementation; S3 has no formal definition of a class, rather class is an attribute of an object. The other two are more similar to classes in some other OO languages."
       },
@@ -81,17 +81,16 @@
       },
       "static_functions": {
         "name": "Defining static functions",
-        "code": [
-          "give5 <- function(x){return 5} # will always return 5 regardless of x"
-        ]
+        "not-implemented":true,
+        "comment": "R is not compiled"
       },
       "extends_class": {
         "name": "Class that inherits/extends another class",
         "code": [
-          "mything <- setOldClass('classtoextend')\nmything <- setClass()#myclassdefinition #S4",
-          "mything <- setReferenceClass('mything',contains='parentclass') #Reference"
+          "#S4 implentation \nmything <- setOldClass('classtoextend')\nmything <- setClass()",
+          "#Reference implementation \nmything <- setReferenceClass('mything',\ncontains='parentclass'\n) "
         ],
-        "comment":"code shows S4 implementation and reference. For Reference classes, you can use contains to inherit the parent."
+        "comment":"No S3 implementation. Code shows S4 implementation and reference. For Reference classes, you can use contains to inherit the parent."
       },
       "extending_interface": {
         "name": "Class/Interface that inherits/extends another class/interface",
@@ -111,9 +110,10 @@
       "instantiating_object": {
         "name": "Instantiating a new object",
         "code": [
-          "objectname <- 5 # instantiates a new object objectname with a static value of 5"
+          "objectname <- 5 # instantiates objectname with a value of 5",
+          "objectname <- data.frame(\na=c(0,1,2),b=c(0,4,5)\n)"
         ],
-        "comment":"objects default to a class by their value."
+        "comment":"everything is an object. objects default to a class by their value.\n Objects can be explictly assigned to classes at the time they are instantiated"
       },
       "instantiating_polymorphic_object": {
         "name": "Instantiating a polymorphic object",
