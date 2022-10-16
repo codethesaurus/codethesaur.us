@@ -3,7 +3,7 @@
     "language": "objectivec",
     "language_version": "2.0",
     "language_name": "Objective-C",
-    "structure": "queues_stacks",
+    "structure": "queues_stacks"
   },
   "concepts": {
     "simple_queue_import_statement": {
