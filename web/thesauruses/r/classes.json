@@ -10,148 +10,122 @@
         "name": "Normal class",
         "code": [
           "a_cat <- list(name='example',age=5\n class(a_cat) <- 'cats' # S3",
-          "library(methods)\n setClass('cats', slots=list(name='character',age='numeric')) # S4",
-          "library(methods)\n cats <- setRefClass('cats', fields = list(name='character',age='numeric')) # Reference"
+          "setClass('cats', slots=list(name='character',age='numeric')) # S4",
+          "setRefClass('cats', fields = list(name='character',age='numeric')) # Reference"
         ],
-        "comment": "There are three ways of setting class in R: S3, S4, and Reference. The S3 class is the original implementation, but the other two are more similar to classes in some other OO languages."
+        "comment": "There are three ways of setting class in R: S3, S4, and Reference. The S3 class is the original implementation; S3 has no formal definition of a class, rather class is an attribute of an object. The other two are more similar to classes in some other OO languages."
       },
       "abstract_class": {
         "name": "Abstract class",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "interface": {
         "name": "Interface",
-        "code": [
-          ""
-        ]
+        "comment": "you would need to declare functions to serve as an interface because R is interpreted and not compiled.",
+        "not-implemented":true
       },
       "read_only_class": {
         "name": "Read-only class",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "static_class": {
         "name": "Static class",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "inner_class": {
         "name": "Inner class",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "packages": {
         "name": "Packages",
         "code": [
-          ""
+          "install.packages('the_package')\nlibrary(the_package)"
         ]
       },
       "class_with_generic_type": {
         "name": "Class with a generic type",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "private_variables": {
         "name": "Defining private variables",
-        "code": [
-          ""
-        ]
+        "not-implemented":true,
+        "comment":"R determines variables by environment, so a variable defined inside of a function is always private to that function and can not be used outside of it."
       },
       "protected_variables": {
         "name": "Defining protected variables",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "public_variables": {
         "name": "Defining public variables",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "static_variables": {
         "name": "Defining static variables",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "private_functions": {
         "name": "Defining private functions",
-        "code": [
-          ""
-        ]
+        "not-implemented":true,
+        "comment":"In a package, any function not exported is a treated as a private function and cannot be called."
       },
       "protected_functions": {
         "name": "Defining protected functions",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "public_functions": {
         "name": "Defining public functions",
         "code": [
-          ""
-        ]
+          "myFunc <- function(x){ #my code }"
+        ],
+        "comment": "R functions implicitly return the last call not assigned to a variable in the function or can have an explicitly returned or invisible item."
       },
       "static_functions": {
         "name": "Defining static functions",
         "code": [
-          ""
+          "give5 <- function(x){return 5} # will always return 5 regardless of x"
         ]
       },
       "extends_class": {
         "name": "Class that inherits/extends another class",
         "code": [
-          ""
-        ]
+          "mything <- setOldClass('classtoextend')\nmything <- setClass()#myclassdefinition #S4",
+          "mything <- setReferenceClass('mything',contains='parentclass') #Reference"
+        ],
+        "comment":"code shows S4 implementation and reference. For Reference classes, you can use contains to inherit the parent."
       },
       "extending_interface": {
         "name": "Class/Interface that inherits/extends another class/interface",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "calling_superclass_functions": {
         "name": "Calling a superclass function",
         "code": [
-          ""
-        ]
+          "$callSuper(...)"
+        ],
+        "comment":"callSuper is only available for Reference classes - only works within a method, and will be resolved to call the inherited method of the same name"
       },
       "overriding_superclass_functions": {
         "name": "Overriding a superclass function",
-        "code": [
-          ""
-        ]
+        "comment": "Define the same method in your class."
       },
       "instantiating_object": {
         "name": "Instantiating a new object",
         "code": [
-          ""
-        ]
+          "objectname <- 5 # instantiates a new object objectname with a static value of 5"
+        ],
+        "comment":"objects default to a class by their value."
       },
       "instantiating_polymorphic_object": {
         "name": "Instantiating a polymorphic object",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "implement_constructor": {
         "name": "Implementing a class constructor",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       },
       "implement_deconstructor": {
         "name": "Implementing a class deconstructor",
-        "code": [
-          ""
-        ]
+        "not-implemented":true
       }
     }
   }
