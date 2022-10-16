@@ -1,0 +1,157 @@
+{
+    "meta": {
+      "language": "r",
+      "language_name": "R",
+      "structure": "classes",
+      "language_version": "4"
+    },
+    "concepts": {
+      "normal_class": {
+        "name": "Normal class",
+        "code": [
+          "a_cat <- list(name='example',age=5\n class(a_cat) <- 'cats' # S3",
+          "library(methods)\n setClass('cats', slots=list(name='character',age='numeric')) # S4",
+          "library(methods)\n cats <- setRefClass('cats', fields = list(name='character',age='numeric')) # Reference"
+        ],
+        "comment": "There are three ways of setting class in R: S3, S4, and Reference. The S3 class is the original implementation, but the other two are more similar to classes in some other OO languages."
+      },
+      "abstract_class": {
+        "name": "Abstract class",
+        "code": [
+          ""
+        ]
+      },
+      "interface": {
+        "name": "Interface",
+        "code": [
+          ""
+        ]
+      },
+      "read_only_class": {
+        "name": "Read-only class",
+        "code": [
+          ""
+        ]
+      },
+      "static_class": {
+        "name": "Static class",
+        "code": [
+          ""
+        ]
+      },
+      "inner_class": {
+        "name": "Inner class",
+        "code": [
+          ""
+        ]
+      },
+      "packages": {
+        "name": "Packages",
+        "code": [
+          ""
+        ]
+      },
+      "class_with_generic_type": {
+        "name": "Class with a generic type",
+        "code": [
+          ""
+        ]
+      },
+      "private_variables": {
+        "name": "Defining private variables",
+        "code": [
+          ""
+        ]
+      },
+      "protected_variables": {
+        "name": "Defining protected variables",
+        "code": [
+          ""
+        ]
+      },
+      "public_variables": {
+        "name": "Defining public variables",
+        "code": [
+          ""
+        ]
+      },
+      "static_variables": {
+        "name": "Defining static variables",
+        "code": [
+          ""
+        ]
+      },
+      "private_functions": {
+        "name": "Defining private functions",
+        "code": [
+          ""
+        ]
+      },
+      "protected_functions": {
+        "name": "Defining protected functions",
+        "code": [
+          ""
+        ]
+      },
+      "public_functions": {
+        "name": "Defining public functions",
+        "code": [
+          ""
+        ]
+      },
+      "static_functions": {
+        "name": "Defining static functions",
+        "code": [
+          ""
+        ]
+      },
+      "extends_class": {
+        "name": "Class that inherits/extends another class",
+        "code": [
+          ""
+        ]
+      },
+      "extending_interface": {
+        "name": "Class/Interface that inherits/extends another class/interface",
+        "code": [
+          ""
+        ]
+      },
+      "calling_superclass_functions": {
+        "name": "Calling a superclass function",
+        "code": [
+          ""
+        ]
+      },
+      "overriding_superclass_functions": {
+        "name": "Overriding a superclass function",
+        "code": [
+          ""
+        ]
+      },
+      "instantiating_object": {
+        "name": "Instantiating a new object",
+        "code": [
+          ""
+        ]
+      },
+      "instantiating_polymorphic_object": {
+        "name": "Instantiating a polymorphic object",
+        "code": [
+          ""
+        ]
+      },
+      "implement_constructor": {
+        "name": "Implementing a class constructor",
+        "code": [
+          ""
+        ]
+      },
+      "implement_deconstructor": {
+        "name": "Implementing a class deconstructor",
+        "code": [
+          ""
+        ]
+      }
+    }
+  }
