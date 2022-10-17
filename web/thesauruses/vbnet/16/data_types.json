@@ -1,41 +1,37 @@
 {
   "meta": {
-    "language": "csharp",
-    "language_version": "9.0",
-    "language_name": "C#",
+    "language": "vbnet",
+    "language_version": "16.0",
+    "language_name": "Visual Basic",
     "structure": "data_types"
   },
   "concepts": {
     "boolean": {
-      "code": "bool",
-      "name": "Boolean"
+      "code": "Boolean"
     },
     "signed_integer_8_bit": {
-      "code": "sbyte"
+      "code": "SByte"
     },
     "unsigned_integer_8_bit": {
-      "code": "byte"
+      "code": "Byte"
     },
     "signed_integer_16_bit": {
-      "code": "short",
-      "name": "Signed 16-bit integer"
+      "code": "Short"
     },
     "unsigned_integer_16_bit": {
-      "code": "ushort"
+      "code": "UShort"
     },
     "signed_integer_32_bit": {
-      "name": "Signed 32-bit integer",
-      "code": "int"
+      "code": "Integer"
     },
     "unsigned_integer_32_bit": {
-      "code": "uint"
+      "code": "UInteger"
     },
     "signed_integer_64_bit": {
-      "name": "Signed 64-bit integer",
-      "code": "long"
+      "code": "Long"
     },
     "unsigned_integer_64_bit": {
-      "code": "ulong"
+      "code": "ULong"
     },
     "signed_integer_as_object": {
       "not-implemented": true
@@ -50,15 +46,13 @@
       "not-implemented": true
     },
     "signed_float_32_bit": {
-      "name": "Signed 32-bit floating point",
-      "code": "float"
+      "code": "Single"
     },
     "unsigned_float_32_bit": {
       "not-implemented": true
     },
     "signed_float_64_bit": {
-      "name": "Signed 64-bit floating point",
-      "code": "double"
+      "code": "Double"
     },
     "unsigned_float_64_bit": {
       "not-implemented": true
@@ -70,10 +64,10 @@
       "not-implemented": true
     },
     "character": {
-      "code": "char"
+      "code": "Char"
     },
     "string_as_object": {
-      "code": "string"
+      "code": "String"
     },
     "string_as_array": {
       "not-implemented": true
