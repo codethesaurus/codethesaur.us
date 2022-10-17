@@ -83,6 +83,21 @@ a {
   color: #000;
 }
 
+#contribution-alert {
+  display: flex;
+  justify-content: center;
+}
+
+#contribution-alert .alert {
+  width: fit-content;
+  text-align: center;
+  margin: 0;
+}
+
+#contribution-alert p {
+  margin: 0;
+}
+
 footer {
   margin-top: 2rem;
   padding-top: 2rem;
