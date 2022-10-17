@@ -31,7 +31,7 @@
           ""
         ]
       },
-      "clear_console_cutput": {
+      "clear_console_output": {
         "name": "Clear the console output",
         "code": [
             "cat('\f')"
