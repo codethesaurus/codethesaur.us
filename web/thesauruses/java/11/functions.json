@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "language": "java",
+    "language_version": "11",
+    "language_name": "Java",
+    "structure": "functions"
+  },
+  "concepts": {
+    "void_function_no_parameters": {
+      "code": "void function_name():\n    statements",
+      "name": "Function that does not return a value and takes no parameters"
+    },
+    "void_function_with_parameters": {
+      "code": "void function_name(parameter, parameter_1):\n    statements",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
+    },
+    "void_function_variable_parameters": {
+      "code": "void function_name(var parameter):\n    statements",
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
+    },
+    "return_value_function_no_parameters": {
+      "code": "returnType function_name():\n    statements\n    return expression",
+      "name": "Function that returns a value and takes no parameters"
+    },
+    "return_value_function_with_parameters": {
+      "code": "void function_name(parameter, parameter_1):\n    statements\n    return expression",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
+    },
+    "return_value_function_variable_parameters": {
+      "code": "void function_name(var parameter):\n    statements\n    return expression",
+      "name": "Function that returns a value and takes an unknown number of parameters"
+    },
+    "anonymous_function_no_parameters": {
+      "code": "lambda: () -> " "no parameters",
+      "name": "Anonymous function that takes no parameters"
+    },
+    "anonymous_function_with_parameters": {
+      "name": "Anonymous function that takes 1 or more defined parameters",
+      "code": "lambda (parameter_1, parameter_2) ->  : parameter_1 + parameter_2"
+    },
+    "anonymous_function_variable_parameters": {
+      "name": "Anonymous function that takes an unknown number of parameters",
+      "code": "lambda (var parameter) -> : parameter"
+    }
+  }
+}
