@@ -21,7 +21,7 @@
       },
       "create_new_string": {
         "name": "Create new string",
-        "code": "str1 = 'New string Example1' \nstr2 = \"New string Exampl2\""
+        "code": "str1 = 'New string Example1' \nstr2 = \"New string Example2\""
       },
   
       "create_multiline_string": {
@@ -30,7 +30,7 @@
       },
       "assign_new_string": {
         "name": "Assign string from another string",
-        "code": "a = 'a'\na = 'b'"
+        "code": "a = 'a'\nb = a"
       },
       "destroy_string": {
         "name": "Destroy string",
@@ -39,14 +39,15 @@
       "length_of_string": {
         "name": "Length of string",
         "code": [
-            "'string':len()",
-            "string.len('string')"
+            "str = 'codethesaur.us'",
+            "str:len()",
+            "string.len(str)"
         ]
 
       },
       "max_length_of_string": {
         "name": "Maximum length of string",
-        "code": "230,000 characters"
+        "not-implemented": true
       },
       "clear_string": {
         "name": "Clear/empty string",
@@ -64,7 +65,10 @@
       
       "concatenate_two_strings": {
         "name": "Concatenate/join two strings",
-        "code": "str1 = 'Hello'\nstr2 = ' World'\nprint(str1..str2)"
+        "code": [
+                    "str1 = 'Hello'\nstr2 = ' World'\nprint(str1..str2)",
+                    "tab = {'codethesaur.us',' is',' great',' learning tool!'}\nprint(table.concat(tab))"
+                ]
       },
       "concatenate_many_strings": {
         "name": "Concatenate/join many strings",
@@ -254,7 +258,7 @@
       },
       "format_number_with_positive_negative_sign": {
         "name": "Format number with positive/negative signs",
-        "not-implemented": true
+        "code": "str = '12'\nprint(string.format('%+d',str))"
       },
       "format_number_in_scientific_notation_little_e": {
         "name": "Format number with scientific notation with 'e'",
