@@ -38,7 +38,11 @@
       },
       "length_of_string": {
         "name": "Length of string",
-        "code": "string.len('string')"
+        "code": [
+            "'string':len()",
+            "string.len('string')"
+        ]
+
       },
       "max_length_of_string": {
         "name": "Maximum length of string",
@@ -50,7 +54,12 @@
       },
       "is_empty": {
         "name": "Is string empty?",
-        "code": "str = ''\nif (str == nil or str == '') then\nprint('str is empty')\nend"
+        "code": [
+            "str = ''",
+            "if (str == nil or str == '') then",
+            "    print('str is empty')",
+            "end"
+        ]
       },
       
       "concatenate_two_strings": {
