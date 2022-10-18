@@ -40,7 +40,7 @@
                                     <select class="form-select" id="lang1" name="lang1">
                                         {% for k, lang in languages.items %}
                                         {% for v in lang %}
-                                        <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                        <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                         {% endfor %}
                                         {% endfor %}
                                     </select>
@@ -50,7 +50,7 @@
                                     <select class="form-select" id="lang2" name="lang2">
                                         {% for k, lang in languages.items %}
                                         {% for v in lang %}
-                                        <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                        <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                         {% endfor %}
                                         {% endfor %}
                                     </select>
@@ -89,7 +89,7 @@
                                 <select class="form-select" id="lang" name="lang">
                                     {% for k, lang in languages.items %}
                                     {% for v in lang %}
-                                    <option value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
+                                    <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                     {% endfor %}
                                     {% endfor %}
                                 </select>
@@ -105,5 +105,15 @@
             </div>
         </div>
     </div>
+    <div id="contribution-alert" class="container">
+        <div class="alert alert-info" role="alert">
+            <p>
+                If there is a language/concept combination you would like to explore but is not available, learn <a href="https://docs.codethesaur.us/contributing/" class="alert-link">how to help out!</a> 
+            </p>
+        </div>
+    </div>
 </div>
 {% endblock content %}
+{% block scripts %}
+<script src="../static/js/checkAvailableStructs.js"></script>
+{% endblock scripts %}
