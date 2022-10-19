@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "language": "rust",
+    "language_name": "Rust",
+    "structure": "queues_stacks",
+    "language_version": "1"
+  },
+  "concepts": {
+    "simple_queue_import_statement": {
+      "name": "Import statement to add simple queue",
+      "comment": "VecDeque can be used as a queue",
+      "not-implemented": true
+    },
+    "simple_queue_data_type": {
+      "name": "Queue data type name",
+      "comment": "VecDeque can be used as a queue",
+      "not-implemented": true
+    },
+    "simple_queue_create_statement": {
+      "name": "Create a queue",
+      "comment": "VecDeque can be used as a queue",
+      "not-implemented": true
+    },
+    "simple_queue_create_copy_statement": {
+      "name": "Create a queue from existing queue",
+      "comment": "VecDeque can be used as a queue",
+      "not-implemented": true
+    },
+    "simple_queue_create_copy_from_list_statement": {
+      "name": "Create a queue from a list of items",
+      "comment": "VecDeque can be used as a queue",
+      "not-implemented": true
+    },
+    "simple_queue_destroy_statement": {
+      "name": "Destroy/delete a queue",
+      "comment": "VecDeque can be used as a queue",
+      "not-implemented": true
+    },
+    "simple_queue_data_structure": {
+      "name": "Data structure that backs the simple queue",
+      "comment": "VecDeque can be used as a queue",
+      "not-implemented": true
+    },
+    "circular_queue_import_statement": {
+      "name": "Import statement to add circular queue",
+      "not-implemented": true
+    },
+    "circular_queue_data_type": {
+      "name": "Queue data type name",
+      "not-implemented": true
+    },
+    "circular_queue_create_statement": {
+      "name": "Create a queue",
+      "not-implemented": true
+    },
+    "circular_queue_create_copy_statement": {
+      "name": "Create a queue from existing queue",
+      "not-implemented": true
+    },
+    "circular_queue_create_copy_from_list_statement": {
+      "name": "Create a queue from a list of items",
+      "not-implemented": true
+    },
+    "circular_queue_destroy_statement": {
+      "name": "Destroy/delete a queue",
+      "not-implemented": true
+    },
+    "circular_queue_data_structure": {
+      "name": "Data structure that backs the simple queue",
+      "not-implemented": true
+    },
+    "priority_queue_import_statement": {
+      "name": "Import statement to add priority queue",
+      "code": ["use std::collections::BinaryHeap;"]
+    },
+    "priority_queue_data_type": {
+      "name": "Queue data type name",
+      "code": ["std::collections::BinaryHeap"]
+    },
+    "priority_queue_create_statement": {
+      "name": "Create a queue",
+      "code": ["let priority_queue = BinaryHeap::new();"]
+    },
+    "priority_queue_create_copy_statement": {
+      "name": "Create a queue from existing queue",
+      "code": ["let priority_queue = existing_priority_queue.clone();"]
+    },
+    "priority_queue_create_copy_from_list_statement": {
+      "name": "Create a queue from a list of items",
+      "code": ["let priority_queue = BinaryHeap::from(item_list);"],
+      "comment": "item_list can be an array, a Vec or BinaryHeap"
+    },
+    "priority_queue_destroy_statement": {
+      "name": "Destroy/delete a queue",
+      "code": [""],
+      "comment": "Destroyed implicitly when the value goes out of scope ( if ownership is not passed to another variable )."
+    },
+    "priority_queue_data_structure": {
+      "name": "Data structure that backs the simple queue",
+      "code": [""],
+      "comment": "Implemented with a binary heap."
+    },
+    "double_ended_queue_import_statement": {
+      "name": "Import statement to add double-ended queue",
+      "code": ["use std::collections::VecDeque;"]
+    },
+    "double_ended_queue_data_type": {
+      "name": "Queue data type name",
+      "code": ["std::collections::VecDeque"]
+    },
+    "double_ended_queue_create_statement": {
+      "name": "Create a queue",
+      "code": ["let deque = VecDeque::new();"]
+    },
+    "double_ended_queue_create_copy_statement": {
+      "name": "Create a queue from existing queue",
+      "code": ["let deque = existing_deque.clone();"]
+    },
+    "double_ended_queue_create_copy_from_list_statement": {
+      "name": "Create a queue from a list",
+      "code": ["let deque = VecDeque::from(item_list);"],
+      "comment": "item_list can be an array, a Vec or VecDeque"
+    },
+    "double_ended_queue_destroy_statement": {
+      "name": "Destroy/delete a queue",
+      "code": [""],
+      "comment": "Destroyed implicitly when the value goes out of scope ( if ownership is not passed to another variable )."
+    },
+    "double_ended_queue_data_structure": {
+      "name": "Data structure that backs the simple queue",
+      "code": [""],
+      "comment": "Implemented with a growable ring buffer."
+    },
+    "stack_import_statement": {
+      "name": "Import statement to add stacks",
+      "comment": "VecDeque can be used as a stack",
+      "not-implemented": true
+    },
+    "stack_data_type": {
+      "name": "Stack data type name",
+      "comment": "VecDeque can be used as a stack",
+      "not-implemented": true
+    },
+    "stack_create_statement": {
+      "name": "Create a stack",
+      "comment": "VecDeque can be used as a stack",
+      "not-implemented": true
+    },
+    "stack_create_copy_statement": {
+      "name": "Create a stack from existing stack",
+      "comment": "VecDeque can be used as a stack",
+      "not-implemented": true
+    },
+    "stack_create_copy_from_list_statement": {
+      "name": "Create a stack from a list",
+      "comment": "VecDeque can be used as a stack",
+      "not-implemented": true
+    },
+    "stack_destroy_statement": {
+      "name": "Destroy/delete a stack",
+      "comment": "VecDeque can be used as a stack",
+      "not-implemented": true
+    },
+    "stack_data_structure": {
+      "name": "Data structure that backs the simple queue",
+      "comment": "VecDeque can be used as a stack",
+      "not-implemented": true
+    },
+    "queue_enqueue_an_item": {
+      "name": "Enqueue an item (add to end)",
+      "code": ["deque.push_back(item);"]
+    },
+    "queue_enqueue_priority_item": {
+      "name": "Enqueue a high priority item (add to end of priority queue)",
+      "code": ["priority_queue.push(item)"]
+    },
+    "queue_enqueue_from_list": {
+      "name": "Enqueue items from a list into queue (add list to end)",
+      "code": ["deque.extend(item_list.iter())"],
+      "comment": "Extends with the contents of an iterator."
+    },
+    "queue_enqueue_priority_from_list": {
+      "name": "Enqueue priority items from a list (add list to end of priority queue)",
+      "code": ["priority_queue.extend(item_list.iter())"],
+      "comment": "Extends with the contents of an iterator."
+    },
+    "queue_dequeue_return_an_item": {
+      "name": "Dequeue an item (remove from front, return item)",
+      "code": ["deque.pop_front();"]
+    },
+    "queue_dequeue_delete_an_item": {
+      "name": "Dequeue an item (remove from front, don't return)",
+      "not-implemented": true
+    },
+    "queue_peek_at_next_item": {
+      "name": "Look/peek at next available element (from front)",
+      "code": [
+        "deque.front();",
+        "deque.front_mut();   // for a mutable reference"
+      ]
+    },
+    "queue_peek_at_last_item": {
+      "name": "Look/peek at last element (from back)",
+      "code": [
+        "deque.back();",
+        "deque.back_mut();   // for a mutable reference"
+      ]
+    },
+    "queue_duplicate_next_item": {
+      "name": "Duplicate next item",
+      "not-implemented": true
+    },
+    "queue_swap_two_items": {
+      "name": "Swap two items",
+      "code": ["deque.swap(i, j);"],
+      "comment": "Here i and j are indexes of the elements to be swapped."
+    },
+    "queue_get_size": {
+      "name": "Get size (number of items) in the queue",
+      "code": ["deque.len();"]
+    },
+    "queue_get_capacity": {
+      "name": "Check capacity of queue",
+      "code": ["deque.capacity();"]
+    },
+    "queue_export_to_list": {
+      "name": "Export a list of all queue items",
+      "code": ["let vec = Vec::from(deque);"]
+    },
+    "queue_clear_all": {
+      "name": "Clear out all queue items",
+      "code": ["deque.clear();"]
+    },
+    "stack_push_item": {
+      "name": "Push an item (add to top)",
+      "not-implemented": true
+    },
+    "stack_pop_return_item": {
+      "name": "Pop an item (remove from top, return item)",
+      "not-implemented": true
+    },
+    "stack_pop_delete_item": {
+      "name": "Pop an item (remove from top, don't return)",
+      "not-implemented": true
+    },
+    "stack_peek_at_next_item": {
+      "name": "Look/peek at next element (from top)",
+      "not-implemented": true
+    },
+    "stack_peek_at_last_item": {
+      "name": "Look/peek at last element (from bottom)",
+      "not-implemented": true
+    },
+    "stack_duplicate_next_item": {
+      "name": "Duplicate top item",
+      "not-implemented": true
+    },
+    "stack_swap_two_items": {
+      "name": "Swap two items",
+      "not-implemented": true
+    },
+    "stack_get_size": {
+      "name": "Get size (number of items) on the stack",
+      "not-implemented": true
+    },
+    "stack_get_capacity": {
+      "name": "Check capacity of stack",
+      "not-implemented": true
+    },
+    "stack_export_to_list": {
+      "name": "Export a list of all stack items",
+      "not-implemented": true
+    },
+    "stack_clear_all": {
+      "name": "Clear all queue items",
+      "not-implemented": true
+    },
+    "iterate_pointer_data_type": {
+      "name": "Data type of a iterator pointer",
+      "code": ["Iter<'_, T>", "IterMut<'_, T>     // for mutable iterator"]
+    },
+    "iterate_create_pointer": {
+      "name": "Create iterator",
+      "code": ["deque.iter()", "deque.iter_mut()     // for mutable iterator"]
+    },
+    "iterate_move_to_next_item": {
+      "name": "Move pointer to next item",
+      "code": ["iter.next();"],
+      "comment": "Advances the iterator and returns the next value."
+    },
+    "iterate_move_to_previous_item": {
+      "name": "Move pointer to previous item",
+      "not-implemented": true
+    },
+    "iterate_move_to_beginning": {
+      "name": "Move pointer to beginning of queue/stack",
+      "not-implemented": true
+    },
+    "iterate_move_to_end": {
+      "name": "Move pointer to end of queue/stack",
+      "code": ["iter.last();"],
+      "comment": "Consumes the iterator, returning the last element."
+    }
+  }
+}
