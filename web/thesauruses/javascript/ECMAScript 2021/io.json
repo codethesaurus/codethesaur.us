@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "language": "javascript",
+    "language_version": "ECMAScript 2021",
+    "language_name": "JavaScript",
+    "structure": "io"
+  },
+  "concepts": {
+    "write_line": {
+      "name": "Write a line to the console",
+      "code": "console.log(content);"
+    },
+    "write_line_with_new_line": {
+      "name": "Write a line to the console with a return character",
+      "code": "console.log(content + \"\\n\");"
+    },
+    "read_line": {
+      "name": "Read a line of user input from the console",
+      "code": [
+        "const readline = require('readline').createInterface({",
+        " input: process.stdin,",
+        " output: process.stdout",
+        "});",
+        "readline.question(prompt, answer => {",
+        " console.log(answer);",
+        " readline.close();",
+        "});"
+      ],
+      "comment": "The `readline` module is a part of the Node.js standard library. It is not available in the browser."
+    },
+    "read_char": {
+      "not-implemented": true,
+      "name": "Read a single char of user input from the console",
+      "comment": "The character can be read by accessing the first character of readline.question's answer."
+    },
+    "clear_console_cutput": {
+      "name": "Clear the console output",
+      "code": "console.clear();"
+    },
+    "change_console_background_color": {
+      "name": "Change the color of the console",
+      "code": "console.log('%c' + content, 'background: #222' );",
+      "comment": "Console background color cannot be changed but CSS properties can be applied to the console output."
+    },
+    "change_console_text_color": {
+      "name": "Change the color of the console",
+      "code": "console.log('%c' + content, 'color: #bada55' );",
+      "comment": "Console text color cannot be changed but CSS properties can be applied to the console output."
+    },
+    "file_functions_lib": {
+      "name": "Library containing file IO functions",
+      "code": "const fs = require('fs');",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser." 
+    },
+    "list_directory": {
+      "name": "List of the items in the current directory",
+      "code": "fs.readdirSync(location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "read_directory_info": {
+      "name": "Get infomation about the current directory (number of items, size, etc)",
+      "code": "fs.statSync(location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "create_directory": {
+      "name": "Create a directory",
+      "code": "fs.mkdirSync(location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "delete_directory": {
+      "name": "Delete a directory",
+      "code": "fs.rmdirSync(location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "rename_directory": {
+      "name": "Rename a directory",
+      "code": "fs.renameSync(old_location, new_location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "move_directory": {
+      "name": "Move a directory to another locaiton",
+      "code": "fs.renameSync(old_location, new_location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "update_directory_permissions": {
+      "name": "Update the permissions a user, group, or application has to a directory",
+      "code": "fs.chmodSync(location, 0o777);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "read_line_of_file": {
+      "name": "Read a single line from a file",
+      "code": "fs.readFileSync(location, 'utf8');",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "read_lines_of_file": {
+      "name": "Read all the lines in a file",
+      "code": "fs.readFileSync(location, 'utf8').split('\\n');",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "read_file_stream": {
+      "name": "Read the file into a stream",
+      "code": [
+        "const stream = fs.createReadStream(location, 'utf8');",
+        "stream.on('data', (chunk) => {",
+        " console.log(chunk);",
+        "});"
+      ],
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "create_file": {
+      "name": "Create a file",
+      "code": "fs.writeFileSync(location, content);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "delete_file": {
+      "name": "Delete a file",
+      "code": "fs.unlinkSync(location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "update_file": {
+      "name": "Update a file",
+      "code": "fs.writeFileSync(location, content);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "move_file": {
+      "name": "Move a file to a new location",
+      "code": "fs.renameSync(old_location, new_location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "network_functions_lib": {
+      "name": "Library containing network IO functions",
+      "code": [
+        "fetch",
+        "XMLHttpRequest"
+      ],
+      "comment": "Before ECMAScript 2015, the `XMLHttpRequest` object was used to make HTTP requests. The `fetch` API is a more modern alternative."
+    },
+    "send_a_http_request": {
+      "name": "Send a HTTP request",
+      "code": "fetch(url, options).then((response) => { /* ... */ });"
+    },
+    "send_a_get_request": {
+      "name": "Send a HTTP GET request",
+      "code": "fetch(url).then((response) => { /* ... */ });"
+    },
+    "send_a_post_request": {
+      "name": "Send a HTTP POST request",
+      "code": "fetch(url, { method: 'POST', body: JSON.stringify(data) }).then((response) => { /* ... */ });"
+    },
+    "send_a_put_request": {
+      "name": "Send a HTTP PUT request",
+      "code": "fetch(url, { method: 'PUT', body: JSON.stringify(data) }).then((response) => { /* ... */ });"
+    },
+    "send_a_patch_request": {
+      "name": "Send a HTTP PATCH request",
+      "code": "fetch(url, { method: 'PATCH', body: JSON.stringify(data) }).then((response) => { /* ... */ });"
+    },
+    "send_a_delete_request": {
+      "name": "Send a HTTP DELETE request",
+      "code": "fetch(url, { method: 'DELETE' }).then((response) => { /* ... */ });"
+    },
+    "send_a_head_request": {
+      "name": "Send a HTTP HEAD request",
+      "code": "fetch(url, { method: 'HEAD' }).then((response) => { /* ... */ });"
+    },
+    "send_a_options_request": {
+      "name": "Send a HTTP OPTIONS request",
+      "code": "fetch(url, { method: 'OPTIONS' }).then((response) => { /* ... */ });"
+    },
+    "send_a_connect_request": {
+      "name": "Send a HTTP CONNECT request",
+      "code": "fetch(url, { method: 'CONNECT' }).then((response) => { /* ... */ });"
+    },
+    "send_a_trace_request": {
+      "name": "Send a HTTP TRACE request",
+      "code": "fetch(url, { method: 'TRACE' }).then((response) => { /* ... */ });"
+    },
+    "add_headers": {
+      "name": "Add headers to a HTTP request",
+      "code": "fetch(url, { headers: { 'Content-Type': 'application/json' } }).then((response) => { /* ... */ });"
+    },
+    "add_query_params": {
+      "name": "Add query parameters to a HTTP request",
+      "code": "fetch(url, { searchParams: { 'q': 'query' } }).then((response) => { /* ... */ });"
+    },
+    "inbuilt_url_class": {
+      "name": "The inbuilt URL class",
+      "code": "const url = new URL(url);"
+    },
+    "open_a_socket": {
+      "name": "Open a network socket",
+      "code": [
+        "const net = require('net');",
+        "const client = net.createConnection({ port, host }, () => {",
+        " client.write('GET / HTTP/1.1\\r\\n\\r\\n');",
+        "});"
+      ],
+      "comment": "The `net` module is a part of Node.js and is not available in the browser."
+    },
+    "close_a_socket": {
+      "name": "Close a network socket",
+      "code": "client.end();"
+    },
+    "add_authorization_headers": {
+      "name": "Add an authorization header",
+      "code": "fetch(url, { headers: { 'Authorization': 'Basic ' + btoa(username + ':' + password) } }).then((response) => { /* ... */ });"
+    },
+    "add_cookies": {
+      "name": "Add cookies to a HTTP request",
+      "code": "fetch(url, { headers: { 'Cookie': 'name=value' } }).then((response) => { /* ... */ });"
+    },
+    "read_cookies": {
+      "name": "Read cookies from a HTTP response",
+      "code": "const cookies = response.headers.get('Set-Cookie');"
+    },
+    "read_headers": {
+      "name": "Read headers from a HTTP response",
+      "code": "const headers = response.headers;"
+    },
+    "database_functions_lib": {
+      "name": "Library containing database IO functions",
+      "code": "indexedDB",
+      "comment": "The indexedDB API is native to the browser but it's not databases like SQL. To use SQL, you need to use a Node.js library like `sqlite3`."
+    },
+    "open_connection": {
+      "name": "Open a database connection",
+      "code": "const request = window.indexedDB.open(database_name, 1);"
+    },
+    "close_connection": {
+      "name": "Close a database connection",
+      "code": "request.close();"
+    },
+    "execute_query_single_result_set": {
+      "name": "Execute a query returning a single result set",
+      "code": [
+        "const request = db.transaction([table_name], 'readonly')",
+        "  .objectStore(table_name)",
+        "  .get(key);"
+      ]
+    },
+    "execute_query_multiple_result_sets": {
+      "name": "Execute a query returning a multiple result sets",
+      "code": [
+        "const request = db.transaction([table_name], 'readonly')",
+        " .objectStore(table_name)",
+        " .getAll();"
+      ]
+    },
+    "execute_non_query": {
+      "name": "Execute a non query (update, delete)",
+      "code": [
+        "const request = db.transaction([table_name], 'readwrite')",
+        " .objectStore(table_name)",
+        " .delete(key);"
+      ]
+    },
+    "json_function_lib": {
+      "name": "Library containing JSON functions",
+      "code": "JSON"
+    },
+    "serialize_json": {
+      "name": "Serialize an object to JSON",
+      "code": "JSON.stringify(object);"
+    },
+    "deserialize_json": {
+      "name": "Deserialize a string from JSON",
+      "code": "JSON.parse(string);"
+    },
+    "serialize_json_with_options": {
+      "name": "Serialize an object to JSON with options",
+      "code": "JSON.stringify(object, replacer, space);",
+      "comment": "The `replacer` and `space` parameters are optional. The `replacer` parameter can be a function or an array of properties to include. The `space` parameter can be a number or a string."
+    },
+    "deserialize_json_with_options": {
+      "name": "Deserialize a string from JSON with options",
+      "code": "JSON.parse(string, (key, value) => { /* ... */ });",
+      "comment": "The `reviver` parameter (the last parameter) is optional and is a function that can be used to transform the deserialized object."
+    },
+    "xml_function_lib": {
+      "name": "Library containing XML functions",
+      "code": [
+        "DOMParser",
+        "XMLSerializer"
+      ]
+    },
+    "serialize_xml": {
+      "name": "Serialize an object to XML",
+      "code": "new DOMParser().parseFromString(string, 'text/xml');"
+    },
+    "deserialize_xml": {
+      "name": "Deserialize a string from XML",
+      "code": "new XMLSerializer().serializeToString(xml);"
+    },
+    "serialize_xml_with_options": {
+      "name": "Serialize an object to XML with options",
+      "code": "new DOMParser().parseFromString(string, 'text/xml');"
+    },
+    "deserialize_xml_with_options": {
+      "name": "Deserialize a string from XML with options",
+      "code": "new XMLSerializer().serializeToString(xml);"
+    },
+    "csv_function_lib": {
+      "name": "Library containing CSV functions",
+      "not-implemented": true
+    },
+    "read_csv_file": {
+      "name": "Reading a CSV file",
+      "not-implemented": true,
+      "comment": "CSV files are text files and can be read using the `fs` module."
+    },
+    "read_csv_to_type": {
+      "name": "Reading a CSV file to a typed array",
+      "not-implemented": true,
+      "comment": "CSV files are text files and can be read using the `fs` module. The output can be parsed to a typed array."
+    },
+    "write_csv_file": {
+      "name": "Write a new CSV file",
+      "not-implemented": true,
+      "comment": "CSV files are text files and can be written using the `fs` module."
+    },
+    "append_csv_file": {
+      "name": "Append to end of CSV file",
+      "not-implemented": true,
+      "comment": "CSV files are text files and can be written using the `fs` module."
+    },
+    "set_csv_delimiter": {
+      "name": "Set the CSV delitmiter to use when reading/writing",
+      "not-implemented": true,
+      "comment": "CSV files are text files and can be read/written using the `fs` module."
+    }
+  }
+}
