@@ -65,14 +65,14 @@
       
       "concatenate_two_strings": {
         "name": "Concatenate/join two strings",
-        "code": [
-                    "str1 = 'Hello'\nstr2 = ' World'\nprint(str1..str2)",
-                    "tab = {'codethesaur.us',' is',' great',' learning tool!'}\nprint(table.concat(tab))"
-                ]
+        "code":"str1 = 'Hello'\nstr2 = ' World'\nprint(str1..str2)"
       },
       "concatenate_many_strings": {
         "name": "Concatenate/join many strings",
-        "code": "str = 'Hello'\nvar2 = ' World '\nvar3 = str..var2\nprint(str..var2..var3)",
+        "code": [
+                    "str = 'Hello'\nvar2 = ' World '\nvar3 = str..var2\nprint(str..var2..var3)",
+                    "\ntab = {'codethesaur.us',' is',' great',' learning tool!'}\nprint(table.concat(tab))"
+                ],
         "comment":"We can concat many number of string using '..' oprator"
       },
       "is_all_alphabetical": {
