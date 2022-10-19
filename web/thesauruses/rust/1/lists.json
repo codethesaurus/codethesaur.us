@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "language": "rust",
+    "language_version": "1",
+    "language_name": "Rust",
+    "structure": "lists"
+  },
+  "concepts": {
+    "name_of_sorted_mutable_list": {
+      "code": "Vec<T>",
+      "comment": "Rust uses the 'mut' keyword to determine if a variable is mutable"
+    },
+    "create_a_sorted_mutable_list": {
+      "code": "let mut vec = vec![\"foo\", \"bar\"];",
+      "comment": "Vector can only store one type."
+    },
+    "sorted_mutable_list_start_number": {
+      "code": "0"
+    },
+    "sorted_mutable_list_can_be_appended": {
+      "code": "Yes"
+    },
+    "sorted_mutable_list_can_be_inserted_in_middle": {
+      "code": "Yes"
+    },
+    "access_element_in_sorted_mutable_list": {
+      "code": "vec[index]"
+    },
+    "insert_into_beginning_of_sorted_mutable_list": {
+      "code": "vec.insert(0, \"foo\");"
+    },
+    "insert_into_end_of_sorted_mutable_list": {
+      "code": "vec.push(\"foo\");"
+    },
+    "insert_into_middle_of_sorted_mutable_list": {
+      "code": "let mut vec = vec![1, 2, 4, 5];\nvec.insert(vec.len()/2, 3);"
+    },
+    "erase_element_at_beginning_of_sorted_mutable_list": {
+      "code": "vec.remove(0);"
+    },
+    "erase_element_at_end_of_sorted_mutable_list": {
+      "code": "vec.pop();"
+    },
+    "erase_element_in_middle_of_sorted_mutable_list": {
+      "code": "vec.remove(vec.len()/2);"
+    },
+    "swap_elements_in_sorted_mutable_list": {
+      "code": "vec.swap(0, 1);"
+    },
+    "delete_sorted_mutable_list": {
+      "code": "vec.clear();"
+    },
+    "name_of_sorted_immutable_list": {
+    "code": "Vec<T>",
+    "comment": "Rust uses the 'mut' keyword to determine if a variable is mutable"
+    },
+    "create_a_sorted_immutable_list": {
+      "code": "let vec = vec![\"foo\", \"bar\"];",
+      "comment": "Vector can only store one type."
+    },
+    "sorted_immutable_list_start_number": {
+      "code": "0"
+    },
+    "access_element_in_sorted_immutable_list": {
+      "code": "vec[index]"
+    },
+    "delete_sorted_immutable_list": {
+      "not-implemented": true
+    },
+    "name_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "create_a_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "unordered_mutable_list_start_number": {
+      "not-implemented": "true"
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "not-implemented": "true"
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "not-implemented": "true"
+    },
+    "access_element_in_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_unordered_mutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_ordered_immutable_list": {
+      "code": "vec",
+      "comment": "Rust uses the 'mut' keyword to determine if a variable is mutable"
+    },
+    "create_a_ordered_immutable_list": {
+      "code": "let vec = vec![1, 2, 3];"
+    },
+    "ordered_immutable_list_start_number": {
+      "code": "0"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "code": "vec[index]"
+    },
+    "delete_ordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "create_a_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "unordered_immutable_list_start_number": {
+      "not-implemented": "true"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": "true"
+    },
+    "name_of_mutable_hashed_list": {
+      "code": "HashSet<T>",
+      "comment": "Rust uses the 'mut' keyword to determine if a variable is mutable"
+    },
+    "create_a_mutable_hashed_list": {
+      "code": "let mut hashset = HashSet::new();"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "code": "hashset.insert(\"foo\");"
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "code": "hashset.remove(\"foo\");"
+    },
+    "delete_mutable_hashed_list": {
+      "code": "hashset.clear();"
+    },
+    "name_of_immutable_hashed_list": {
+      "code": "HashSet<T>",
+      "comment": "Rust uses the 'mut' keyword to determine if a variable is mutable"
+    },
+    "create_a_immutable_hashed_list": {
+      "code": "let hashset = HashSet::new();"
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "delete_immutable_hashed_list": {
+      "not-implemented": "true"
+    },
+    "create_a_mutable_set": {
+      "code": "let mut hashmap: HashMap<TKey, TValue> = HashMap::new();"
+    },
+    "get_key_from_mutable_set": {
+      "not-implemented": "true"
+    },
+    "get_value_from_mutable_set": {
+      "code": "hashmap.get(\"foo\");"
+    },
+    "get_all_keys_from_mutable_set": {
+      "code": "hashmap.keys();",
+      "comment": "Note this is in an arbitrary order"
+    },
+    "get_all_values_from_mutable_set": {
+      "code": "hashmap.values();",
+      "comment": "Note this is in an arbitrary order"
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "not-implemented": "true"
+    },
+    "delete_mutable_set": {
+      "code": "hashmap.clear();"
+    },
+    "create_a_immutable_set": {
+      "code": "let hashmap: HashMap<TKey, TValue> = HashMap::new();"
+    },
+    "get_key_from_immutable_set": {
+      "not-implemented": "true"
+    },
+    "get_value_from_immutable_set": {
+      "code": "hashmap.get(\"foo\");"
+    },
+    "get_all_keys_from_immutable_set": {
+      "code": "hashmap.keys();",
+      "comment": "Note this is in an arbitrary order"
+    },
+    "get_all_values_from_immutable_set": {
+      "code": "hashmap.values();",
+      "comment": "Note this is in an arbitrary order"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "not-implemented": "true"
+    },
+    "delete_immutable_set": {
+      "not-implemented": "true"
+    },
+    "find_element_by_value": {
+      "code": "vec.iter().position(|&r| r == \"foo\").unwrap();"
+    },
+    "find_minimum_element": {
+      "code": "vec.iter().min();"
+    },
+    "find_maximum_element": {
+      "code": "vec.iter().max();"
+    },
+    "convert_list_to_string": {
+      "code": "vec.join(\" \");"
+    },
+    "concatenate_two_lists": {
+      "code": "vec.append(secondVec);"
+    },
+    "split_list_at_index": {
+      "code": "vec.split_off(index);"
+    },
+    "split_list_at_value": {
+      "not-implemented": true
+    },
+    "duplicate_a_list": {
+      "code": "let vec2 = vec.clone();"
+    },
+    "duplicate_subset_of_list": {
+      "not-implemented": true
+    },
+    "get_list_length": {
+      "code": "vec.len();"
+    },
+    "resize_list": {
+      "code": "vec.resize(new_len, T);"
+    },
+    "do_two_lists_match_exactly": {
+      "code": "vec == vec2;"
+    },
+    "do_two_lists_contain_same_items": {
+      "code": "vec.iter().all(|item| vec2.contains(item))"
+    },
+    "does_list_satisfy_some_expression": {
+      "code": "vec.iter().any(|item| expression)"
+    },
+    "does_list_not_satisfy_an_expression": {
+      "code": "vec.iter().all(|item| expression)"
+    },
+    "sort_list": {
+      "code": "vec.sort();"
+    },
+    "shuffle_list": {
+      "not-implemented": true
+    },
+    "reverse_list": {
+      "code": "vec.reverse();"
+    },
+    "map": {
+      "code": "vec.iter().map(|&item| {expression}).collect();"
+    },
+    "filter": {
+      "code": "vec.iter().filter(|&item| {expression}).collect();"
+    },
+    "reduce_left": {
+      "code": "vec![1, 2, 3].iter().fold(1, |acc, x| acc * x);"
+    },
+    "reduce_right": {
+      "code": "vec![1, 2, 3].iter().rev().fold(1, |acc, x| acc * x);"
+    }
+  }
+}
