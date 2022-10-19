@@ -207,7 +207,10 @@
       "queue_enqueue_an_item": {
         "name": "Enqueue an item (add to end)",
         "code": [
-          "queue.append('Four')"
+          "deque.append('Four')",
+          "queue.put('Four')",
+          "lifoqueue.put('Four')",
+          "simplequeue.put('Four')"
         ]
       },
       "queue_enqueue_priority_item": {
@@ -229,13 +232,19 @@
       "queue_dequeue_return_an_item": {
         "name": "Dequeue an item (remove from front, return item)",
         "code": [
-          "print(queue.pop())"
+          "print(dequeue.pop())",
+          "print(queue.get())",
+          "print(lifoqueue.get())",
+          "print(simplequeue.get())"
         ]
       },
       "queue_dequeue_delete_an_item": {
         "name": "Dequeue an item (remove from front, don't return)",
         "code": [
           "queue.pop()"
+          "queue.get()",
+          "lifoqueue.get()",
+          "simplequeue.get()"
         ]
       },
       "queue_peek_at_next_item": {
