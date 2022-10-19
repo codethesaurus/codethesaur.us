@@ -233,7 +233,8 @@
       },
       "format_as_integer": {
         "name": "Format parameter as an integer",
-        "code": "str = '12'\nprint(string.format('%d',str))"
+        "code": "int   = 12\nprint(string.format('This is integer: %d',int))",
+        "comment":"If we take value of variable as string(EX: int = '12') instead integer/number, It will work too!"
       },
       "format_as_decimal": {
         "name": "Format parameter as a decimal number",
@@ -241,7 +242,7 @@
       },
       "format_as_fixed_decimal": {
         "name": "Format parameter as a fixed-point decimal number",
-        "code": "str = '12.53232'\nprint(string.format('%0.2f',str))",
+        "code": "num = 12.53232\nprint(string.format('%0.2f',num))",
         "comment":"Output: 12.53\n%0.[N]f [where N is how many decimal you want after (.)point]"
       },
       "format_as_currency": {
@@ -258,15 +259,15 @@
       },
       "format_number_with_positive_negative_sign": {
         "name": "Format number with positive/negative signs",
-        "code": "str = '12'\nprint(string.format('%+d',str))"
+        "code": "num = 12\nprint(string.format('%+d',num))"
       },
       "format_number_in_scientific_notation_little_e": {
         "name": "Format number with scientific notation with 'e'",
-        "code": "str = '12645893253232'\nprint(string.format('%e',str))"
+        "code": "num = 12645893253232\nprint(string.format('%e',num))"
       },
       "format_number_in_scientific_notation_big_e": {
         "name": "Format number with scientific notation with 'E'",
-        "code": "str = '12645893253232'\nprint(string.format('%E',str))"
+        "code": "num = 12645893253232\nprint(string.format('%E',num))"
       },
       "format_number_in_binary": {
         "name": "Format number into binary",
@@ -274,11 +275,11 @@
       },
       "format_number_in_octal": {
         "name": "Format number into octal",
-        "code": "str = '8'\nprint(string.format('%o',str))"
+        "code": "num = 8\nprint(string.format('%o',num))"
       },
       "format_number_in_hexadecimal": {
         "name": "Format number into hexadecimal",
-        "code": "str = '10'\nprint(string.format('%x',str))",
+        "code": "num = 10\nprint(string.format('%x',num))",
         "comment":"%x for lowercase letters.\n%X upper letters."
       }
     }
