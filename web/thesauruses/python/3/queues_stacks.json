@@ -291,8 +291,6 @@
           "dequeue.clear()"
         ],
         "comment": "Queues, SimpleQueues, and LifoQueues don't have a clear function."
-      }
-
       },
       "stack_push_item": {
         "name": "Push an item (add to top)",
