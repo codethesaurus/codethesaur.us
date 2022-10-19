@@ -154,7 +154,7 @@
       "double_ended_queue_destroy_statement": {
         "name": "Destroy/delete a queue",
         "code": [
-          "queue.clear()"
+          "del(queue)"
         ]
       },
       "double_ended_queue_data_structure": {
@@ -288,8 +288,11 @@
       "queue_clear_all": {
         "name": "Clear out all queue items",
         "code": [
-          "queue.clear()"
-        ]
+          "dequeue.clear()"
+        ],
+        "comment": "Queues, SimpleQueues, and LifoQueues don't have a clear function."
+      }
+
       },
       "stack_push_item": {
         "name": "Push an item (add to top)",
