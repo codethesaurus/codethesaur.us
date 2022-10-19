@@ -241,7 +241,7 @@
       "queue_dequeue_delete_an_item": {
         "name": "Dequeue an item (remove from front, don't return)",
         "code": [
-          "queue.pop()"
+          "queue.pop()",
           "queue.get()",
           "lifoqueue.get()",
           "simplequeue.get()"
@@ -381,4 +381,3 @@
         "not-implemented": "true"
       }
     }
-  }
