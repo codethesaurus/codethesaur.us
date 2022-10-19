@@ -122,6 +122,18 @@
       "not-implemented": "true",
       "name": "Is not operator"
     },
+    "logical_and": {
+      "code": "&&",
+      "name": "Logical AND Operator"
+    },
+    "logical_or": {
+      "code": "||",
+      "name": "Logical OR Operator"
+    },
+    "logical_not": {
+      "code": "!",
+      "name": "Logical NOT Operator"
+    },
     "left_shift": {
       "code": "<<",
       "name": "Left shift bitwise operator"
