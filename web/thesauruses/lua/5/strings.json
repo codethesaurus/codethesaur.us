@@ -12,7 +12,7 @@
       },
       "import": {
         "name": "Import the string class",
-        "code": "",
+        "not-implemented": true,
         "comment": "Does not require to import as it is in builtins"
       },
       "default_string_byte_encoding": {
