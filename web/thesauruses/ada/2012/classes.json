@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "language": "ada",
+    "language_name": "Ada",
+    "structure": "classes",
+    "language_version": "2012"
+  },
+  "concepts": {
+    "normal_class": {
+      "name": "Normal class",
+      "code": "type My_Class is tagged null with record;"
+    },
+    "abstract_class": {
+      "name": "Abstract class",
+      "not-implemented": true
+    },
+    "interface": {
+      "name": "Interface",
+      "not-implemented": true
+    },
+    "read_only_class": {
+      "name": "Read-only class",
+      "not-implemented": true
+    },
+    "static_class": {
+      "name": "Static class",
+      "not-implemented": true
+    },
+    "inner_class": {
+      "name": "Inner class",
+      "not-implemented": true
+    },
+    "packages": {
+      "name": "Packages",
+      "code": [
+        "package P is",
+        "    -- package contents",
+        "end P;"
+      ]
+    },
+    "class_with_generic_type": {
+      "name": "Class with a generic type",
+      "not-implemented": true,
+      "comment": "To use generics with a class you have to declare them on the package"
+    },
+    "private_variables": {
+      "name": "Defining private variables",
+      "not-implemented": true,
+      "comment": "As with generics privacy is a package level thing\nThere is also limited for types that don't inherit the built-in assignment operation"
+    },
+    "protected_variables": {
+      "name": "Defining protected variables",
+      "not-implemented": true
+    },
+    "public_variables": {
+      "name": "Defining public variables",
+      "not-implemented": true
+    },
+    "static_variables": {
+      "name": "Defining static variables",
+      "not-implemented": true
+    },
+    "private_functions": {
+      "name": "Defining private functions",
+      "code": [
+        "package P is",
+        "    type My_Class is tagged null with record;",
+        "private",
+        "    procedure Private_Function(Self : in out My_Class);",
+        "end P;",
+        "package body P is",
+        "private",
+        "    procedure Private_Function(Self : in out My_Class) is",
+        "    begin",
+        "        -- procedure body",
+        "    end Private_Function;",
+        "end P;"
+      ]
+    },
+    "protected_functions": {
+      "name": "Defining protected functions",
+      "not-implemented": true
+    },
+    "public_functions": {
+      "name": "Defining public functions",
+      "code": [
+        "package P is",
+        "    type My_Class is tagged null with record;",
+        "    procedure Public_Function(Self : in out My_Class);",
+        "end P;",
+        "package body P is",
+        "    procedure Public_Function(Self : in out My_Class) is",
+        "    begin",
+        "        -- procedure body",
+        "    end Public_Function;",
+        "end P;"
+      ]
+    },
+    "static_functions": {
+      "name": "Defining static functions",
+      "not-implemented": true
+    },
+    "extends_class": {
+      "name": "Class that inherits/extends another class",
+      "code": [
+        "package P is",
+        "   type Derived is new My_Class with record",
+        "       A : Integer;",
+        "       --  You can add fields in derived types.",
+        "   end record;",
+        "end P;"
+      ]
+    },
+    "extending_interface": {
+      "name": "Class/Interface that inherits/extends another class/interface",
+      "not-implemented": true
+    },
+    "calling_superclass_functions": {
+      "name": "Calling a superclass function",
+      "not-implemented": true
+    },
+    "overriding_superclass_functions": {
+      "name": "Overriding a superclass function",
+      "code": [
+        "overriding procedure Foo (Self : in out Derived);"
+      ],
+      "comment": "The `overriding` qualifier is optional, but if it is present, it must be valid."
+    },
+    "instantiating_object": {
+      "name": "Instantiating a new object",
+      "code": "Obj : Derived := (A => 12)"
+    },
+    "instantiating_polymorphic_object": {
+      "name": "Instantiating a polymorphic object",
+      "code": "Obj2 : My_Class'Class := Obj"
+    },
+    "implement_constructor": {
+      "name": "Implementing a class constructor",
+      "not-implemented": true,
+      "comment": "A constructor is simply a method with the class as an output parameter"
+    },
+    "implement_deconstructor": {
+      "name": "Implementing a class deconstructor",
+      "not-implemented": true
+    }
+  }
+}
