@@ -8,11 +8,19 @@
   "concepts": {
     "write_line": {
       "name": "Write a line to the console",
-      "code": "console.log(content);"
+      "code": [
+        "console.log(content);",
+        "process.stdout.write(content);"
+      ],
+      "comment": "`process` is Node.js specific."
     },
     "write_line_with_new_line": {
       "name": "Write a line to the console with a return character",
-      "code": "console.log(content + \"\\n\");"
+      "code": [
+        "console.log(content);",
+        "process.stdout.write(content + \"\\n\");"
+      ],
+      "comment": "The return character is added automatically by the console.log function."
     },
     "read_line": {
       "name": "Read a line of user input from the console",
@@ -26,7 +34,7 @@
         " readline.close();",
         "});"
       ],
-      "comment": "The `readline` module is a part of the Node.js standard library. It is not available in the browser."
+      "comment": "The `readline` module is a part of the Node.js standard library. It is not available in the browser.\n`process` is Node.js specific."
     },
     "read_char": {
       "not-implemented": true,
@@ -34,17 +42,27 @@
       "comment": "The character can be read by accessing the first character of readline.question's answer."
     },
     "clear_console_output": {
-      "not-implemented": true,
-      "name": "Clear the console output"
+      "name": "Clear the console output",
+      "code": [
+        "console.clear();",
+        "process.stdout.write(\"\\033c\");"
+      ],
+      "comment": "`process` is Node.js specific and the ANSI escape sequence used may not be supported by all terminals."
     },
     "change_console_background_color": {
       "name": "Change the color of the console",
-      "code": "console.log('%c' + content, 'background: #222' );",
-      "comment": "Console background color cannot be changed but CSS properties can be applied to the console output."
+      "code": [
+        "console.log('%c' + content, 'background: #222' );",
+        "process.stdout.write(\"\\x1b[48;5;\" + color + \"m\" + content + \"\\x1b[0m\");"
+      ],
+      "comment": "Console background color cannot be changed but CSS properties can be applied to the console output.\nThe ANSI escape sequence used may not be supported by all terminals."
     },
     "change_console_text_color": {
       "name": "Change the color of the console",
-      "code": "console.log('%c' + content, 'color: #bada55' );",
+      "code": [
+        "console.log('%c' + content, 'color: #bada55' );",
+        "process.stdout.write(\"\\x1b[38;5;\" + color + \"m\" + content + \"\\x1b[0m\");"
+      ],
       "comment": "Console text color cannot be changed but CSS properties can be applied to the console output."
     },
     "file_functions_lib": {
