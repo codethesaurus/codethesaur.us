@@ -34,10 +34,6 @@
       "name" : "Character",
       "code" : "char"
     },
-    "string_as_object": {
-      "name": "String as an object",
-      "not-implemented": "true"
-    },
     "string_as_array": {
       "name": "String as an array of characters",
       "code": "char []"
