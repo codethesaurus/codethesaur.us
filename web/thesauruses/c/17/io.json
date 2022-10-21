@@ -25,7 +25,7 @@
             },
         "clear_console_output": {
             "code": "system(\"cls\")",
-             "code": [
+            "code": [
                 "#include<stdio.h>",
                 "#include<stdlib.h>",
                 "int main(){",
@@ -34,7 +34,7 @@
                 "return 0;",
                 "}"
             ], 
-            "comment": "system() is defined in stdlib.h and cls should be in double quotes",
+            "comment": "system() is defined in stdlib.h",
             "name": "Clear the console output"
         },
         "change_console_background_color": {
