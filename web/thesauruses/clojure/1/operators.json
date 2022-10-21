@@ -120,6 +120,18 @@
       "not-implemented": "true",
       "name": "Is not operator"
     },
+    "bitwise_and": {
+      "code": "(bit-and 2r1100 2r1001)",
+      "name": "Bitwise AND operator"
+    },
+    "bitwise_or": {
+      "code": "(bit-or 2r1100 2r1001)",
+      "name": "Bitwise OR operator"
+    },
+    "bitwise_xor": {
+      "code": "(bit-xor 2r1100 2r1001) ",
+      "name": "Bitwise XOR operator"
+    },
     "left_shift": {
       "code": "(bit-shift-left 1 10)",
       "name": "Left shift bitwise operator"
