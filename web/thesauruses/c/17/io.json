@@ -37,31 +37,9 @@
             "comment": "system() is defined in stdlib.h",
             "name": "Clear the console output"
         },
-        "change_console_background_color": {
-        },
-        "change_console_text_color": {
-        },
         "file_function_lib": {
             "code": "#include<stdio.h>",
             "name": "library containing file IO functions"
-        },
-        "list_directory": {
-        },
-        "read_directory_info": {
-        },
-        "create_directory": {
-        },
-        "delete_directory": {
-        },
-        "rename_directory": {
-        },
-        "move_directory": {
-        },
-        "update_directory_permissions": {
-        },
-        "read_line_of_file": {
-        },
-        "read_line_of_files": {
         },
         "create_file": {
             "code": "FILE *fopen( const char * filename, const char * mode );",
@@ -77,7 +55,5 @@
             "comment": "different file modes are available",
             "name": "Update a file"
         },
-        "move_file": {
-        }
     }
 }
