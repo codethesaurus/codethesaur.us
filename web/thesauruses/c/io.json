@@ -24,8 +24,17 @@
             "name": "Read a single char of user input from the console"
             },
         "clear_console_output": {
-            "code": "system(cls)",
-            "comment": "system() is defined in stdlib.h and cls should be in double quotes",
+            "code": "system(\"cls\")",
+            "code": [
+                "#include<stdio.h>",
+                "#include<stdlib.h>",
+                "int main(){",
+                "system(\"cls\");",
+                "printf(\"hello\");",
+                "return 0;",
+                "}"
+            ], 
+            "comment": "system() is defined in stdlib.h",
             "name": "Clear the console output"
         },
         "change_console_background_color": {
