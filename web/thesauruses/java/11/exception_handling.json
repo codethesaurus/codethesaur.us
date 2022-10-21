@@ -360,15 +360,11 @@
         },
         "base_test_assertion_exception_type": {
             "name": "Base class name for a test assertion exception",
-            "code": [
-                ""
-            ]
+            "code": "AssertionError"
         },
         "import_not_found_exception_type": {
             "name": "Class name for an import that's not found exception",
-            "code": [
-                ""
-            ]
+            "code": "ClassNotFoundException"
         },
         "keyboard_interrupt_exception_type": {
             "name": "Class name for a keyboard interrupt occurrence exception",
@@ -390,9 +386,7 @@
         },
         "base_warning_type": {
             "name": "Base class name for a generic warning",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "deprecation_warning_type": {
             "name": "Class name for a deprecated statement/function warning",
