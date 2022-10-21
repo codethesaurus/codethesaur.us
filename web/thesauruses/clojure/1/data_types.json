@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "language": "clojure",
+    "language_version": "1.10.3",
+    "language_name": "Clojure",
+    "structure": "data_types"
+  },
+  "concepts": {
+    "boolean": {
+      "comment": "The `boolean` function can coerce a truthy value to `java.lang.Boolean`.",
+      "name": "Boolean",
+      "code": "(boolean true)"
+    },
+    "signed_integer_16_bit": {
+      "comment": "The `short` function can coerce a a numeric value to `java.lang.Short`.",
+      "name": "Signed 16-bit integer",
+      "code": "(short 4)"
+    },
+    "signed_integer_32_bit": {
+      "comment": "Clojure cannot directly instantiate primitive `int`, but it can be used as a type hint.",
+      "name": "Signed 32-bit integer",
+      "not-implemented": true
+    },
+    "signed_integer_64_bit": {
+      "comment": "The `long` function can coerce a a numeric value to `java.lang.Long`. Note the default type for literal numeric integrals is already long.",
+      "name": "Signed 64-bit integer",
+      "code": "(long 10)"
+    },
+    "signed_integer_as_object": {
+      "comment": "The `int` function can coerce a a numeric value to `java.lang.Integer`.",
+      "name": "Signed object-based Integer",
+      "code": "(int 54)"
+    },
+    "signed_float_16_bit": {
+      "name": "Signed 16-bit floating point",
+      "not-implemented": true
+    },
+    "signed_float_32_bit": {
+      "comment": "Clojure cannot directly instantiate primitive `float`, but it can be used as a type hint.",
+      "name": "Signed 32-bit floating point",
+      "not-implemented": true
+    },
+    "signed_float_64_bit": {
+      "comment": "The `double` function can coerce a numeric value to java.lang.Double.",
+      "name": "Signed 64-bit floating point",
+      "code": "(double 64.1)"
+    },
+    "signed_float_as_object": {
+      "comment": "The `float` function can coerce a a numeric value to `java.lang.Float`.",
+      "name": "Signed object-based floating point",
+      "code": "Float"
+    },
+    "string_as_object": {
+      "comment": "`java.lang.String` literals can be used directly, and the `str` function can be used to build a string out of concatenated calls to `.toString` of its arguments.",
+      "name": "String as an object",
+      "code": "(str \\h \\e \\l \\l \\o)"
+    },
+    "string_as_array": {
+      "name": "String as an array of characters",
+      "code": "(char-array \"hello world\")"
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "not-implemented": true
+    },
+    "real_number_part": {
+      "name": "Complex number real part",
+      "not-implemented": true
+    },
+    "imaginary_number_part": {
+      "name": "Complex number imaginary part",
+      "not-implemented": true
+    }
+  }
+}
