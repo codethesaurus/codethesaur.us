@@ -42,7 +42,7 @@
             "name": "Change the background color of the console"
         },
         "change_console_text_color": {
-            "code" : "unknown",
+            "code" : "",
             "name": "Change the text color of the console"
         },
         "file_function_lib": {
@@ -50,39 +50,39 @@
             "name": "library containing file IO functions"
         },
         "list_directory": {
-            "code": "unknown",
+            "code": "",
             "name": "List of the items in the current directory"
         },
         "read_directory_info": {
-            "code": "unknown",
+            "code": "",
             "name": "Get infomation about the current directory (number of items, size, etc)"
         },
         "create_directory": {
-            "code": "unknown",
+            "code": "",
             "name": "Create a directory"
         },
         "delete_directory": {
-            "code": "unknown",
+            "code": "",
             "name": "Delete a directory"
         },
         "rename_directory": {
-            "code": "unknown",
+            "code": "",
             "name": "Rename a directory"
         },
         "move_directory": {
-            "code": "unknown",
+            "code": "",
             "name": "Move a directory to another locaiton"
         },
         "update_directory_permissions": {
-            "code": "unknown",
+            "code": "",
             "name": "Update the permissions a user, group, or application has to a directory"
         },
         "read_line_of_file": {
-            "code": "unknown",
+            "code": "",
             "name": "Read a single from a file"
         },
         "read_line_of_files": {
-            "code": "unknown",
+            "code": "",
             "name": "Read all the lines from a file"
         },
         "create_file": {
@@ -100,7 +100,7 @@
             "name": "Update a file"
         },
         "move_file": {
-            "code": "unknown",
+            "code": "",
             "name": "move a file to a new location"
         }
     }
