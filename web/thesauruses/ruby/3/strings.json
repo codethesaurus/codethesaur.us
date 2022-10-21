@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "language": "ruby",
+    "language_name": "Ruby",
+    "structure": "strings",
+    "language_version": "3"
+  },
+  "concepts": {
+    "is_primitive_or_not": {
+      "code": "Yes"
+    },
+    "import": {
+      "code":
+        "Built-in included in the default Modules"
+    },
+    "default_string_byte_encoding": {
+      "code": "UTF-8"
+    },
+    "create_new_string": {
+      "code": [
+        "varName = \"Hello World\"",
+        "varName = 'This also works'",
+        "anotherVar = %{another way to do it}\n"
+      ],
+      "comment": "Using the %char-style quoting mechanism generates either a single or doubled quoted string.\nYou can preceed the % by a character option and a delimiter.\nThe most common delimiter is {} like the example, but you can use any non alpha-numerical delimiter."
+    },
+    "create_multiline_string": {
+      "code": [
+        "text = <<EOM\nLine1\nAnother Line\nNow this is the last line.\nEOM\n",
+        "text = <<-EOM\nLine1\nAnother Line\nNow this is the last line.\n      EOM\n\n"
+      ],
+      "comment": "\"HERE\" document (heredoc), generates a string, usually a multiline string.\nUses the << operator followed by a delimiter. The string wont end until the delimiter is founded flush left.\nPlacing a '-' after the << operator will disable the flush left requirement."
+    },
+    "assign_new_string": {
+      "code": [
+        "a = \"String\"",
+        "b = a"
+      ]
+    },
+    "destroy_string": {
+      "not-implemented": true
+    },
+    "length_of_string": {
+      "code": [
+        "stringVaraible.length",
+        "\"Hello World\".length # Returns 11"
+      ]
+    },
+    "max_length_of_string": {
+      "code": "65,535 characters."
+    },
+    "clear_string": {
+      "code": [
+        "stringVaraible.clear"
+      ]
+    },
+    "is_empty": {
+      "code": [
+        "stringVaraible.empty?"
+      ]
+    },
+    "concatenate_two_strings": {
+      "code": [
+        "a = \"String\"",
+        "b = a + \"2\"", 
+        "c = a + b",
+        "puts c # Returns \"StringString2\""
+      ]
+    },
+    "concatenate_many_strings": {
+      "code": [
+        "a = \"String\"",
+        "b = a + \"2\"", 
+        "c = a + \" \" + b",
+        "puts c # Returns \"String String2\""
+      ]
+    },
+    "is_all_alphabetical": {
+      "code": [
+        "!string.match(/\\A[a-zA-Z]*\\z/).nil?"
+      ]
+    },
+    "is_all_numerical": {
+      "code": [
+        "string.scan(/\\D/).empty?"
+      ]
+    },
+    "is_all_alphanumeric": {
+      "code": [
+        "!string.match(/\\A[a-zA-Z0-9]*\\z/).nil?"
+      ]
+    },
+    "is_decimal": {
+      "code": [
+        "true if Float(string) rescue false"
+      ]
+    },
+    "is_all_whitespaces": {
+      "code": [
+        "string.strip.empty?"
+      ]
+    },
+    "is_all_uppercase": {
+      "code": [
+        "string == string.upcase"
+      ]
+    },
+    "is_all_lowercase": {
+      "code": [
+        "string == string.downcase"
+      ]
+    },
+    "is_in_titlecase": {
+      "code": [
+        "string == string.titlecase"
+      ]
+    },
+    "does_substring_exist": {
+      "code": [
+        "string.include?(substring)"
+      ]
+    },
+    "find_start_index_of_substring": {
+      "code": [
+        "string.index(substring)"
+      ]
+    },
+    "find_start_index_of_additional_substring": {
+      "code": [
+        "string.index(substring, startIndex)"
+      ]
+    },
+    "find_start_index_of_substring_from_end": {
+      "code": [
+        "string.rindex(substring)",
+        "string.rindex(substring, startIndex)"
+      ]
+    },
+    "count_occurrences_of_substring": {
+      "code": [
+        "string.scan(/(?=#{substr})/).count"
+      ]
+    },
+    "get_leftmost_characters": {
+      "code": [
+        "string[..numberOfChars]"
+      ]
+    },
+    "get_rightmost_characters": {
+      "code": [
+        "string[-numberOfChars..]"
+      ]
+    },
+    "get_substring_from_start_and_end_index": {
+      "code": [
+        "string[startIndex..endIndex]"
+      ]
+    },
+    "get_substring_from_start_index_and_length": {
+      "code": [
+        "string[startIndex...startIndex + size] # Notice the ... instead of .."
+      ]
+    },
+    "convert_to_uppercase": {
+      "code": [
+        "string.upcase"
+      ]
+    },
+    "convert_to_lowercase": {
+      "code": [
+        "string.downcase"
+      ]
+    },
+    "convert_to_title_case": {
+      "code": [
+        "string.titlecase"
+      ]
+    },
+    "capitalize_string": {
+      "code": [
+        "string.capitalize"
+      ]
+    },
+    "remove_whitespace": {
+      "code": [
+        "string.strip"
+      ]
+    },
+    "replace_substring": {
+      "code": [
+        "s.sub(subString, newString) # use sub! if you wish to replace the original string, use sub if you only want to return the result of the substitution"
+      ]
+    },
+    "replace_all_substring": {
+      "code": [
+        "s.gsub!(subString, newString)"
+      ]
+    },
+    "split_at_index": {
+      "code": [
+        "[string[0..index], string[index+1..-1]]"
+      ]
+    },
+    "split_at_newlines": {
+      "code": [
+        "string.split(\"\\n\")"
+      ]
+    },
+    "split_at_substring": {
+      "code": [
+        "string.split(substring)"
+      ]
+    },
+    "merge_lists_into_string": {
+      "code": [
+        "list.join(separator)"
+      ]
+    },
+    "encode_html_entities": {
+      "code": ["<%= h 'escaping <html>' %>"],
+      "comment":
+        "Ruby does not implement this, although you can use the cgi library to do it.\nIn Rails you can use the h method, as shown in the example above."
+    },
+    "decode_html_entities": {
+      "code": ["<%= raw '<html>' %>"],
+      "comment": "Ruby does not implement this, although you can use the cgi library to do it.\nIn Rails you can use the raw method, as shown in the example above."
+    },
+    "encode_url_percent": {
+      "not-implemented": true
+    },
+    "decode_url_percent": {
+      "not-implemented": true
+    },
+    "encode_to_base64": {
+      "code": [
+        "Base64.encode64(string)"
+      ]
+    },
+    "decode_from_base64": {
+      "code": [
+        "Base64.decode64(encodedString)"
+      ]
+    },
+    "format_string_function": {
+      "code": [
+        "\"Hello %d\" % 4 # you can use more formats ex: [%c, %x; etc]",
+        "\"Hello %x %s\" % [2, \"you\"]",
+        "\"This is a #{variable} string\""
+      ]
+    },
+    "parameter_format_in_order": {
+      "not-implemented": true
+    },
+    "parameter_format_numerical": {
+      "not-implemented": true
+    },
+    "parameter_format_by_name": {
+      "not-implemented": true
+    },
+    "format_as_integer": {
+      "code": [
+        "%d or %i"
+      ]
+    },
+    "format_as_decimal": {
+      "code": [
+        "%f"
+      ]
+    },
+    "format_as_fixed_decimal": {
+      "code": [
+        "%.nf # where n is the fixed-point number"
+      ]
+    },
+    "format_as_currency": {
+      "code": [
+        "\"%s%s\" % [currency, string.reverse.scan(/.{1,3}/).join(',').reverse]"
+      ]
+    },
+    "format_as_percentage": {
+      "code": [
+        "\"%s%%\" % string.reverse.scan(/.{1,3}/).join(',').reverse"
+      ]
+    },
+    "format_number_with_separators": {
+      "code": [
+        "\"%s\" % string.reverse.scan(/.{1,3}/).join(',').reverse"
+      ]
+    },
+    "format_number_with_positive_negative_sign": {
+      "code": [
+        "\"+%d\" % number",
+        "\"-%d\" % number",
+        "\"+#{number}\"",
+        "\"-#{number}\""
+      ]
+    },
+    "format_number_in_scientific_notation_little_e": {
+      "code": [
+        "\"%e\" % number"
+      ]
+    },
+    "format_number_in_scientific_notation_big_e": {
+      "code": [
+        "\"%E\" % number"
+      ]
+    },
+    "format_number_in_binary": {
+      "code": [
+        "\"%s\" % number.to_s(2)"
+      ]
+    },
+    "format_number_in_octal": {
+      "code": [
+        "\"%o\" % number"
+      ]
+    },
+    "format_number_in_hexadecimal": {
+      "code": [
+        "\"%x\" % number # use X for uppercase format"
+      ]
+    }
+  }
+}
