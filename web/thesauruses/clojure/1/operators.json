@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "language": "clojure",
+    "language_version": "1.10.3",
+    "language_name": "Clojure",
+    "structure": "operators"
+  },
+  "concepts": {
+    "addition": {
+      "code": "(+ 1 2 3)",
+      "name": "Addition operator"
+    },
+    "addition_assignment": {
+      "comment": "Clojure doesn't have the traditional notion of assignment as in procedural languages, but it can apply in some situations (ex: atoms and volatile refs).",
+      "code": "(let [x (volatile! 0)]\n  (doseq [addend (range 10)]\n    (vswap! x + addend))\n  @x)",
+      "name": "Addition and assignment operator"
+    },
+    "subtraction": {
+      "code": "(- 10 4)",
+      "name": "Subtraction operator"
+    },
+    "subtraction_assignment": {
+      "comment": "See note about the Addition and assignment operator above.",
+      "not-implemented": "true",
+      "name": "Subtraction and assignment operator"
+    },
+    "multiplication": {
+      "code": "(* 12 12)",
+      "name": "Multiplication operator"
+    },
+    "multiplication_assignment": {
+      "comment": "See note about the Addition and assignment operator above.",
+      "not-implemented": "true",
+      "name": "Multiplication and assignment operator"
+    },
+    "division": {
+      "code": "(/ 1024 16)",
+      "name": "Division operator"
+    },
+    "division_assignment": {
+      "comment": "See note about the Addition and assignment operator above.",
+      "not-implemented": "true",
+      "name": "Division and assignment operator"
+    },
+    "modulus": {
+      "code": "(mod 18 8)",
+      "name": "Modulus (remainder) operator"
+    },
+    "modulus_assignment": {
+      "comment": "See note about the Addition and assignment operator above.",
+      "not-implemented": "true",
+      "name": "Modulus and assignment operator"
+    },
+    "increment": {
+      "comment": "See note about the Addition and assignment operator above. The `inc` function will increment the value and return the result, not overwrite any \"variable\".",
+      "code": "(inc 1)",
+      "name": "Increment (add 1) operator"
+    },
+    "decrement": {
+      "comment": "See note about the Addition and assignment operator above. The `dec` function will decrement the value and return the result, not overwrite any \"variable\".",
+      "code": "(dec 10)",
+      "name": "Decrement (subtract 1) operator"
+    },
+    "exponential": {
+      "comment": "No built in function, but easy enough to write.",
+      "code": "(defn exp [x n]\n  (reduce * (repeat n x)))",
+      "name": "Exponential operator"
+    },
+    "factorial": {
+      "comment": "No built in function, but easy enough to write.",
+      "code": "(defn ! [n]\n  (reduce *' (range 1 (inc n))))",
+      "name": "Factorial operator"
+    },
+    "absolute_value": {
+      "comment": "Using the built-in JDK method.",
+      "code": "(Math/abs -4)",
+      "name": "Absolute value operator"
+    },
+    "percentage": {
+      "code": "%",
+      "name": "Percentage operator",
+      "not-implemented": "true"
+    },
+    "equal_to": {
+      "comment": "The `=` function can operate on various data types.",
+      "code": "(= \"foo\" \"bar\")",
+      "name": "Equality operator"
+    },
+    "not_equal_to": {
+      "comment": "The `!=` function can operate on various data types.",
+      "code": "(not= 4 5)",
+      "name": "Not equal to operator"
+    },
+    "less_than": {
+      "code": "(< 5 10)",
+      "name": "Less than operator"
+    },
+    "less_than_or_equal_to": {
+      "code": "(<= 8 8)",
+      "name": "Less than or equal to operator"
+    },
+    "greater_than": {
+      "code": "(> 8 1)",
+      "name": "Greater than operator"
+    },
+    "greater_than_or_equal_to": {
+      "comment": "All Clojure comparison functions can take arbitrarily many arguments.",
+      "code": "(>= 12 10 8)",
+      "name": "Greater than or equal to operator"
+    },
+    "null_coalescing": {
+      "not-implemented": "true",
+      "name": "Null coalescing operator"
+    },
+    "is": {
+      "not-implemented": "true",
+      "name": "Is operator"
+    },
+    "is_not": {
+      "not-implemented": "true",
+      "name": "Is not operator"
+    },
+    "left_shift": {
+      "code": "(bit-shift-left 1 10)",
+      "name": "Left shift bitwise operator"
+    },
+    "left_shift_assignment": {
+      "comment": "See note about the Addition and assignment operator above.",
+      "not-implemented": "true",
+      "name": "Left shift assignment operator"
+    },
+    "right_shift": {
+      "code": "(bit-shift-right 100 2)",
+      "name": "Right shift bitwise operator"
+    },
+    "right_shift_assignment": {
+      "comment": "See note about the Addition and assignment operator above.",
+      "not-implemented": "true",
+      "name": "Right shift assignment operator"
+    },
+    "ternary": {
+      "comment": "Use the `if` function to provide a ternary operator equivalent.",
+      "code": "(if (> 2 1) \"Yes\" \"No\")",
+      "name": "Ternary operator"
+    },
+    "null_forgiving": {
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
+    }
+  }
+}
