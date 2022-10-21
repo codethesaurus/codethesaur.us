@@ -37,53 +37,9 @@
             "comment": "system() is defined in stdlib.h",
             "name": "Clear the console output"
         },
-        "change_console_background_color": {
-            "code" : "unknown",
-            "name": "Change the background color of the console"
-        },
-        "change_console_text_color": {
-            "code" : "",
-            "name": "Change the text color of the console"
-        },
         "file_function_lib": {
             "code": "#include<stdio.h>",
             "name": "library containing file IO functions"
-        },
-        "list_directory": {
-            "code": "",
-            "name": "List of the items in the current directory"
-        },
-        "read_directory_info": {
-            "code": "",
-            "name": "Get infomation about the current directory (number of items, size, etc)"
-        },
-        "create_directory": {
-            "code": "",
-            "name": "Create a directory"
-        },
-        "delete_directory": {
-            "code": "",
-            "name": "Delete a directory"
-        },
-        "rename_directory": {
-            "code": "",
-            "name": "Rename a directory"
-        },
-        "move_directory": {
-            "code": "",
-            "name": "Move a directory to another locaiton"
-        },
-        "update_directory_permissions": {
-            "code": "",
-            "name": "Update the permissions a user, group, or application has to a directory"
-        },
-        "read_line_of_file": {
-            "code": "",
-            "name": "Read a single from a file"
-        },
-        "read_line_of_files": {
-            "code": "",
-            "name": "Read all the lines from a file"
         },
         "create_file": {
             "code": "FILE *fopen( const char * filename, const char * mode );",
@@ -99,9 +55,5 @@
             "comment": "different file modes are available",
             "name": "Update a file"
         },
-        "move_file": {
-            "code": "",
-            "name": "move a file to a new location"
-        }
     }
 }
