@@ -38,52 +38,30 @@
             "name": "Clear the console output"
         },
         "change_console_background_color": {
-            "code" : "unknown",
-            "name": "Change the background color of the console"
         },
         "change_console_text_color": {
-            "code" : "unknown",
-            "name": "Change the text color of the console"
         },
         "file_function_lib": {
             "code": "#include<stdio.h>",
             "name": "library containing file IO functions"
         },
         "list_directory": {
-            "code": "unknown",
-            "name": "List of the items in the current directory"
         },
         "read_directory_info": {
-            "code": "unknown",
-            "name": "Get infomation about the current directory (number of items, size, etc)"
         },
         "create_directory": {
-            "code": "unknown",
-            "name": "Create a directory"
         },
         "delete_directory": {
-            "code": "unknown",
-            "name": "Delete a directory"
         },
         "rename_directory": {
-            "code": "unknown",
-            "name": "Rename a directory"
         },
         "move_directory": {
-            "code": "unknown",
-            "name": "Move a directory to another locaiton"
         },
         "update_directory_permissions": {
-            "code": "unknown",
-            "name": "Update the permissions a user, group, or application has to a directory"
         },
         "read_line_of_file": {
-            "code": "unknown",
-            "name": "Read a single from a file"
         },
         "read_line_of_files": {
-            "code": "unknown",
-            "name": "Read all the lines from a file"
         },
         "create_file": {
             "code": "FILE *fopen( const char * filename, const char * mode );",
@@ -100,8 +78,6 @@
             "name": "Update a file"
         },
         "move_file": {
-            "code": "unknown",
-            "name": "move a file to a new location"
         }
     }
 }
