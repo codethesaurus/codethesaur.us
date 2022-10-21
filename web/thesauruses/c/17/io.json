@@ -16,6 +16,7 @@
         },
         "read_line": {
         "code": "scanf(“Format Specifier”, &var1, &var2, …., &varn);",
+        "comment": "'&' is used to send memory address of variable(pass by reference) since changes to variable is being made(i.e. storing values) but not in printf since it is only accessing those values not changing it",
         "name": "Read a line of user input from the console"
         },
         "read_char": {
@@ -23,7 +24,16 @@
             "name": "Read a single char of user input from the console"
             },
         "clear_console_output": {
-            "code": "system(cls)",
+            "code": "system(\"cls\")",
+             "code": [
+                "#include<stdio.h>",
+                "#include<stdlib.h>",
+                "int main(){",
+                "system(\"cls\");",
+                "printf(\"hello\");",
+                "return 0;",
+                "}"
+            ], 
             "comment": "system() is defined in stdlib.h and cls should be in double quotes",
             "name": "Clear the console output"
         },
