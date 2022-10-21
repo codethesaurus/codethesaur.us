@@ -44,11 +44,11 @@
             "name": "Function that returns a value and takes an unknown number of parameters"
         },
         "anonymous_function_no_parameters": {
-            "not_implemented": "true",
+            "not-implemented": "true",
             "name": "Anonymous function that takes no parameters"
         },
         "anonymous_function_with_parameters": {
-            "not_implemented": "true",
+            "not-implemented": "true",
             "name": "Anonymous function that takes 1 or more defined parameters"
         },
         "anonymous_function_with_keyword_parameters": {
