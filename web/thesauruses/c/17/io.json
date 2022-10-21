@@ -54,6 +54,6 @@
             "code": "FILE *fopen( const char * filename, const char * mode );",
             "comment": "different file modes are available",
             "name": "Update a file"
-        },
+        }
     }
 }
