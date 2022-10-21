@@ -16,6 +16,7 @@
         },
         "read_line": {
         "code": "scanf(“Format Specifier”, &var1, &var2, …., &varn);",
+        "comment": "'&' is used to send memory address of variable(pass by reference) since changes to variable is being made(i.e. storing values) but not in printf since it is only accessing those values not changing it",
         "name": "Read a line of user input from the console"
         },
         "read_char": {
