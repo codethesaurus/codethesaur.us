@@ -1,203 +1,219 @@
 {
   "meta": {
     "language": "javascript",
-    "language_version": "ECMAScript 2020",
     "language_name": "JavaScript",
-    "structure": "operators"
+    "structure": "operators",
+    "language_version": "ECMAScript 2020"
   },
   "concepts": {
     "addition": {
-      "code": "operand1 + operand2",
-      "name": "Addition operator"
+      "name": "Addition operator",
+      "code": "a + b"
     },
     "addition_assignment": {
-      "code": "result += operand1",
-      "name": "Addition and assignment operator"
+      "name": "Addition and assignment operator",
+      "code": "a += b"
     },
     "subtraction": {
-      "code": "operand1 - operand2",
-      "name": "Subtraction operator"
+      "name": "Subtraction operator",
+      "code": "a - b"
     },
     "subtraction_assignment": {
-      "code": "result -= operand1",
-      "name": "Subtraction and assignment operator"
+      "name": "Subtraction and assignment operator",
+      "code": "a -= b"
     },
     "multiplication": {
-      "code": "operand1 * operand2",
-      "name": "Multiplication operator"
+      "name": "Multiplication operator",
+      "code": "a * b"
     },
     "multiplication_assignment": {
-      "code": "result *= operand1",
-      "name": "Multiplication and assignment operator"
+      "name": "Multiplication and assignment operator",
+      "code": "a *= b"
     },
     "division": {
-      "code": "operand1 / operand2",
-      "name": "Division operator"
+      "name": "Division operator",
+      "code": "a / b"
     },
     "division_assignment": {
-      "code": "result /= operand1",
-      "name": "Division and assignment operator"
+      "name": "Division and assignment operator",
+      "code": "a /= b"
     },
     "integer_division": {
-      "not-implemented": "true",
-      "name": "Integer Division operator"
+      "name": "Integer division operator",
+      "code": "a // b"
     },
     "integer_division_assignment": {
-      "not-implemented": "true",
-      "name": "Integer Division and assignment operator"
+      "name": "Integer division and assignment operator",
+      "code": "a //= b"
     },
     "modulus": {
-      "code": "operand1 % operand2",
-      "name": "Modulus (remainder) operator"
+      "name": "Modulus (remainder) operator",
+      "code": "a % b"
     },
     "modulus_assignment": {
-      "code": "result %= operand1",
-      "name": "Modulus and assignment operator"
+      "name": "Modulus and assignment operator",
+      "code": "a %= b"
     },
     "unary_plus": {
-      "code" : "+operand",
-      "name" : "Unary plus operator"
-  },
+      "name": "Unary plus operator",
+      "code": "+a"
+    },
     "unary_minus": {
-      "code" : "-operand",
-      "name" : "Unary minus operator"
-  },
+      "name": "Unary minus operator",
+      "code": "-a"
+    },
     "increment": {
-      "code": "++operand or operand++",
-      "name": "Increment (add 1) operator"
+      "name": "Increment (add 1) operator",
+      "code": [
+          "a++",
+          "++a"
+      ]
     },
     "decrement": {
-      "code": "--operand or operand--",
-      "name": "Decrement (subtract 1) operator"
+      "name": "Decrement (subtract 1) operator",
+      "code": [
+          "a--",
+          "--a"
+      ]
     },
     "exponential": {
-      "code": "operand1 ** operand2",
-      "name": "Exponential operator"
+      "name": "Exponential operator",
+      "code": "a ** b"
     },
     "factorial": {
-      "not-implemented": "true",
+      "not-implemented": true,
       "name": "Factorial operator"
     },
     "absolute_value": {
-      "not-implemented": "true",
-      "name": "Absolute value operator"
+      "name": "Absolute value operator",
+      "code": "Math.abs(a)"
     },
     "percentage": {
-      "not-implemented": "true",
+      "not-implemented": true,
       "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "expession1 == expression2",
-      "comment": "There is also === which means strict equality",
-      "name": "Equality operator"
+      "name": "Equality operator",
+      "code": [
+        "a == b // loose equality",
+        "a === b // strict equality"
+      ],
+      "comment": "The `===` operator coerces the operands to the same type before comparing them. The `==` operator does not coerce the operands."
     },
     "not_equal_to": {
-      "code": "expression1 != expression2",
-      "comment": "There is also !== which means strict inequality",
-      "name": "Not equal to operator"
+      "name": "Not equal to operator",
+      "code": [
+          "a != b // loose inequality",
+          "a !== b // strict inequality"
+      ],
+      "comment": "The `!==` operator coerces the operands to the same type before comparing them. The `!=` operator does not coerce the operands."
     },
     "less_than": {
-      "code": "expression1 < expression2",
-      "name": "Less than operator"
+      "name": "Less than operator",
+      "code": "a < b"
     },
     "less_than_or_equal_to": {
-      "code": "expression1 <= expression2",
-      "name": "Less than or equal to operator"
+      "name": "Less than or equal to operator",
+      "code": "a <= b"
     },
     "greater_than": {
-      "code": "expression1 > expression2",
-      "name": "Greater than operator"
+      "name": "Greater than operator",
+      "code": "a > b"
     },
     "greater_than_or_equal_to": {
-      "code": "expression1 >= expression2",
-      "name": "Greater than or equal to operator"
+      "name": "Greater than or equal to operator",
+      "code": "a >= b"
     },
     "null_coalescing": {
-      "code": "expression1 ?? expression2",
-      "name": "Null coalescing operator"
+      "name": "Null coalescing operator",
+      "code": "a ?? b"
     },
     "is": {
-      "not-implemented": "true",
+      "not-implemented": true,
       "name": "Is operator"
     },
     "is_not": {
-      "not-implemented": "true",
+      "not-implemented": true,
       "name": "Is not operator"
     },
     "logical_and": {
-      "code" : "expression1 && expression2",
-      "name" : "Logical AND Operator"
-  },
+      "name": "Logical AND operator",
+      "code": "a && b"
+    },
     "logical_or": {
-      "code" : "expression1 || expression2",
-      "name" : "Logical OR Operator"
-  },
-  "logical_not": {
-      "code" : "!expression",
-      "name" : "Logical NOT Operator"
-  },
-"bitwise_and": {
-      "code" : "operand1 & operand2",
-      "name" : "Bitwise AND operator"
-  },
-"bitwise_and_assignmnet": {
-      "code" : "result &= operand1",
-      "name" : "Bitwise AND and assignment operator"
-  },
-"bitwise_or": {
-      "code" : "operand1 | operand2",
-      "name" : "Bitwise OR operator"
-  },
-"bitwise_or_assignment": {
-      "code" : "result |= operand1",
-      "name" : "Bitwise OR and assignment operator"
-  },
-"bitwise_not": {
-      "code" : "~operand",
-      "name" : "Bitwise NOT operator"
-  },
-    "bitwise_not_assignment": {
-      "not-implemented": "true",
-      "name" : "Bitwise NOT and assignment operator"
-  },
-"bitwise_xor": {
-      "code" : "operand1 ^ operand2",
-      "name" : "Bitwise XOR operator"
-  },
-"bitwise_xor_assignment": {
-      "code" : "result ^= operand1",
-      "name" : "Bitwise XOR and assignment operator"
-  },
+      "name": "Logical OR operator",
+      "code": "a || b"
+    },
+    "logical_not": {
+      "name": "Logical NOT operator",
+      "code": "!a"
+    },
+    "bitwise_and": {
+      "name": "Bitwise AND operator",
+      "code": "a & b"
+    },
+    "bitwise_and_assignment": {
+      "name": "Bitwise AND and assignment operator",
+      "code": "a &= b"
+    },
+    "bitwise_or": {
+      "name": "Bitwise OR operator",
+      "code": "a | b"
+    },
+    "bitwise_or_assignment": {
+      "name": "Bitwise OR and assignment operator",
+      "code": "a |= b"
+    },
+    "bitwise_not": {
+      "name": "Bitwise NOT operator",
+      "code": "~a"
+    },
+    "bitwise_xor": {
+      "name": "Bitwise XOR operator",
+      "code": "a ^ b"
+    },
+    "bitwise_xor_assignment": {
+      "name": "Bitwise XOR and assignment operator",
+      "code": "a ^= b"
+    },
     "bitwise_xnor": {
-      "not-implemented": "true",
-      "name" : "Bitwise XNOR operator"
-  },
+      "not-implemented": true,
+      "name": "Bitwise XNOR operator"
+    },
     "bitwise_xnor_assignment": {
-      "not-implemented": "true",
-      "name" : "Bitwise XNOR and assignment operator"
-  },
+      "not-implemented": true,
+      "name": "Bitwise XNOR and assignment operator"
+    },
     "left_shift": {
-      "code": "operand1 << value",
-      "name": "Left shift bitwise operator"
+      "name": "Left shift bitwise operator",
+      "code": "a << b"
     },
     "left_shift_assignment": {
-      "code": "result <<= value",
-      "name": "Left shift assignment operator"
+      "name": "Left shift assignment operator",
+      "code": "a <<= b"
     },
     "right_shift": {
-      "code": "operand1 >> value",
-      "name": "Right shift bitwise operator"
+      "name": "Right shift bitwise operator",
+      "code": "a >> b"
     },
     "right_shift_assignment": {
-      "code": "result >>= value",
-      "name": "Right shift assignment operator"
+      "name": "Right shift assignment operator",
+      "code": "a >>= b"
+    },
+    "not_assignment": {
+      "not-implemented": true,
+      "name": "Bitwise NOT and assignment operator"
     },
     "ternary": {
-      "code": "condition ? value_if_true : value_if_false",
-      "name": "Ternary operator"
+      "name": "Ternary operator",
+      "code": [
+          "condition ? true_expression : false_expression",
+          "condition && true_expression || false_expression"
+      ],
+      "comment": "Both expressions are similar."
     },
     "null_forgiving": {
-      "not-implemented": "true",
+      "not-implemented": true,
       "name": "Null forgiving operator"
     }
   }

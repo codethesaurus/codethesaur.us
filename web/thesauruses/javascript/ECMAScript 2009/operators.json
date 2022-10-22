@@ -1,0 +1,220 @@
+{
+    "meta": {
+      "language": "javascript",
+      "language_name": "JavaScript",
+      "structure": "operators",
+      "language_version": "ECMAScript 2009"
+    },
+    "concepts": {
+      "addition": {
+        "name": "Addition operator",
+        "code": "a + b"
+      },
+      "addition_assignment": {
+        "name": "Addition and assignment operator",
+        "code": "a += b"
+      },
+      "subtraction": {
+        "name": "Subtraction operator",
+        "code": "a - b"
+      },
+      "subtraction_assignment": {
+        "name": "Subtraction and assignment operator",
+        "code": "a -= b"
+      },
+      "multiplication": {
+        "name": "Multiplication operator",
+        "code": "a * b"
+      },
+      "multiplication_assignment": {
+        "name": "Multiplication and assignment operator",
+        "code": "a *= b"
+      },
+      "division": {
+        "name": "Division operator",
+        "code": "a / b"
+      },
+      "division_assignment": {
+        "name": "Division and assignment operator",
+        "code": "a /= b"
+      },
+      "integer_division": {
+        "name": "Integer division operator",
+        "code": "a // b"
+      },
+      "integer_division_assignment": {
+        "name": "Integer division and assignment operator",
+        "code": "a //= b"
+      },
+      "modulus": {
+        "name": "Modulus (remainder) operator",
+        "code": "a % b"
+      },
+      "modulus_assignment": {
+        "name": "Modulus and assignment operator",
+        "code": "a %= b"
+      },
+      "unary_plus": {
+        "name": "Unary plus operator",
+        "code": "+a"
+      },
+      "unary_minus": {
+        "name": "Unary minus operator",
+        "code": "-a"
+      },
+      "increment": {
+        "name": "Increment (add 1) operator",
+        "code": [
+            "a++",
+            "++a"
+        ]
+      },
+      "decrement": {
+        "name": "Decrement (subtract 1) operator",
+        "code": [
+            "a--",
+            "--a"
+        ]
+      },
+      "exponential": {
+        "name": "Exponential operator",
+        "code": "a ** b"
+      },
+      "factorial": {
+        "not-implemented": true,
+        "name": "Factorial operator"
+      },
+      "absolute_value": {
+        "name": "Absolute value operator",
+        "code": "Math.abs(a)"
+      },
+      "percentage": {
+        "not-implemented": true,
+        "name": "Percentage operator"
+      },
+      "equal_to": {
+        "name": "Equality operator",
+        "code": [
+          "a == b // loose equality",
+          "a === b // strict equality"
+        ],
+        "comment": "The `===` operator coerces the operands to the same type before comparing them. The `==` operator does not coerce the operands."
+      },
+      "not_equal_to": {
+        "name": "Not equal to operator",
+        "code": [
+            "a != b // loose inequality",
+            "a !== b // strict inequality"
+        ],
+        "comment": "The `!==` operator coerces the operands to the same type before comparing them. The `!=` operator does not coerce the operands."
+      },
+      "less_than": {
+        "name": "Less than operator",
+        "code": "a < b"
+      },
+      "less_than_or_equal_to": {
+        "name": "Less than or equal to operator",
+        "code": "a <= b"
+      },
+      "greater_than": {
+        "name": "Greater than operator",
+        "code": "a > b"
+      },
+      "greater_than_or_equal_to": {
+        "name": "Greater than or equal to operator",
+        "code": "a >= b"
+      },
+      "null_coalescing": {
+        "name": "Null coalescing operator",
+        "code": "a ?? b"
+      },
+      "is": {
+        "not-implemented": true,
+        "name": "Is operator"
+      },
+      "is_not": {
+        "not-implemented": true,
+        "name": "Is not operator"
+      },
+      "logical_and": {
+        "name": "Logical AND operator",
+        "code": "a && b"
+      },
+      "logical_or": {
+        "name": "Logical OR operator",
+        "code": "a || b"
+      },
+      "logical_not": {
+        "name": "Logical NOT operator",
+        "code": "!a"
+      },
+      "bitwise_and": {
+        "name": "Bitwise AND operator",
+        "code": "a & b"
+      },
+      "bitwise_and_assignment": {
+        "name": "Bitwise AND and assignment operator",
+        "code": "a &= b"
+      },
+      "bitwise_or": {
+        "name": "Bitwise OR operator",
+        "code": "a | b"
+      },
+      "bitwise_or_assignment": {
+        "name": "Bitwise OR and assignment operator",
+        "code": "a |= b"
+      },
+      "bitwise_not": {
+        "name": "Bitwise NOT operator",
+        "code": "~a"
+      },
+      "bitwise_xor": {
+        "name": "Bitwise XOR operator",
+        "code": "a ^ b"
+      },
+      "bitwise_xor_assignment": {
+        "name": "Bitwise XOR and assignment operator",
+        "code": "a ^= b"
+      },
+      "bitwise_xnor": {
+        "not-implemented": true,
+        "name": "Bitwise XNOR operator"
+      },
+      "bitwise_xnor_assignment": {
+        "not-implemented": true,
+        "name": "Bitwise XNOR and assignment operator"
+      },
+      "left_shift": {
+        "name": "Left shift bitwise operator",
+        "code": "a << b"
+      },
+      "left_shift_assignment": {
+        "name": "Left shift assignment operator",
+        "code": "a <<= b"
+      },
+      "right_shift": {
+        "name": "Right shift bitwise operator",
+        "code": "a >> b"
+      },
+      "right_shift_assignment": {
+        "name": "Right shift assignment operator",
+        "code": "a >>= b"
+      },
+      "not_assignment": {
+        "not-implemented": true,
+        "name": "Bitwise NOT and assignment operator"
+      },
+      "ternary": {
+        "name": "Ternary operator",
+        "code": [
+            "condition ? true_expression : false_expression",
+            "condition && true_expression || false_expression"
+        ],
+        "comment": "Both expressions are similar."
+      },
+      "null_forgiving": {
+        "not-implemented": true,
+        "name": "Null forgiving operator"
+      }
+    }
+  }
