@@ -196,7 +196,8 @@
         },
         "cannot_access_pointer_exception_type": {
             "name": "Class name for a cannot access pointer exception",
-            "code": "NullPointerException"
+            "code": "NullPointerException",
+            "comment": "Java now supplies the exact variable in a chain of variables that caused the NPE, much to the joy of devs :)"
         },
         "base_file_exception_type": {
             "name": "Base class name for a file operation exception",
