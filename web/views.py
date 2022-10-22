@@ -240,6 +240,7 @@ def compare(request):
         "categories": both_categories,
         "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
                 and {lang2.friendly_name}",
+        "template_concept_filename": meta_structure.key + ".json",
         "template_concept_1": generate_language_template(
             lang1.key,
             meta_structure.key,
@@ -341,6 +342,7 @@ def reference(request):
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
         "description": f"Code Thesaurus: Reference for {lang.key}",
+        "template_concept_filename": meta_structure.key + ".json",
         "template_concept": generate_language_template(
             lang.key,
             meta_structure.key,
