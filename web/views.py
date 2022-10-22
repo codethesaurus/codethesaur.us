@@ -1,6 +1,9 @@
 """codethesaur.us views"""
+import json
 import random
 import os
+
+from jsonmerge import merge
 
 from django.http import (
     HttpResponseBadRequest,
@@ -227,6 +230,51 @@ def compare(request):
             "concepts": concepts
         })
 
+        
+    empty_template1 = generate_language_template(
+        lang1.key,
+        meta_structure.key,
+        version1
+    )
+
+    file_path1 = os.path.join(
+        os.path.dirname(__file__),
+        "thesauruses",
+        lang1.key,
+        version1,
+        meta_structure.key + ".json"
+    )
+
+    with open(file_path1, "r") as file:
+        template1 = file.read()
+
+    template1 = json.loads(template1)
+    empty_template1 = json.loads(empty_template1)
+    template1 = merge(empty_template1, template1)
+    template1 = json.dumps(template1, indent=2)
+
+    empty_template2 = generate_language_template(
+        lang2.key,
+        meta_structure.key,
+        version2
+    )
+
+    file_path2 = os.path.join(
+        os.path.dirname(__file__),
+        "thesauruses",
+        lang2.key,
+        version2,
+        meta_structure.key + ".json"
+    )
+
+    with open(file_path2, "r") as file:
+        template2 = file.read()
+
+    template2 = json.loads(template2)
+    empty_template2 = json.loads(empty_template2)
+    template2 = merge(empty_template2, template2)
+    template2 = json.dumps(template2, indent=2)
+
     response = {
         "title": f"Comparing {lang1.friendly_name} and {lang2.friendly_name}",
         "concept": meta_structure.key,
@@ -241,16 +289,8 @@ def compare(request):
         "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
                 and {lang2.friendly_name}",
         "template_concept_filename": meta_structure.key + ".json",
-        "template_concept_1": generate_language_template(
-            lang1.key,
-            meta_structure.key,
-            version1
-        ),
-        "template_concept_2": generate_language_template(
-            lang2.key,
-            meta_structure.key,
-            version2
-        )
+        "template_concept_1": template1,
+        "template_concept_2": template2
     }
 
     return render(request, 'compare.html', response)
@@ -333,6 +373,31 @@ def reference(request):
             "concepts": concepts
         })
 
+
+    empty_template = generate_language_template(
+        lang.key,
+        meta_structure.key,
+        version
+    )
+
+    file_path = os.path.join(
+        os.path.dirname(__file__),
+        "thesauruses",
+        lang.key,
+        version,
+        meta_structure.key + ".json"
+    )
+
+    with open(file_path, "r") as file:
+        template = file.read()
+
+    template = json.loads(template)
+    empty_template = json.loads(empty_template)
+
+    template = merge(empty_template, template)
+
+    template = json.dumps(template, indent=2)
+
     response = {
         "title": f"Reference for {lang.key}",
         "concept": meta_structure.key,
@@ -342,12 +407,7 @@ def reference(request):
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
         "description": f"Code Thesaurus: Reference for {lang.key}",
-        "template_concept_filename": meta_structure.key + ".json",
-        "template_concept": generate_language_template(
-            lang.key,
-            meta_structure.key,
-            version
-        )
+        "template_concept": template
     }
 
     return render(request, 'reference.html', response)

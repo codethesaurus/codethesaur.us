@@ -60,19 +60,15 @@
                 </div>
                 <div class="card" id="start-of-row">
                     <div class="card-body">
-                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang1 }}/{{ version1 }}/{{ concept }}.json">
+                        <a data-bs-toggle="modal" data-bs-target="#templateModal1" href="javascript:void(0)">
                             Want to add or correct information for {{ lang1_friendlyname }}?
-                        </a><br>
-                        <a data-bs-toggle="modal" data-bs-target="#templateModal1" href="javascript:void(0)">or get the whole template?
                         </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang2 }}/{{ version2 }}/{{ concept }}.json">
+                        <a data-bs-toggle="modal" data-bs-target="#templateModal2" href="javascript:void(0)">
                             Want to add or correct information for {{ lang2_friendlyname }}?
-                        </a><br>
-                        <a data-bs-toggle="modal" data-bs-target="#templateModal2" href="javascript:void(0)">or get the whole template?
                         </a>
                     </div>
                 </div>
@@ -84,7 +80,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="templateModalLabel">{{ template_concept_filename }}</h5>
+                    <h5 class="modal-title" id="templateModalLabel">{{ concept }}.json</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -101,7 +97,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="templateModalLabel">{{ template_concept_filename }}</h5>
+                    <h5 class="modal-title" id="templateModalLabel">{{ concept }}.json</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
