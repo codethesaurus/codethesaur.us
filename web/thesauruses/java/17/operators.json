@@ -118,6 +118,34 @@
       "code": ">>",
       "name": "Right shift bitwise operator"
     },
+    "bitwise_and": {
+      "code": "&",
+      "name": "Bitwise AND operator"
+    },
+    "bitwise_and_assignment": {
+      "code": "&=",
+      "name": "Bitwise AND and assignment operator"
+    },
+    "bitwise_or": {
+      "code": "|",
+      "name": "Bitwise OR operator"
+    },
+    "bitwise_or_assignment": {
+      "code": "|=",
+      "name": "Bitwise OR and assignment operator"
+    },
+    "bitwise_xor": {
+      "code": "^",
+      "name": "Bitwise XOR operator"
+    },
+    "bitwise_xor_assignment": {
+      "code": "^=",
+      "name": "Bitwise XOR and assignment operator"
+    },
+    "bitwise_complement": {
+      "code": "~",
+      "name": "Bitwise complement operator"
+    },
     "right_shift_assignment": {
       "code": ">>=",
       "name": "Right shift assignment operator"
