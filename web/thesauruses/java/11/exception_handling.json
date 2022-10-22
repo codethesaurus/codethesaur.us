@@ -132,231 +132,155 @@
         },
         "base_data_type_exception_type": {
             "name": "Base class type for all data type exceptions",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "invalid_data_type_exception_type": {
             "name": "Class name for an invalid type exception",
-            "code": [
-                ""
-            ]
+            "code": "NoSuchElementException"
         },
         "variable_not_found_exception_type": {
             "name": "Class name for a variable not found exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "object_not_found_exception_type": {
             "name": "Class name for an object not found exception",
-            "code": [
-                ""
-            ]
+            "code": "ObjectNotFoundException"
         },
         "index_out_of_bounds_exception_type": {
             "name": "Class name for an index out of bounds exception",
-            "code": [
-                ""
-            ]
+            "code": "ArrayIndexOutOfBoundsException"
         },
         "key_name_not_found_exception_type": {
             "name": "Class name for a key name not found exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "invalid_encoding_exception_type": {
             "name": "Class name for an invalid encoding exception",
-            "code": [
-                ""
-            ]
+            "code": "UnsupportedEncodingException"
         },
         "base_mathematical_exception_type": {
             "name": "Base class name for a mathematical exception",
-            "code": [
-                ""
-            ]
+            "code": "ArithmeticException"
         },
         "overflow_exception_type": {
             "name": "Class name for an overflow exception",
-            "code": [
-                ""
-            ]
+            "code": "BufferOverflowException"
         },
         "floating_point_exception_type": {
             "name": "Class name for a floating point exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "divide_by_zero_exception_type": {
             "name": "Class name for a divide by zero exception",
-            "code": [
-                ""
-            ]
+            "code": "ArithmeticException"
         },
         "cannot_cast_types_exception_type": {
             "name": "Class name for a cast type exception",
-            "code": [
-                ""
-            ]
+            "code": "ClassCastException"
         },
         "base_memory_exception_type": {
             "name": "Base class name for a memory exception",
-            "code": [
-                ""
-            ]
+            "code": "VirtualMachineError"
         },
         "cannot_allocate_memory_exception_type": {
             "name": "Class name for being an unable to allocate memory exception",
-            "code": [
-                ""
-            ]
+            "code": "OutOfMemoryError"
         },
         "out_of_memory_exception_type": {
             "name": "Class name for a running out of memory exception",
-            "code": [
-                ""
-            ]
+            "code": "OutOfMemoryError"
         },
         "stack_overflow_exception_type": {
             "name": "Class name for a stack overflow exception",
-            "code": [
-                ""
-            ]
+            "code": "StackOverflowError"
         },
         "cannot_access_pointer_exception_type": {
             "name": "Class name for a cannot access pointer exception",
-            "code": [
-                ""
-            ]
+            "code": "NullPointerException"
         },
         "base_file_exception_type": {
             "name": "Base class name for a file operation exception",
-            "code": [
-                ""
-            ]
+            "code": "FileSystemException"
         },
         "end_of_file_exception_type": {
             "name": "Class name for an end of file exception",
-            "code": [
-                ""
-            ]
+            "code": "EOFException"
         },
         "file_does_not_exist_exception_type": {
             "name": "Class name for a file does not exist exception",
-            "code": [
-                ""
-            ]
+            "code": "NoSuchFileException"
         },
         "file_already_exists_exception_type": {
             "name": "Class name for a file already exists exception",
-            "code": [
-                ""
-            ]
+            "code": "FileAlreadyExistsException"
         },
         "item_is_actually_directory_exception_type": {
             "name": "Class name for an item is actually a directory exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "item_is_not_a_directory_exception_type": {
             "name": "Class name for an item is not a directory exception",
-            "code": [
-                ""
-            ]
+            "code": "NotDirectoryException"
         },
         "cannot_access_file_exception_type": {
             "name": "Class name for a cannot access file exception",
-            "code": [
-                ""
-            ]
+            "code": "AccessDeniedException"
         },
         "drive_disconnected_exception_type": {
             "name": "Class name for a drive disconnected exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "file_no_longer_available_exception_type": {
             "name": "Class name for a file that is no longer available exception",
-            "code": [
-                ""
-            ]
+            "code": "FileNotFoundException"
         },
         "file_timeout_exception": {
             "name": "Class name for a file timeout error",
-            "code": [
-                ""
-            ]
+            "code": "IOException"
         },
         "base_network_exception_type": {
             "name": "Base class name for a network exception",
-            "code": [
-                ""
-            ]
+            "code": "RemoteException"
         },
         "connection_refused_exception_type": {
             "name": "Class name for a network connection refused exception",
-            "code": [
-                ""
-            ]
+            "code": "ConnectException"
         },
         "connection_broken_exception_type": {
             "name": "Class name for a network connection broken exception",
-            "code": [
-                ""
-            ]
+            "code": "RemoteException"
         },
         "invalid_hostname_exception": {
             "name": "Class name for an invalid hostname exception",
-            "code": [
-                ""
-            ]
+            "code": "UnknownHostException"
         },
         "cannot_establish_connection_exception_type": {
             "name": "Class name for a cannot establish a network connection exception",
-            "code": [
-                ""
-            ]
+            "code": "ConnectException"
         },
         "connection_timed_out_exception_type": {
             "name": "Class name for a network connection timed out exception",
-            "code": [
-                ""
-            ]
+            "code": "SocketTimeoutException"
         },
         "bad_certificate_exception_type": {
             "name": "Class name for a bad SSL/TLS certificate exception",
-            "code": [
-                ""
-            ]
+            "code": "CertificateException"
         },
         "expired_certificate_exception_type": {
             "name": "Class name for an expired SSL/TLS certificate exception",
-            "code": [
-                ""
-            ]
+            "code": "CertificateExpiredException"
         },
         "child_process_could_not_be_created_exception_type": {
             "name": "Class name for a child process that could not be created exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "child_process_unexpected_ending_exception_type": {
             "name": "Class name for a child process that ended unexpectedly exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "process_not_found_exception_type": {
             "name": "Class name for a process that's not found exception",
-            "code": [
-                ""
-            ]
+            "code": "MethodNotFoundException"
         },
         "base_test_assertion_exception_type": {
             "name": "Base class name for a test assertion exception",
@@ -368,21 +292,16 @@
         },
         "keyboard_interrupt_exception_type": {
             "name": "Class name for a keyboard interrupt occurrence exception",
-            "code": [
-                ""
-            ]
+            "code": "InterruptedException"
         },
         "syntax_exception_type": {
             "name": "Class name for a syntax exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true,
+            "comment": "Exceptions occur at runtime, whereas syntax errors are caught during compilation, which would prevent the program from compiling (and running)."
         },
         "uncaught_signal_exception_type": {
             "name": "Class name for an uncaught system signal exception",
-            "code": [
-                ""
-            ]
+            "not-implemented": true
         },
         "base_warning_type": {
             "name": "Base class name for a generic warning",
