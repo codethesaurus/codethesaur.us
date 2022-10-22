@@ -1,34 +1,115 @@
 {
   "meta": {
     "language": "javascript",
-    "language_version": "ECMAScript 2021",
     "language_name": "JavaScript",
-    "structure": "functions"
+    "structure": "functions",
+    "language_version": "ECMAScript 2021"
   },
   "concepts": {
     "void_function_no_parameters": {
-      "code": "function funcName() {\n    function_body();\n}",
-      "name": "Function that does not return a value and takes no parameters"
+      "name": "Function that does not return a value and takes no parameters",
+      "code": "function method() {}"
     },
     "void_function_with_parameters": {
-      "code": "function funcName(param1, param2) {\n    function_body();\n}",
-      "name": "Function that does not return a value and that takes 1 or more defined parameters"
+      "name": "Function that does not return a value and that takes 1 or more defined parameters",
+      "code": [
+        "function method(param1) {}",
+        "function method(param1, param2) {}"
+      ]
+    },
+    "void_function_with_keyword_parameters": {
+      "name": "Function that does not return a value and that takes 0 or more defined keyword parameters",
+      "code": [
+        "function method({param1}) {}",
+        "function method({param1, param2}) {}"
+      ]
+    },
+    "void_function_variable_parameters": {
+      "name": "Function that does not return a value and function that takes an unknown number of parameters",
+      "code": "function method(...params) {}"
     },
     "return_value_function_no_parameters": {
-      "code": "function funcName() {\n    function_body();\n    return something\n}",
-      "name": "Function that returns a value and takes no parameters"
+      "name": "Function that returns a value and takes no parameters",
+      "code": "function method() { return true; }"
     },
     "return_value_function_with_parameters": {
-      "code": "function funcName(param1, param2) {\n    function_body();\n    return something\n}",
-      "name": "Function that returns a value and takes 1 or more defined parameters"
+      "name": "Function that returns a value and takes 1 or more defined parameters",
+      "code": [
+        "function method(param1) { return true; }",
+        "function method(param1, param2) { return true; }"
+      ]
+    },
+    "return_value_function_with_keyword_parameters": {
+      "name": "Function that returns a value and takes 0 or more defined keyword parameters",
+      "code": "function method({param1, param2}) { return true; }"
+    },
+    "return_value_function_variable_parameters": {
+      "name": "Function that returns a value and takes an unknown number of parameters",
+      "code": "function method(...params) { return true; }"
     },
     "anonymous_function_no_parameters": {
-      "code": "() => { function_body(); }",
-      "name": "Anonymous function that takes no parameters"
+      "name": "Anonymous function that takes no parameters",
+      "code": [
+        "const method = function() {}",
+        "const method = () => {}"
+      ]
     },
     "anonymous_function_with_parameters": {
-      "code": "(param1, param2) => { function_body() }",
-      "name": "Anonymous function that takes 1 or more defined parameters"
+      "name": "Anonymous function that takes 1 or more defined parameters",
+      "code": [
+        "const method = function(param1, param2) {}",
+        "const method = (param1, param2) => {}"
+      ]
+    },
+    "anonymous_function_with_keyword_parameters": {
+      "name": "Anonymous function that takes 0 or more defined keyword parameters",
+      "code": [
+        "const method = function({param1, param2}) {}",
+        "const method = ({param1, param2}) => {}"
+      ]
+    },
+    "anonymous_function_variable_parameters": {
+      "name": "Anonymous function that takes an unknown number of parameters",
+      "code": [
+        "const method = function(...params) {}",
+        "const method = (...params) => {}"
+      ]
+    },
+    "anonymous_function_no_parameters_with_return": {
+      "name": "Anonymous function that takes no parameters and returns a value",
+      "code": [
+        "const method = function() { return true; }",
+        "const method = () => true"
+      ]
+    },
+    "anonymous_function_with_parameters_with_return": {
+      "name": "Anonymous function that takes 1 or more defined parameters and returns a value",
+      "code": [
+        "const method = function(param1, param2) { return true; }",
+        "const method = (param1, param2) => true"
+      ]
+    },
+    "anonymous_function_with_keyword_parameters_with_return": {
+      "name": "Anonymous function that takes 0 or more defined keyword parameters and returns a value",
+      "code": [
+        "const method = function({param1, param2}) { return true; }",
+        "const method = ({param1, param2}) => true"
+      ]
+    },
+    "anonymous_function_variable_parameters_with_return": {
+      "name": "Anonymous function that takes an unknown number of parameters and returns a value",
+      "code": [
+        "const method = function(...params) { return true; }",
+        "const method = (...params) => true"
+      ]
+    },
+    "call_subroutine": {
+      "not-implemented": true,
+      "name": "Call subroutine"
+    },
+    "return_from_subroutine": {
+      "not-implemented": true,
+      "name": "Return from subroutine"
     }
   }
 }

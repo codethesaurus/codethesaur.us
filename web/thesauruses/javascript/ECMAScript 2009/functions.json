@@ -3,7 +3,7 @@
     "language": "javascript",
     "language_name": "JavaScript",
     "structure": "functions",
-    "language_version": "ECMAScript 2020"
+    "language_version": "ECMAScript 2009"
   },
   "concepts": {
     "void_function_no_parameters": {
@@ -26,7 +26,12 @@
     },
     "void_function_variable_parameters": {
       "name": "Function that does not return a value and function that takes an unknown number of parameters",
-      "code": "function method(...params) {}"
+      "code": [
+        "function method() {",
+        "  var params = Array.prototype.slice.call(arguments); // convert arguments to an array",
+        "  // do something with params",
+        "}"
+      ]
     },
     "return_value_function_no_parameters": {
       "name": "Function that returns a value and takes no parameters",
@@ -45,7 +50,13 @@
     },
     "return_value_function_variable_parameters": {
       "name": "Function that returns a value and takes an unknown number of parameters",
-      "code": "function method(...params) { return true; }"
+      "code": [
+        "function method() {",
+        "  var params = Array.prototype.slice.call(arguments); // convert arguments to an array",
+        "  // do something with params",
+        "  return true;",
+        "}"
+      ]
     },
     "anonymous_function_no_parameters": {
       "name": "Anonymous function that takes no parameters",
@@ -71,8 +82,10 @@
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
       "code": [
-        "const method = function(...params) {}",
-        "const method = (...params) => {}"
+        "const method = function() {",
+        "  var params = Array.prototype.slice.call(arguments); // convert arguments to an array",
+        "  // do something with params",
+        "}"
       ]
     },
     "anonymous_function_no_parameters_with_return": {
@@ -99,8 +112,11 @@
     "anonymous_function_variable_parameters_with_return": {
       "name": "Anonymous function that takes an unknown number of parameters and returns a value",
       "code": [
-        "const method = function(...params) { return true; }",
-        "const method = (...params) => true"
+        "const method = function() {",
+        "  var params = Array.prototype.slice.call(arguments); // convert arguments to an array",
+        "  // do something with params",
+        "  return true;",
+        "}"
       ]
     },
     "call_subroutine": {
