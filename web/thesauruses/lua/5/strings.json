@@ -1,0 +1,286 @@
+{
+    "meta": {
+      "language": "lua",
+      "language_name": "Lua",
+      "structure": "strings",
+      "language_version": "5.3.6"
+    },
+    "concepts": {
+      "is_primitive_or_not": {
+        "name": "Is this a built-in type in this language?",
+        "code": "Yes"
+      },
+      "import": {
+        "name": "Import the string class",
+        "not-implemented": true,
+        "comment": "Does not require to import as it is in builtins"
+      },
+      "default_string_byte_encoding": {
+        "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
+        "not-implemented": true
+      },
+      "create_new_string": {
+        "name": "Create new string",
+        "code": "str1 = 'New string Example1' \nstr2 = \"New string Example2\""
+      },
+  
+      "create_multiline_string": {
+        "name": "Create new multi-line string",
+        "code": "[['Multiline string']]"
+      },
+      "assign_new_string": {
+        "name": "Assign string from another string",
+        "code": "a = 'a'\nb = a"
+      },
+      "destroy_string": {
+        "name": "Destroy string",
+        "not-implemented": "true"
+      },
+      "length_of_string": {
+        "name": "Length of string",
+        "code": [
+            "str = 'codethesaur.us'",
+            "str:len()",
+            "string.len(str)"
+        ]
+
+      },
+      "max_length_of_string": {
+        "name": "Maximum length of string",
+        "not-implemented": true
+      },
+      "clear_string": {
+        "name": "Clear/empty string",
+        "code": "a = 'a'\na=''"
+      },
+      "is_empty": {
+        "name": "Is string empty?",
+        "code": [
+            "str = ''",
+            "if (str == nil or str == '') then",
+            "    print('str is empty')",
+            "end"
+        ]
+      },
+      
+      "concatenate_two_strings": {
+        "name": "Concatenate/join two strings",
+        "code":"str1 = 'Hello'\nstr2 = ' World'\nprint(str1..str2)"
+      },
+      "concatenate_many_strings": {
+        "name": "Concatenate/join many strings",
+        "code": [
+                    "str = 'Hello'\nvar2 = ' World '\nvar3 = str..var2\nprint(str..var2..var3)",
+                    "\ntab = {'codethesaur.us',' is',' great',' learning tool!'}\nprint(table.concat(tab))"
+                ],
+        "comment":"We can concat many number of string using '..' oprator"
+      },
+      "is_all_alphabetical": {
+        "name": "Is string all alphabetical characters?",
+        "not-implemented": "true"
+      },
+      "is_all_numerical": {
+        "name": "Is string all numerical characters?",
+        "not-implemented": "true"
+      },
+      "is_all_alphanumeric": {
+        "name": "Is string all alphanumeric characters?",
+        "not-implemented": "true"
+      },
+      "is_decimal": {
+        "name": "Is string a decimal number?",
+        "not-implemented": "true"
+      },
+      "is_all_whitespaces": {
+        "name": "Is string all whitespace characters?",
+        "not-implemented": "true"
+      },
+      "is_all_uppercase": {
+        "name": "Is string all uppercase characters?",
+        "not-implemented": "true"
+      },
+      "is_all_lowercase": {
+        "name": "Is string all lowercase characters?",
+        "not-implemented": "true"
+      },
+      "is_in_titlecase": {
+        "name": "Is string formatted in title case?",
+        "not-implemented": "true"
+      },
+      "does_substring_exist": {
+        "name": "Does a substring exist in a string?",
+        "code":"str = 'Hello'\ni,i2 = string.find(str,'lo')\nprint(i,i2)",
+        "comment":"first variable stores index+1 of first string character and second variable stores index of last character If sub-string or occurrence is not found then it returns 'nill'"
+      },
+      "find_start_index_of_substring": {
+        "name": "Find index of where a substring starts",
+        "code": "str = 'Hello'\nstart,_ = string.find(str,'lo')\nprint(start)",
+        "comment":"If we do not need of index of end character of sub-string then we can use '_'(underscore) instead assigning to a variable" 
+      },
+      "find_start_index_of_additional_substring": {
+        "name": "Find index of an additional substring (or starting at another index)",
+        "code": "str = 'Hello Hello'\ni = string.find(str,'ello')\ni2 = string.find(str,'ello',i+1)\nprint(i,i2)"
+      },
+      "find_start_index_of_substring_from_end": {
+        "name": "Find substring index starting at end",
+        "not-implemented": true
+      },
+      "count_occurrences_of_substring": {
+        "name": "Find number of occurences of a substring",
+        "not-implemented": true
+      },
+      "get_leftmost_characters": {
+        "name": "Get a specified number of characters from the left",
+        "code": "str = 'Hello'\nlen = string.len(str)\ni = string.sub(str,len,len)\nprint(i)"
+      },
+      "get_rightmost_characters": {
+        "name": "Get a specified number of characters from the right",
+        "code": "str = 'Hello'\ni = string.sub(str,1,1)\nprint(i)"
+      },
+      "get_substring_from_start_and_end_index": {
+        "name": "Return a substring from a string based on starting and ending indices",
+        "not-implemented": true
+      },
+      "get_substring_from_start_index_and_length": {
+        "name": "Return a substring from a string based on starting index and size of substring",
+        "code": "str = 'Hello'\nlen = string.len(str)\ni = string.sub(str,1,len)\nprint(i)"
+      },
+      "convert_to_uppercase": {
+        "name": "Convert string to all uppercase",
+        "code": "str = 'Hello'\nVAR = string.upper(str)\nprint(str)",
+        "comment":"'string.upper' function does not convert to uppercase in original string rather than it return a new uppercased string which we have to store in variable"
+      },
+      "convert_to_lowercase": {
+        "name": "Convert string to all lowercase",
+        "code": "str = 'Hello'\nVAR = string.lower(str)\nprint(str)",
+        "comment":"'string.lower' function does not convert to lowercase in original string rather than it return a new lowercased string which we have to store in variable"
+      },
+      "convert_to_title_case": {
+        "name": "Convert string to title case",
+        "not-implemented": true
+      },
+      "capitalize_string": {
+        "name": "Capitalize first letter of a string",
+        "not-implemented": true
+      },
+      "remove_whitespace": {
+        "name": "Remove all whitespaces from string",
+        "not-implemented": true
+      },
+      "replace_substring": {
+        "name": "Replace a substring with another string",
+        "code": "str = 'Welcome to lua'\nvar = string.gsub(str,'lua','codethesaurus')\nprint(str)"
+      },
+      "replace_all_substring": {
+        "name": "Replace all substring matches with another string",
+        "code": "str = 'Welcome to lua,lua is great.'\nvar = string.gsub(str,'lua','codethesaurus')\nprint(str)"
+      },
+      "split_at_index": {
+        "name": "Split string into a list of strings at a given index",
+        "not-implemented": true
+      },
+      "split_at_newlines": {
+        "name": "Split string into a list of strings at every new line character",
+        "not-implemented": true
+      },
+      "split_at_substring": {
+        "name": "Split string by locating all substrings",
+        "not-implemented": true
+      },
+      "merge_lists_into_string": {
+        "name": "Merge a list of strings into one string",
+        "code": "list = {'codethesaur ','is ','great learning ','tool'}\nstr = table.concat(list)\nprint(str)"
+      },
+      "encode_html_entities": {
+        "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)",
+        "not-implemented": true
+      },
+      "decode_html_entities": {
+        "name": "Decode HTML entitles into characters",
+        "not-implemented": true
+      },
+      "encode_url_percent": {
+        "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
+        "not-implemented": true
+      },
+      "decode_url_percent": {
+        "name": "Decode URL percent encoding",
+        "not-implemented": true
+      },
+      "encode_to_base64": {
+        "name": "Encode string into Base64 format",
+        "not-implemented": true
+      },
+      "decode_from_base64": {
+        "name": "Decode string from Base64 format",
+        "not-implemented": true
+      },
+      "format_string_function": {
+        "name": "Function to format a string",
+        "code": "tool = 'codethesaurus'\nformated = string.format('The great learning tool %s',tool)\nprint(formated)"
+      },
+      "parameter_format_in_order": {
+        "name": "Parameter used in format function if they're used in order",
+        "code": "string.format(formatstring, ...)"
+      },
+      "parameter_format_numerical": {
+        "name": "Parameter used in format function if they're numerically numbered",
+        "not-implemented": true
+      },
+      "parameter_format_by_name": {
+        "name": "Paramater used in format function if they're named variables",
+        "not-implemented": true
+      },
+      "format_as_integer": {
+        "name": "Format parameter as an integer",
+        "code": "int   = 12\nprint(string.format('This is integer: %d',int))",
+        "comment":"If we take value of variable as string(EX: int = '12') instead integer/number, It will work too!"
+      },
+      "format_as_decimal": {
+        "name": "Format parameter as a decimal number",
+        "not-implemented": true
+      },
+      "format_as_fixed_decimal": {
+        "name": "Format parameter as a fixed-point decimal number",
+        "code": "num = 12.53232\nprint(string.format('%0.2f',num))",
+        "comment":"Output: 12.53\n%0.[N]f [where N is how many decimal you want after (.)point]"
+      },
+      "format_as_currency": {
+        "name": "Format parameter as a currency number",
+        "not-implemented": true
+      },
+      "format_as_percentage": {
+        "name": "Format parameter as a percentage number",
+        "not-implemented": true
+      },
+      "format_number_with_separators": {
+        "name": "Format number with thousand separators",
+        "not-implemented": true
+      },
+      "format_number_with_positive_negative_sign": {
+        "name": "Format number with positive/negative signs",
+        "code": "num = 12\nprint(string.format('%+d',num))"
+      },
+      "format_number_in_scientific_notation_little_e": {
+        "name": "Format number with scientific notation with 'e'",
+        "code": "num = 12645893253232\nprint(string.format('%e',num))"
+      },
+      "format_number_in_scientific_notation_big_e": {
+        "name": "Format number with scientific notation with 'E'",
+        "code": "num = 12645893253232\nprint(string.format('%E',num))"
+      },
+      "format_number_in_binary": {
+        "name": "Format number into binary",
+        "not-implemented": true
+      },
+      "format_number_in_octal": {
+        "name": "Format number into octal",
+        "code": "num = 8\nprint(string.format('%o',num))"
+      },
+      "format_number_in_hexadecimal": {
+        "name": "Format number into hexadecimal",
+        "code": "num = 10\nprint(string.format('%x',num))",
+        "comment":"%x for lowercase letters.\n%X upper letters."
+      }
+    }
+  }
