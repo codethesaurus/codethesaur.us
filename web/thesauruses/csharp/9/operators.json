@@ -122,6 +122,42 @@
       "not-implemented": "true",
       "name": "Is not operator"
     },
+    "logical_and": {
+      "code": "&&",
+      "name": "Logical AND Operator"
+    },
+    "logical_or": {
+      "code": "||",
+      "name": "Logical OR Operator"
+    },
+    "logical_not": {
+      "code": "!",
+      "name": "Logical NOT Operator"
+    },
+    "bitwise_and": {
+      "code": "&",
+      "name": "Bitwise AND operator"
+    },
+    "bitwise_and_assignmnet": {
+      "code": "&=",
+      "name": "Bitwise AND and assignment operator"
+    },
+    "bitwise_or": {
+      "code": "|",
+      "name": "Bitwise OR operator"
+    },
+    "bitwise_or_assignment": {
+      "code": "|=",
+      "name": "Bitwise OR and assignment operator"
+    },
+    "bitwise_not": {
+      "code": "~",
+      "name": "Bitwise NOT operator"
+    },
+    "bitwise_xor": {
+      "code": "^",
+      "name": "Bitwise XOR operator"
+    },
     "left_shift": {
       "code": "<<",
       "name": "Left shift bitwise operator"
