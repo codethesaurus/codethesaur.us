@@ -89,7 +89,7 @@
     },
     "anonymous_function_with_keyword_parameters_with_return": {
       "name": "Anonymous function that takes 0 or more defined keyword parameters and returns a value",
-      "code": "var method = function({param1, param2}) { return true; }",
+      "code": "var method = function({param1, param2}) { return true; }"
     },
     "anonymous_function_variable_parameters_with_return": {
       "name": "Anonymous function that takes an unknown number of parameters and returns a value",
