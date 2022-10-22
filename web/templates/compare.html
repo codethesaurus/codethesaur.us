@@ -62,6 +62,8 @@
                     <div class="card-body">
                         <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang1 }}/{{ version1 }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang1_friendlyname }}?
+                        </a><br>
+                        <a data-bs-toggle="modal" data-bs-target="#templateModal" href="javascript:void(0)">or get the whole template?
                         </a>
                     </div>
                 </div>
@@ -69,10 +71,29 @@
                     <div class="card-body">
                         <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang2 }}/{{ version2 }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang2_friendlyname }}?
+                        </a><br>
+                        <a data-bs-toggle="modal" data-bs-target="#templateModal" href="javascript:void(0)">or get the whole template?
                         </a>
                     </div>
                 </div>
             </div>
 
+        </div>
+
+        <div class="modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="templateModalLabel">Concept template</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="20" readonly style="max-width: 100%;">{{ template_concept }}</textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
         </div>
 {% endblock content %}

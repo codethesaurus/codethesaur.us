@@ -239,7 +239,12 @@ def compare(request):
         "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
         "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
-                and {lang2.friendly_name}"
+                and {lang2.friendly_name}",
+        "template_concept": generate_language_template(
+            lang1.key,
+            meta_structure.key,
+            version1
+        )
     }
 
     return render(request, 'compare.html', response)
@@ -330,7 +335,12 @@ def reference(request):
         "version": version,
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
-        "description": f"Code Thesaurus: Reference for {lang.key}"
+        "description": f"Code Thesaurus: Reference for {lang.key}",
+        "template_concept": generate_language_template(
+            lang.key,
+            meta_structure.key,
+            version
+        )
     }
 
     return render(request, 'reference.html', response)
