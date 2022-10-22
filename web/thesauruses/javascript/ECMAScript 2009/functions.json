@@ -60,29 +60,20 @@
     },
     "anonymous_function_no_parameters": {
       "name": "Anonymous function that takes no parameters",
-      "code": [
-        "const method = function() {}",
-        "const method = () => {}"
-      ]
+      "code": "var method = function() {}"
     },
     "anonymous_function_with_parameters": {
       "name": "Anonymous function that takes 1 or more defined parameters",
-      "code": [
-        "const method = function(param1, param2) {}",
-        "const method = (param1, param2) => {}"
-      ]
+      "code": "var method = function(param1, param2) {}"
     },
     "anonymous_function_with_keyword_parameters": {
       "name": "Anonymous function that takes 0 or more defined keyword parameters",
-      "code": [
-        "const method = function({param1, param2}) {}",
-        "const method = ({param1, param2}) => {}"
-      ]
+      "code": "var method = function({param1, param2}) {}"
     },
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
       "code": [
-        "const method = function() {",
+        "var method = function() {",
         "  var params = Array.prototype.slice.call(arguments); // convert arguments to an array",
         "  // do something with params",
         "}"
@@ -90,29 +81,20 @@
     },
     "anonymous_function_no_parameters_with_return": {
       "name": "Anonymous function that takes no parameters and returns a value",
-      "code": [
-        "const method = function() { return true; }",
-        "const method = () => true"
-      ]
+      "code": "var method = function() { return true; }"
     },
     "anonymous_function_with_parameters_with_return": {
       "name": "Anonymous function that takes 1 or more defined parameters and returns a value",
-      "code": [
-        "const method = function(param1, param2) { return true; }",
-        "const method = (param1, param2) => true"
-      ]
+      "code": "var method = function(param1, param2) { return true; }"
     },
     "anonymous_function_with_keyword_parameters_with_return": {
       "name": "Anonymous function that takes 0 or more defined keyword parameters and returns a value",
-      "code": [
-        "const method = function({param1, param2}) { return true; }",
-        "const method = ({param1, param2}) => true"
-      ]
+      "code": "var method = function({param1, param2}) { return true; }",
     },
     "anonymous_function_variable_parameters_with_return": {
       "name": "Anonymous function that takes an unknown number of parameters and returns a value",
       "code": [
-        "const method = function() {",
+        "var method = function() {",
         "  var params = Array.prototype.slice.call(arguments); // convert arguments to an array",
         "  // do something with params",
         "  return true;",
