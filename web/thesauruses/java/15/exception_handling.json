@@ -1,0 +1,316 @@
+{
+    "meta": {
+        "language": "java",
+        "language_name": "Java",
+        "structure": "exception_handling",
+        "language_version": "15"
+    },
+    "concepts": {
+        "statement_to_import_exception_handling": {
+            "name": "Import statement to add exception handling",
+            "not-implemented": true
+        },
+        "are_exception_types_functions": {
+            "name": "Are specific exception types a functions?",
+            "code": "No"
+        },
+        "are_exception_types_objects": {
+            "name": "Are specific exception types an object?",
+            "code": "Yes"
+        },
+        "are_exception_types_gotos": {
+            "name": "Are specific exception types a Goto statement?",
+            "code": "No"
+        },
+        "base_exception_type": {
+            "name": "Base exception type name",
+            "code": "Exception"
+        },
+        "define_new_exception_type": {
+            "name": "Statement to define a new exception type",
+            "code": "class CustomException extends Exception {\n    statements\n}"
+        },
+        "try_or_operator": {
+            "name": "Try-Or operator",
+            "not-implemented": true
+        },
+        "statement_to_start_trying_code": {
+            "name": "Statement to start a block of code to try",
+            "code": "try {\n    statements\n}"
+        },
+        "statement_to_start_catching_exceptions": {
+            "name": "Statement to start catching exceptions",
+            "code": "catch(CustomException e) {\n    statements\n}",
+            "comment": "Here, `CustomException` is the new exception that you have defined"
+        },
+        "statement_to_catch_generic_exception": {
+            "name": "Statement to catch a generic exception",
+            "code": "catch(Exception e) {\n    statements\n}"
+        },
+        "statement_to_catch_specific_exception": {
+            "name": "Statement to catch a specific exception",
+            "code": "catch(CustomException e) {\n    statements\n}",
+            "comment": "Here, `CustomException` is the new exception that you have defined"
+        },
+        "statement_to_catch_multiple_exceptions": {
+            "name": "Statement to catch multiple types of exceptions",
+            "code": "catch(ExceptionType1 | ExceptionType2 | ExceptionType3 e) {\n    statements\n}"
+        },
+        "statement_to_break_out_if_caught_exception": {
+            "name": "Statement to break out of a block if an exception is caught",
+            "not-implemented": true
+        },
+        "statement_to_stop_program_if_caught_exception": {
+            "name": "Statement to stop the program if an exception is caught",
+            "code": "catch(CustomException e) {\n    System.exit(1)\n}",
+            "comment": "The exit command placed in the catch block will terminate the program if an exception of type `CustomException` occurs"
+        },
+        "statement_to_start_code_if_no_exceptions_caught": {
+            "name": "Statement to start code if no exceptions are caught",
+            "code": [
+                "bool success = true;",
+                "\ntry {",
+                "\n    something();",
+                "\n} catch (Exception e) {",
+                "\n    success = false;",
+                "\n}",
+                "\nif (success) {",
+                "\n}"
+            ],
+            "comment": "Not natively possible, but we can use this hack to simulate Python's try-except-else"
+        },
+        "statement_to_start_cleaning_up_after_exception": {
+            "name": "Statement to start code ran after an exception",
+            "code": "finally {\n    statements\n}"
+        },
+        "order_to_call_all_statements": {
+            "name": "The order to call all statements in a block to catch exceptions",
+            "code": [
+                "bool success = true;",
+                "\ntry {",
+                "\n    something();",
+                "\n} catch (Exception e) {",
+                "\n    success = false;",
+                "\n}",
+                "\n    if (success) {",
+                "\n}",
+                "\nfinally {",
+                "\n}"
+            ]
+        },
+        "statement_to_end_trying_code": {
+            "name": "Statement to end a block of code to try ",
+            "not-implemented": true
+        },
+        "property_with_exception_code": {
+            "name": "Property within an exception object containing the error code",
+            "code": "cause"
+        },
+        "property_with_exception_message": {
+            "name": "Property within an exception object containing the error message",
+            "code": "message"
+        },
+        "property_with_stack_trace": {
+            "name": "Property within an exception object containing the stack trace",
+            "code": "stackTrace"
+        },
+        "property_containing_other_info": {
+            "name": "Property within an exception object containing additional information",
+            "not-implemented": true
+        },
+        "throw_generic_exception": {
+            "name": "Throw a generic exception",
+            "code": "throw new Exception()"
+        },
+        "throw_exception_as_text": {
+            "name": "Throw an exception as a text error message",
+            "code": "throw new Exception(\"my custom error message\")"
+        },
+        "throw_specific_exception_type": {
+            "name": "Throw an exception as a specific exception object",
+            "code": "throw new CustomException()"
+        },
+        "base_data_type_exception_type": {
+            "name": "Base class type for all data type exceptions",
+            "not-implemented": true
+        },
+        "invalid_data_type_exception_type": {
+            "name": "Class name for an invalid type exception",
+            "code": "NoSuchElementException"
+        },
+        "variable_not_found_exception_type": {
+            "name": "Class name for a variable not found exception",
+            "not-implemented": true
+        },
+        "object_not_found_exception_type": {
+            "name": "Class name for an object not found exception",
+            "code": "ObjectNotFoundException"
+        },
+        "index_out_of_bounds_exception_type": {
+            "name": "Class name for an index out of bounds exception",
+            "code": "ArrayIndexOutOfBoundsException"
+        },
+        "key_name_not_found_exception_type": {
+            "name": "Class name for a key name not found exception",
+            "not-implemented": true
+        },
+        "invalid_encoding_exception_type": {
+            "name": "Class name for an invalid encoding exception",
+            "code": "UnsupportedEncodingException"
+        },
+        "base_mathematical_exception_type": {
+            "name": "Base class name for a mathematical exception",
+            "code": "ArithmeticException"
+        },
+        "overflow_exception_type": {
+            "name": "Class name for an overflow exception",
+            "code": "BufferOverflowException"
+        },
+        "floating_point_exception_type": {
+            "name": "Class name for a floating point exception",
+            "not-implemented": true
+        },
+        "divide_by_zero_exception_type": {
+            "name": "Class name for a divide by zero exception",
+            "code": "ArithmeticException"
+        },
+        "cannot_cast_types_exception_type": {
+            "name": "Class name for a cast type exception",
+            "code": "ClassCastException"
+        },
+        "base_memory_exception_type": {
+            "name": "Base class name for a memory exception",
+            "code": "VirtualMachineError"
+        },
+        "cannot_allocate_memory_exception_type": {
+            "name": "Class name for being an unable to allocate memory exception",
+            "code": "OutOfMemoryError"
+        },
+        "out_of_memory_exception_type": {
+            "name": "Class name for a running out of memory exception",
+            "code": "OutOfMemoryError"
+        },
+        "stack_overflow_exception_type": {
+            "name": "Class name for a stack overflow exception",
+            "code": "StackOverflowError"
+        },
+        "cannot_access_pointer_exception_type": {
+            "name": "Class name for a cannot access pointer exception",
+            "code": "NullPointerException"
+        },
+        "base_file_exception_type": {
+            "name": "Base class name for a file operation exception",
+            "code": "FileSystemException"
+        },
+        "end_of_file_exception_type": {
+            "name": "Class name for an end of file exception",
+            "code": "EOFException"
+        },
+        "file_does_not_exist_exception_type": {
+            "name": "Class name for a file does not exist exception",
+            "code": "NoSuchFileException"
+        },
+        "file_already_exists_exception_type": {
+            "name": "Class name for a file already exists exception",
+            "code": "FileAlreadyExistsException"
+        },
+        "item_is_actually_directory_exception_type": {
+            "name": "Class name for an item is actually a directory exception",
+            "not-implemented": true
+        },
+        "item_is_not_a_directory_exception_type": {
+            "name": "Class name for an item is not a directory exception",
+            "code": "NotDirectoryException"
+        },
+        "cannot_access_file_exception_type": {
+            "name": "Class name for a cannot access file exception",
+            "code": "AccessDeniedException"
+        },
+        "drive_disconnected_exception_type": {
+            "name": "Class name for a drive disconnected exception",
+            "not-implemented": true
+        },
+        "file_no_longer_available_exception_type": {
+            "name": "Class name for a file that is no longer available exception",
+            "code": "FileNotFoundException"
+        },
+        "file_timeout_exception": {
+            "name": "Class name for a file timeout error",
+            "code": "IOException"
+        },
+        "base_network_exception_type": {
+            "name": "Base class name for a network exception",
+            "code": "RemoteException"
+        },
+        "connection_refused_exception_type": {
+            "name": "Class name for a network connection refused exception",
+            "code": "ConnectException"
+        },
+        "connection_broken_exception_type": {
+            "name": "Class name for a network connection broken exception",
+            "code": "RemoteException"
+        },
+        "invalid_hostname_exception": {
+            "name": "Class name for an invalid hostname exception",
+            "code": "UnknownHostException"
+        },
+        "cannot_establish_connection_exception_type": {
+            "name": "Class name for a cannot establish a network connection exception",
+            "code": "ConnectException"
+        },
+        "connection_timed_out_exception_type": {
+            "name": "Class name for a network connection timed out exception",
+            "code": "SocketTimeoutException"
+        },
+        "bad_certificate_exception_type": {
+            "name": "Class name for a bad SSL/TLS certificate exception",
+            "code": "CertificateException"
+        },
+        "expired_certificate_exception_type": {
+            "name": "Class name for an expired SSL/TLS certificate exception",
+            "code": "CertificateExpiredException"
+        },
+        "child_process_could_not_be_created_exception_type": {
+            "name": "Class name for a child process that could not be created exception",
+            "not-implemented": true
+        },
+        "child_process_unexpected_ending_exception_type": {
+            "name": "Class name for a child process that ended unexpectedly exception",
+            "not-implemented": true
+        },
+        "process_not_found_exception_type": {
+            "name": "Class name for a process that's not found exception",
+            "code": "MethodNotFoundException"
+        },
+        "base_test_assertion_exception_type": {
+            "name": "Base class name for a test assertion exception",
+            "code": "AssertionError"
+        },
+        "import_not_found_exception_type": {
+            "name": "Class name for an import that's not found exception",
+            "code": "ClassNotFoundException"
+        },
+        "keyboard_interrupt_exception_type": {
+            "name": "Class name for a keyboard interrupt occurrence exception",
+            "code": "InterruptedException"
+        },
+        "syntax_exception_type": {
+            "name": "Class name for a syntax exception",
+            "not-implemented": true,
+            "comment": "Exceptions occur at runtime, whereas syntax errors are caught during compilation, which would prevent the program from compiling (and running)."
+        },
+        "uncaught_signal_exception_type": {
+            "name": "Class name for an uncaught system signal exception",
+            "not-implemented": true
+        },
+        "base_warning_type": {
+            "name": "Base class name for a generic warning",
+            "not-implemented": true
+        },
+        "deprecation_warning_type": {
+            "name": "Class name for a deprecated statement/function warning",
+            "code": "@Deprecated",
+            "comment": "Above annotation is used to indicate that certain fields/methods/classes have been deprecated"
+        }
+    }
+}
