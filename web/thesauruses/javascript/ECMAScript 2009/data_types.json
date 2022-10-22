@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "language": "javascript",
+    "language_version": "ECMAScript 2009",
+    "language_name": "JavaScript",
+    "structure": "data_types"
+  },
+  "concepts": {
+    "boolean": {
+      "code": "Boolean",
+      "comment": "The type is an object wrapper for the boolean primitive data type",
+      "name": "Boolean"
+    },
+    "signed_integer_8_bit": {
+      "not-implemented": true,
+      "name": "Signed 8-bit integer"
+    },
+    "unsigned_integer_8_bit": {
+      "not-implemented": true,
+      "name": "Unsigned 8-bit integer"
+    },
+    "signed_integer_16_bit": {
+      "not-implemented": true,
+      "name": "Signed 16-bit integer"
+    },
+    "unsigned_integer_16_bit": {
+      "not-implemented": true,
+      "name": "Unsigned 16-bit integer"
+    },
+    "signed_integer_32_bit": {
+      "not-implemented": true,
+      "name": "Signed 32-bit integer"
+    },
+    "unsigned_integer_32_bit": {
+      "not-implemented": true,
+      "name": "Unsigned 32-bit integer"
+    },
+    "signed_integer_64_bit": {
+      "not-implemented": true,
+      "name": "Signed 64-bit integer"
+    },
+    "unsigned_integer_64_bit": {
+      "not-implemented": true,
+      "name": "Unsigned 64-bit integer"
+    },
+    "signed_integer_as_object": {
+      "code": "BigInt",
+      "comment": "The type is an object wrapper for the bigint primitive data type",
+      "name": "Signed object-based Integer"
+    },
+    "unsigned_integer_as_object": {
+      "not-implemented": true,
+      "name": "Unsigned object-based Integer"
+    },
+    "signed_float_16_bit": {
+      "not-implemented": true,
+      "name": "Signed 16-bit floating point"
+    },
+    "unsigned_float_16_bit": {
+      "not-implemented": true,
+      "name": "Unsigned 16-bit floating point"
+    },
+    "signed_float_32_bit": {
+      "not-implemented": true,
+      "name": "Signed 32-bit floating point"
+    },
+    "unsigned_float_32_bit": {
+      "not-implemented": true,
+      "name": "Unsigned 32-bit floating point"
+    },
+    "signed_float_64_bit": {
+      "code": "Number",
+      "comment": "The Number wrapper object is represented by a double-precision 64-bit float under the hood. All the 'Not-a-Number' values in the IEEE Standard specification are clubbed into a single special NaN value in javascript.",
+      "name": "Signed 64-bit floating point"
+    },
+    "unsigned_float_64_bit": {
+      "not-implemented": true,
+      "name": "Unsigned 64-bit floating point"
+    },
+    "signed_float_as_object": {
+      "code": "Number",
+      "comment": "The type is an object wrapper for the number primitive data type",
+      "name": "Signed object-based floating point"
+    },
+    "unsigned_float_as_object": {
+      "not-implemented": true,
+      "name": "Unsigned object-based floating point"
+    },
+    "character": {
+      "not-implemented": true,
+      "name": "Character"
+    },
+    "string_as_object": {
+      "code": "String",
+      "comment": "The type is an object wrapper for the string primitive data type",
+      "name": "String as an object"
+    },
+    "string_as_array": {
+      "code": "String",
+      "comment": "String is implemented as a set of ordered sequences of zero or more 16-bit unsigned integer values (each treated as UTF-16 code unit). String objects support [index] notation to dereference characters, but do not support the full spectrum of array methods",
+      "name": "String as an array of characters"
+    },
+    "complex_as_object": {
+      "not-implemented": true,
+      "name": "Complex Number as an object"
+    },
+    "real_number_part": {
+      "not-implemented": true,
+      "name": "Complex number real part"
+    },
+    "imaginary_number_part": {
+      "not-implemented": true,
+      "name": "Complex number imaginary part"
+    }
+  }
+}
