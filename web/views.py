@@ -240,10 +240,15 @@ def compare(request):
         "categories": both_categories,
         "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
                 and {lang2.friendly_name}",
-        "template_concept": generate_language_template(
+        "template_concept_1": generate_language_template(
             lang1.key,
             meta_structure.key,
             version1
+        ),
+        "template_concept_2": generate_language_template(
+            lang2.key,
+            meta_structure.key,
+            version2
         )
     }
 
