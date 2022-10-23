@@ -8,7 +8,7 @@ import os
 class Command(BaseCommand):
     help = 'Generate language thesaurus files to be filled out'
 
-    def handle(self, *args, **options):
+    def handle(self):
         meta_info = MetaInfo()
         languages = meta_info.languages
         structures = meta_info.structures
