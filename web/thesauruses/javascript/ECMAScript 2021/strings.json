@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "language": "javascript",
+    "language_name": "JavaScript",
+    "structure": "strings",
+    "language_version": "ECMAScript 2021"
+  },
+  "concepts": {
+    "is_primitive_or_not": {
+      "name": "Is this a built-in type in this language?",
+      "code": [
+        "Yes"
+      ]
+    },
+    "import": {
+      "name": "Import the string class",
+      "not-implemented": "true"
+    },
+    "default_string_byte_encoding": {
+      "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
+      "not-implemented": "true",
+      "comment": "Reference: https://stackoverflow.com/questions/11141136/what-is-the-default-javascript-character-encoding"
+    },
+    "create_new_string": {
+      "name": "Create new string",
+      "code": [
+        "let newString = 'New String Example'; \n let newString2 = \"New String Example 2\";"
+      ],
+      "comment": "Double and single quotes can be used interchangeably for creating strings."
+    },
+    "create_multiline_string": {
+      "name": "Create new multi-line string",
+      "code": [
+        "let multilineString = `New Multi-Line String example`;"
+      ]
+    },
+    "assign_new_string": {
+      "name": "Assign string from another string",
+      "code": [
+        "let s1 = 'Hello World!';\nlet s2 = s1;"
+      ]
+    },
+    "destroy_string": {
+      "name": "Destroy string",
+      "not-implemented": true
+    },
+    "length_of_string": {
+      "name": "Length of string",
+      "code": [
+        "'thisstring'.length;"
+      ]
+    },
+    "max_length_of_string": {
+      "name": "Maximum length of string",
+      "not-implemented": true,
+      "comment": "Depends on the browser being used."
+    },
+    "clear_string": {
+      "name": "Clear/empty string",
+      "not-implemented": true
+    },
+    "is_empty": {
+      "name": "Is string empty?",
+      "not-implemented": true
+    },
+    "concatenate_two_strings": {
+      "name": "Concatenate/join two strings",
+      "code": [
+        "let s1 = 'Hello';\ns2 = 'World';\n\nlet interpolation = `${s1}${s2}`\nlet s3 = s1 + s2;\ns1 += s2;"
+      ]
+    },
+    "concatenate_many_strings": {
+      "name": "Concatenate/join many strings",
+      "code": [
+        "['Hello', ' ', 'World'].join('');"
+      ]
+    },
+    "is_all_alphabetical": {
+      "name": "Is string all alphabetical characters?",
+      "not-implemented": true
+    },
+    "is_all_numerical": {
+      "name": "Is string all numerical characters?",
+      "not-implemented": true
+    },
+    "is_all_alphanumeric": {
+      "name": "Is string all alphanumeric characters?",
+      "not-implemented": true
+    },
+    "is_decimal": {
+      "name": "Is string a decimal number?",
+      "not-implemented": true
+    },
+    "is_all_whitespaces": {
+      "name": "Is string all whitespace characters?",
+      "code": [
+        "if (str.trim() === '')\n    'Is all whitespace'"
+      ]
+    },
+    "is_all_uppercase": {
+      "name": "Is string all uppercase characters?",
+      "code": [
+        "let txt = 'abc'; \n if (txt == txt.toUpperCase()) {\n 'Is all uppercase';\n} else {\n 'Is not all uppercase';\n}"
+      ]
+    },
+    "is_all_lowercase": {
+      "name": "Is string all lowercase characters?",
+      "code": [
+        "let txt = 'ABC'; \n if (txt == txt.toLowerCase()) {\n 'Is all Lower Case';\n} else {\n 'Is not all Lower Case';\n}"
+      ]
+    },
+    "is_in_titlecase": {
+      "name": "Is string formatted in title case?",
+      "not-implemented": true
+    },
+    "does_substring_exist": {
+      "name": "Does a substring exist in a string?",
+      "code": [
+        "if (str.indexOf('subString') > -1)\n    'Str contains subString';"
+      ]
+    },
+    "find_start_index_of_substring": {
+      "name": "Find index of where a substring starts",
+      "code": [
+        "str.indexOf('subString');"
+      ]
+    },
+    "find_start_index_of_additional_substring": {
+      "name": "Find index of an additional substring (or starting at another index)",
+      "code": [
+        "str.indexOf('subString', startIndex);"
+      ]
+    },
+    "find_start_index_of_substring_from_end": {
+      "name": "Find substring index starting at end",
+      "code": [
+        "str.lastIndexOf('subString');"
+      ]
+    },
+    "count_occurrences_of_substring": {
+      "name": "Find number of occurences of a substring",
+      "code": [
+        "str.match('regex').length;"
+      ]
+    },
+    "get_leftmost_characters": {
+      "name": "Get a specified number of characters from the left",
+      "code": [
+        "str.substr(0, numberOfCharacters);"
+      ]
+    },
+    "get_rightmost_characters": {
+      "name": "Get a specified number of characters from the right",
+      "code": [
+        "str.substr(str.Length - numberOfCharacters, numberOfCharacters);"
+      ]
+    },
+    "get_substring_from_start_and_end_index": {
+      "name": "Return a substring from a string based on starting and ending indices",
+      "code": [
+        "str.substring(startIndex, endIndex);"
+      ]
+    },
+    "get_substring_from_start_index_and_length": {
+      "name": "Return a substring from a string based on starting index and size of substring",
+      "code": [
+        "str.substr(startIndex, numberOfCharacters);"
+      ]
+    },
+    "convert_to_uppercase": {
+      "name": "Convert string to all uppercase",
+      "code": [
+        "str.toUpperCase();"
+      ]
+    },
+    "convert_to_lowercase": {
+      "name": "Convert string to all lowercase",
+      "code": [
+        "str.toLowerCase();"
+      ]
+    },
+    "convert_to_title_case": {
+      "name": "Convert string to title case",
+      "not-implemented": true
+    },
+    "capitalize_string": {
+      "name": "Capitalize first letter of a string",
+      "code": [
+        "let str = 'hello World';",
+        "let strCapitalised = str[0].toUpperCase() + str.substr(1);"
+      ]
+    },
+    "remove_whitespace": {
+      "name": "Remove all whitespaces from string",
+      "not-implemented": true,
+      "comment": "This can be done with Regular Expressions: https://stackoverflow.com/questions/24580912/remove-all-white-space-from-string-javascript"
+    },
+    "replace_substring": {
+      "name": "Replace a substring with another string",
+      "not-implemented": true,
+      "comment": "This can be done with Regular Expressions."
+    },
+    "replace_all_substring": {
+      "name": "Replace all substring matches with another string",
+      "code": [
+        "str.replaceAll(substring, newString);"
+      ]
+    },
+    "split_at_index": {
+      "name": "Split string into a list of strings at a given index",
+      "not-implemented": true
+    },
+    "split_at_newlines": {
+      "name": "Split string into a list of strings at every new line character",
+      "code": [
+        "str.split('\\n');"
+      ]
+    },
+    "split_at_substring": {
+      "name": "Split string by locating all substrings",
+      "code": [
+        "str.split(subString);"
+      ]
+    },
+    "merge_lists_into_string": {
+      "name": "Merge a list of strings into one string",
+      "code": [
+        "[ 'a', 'b', 'c' ].join(delimiter);"
+      ]
+    },
+    "encode_html_entities": {
+      "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)",
+      "not-implemented": true
+    },
+    "decode_html_entities": {
+      "name": "Decode HTML entitles into characters",
+      "not-implemented": true
+    },
+    "encode_url_percent": {
+      "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
+      "code": [
+        "encodeURI(str);"
+      ]
+    },
+    "decode_url_percent": {
+      "name": "Decode URL percent encoding",
+      "code": [
+        "decodeURI(str);"
+      ]
+    },
+    "encode_to_base64": {
+      "name": "Encode string into Base64 format",
+      "code": [
+        "btoa(str);"
+      ]
+    },
+    "decode_from_base64": {
+      "name": "Decode string from Base64 format",
+      "code": [
+        "atob(str);"
+      ]
+    },
+    "format_string_function": {
+      "name": "Function to format a string",
+      "not-implemented": true
+    },
+    "parameter_format_in_order": {
+      "name": "Parameter used in format function if they're used in order",
+      "not-implemented": true
+    },
+    "parameter_format_numerical": {
+      "name": "Parameter used in format function if they're numerically numbered",
+      "not-implemented": true
+    },
+    "parameter_format_by_name": {
+      "name": "Paramater used in format function if they're named variables",
+      "not-implemented": true
+    },
+    "format_as_integer": {
+        "not-implemented": true,
+        "name": "Format parameter as an integer"
+      },
+      "format_as_decimal": {
+        "code": [
+          "new Intl.NumberFormat(locale, { style: 'decimal' });"
+        ],
+        "name": "Format parameter as a decimal number"
+      },
+      "format_as_fixed_decimal": {
+        "not-implemented": true,
+        "name": "Format parameter as a fixed-point decimal number"
+      },
+      "format_as_currency": {
+        "code": [
+          "new Intl.NumberFormat(locale, { style: 'currency', currency: currencyCode });"
+        ],
+        "name": "Format parameter as a currency number"
+      },
+      "format_as_percentage": {
+        "code": [
+          "new Intl.NumberFormat(locale, { style: 'percent' });"
+        ],
+        "name": "Format parameter as a percentage number"
+      },
+      "format_number_with_separators": {
+        "code": [
+          "new Intl.NumberFormat('en-US');"
+        ],
+        "comment": "Other locales are avalible to achive this.",
+        "name": "Format number with thousand separators"
+      },
+      "format_number_with_positive_negative_sign": {
+        "code": [
+          "new Intl.NumberFormat(locale, { signDisplay: 'always' });"
+        ],
+        "name": "Format number with positive/negative signs"
+      },
+      "format_number_in_scientific_notation_little_e": {
+        "not-implemented": true,
+        "name": "Format number with scientific notation with 'e'"
+      },
+      "format_number_in_scientific_notation_big_e": {
+        "code": [
+          "new Intl.NumberFormat(locale, { notation: 'scientific' });"
+        ],
+        "name": "Format number with scientific notation with 'E'"
+      },
+      "format_number_in_binary": {
+        "code": [
+          "(number >>> 0).toString(2);"
+        ],
+        "comment": "Shift right used to unsign the number so negatives are returned as their 32-bit two's complement representation",
+        "name": "Format number into binary"
+      },
+    "format_number_in_octal": {
+      "name": "Format number into octal",
+      "code": [
+        "num.toString(8);"
+      ]
+    },
+    "format_number_in_hexadecimal": {
+      "name": "Format number into hexadecimal",
+      "code": [
+        "num.toString(16);"
+      ]
+    }
+  }
+}

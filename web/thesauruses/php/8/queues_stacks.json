@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "language": "php",
+    "language_name": "PHP",
+    "structure": "queues_stacks",
+    "language_version": "8"
+  },
+  "concepts": {
+    "simple_queue_import_statement": {
+      "not-implemented": "true"
+    },
+    "simple_queue_data_type": {
+      "code": [
+        "array"
+      ]
+    },
+    "simple_queue_create_statement": {
+      "code": [
+        "$queue = [];"
+      ]
+    },
+    "simple_queue_create_copy_statement": {
+      "code": [
+        "$clonedQueue = array_replace([], $original);"
+      ]
+    },
+    "simple_queue_create_copy_from_list_statement": {
+      "code": [
+        "$clonedQueue = [...$queue];"
+      ]
+    },
+    "simple_queue_destroy_statement": {
+      "code": [
+        "unset($queue);"
+      ]
+    },
+    "simple_queue_data_structure": {
+      "code": [
+        "array"
+      ]
+    },
+    "circular_queue_import_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_data_type": {
+      "not-implemented": "true"
+    },
+    "circular_queue_create_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_create_copy_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_create_copy_from_list_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_destroy_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_data_structure": {
+      "not-implemented": "true"
+    },
+    "priority_queue_import_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_data_type": {
+      "not-implemented": "true"
+    },
+    "priority_queue_create_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_create_copy_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_create_copy_from_list_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_destroy_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_data_structure": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_import_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_data_type": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_create_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_create_copy_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_create_copy_from_list_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_destroy_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_data_structure": {
+      "not-implemented": "true"
+    },
+    "stack_import_statement": {
+      "not-implemented": "true"
+    },
+    "stack_data_type": {
+      "code": [
+        "array"
+      ]
+    },
+    "stack_create_statement": {
+      "code": [
+        "$stack = [];"
+      ]
+    },
+    "stack_create_copy_statement": {
+      "code": [
+        "$clonedStack = array_replace([], $original);"
+      ]
+    },
+    "stack_create_copy_from_list_statement": {
+      "code": [
+        "clonedStack = [...$stack];"
+      ]
+    },
+    "stack_destroy_statement": {
+      "code": [
+        "unset($stack);"
+      ]
+    },
+    "stack_data_structure": {
+      "code": [
+        "array"
+      ]
+    },
+    "queue_enqueue_an_item": {
+      "code": [
+        "array_push($queue, $item);"
+      ]
+    },
+    "queue_enqueue_priority_item": {
+      "not-implemented": "true"
+    },
+    "queue_enqueue_from_list": {
+      "code": [
+        "array_map(fn($item) => array_push($queue, $item), $list);"
+      ]
+    },
+    "queue_enqueue_priority_from_list": {
+      "not-implemented": "true"
+    },
+    "queue_dequeue_return_an_item": {
+      "code": [
+        "$item = array_shift($queue);"
+      ]
+    },
+    "queue_dequeue_delete_an_item": {
+      "code": [
+        "array_shift($queue);"
+      ]
+    },
+    "queue_peek_at_next_item": {
+      "code": [
+        "next($queue);"
+      ]
+    },
+    "queue_peek_at_last_item": {
+      "code": [
+        "end($queue);"
+      ]
+    },
+    "queue_duplicate_next_item": {
+      "not-implemented": "true"
+    },
+    "queue_swap_two_items": {
+      "code": [
+        "$queue = [5, 10, 15];",
+        "[$queue[0], $queue[1]] = [$queue[1], $queue[0]];"
+      ]
+    },
+    "queue_get_size": {
+      "code": [
+        "count($queue);"
+      ]
+    },
+    "queue_get_capacity": {
+      "not-implemented": "true"
+    },
+    "queue_export_to_list": {
+      "not-implemented": "true"
+    },
+    "queue_clear_all": {
+      "code": [
+        "$queue = [5, 10, 15];",
+        "$queue = [];"
+      ]
+    },
+    "stack_push_item": {
+      "code": [
+        "array_unshift($stack, $item);"
+      ]
+    },
+    "stack_pop_return_item": {
+      "code": [
+        "$item = array_shift($stack);"
+      ]
+    },
+    "stack_pop_delete_item": {
+      "code": [
+        "array_shift($stack);"
+      ]
+    },
+    "stack_peek_at_next_item": {
+      "code": [
+        "next($stack);"
+      ]
+    },
+    "stack_peek_at_last_item": {
+      "code": [
+        "end($stack);"
+      ]
+    },
+    "stack_duplicate_next_item": {
+      "not-implemented": "true"
+    },
+    "stack_swap_two_items": {
+      "code": [
+        "$stack = [5, 10, 15];",
+        "[$stack[0], $stack[1]] = [$stack[1], $stack[0]];"
+      ]
+    },
+    "stack_get_size": {
+      "code": [
+        "count($stack);"
+      ]
+    },
+    "stack_get_capacity": {
+      "not-implemented": "true"
+    },
+    "stack_export_to_list": {
+      "not-implemented": "true"
+    },
+    "stack_clear_all": {
+      "code": [
+        "$stack = [5, 10, 15];",
+        "$stack = [];"
+      ]
+    },
+    "iterate_pointer_data_type": {
+      "code": [
+        "mixed"
+      ]
+    },
+    "iterate_create_pointer": {
+      "not-implemented": "true"
+    },
+    "iterate_move_to_next_item": {
+      "code": [
+        "next($queue);"
+      ]
+    },
+    "iterate_move_to_previous_item": {
+      "code": [
+        "prev($queue);"
+      ]
+    },
+    "iterate_move_to_beginning": {
+      "code": [
+        "reset($queue);"
+      ]
+    },
+    "iterate_move_to_end": {
+      "code": [
+        "end($queue);"
+      ]
+    }
+  }
+}

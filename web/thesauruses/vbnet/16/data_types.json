@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "language": "vbnet",
+    "language_version": "16.0",
+    "language_name": "Visual Basic",
+    "structure": "data_types"
+  },
+  "concepts": {
+    "boolean": {
+      "code": "Boolean"
+    },
+    "signed_integer_8_bit": {
+      "code": "SByte"
+    },
+    "unsigned_integer_8_bit": {
+      "code": "Byte"
+    },
+    "signed_integer_16_bit": {
+      "code": "Short"
+    },
+    "unsigned_integer_16_bit": {
+      "code": "UShort"
+    },
+    "signed_integer_32_bit": {
+      "code": "Integer"
+    },
+    "unsigned_integer_32_bit": {
+      "code": "UInteger"
+    },
+    "signed_integer_64_bit": {
+      "code": "Long"
+    },
+    "unsigned_integer_64_bit": {
+      "code": "ULong"
+    },
+    "signed_integer_as_object": {
+      "not-implemented": true
+    },
+    "unsigned_integer_as_object": {
+      "not-implemented": true
+    },
+    "signed_float_16_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_16_bit": {
+      "not-implemented": true
+    },
+    "signed_float_32_bit": {
+      "code": "Single"
+    },
+    "unsigned_float_32_bit": {
+      "not-implemented": true
+    },
+    "signed_float_64_bit": {
+      "code": "Double"
+    },
+    "unsigned_float_64_bit": {
+      "not-implemented": true
+    },
+    "signed_float_as_object": {
+      "not-implemented": true
+    },
+    "unsigned_float_as_object": {
+      "not-implemented": true
+    },
+    "character": {
+      "code": "Char"
+    },
+    "string_as_object": {
+      "code": "String"
+    },
+    "string_as_array": {
+      "not-implemented": true
+    },
+    "complex_as_object": {
+      "not-implemented": true
+    },
+    "real_number_part": {
+      "not-implemented": true
+    },
+    "imaginary_number_part": {
+      "not-implemented": true
+    }
+  }
+}

@@ -10,25 +10,82 @@
       "code": "bool",
       "name": "Boolean"
     },
+    "signed_integer_8_bit": {
+      "code": "sbyte"
+    },
+    "unsigned_integer_8_bit": {
+      "code": "byte"
+    },
     "signed_integer_16_bit": {
       "code": "short",
       "name": "Signed 16-bit integer"
+    },
+    "unsigned_integer_16_bit": {
+      "code": "ushort"
     },
     "signed_integer_32_bit": {
       "name": "Signed 32-bit integer",
       "code": "int"
     },
+    "unsigned_integer_32_bit": {
+      "code": "uint"
+    },
     "signed_integer_64_bit": {
       "name": "Signed 64-bit integer",
       "code": "long"
+    },
+    "unsigned_integer_64_bit": {
+      "code": "ulong"
+    },
+    "signed_integer_as_object": {
+      "not-implemented": true
+    },
+    "unsigned_integer_as_object": {
+      "not-implemented": true
+    },
+    "signed_float_16_bit": {
+      "not-implemented": true
+    },
+    "unsigned_float_16_bit": {
+      "not-implemented": true
     },
     "signed_float_32_bit": {
       "name": "Signed 32-bit floating point",
       "code": "float"
     },
+    "unsigned_float_32_bit": {
+      "not-implemented": true
+    },
     "signed_float_64_bit": {
       "name": "Signed 64-bit floating point",
       "code": "double"
+    },
+    "unsigned_float_64_bit": {
+      "not-implemented": true
+    },
+    "signed_float_as_object": {
+      "not-implemented": true
+    },
+    "unsigned_float_as_object": {
+      "not-implemented": true
+    },
+    "character": {
+      "code": "char"
+    },
+    "string_as_object": {
+      "code": "string"
+    },
+    "string_as_array": {
+      "not-implemented": true
+    },
+    "complex_as_object": {
+      "not-implemented": true
+    },
+    "real_number_part": {
+      "not-implemented": true
+    },
+    "imaginary_number_part": {
+      "not-implemented": true
     }
   }
 }
