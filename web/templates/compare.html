@@ -29,11 +29,23 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="text-center">{{ lang1_friendlyname|linebreaksbr }}'s Implementation</h3>
+                        {% if lang1_draft %}
+                        <div class="alert alert-warning" role="alert">
+                            <strong>Warning!</strong> This is a draft. It may not be complete.
+                            <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang1 }}/{{ version1 }}/{{ concept }}.json" class="alert-link">Help us improve!</a>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
                         <h3 class="text-center">{{ lang2_friendlyname|linebreaksbr }}'s Implementation</h3>
+                        {% if lang2_draft %}
+                        <div class="alert alert-warning" role="alert">
+                            <strong>Warning!</strong> This is a draft. It may not be complete.
+                            <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang2 }}/{{ version2 }}/{{ concept }}.json" class="alert-link">Help us improve!</a>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

@@ -152,6 +152,20 @@ class Language:
         """
         return self.concept(concept_key).get("comment", "")
 
+    def is_draft(self, version, structure_key):
+        """
+        Returns a Boolean if the version is a draft
+
+        :param version: the version of the language
+        :param structure_key: the ID for the structure to load
+        :return: Boolean if the version is a draft
+        """
+        file_name = f"{structure_key}.json"
+        file_path = os.path.join(self.language_dir, version, file_name)
+        with open(file_path, 'r', encoding='UTF-8') as file:
+            file_json = json.load(file)
+            return file_json["meta"].get("draft", False)
+
 
 class MetaInfo:
     """Holds info about structures and languages"""

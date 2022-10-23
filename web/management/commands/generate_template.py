@@ -21,17 +21,20 @@ class Command(BaseCommand):
                 choices=structures
                 )
         parser.add_argument('--language-version', required=True)
+        parser.add_argument('--draft', required=False)
 
     def handle(self, *args, **options):
+        draft = options.get('draft', False)
         for structure in options['structures']:
-            self.generate_file(options['language'], structure, options['language_version'])
+            self.generate_file(options['language'], structure, options['language_version'], draft=draft)
 
-    def generate_file(self, language, structure, language_version):
+    def generate_file(self, language, structure, language_version, draft=False):
         try:
             template = generate_language_template(
                 language,
                 structure,
-                language_version
+                language_version,
+                draft=draft
             )
         except ValueError:
             self.stdout.write(
