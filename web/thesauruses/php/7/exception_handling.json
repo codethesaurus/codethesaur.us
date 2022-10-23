@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "language": "php",
+    "language_version": "7.0",
+    "language_name": "PHP",
+    "structure": "exception_handling"
+  },
+  "concepts": {
+    "statement_to_import_exception_handling": {
+      "code": "Default: false, Custom: True",
+      "name": "Import statement to add exception handling",
+      "comment": "Default (predefined) exceptions do not require an import. <https://www.php.net/manual/en/reserved.exceptions.php>\nCustom exceptions will require either called via their inline namespacing or imported."
+    },
+    "are_exception_types_functions": {
+      "code": "true",
+      "name": "Are specific exception types a functions?"
+    },
+    "are_exception_types_objects": {
+      "code": "false",
+      "name": "Are specific exception types an object?"
+    },
+    "are_exception_types_gotos": {
+      "code": "false",
+      "name": "Are specific exception types a Goto statement?"
+    },
+    "base_exception_type": {
+      "code": "Exception",
+      "name": "Base exception type name"
+    },
+    "define_new_exception_type": {
+      "code": "class CustomException extends Exception {\n   public function customMessage() {\n       return $this->getMessage() . ' is not a valid type.';\n   }\n}",
+      "name": "Statement to define a new exception type"
+    },
+    "try_or_operator": {
+      "not-implemented": "true",
+      "name": "Try-Or operator"
+    },
+    "statement_to_start_trying_code": {
+      "code": "try {\n  // try statements\n}",
+      "name": "Statement to start a block of code to try"
+    },
+    "statement_to_start_catching_exceptions": {
+      "code": "catch (Exception $e) {\n    echo 'Caught exception: ',  $e->getMessage();\n}",
+      "name": "Statement to start catching exceptions"
+    },
+    "statement_to_catch_generic_exception": {
+      "code": "catch (Exception $e) {\n    echo 'Caught exception: ',  $e->getMessage();\n}",
+      "name": "Statement to catch a generic exception"
+    },
+    "statement_to_catch_specific_exception": {
+      "code": "catch (CustomException $e) {\n    echo 'Caught exception: ',  $e->customMessage();\n}",
+      "name": "Statement to catch a specific exception"
+    },
+    "statement_to_catch_multiple_exceptions": {
+      "code": "try { // ... } catch { \\Foo\\Exception $e) {\n   // ... }\n{ catch( \\Bar\\Exception $e) {\n    // ... \n}",
+      "name": "Statement to catch multiple types of exceptions"
+    },
+    "statement_to_break_out_if_caught_exception": {
+      "not-implemented": "true",
+      "name": "Statement to break out of a block if an exception is caught"
+    },
+    "statement_to_stop_program_if_caught_exception": {
+      "code": "throw new Exception();",
+      "name": "Statement to stop the program if an exception is caught"
+    },
+    "statement_to_start_code_if_no_exceptions_caught": {
+      "not-implemented": "true",
+      "name": "Statement to start code if no exceptions are caught"
+    },
+    "statement_to_start_cleaning_up_after_exception": {
+      "code": "finally {\n   // ... \n}",
+      "name": "Statement to start code ran after an exception"
+    },
+    "order_to_call_all_statements": {
+      "code": "try { // ... } catch { \\Foo\\Exception $e) {\n   // ... }\n{ catch( \\Bar\\Exception $e) {\n    // ... \n}",
+      "name": "The order to call all statements in a block to catch exceptions"
+    },
+    "statement_to_end_trying_code": {
+      "not-implemented": "true",
+      "name": "Statement to end a block of code to try "
+    },
+    "property_with_exception_code": {
+      "code": "$this->getCode();",
+      "name": "Property within an exception object containing the error code"
+    },
+    "property_with_exception_message": {
+      "code": "$this->getMessage();",
+      "name": "Property within an exception object containing the error message"
+    },
+    "property_with_stack_trace": {
+      "code": "$this->getTrace();",
+      "name": "Property within an exception object containing the stack trace"
+    },
+    "property_containing_other_info": {
+      "code": "$this->getLine();",
+      "name": "Property within an exception object containing additional information"
+    },
+    "throw_generic_exception": {
+      "code": "throw new Exception();",
+      "name": "Throw a generic exception"
+    },
+    "throw_exception_as_text": {
+      "code": "echo 'Message: ' . $e->getMessage();",
+      "name": "Throw an exception as a text error message"
+    },
+    "throw_specific_exception_type": {
+      "code": "throw new customException();",
+      "name": "Throw an exception as a specific exception object"
+    },
+    "base_data_type_exception_type": {
+      "code": "Exception",
+      "name": "Base class type for all data type exceptions"
+    },
+    "invalid_data_type_exception_type": {
+      "code": "TypeError",
+      "name": "Class name for an invalid type exception"
+    },
+    "variable_not_found_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a variable not found exception"
+    },
+    "object_not_found_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for an object not found exception"
+    },
+    "index_out_of_bounds_exception_type": {
+      "not-implemented": "true",  
+      "name": "Class name for an index out of bounds exception"
+    },
+    "key_name_not_found_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a key name not found exception"
+    },
+    "invalid_encoding_exception_type": {
+      "not-implemented": "true",  
+      "name": "Class name for an invalid encoding exception"
+    },
+    "base_mathematical_exception_type": {
+      "code": "ArithmeticError",
+      "name": "Base class name for a mathematical exception"
+    },
+    "overflow_exception_type": {
+      "code": "OverflowException",
+      "name": "Class name for an overflow exception"
+    },
+    "floating_point_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a floating point exception"
+    },
+    "divide_by_zero_exception_type": {
+      "code": "DivisionByZeroError",
+      "name": "Class name for a divide by zero exception"
+    },
+    "cannot_cast_types_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a cast type exception"
+    },
+    "base_memory_exception_type": {
+      "not-implemented": "true",
+      "name": "Base class name for a memory exception"
+    },
+    "cannot_allocate_memory_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for being an unable to allocate memory exception"
+    },
+    "out_of_memory_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a running out of memory exception"
+    },
+    "stack_overflow_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a stack overflow exception"
+    },
+    "cannot_access_pointer_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a cannot access pointer exception"
+    },
+    "base_file_exception_type": {
+      "not-implemented": "true",
+      "name": "Base class name for a file operation exception"
+    },
+    "end_of_file_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for an end of file exception"
+    },
+    "file_does_not_exist_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a file does not exist exception"
+    },
+    "file_already_exists_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a file already exists exception"
+    },
+    "item_is_actually_directory_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for an item is actually a directory exception"
+    },
+    "item_is_not_a_directory_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for an item is not a directory exception"
+    },
+    "cannot_access_file_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a cannot access file exception"
+    },
+    "drive_disconnected_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a drive disconnected exception"
+    },
+    "file_no_longer_available_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a file that is no longer available exception"
+    },
+    "file_timeout_exception": {
+      "not-implemented": "true",
+      "name": "Class name for a file timeout error"
+    },
+    "base_network_exception_type": {
+      "not-implemented": "true",
+      "name": "Base class name for a network exception"
+    },
+    "connection_refused_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a network connection refused exception"
+    },
+    "connection_broken_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a network connection broken exception"
+    },
+    "invalid_hostname_exception": {
+      "not-implemented": "true",
+      "name": "Class name for an invalid hostname exception"
+    },
+    "cannot_establish_connection_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a cannot establish a network connection exception"
+    },
+    "connection_timed_out_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a network connection timed out exception"
+    },
+    "bad_certificate_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a bad SSL/TLS certificate exception"
+    },
+    "expired_certificate_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for an expired SSL/TLS certificate exception"
+    },
+    "base_test_assertion_exception_type": {
+      "code": "$this->expectException(string $exceptionClassName);",
+      "name": "Base class name for a test assertion exception",
+      "comment": "From PHPUnit"
+    },
+    "child_process_could_not_be_created_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a child process that could not be created exception"
+    },
+    "child_process_unexpected_ending_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a child process that ended unexpectedly exception"
+    },
+    "process_not_found_exception_type": {
+      "not-implemented": "true",
+      "name": "Class name for a process that's not found exception"
+    },
+    "import_not_found_exception_type": {
+      "not-implemented": "true",
+      "code": "LoadError",
+      "name": "Class name for an import that's not found exception"
+    },
+    "keyboard_interrupt_exception_type": {
+      "not-implemented": "true",
+      "code": "Interrupt",
+      "name": "Class name for a keyboard interrupt occurrence exception"
+    },
+    "syntax_exception_type": {
+      "code": "Parse Error",
+      "name": "Class name for a syntax exception"
+    },
+    "uncaught_signal_exception_type": {
+      "not-implemented": "true",
+      "code": "SignalException",
+      "name": "Class name for an uncaught system signal exception"
+    },
+    "base_warning_type": {
+      "code": "error_reporting(E_WARNING);",
+      "name": "Base class name for a generic warning"
+    },
+    "deprecation_warning_type": {
+      "not-implemented": "true",
+      "name": "Class name for a deprecated statement/function warning"
+    }
+  }
+}
