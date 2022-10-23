@@ -52,9 +52,18 @@
                 </div>
                 <div class="card" id="start-of-row">
                     <div class="card-body">
-                        <a data-bs-toggle="modal" data-bs-target="#templateModal" href="javascript:void(0)">
-                            Want to add or correct information for {{ lang_friendlyname }}?
-                        </a>
+                        <a data-bs-toggle="modal" data-bs-target="#templateModal" href="javascript:void(0)"
+                        onclick="event.preventDefault(),(function(){
+                            const textarea = document.getElementById('templateModal').querySelector('textarea');
+                            if (textarea.value) return;
+                            fetch('/api/{{ lang }}/{{ version }}/{{ concept }}').then(function(response){
+                                return response.text();
+                            }).then(function(data){
+                                textarea.value = data;
+                            }).catch(function(error){
+                                console.log(error);
+                            });
+                        })()">or get the complete template.</a>
                     </div>
                 </div>
             </div>
@@ -69,7 +78,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <textarea class="form-control" rows="20" readonly style="max-width: 100%;">{{ template_concept }}</textarea>
+                    <textarea class="form-control" rows="20" readonly style="max-width: 100%;"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

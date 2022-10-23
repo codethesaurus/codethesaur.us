@@ -60,16 +60,34 @@
                 </div>
                 <div class="card" id="start-of-row">
                     <div class="card-body">
-                        <a data-bs-toggle="modal" data-bs-target="#templateModal1" href="javascript:void(0)">
-                            Want to add or correct information for {{ lang1_friendlyname }}?
-                        </a>
+                        <a data-bs-toggle="modal" data-bs-target="#templateModal1" href="javascript:void(0)"
+                        onclick="event.preventDefault(),(function(){
+                            const textarea = document.getElementById('templateModal1').querySelector('textarea');
+                            if (textarea.value) return;
+                            fetch('/api/{{ lang1 }}/{{ version1 }}/{{ concept }}').then(function(response){
+                                return response.text();
+                            }).then(function(data){
+                                textarea.value = data;
+                            }).catch(function(error){
+                                console.log(error);
+                            });
+                        })()">or get the complete template.</a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <a data-bs-toggle="modal" data-bs-target="#templateModal2" href="javascript:void(0)">
-                            Want to add or correct information for {{ lang2_friendlyname }}?
-                        </a>
+                        <a data-bs-toggle="modal" data-bs-target="#templateModal2" href="javascript:void(0)"
+                        onclick="event.preventDefault(),(function(){
+                            const textarea = document.getElementById('templateModal2').querySelector('textarea');
+                            if (textarea.value) return;
+                            fetch('/api/{{ lang2 }}/{{ version2 }}/{{ concept }}').then(function(response){
+                                return response.text();
+                            }).then(function(data){
+                                textarea.value = data;
+                            }).catch(function(error){
+                                console.log(error);
+                            });
+                        })()">or get the complete template.</a>
                     </div>
                 </div>
             </div>
