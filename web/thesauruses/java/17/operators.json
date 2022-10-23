@@ -63,7 +63,7 @@
       "name": "Factorial operator"
     },
     "absolute_value": {
-      "not-implemented": "true",
+      "code": "Math.abs(-4)",
       "name": "Absolute value operator"
     },
     "percentage": {
