@@ -3,7 +3,7 @@
       "language": "javascript",
       "language_name": "JavaScript",
       "structure": "strings",
-      "language_version": "ECMAScript 2020"
+      "language_version": "ECMAScript 2023"
     },
     "concepts": {
       "is_primitive_or_not": {

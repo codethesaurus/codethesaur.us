@@ -3,7 +3,7 @@
       "language": "javascript",
       "language_name": "JavaScript",
       "structure": "strings",
-      "language_version": "ECMAScript 2020"
+      "language_version": "ECMAScript 2009"
     },
     "concepts": {
       "is_primitive_or_not": {
@@ -24,7 +24,10 @@
       },
       "create_multiline_string": {
         "name": "Create new multi-line string",
-        "code": "const str = `Hello\nWorld`;"
+        "code": [
+          "const str = \"Hello \\",
+          "World\";"
+        ]
       },
       "assign_new_string": {
         "name": "Assign string from another string",
@@ -108,7 +111,6 @@
       "does_substring_exist": {
         "name": "Does a substring exist in a string?",
         "code": [
-            "str.includes(substring)",
             "str.indexOf(substring) !== -1"
         ]
       },
@@ -295,49 +297,39 @@
       },
       "format_as_decimal": {
         "name": "Format parameter as a decimal number",
-        "code": [
-          "parseFloat(str)",
-          "new Intl.NumberFormat(locale, { style: \"decimal\" }).format(str)"
-        ]
+        "code": "parseFloat(str)"
       },
       "format_as_fixed_decimal": {
         "name": "Format parameter as a fixed-point decimal number",
         "code": [
           "+str.toFixed(2)",
           "Number(str).toFixed(2)",
-          "parseFloat(str).toFixed(2)",
-          "new Intl.NumberFormat(locale, { style: \"decimal\", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(str)"
+          "parseFloat(str).toFixed(2)"
         ]
       },
       "format_as_currency": {
         "name": "Format parameter as a currency number",
-        "code": "new Intl.NumberFormat(locale, { style: \"currency\", currency: currency }).format(str)"
+        "code": "str.toLocaleString(locale, { style: 'currency', currency: currency })"
       },
       "format_as_percentage": {
         "name": "Format parameter as a percentage number",
-        "code": "new Intl.NumberFormat(locale, { style: \"percent\", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(str)"
+        "code": "str.toLocaleString(locale, { style: 'percent' })"
       },
       "format_number_with_separators": {
         "name": "Format number with thousand separators",
-        "code": "new Intl.NumberFormat(locale).format(str)"
+        "code": "str.toLocaleString(locale)"
       },
       "format_number_with_positive_negative_sign": {
         "name": "Format number with positive/negative signs",
-        "code": "new Intl.NumberFormat(locale, { signDisplay: 'always' }).format(str)"
+        "code": "str.toLocaleString(locale, { style: 'decimal' })"
       },
       "format_number_in_scientific_notation_little_e": {
         "name": "Format number with scientific notation with 'e'",
-        "code": [
-          "number.toExponential(2)",
-          "new Intl.NumberFormat(locale, { notation: \"scientific\" }).format(str)"
-        ]
+        "code": "number.toExponential(2)"
       },
       "format_number_in_scientific_notation_big_e": {
         "name": "Format number with scientific notation with 'E'",
-        "code": [
-          "number.toExponential(2).toUpperCase()",
-          "new Intl.NumberFormat(locale, { notation: \"scientific\", upperCase: true }).format(str)"
-        ]
+        "code": "number.toExponential(2).toUpperCase()"
       },
       "format_number_in_binary": {
         "name": "Format number into binary",
