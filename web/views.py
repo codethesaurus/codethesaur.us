@@ -468,7 +468,7 @@ def concept_reference(concept_id, name, lang):
 
 # API functions
 
-def api_get_template(request, lang, version, structure):
+def api(request, lang, version, structure):
     """
     Returns the template for a language, version, and structure
 

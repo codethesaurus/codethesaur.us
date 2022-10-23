@@ -27,6 +27,6 @@ urlpatterns = [
     path('reference/', views.reference, name='reference'),
 
     # /api/{lang}/{version}/{structure}
-    path('api/<str:lang>/<str:version>/<str:structure>/', views.api_get_template, name='api_get_template'),
+    path('api/<str:lang>/<str:version>/<str:structure>/', views.api, name='api'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
