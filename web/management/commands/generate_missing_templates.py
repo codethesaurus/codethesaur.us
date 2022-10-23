@@ -11,7 +11,6 @@ class Command(BaseCommand):
     help = 'Generate language thesaurus files to be filled out'
 
     def handle(self, *args, **options):
-        # retrieve all languages and structures
         meta_info = MetaInfo()
         languages = meta_info.languages
         structures = meta_info.structures
