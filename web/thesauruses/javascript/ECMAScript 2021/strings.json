@@ -75,23 +75,23 @@
       },
       "is_all_alphabetical": {
         "name": "Is string all alphabetical characters?",
-        "code": "str.match(/^[a-zA-Z]+$/)"
+        "code": "(/^[a-zA-Z]+$/g).test(str)"
       },
       "is_all_numerical": {
         "name": "Is string all numerical characters?",
-        "code": "str.match(/^[0-9]+$/)"
+        "code": "(/^[0-9]+$/g).test(str)"
       },
       "is_all_alphanumeric": {
         "name": "Is string all alphanumeric characters?",
-        "code": "str.match(/^[a-zA-Z0-9]+$/)"
+        "code": "(/^[a-zA-Z0-9]+$/g).test(str)"
       },
       "is_decimal": {
         "name": "Is string a decimal number?",
-        "code": "str.match(/^[0-9]+\\.[0-9]+$/)"
+        "code": "(/^[0-9]+\\.[0-9]+$/g).test(str)"
       },
       "is_all_whitespaces": {
         "name": "Is string all whitespace characters?",
-        "code": "str.match(/^\\s+$/)"
+        "code": "(/^[\\s]+$/g).test(str)"
       },
       "is_all_uppercase": {
         "name": "Is string all uppercase characters?",
