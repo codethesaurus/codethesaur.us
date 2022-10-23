@@ -52,7 +52,7 @@
       "name": "Statement to catch a specific exception"
     },
     "statement_to_catch_multiple_exceptions": {
-      "code": "try { // ... } catch { \\Foo\\Exception $e) {\n   // ... }\n{ catch( \\Bar\\Exception $e) {\n    // ... \n}",
+      "code": "try { // ... \n} catch { \\Foo\\Exception $e) {\n   // ... \n} catch( \\Bar\\Exception $e) {\n    // ... \n}",
       "name": "Statement to catch multiple types of exceptions"
     },
     "statement_to_break_out_if_caught_exception": {
@@ -72,7 +72,7 @@
       "name": "Statement to start code ran after an exception"
     },
     "order_to_call_all_statements": {
-      "code": "try { // ... } catch { \\Foo\\Exception $e) {\n   // ... }\n{ catch( \\Bar\\Exception $e) {\n    // ... \n}",
+      "code": "try { // ... \n} catch { \\Foo\\Exception $e) {\n   // ... \n} catch( \\Bar\\Exception $e) {\n    // ... \n}",
       "name": "The order to call all statements in a block to catch exceptions"
     },
     "statement_to_end_trying_code": {
