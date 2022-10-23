@@ -182,10 +182,7 @@
       },
       "convert_to_title_case": {
         "name": "Convert string to title case",
-        "code": [
-            "str.replace(/\\w+/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase())",
-            "str.replace(/\\w+/g, (w) => w[0].toUpperCase() + w.slice(1))"
-        ]
+        "code": "str.replace(/\\w+/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase())"
       },
       "capitalize_string": {
         "name": "Capitalize first letter of a string",
