@@ -11,7 +11,7 @@ from django.http import (
     HttpResponseNotFound,
     HttpResponseServerError
 )
-from django.shortcuts import render
+from django.shortcuts import HttpResponse, render
 from django.utils.html import escape, strip_tags
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
@@ -538,3 +538,45 @@ def concept_reference(concept_id, name, lang):
         "code": format_code_for_display(concept_id, lang),
         "comment": format_comment_for_display(concept_id, lang)
     }
+
+
+# API functions
+
+def api_get_template(request, lang, version, structure):
+    """
+    Returns the template for a language, version, and structure
+
+    :param lang: language to get the template for
+    :param version: version of the language
+    :param structure: structure of the language
+    :return: HttpResponse object with rendered object of the page
+    :throws: HttpResponseNotFound if the language, version, or structure is not found
+    """
+    store_url_info(request)
+
+    file_path = os.path.join(
+        os.path.dirname(__file__),
+        "thesauruses",
+        lang,
+        version,
+        structure + ".json"
+    )
+
+    try:
+        with open(file_path, "r") as file:
+            response = file.read()
+    except FileNotFoundError:
+        return HttpResponseNotFound()
+    
+    template = generate_language_template(
+        lang,
+        structure,
+        version
+    )
+
+    response = json.loads(response)
+    template = json.loads(template)
+    response = merge(template, response)
+    response = json.dumps(response, indent=2)
+
+    return HttpResponse(response, content_type="application/json")
