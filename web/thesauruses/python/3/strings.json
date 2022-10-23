@@ -16,7 +16,7 @@
     },
     "default_string_byte_encoding": {
       "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
-      "not-implemented": true
+      "code": "UTF-8"
     },
     "create_new_string": {
       "name": "Create new string",
@@ -24,15 +24,15 @@
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
-      "not-implemented": true
+      "code": "example = \"\"\"New\nMulti-line\nString\n\"\"\""
     },
     "assign_new_string": {
       "name": "Assign string from another string",
-      "not-implemented": true
+      "code": "example = \"New String Example\"\nanother = example"
     },
     "destroy_string": {
       "name": "Destroy string",
-      "not-implemented": true
+      "code": "del example"
     },
     "length_of_string": {
       "name": "Length of string",
@@ -44,7 +44,7 @@
     },
     "clear_string": {
       "name": "Clear/empty string",
-      "not-implemented": true
+      "code": "example = \"\""
     },
     "is_empty": {
       "name": "Is string empty?",

@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "language": "objectivec",
+    "language_version": "2.0",
+    "language_name": "Objective-C",
+    "structure": "queues_stacks"
+  },
+  "concepts": {
+    "simple_queue_import_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "simple_queue_data_type": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "simple_queue_create_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "simple_queue_create_copy_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "simple_queue_create_copy_from_list_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "simple_queue_destroy_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "simple_queue_data_structure": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "circular_queue_import_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_data_type": {
+      "not-implemented": "true"
+    },
+    "circular_queue_create_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_create_copy_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_create_copy_from_list_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_destroy_statement": {
+      "not-implemented": "true"
+    },
+    "circular_queue_data_structure": {
+      "not-implemented": "true"
+    },
+    "priority_queue_import_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_data_type": {
+      "not-implemented": "true"
+    },
+    "priority_queue_create_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_create_copy_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_create_copy_from_list_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_destroy_statement": {
+      "not-implemented": "true"
+    },
+    "priority_queue_data_structure": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_import_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_data_type": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_create_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_create_copy_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_create_copy_from_list_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_destroy_statement": {
+      "not-implemented": "true"
+    },
+    "double_ended_queue_data_structure": {
+      "not-implemented": "true"
+    },
+    "stack_import_statement": {
+      "not-implemented": "true"
+    },
+    "stack_data_type": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for stacks. Developers can create them with `<NSMutableArray>`"
+    },
+    "stack_create_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for stacks. Developers can create them with `<NSMutableArray>`"
+    },
+    "stack_create_copy_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for stacks. Developers can create them with `<NSMutableArray>`"
+    },
+    "stack_create_copy_from_list_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for stacks. Developers can create them with `<NSMutableArray>`"
+    },
+    "stack_destroy_statement": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for stacks. Developers can create them with `<NSMutableArray>`"
+    },
+    "stack_data_structure": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for stacks. Developers can create them with `<NSMutableArray>`"
+    },
+    "queue_enqueue_an_item": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "queue_enqueue_priority_item": {
+      "not-implemented": "true",
+      "comment": "Objective-C does not have a native implementation for queues. Developers can create them with `<NSMutableArray>`"
+    },
+    "queue_enqueue_from_list": {
+      "not-implemented": "true"
+    },
+    "queue_enqueue_priority_from_list": {
+      "not-implemented": "true"
+    },
+    "queue_dequeue_return_an_item": {
+      "not-implemented": "true"
+    },
+    "queue_dequeue_delete_an_item": {
+      "not-implemented": "true"
+    },
+    "queue_peek_at_next_item": {
+      "not-implemented": "true"
+    },
+    "queue_peek_at_last_item": {
+      "not-implemented": "true"
+    },
+    "queue_duplicate_next_item": {
+      "not-implemented": "true"
+    },
+    "queue_swap_two_items": {
+      "not-implemented": "true"
+    },
+    "queue_get_size": {
+      "not-implemented": "true"
+    },
+    "queue_get_capacity": {
+      "not-implemented": "true"
+    },
+    "queue_export_to_list": {
+      "not-implemented": "true"
+    },
+    "queue_clear_all": {
+      "not-implemented": "true"
+    },
+    "stack_push_item": {
+      "not-implemented": "true"
+    },
+    "stack_pop_return_item": {
+      "not-implemented": "true"
+    },
+    "stack_pop_delete_item": {
+      "not-implemented": "true"
+    },
+    "stack_peek_at_next_item": {
+      "not-implemented": "true"
+    },
+    "stack_peek_at_last_item": {
+      "not-implemented": "true"
+    },
+    "stack_duplicate_next_item": {
+      "not-implemented": "true"
+    },
+    "stack_swap_two_items": {
+      "not-implemented": "true"
+    },
+    "stack_get_size": {
+      "not-implemented": "true"
+    },
+    "stack_get_capacity": {
+      "not-implemented": "true"
+    },
+    "stack_export_to_list": {
+      "not-implemented": "true"
+    },
+    "stack_clear_all": {
+      "not-implemented": "true"
+    },
+    "iterate_pointer_data_type": {
+      "not-implemented": "true"
+    },
+    "iterate_create_pointer": {
+      "not-implemented": "true"
+    },
+    "iterate_move_to_next_item": {
+      "not-implemented": "true"
+    },
+    "iterate_move_to_previous_item": {
+      "not-implemented": "true"
+    },
+    "iterate_move_to_beginning": {
+      "not-implemented": "true"
+    },
+    "iterate_move_to_end": {
+      "not-implemented": "true"
+    }
+  }
+}
