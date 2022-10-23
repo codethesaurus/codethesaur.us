@@ -1,0 +1,134 @@
+{
+    "meta": {
+      "language": "r",
+      "language_name": "R",
+      "structure": "data_types",
+      "language_version": "4"
+    },
+    "concepts": {
+      "boolean": {
+        "name": "Boolean",
+        "code": [
+          "myvar <- TRUE",
+          "as.logical(x)"
+        ],
+        "comment": "r types variables by value; boolean is logical. "
+      },
+      "signed_integer_8_bit": {
+        "name": "Signed 8-bit integer",
+        "not-implemented":true
+      },
+      "unsigned_integer_8_bit": {
+        "name": "Unsigned 8-bit integer",
+        "not-implemented":true
+      },
+      "signed_integer_16_bit": {
+        "name": "Signed 16-bit integer",
+        "not-implemented":true
+      },
+      "unsigned_integer_16_bit": {
+        "name": "Unsigned 16-bit integer",
+        "not-implemented":true
+      },
+      "signed_integer_32_bit": {
+        "name": "Signed 32-bit integer",
+        "code": [
+          "myvar <- 123L",
+          "as.integer(x)"
+        ],
+        "comment":"the L indicates that it is an integer. R only has a 32 bit signed integer."
+      },
+      "unsigned_integer_32_bit": {
+        "name": "Unsigned 32-bit integer",
+        "not-implemented":true
+      },
+      "signed_integer_64_bit": {
+        "name": "Signed 64-bit integer",
+        "not-implemented":true
+      },
+      "unsigned_integer_64_bit": {
+        "name": "Unsigned 64-bit integer",
+        "not-implemented":true
+      },
+      "signed_integer_as_object": {
+        "name": "Signed object-based Integer",
+        "not-implemented":true
+      },
+      "unsigned_integer_as_object": {
+        "name": "Unsigned object-based Integer",
+        "not-implemented":true
+      },
+      "signed_float_16_bit": {
+        "name": "Signed 16-bit floating point",
+        "not-implemented":true
+      },
+      "unsigned_float_16_bit": {
+        "name": "Unsigned 16-bit floating point",
+        "not-implemented":true
+      },
+      "signed_float_32_bit": {
+        "name": "Signed 32-bit floating point",
+        "code": [
+            "myvar <- 123",
+            "as.numeric(x)"
+          ]
+      },
+      "unsigned_float_32_bit": {
+        "name": "Unsigned 32-bit floating point",
+        "not-implemented":true
+      },
+      "signed_float_64_bit": {
+        "name": "Signed 64-bit floating point",
+        "not-implemented":true
+      },
+      "unsigned_float_64_bit": {
+        "name": "Unsigned 64-bit floating point",
+        "not-implemented":true
+      },
+      "signed_float_as_object": {
+        "name": "Signed object-based floating point",
+        "not-implemented":true
+      },
+      "unsigned_float_as_object": {
+        "name": "Unsigned object-based floating point",
+        "not-implemented":true
+      },
+      "character": {
+        "name": "Character",
+        "code": [
+          "myvar <- 'some text'",
+          "as.character(x)"
+        ]
+      },
+      "string_as_object": {
+        "name": "String as an object",
+        "not-implemented":true
+      },
+      "string_as_array": {
+        "name": "String as an array of characters",
+        "code": [
+          "myarr <- c('a','b','c')",
+          "unlist(strsplit('abc', split = ''))"
+        ]
+      },
+      "complex_as_object": {
+        "name": "Complex Number as an object",
+        "code": [
+          "z <- complex(real = stats::rnorm(100), imaginary = stats::rnorm(100))",
+          "as.complex(x)"
+        ]
+      },
+      "real_number_part": {
+        "name": "Complex number real part",
+        "code": [
+          "Re(z)"
+        ]
+      },
+      "imaginary_number_part": {
+        "name": "Complex number imaginary part",
+        "code": [
+          "Im(z)"
+        ]
+      }
+    }
+  }
