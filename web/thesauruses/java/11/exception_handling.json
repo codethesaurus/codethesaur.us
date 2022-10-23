@@ -69,13 +69,13 @@
             "name": "Statement to start code if no exceptions are caught",
             "code": [
                 "bool success = true;",
-                "\ntry {",
-                "\n    something();",
-                "\n} catch (Exception e) {",
-                "\n    success = false;",
-                "\n}",
-                "\nif (success) {",
-                "\n}"
+                "try {",
+                "    something();",
+                "} catch (Exception e) {",
+                "    success = false;",
+                "}",
+                "if (success) {",
+                "}"
             ],
             "comment": "Not natively possible, but we can use this hack to simulate Python's try-except-else"
         },
@@ -87,15 +87,15 @@
             "name": "The order to call all statements in a block to catch exceptions",
             "code": [
                 "bool success = true;",
-                "\ntry {",
-                "\n    something();",
-                "\n} catch (Exception e) {",
-                "\n    success = false;",
-                "\n}",
-                "\n    if (success) {",
-                "\n}",
-                "\nfinally {",
-                "\n}"
+                "try {",
+                "    something();",
+                "} catch (Exception e) {",
+                "    success = false;",
+                "}",
+                "    if (success) {",
+                "}",
+                "finally {",
+                "}"
             ]
         },
         "statement_to_end_trying_code": {
