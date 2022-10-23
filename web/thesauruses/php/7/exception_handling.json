@@ -266,12 +266,10 @@
     },
     "import_not_found_exception_type": {
       "not-implemented": "true",
-      "code": "LoadError",
       "name": "Class name for an import that's not found exception"
     },
     "keyboard_interrupt_exception_type": {
       "not-implemented": "true",
-      "code": "Interrupt",
       "name": "Class name for a keyboard interrupt occurrence exception"
     },
     "syntax_exception_type": {
@@ -280,7 +278,6 @@
     },
     "uncaught_signal_exception_type": {
       "not-implemented": "true",
-      "code": "SignalException",
       "name": "Class name for an uncaught system signal exception"
     },
     "base_warning_type": {
