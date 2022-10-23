@@ -4,8 +4,6 @@ from web.models import Language, MetaInfo
 
 import os
 
-from web.thesaurus_template_generators import generate_language_template
-
 
 class Command(BaseCommand):
     help = 'Generate language thesaurus files to be filled out'
