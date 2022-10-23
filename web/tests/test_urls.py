@@ -27,7 +27,6 @@ class TestUrls(SimpleTestCase):
         url = reverse('reference')
         self.assertEqual(resolve(url).func, reference)
 
-    # test for /api/{lang}/{version}/{concept} url
     def test_api_url(self):
         """ensure the api url uses the api function"""
         url = reverse('api', args=['javascript', 'ECMAScript 2023', 'classes'])
