@@ -312,7 +312,7 @@
       "name": "Get list length"
     },
     "resize_list": {
-      "code": "You can remove items individually to reach the desired size.",
+      "comment": "You can remove items individually to reach the desired size.",
       "not-implemented": true,
       "name": "Increase/decrease list size"
     },
