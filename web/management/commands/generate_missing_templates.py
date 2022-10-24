@@ -25,4 +25,4 @@ class Command(BaseCommand):
                         structure + '.json'
                     )
                     if not os.path.exists(file_path):
-                        os.system(f'python manage.py generate_template {language} {structure} --language-version {version} --draft=True')
+                        os.system(f'python manage.py generate_template "{language}" "{structure}" --language-version="{version}" --draft=True')
