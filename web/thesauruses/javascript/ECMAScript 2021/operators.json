@@ -140,7 +140,7 @@
       "code" : "operand1 & operand2",
       "name" : "Bitwise AND operator"
   },
-"bitwise_and_assignmnet": {
+"bitwise_and_assignment": {
       "code" : "result &= operand1",
       "name" : "Bitwise AND and assignment operator"
   },
