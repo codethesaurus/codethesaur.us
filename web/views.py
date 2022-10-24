@@ -1,5 +1,4 @@
 """codethesaur.us views"""
-import json
 import random
 import os
 
@@ -17,7 +16,7 @@ from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 
-from web.models import MetaInfo, SiteVisit, LookupData
+from web.models import Language, MetaInfo, SiteVisit, LookupData
 from web.thesaurus_template_generators import generate_language_template
 
 from codethesaurus.settings import BASE_DIR
@@ -468,41 +467,22 @@ def concept_reference(concept_id, name, lang):
 
 # API functions
 
-def api(request, lang, version, structure):
+def api(request, lang, version, structure_key):
     """
-    Returns the template for a language, version, and structure
+    Returns the filled template for a given language and concept
 
-    :param lang: language to get the template for
-    :param version: version of the language
-    :param structure: structure of the language
-    :return: HttpResponse object with rendered object of the page
-    :throws: HttpResponseNotFound if the language, version, or structure is not found
+    :param request: HttpRequest object
+    :param lang: language
+    :param version: version
+    :param structure_key: concept
+    :return: HttpResponse filled template of concept
     """
     store_url_info(request)
 
-    file_path = os.path.join(
-        os.path.dirname(__file__),
-        "thesauruses",
-        lang,
-        version,
-        structure + ".json"
-    )
+    lang = Language(lang, version)
+    response = lang.load_filled_concept(structure_key, version)
 
-    try:
-        with open(file_path, "r") as file:
-            response = file.read()
-    except FileNotFoundError:
+    if response is False:
         return HttpResponseNotFound()
-    
-    template = generate_language_template(
-        lang,
-        structure,
-        version
-    )
-
-    response = json.loads(response)
-    template = json.loads(template)
-    response = merge(template, response)
-    response = json.dumps(response, indent=2)
 
     return HttpResponse(response, content_type="application/json")

@@ -26,7 +26,7 @@ urlpatterns = [
     # /reference/lang1/
     path('reference/', views.reference, name='reference'),
 
-    # /api/{lang}/{version}/{structure}
-    path('api/<str:lang>/<str:version>/<str:structure>/', views.api, name='api'),
+    # /api/{lang}/{version}/{structure_key}
+    path('api/<str:lang>/<str:version>/<str:structure_key>/', views.api, name='api'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,8 +1,10 @@
 """models of codethesaur.us"""
 import json
 import os
+from jsonmerge import merge
 
 from django.db import models
+
 
 # pylint: disable=too-few-public-methods
 class MetaStructure:
@@ -88,6 +90,44 @@ class Language:
         with open(file_path, 'r', encoding='UTF-8') as file:
             file_json = json.load(file)
             self.concepts = file_json["concepts"]
+
+    def load_filled_concept(self, structure_key, version):
+        from web.thesaurus_template_generators import generate_language_template
+        """
+        Loads the concept from the language's structure file
+
+        :param structure_key: the ID for the concept to load
+        :param version: the version of the language
+        :return: a dict containing the code and comment, and possibly the
+            'not-implemented' flag. They are empty code entries if not specified
+        :rtype: object Filled template
+        """
+        file_path = os.path.join(
+            os.path.dirname(__file__),
+            "thesauruses",
+            self.key,
+            version,
+            structure_key + ".json"
+        )
+
+        try:
+            with open(file_path, "r") as file:
+                response = file.read()
+        except FileNotFoundError:
+            return False
+        
+        template = generate_language_template(
+            self.key,
+            structure_key,
+            version
+        )
+
+        response = json.loads(response)
+        template = json.loads(template)
+        response = merge(template, response)
+        response = json.dumps(response, indent=2)
+
+        return response
 
 
     def concept(self, concept_key):
