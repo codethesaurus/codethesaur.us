@@ -149,3 +149,5 @@ STATICFILES_DIRS = [
 
 # Configure Django App for Heroku.
 django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True, logging=True)
+
+PYGMENTS_STYLES = ['colorful', 'default', 'sas',  'xcode', 'rrt']
