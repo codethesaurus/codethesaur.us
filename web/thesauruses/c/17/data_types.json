@@ -6,21 +6,45 @@
     "structure": "data_types"
   },
   "concepts": {
+    "boolean": {
+      "name": "Boolean",
+      "not-implemented": "true"
+    },
     "signed_integer_8_bit": {
       "name": "Signed 8-bit integer",
-      "code": "unknown"
+      "code": "signed char"
+    },
+    "unsigned_integer_8_bit": {
+      "name": "Unsigned 8-bit integer",
+      "code": "unsigned char"
     },
     "signed_integer_16_bit": {
       "name": "Signed 16-bit integer",
-      "code": "short"
+      "code": "signed int"
+    },
+    "unsigned_integer_16_bit": {
+      "name": "Unsigned 16-bit integer",
+      "code": "unsigned int"
     },
     "signed_integer_32_bit": {
       "name": "Signed 32-bit integer",
-      "code": "int"
+      "code": "long"
+    },
+    "unsigned_integer_32_bit": {
+      "name": "Unsigned 32-bit integer",
+      "code": "unsigned long"
     },
     "signed_integer_64_bit": {
       "name": "Signed 64-bit integer",
-      "code": "long"
+      "code": "long long"
+    },
+    "unsigned_integer_64_bit": {
+      "name": "Unsigned 64-bit integer",
+      "code": "unsigned long long"
+    },
+    "signed_float_16_bit": {
+      "name": "Signed 16-bit floating point",
+      "not-implemented":"true"
     },
     "signed_float_32_bit": {
       "name": "Signed 32-bit floating point",
@@ -30,13 +54,37 @@
       "name": "Signed 64-bit floating point",
       "code": "double"
     },
+    "signed_float_as_object"{
+      "name":"Signed object-based floating point",
+      "not-implemented":"true"
+    },
+    "unsigned_float_as_object"{
+      "name":"Unsigned object-based floating point",
+      "not-implemented":"true"
+    },
     "character": {
-      "name" : "Character",
-      "code" : "char"
+      "name": "Character",
+      "code": "char"
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "not-implemented":"true"
     },
     "string_as_array": {
       "name": "String as an array of characters",
-      "code": "char []"
+      "code": "char[]"
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "code": "struct complex{float real;float imag}"
+    },
+    "real_number_part": {
+      "name": "Complex number real part",
+      "code": "complex.real"
+    },
+    "imaginary_number_part": {
+      "name": "Complex number imaginary part",
+      "code": "complex.imag"
     }
   }
 }
