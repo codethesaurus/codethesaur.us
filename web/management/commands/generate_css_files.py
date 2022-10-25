@@ -22,14 +22,10 @@ class Command(BaseCommand):
                 line = '.syntax ' + line
             modified_css.append(line)
 
-        language_dir_path = os.path.join(
+        css_file_path = os.path.join(
             'web',
             'static',
-            'css'
-        )
-
-        css_file_path = os.path.join(
-            language_dir_path,
+            'css',
             f'pygments_{style}.css'
         )
 
