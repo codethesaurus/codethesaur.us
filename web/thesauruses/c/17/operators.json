@@ -7,38 +7,38 @@
 	},
   "concepts": {
     "addition": {
-      "code": "+",
+      "code": "a+b",
       "name": "Addition operator"
     },
     "addition_assignment": {
-      "code": "+=",
+      "code": "a+=b",
       "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-",
+      "code": "a-b",
       "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "code": "-=",
+      "code": "a-=b",
       "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*",
+      "code": "a*b",
       "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "code": "*=",
+      "code": "a*=b",
       "name": "Multiplication and assignment operator"
     },
     "division": {
-      "code": "/",
+      "code": "a/b",
       "name": "Division operator"
     },
     "division_assignment": {
-      "code": "/=",
+      "code": "a/=b",
       "name": "Division and assignment operator"
     },
-		"integer_division": {
+    "integer_division": {
       "not-implemented": "true",
       "name": "Integer Division operator"
     },
@@ -47,27 +47,27 @@
       "name": "Integer Division and assignment operator"
     },
     "modulus": {
-      "code": "%",
+      "code": "a%b",
       "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
-      "code": "%=",
+      "code": "a%=b",
       "name": "Modulus and assignment operator"
     },
     "unary_plus": {
-      "code" : "+",
+      "code" : "+a",
       "name" : "Unary plus operator"
   },
     "unary_minus": {
-      "code" : "-",
+      "code" : "-a",
       "name" : "Unary minus operator"
   },
     "increment": {
-      "code": "++",
+      "code": "++a",
       "name": "Increment (add 1) operator"
     },
     "decrement": {
-      "code": "--",
+      "code": "--a",
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
@@ -87,27 +87,27 @@
       "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "==",
+      "code": "a==b",
       "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "!=",
+      "code": "a!=b",
       "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "<",
+      "code": "a<b",
       "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "<=",
+      "code": "a<=b",
       "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": ">",
+      "code": "a>b",
       "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": ">=",
+      "code": "a>=b",
       "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
@@ -123,35 +123,35 @@
       "name": "Is not operator"
     },
     "logical_and": {
-      "code" : "&&",
+      "code" : "if((a==1)&&(b==1))",
       "name" : "Logical AND Operator"
   },
     "logical_or": {
-      "code" : "||",
+      "code" : "if((a==1)||(b==1))",
       "name" : "Logical OR Operator"
   },
   "logical_not": {
-      "code" : "!",
+      "code" : "if(!a)",
       "name" : "Logical NOT Operator"
   },
 "bitwise_and": {
-      "code" : "&",
+      "code" : "a&b",
       "name" : "Bitwise AND operator"
   },
 "bitwise_and_assignmnet": {
-      "code" : "&=",
+      "code" : "a&=b",
       "name" : "Bitwise AND and assignment operator"
   },
 "bitwise_or": {
-      "code" : "|",
+      "code" : "a|b",
       "name" : "Bitwise OR operator"
   },
 "bitwise_or_assignment": {
-      "code" : "|=",
+      "code" : "a|=b",
       "name" : "Bitwise OR and assignment operator"
   },
     "bitwise_not": {
-      "code" : "~",
+      "code" : "~a",
       "name" : "Bitwise NOT operator"
   },
     "bitwise_not_assignment": {
@@ -159,11 +159,11 @@
       "name" : "Bitwise NOT and assignment operator"
   },
 "bitwise_xor": {
-      "code" : "^",
+      "code" : "a^b",
       "name" : "Bitwise XOR operator"
   },
 "bitwise_xor_assignment": {
-      "code" : "^=",
+      "code" : "a^=b",
       "name" : "Bitwise XOR and assignment operator"
   },
     "bitwise_xnor": {
@@ -175,23 +175,23 @@
       "name" : "Bitwise XNOR and assignment operator"
   },
     "left_shift": {
-      "code": "<<",
+      "code": "a<<1",
       "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "<<=",
+      "code": "a<<=1",
       "name": "Left shift assignment operator"
     },
     "right_shift": {
-      "code": ">>",
+      "code": "a>>1",
       "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "code": ">>=",
+      "code": "a>>=1",
       "name": "Right shift assignment operator"
     },
     "ternary": {
-      "code": "?:",
+      "code": "(a>b)? printf(\"0\") : printf(\"1\")",
       "name": "Ternary operator"
     },
     "null_forgiving": {
