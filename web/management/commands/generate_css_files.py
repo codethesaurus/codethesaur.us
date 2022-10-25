@@ -35,5 +35,5 @@ class Command(BaseCommand):
             os.remove(css_file_path)
         
         with open(css_file_path, 'w') as file:
-            file.write('\n'.join(modified_css))
+            file.write('\n'.join(modified_css)+'\n')
         self.stdout.write(f'Created css stylesheet: {css_file_path}')
