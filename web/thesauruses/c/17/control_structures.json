@@ -24,7 +24,6 @@
     },
     "switch_statement": {
       "code": "switch (expression) {\n  case x:\n    statements;\n    break;\n  case y:\n    statements;\n    break;\n  default:\n    statements;\n}",
-      "comment": "Expression is compared with cases using the strict === comparator",
       "name": "Switch statement"
     },
     "ternary_conditional": {
