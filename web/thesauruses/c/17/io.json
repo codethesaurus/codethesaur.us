@@ -7,15 +7,15 @@
     },
     "concepts": {
         "write_line": {
-            "code": "printf(“Format Specifier”, var1, var2, …., varn);",
+            "code": "printf(\"Format Specifier\", var1, var2, …., varn);",
             "name": "Write a line to the console"
         },
         "write_line_with_new_line" : {
-            "code": "printf(“Format Specifier”, var1, var2, …., varn);",
+            "code": "printf(\"Format Specifier\", var1, var2, …., varn);",
             "name": "Write a line to the console with a return character"  
         },
         "read_line": {
-        "code": "scanf(“Format Specifier”, &var1, &var2, …., &varn);",
+        "code": "scanf(\"Format Specifier\", &var1, &var2, …., &varn);",
         "comment": "'&' is used to send memory address of variable(pass by reference) since changes to variable is being made(i.e. storing values) but not in printf since it is only accessing those values not changing it",
         "name": "Read a line of user input from the console"
         },
