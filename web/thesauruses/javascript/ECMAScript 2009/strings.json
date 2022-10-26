@@ -11,8 +11,8 @@
         "code": "true"
       },
       "import": {
-        "name": "Import the string class",
-        "code": "String"
+        "not-implemented": true,
+        "name": "Import the string class"
       },
       "default_string_byte_encoding": {
         "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
@@ -45,22 +45,23 @@
         "code": "str.length"
       },
       "max_length_of_string": {
+        "not-implemented": true,
         "name": "Maximum length of string",
-        "code": "str.length = 5;"
+        "comment": [
+          "In V8 (64bit) : 2^29 - 24 (~1GB)",
+          "In V8 (32bit) : 2^28 - 16 (~512MB)",
+          "In Firefox/SpidersMonkey : 2^30 - 2 (~2GB)",
+          "Before Firefox 65: 2^28 - 1 (~512MB)",
+          "In Safari : 2^31 - 1 (~4GB)"
+        ]
       },
       "clear_string": {
         "name": "Clear/empty string",
-        "code": [
-            "str = \"\";",
-            "str.length = 0;"
-        ]
+        "code": "str = \"\";"
       },
       "is_empty": {
         "name": "Is string empty?",
-        "code": [
-            "str.length === 0",
-            "str === \"\""
-        ]
+        "code": "str === \"\""
       },
       "concatenate_two_strings": {
         "name": "Concatenate/join two strings",
@@ -77,24 +78,24 @@
         ]
       },
       "is_all_alphabetical": {
-        "name": "Is string all alphabetical characters?",
-        "code": "(/^[a-zA-Z]+$/g).test(str)"
+        "not-implemented": true,
+        "name": "Is string all alphabetical characters?"
       },
       "is_all_numerical": {
-        "name": "Is string all numerical characters?",
-        "code": "(/^[0-9]+$/g).test(str)"
+        "not-implemented": true,
+        "name": "Is string all numerical characters?"
       },
       "is_all_alphanumeric": {
-        "name": "Is string all alphanumeric characters?",
-        "code": "(/^[a-zA-Z0-9]+$/g).test(str)"
+        "not-implemented": true,
+        "name": "Is string all alphanumeric characters?"
       },
       "is_decimal": {
         "name": "Is string a decimal number?",
-        "code": "(/^[0-9]+\\.[0-9]+$/g).test(str)"
+        "code": "Number.isFinite(+str)"
       },
       "is_all_whitespaces": {
         "name": "Is string all whitespace characters?",
-        "code": "(/^[\\s]+$/g).test(str)"
+        "code": "0 === str.trim().length"
       },
       "is_all_uppercase": {
         "name": "Is string all uppercase characters?",
@@ -105,14 +106,12 @@
         "code": "str === str.toLowerCase()"
       },
       "is_in_titlecase": {
-        "name": "Is string formatted in title case?",
-        "code": "str === str.replace(/\\w+/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase())"
+        "not-implemented": true,
+        "name": "Is string formatted in title case?"
       },
       "does_substring_exist": {
         "name": "Does a substring exist in a string?",
-        "code": [
-            "str.indexOf(substring) !== -1"
-        ]
+        "code": "str.indexOf(substring) !== -1"
       },
       "find_start_index_of_substring": {
         "name": "Find index of where a substring starts",
@@ -123,17 +122,11 @@
       },
       "find_start_index_of_additional_substring": {
         "name": "Find index of an additional substring (or starting at another index)",
-        "code": [
-            "str.indexOf(substring, index)",
-            "str.search(substring)"
-        ]
+        "code": "str.indexOf(substring, index)"
       },
       "find_start_index_of_substring_from_end": {
         "name": "Find substring index starting at end",
-        "code": [
-            "str.lastIndexOf(substring)",
-            "str.search(substring)"
-        ]
+        "code": "str.lastIndexOf(substring)"
       },
       "count_occurrences_of_substring": {
         "name": "Find number of occurences of a substring",
@@ -146,32 +139,28 @@
         "name": "Get a specified number of characters from the left",
         "code": [
             "str.slice(start, end)",
-            "str.substring(start, end)",
-            "str.substr(start, length)"
+            "str.substring(start, end)"
         ]
       },
       "get_rightmost_characters": {
         "name": "Get a specified number of characters from the right",
         "code": [
             "str.slice(-end, -start)",
-            "str.substring(str.length - end, str.length - start)",
-            "str.substr(str.length - length, length)"
+            "str.substring(str.length - end, str.length - start)"
         ]
       },
       "get_substring_from_start_and_end_index": {
         "name": "Return a substring from a string based on starting and ending indices",
         "code": [
             "str.slice(start, end)",
-            "str.substring(start, end)",
-            "str.substr(start, length)"
+            "str.substring(start, end)"
         ]
       },
       "get_substring_from_start_index_and_length": {
         "name": "Return a substring from a string based on starting index and size of substring",
         "code": [
             "str.slice(start, start + length)",
-            "str.substring(start, start + length)",
-            "str.substr(start, length)"
+            "str.substring(start, start + length)"
         ]
       },
       "convert_to_uppercase": {
@@ -183,19 +172,16 @@
         "code": "str.toLowerCase()"
       },
       "convert_to_title_case": {
-        "name": "Convert string to title case",
-        "code": "str.replace(/\\w+/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase())"
+        "not-implemented": true,
+        "name": "Convert string to title case"
       },
       "capitalize_string": {
-        "name": "Capitalize first letter of a string",
-        "code": [
-            "str[0].toUpperCase() + str.slice(1)",
-            "str.replace(/^\\w/, (w) => w.toUpperCase())"
-        ]
+        "not-implemented": true,
+        "name": "Capitalize first letter of a string"
       },
       "remove_whitespace": {
-        "name": "Remove all whitespaces from string",
-        "code": "str.replace(/\\s/g, \"\")"
+        "not-implemented": true,
+        "name": "Remove all whitespaces from string"
       },
       "replace_substring": {
         "name": "Replace a substring with another string",
@@ -213,8 +199,7 @@
       },
       "split_at_index": {
         "name": "Split string into a list of strings at a given index",
-        "code": "str.split(separator, limit)",
-        "comment": ""
+        "code": "str.split(separator, limit)"
       },
       "split_at_newlines": {
         "name": "Split string into a list of strings at every new line character",
