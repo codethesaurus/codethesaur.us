@@ -91,10 +91,10 @@ class Language:
             file_json = json.load(file)
             self.concepts = file_json["concepts"]
 
-    def load_filled_concept(self, structure_key, version):
+    def load_filled_concepts(self, structure_key, version):
         from web.thesaurus_template_generators import generate_language_template
         """
-        Loads the concept from the language's structure file
+        Loads the concepts from the language's structure file
 
         :param structure_key: the ID for the concept to load
         :param version: the version of the language
@@ -102,30 +102,42 @@ class Language:
             'not-implemented' flag. They are empty code entries if not specified
         :rtype: object Filled template
         """
-        file_path = os.path.join(
-            os.path.dirname(__file__),
-            "thesauruses",
-            self.key,
-            version,
-            structure_key + ".json"
-        )
 
-        try:
-            with open(file_path, "r") as file:
-                response = file.read()
-        except FileNotFoundError:
-            return False
-        
+        self.load_concepts(structure_key, version)
+
         template = generate_language_template(
             self.key,
             structure_key,
             version
         )
 
-        response = json.loads(response)
         template = json.loads(template)
-        response = merge(template, response)
-        response = json.dumps(response, indent=2)
+
+        template['concepts'] = merge(template['concepts'], self.concepts)
+
+        response = json.dumps(template, indent=2)
+
+        return response
+
+    def load_comparison(self, structure_key, lang, version_lang, version_self):
+        lang = Language(lang, "")
+        self_filled_concept = self.load_filled_concepts(structure_key, version_self)
+        lang_filled_concept = lang.load_filled_concepts(structure_key, version_lang)
+
+        if self_filled_concept is False or lang_filled_concept is False:
+            return False
+
+        response = json.dumps({
+            "meta": {
+                "language_1": self.key,
+                "language_version_1": version_self,
+                "language_2": lang.key,
+                "language_version_2": version_lang,
+                "structure": structure_key
+            },
+            "concept1": json.loads(self_filled_concept)['concepts'],
+            "concept2": json.loads(lang_filled_concept)['concepts']
+        }, indent=2)
 
         return response
 

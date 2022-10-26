@@ -26,7 +26,12 @@ urlpatterns = [
     # /reference/lang1/
     path('reference/', views.reference, name='reference'),
 
-    # /api/{lang}/{version}/{structure_key}
-    path('api/<str:lang>/<str:version>/<str:structure_key>/', views.api, name='api'),
+    # API reference
+    # /api/{structure}/{lang}/{version}
+    path('api/<str:structure_key>/<str:lang>/<str:version>/', views.api_reference, name='api.reference'),
+
+    # API compare
+    # /api/{structure}/{lang1}/{version1}/{lang2}/{version2}
+    path('api/<str:structure_key>/<str:lang1>/<str:version1>/<str:lang2>/<str:version2>/', views.api_compare, name='api.compare'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
