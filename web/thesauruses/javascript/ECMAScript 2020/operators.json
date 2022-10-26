@@ -65,16 +65,18 @@
     "increment": {
       "name": "Increment (add 1) operator",
       "code": [
-          "a++",
-          "++a"
-      ]
+          "a++ // postfix",
+          "++a // prefix"
+      ],
+      "comment": "The prefix form returns the new value, the postfix form returns the old value."
     },
     "decrement": {
       "name": "Decrement (subtract 1) operator",
       "code": [
-          "a--",
-          "--a"
-      ]
+          "a-- // postfix",
+          "--a // prefix"
+      ],
+      "comment": "The prefix form returns the new value, the postfix form returns the old value."
     },
     "exponential": {
       "name": "Exponential operator",
@@ -98,7 +100,7 @@
         "a == b // loose equality",
         "a === b // strict equality"
       ],
-      "comment": "The `===` operator coerces the operands to the same type before comparing them. The `==` operator does not coerce the operands."
+      "comment": "The `===` operator checks whether its two operands are equal, returning a Boolean. Unlike the `==` operator, the strict equality operator always considers operands of distinct types to be different."
     },
     "not_equal_to": {
       "name": "Not equal to operator",
@@ -106,7 +108,7 @@
           "a != b // loose inequality",
           "a !== b // strict inequality"
       ],
-      "comment": "The `!==` operator coerces the operands to the same type before comparing them. The `!=` operator does not coerce the operands."
+      "comment": "The `!==` operator checks whether its two operands are not equal, returning a Boolean. Unlike the `!=` operator, the strict inequality operator always considers operands of distinct types to be different."
     },
     "less_than": {
       "name": "Less than operator",
