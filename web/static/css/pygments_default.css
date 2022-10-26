@@ -4,6 +4,7 @@ span.linenos { color: inherit; background-color: transparent; padding-left: 5px;
 td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .syntax .hll { background-color: #ffffcc }
+.syntax { background: #f8f8f8; }
 .syntax .c { color: #408080; font-style: italic } /* Comment */
 .syntax .err { border: 1px solid #FF0000 } /* Error */
 .syntax .k { color: #008000; font-weight: bold } /* Keyword */
