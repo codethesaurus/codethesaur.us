@@ -54,11 +54,11 @@
       "name": "Signed 64-bit floating point",
       "code": "double"
     },
-    "signed_float_as_object"{
+    "signed_float_as_Object": {
       "name":"Signed object-based floating point",
       "not-implemented":"true"
     },
-    "unsigned_float_as_object"{
+    "unsigned_float_as_Object": {
       "name":"Unsigned object-based floating point",
       "not-implemented":"true"
     },
