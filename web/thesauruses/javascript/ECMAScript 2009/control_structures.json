@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "language": "javascript",
+    "language_version": "ECMAScript 2009",
+    "language_name": "JavaScript",
+    "structure": "control_structures"
+  },
+  "concepts": {
+    "if_conditional": {
+      "code": "if (condition) {\n    statements;\n}",
+      "name": "If conditional"
+    },
+    "if_else_conditional": {
+      "code": "if (condition) {\n    statements;\n} else {\n    statements;\n}",
+      "name": "If/Else conditional"
+    },
+    "if_elseif_conditional": {
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n}",
+      "name": "If/ElseIf conditional"
+    },
+    "if_elseif_else_conditional": {
+      "code": "if (condition) {\n    statements;\n} else if (condition) {\n    statements;\n} else {\n    statements;\n}",
+      "name": "If/ElseIf/Else conditional"
+    },
+    "switch_statement": {
+      "code": "switch (expression) {\n  case x:\n    statements;\n    break;\n  case y:\n    statements;\n    break;\n  default:\n    statements;\n}",
+      "comment": "Expression is compared with cases using the strict === comparator",
+      "name": "Switch statement"
+    },
+    "ternary_conditional": {
+      "code": "condition ? exprIfTrue : exprIfFalse",
+      "name": "Ternary conditional"
+    },
+    "while_loop": {
+      "code": "while (condition) {\n    statements;\n}",
+      "name": "While loop"
+    },
+    "do_while_loop": {
+      "code": "do {\n    statements;\n} while (condition);",
+      "name": "Do/While loop"
+    },
+    "until_loop": {
+      "not-implemented": true,
+      "name": "Until loop"
+    },
+    "do_until_loop": {
+      "not-implemented": true,
+      "name": "Do/Until loop"
+    },
+    "for_loop": {
+      "code": "for (initialization_statement; condition; update_statement){\n    statements;\n}",
+      "name": "For loop"
+    },
+    "foreach_loop": {
+      "not-implemented": true,
+      "name": "Foreach loop"
+    },
+    "each_iteration": {
+      "not-implemented": true,
+      "name": "Each iteration"
+    },
+    "map_iteration": {
+      "code": "array.map(function(currentValue, index, arr), thisValue)",
+      "name": "Map iteration"
+    },
+    "filter_iteration": {
+      "code": "array.filter(function(currentValue, index, arr), thisValue)",
+      "name": "Filter iteration"
+    },
+    "fold_iteration": {
+      "not-implemented": true,
+      "name": "Fold iteration"
+    }
+  }
+}
