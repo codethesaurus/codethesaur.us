@@ -22,6 +22,12 @@
       "anonymous_function_with_keyword_parameters": "Anonymous function that takes 0 or more defined keyword parameters",
       "anonymous_function_variable_parameters": "Anonymous function that takes an unknown number of parameters"
     },
+    "Lambda/Anonymous Functions with Return Value": {
+      "anonymous_function_no_parameters_with_return": "Anonymous function that takes no parameters and returns a value",
+      "anonymous_function_with_parameters_with_return": "Anonymous function that takes 1 or more defined parameters and returns a value",
+      "anonymous_function_with_keyword_parameters_with_return": "Anonymous function that takes 0 or more defined keyword parameters and returns a value",
+      "anonymous_function_variable_parameters_with_return": "Anonymous function that takes an unknown number of parameters and returns a value"
+    },
     "Subroutines": {
       "call_subroutine": "Call subroutine",
       "return_from_subroutine": "Return from subroutine"

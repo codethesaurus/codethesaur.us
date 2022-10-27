@@ -1,0 +1,392 @@
+{
+    "meta": {
+      "language": "r",
+      "language_name": "R",
+      "structure": "io",
+      "language_version": "4"
+    },
+    "concepts": {
+      "write_line": {
+        "name": "Write a line to the console",
+        "code": [
+          "print(x)"
+        ]
+      },
+      "write_line_with_new_line": {
+        "name": "Write a line to the console with a return character",
+        "code": [
+          "# using cat\n cat('my text','n')",
+          "# using writeLines\n writeLines('my text')"
+        ]
+      },
+      "read_line": {
+        "name": "Read a line of user input from the console",
+        "code": [
+            "readline(prompt = '')"
+        ]
+      },
+      "read_char": {
+        "name": "Read a single char of user input from the console",
+        "code": [
+          ""
+        ]
+      },
+      "clear_console_output": {
+        "name": "Clear the console output",
+        "code": [
+            "cat('\f')"
+        ]
+      },
+      "change_console_background_color": {
+        "name": "Change the color of the console",
+        "not-implemented":true
+      },
+      "change_console_text_color": {
+        "name": "Change the color of the console",
+        "not-implemented":true
+      },
+      "file_functions_lib": {
+        "name": "Library containing file IO functions",
+        "code": [
+          ""
+        ]
+      },
+      "list_directory": {
+        "name": "List of the items in the current directory",
+        "code": [
+          "list.files()"
+        ]
+      },
+      "read_directory_info": {
+        "name": "Get infomation about the current directory (number of items, size, etc)",
+        "code": [
+          "file.info()"
+        ]
+      },
+      "create_directory": {
+        "name": "Create a directory",
+        "code": [
+          "dir.create(file.path(mainDir, subDir))"
+        ]
+      },
+      "delete_directory": {
+        "name": "Delete a directory",
+        "code": [
+          "unlink('theDir', recursive = TRUE) "
+        ]
+      },
+      "rename_directory": {
+        "name": "Rename a directory",
+        "code": [
+          "file.rename(from, to)"
+        ],
+        "comment": "you cannot rename your working directory"
+      },
+      "move_directory": {
+        "name": "Move a directory to another locaiton",
+        "code": [
+          "file.rename(from, to)"
+        ]
+      },
+      "update_directory_permissions": {
+        "name": "Update the permissions a user, group, or application has to a directory",
+        "code": [
+            "Sys.chmod()"
+        ]
+      },
+      "read_line_of_file": {
+        "name": "Read a single line from a file",
+        "code": [
+          "con <- file('file.txt','r')\nfirst_line <- readLines(con,n=1)\nclose(con)"
+        ]
+      },
+      "read_lines_of_file": {
+        "name": "Read all the lines in a file",
+        "code": [
+          "thefile = 'file.txt'\ncontents = readLines(thefile, n=-1)"
+        ],
+        "comment": "contents will be all the lines in an array"
+      },
+      "read_file_stream": {
+        "name": "Read the file into a stream",
+        "code": [
+          "con <- file('file.txt','r')\nfirst_line <- readLines(con,n=1)\n#any other reads from stream\nclose(con)"
+        ]
+      },
+      "create_file": {
+        "name": "Create a file",
+        "code": [
+          "file.create()"
+        ]
+      },
+      "delete_file": {
+        "name": "Delete a file",
+        "code": [
+          "# unlink\nunlink('file1.csv')",
+          "# or remove\nfile.remove('file2.csv')"
+        ]
+      },
+      "update_file": {
+        "name": "Update a file",
+        "code": [
+          ""
+        ],
+        "comment":"Update can be done with writing lines or with overwriting a file."
+      },
+      "move_file": {
+        "name": "Move a file to a new location",
+        "code": [
+          "file.rename(from, to)"
+        ]
+      },
+      "network_functions_lib": {
+        "name": "Library containing network IO functions",
+        "code":[
+            "library(httr)"
+        ]
+      },
+      "send_a_http_request": {
+        "name": "Send a HTTP request",
+        "code": [
+          "library(httr)\nr <- GET('http://httpbin.org/get')"
+        ]
+      },
+      "send_a_get_request": {
+        "name": "Send a HTTP GET request",
+        "code": [
+          "library(httr)\nr <- GET('http://httpbin.org/get')"
+        ]
+      },
+      "send_a_post_request": {
+        "name": "Send a HTTP POST request",
+        "code": [
+          "library(httr)\nPOST('http://httpbin.org/post', body = list(a = 1, b = 2, c = 3))"
+        ]
+      },
+      "send_a_put_request": {
+        "name": "Send a HTTP PUT request",
+        "code": [
+            "library(httr)\nPUT('http://httpbin.org/post', body = list(a = 1, b = 2, c = 3))"
+        ]
+      },
+      "send_a_patch_request": {
+        "name": "Send a HTTP PATCH request",
+        "code": [
+            "library(httr)\nPATCH('http://httpbin.org/post', body = list(a = 1, b = 2, c = 3))"
+        ]
+      },
+      "send_a_delete_request": {
+        "name": "Send a HTTP DELETE request",
+        "code": [
+            "library(httr)\nDELETE('http://httpbin.org/delete'))"
+        ]
+      },
+      "send_a_head_request": {
+        "name": "Send a HTTP HEAD request",
+        "code": [
+          "library(httr)\nHEAD('http://google.com')"
+        ]
+      },
+      "send_a_options_request": {
+        "name": "Send a HTTP OPTIONS request",
+        "code": [
+            "library(httr)\nr <- VERB('OPTIONS','http://httpbin.org/get')"
+          ]
+      },
+      "send_a_connect_request": {
+        "name": "Send a HTTP CONNECT request",
+        "code": [
+            "library(httr)\nr <- VERB('CONNECT','http://httpbin.org/get')"
+        ]
+      },
+      "send_a_trace_request": {
+        "name": "Send a HTTP TRACE request",
+        "not-implemented":true
+      },
+      "add_headers": {
+        "name": "Add headers to a HTTP request",
+        "code": [
+          "library(httr)\nadd_headers(a = 1, b = 2)"
+        ],
+        "comment":"add_headers can be arbitrary; see httr docs"
+      },
+      "add_query_params": {
+        "name": "Add query parameters to a HTTP request",
+        "code": [
+          "library(httr)\nGET('http://httpbin.org/get', \nquery = list(key1 = 'value1', key2 = 'value2'\n)"
+        ]
+      },
+      "inbuilt_url_class": {
+        "name": "The inbuilt URL class",
+        "code": [
+          ""
+        ]
+      },
+      "open_a_socket": {
+        "name": "Open a network socket",
+        "code": [
+          "socketConnection()"
+        ]
+      },
+      "close_a_socket": {
+        "name": "Close a network socket",
+        "code": [
+          "close.socket(socket, ...)"
+        ]
+      },
+      "add_authorization_headers": {
+        "name": "Add an authorization header",
+        "code": [
+          ""
+        ]
+      },
+      "add_cookies": {
+        "name": "Add cookies to a HTTP request",
+        "code": [
+          "library(httr)\nGET('http://httpbin.org/cookies', set_cookies(a = 1, b = 2))"
+        ]
+      },
+      "read_cookies": {
+        "name": "Read cookies from a HTTP response",
+        "code": [
+            "library(httr)\nGET('http://httpbin.org/cookies')"
+        ]
+      },
+      "read_headers": {
+        "name": "Read headers from a HTTP response",
+        "code": [
+          "library(httr)\nr <- GET'http://httpbin.org/get')\nheaders(r)"
+        ]
+      },
+      "database_functions_lib": {
+        "name": "Library containing database IO functions",
+        "code": [
+          "library(DBI)"
+        ],
+        "comment":"There are multiple libraries that have database IO functions, like DBI, odbc, etc."
+      },
+      "open_connection": {
+        "name": "Open a database connection",
+        "code": [
+          "library(DBI)\ncon <- dbConnect(...)"
+        ]
+      },
+      "close_connection": {
+        "name": "Close a database connection",
+        "code": [
+          "library(DBI)\ndbDisconnect(conn, ...)"
+        ]
+      },
+      "execute_query_single_result_set": {
+        "name": "Execute a query returning a single result set",
+        "not-implemented":true,
+        "comment":"There are numerous find/search/filter methods in r and different packages for using SQL"
+      },
+      "execute_query_multiple_result_sets": {
+        "name": "Execute a query returning a multiple result sets",
+        "not-implemented":true,
+        "comment":"There are numerous find/search/filter methods in r and different packages for using SQL"
+      },
+      "execute_non_query": {
+        "name": "Execute a non query (update, delete)",
+        "code": [
+          "#update df\n df <- #some operation on df",
+          "#delete df\nrm(df)"
+        ]
+      },
+      "json_function_lib": {
+        "name": "Library containing JSON functions",
+        "code": [
+          "library(jsonlite)"
+        ],
+        "comment":"there are many packages handling json; you may want to use jsonlite or tidyjson or some other package"
+      },
+      "serialize_json": {
+        "name": "Serialize an object to JSON",
+        "code": [
+            "library(jsonlite)\nwrite_json(x, path)"
+        ]
+      },
+      "deserialize_json": {
+        "name": "Deserialize a string from JSON",
+        "code": [
+            "library(jsonlite)\nread_json(path)"
+        ]
+      },
+      "serialize_json_with_options": {
+        "name": "Serialize an object to JSON with options",
+        "code": [
+            "library(jsonlite)\nwrite_json(x, path, #options)"
+        ]
+      },
+      "deserialize_json_with_options": {
+        "name": "Deserialize a string from JSON with options",
+        "code": [
+          "library(jsonlite)\nread_json(path, #options)"
+        ],
+        "comment":"there are many packages handling json; you may want to use jsonlite or tidyjson or some other package"
+      },
+      "xml_function_lib": {
+        "name": "Library containing XML functions",
+        "code": [
+          "library(xml)"
+        ]
+      },
+      "serialize_xml": {
+        "name": "Serialize an object to XML",
+        "not-implemented":true,
+        "comment":"use package xml"
+      },
+      "deserialize_xml": {
+        "name": "Deserialize a string from XML",
+        "not-implemented":true,
+        "comment":"use package xml"
+      },
+      "serialize_xml_with_options": {
+        "name": "Serialize an object to XML with options",
+        "not-implemented":true,
+        "comment":"use package xml"
+      },
+      "deserialize_xml_with_options": {
+        "name": "Deserialize a string from XML with options",
+        "not-implemented":true,
+        "comment":"use package xml"
+      },
+      "csv_function_lib": {
+        "name": "Library containing CSV functions",
+        "not-implemented":true,
+        "comment":"base R handles csv. Many packages have functions to handle csv"
+      },
+      "read_csv_file": {
+        "name": "Reading a CSV file",
+        "code": [
+          "read.csv('file.csv')"
+        ]
+      },
+      "read_csv_to_type": {
+        "name": "Reading a CSV file to a typed array",
+        "code": [
+          "df <- read.csv('file.csv')"
+        ],
+        "comment": "this reads the csv into the object df. df is not a typed array"
+      },
+      "write_csv_file": {
+        "name": "Write a new CSV file",
+        "code": [
+          "write.csv(object,'file.csv')"
+        ]
+      },
+      "append_csv_file": {
+        "name": "Append to end of CSV file",
+        "code": [
+          "write.table(df, 'file.csv',\n sep = ",",\n col.names = !file.exists('file.csv'),\n append = T\n)"
+        ]
+      },
+      "set_csv_delimiter": {
+        "name": "Set the CSV delitmiter to use when reading/writing",
+        "code": [
+          "df <- read.table('file.csv',sep=';')"
+        ]
+      }
+    }
+  }
