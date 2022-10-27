@@ -70,7 +70,7 @@ class Command(BaseCommand):
                             print(
                                 "[Error] `" + relative_path_name + "` has an empty `language_name` attribute and needs to be updated")
                             error_count += 1
-                        elif language_name == "Human-Friendly Language Name":
+                        elif language_name == "Human-Friendly Language Name" or language_name == "Human-Readable Language Name":
                             print(
                                 "[Error] `" + relative_path_name + "` has the default `language_name` attribute and needs to be updated")
                             error_count += 1

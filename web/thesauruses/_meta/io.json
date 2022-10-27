@@ -9,7 +9,7 @@
       "write_line_with_new_line": "Write a line to the console with a return character",
       "read_line": "Read a line of user input from the console",
       "read_char": "Read a single char of user input from the console",
-      "clear_console_cutput": "Clear the console output",
+      "clear_console_output": "Clear the console output",
       "change_console_background_color": "Change the color of the console",
       "change_console_text_color": "Change the color of the console"
     },

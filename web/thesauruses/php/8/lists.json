@@ -11,7 +11,7 @@
       "name": "What is a ordered mutable list called?"
     },
     "create_a_ordered_mutable_list": {
-      "code": "$array = array(...) \n $array=[]",
+      "code": "$array = array(...) \n$array=[]",
       "comment": "You can use any of them",
       "name": "Create the list"
     },
@@ -116,6 +116,74 @@
       "name": "Swap two elements"
     },
     "delete_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Delete the list"
+    },
+    "name_of_sorted_mutable_list": {
+      "code": [
+        "Array",
+        "",
+        "// Standard Arrays",
+        "sort() // ascending",
+        "rsort() // descending",
+        "// Associative Arrays",
+        "ksort() // ascending using key",
+        "krsort() // descending using key",
+        "asort() // ascending using value",
+        "arsort() // descending using value"
+      ],
+      "name": "What is a sorted mutable list called?",
+      "comment": "Though Arrays are ordered by default in PHP, there are various functions that can be used to sort. These can be used on both array 'keys' and 'values', these functions can differ depending on whether it is an array or associative array. <https://www.php.net/manual/en/array.sorting.php>"
+    },
+    "create_a_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Create the list"
+    },
+    "sorted_mutable_list_start_number": {
+      "not-implemented": "true",
+      "name": "What number does it start at?"
+    },
+    "sorted_mutable_list_can_be_appended": {
+      "not-implemented": "true",
+      "name": "Can you append to it?"
+    },
+    "sorted_mutable_list_can_be_inserted_in_middle": {
+      "not-implemented": "true",
+      "name": "Can you insert into the middle of it?"
+    },
+    "access_element_in_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Access element by index"
+    },
+    "insert_into_beginning_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element at beginning"
+    },
+    "insert_into_end_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element at end"
+    },
+    "insert_into_middle_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Swap two elements"
+    },
+    "delete_sorted_mutable_list": {
       "not-implemented": "true",
       "name": "Delete the list"
     },

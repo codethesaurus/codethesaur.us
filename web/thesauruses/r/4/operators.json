@@ -1,0 +1,291 @@
+{
+    "meta": {
+      "language": "r",
+      "language_name": "R",
+      "structure": "operators",
+      "language_version": "4"
+    },
+    "concepts": {
+      "addition": {
+        "name": "Addition operator",
+        "code": [
+          "a + b"
+        ]
+      },
+      "addition_assignment": {
+        "name": "Addition and assignment operator",
+        "code": [
+          "a <- a + 1"
+        ]
+      },
+      "subtraction": {
+        "name": "Subtraction operator",
+        "code": [
+          "a - b"
+        ]
+      },
+      "subtraction_assignment": {
+        "name": "Subtraction and assignment operator",
+        "code": [
+          "a <- a - 1"
+        ]
+      },
+      "multiplication": {
+        "name": "Multiplication operator",
+        "code": [
+          "a * b"
+        ]
+      },
+      "multiplication_assignment": {
+        "name": "Multiplication and assignment operator",
+        "code": [
+          "a <- a * 1"
+        ]
+      },
+      "division": {
+        "name": "Division operator",
+        "code": [
+          "a / b"
+        ]
+      },
+      "division_assignment": {
+        "name": "Division and assignment operator",
+        "code": [
+          "a <- a / 1"
+        ]
+      },
+      "integer_division": {
+        "name": "Integer division operator",
+        "code": [
+          "x %/% y"
+        ],
+        "comment": "can be used for non-integer y, e.g. 1 %/% 0.2, but the results are subject to representation error and so may be platform-dependent"
+      },
+      "integer_division_assignment": {
+        "name": "Integer division and assignment operator",
+        "code": [
+            "a <- x %/% y"
+        ],
+        "comment": "can be used for non-integer y, e.g. 1 %/% 0.2, but the results are subject to representation error and so may be platform-dependent"
+      },
+      "modulus": {
+        "name": "Modulus (remainder) operator",
+        "code": [
+          "a %% b"
+        ]
+      },
+      "modulus_assignment": {
+        "name": "Modulus and assignment operator",
+        "code": [
+          "x <- a %% b"
+        ]
+      },
+      "unary_plus": {
+        "name": "Unary plus operator",
+        "code": [
+          "a + b"
+        ]
+      },
+      "unary_minus": {
+        "name": "Unary minus operator",
+        "code": [
+          "a - b"
+        ]
+      },
+      "increment": {
+        "name": "Increment (add 1) operator",
+        "not-implemented":true,
+        "comment": "you cannot ++x in R but you can x <- x + 1"
+      },
+      "decrement": {
+        "name": "Decrement (subtract 1) operator",
+        "not-implemented":true,
+        "comment": "you cannot --x in R but you can x <- x - 1"
+      },
+      "exponential": {
+        "name": "Exponential operator",
+        "code": [
+          "x ^ y"
+        ],
+        "comment":"1 ^ y and y ^ 0 are 1, always. x ^ y should also give the proper limit result when either (numeric) argument is infinite (one of Inf or -Inf)."
+      },
+      "factorial": {
+        "name": "Factorial operator",
+        "code": [
+          "factorial(x)"
+        ]
+      },
+      "absolute_value": {
+        "name": "Absolute value operator",
+        "code": [
+          "abs(x)"
+        ]
+      },
+      "percentage": {
+        "name": "Percentage operator",
+        "not-implemented": "true"
+      },
+      "equal_to": {
+        "name": "Equality operator",
+        "code": [
+          "a == b"
+        ],
+        "comment": "most instances where a test for equality happens will warn the user if you only have x = y"
+      },
+      "not_equal_to": {
+        "name": "Not equal to operator",
+        "code": [
+          "a != b"
+        ]
+      },
+      "less_than": {
+        "name": "Less than operator",
+        "code": [
+          "a < b"
+        ]
+      },
+      "less_than_or_equal_to": {
+        "name": "Less than or equal to operator",
+        "code": [
+          "a <= b"
+        ]
+      },
+      "greater_than": {
+        "name": "Greater than operator",
+        "code": [
+          "a > b"
+        ]
+      },
+      "greater_than_or_equal_to": {
+        "name": "Greater than or equal to operator",
+        "code": [
+          "a >= b"
+        ]
+      },
+      "null_coalescing": {
+        "name": "Null coalescing operator",
+        "code": [
+          "if(is.null(x)){ y else { x }}"
+        ]
+      },
+      "is": {
+        "name": "Is operator",
+        "not-implemented":true
+      },
+      "is_not": {
+        "name": "Is not operator",
+        "not-implemented":true
+      },
+      "logical_and": {
+        "name": "Logical AND operator",
+        "code": [
+          "a & b"
+        ]
+      },
+      "logical_or": {
+        "name": "Logical OR operator",
+        "code": [
+          "a | b"
+        ]
+      },
+      "logical_not": {
+        "name": "Logical NOT operator",
+        "code": [
+          "!a"
+        ]
+      },
+      "bitwise_and": {
+        "name": "Bitwise AND operator",
+        "code": [
+          "bitwAnd(a, b)"
+        ]
+      },
+      "bitwise_and_assignment": {
+        "name": "Bitwise AND and assignment operator",
+        "code": [
+          "a <- bitwAnd(a, b)"
+        ]
+      },
+      "bitwise_or": {
+        "name": "Bitwise OR operator",
+        "code": [
+          "bitwOr(a, b)"
+        ]
+      },
+      "bitwise_or_assignment": {
+        "name": "Bitwise OR and assignment operator",
+        "code": [
+          "a <- bitwOr(a, b)"
+        ]
+      },
+      "bitwise_not": {
+        "name": "Bitwise NOT operator",
+        "code": [
+          "bitwNot(a)"
+        ]
+      },
+      "bitwise_xor": {
+        "name": "Bitwise XOR operator",
+        "code": [
+          "bitwXor(a, b)"
+        ]
+      },
+      "bitwise_xor_assignment": {
+        "name": "Bitwise XOR and assignment operator",
+        "code": [
+          "a <- bitwXor(a, b)"
+        ]
+      },
+      "bitwise_xnor": {
+        "name": "Bitwise XNOR operator",
+        "not-implemented":true
+      },
+      "bitwise_xnor_assignment": {
+        "name": "Bitwise XNOR and assignment operator",
+        "not-implemented":true
+      },
+      "left_shift": {
+        "name": "Left shift bitwise operator",
+        "code": [
+          "bitwShiftL(a, n)"
+        ]
+      },
+      "left_shift_assignment": {
+        "name": "Left shift assignment operator",
+        "code": [
+          "a <- bitwShiftL(a, n)"
+        ]
+      },
+      "right_shift": {
+        "name": "Right shift bitwise operator",
+        "code": [
+          "bitwShiftR(a, n)"
+        ]
+      },
+      "right_shift_assignment": {
+        "name": "Right shift assignment operator",
+        "code": [
+          "a <- bitwShiftR(a, n)"
+        ]
+      },
+      "not_assignment": {
+        "name": "Bitwise NOT and assignment operator",
+        "code": [
+          "a <- bitwNot(a)"
+        ]
+      },
+      "ternary": {
+        "name": "Ternary operator",
+        "code": [
+          "ifelse(a==1, 1, b)"
+        ]
+      },
+      "null_forgiving": {
+        "name": "Null forgiving operator",
+        "code": [
+          "x %||% y"
+        ],
+        "comment":"If x is NULL, will return y; otherwise returns x."
+      }
+    }
+  }

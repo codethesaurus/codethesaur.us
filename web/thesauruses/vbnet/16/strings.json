@@ -1,0 +1,272 @@
+{
+    "meta": {
+        "language": "vbnet",
+        "language_version": "16.0",
+        "language_name": "Visual Basic",
+        "structure": "control_structures"
+    },
+    "concepts": {
+        "is_primitive_or_not": {
+            "name": "Is this a built-in type in this language?",
+            "code": "Yes"
+        },
+        "import": {
+            "name": "Import the string class",
+            "code": "using System"
+        },
+        "default_string_byte_encoding": {
+            "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
+            "code": "UTF-16"
+        },
+        "create_new_string": {
+            "name": "Create new string",
+            "code": "Dim NewString As String = \".... . .-.. .-.. ---\""
+        },
+        "create_multiline_string": {
+            "name": "Create new multi-line string",
+            "code": "Dim MultiLineString As String = \"Line 1\n    Line 2\n     Line 3\""
+        },
+        "assign_new_string": {
+            "name": "Assign string from another string",
+            "code": "Dim String1 As String = \"a string\"\nDim String2 As String = String1"
+        },
+        "destroy_string": {
+            "name": "Destroy string",
+            "not-implemented": true
+        },
+        "length_of_string": {
+            "name": "Length of string",
+            "code": "Len(VariableName)"
+        },
+        "max_length_of_string": {
+            "name": "Maximum length of string",
+            "code": "2,147,483,648 characters"
+        },
+        "clear_string": {
+            "name": "Clear/empty string",
+            "code": "VariableName = String.Empty"
+        },
+        "is_empty": {
+            "name": "Is string empty?",
+            "code": "If VariableName = String.Empty THEN\n End If"
+        },
+        "concatenate_two_strings": {
+            "name": "Concatenate/join two strings",
+            "code": [
+                "Dim NewString As String = \"A\" & \"B\"",
+                "Dim NewString As String = \"A\" + \"B\""
+            ]
+        },
+        "concatenate_many_strings": {
+            "name": "Concatenate/join many strings",
+            "code": "Dim MultipleStrings As StringBuilder = New StringBuilder()\nMultipleStrings.Append(\"A\")\nMultipleStrings.Append(\"B\")"
+        },
+        "is_all_alphabetical": {
+            "name": "Is string all alphabetical characters?",
+            "not-implemented": "true"
+        },
+        "is_all_numerical": {
+            "name": "Is string all numerical characters?",
+            "not-implemented": "true"
+        },
+        "is_all_alphanumeric": {
+            "name": "Is string all alphanumeric characters?",
+            "not-implemented": "true"
+        },
+        "is_decimal": {
+            "name": "Is string a decimal number?",
+            "code": "Dim IsNumber As Boolean = Decimal.TryParse(VariableName, AnotherVariable)"
+        },
+        "is_all_whitespaces": {
+            "name": "Is string all whitespace characters?",
+            "code": "string.IsNullOrWhitespace(VariableName)"
+        },
+        "is_all_uppercase": {
+            "name": "Is string all uppercase characters?",
+            "code": "VariableName.Equals(VariableName.ToUpper())"
+        },
+        "is_all_lowercase": {
+            "name": "Is string all lowercase characters?",
+            "code": "VariableName.Equals(VariableName.ToLower())"
+        },
+        "is_in_titlecase": {
+            "name": "Is string formatted in title case?",
+            "not-implemented": "true"
+        },
+        "does_substring_exist": {
+            "name": "Does a substring exist in a string?",
+            "code": "VariableName.Contains(\"another string\")"
+        },
+        "find_start_index_of_substring": {
+            "name": "Find index of where a substring starts",
+            "code": "VariableName.IndexOf(\"another string\")"
+        },
+        "find_start_index_of_additional_substring": {
+            "name": "Find index of an additional substring (or starting at another index)",
+            "code": "VariableName.IndexOf(\"another string\",startIndex)"
+        },
+        "find_start_index_of_substring_from_end": {
+            "name": "Find substring index starting at end",
+            "code": "VariableName.LastIndexOf(\"another string\")"
+        },
+        "count_occurrences_of_substring": {
+            "name": "Find number of occurences of a substring",
+            "code": "Dim Rgx As RegEx(\"replace string\")\nDim NewVariable As Integer = Rgx.Matches(StrVariable, \"new string\").Count"
+        },
+        "get_leftmost_characters": {
+            "name": "Get a specified number of characters from the left",
+            "code": "VariableName.Substring(0, NumOfCharacters)"
+        },
+        "get_rightmost_characters": {
+            "name": "Get a specified number of characters from the right",
+            "code": "VariableName.Substring(VariableName.Length-NumOfCharacters)"
+        },
+        "get_substring_from_start_and_end_index": {
+            "name": "Return a substring from a string based on starting and ending indices",
+            "not-implemented": "true"
+        },
+        "get_substring_from_start_index_and_length": {
+            "name": "Return a substring from a string based on starting index and size of substring",
+            "code": "VariableName.Substring(StartingIndex, VariableName.Length-NumOfCharacters)"
+        },
+        "convert_to_uppercase": {
+            "name": "Convert string to all uppercase",
+            "code": "VariableName.ToUpper()"
+        },
+        "convert_to_lowercase": {
+            "name": "Convert string to all lowercase",
+            "code": "VariableName.ToLower()"
+        },
+        "convert_to_title_case": {
+            "name": "Convert string to title case",
+            "not-implemented": "true"
+        },
+        "capitalize_string": {
+            "name": "Capitalize first letter of a string",
+            "code": "Char.ToUpper(VariableName[0]) + VariableName.Substring(1)"
+        },
+        "remove_whitespace": {
+            "name": "Remove all whitespaces from string",
+            "code": "Dim Rgx As RegEx(\"\\s\")\nDim NewVariable As String = Rgx.Replace(NewVariable,String.Empty)"
+        },
+        "replace_substring": {
+            "name": "Replace a substring with another string",
+            "code": "Dim Rgx As RegEx(\"replace string\")\nDim NewVariable As String = Rgx.Replace(StrVariable, \"new string\", 1)",
+            "comment": "Requires use of System.Text.RegularExpressions."
+        },
+        "replace_all_substring": {
+            "name": "Replace all substring matches with another string",
+            "code": "VariableName.Substring(\"replace this\",\"new string\")"
+        },
+        "split_at_index": {
+            "name": "Split string into a list of strings at a given index",
+            "not-implemented": true
+        },
+        "split_at_newlines": {
+            "name": "Split string into a list of strings at every new line character",
+            "code": "Dim ArrayString As String() = VariableName.Split(new String() {Environment.NewLine}, StringSplitOptions.None)"
+        },
+        "split_at_substring": {
+            "name": "Split string by locating all substrings",
+            "code": "Dim ArrayString As String() = VariableName.Split(\"split\", StringSplitOptions.None)"
+        },
+        "merge_lists_into_string": {
+            "name": "Merge a list of strings into one string",
+            "code": "Dim NewString As String = VariableName.Join(String.Empty, {\"String1\",\"String2\"})"
+        },
+        "encode_html_entities": {
+            "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)",
+            "comment": "Requires use of System.Web.",
+            "code": "Dim NewString As String = HttpUtility.HtmlEncode(VariableName)"
+        },
+        "decode_html_entities": {
+            "name": "Decode HTML entitles into characters",
+            "comment": "Requires use of System.Web.",
+            "code": "Dim NewString As String = HttpUtility.HtmlDecode(VariableName)"
+        },
+        "encode_url_percent": {
+            "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
+            "comment": "Requires use of System.Web.",
+            "code": "Dim NewString As String = HttpUtllity.UrlEncode(VariableName)"
+        },
+        "decode_url_percent": {
+            "name": "Decode URL percent encoding",
+            "comment": "Requires use of System.Web.",
+            "code": "Dim NewString As String = HttpUtllity.UrlDecode(VariableName)"
+        },
+        "encode_to_base64": {
+            "name": "Encode string into Base64 format",
+            "comment": "Requires use of System.Web.",
+            "code": "Convert.ToBase64String(Encoding.UTF8.GetBytes(VariableName))"
+        },
+        "decode_from_base64": {
+            "name": "Decode string from Base64 format",
+            "comment": "Requires use of System.Web.",
+            "code": "Convert.FromBase64String(VariableName)"
+        },
+        "format_string_function": {
+            "name": "Function to format a string",
+            "code": "String.Format()"
+        },
+        "parameter_format_in_order": {
+            "name": "Parameter used in format function if they're used in order",
+            "code": "String.Format({0},VariableName)"
+        },
+        "parameter_format_numerical": {
+            "name": "Parameter used in format function if they're numerically numbered",
+            "code": "String.Format({0},VariableName)"
+        },
+        "parameter_format_by_name": {
+            "name": "Paramater used in format function if they're named variables",
+            "not-implemented": true
+        },
+        "format_as_integer": {
+            "name": "Format parameter as an integer",
+            "code": "String.Format({0:#},VariableName)"
+        },
+        "format_as_decimal": {
+            "name": "Format parameter as a decimal number",
+            "code": "String.Format({0:D},VariableName)"
+        },
+        "format_as_fixed_decimal": {
+            "name": "Format parameter as a fixed-point decimal number",
+            "code": "String.Format({0:F},VariableName)"
+        },
+        "format_as_currency": {
+            "name": "Format parameter as a currency number",
+            "code": "String.Format({0:C},VariableName)"
+        },
+        "format_as_percentage": {
+            "name": "Format parameter as a percentage number",
+            "code": "String.Format({0:P},VariableName)"
+        },
+        "format_number_with_separators": {
+            "name": "Format number with thousand separators",
+            "code": "String.Format({0:N},VariableName)"
+        },
+        "format_number_with_positive_negative_sign": {
+            "name": "Format number with positive/negative signs",
+            "code": "String.Format({0:g},VariableName)"
+        },
+        "format_number_in_scientific_notation_little_e": {
+            "name": "Format number with scientific notation with 'e'",
+            "code": "String.Format({0:e},VariableName)"
+        },
+        "format_number_in_scientific_notation_big_e": {
+            "name": "Format number with scientific notation with 'E'",
+            "code": "String.Format({0:E},VariableName)"
+        },
+        "format_number_in_binary": {
+            "name": "Format number into binary",
+            "code": "Convert.ToString(Integer.Parse(VariableName), 2)"
+        },
+        "format_number_in_octal": {
+            "name": "Format number into octal",
+            "code": "Convert.ToString(Integer.Parse(VariableName), 8)"
+        },
+        "format_number_in_hexadecimal": {
+            "name": "Format number into hexadecimal",
+            "code": "String.Format({0:X},VariableName)"
+        }
+    }
+}

@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "language": "cpp",
+    "language_name": "C++",
+    "structure": "io",
+    "language_version": "C++20"
+  },
+  "concepts": {
+    "write_line": {
+      "name": "Write a line to the console",
+      "code": [
+        "std::cout << \"...\";"
+      ]
+    },
+    "write_line_with_new_line": {
+      "name": "Write a line to the console with a return character",
+      "code": [
+        "std::cout << \"...\" << std::endl;"
+      ]
+    },
+    "read_line": {
+      "name": "Read a line of user input from the console",
+      "code": [
+        "std::cin >> variable_name;"
+      ]
+    },
+    "read_char": {
+      "name": "Read a single char of user input from the console",
+      "code": [
+        "char variable_name[1];",
+        "std::cin.get(variable_name, 2);"
+      ]
+    },
+    "clear_console_output": {
+      "name": "Clear the console output",
+      "not-implemented": true
+    },
+    "change_console_background_color": {
+      "name": "Change the color of the console",
+      "not-implemented": true
+    },
+    "change_console_text_color": {
+      "name": "Change the color of the console",
+      "not-implemented": true
+    },
+    "file_functions_lib": {
+      "name": "Library containing file IO functions",
+      "code": [
+        "fstream"
+      ]
+    },
+    "list_directory": {
+      "name": "List of the items in the current directory",
+      "not-implemented": true
+    },
+    "read_directory_info": {
+      "name": "Get infomation about the current directory (number of items, size, etc)",
+      "code": [
+        "std::filesystem::current_path();"
+      ]
+    },
+    "create_directory": {
+      "name": "Create a directory",
+      "code": [
+        "std::filesystem::create_directory(const std::filesystem::path& p);"
+      ]
+    },
+    "delete_directory": {
+      "name": "Delete a directory",
+      "code": [
+        "std::filesystem::remove(const std::filesystem::path& p);"
+      ]
+    },
+    "rename_directory": {
+      "name": "Rename a directory",
+      "code": [
+        "std::filesystem::rename(const std::filesystem::path& old_path, const std::filesystem::path& new_path);"
+      ]
+    },
+    "move_directory": {
+      "name": "Move a directory to another locaiton",
+      "code": [
+        "std::filesystem::rename(const std::filesystem::path& old_path, const std::filesystem::path& new_path);"
+      ]
+    },
+    "update_directory_permissions": {
+      "name": "Update the permissions a user, group, or application has to a directory",
+      "code": [
+        "std::filesystem::permissions(const std::filesystem::path& p, const std::filesystem::perms& perms, const std::filesystem::perm_options& opts);"
+      ]
+    },
+    "read_line_of_file": {
+      "name": "Read a single line from a file",
+      "code": [
+        "std::getline(std::istream f, std::string s);"
+      ]
+    },
+    "read_lines_of_file": {
+      "name": "Read all the lines in a file",
+      "not-implemented": true
+    },
+    "read_file_stream": {
+      "name": "Read the file into a stream",
+      "code": [
+        "std::stringstream buffer;",
+        "buffer << file.rdbuf();"
+      ]
+    },
+    "create_file": {
+      "name": "Create a file",
+      "code": [
+        "std::ofstream variable_name(file_name);"
+      ]
+    },
+    "delete_file": {
+      "name": "Delete a file",
+      "code": [
+        "std::filesystem::remove(file_name);"
+      ]
+    },
+    "update_file": {
+      "name": "Update a file",
+      "not-implemented": true
+    },
+    "move_file": {
+      "name": "Move a file to a new location",
+      "code": [
+        "std::filesystem::rename(old_filename, new_filename);"
+      ]
+    },
+    "network_functions_lib": {
+      "name": "Library containing network IO functions",
+      "not-implemented": true
+    },
+    "send_a_http_request": {
+      "name": "Send a HTTP request",
+      "not-implemented": true
+    },
+    "send_a_get_request": {
+      "name": "Send a HTTP GET request",
+      "not-implemented": true
+    },
+    "send_a_post_request": {
+      "name": "Send a HTTP POST request",
+      "not-implemented": true
+    },
+    "send_a_put_request": {
+      "name": "Send a HTTP PUT request",
+      "not-implemented": true
+    },
+    "send_a_patch_request": {
+      "name": "Send a HTTP PATCH request",
+      "not-implemented": true
+    },
+    "send_a_delete_request": {
+      "name": "Send a HTTP DELETE request",
+      "not-implemented": true
+    },
+    "send_a_head_request": {
+      "name": "Send a HTTP HEAD request",
+      "not-implemented": true
+    },
+    "send_a_options_request": {
+      "name": "Send a HTTP OPTIONS request",
+      "not-implemented": true
+    },
+    "send_a_connect_request": {
+      "name": "Send a HTTP CONNECT request",
+      "not-implemented": true
+    },
+    "send_a_trace_request": {
+      "name": "Send a HTTP TRACE request",
+      "not-implemented": true
+    },
+    "add_headers": {
+      "name": "Add headers to a HTTP request",
+      "not-implemented": true
+    },
+    "add_query_params": {
+      "name": "Add query parameters to a HTTP request",
+      "not-implemented": true
+    },
+    "inbuilt_url_class": {
+      "name": "The inbuilt URL class",
+      "not-implemented": true
+    },
+    "open_a_socket": {
+      "name": "Open a network socket",
+      "not-implemented": true
+    },
+    "close_a_socket": {
+      "name": "Close a network socket",
+      "not-implemented": true
+    },
+    "add_authorization_headers": {
+      "name": "Add an authorization header",
+      "not-implemented": true
+    },
+    "add_cookies": {
+      "name": "Add cookies to a HTTP request",
+      "not-implemented": true
+    },
+    "read_cookies": {
+      "name": "Read cookies from a HTTP response",
+      "not-implemented": true
+    },
+    "read_headers": {
+      "name": "Read headers from a HTTP response",
+      "not-implemented": true
+    },
+    "database_functions_lib": {
+      "name": "Library containing database IO functions",
+      "not-implemented": true
+    },
+    "open_connection": {
+      "name": "Open a database connection",
+      "not-implemented": true
+    },
+    "close_connection": {
+      "name": "Close a database connection",
+      "not-implemented": true
+    },
+    "execute_query_single_result_set": {
+      "name": "Execute a query returning a single result set",
+      "not-implemented": true
+    },
+    "execute_query_multiple_result_sets": {
+      "name": "Execute a query returning a multiple result sets",
+      "not-implemented": true
+    },
+    "execute_non_query": {
+      "name": "Execute a non query (update, delete)",
+      "not-implemented": true
+    },
+    "json_function_lib": {
+      "name": "Library containing JSON functions",
+      "not-implemented": true
+    },
+    "serialize_json": {
+      "name": "Serialize an object to JSON",
+      "not-implemented": true
+    },
+    "deserialize_json": {
+      "name": "Deserialize a string from JSON",
+      "not-implemented": true
+    },
+    "serialize_json_with_options": {
+      "name": "Serialize an object to JSON with options",
+      "not-implemented": true
+    },
+    "deserialize_json_with_options": {
+      "name": "Deserialize a string from JSON with options",
+      "not-implemented": true
+    },
+    "xml_function_lib": {
+      "name": "Library containing XML functions",
+      "not-implemented": true
+    },
+    "serialize_xml": {
+      "name": "Serialize an object to XML",
+      "not-implemented": true
+    },
+    "deserialize_xml": {
+      "name": "Deserialize a string from XML",
+      "not-implemented": true
+    },
+    "serialize_xml_with_options": {
+      "name": "Serialize an object to XML with options",
+      "not-implemented": true
+    },
+    "deserialize_xml_with_options": {
+      "name": "Deserialize a string from XML with options",
+      "not-implemented": true
+    },
+    "csv_function_lib": {
+      "name": "Library containing CSV functions",
+      "not-implemented": true
+    },
+    "read_csv_file": {
+      "name": "Reading a CSV file",
+      "not-implemented": true
+    },
+    "read_csv_to_type": {
+      "name": "Reading a CSV file to a typed array",
+      "not-implemented": true
+    },
+    "write_csv_file": {
+      "name": "Write a new CSV file",
+      "not-implemented": true
+    },
+    "append_csv_file": {
+      "name": "Append to end of CSV file",
+      "not-implemented": true
+    },
+    "set_csv_delimiter": {
+      "name": "Set the CSV delitmiter to use when reading/writing",
+      "not-implemented": true
+    }
+  }
+}
