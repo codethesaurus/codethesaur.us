@@ -135,8 +135,8 @@ class Language:
                 "language_version_2": version_lang,
                 "structure": structure_key
             },
-            "concept1": json.loads(self_filled_concept)['concepts'],
-            "concept2": json.loads(lang_filled_concept)['concepts']
+            "concepts1": json.loads(self_filled_concept)['concepts'],
+            "concepts2": json.loads(lang_filled_concept)['concepts']
         }, indent=2)
 
         return response
