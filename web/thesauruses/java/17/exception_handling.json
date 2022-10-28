@@ -67,17 +67,7 @@
         },
         "statement_to_start_code_if_no_exceptions_caught": {
             "name": "Statement to start code if no exceptions are caught",
-            "code": [
-                "bool success = true;",
-                "try {",
-                "    something();",
-                "} catch (Exception e) {",
-                "    success = false;",
-                "}",
-                "if (success) {",
-                "}"
-            ],
-            "comment": "Not natively possible, but we can use this hack to simulate Python's try-except-else"
+            "not-implemented": true
         },
         "statement_to_start_cleaning_up_after_exception": {
             "name": "Statement to start code ran after an exception",
@@ -86,13 +76,10 @@
         "order_to_call_all_statements": {
             "name": "The order to call all statements in a block to catch exceptions",
             "code": [
-                "bool success = true;",
                 "try {",
                 "    something();",
                 "} catch (Exception e) {",
-                "    success = false;",
-                "}",
-                "    if (success) {",
+                "    handleException()",
                 "}",
                 "finally {",
                 "}"
@@ -104,15 +91,18 @@
         },
         "property_with_exception_code": {
             "name": "Property within an exception object containing the error code",
-            "code": "cause"
+            "code": "getCause()",
+            "comment": "Inherited from `Throwable` class"
         },
         "property_with_exception_message": {
             "name": "Property within an exception object containing the error message",
-            "code": "message"
+            "code": "getMessage()",
+            "comment": "Inherited from `Throwable` class"
         },
         "property_with_stack_trace": {
             "name": "Property within an exception object containing the stack trace",
-            "code": "stackTrace"
+            "code": "getStackTrace()",
+            "comment": "Inherited from `Throwable` class"
         },
         "property_containing_other_info": {
             "name": "Property within an exception object containing additional information",
