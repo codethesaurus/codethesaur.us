@@ -102,13 +102,69 @@
       "code": "$operand1 ?? $operand2",
       "name": "Null coalescing operator"
     },
+    "logical_and": {
+      "code": ["$operand1 && $operand2", "$operand1 and $operand2"],
+      "name": "Logical AND operator"
+    },
+    "logical_or": {
+      "code": ["$operand1 || $operand2", "$operand1 or $operand2"],
+      "name": "Logical OR operator"
+    },
+    "logical_not": {
+      "code": "!$operand1",
+      "name": "Logical NOT operator"
+    },
+    "bitwise_and": {
+      "code": "$operand1 & $operand2",
+      "name": "Bitwise AMD operator"
+    },
+    "bitwise_and_assignment": {
+      "code": "$operand1 &= $operand2",
+      "name": "Bitwise AND and assignment operator"
+    },
+    "bitwise_or": {
+      "code": "$operand1 | $operand2",
+      "name": "Bitwise OR operator"
+    },
+    "bitwise_or_assignment": {
+      "code": "$operand1 |= $operand2",
+      "name": "Bitwise OR and assignment operator"
+    },
+    "bitwise_not": {
+      "code": "~$operand1",
+      "name": "Bitwise NOT operator"
+    },
+    "bitwise_xor": {
+      "code": "$operand1 ^ $operand2",
+      "name": "Bitwise XOR operator"
+    },
+    "bitwise_xor_assignment": {
+      "code": "$operand1 ^= $operand2",
+      "name": "Bitwise XOR and assignment operator"
+    },
+    "bitwise_xnor": {
+      "name": "Bitwise XNOR operator",
+      "not-implemented": true
+    },
+    "bitwise_xnor_assignment": {
+      "name": "Bitwise XMOR and assignment operator",
+      "not-implemented": true
+    },
     "left_shift": {
-      "code": "<<$operand1",
+      "code": "$operand1 << $operand2",
       "name": "Left shift bitwise operator"
     },
+    "left_shift_assignment": {
+      "code": "$operand1 <<= $operand2",
+      "name": "Left shift assignment operator"
+    },
     "right_shift": {
-      "code": ">>$operand1",
+      "code": "$operand1 >> $operand2",
       "name": "Right shift bitwise operator"
+    },
+    "right_shift_assignment": {
+      "code": "$operand1 >>= $operand2",
+      "name": "Right shift assignment operator"
     },
     "ternary": {
       "code": "$operand1 ? doTrue : doFalse",
