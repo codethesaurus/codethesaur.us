@@ -3,7 +3,7 @@
     "language": "javascript",
     "language_name": "JavaScript",
     "structure": "functions",
-    "language_version": "ECMAScript 2020"
+    "language_version": "ECMAScript 2009"
   },
   "concepts": {
     "void_function_no_parameters": {
@@ -20,7 +20,11 @@
     },
     "void_function_variable_parameters": {
       "name": "Function that does not return a value and function that takes an unknown number of parameters",
-      "code": "function method(...params) {\n}"
+      "code": [
+        "function method() {",
+        "  var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));",
+        "}"
+      ]
     },
     "return_value_function_no_parameters": {
       "name": "Function that returns a value and takes no parameters",
@@ -36,62 +40,52 @@
     },
     "return_value_function_variable_parameters": {
       "name": "Function that returns a value and takes an unknown number of parameters",
-      "code": "function method(...params) {\n  return true;\n}"
+      "code": [
+        "function method() {",
+        "  var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));",
+        "  return true;",
+        "}"
+      ]
     },
     "anonymous_function_no_parameters": {
       "name": "Anonymous function that takes no parameters",
-      "code": [
-        "const method = function() {\n}",
-        "const method = () => {\n}"
-      ]
+      "code": "var method = function() {\n}"
     },
     "anonymous_function_with_parameters": {
       "name": "Anonymous function that takes 1 or more defined parameters",
-      "code": [
-        "const method = function(param1, param2) {\n}",
-        "const method = (param1, param2) => {\n}"
-      ]
+      "code": "var method = function(param1, param2) {\n}"
     },
     "anonymous_function_with_keyword_parameters": {
       "name": "Anonymous function that takes 0 or more defined keyword parameters",
-      "code": [
-        "const method = function({param1, param2}) {\n}",
-        "const method = ({param1, param2}) => {\n}"
-      ]
+      "code": "var method = function({param1, param2}) {\n}"
     },
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
       "code": [
-        "const method = function(...params) {\n}",
-        "const method = (...params) => {\n}"
+        "var method = function() {",
+        "  var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));",
+        "}"
       ]
     },
     "anonymous_function_no_parameters_with_return": {
       "name": "Anonymous function that takes no parameters and returns a value",
-      "code": [
-        "const method = function() {\n  return true;\n}",
-        "const method = () => true"
-      ]
+      "code": "var method = function() {\n  return true;\n}"
     },
     "anonymous_function_with_parameters_with_return": {
       "name": "Anonymous function that takes 1 or more defined parameters and returns a value",
-      "code": [
-        "const method = function(param1, param2) {\n  return true;\n}",
-        "const method = (param1, param2) => true"
-      ]
+      "code": "var method = function(param1, param2) {\n  return true;\n}"
     },
     "anonymous_function_with_keyword_parameters_with_return": {
       "name": "Anonymous function that takes 0 or more defined keyword parameters and returns a value",
-      "code": [
-        "const method = function({param1, param2}) {\n  return true;\n}",
-        "const method = ({param1, param2}) => true"
-      ]
+      "code": "var method = function({param1, param2}) {\n  return true;\n}"
     },
     "anonymous_function_variable_parameters_with_return": {
       "name": "Anonymous function that takes an unknown number of parameters and returns a value",
       "code": [
-        "const method = function(...params) {\n  return true;\n}",
-        "const method = (...params) => true"
+        "var method = function() {",
+        "  var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));",
+        "  return true;",
+        "}"
       ]
     },
     "call_subroutine": {

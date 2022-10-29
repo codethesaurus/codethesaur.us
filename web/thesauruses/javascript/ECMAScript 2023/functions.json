@@ -3,7 +3,7 @@
     "language": "javascript",
     "language_name": "JavaScript",
     "structure": "functions",
-    "language_version": "ECMAScript 2020"
+    "language_version": "ECMAScript 2023"
   },
   "concepts": {
     "void_function_no_parameters": {
