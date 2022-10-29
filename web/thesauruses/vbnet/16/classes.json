@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "language": "vbnet",
+    "language_version": "16.0",
+    "language_name": "Visual Basic",
+    "structure": "classes"
+  },
+  "concepts": {
+    "normal_class": {
+      "code": "Class ClassName\n\t//declare properties, methods, etc\nEnd Class",
+      "name": "Normal class"
+    },
+    "abstract_class": {
+      "code": "MustInherit Class ClassName\n\t//declare abstract properties, methods, etc\nEnd Class",
+      "name": "Abstract class"
+    },
+    "interface": {
+      "code": "Interface IClassName \n\t//declare properties, methods, etc\n\nEnd Interface",
+      "name": "Interface"
+    },
+    "read_only_class": {
+      "not-implemented": "true",
+      "name": "Read-only class"
+    },
+    "static_class": {
+      "code": "NotInheritable Class ClassName\n\t//declare static properties, methods, etc\nEnd Class",
+      "name": "Static class"
+    },
+    "inner_class": {
+      "code": "Class OuterClass \n\tClass InnerClass \n\t\t//declare inner class properties, methods, etc\n\tEnd Class\nEnd Class",
+      "name": "Inner class"
+    },
+    "packages": {
+      "code": "Namespace PackageName \n\tClass ClassName \n\t\t//declare properties, methods, etc\n\tEnd Class\n\n\tClass SecondName \n\t\t//declare properties, methods, etc\n\tEnd Class\nEnd Namespace",
+      "name": "Packages"
+    },
+    "class_with_generic_type": {
+      "code": "Class ClassName(Of T)\n\tPropertyName As T\n\t Sub New(ByVal Name As T)\n\t\tPropertyName = Name\n\tEnd Sub\nEnd Class",
+      "name": "Class with a generic type"
+    },
+    "private_variables": {
+      "code": "Private VariableName As String = value",
+      "name": "Defining private variables"
+    },
+    "protected_variables": {
+      "code": "Protected Friend VariableName As String = value",
+      "name": "Defining protected variables"
+    },
+    "public_variables": {
+      "code": "Public VariableName As String = value",
+      "name": "Defining public variables"
+    },
+    "static_variables": {
+      "code": "NotInheritable Class ClassName\n\t//declare static properties, methods, etc\nEnd Class",
+      "name": "Defining static variables"
+    },
+    "private_functions": {
+      "code": "Private Function FunctionName() As String \n\t//insert code here\nEnd Function",
+      "name": "Defining private functions"
+    },
+    "protected_functions": {
+      "code": "Protected Function FunctionName() As String \n\t//insert code here\nEnd Function",
+      "name": "Defining protected functions"
+    },
+    "public_functions": {
+      "code": "Public Function FunctionName() As String \n\t//insert code here\nEnd Function",
+      "name": "Defining public functions"
+    },
+    "static_functions": {
+      "code": "Shared Function FunctionName() As String \n\t//insert code here\nEnd Function",
+      "name": "Defining static functions"
+    },
+    "extends_class": {
+      "code": "Class ParentClassName \n\tPublic SampleProperty As String = \"\"\nEnd Class\n\nClass ChildClassName Inherits ParentClassName \n\tPublic AdditionalProperty As String = \"\"\nEnd Class",
+      "name": "Class that inherits/extends another class"
+    },
+    "extending_interface": {
+      "code": "Interface IClassName \n\n\tSub SampleMethod()\nEnd Interface\n\nClass InheritedClassName Inherits IClassName \n\tPublic Sub SampleMethod() Implements IClassName.SampleMethod\n\t\t//insert code here\n\t End Sub\nEnd Class",
+      "comment": "Any method indicated in the interface class must be implemented in the inherited class",
+      "name": "Class/Interface that inherits/extends another class/interface"
+    },
+    "calling_superclass_functions": {
+      "code": "SuperClass.FunctionName()",
+      "name": "Calling a superclass function"
+    },
+    "overriding_superclass_functions": {
+      "code": "Class ParentClassName \n\tPublic Sub FunctionName()\n\t\t//insert code\n\t End Sub\nEnd Class\nClass ChildClassName Inherits ParentClassName \n\tPublic Overrides Sub FunctionName() \n\t\t//insert different code\n\tEnd Sub\nEnd Class",
+      "name": "Overriding a superclass function"
+    },
+    "instantiating_object": {
+      "code": "Dim ObjectName As ClassName = new ClassName()",
+      "name": "Instantiating a new object"
+    },
+    "instantiating_polymorphic_object": {
+      "code": "Dim ObjectName As ParentClassName = new ChildClassName()",
+      "name": "Instantiating a polymorphic object"
+    },
+    "implement_constructor": {
+      "code": "Class ClassName \n\tSub New() \n\tEnd Sub\nEnd Class",
+      "name": "Implementing a class constructor"
+    },
+    "implement_deconstructor": {
+      "code": "Class ClassName \n\tSub Finalize()\n\tEnd Sub\nEnd Class",
+      "name": "Implementing a class deconstructor"
+    }
+  }
+}
