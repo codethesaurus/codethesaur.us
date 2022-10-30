@@ -152,19 +152,28 @@ class Language:
         """
         return self.concept(concept_key).get("comment", "")
 
-    def is_draft(self, version, structure_key):
+    def is_incomplete(self, version, structure_key):
         """
-        Returns a Boolean if the version is a draft
+        Returns a Boolean if the version is incomplete
 
         :param version: the version of the language
         :param structure_key: the ID for the structure to load
-        :return: Boolean if the version is a draft
+        :return: Boolean if the version is incomplete
         """
         file_name = f"{structure_key}.json"
         file_path = os.path.join(self.language_dir, version, file_name)
+
         with open(file_path, 'r', encoding='UTF-8') as file:
             file_json = json.load(file)
-            return file_json["meta"].get("draft", False)
+            for concept in file_json["concepts"].values():
+                code = concept.get("code")
+                if isinstance(code, list):
+                    code = "".join(code)
+                if isinstance(code, str) and code.strip() == "":
+                    return True
+
+        return False
+                    
 
 
 class MetaInfo:

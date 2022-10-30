@@ -227,8 +227,8 @@ def compare(request):
             "concepts": concepts
         })
 
-    is_lang1_draft = lang1.is_draft(version1, meta_structure.key)
-    is_lang2_draft = lang2.is_draft(version2, meta_structure.key)
+    is_lang1_incomplete = lang1.is_incomplete(version1, meta_structure.key)
+    is_lang2_incomplete = lang2.is_incomplete(version2, meta_structure.key)
 
     response = {
         "title": f"Comparing {lang1.friendly_name} and {lang2.friendly_name}",
@@ -240,8 +240,8 @@ def compare(request):
         "version2": version2,
         "lang1_friendlyname": lang1.friendly_name,
         "lang2_friendlyname": lang2.friendly_name,
-        "lang1_draft": is_lang1_draft,
-        "lang2_draft": is_lang2_draft,
+        "is_lang1_incomplete": is_lang1_incomplete,
+        "is_lang2_incomplete": is_lang2_incomplete,
         "categories": both_categories,
         "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
                 and {lang2.friendly_name}"
@@ -327,7 +327,7 @@ def reference(request):
             "concepts": concepts
         })
 
-    is_draft = lang.is_draft(version, meta_structure.key)
+    is_incomplete = lang.is_incomplete(version, meta_structure.key)
 
     response = {
         "title": f"Reference for {lang.key}",
@@ -337,7 +337,7 @@ def reference(request):
         "version": version,
         "lang_friendlyname": lang.friendly_name,
         "categories": categories,
-        "lang_draft": is_draft,
+        "is_incomplete": is_incomplete,
         "description": f"Code Thesaurus: Reference for {lang.key}"
     }
 

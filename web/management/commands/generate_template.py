@@ -1,3 +1,4 @@
+import unicodedata
 from django.core.management.base import BaseCommand
 
 from web.thesaurus_template_generators import generate_language_template
@@ -21,20 +22,17 @@ class Command(BaseCommand):
                 choices=structures
                 )
         parser.add_argument('--language-version', required=True)
-        parser.add_argument('--draft', required=False)
 
     def handle(self, *args, **options):
-        draft = options.get('draft', False)
         for structure in options['structures']:
-            self.generate_file(options['language'], structure, options['language_version'], draft=draft)
+            self.generate_file(options['language'], structure, options['language_version'])
 
-    def generate_file(self, language, structure, language_version, draft=False):
+    def generate_file(self, language, structure, language_version):
         try:
             template = generate_language_template(
                 language,
                 structure,
                 language_version,
-                draft=draft
             )
         except ValueError:
             self.stdout.write(
@@ -42,7 +40,8 @@ class Command(BaseCommand):
             )
 
         version = parse_version(language_version)
-        major_version = version.major
+        major_version = getattr(version, 'major', version.base_version)
+
         language_dir_path = os.path.join(
             'web',
             'thesauruses',

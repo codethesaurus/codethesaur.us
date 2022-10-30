@@ -27,9 +27,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="text-center">{{ lang_friendlyname|linebreaksbr }}'s Implementation</h3>
-{% if lang_draft %}
+{% if is_incomplete %}
                         <div class="alert alert-warning" role="alert">
-                            <strong>Warning!</strong> This is a draft. It may not be complete.
+                            <strong>Warning!</strong> This thesaurus is incomplete.
                             <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang }}/{{ version }}/{{ concept }}.json" class="alert-link">Help us improve!</a>
                         </div>
 {% endif %}
