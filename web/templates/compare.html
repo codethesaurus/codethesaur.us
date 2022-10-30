@@ -67,7 +67,7 @@
                             <summary href="javascript:void(0)" onclick="(function(target){
                                 const textarea = target.closest('details').querySelector('textarea');
                                 if (textarea.value) return;
-                                fetch('/api/{{ lang1 }}/{{ version1 }}/{{ concept }}').then(function(response){
+                                fetch('/api/{{ concept }}/{{ lang1 }}/{{ version1 }}').then(function(response){
                                     return response.text();
                                 }).then(function(data){
                                     textarea.value = data;
@@ -90,7 +90,7 @@
                             <summary href="javascript:void(0)" onclick="(function(target){
                                 const textarea = target.closest('details').querySelector('textarea');
                                 if (textarea.value) return;
-                                fetch('/api/{{ lang2 }}/{{ version2 }}/{{ concept }}').then(function(response){
+                                fetch('/api/{{ concept }}/{{ lang2 }}/{{ version2 }}').then(function(response){
                                     return response.text();
                                 }).then(function(data){
                                     textarea.value = data;
