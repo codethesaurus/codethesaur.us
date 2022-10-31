@@ -46,6 +46,7 @@
       "bitwise_or": "Bitwise OR operator",
       "bitwise_or_assignment": "Bitwise OR and assignment operator",
       "bitwise_not": "Bitwise NOT operator",
+      "bitwise_not_assignment":"Bitwise NOT and assignment operator",
       "bitwise_xor": "Bitwise XOR operator",
       "bitwise_xor_assignment": "Bitwise XOR and assignment operator",
       "bitwise_xnor": "Bitwise XNOR operator",
