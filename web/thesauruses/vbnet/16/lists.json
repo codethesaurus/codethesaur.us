@@ -6,6 +6,62 @@
     "structure": "lists"
   },
   "concepts": {
+    "name_of_ordered_mutable_list": {
+      "code": "List(Of T)",
+      "name": "What is a unordered mutable list called?"
+    },
+    "create_a_ordered_mutable_list": {
+      "code": "Dim List(Of T) listName = new List(Of T)",
+      "name": "unordered"
+    },
+    "ordered_mutable_list_start_number": {
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "code": "Yes",
+      "name": "Can you append to it?"
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "code": "Yes",
+      "name": "Can you insert into the middle of it?"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "code": "listName(index)",
+      "name": "Access element by index"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "code": "listName.Prepend(value)",
+      "name": "Insert element at beginning"
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "code": "listName.Add(value)",
+      "name": "Insert element at end"
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "code": "listName.Insert(index, value)",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": "listName.RemoveAt(0)",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": "listName.RemoveAt(listName.Count - 1)",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "code": "listName.RemoveAt(index)",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Swap two elements"
+    },
+    "delete_ordered_mutable_list": {
+      "code": "listName.Clear()",
+      "name": "Delete the list"
+    },
     "name_of_sorted_mutable_list": {
       "code": "SortedList",
       "name": "What is a ordered mutable list called?"
@@ -63,51 +119,51 @@
       "name": "Delete the list"
     },
     "name_of_unordered_mutable_list": {
-      "code": "List(Of T)",
+      "not-implemented": "true",
       "name": "What is a unordered mutable list called?"
     },
     "create_a_unordered_mutable_list": {
-      "code": "Dim List(Of T) listName = new List(Of T)",
+      "not-implemented": "true",
       "name": "unordered"
     },
     "unordered_mutable_list_start_number": {
-      "code": "0",
+      "not-implemented": "true",
       "name": "What number does it start at?"
     },
     "unordered_mutable_list_can_be_appended": {
-      "code": "Yes",
+      "not-implemented": "true",
       "name": "Can you append to it?"
     },
     "unordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "Yes",
+      "not-implemented": "true",
       "name": "Can you insert into the middle of it?"
     },
     "access_element_in_unordered_mutable_list": {
-      "code": "listName(index)",
+      "not-implemented": "true",
       "name": "Access element by index"
     },
     "insert_into_beginning_of_unordered_mutable_list": {
-      "code": "listName.Prepend(value)",
+      "not-implemented": "true",
       "name": "Insert element at beginning"
     },
     "insert_into_end_of_unordered_mutable_list": {
-      "code": "listName.Add(value)",
+      "not-implemented": "true",
       "name": "Insert element at end"
     },
     "insert_into_middle_of_unordered_mutable_list": {
-      "code": "listName.Insert(index, value)",
+      "not-implemented": "true",
       "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
-      "code": "listName.RemoveAt(0)",
+      "not-implemented": "true",
       "name": "Erase first element"
     },
     "erase_element_at_end_of_unordered_mutable_list": {
-      "code": "listName.RemoveAt(listName.Count - 1)",
+      "not-implemented": "true",
       "name": "Erase last element"
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
-      "code": "listName.RemoveAt(index)",
+      "not-implemented": "true",
       "name": "Erase element in the middle"
     },
     "swap_elements_in_unordered_mutable_list": {
@@ -115,47 +171,67 @@
       "name": "Swap two elements"
     },
     "delete_unordered_mutable_list": {
-      "code": "listName.Clear()",
+      "not-implemented": "true",
       "name": "Delete the list"
     },
     "name_of_ordered_immutable_list": {
-      "not-implemented": "true",
+      "code": "ImmutableList(Of T)",
       "name": "What is a ordered immutable list called?"
     },
     "create_a_ordered_immutable_list": {
-      "not-implemented": "true",
-      "name": "Create the list"
-    },
-    "ordered_immutable_list_start_number": {
-      "not-implemented": "true",
-      "name": "What number does it start at?"
-    },
-    "access_element_in_ordered_immutable_list": {
-      "not-implemented": "true",
-      "name": "Access element by index"
-    },
-    "delete_ordered_immutable_list": {
-      "not-implemented": "true",
-      "name": "Delete the list"
-    },
-    "name_of_unordered_immutable_list": {
-      "code": "ImmutableList(Of T)",
-      "name": "What is a unordered immutable list called?"
-    },
-    "create_a_unordered_immutable_list": {
       "code": "Dim immutableListName as ImmutableList(Of T) = ImmutableList.Create(Of T)",
       "name": "Create the list"
     },
-    "unordered_immutable_list_start_number": {
+    "ordered_immutable_list_start_number": {
       "code": "0",
       "name": "What number does it start at?"
     },
-    "access_element_in_unordered_immutable_list": {
+    "access_element_in_ordered_immutable_list": {
       "code": "immutableListName.Item(index)",
       "name": "Access element by index"
     },
-    "delete_unordered_immutable_list": {
+    "delete_ordered_immutable_list": {
       "code": "immutableListName.Clear()",
+      "name": "Delete the list"
+    },
+    "name_of_unordered_immutable_list": {
+      "not-implemented": "true",
+      "name": "What is a unordered immutable list called?"
+    },
+    "name_of_sorted_immutable_list": {
+      "code": "ImmutableSortedSet(Of T)",
+      "name": "What is a sorted immutable list called?"
+    },
+    "create_a_sorted_immutable_list": {
+      "code": "Dim immutableSortedSetName As ImmutableSortedSet(Of Integer) = ImmutableSortedSet.Create(Of Integer)",
+      "name": "Create the list"
+    },
+    "sorted_immutable_list_start_number": {
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_sorted_immutable_list": {
+      "code": "immutableSortedSetName.Item(0)",
+      "name": "Access element by index"
+    },
+    "delete_sorted_immutable_list": {
+      "code": "immutableSortedSetName.Clear()",
+      "name": "Delete the list"
+    },
+    "create_a_unordered_immutable_list": {
+      "not-implemented": "true",
+      "name": "Create the list"
+    },
+    "unordered_immutable_list_start_number": {
+      "not-implemented": "true",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "not-implemented": "true",
+      "name": "Access element by index"
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": "true",
       "name": "Delete the list"
     },
     "name_of_mutable_hashed_list": {
@@ -278,12 +354,20 @@
       "name": "Concatenate two lists together"
     },
     "split_list_at_index": {
-      "not-implemented": true,
-      "name": "Split lists at an index"
+      "code": [
+        "listName.Take(index)",
+        "listName.Skip(index)"
+      ],
+      "name": "Split lists at an index",
+      "comment": "The first statement returns the first part of the list and the second one returns the second part of the list."
     },
     "split_list_at_value": {
-      "not-implemented": true,
-      "name": "Split list at a value"
+      "code": [
+        "listName.Take(listName.IndexOf(value))",
+        "listName.Skip(listName.IndexOf(value))"
+      ],
+      "name": "Split list at a value",
+      "comment": "The first statement returns the list up to the value and the second one returns the list from the value."
     },
     "duplicate_a_list": {
       "code": "Dim newList As New List(Of T)(listName)",
