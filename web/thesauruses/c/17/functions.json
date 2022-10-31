@@ -7,7 +7,7 @@
     },
     "concepts": {
         "void_functions_no_parameters": {
-            "code": "void foo() { return ; }",
+            "code": "void foo() { return; }",
             "comment": "Return statement is optional.",
             "name": "Function that does not return a value and takes no parameters"
         },
@@ -61,6 +61,22 @@
             "not-implemented": "true",
             "name": "Anonymous function that takes an unknown number of parameters"
         },
+        "anonymous_function_no_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes no parameters and returns a value"
+        },
+        "anonymous_function_with_parameters_with_return": {
+            "not-implemented":"true",
+            "name":"Anonymous function that takes 1 or more defined parameters and returns a value"
+        },
+        "anonymous_function_with_keyword_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes 0 or more defined keyword parameters and returns a value"
+        },
+        "anonymous_function_variable_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes an unknown number of parameters and returns a value"
+         }, 
         "call_subroutine": {
             "code": "foo()",
             "comment": "Calls the function 'foo' - must be defined first.",
