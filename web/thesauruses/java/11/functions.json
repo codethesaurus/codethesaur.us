@@ -31,16 +31,16 @@
       "name": "Function that returns a value and takes an unknown number of parameters"
     },
     "anonymous_function_no_parameters": {
-      "code": "lambda: () -> " "no parameters",
+      "code": "() -> { statements }" ,
       "name": "Anonymous function that takes no parameters"
     },
     "anonymous_function_with_parameters": {
       "name": "Anonymous function that takes 1 or more defined parameters",
-      "code": "lambda (parameter_1, parameter_2) ->  : parameter_1 + parameter_2"
+      "code": "(parameter_1, parameter_2) ->  : parameter_1 + parameter_2"
     },
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
-      "code": "lambda (var parameter) -> : parameter"
+      "code": "(var parameter) -> : parameter"
     }
   }
 }
