@@ -7,7 +7,7 @@
     },
     "concepts": {
         "void_functions_no_parameters": {
-            "code": "void foo() { return; }",
+            "code": "void func(){return;}",
             "comment": "Return statement is optional.",
             "name": "Function that does not return a value and takes no parameters"
         },
