@@ -154,10 +154,6 @@
       "code" : "~a",
       "name" : "Bitwise NOT operator"
   },
-    "bitwise_not_assignment": {
-      "code": "a = ~a",
-      "name" : "Bitwise NOT and assignment operator"
-  },
 "bitwise_xor": {
       "code" : "a^b",
       "name" : "Bitwise XOR operator"
