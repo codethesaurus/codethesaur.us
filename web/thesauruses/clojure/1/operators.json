@@ -11,8 +11,7 @@
       "name": "Addition operator"
     },
     "addition_assignment": {
-      "comment": "Clojure doesn't have the traditional notion of assignment as in procedural languages, but it can apply in some situations (ex: atoms and volatile refs).",
-      "code": "(let [x (volatile! 0)]\n  (doseq [addend (range 10)]\n    (vswap! x + addend))\n  @x)",
+      "not-implemented": "true",
       "name": "Addition and assignment operator"
     },
     "subtraction": {
@@ -20,7 +19,6 @@
       "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "comment": "See note about the Addition and assignment operator above.",
       "not-implemented": "true",
       "name": "Subtraction and assignment operator"
     },
@@ -29,7 +27,6 @@
       "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "comment": "See note about the Addition and assignment operator above.",
       "not-implemented": "true",
       "name": "Multiplication and assignment operator"
     },
@@ -38,7 +35,6 @@
       "name": "Division operator"
     },
     "division_assignment": {
-      "comment": "See note about the Addition and assignment operator above.",
       "not-implemented": "true",
       "name": "Division and assignment operator"
     },
@@ -66,23 +62,19 @@
       "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
-      "comment": "See note about the Addition and assignment operator above.",
       "not-implemented": "true",
       "name": "Modulus and assignment operator"
     },
     "increment": {
-      "comment": "See note about the Addition and assignment operator above. The `inc` function will increment the value and return the result, not overwrite any \"variable\".",
       "code": "(inc 1)",
       "name": "Increment (add 1) operator"
     },
     "decrement": {
-      "comment": "See note about the Addition and assignment operator above. The `dec` function will decrement the value and return the result, not overwrite any \"variable\".",
       "code": "(dec 10)",
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
-      "comment": "No built in function, but easy enough to write.",
-      "code": "(defn exp [x n]\n  (reduce * (repeat n x)))",
+      "not-implemented": "true",
       "name": "Exponential operator"
     },
     "factorial": {
@@ -197,7 +189,6 @@
       "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "comment": "See note about the Addition and assignment operator above.",
       "not-implemented": "true",
       "name": "Left shift assignment operator"
     },
@@ -206,7 +197,6 @@
       "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "comment": "See note about the Addition and assignment operator above.",
       "not-implemented": "true",
       "name": "Right shift assignment operator"
     },
