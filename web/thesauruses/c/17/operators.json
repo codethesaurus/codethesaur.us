@@ -139,7 +139,7 @@
       "name" : "Bitwise AND operator"
   },
 "bitwise_and_assignmnet": {
-      "code" : "a&=b",
+      "code" : "a &= b",
       "name" : "Bitwise AND and assignment operator"
   },
 "bitwise_or": {
@@ -155,7 +155,7 @@
       "name" : "Bitwise NOT operator"
   },
     "bitwise_not_assignment": {
-      "not-implemented": "true",
+      "code": "a = ~a",
       "name" : "Bitwise NOT and assignment operator"
   },
 "bitwise_xor": {
