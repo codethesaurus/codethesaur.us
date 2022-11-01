@@ -361,16 +361,6 @@
       ],
       "comment": "Constants (immutable values) are typically capitalized in Ruby."
     },
-    "insert_element_to_immutable_hashed_list": {
-      "name": "Insert an element",
-      "not-implemented": true,
-      "comment": "Immutable hashes cannot be changed."
-    },
-    "erase_element_from_immutable_hashed_list": {
-      "name": "Erase an element from the list",
-      "not-implemented": true,
-      "comment": "Immutable hashes cannot be changed."
-    },
     "delete_immutable_hashed_list": {
       "name": "Delete the list",
       "not-implemented": true,

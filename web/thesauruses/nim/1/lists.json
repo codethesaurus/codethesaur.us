@@ -186,14 +186,6 @@
       "name": "Create the list",
       "code": "{\"key\": \"value\"}.toTable"
     },
-    "insert_element_to_immutable_hashed_list": {
-      "name": "Insert an element",
-      "code": "table[key] = value"
-    },
-    "erase_element_from_immutable_hashed_list": {
-      "name": "Erase an element from the list",
-      "code": "table.del key"
-    },
     "delete_immutable_hashed_list": {
       "name": "Delete the list",
       "code": "Automatic compile-time deterministic memory management"

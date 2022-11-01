@@ -187,14 +187,6 @@
       "code": "Set.empty\nSet.fromList list\nSet.fromAscList ascendingList\nSet.fromDescList descendingList\nSet.fromDistinctAscList list\nSet.fromDistinctDescList list",
       "name": "Create the list"
     },
-    "insert_element_to_immutable_hashed_list": {
-      "code": "insert setToInsertTo elementToInsert",
-      "name": "Insert an element"
-    },
-    "erase_element_from_immutable_hashed_list": {
-      "code": "delete setToDeleteFrom elementToDelete",
-      "name": "Erase an element from the list"
-    },
     "delete_immutable_hashed_list": {
       "not-implemented": true,
       "name": "Delete the list"

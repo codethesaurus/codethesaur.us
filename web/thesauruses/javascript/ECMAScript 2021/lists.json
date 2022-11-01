@@ -293,14 +293,6 @@
         "not-implemented": true,
         "name": "Create the list"
       },
-      "insert_element_to_immutable_hashed_list": {
-        "not-implemented": true,
-        "name": "Insert an element"
-      },
-      "erase_element_from_immutable_hashed_list": {
-        "not-implemented": true,
-        "name": "Erase an element from the list"
-      },
       "delete_immutable_hashed_list": {
         "not-implemented": true,
         "name": "Delete the list"

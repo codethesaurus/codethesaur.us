@@ -218,12 +218,6 @@
     "create_a_immutable_hashed_list": {
       "not-implemented": "true"
     },
-    "insert_element_to_immutable_hashed_list": {
-      "not-implemented": "true"
-    },
-    "erase_element_from_immutable_hashed_list": {
-      "not-implemented": "true"
-    },
     "delete_immutable_hashed_list": {
       "not-implemented": "true"
     },

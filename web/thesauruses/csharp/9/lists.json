@@ -186,14 +186,6 @@
       "code": "ImmutableHashSet<T> immutableHashSetName = new ImmutableHashSet<T>();",
       "name": "Create the list"
     },
-    "insert_element_to_immutable_hashed_list": {
-      "code": "immutableHashSetName.Add(value)",
-      "name": "Insert an element"
-    },
-    "erase_element_from_immutable_hashed_list": {
-      "code": "immutableHashSetName.Remove(value)",
-      "name": "Erase an element from the list"
-    },
     "delete_immutable_hashed_list": {
       "code": "immutableHashSetName.Clear()",
       "name": "Delete the list"
