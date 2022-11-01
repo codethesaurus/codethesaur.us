@@ -116,71 +116,71 @@
       }, 
       "send_a_get_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP GET request",
+        "name":"Send a HTTP GET request"
       }, 
       "send_a_post_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP POST request",
+        "name":"Send a HTTP POST request"
       }, 
       "send_a_put_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP PUT request",
+        "name":"Send a HTTP PUT request"
       }, 
       "send_a_patch_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP PATCH request",
+        "name":"Send a HTTP PATCH request"
       }, 
       "send_a_delete_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP DELETE request",
+        "name":"Send a HTTP DELETE request"
       }, 
       "send_a_head_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP HEAD request",
+        "name":"Send a HTTP HEAD request"
       }, 
       "send_a_options_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP OPTIONS request",
+        "name":"Send a HTTP OPTIONS request"
       }, 
       "send_a_connect_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP CONNECT request",
+        "name":"Send a HTTP CONNECT request"
       }, 
       "send_a_trace_request":{
         "not-implemented":"true",
-        "name":"Send a HTTP TRACE request",
+        "name":"Send a HTTP TRACE request"
       }, 
       "add_headers":{
         "not-implemented":"true",
-        "name":"Add headers to a HTTP request",
+        "name":"Add headers to a HTTP request"
       }, 
       "add_query_params":{
         "not-implemented":"true",
-        "name":"Add query parameters to a HTTP request",
+        "name":"Add query parameters to a HTTP request"
       }, 
       "inbuilt_url_class":{
         "not-implemented":"true",
-        "name":"The inbuilt URL class",
+        "name":"The inbuilt URL class"
       }, 
       "open_a_socket":{
         "not-implemented":"true",
-        "name":"Open a network socket",
+        "name":"Open a network socket"
       }, 
       "close_a_socket":{
         "not-implemented":"true",
-        "name":"Close a network socket",
+        "name":"Close a network socket"
       }, 
       "add_authorization_headers":{
         "not-implemented":"true",
-        "name":"Add an authorization header",
+        "name":"Add an authorization header"
       }, 
       "add_cookies":{
         "not-implemented":"true",
-        "name":"Add cookies to a HTTP request",
+        "name":"Add cookies to a HTTP request"
       }, 
       "read_cookies":{
         "not-implemented":"true",
-        "name":"Read cookies from a HTTP response",
+        "name":"Read cookies from a HTTP response"
       }, 
       "read_headers":{
         "not-implemented":"true",
