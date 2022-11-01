@@ -83,8 +83,6 @@
     "Immutable Hashed Lists": {
       "name_of_immutable_hashed_list": "What is an immutable hashed list called?",
       "create_a_immutable_hashed_list": "Create the list",
-      "insert_element_to_immutable_hashed_list": "Insert an element",
-      "erase_element_from_immutable_hashed_list": "Erase an element from the list",
       "delete_immutable_hashed_list": "Delete the list"
     },
     "Mutable Key/Value Sets": {
