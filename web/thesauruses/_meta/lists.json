@@ -45,6 +45,8 @@
     "Ordered Immutable Lists": {
       "name_of_ordered_immutable_list": "What is a ordered (not sorted) immutable list called?",
       "create_a_ordered_immutable_list": "Create the list",
+      "make_ordered_mutable_list_immutable": "Create the list from the mutable equivalent",
+      "make_ordered_immutable_list_mutable": "Create mutable equivalent of the list",
       "ordered_immutable_list_start_number": "What number does it start at?",
       "access_element_in_ordered_immutable_list": "Access element by index",
       "delete_ordered_immutable_list": "Delete the list"
@@ -52,6 +54,8 @@
     "Unordered Immutable Lists": {
       "name_of_unordered_immutable_list": "What is a unordered/unsorted immutable list called?",
       "create_a_unordered_immutable_list": "Create the list",
+      "make_unordered_mutable_list_immutable": "Create the list from the mutable equivalent",
+      "make_unordered_immutable_list_mutable": "Create mutable equivalent of the list",
       "unordered_immutable_list_start_number": "What number does it start at?",
       "access_element_in_unordered_immutable_list": "Access element by index",
       "delete_unordered_immutable_list": "Delete the list"
@@ -66,6 +70,8 @@
     "Immutable Hashed Lists": {
       "name_of_immutable_hashed_list": "What is an immutable hashed list called?",
       "create_a_immutable_hashed_list": "Create the list",
+      "make_mutable_hashed_list_immutable": "Create the list from the mutable equivalent",
+      "make_immutable_hashed_list_mutable": "Create mutable equivalent of the list",
       "delete_immutable_hashed_list": "Delete the list"
     },
     "Mutable Key/Value Sets": {
@@ -79,6 +85,8 @@
     },
     "Immutable Key/Value Sets": {
       "create_a_immutable_set": "Create an immutable key/value set",
+      "make_mutable_set_immutable": "Create the list from the mutable equivalent",
+      "make_immutable_set_mutable": "Create mutable equivalent of the key/value set",
       "get_key_from_immutable_set": "Get key",
       "get_value_from_immutable_set": "Get value",
       "get_all_keys_from_immutable_set": "Get all keys",
