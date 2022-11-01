@@ -73,17 +73,7 @@
       "code": "someList[26]",
       "name": "Access element by index"
     },
-    "insert_into_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
-      "name": "Insert element at beginning"
-    },
-    "insert_into_end_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
-      "name": "Insert element at end"
-    },
-    "insert_into_middle_of_unordered_mutable_list": {
+    "insert_into_unordered_mutable_list": {
       "not-implemented": "true",
       "comment": "This operation is not necessary as the elements are accessed by the key",
       "name": "Insert element in middle"

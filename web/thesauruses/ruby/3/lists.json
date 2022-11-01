@@ -107,15 +107,7 @@
       "name": "Access element by index",
       "not-implemented": true
     },
-    "insert_into_beginning_of_sorted_mutable_list": {
-      "name": "Insert element at beginning",
-      "not-implemented": true
-    },
-    "insert_into_end_of_sorted_mutable_list": {
-      "name": "Insert element at end",
-      "not-implemented": true
-    },
-    "insert_into_middle_of_sorted_mutable_list": {
+    "insert_into_sorted_mutable_list": {
       "name": "Insert element in middle",
       "not-implemented": true
     },
@@ -161,21 +153,13 @@
       "name": "Access element by index",
       "not-implemented": true
     },
-    "insert_into_beginning_of_unordered_mutable_list": {
-      "name": "Insert element at beginning",
-      "not-implemented": true
-    },
-    "insert_into_end_of_unordered_mutable_list": {
+    "insert_into_unordered_mutable_list": {
       "name": "Insert element at end",
       "code": [
         "colors.add('pink')",
         "colors << 'pink'"
       ],
       "comment": "sets are \"unordered\", but they always append to the end."
-    },
-    "insert_into_middle_of_unordered_mutable_list": {
-      "name": "Insert element in middle",
-      "not-implemented": true
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
       "name": "Erase first element",

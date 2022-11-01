@@ -22,15 +22,7 @@
       "code": "sortedListName[index]",
       "name": "Access element by index"
     },
-    "insert_into_beginning_of_sorted_mutable_list": {
-      "not-implemented": "true",
-      "name": "Insert element at beginning"
-    },
-    "insert_into_end_of_sorted_mutable_list": {
-      "not-implemented": "true",
-      "name": "Insert element at end"
-    },
-    "insert_into_middle_of_sorted_mutable_list": {
+    "insert_into_sorted_mutable_list": {
       "not-implemented": "true",
       "name": "Insert element in middle"
     },
@@ -70,15 +62,7 @@
       "code": "listName[index]",
       "name": "Access element by index"
     },
-    "insert_into_beginning_of_unordered_mutable_list": {
-      "code": "listName.Prepend(value)",
-      "name": "Insert element at beginning"
-    },
-    "insert_into_end_of_unordered_mutable_list": {
-      "code": "listName.Append(value)",
-      "name": "Insert element at end"
-    },
-    "insert_into_middle_of_unordered_mutable_list": {
+    "insert_into_unordered_mutable_list": {
       "code": "listName.Index(index, value)",
       "name": "Insert element in middle"
     },

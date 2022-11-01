@@ -76,15 +76,7 @@
       "not-implemented": true,
       "name": "Access element by index"
     },
-    "insert_into_beginning_of_unordered_mutable_list": {
-      "not-implemented": true,
-      "name": "Insert element at beginning"
-    },
-    "insert_into_end_of_unordered_mutable_list": {
-      "not-implemented": true,
-      "name": "Insert element at end"
-    },
-    "insert_into_middle_of_unordered_mutable_list": {
+    "insert_into_unordered_mutable_list": {
       "not-implemented": true,
       "name": "Insert element in middle"
     },

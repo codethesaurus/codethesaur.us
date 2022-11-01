@@ -77,18 +77,10 @@
       "not-implemented": "true",
       "name": "Access element by index"
     },
-    "insert_into_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "name": "Insert element at beginning"
-    },
-    "insert_into_end_of_unordered_mutable_list": {
+    "insert_into_unordered_mutable_list": {
       "code": "S.Include (value); \n S.Insert (value);",
       "comment": "S.Insert(value) raises Constraint_Error if value appended is already in the list",
       "name": "Insert element at end"
-    },
-    "insert_into_middle_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
       "not-implemented": "true",
