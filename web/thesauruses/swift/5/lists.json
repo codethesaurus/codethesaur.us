@@ -20,14 +20,6 @@
       "code": "0",
       "name": "What number does it start at?"
     },
-    "ordered_mutable_list_can_be_appended": {
-      "code": "someArray += [-23]",
-      "name": "Can you append to it?"
-    },
-    "ordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "someArray.insert(13, at: 1)",
-      "name": "Can you insert into the middle of it?"
-    },
     "access_element_in_ordered_mutable_list": {
       "code": "someArray[3]",
       "name": "Access element by index"
@@ -76,16 +68,6 @@
       "not-implemented": "true",
       "comment": "This operation is not necessary as the elements are accessed by the key",
       "name": "What number does it start at?"
-    },
-    "unordered_mutable_list_can_be_appended": {
-      "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
-      "name": "Can you append to it?"
-    },
-    "unordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
-      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_unordered_mutable_list": {
       "code": "someList[26]",

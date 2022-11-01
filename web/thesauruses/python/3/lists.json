@@ -24,16 +24,6 @@
         "0"
       ]
     },
-    "ordered_mutable_list_can_be_appended": {
-      "code": [
-        "Yes"
-      ]
-    },
-    "ordered_mutable_list_can_be_inserted_in_middle": {
-      "code": [
-        "Yes"
-      ]
-    },
     "access_element_in_ordered_mutable_list": {
       "code": [
         "list_name[index]"
@@ -96,17 +86,6 @@
     },
     "unordered_mutable_list_start_number": {
       "not-implemented": "true"
-    },
-    "unordered_mutable_list_can_be_appended": {
-      "code": [
-        "No"
-      ]
-    },
-    "unordered_mutable_list_can_be_inserted_in_middle": {
-      "code": [
-        "Yes"
-      ],
-      "comment": "Because a set is unordered, the index cannot be specified"
     },
     "access_element_in_unordered_mutable_list": {
       "not-implemented": "true"

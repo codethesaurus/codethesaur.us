@@ -20,14 +20,6 @@
       "comment": "In other programming languages, like Java and python where list indices work on pointers and references, in Ada, we the programmer decide what the index type should be. It can be of any type, just change the type inside the parenthesis.",
       "name": "What number does it start at?"
     },
-    "ordered_mutable_list_can_be_appended": {
-      "code": "yes",
-      "name": "Can you append to it?"
-    },
-    "ordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "yes",
-      "name": "Can you insert into the middle of it?"
-    },
     "access_element_in_ordered_mutable_list": {
       "code": "Put_Line(Integer'Image(V(1)));",
       "comment": "Here index start from 1, so to access value of 1st element in array do V(index)",
@@ -81,15 +73,6 @@
       "not-implemented": "true",
       "name": "What number does it start at?"
     },
-    "unordered_mutable_list_can_be_appended": {
-      "code": "S.Include (value); \n S.Insert (value);",
-      "comment": "S.Insert(value) raises Constraint_Error if value appended is already in the list",
-      "name": "Can you append to it?"
-    },
-    "unordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "no",
-      "name": "Can you insert into the middle of it?"
-    },
     "access_element_in_unordered_mutable_list": {
       "not-implemented": "true",
       "name": "Access element by index"
@@ -99,7 +82,8 @@
       "name": "Insert element at beginning"
     },
     "insert_into_end_of_unordered_mutable_list": {
-      "not-implemented": "true",
+      "code": "S.Include (value); \n S.Insert (value);",
+      "comment": "S.Insert(value) raises Constraint_Error if value appended is already in the list",
       "name": "Insert element at end"
     },
     "insert_into_middle_of_unordered_mutable_list": {

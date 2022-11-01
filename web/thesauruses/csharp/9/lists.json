@@ -18,14 +18,6 @@
       "code": "0",
       "name": "What number does it start at?"
     },
-    "sorted_mutable_list_can_be_appended": {
-      "code": "Yes",
-      "name": "Can you append to it?"
-    },
-    "sorted_mutable_list_can_be_inserted_in_middle": {
-      "code": "No",
-      "name": "Can you insert into the middle of it?"
-    },
     "access_element_in_sorted_mutable_list": {
       "code": "sortedListName[index]",
       "name": "Access element by index"
@@ -73,14 +65,6 @@
     "unordered_mutable_list_start_number": {
       "code": "0",
       "name": "What number does it start at?"
-    },
-    "unordered_mutable_list_can_be_appended": {
-      "code": "Yes",
-      "name": "Can you append to it?"
-    },
-    "unordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "Yes",
-      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_unordered_mutable_list": {
       "code": "listName[index]",

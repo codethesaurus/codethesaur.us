@@ -19,14 +19,6 @@
       "name": "What number does it start at?",
       "code": "0"
     },
-    "ordered_mutable_list_can_be_appended": {
-      "name": "Can you append to it?",
-      "code": "Yes"
-    },
-    "ordered_mutable_list_can_be_inserted_in_middle": {
-      "name": "Can you insert into the middle of it?",
-      "code": "Yes"
-    },
     "access_element_in_ordered_mutable_list": {
       "name": "Access element by index",
       "code": "const element = array[3]"
@@ -75,14 +67,6 @@
     "unordered_mutable_list_start_number": {
       "not-implemented": true,
       "name": "What number does it start at?"
-    },
-    "unordered_mutable_list_can_be_appended": {
-      "not-implemented": true,
-      "name": "Can you append to it?"
-    },
-    "unordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": true,
-      "name": "Can you insert into the middle of it?"
     },
     "access_element_in_unordered_mutable_list": {
       "not-implemented": true,
@@ -351,14 +335,6 @@
     },
     "sorted_mutable_list_start_number": {
       "name": "What number does it start at?",
-      "not-implemented": true
-    },
-    "sorted_mutable_list_can_be_appended": {
-      "name": "Can you append to it?",
-      "not-implemented": true
-    },
-    "sorted_mutable_list_can_be_inserted_in_middle": {
-      "name": "Can you insert into the middle of it?",
       "not-implemented": true
     },
     "access_element_in_sorted_mutable_list": {

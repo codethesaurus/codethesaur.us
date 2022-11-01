@@ -22,18 +22,6 @@
         "name": "What number does it start at?",
         "code": "0"
       },
-      "ordered_mutable_list_can_be_appended": {
-        "name": "Can you append to it?",
-        "code": [
-          "list_name.push('new item');",
-          "list_name[list_name.length] = 'new item';"
-        ],
-        "comment": "The first method is preferred."
-      },
-      "ordered_mutable_list_can_be_inserted_in_middle": {
-        "name": "Can you insert into the middle of it?",
-        "code": "list_name.splice(list_name.length / 2, 0, 'new item');"
-      },
       "access_element_in_ordered_mutable_list": {
         "name": "Access element by index",
         "code": "list_name[index];"
@@ -105,14 +93,6 @@
         "not-implemented": true,
         "name": "What number does it start at?"
       },
-      "sorted_mutable_list_can_be_appended": {
-        "not-implemented": true,
-        "name": "Can you append to it?"
-      },
-      "sorted_mutable_list_can_be_inserted_in_middle": {
-        "not-implemented": true,
-        "name": "Can you insert into the middle of it?"
-      },
       "access_element_in_sorted_mutable_list": {
         "not-implemented": true,
         "name": "Access element by index"
@@ -160,14 +140,6 @@
       "unordered_mutable_list_start_number": {
         "not-implemented": true,
         "name": "What number does it start at?"
-      },
-      "unordered_mutable_list_can_be_appended": {
-        "not-implemented": true,
-        "name": "Can you append to it?"
-      },
-      "unordered_mutable_list_can_be_inserted_in_middle": {
-        "not-implemented": true,
-        "name": "Can you insert into the middle of it?"
       },
       "access_element_in_unordered_mutable_list": {
         "not-implemented": true,
