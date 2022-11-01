@@ -7,43 +7,43 @@
   },
   "concepts": {
     "addition": {
-      "code": "+",
+      "code": "a + b",
       "name": "Addition operator"
     },
     "addition_assignment": {
-      "code": "+=",
+      "code": "a += b, equivalant to 'a = a + b'",
       "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-",
+      "code": "a - b",
       "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "code": "-=",
+      "code": "a -= b, equivalant to 'a = a - b'",
       "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*",
+      "code": "a * b",
       "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "code": "*=",
+      "code": "a *= b, equivalant to 'a = a * b'",
       "name": "Multiplication and assignment operator"
     },
     "division": {
-      "code": "/",
+      "code": "a / b",
       "name": "Division operator"
     },
     "division_assignment": {
-      "code": "/=",
+      "code": "a /= b, equivalant to 'a = a / b'",
       "name": "Division and assignment operator"
     },
     "modulus": {
-      "code": "%",
+      "code": "a % b",
       "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
-      "code": "%=",
+      "code": "a %= b, equivalant to 'a = a % b'",
       "name": "Modulus and assignment operator"
     },
     "increment": {
@@ -71,27 +71,27 @@
       "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "==",
+      "code": "a == b",
       "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "!=",
+      "code": "a != b",
       "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "<",
+      "code": "a < b",
       "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "<=",
+      "code": "a <= b",
       "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": ">",
+      "code": "a > b",
       "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": ">=",
+      "code": "a >= b",
       "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
@@ -107,19 +107,47 @@
       "name": "Is not operator"
     },
     "left_shift": {
-      "code": "<<",
+      "code": "a << b",
       "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "<<=",
+      "code": "a <<= b, equivalant to 'a = a << b'",
       "name": "Left shift assignment operator"
     },
     "right_shift": {
-      "code": ">>",
+      "code": "a >> b",
       "name": "Right shift bitwise operator"
     },
+    "bitwise_and": {
+      "code": "a & b",
+      "name": "Bitwise AND operator"
+    },
+    "bitwise_and_assignment": {
+      "code": "a &= b, equivalant to 'a = a & b'",
+      "name": "Bitwise AND and assignment operator"
+    },
+    "bitwise_or": {
+      "code": "a | b",
+      "name": "Bitwise OR operator"
+    },
+    "bitwise_or_assignment": {
+      "code": "a |= b, equivalant to 'a = a | b'",
+      "name": "Bitwise OR and assignment operator"
+    },
+    "bitwise_xor": {
+      "code": "a ^ b",
+      "name": "Bitwise XOR operator"
+    },
+    "bitwise_xor_assignment": {
+      "code": "a ^= b, equivalant to 'a = a ^ b'",
+      "name": "Bitwise XOR and assignment operator"
+    },
+    "bitwise_complement": {
+      "code": "a ~ b",
+      "name": "Bitwise complement operator"
+    },
     "right_shift_assignment": {
-      "code": ">>=",
+      "code": "a >>= b, equivalant to 'a = a >> b'",
       "name": "Right shift assignment operator"
     },
     "ternary": {
