@@ -23,7 +23,7 @@
             "code": "getchar()",
             "name": "Read a single char of user input from the console"
             },
-        "clear_console_output": {
+       "clear_console_cutput": {
             "code": [
                 "#include<stdio.h>",
                 "#include<stdlib.h>",
@@ -36,7 +36,7 @@
             "comment": "system() is defined in stdlib.h",
             "name": "Clear the console output"
         },
-        "change_console_background_console":{
+        "change_console_background_color":{
             "not-implemented":"true",
             "name":"change the background color of the console"
         },
@@ -47,6 +47,10 @@
         "file_function_lib": {
             "code": "#include<stdio.h>",
             "name": "library containing file IO functions"
+        },
+        "file_functions_lib": {
+            "not-implemented":"true",
+            "name":"Library containing file IO functions"
         },
         "list_directory":{
             "not-implemented":"true",
