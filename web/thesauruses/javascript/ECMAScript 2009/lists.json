@@ -181,26 +181,6 @@
         "not-implemented": true,
         "name": "Delete the list"
       },
-      "name_of_sorted_immutable_list": {
-        "not-implemented": true,
-        "name": "What is a sorted immutable list called?"
-      },
-      "create_a_sorted_immutable_list": {
-        "not-implemented": true,
-        "name": "Create the list"
-      },
-      "sorted_immutable_list_start_number": {
-        "not-implemented": true,
-        "name": "What number does it start at?"
-      },
-      "access_element_in_sorted_immutable_list": {
-        "not-implemented": true,
-        "name": "Access element by index"
-      },
-      "delete_sorted_immutable_list": {
-        "not-implemented": true,
-        "name": "Delete the list"
-      },
       "name_of_unordered_immutable_list": {
         "not-implemented": true,
         "name": "What is a unordered/unsorted immutable list called?"

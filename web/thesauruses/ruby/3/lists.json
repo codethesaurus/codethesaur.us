@@ -220,37 +220,6 @@
       "comment": "Immutable arrays raise an error if `clear` is called on them.",
       "not-implemented": true
     },
-    "name_of_sorted_immutable_list": {
-      "name": "What is a sorted immutable list called?",
-      "code": [
-        "sorted frozen array"
-      ],
-      "comment": "Ruby doesn't have a concept for a sorted that stays sorted when items are added or removed. Frozen arrays are immutable, so if the array is sorted before it's frozen, then it will technically maintain its order."
-    },
-    "create_a_sorted_immutable_list": {
-      "name": "Create the list",
-      "code": [
-        "ICE_CREAMS = ['vanilla', 'chocolate', 'strawberry', 'rocky road'].sort.freeze"
-      ],
-      "comment": "Arrays can be sorted before they are frozen."
-    },
-    "sorted_immutable_list_start_number": {
-      "name": "What number does it start at?",
-      "code": [
-        "0"
-      ]
-    },
-    "access_element_in_sorted_immutable_list": {
-      "name": "Access element by index",
-      "code": [
-        "ICE_CREAMS[3]"
-      ]
-    },
-    "delete_sorted_immutable_list": {
-      "name": "Delete the list",
-      "comment": "Immutable arrays raise an error if `clear` is called on them.",
-      "not-implemented": true
-    },
     "name_of_unordered_immutable_list": {
       "name": "What is a unordered/unsorted immutable list called?",
       "not-implemented": true
