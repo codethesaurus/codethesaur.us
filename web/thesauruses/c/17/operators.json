@@ -155,7 +155,7 @@
       "name" : "Bitwise NOT operator"
   },
  "bitwise_not_assignment": {
-	"code" : "a = ~a",
+        "not-implemented": "true",
 	"name" : "Bitwise NOT and assignment operator"
  },
 "bitwise_xor": {
@@ -198,5 +198,5 @@
       "not-implemented": "true",
       "name": "Null forgiving operator"
     }
-	}
+  }
 }
