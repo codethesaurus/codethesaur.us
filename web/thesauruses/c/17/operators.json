@@ -155,7 +155,7 @@
       "name" : "Bitwise NOT operator"
   },
  "not_assignment": {
-  "not-implemented": "true",
+        "not-implemented": "true",
 	"name" : "Bitwise NOT and assignment operator"
  },
 "bitwise_xor": {
