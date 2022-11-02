@@ -1,6 +1,6 @@
 {
   "meta": {
-    "language": "Java",
+    "language": "java",
     "language_version": "15",
     "language_name": "Java",
     "structure": "operators"
@@ -63,7 +63,7 @@
       "name": "Factorial operator"
     },
     "absolute_value": {
-      "not-implemented": "true",
+      "code": "Math.abs(-4)",
       "name": "Absolute value operator"
     },
     "percentage": {

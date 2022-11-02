@@ -6,8 +6,8 @@
         "structure": "functions"
     },
     "concepts": {
-        "void_functions_no_parameters": {
-            "code": "void foo() { return; }",
+        "void_function_no_parameters": {
+            "code": "void func(){return;}",
             "comment": "Return statement is optional.",
             "name": "Function that does not return a value and takes no parameters"
         },
@@ -17,12 +17,13 @@
             "name": "Function that does not return a value and that takes 1 or more defined parameters"
         },
         "void_function_with_keyword_parameters": {
-            "code": "unknown",
+            "code": "void sum(int a=5,int b=7)",
+            "comment":"default paramaters",
             "name": "Function that does not return a value and that takes 0 or more defined keyword parameters"
         },
         "void_function_variable_parameters": {
-            "code": "unknown",
-            "comment": "a header file <stdargs.h> is available",
+            "code": "eg : void avg(int count,...)",
+            "comment": "a header file <stdargs.h> is available, these are called variadic functions and count variable is passed with no. of arguments",
             "name": "Function that does not return a value and function that takes an unknown number of parameters"
         },
         "return_value_function_no_parameters": {
@@ -35,20 +36,21 @@
             "name": "Function that returns a value and takes 1 or more defined parameters"
         },
         "return_value_function_with_keyword_parameters": {
-            "code": "unknown",
+            "code": "int sum(int a=5,int b=7)",
+            "comment":"default parameters",
             "name": "Function that returns a value and that takes 0 or more defined keyword parameters"
         },
         "return_value_function_variable_parameters": {
-            "code": "unknown",
-            "comment": "a header file <stdargs.h> is available",
+            "code": "eg : double average(int count, ...)",
+            "comment": "a header file <stdargs.h> is available, these are called variadic functions and count variable is passed with no. of arguments",
             "name": "Function that returns a value and takes an unknown number of parameters"
         },
         "anonymous_function_no_parameters": {
-            "not_implemented": "true",
+            "not-implemented": "true",
             "name": "Anonymous function that takes no parameters"
         },
         "anonymous_function_with_parameters": {
-            "not_implemented": "true",
+            "not-implemented": "true",
             "name": "Anonymous function that takes 1 or more defined parameters"
         },
         "anonymous_function_with_keyword_parameters": {
@@ -59,6 +61,22 @@
             "not-implemented": "true",
             "name": "Anonymous function that takes an unknown number of parameters"
         },
+        "anonymous_function_no_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes no parameters and returns a value"
+        },
+        "anonymous_function_with_parameters_with_return": {
+            "not-implemented":"true",
+            "name":"Anonymous function that takes 1 or more defined parameters and returns a value"
+        },
+        "anonymous_function_with_keyword_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes 0 or more defined keyword parameters and returns a value"
+        },
+        "anonymous_function_variable_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes an unknown number of parameters and returns a value"
+         }, 
         "call_subroutine": {
             "code": "foo()",
             "comment": "Calls the function 'foo' - must be defined first.",

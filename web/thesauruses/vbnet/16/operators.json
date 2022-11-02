@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "language": "vbnet",
+    "language_version": "16.0",
+    "language_name": "Visual Basic",
+    "structure": "operators"
+  },
+  "concepts": {
+    "addition": {
+      "code": "operand1 + operand2",
+      "name": "Addition operator"
+    },
+    "addition_assignment": {
+      "code": "operand1 += operand2",
+      "name": "Addition and assignment operator"
+    },
+    "subtraction": {
+      "code": "operand1 - operand2",
+      "name": "Subtraction operator"
+    },
+    "subtraction_assignment": {
+      "code": "operand1 -= operand2",
+      "name": "Subtraction and assignment operator"
+    },
+    "multiplication": {
+      "code": "operand1 * operand2",
+      "name": "Multiplication operator"
+    },
+    "multiplication_assignment": {
+      "code": "operand1 *= operand2",
+      "name": "Multiplication and assignment operator"
+    },
+    "division": {
+      "code": "operand1 / operand2",
+      "name": "Division operator"
+    },
+    "division_assignment": {
+      "code": "operand1 /= operand2",
+      "name": "Division and assignment operator"
+    },
+    "modulus": {
+      "code": "operand1 Mod operand2",
+      "name": "Modulus (remainder) operator"
+    },
+    "modulus_assignment": {
+      "not-implemented": "true",
+      "name": "Modulus and assignment operator"
+    },
+    "unary_plus": {
+      "code": "+operand1",
+      "name": "Unary plus operator"
+    },
+    "unary_minus": {
+      "code": "-operand1",
+      "name": "Unary minus operator"
+    },
+    "increment": {
+      "not-implemented": "true",
+      "name": "Increment (add 1) operator"
+    },
+    "decrement": {
+      "not-implemented": "true",
+      "name": "Decrement (subtract 1) operator"
+    },
+    "exponential": {
+      "code": "operand1 ^ operand2",
+      "name": "Exponential operator"
+    },
+    "factorial": {
+      "not-implemented": "true",
+      "name": "Factorial operator"
+    },
+    "absolute_value": {
+      "not-implemented": "true",
+      "name": "Absolute value operator"
+    },
+    "percentage": {
+      "not-implemented": "true",
+      "name": "Percentage operator"
+    },
+    "equal_to": {
+      "code": "operand1 = operand2",
+      "name": "Equality operator"
+    },
+    "not_equal_to": {
+      "code": "operand1 <> operand2",
+      "name": "Not equal to operator"
+    },
+    "less_than": {
+      "code": "operand1 < operand2",
+      "name": "Less than operator"
+    },
+    "less_than_or_equal_to": {
+      "code": "operand1 <= operand2",
+      "name": "Less than or equal to operator"
+    },
+    "greater_than": {
+      "code": "operand1 > operand2",
+      "name": "Greater than operator"
+    },
+    "greater_than_or_equal_to": {
+      "code": "operand1 >= operand2",
+      "name": "Greater than or equal to operator"
+    },
+    "null_coalescing": {
+      "code": "If(operand1, operand2)",
+      "comment": "Value of operand1 is returned if it isn't Nothing else operand2 is evaluated and its result is returned",
+      "name": "Null coalescing operator"
+    },
+    "is": {
+      "code": "operand1 Is operand2",
+      "name": "Is operator"
+    },
+    "is_not": {
+      "code": "operand1 IsNot operand2",
+      "name": "Is not operator"
+    },
+    "logical_and": {
+      "code" : "operand1 And operand2",
+      "name" : "Logical AND Operator"
+    },
+    "logical_or": {
+      "code" : "operand1 Or operand2",
+      "name" : "Logical OR Operator"
+    },
+    "logical_not": {
+      "code" : "Not operand1",
+      "name" : "Logical NOT Operator"
+    },
+    "bitwise_and": {
+      "code" : "operand1 And operand2",
+      "name" : "Bitwise AND operator"
+    },
+    "bitwise_and_assignment": {
+      "not-implemented" : "true",
+      "name" : "Bitwise AND and assignment operator"
+    },
+    "bitwise_or": {
+          "code" : "operand1 Or operand2",
+          "name" : "Bitwise OR operator"
+    },
+    "bitwise_or_assignment": {
+      "not-implemented" : "true",
+      "name" : "Bitwise OR and assignment operator"
+    },
+    "bitwise_not": {
+      "code" : "Not operand1",
+      "name" : "Bitwise NOT operator"
+    },
+    "bitwise_not_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise NOT and assignment operator"
+    },
+    "bitwise_xor": {
+      "code" : "operand1 Xor operand2",
+      "name" : "Bitwise XOR operator"
+    },
+    "bitwise_xor_assignment": {
+      "not-implemented" : "true",
+      "name" : "Bitwise XOR and assignment operator"
+    },
+    "bitwise_xnor": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR operator"
+    },
+    "bitwise_xnor_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR and assignment operator"
+  },
+    "left_shift": {
+      "code": "operand1 << operand2",
+      "name": "Left shift bitwise operator"
+    },
+    "left_shift_assignment": {
+      "code": "operand1 <<= operand2",
+      "name": "Left shift assignment operator"
+    },
+    "right_shift": {
+      "code": "operand1 >> operand2",
+      "name": "Right shift bitwise operator"
+    },
+    "right_shift_assignment": {
+      "code": "operand1 >>= operand2",
+      "name": "Right shift assignment operator"
+    },
+    "not_assignment": {
+      "not-implemented": "true",
+      "name":"Bitwise NOT and assignment operator"
+    },
+    "ternary": {
+      "code": "If(condition, Expression1, Expression2)",
+      "comment": "If expression stated by condition is true, result of Expression1 is returned else result of Expression2 is returned",
+      "name": "Ternary operator"
+    },
+    "null_forgiving": {
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
+    }
+  }
+}

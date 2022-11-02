@@ -1,0 +1,24 @@
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0/12 * * *'
+  workflow_dispatch: # Enable manual runs of the bot
+
+jobs:
+  unassign_issues:
+    runs-on: ubuntu-latest
+    name: Unassign issues
+    steps:
+      - name: Unassign issues
+        uses: codethesaurus/unassign-issues@1.3
+        id: unassign_issues
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          warning_inactive_in_hours: 336 # 14 days
+          unassign_inactive_in_hours: 408 # 3 days later
+          office_hours: 'n/a'
+          warning_inactive_message: "If you are still working on this issue, that's fine. Please comment here to tell the bot to give you more time."
+      - name: Print the unassigned issues
+        run: echo "Unassigned issues = ${{steps.unassign_issues.outputs.unassigned_issues}}"
+      - name: Print the warned issues
+        run: echo "Warned issues = ${{steps.unassign_issues.outputs.warned_issues}}"

@@ -1,30 +1,9 @@
 {
   "meta": {
-    "language": "Clojure",
+    "language": "clojure",
     "language_version": "1.10.3",
     "language_name": "Clojure",
     "structure": "functions"
-  },
-  "categories": {
-    "Void Functions": [
-      "void_function_no_parameters",
-      "void_function_with_parameters",
-      "void_function_variable_parameters"
-    ],
-    "Return Value Functions": [
-      "return_value_function_no_parameters",
-      "return_value_function_with_parameters",
-      "return_value_function_variable_parameters"
-    ],
-    "Lambda/Anonymous Functions": [
-      "anonymous_function_no_parameters",
-      "anonymous_function_with_parameters",
-      "anonymous_function_variable_parameters"
-    ],
-    "Subroutines": [
-      "call_subroutine",
-      "return_from_subroutine"
-    ]
   },
   "concepts": {
     "void_function_no_parameters": {
