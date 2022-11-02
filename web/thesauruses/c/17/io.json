@@ -44,10 +44,6 @@
             "not-implemented":"true",
             "name":"change the text color of the console"
         },
-        "file_function_lib": {
-            "code": "#include<stdio.h>",
-            "name": "library containing file IO functions"
-        },
         "file_functions_lib": {
             "not-implemented":"true",
             "name":"Library containing file IO functions"
