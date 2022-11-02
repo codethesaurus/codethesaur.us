@@ -74,11 +74,11 @@
     "not-implemented":"true",
     "name":"Unsigned 64-bit floating point"
     },
-    "signed_float_as_Object": {
+    "signed_float_as_object": {
       "not-implemented":"true",
       "name":"Signed object-based floating point"
     },
-    "unsigned_float_as_Object": {
+    "unsigned_float_as_object": {
       "not-implemented":"true",
       "name":"Unsigned object-based floating point"
     },
