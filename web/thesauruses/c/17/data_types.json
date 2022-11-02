@@ -42,25 +42,45 @@
       "name": "Unsigned 64-bit integer",
       "code": "unsigned long long"
     },
+    "signed_integer_as_object":{
+      "not-implemented":"true",
+      "name":"Signed object-based Integer"
+    },
+    "unsigned_integer_as_object":{
+      "not-implemented":"true",
+      "name":"Unsigned object-based Integer"
+    },
     "signed_float_16_bit": {
       "name": "Signed 16-bit floating point",
       "not-implemented":"true"
+    },
+    "unsigned_float_16_bit":{
+      "not-implemented":"true",
+      "name":"Unsigned 16-bit floating point"
     },
     "signed_float_32_bit": {
       "name": "Signed 32-bit floating point",
       "code": "float"
     },
+    "unsigned_float_32_bit":{
+    "not-implemented":"true",
+    "name":"Unsigned 32-bit floating point"
+    },
     "signed_float_64_bit": {
       "name": "Signed 64-bit floating point",
       "code": "double"
     },
+    "unsigned_float_64_bit":{
+    "not-implemented":"true",
+    "name":"Unsigned 64-bit floating point"
+    },
     "signed_float_as_Object": {
-      "name":"Signed object-based floating point",
-      "not-implemented":"true"
+      "not-implemented":"true",
+      "name":"Signed object-based floating point"
     },
     "unsigned_float_as_Object": {
-      "name":"Unsigned object-based floating point",
-      "not-implemented":"true"
+      "not-implemented":"true",
+      "name":"Unsigned object-based floating point"
     },
     "character": {
       "name": "Character",
