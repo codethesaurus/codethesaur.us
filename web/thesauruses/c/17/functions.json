@@ -6,7 +6,7 @@
         "structure": "functions"
     },
     "concepts": {
-        "void_functions_no_parameters": {
+        "void_function_no_parameters": {
             "code": "void func(){return;}",
             "comment": "Return statement is optional.",
             "name": "Function that does not return a value and takes no parameters"
