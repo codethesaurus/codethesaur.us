@@ -54,7 +54,7 @@
       "left_shift": "Left shift bitwise operator",
       "left_shift_assignment": "Left shift assignment operator",
       "right_shift": "Right shift bitwise operator",
-      "right_shift_assignment": "Right shift assignment operator",
+      "right_shift_assignment": "Right shift assignment operator"
     },
     "Conditional Operators": {
       "ternary": "Ternary operator",
