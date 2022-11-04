@@ -138,7 +138,7 @@
       "code": "&",
       "name": "Bitwise AND operator"
     },
-    "bitwise_and_assignmnet": {
+    "bitwise_and_assignment": {
       "code": "&=",
       "name": "Bitwise AND and assignment operator"
     },
