@@ -24,16 +24,8 @@
             "name": "Read a single char of user input from the console"
             },
        "clear_console_cutput": {
-            "code": [
-                "#include<stdio.h>",
-                "#include<stdlib.h>",
-                "int main(){",
-                "system(\"cls\");",
-                "printf(\"hello\");",
-                "return 0;",
-                "}"
-            ], 
-            "comment": "system() is defined in stdlib.h",
+            "not-implemented":"true",
+            "comment": "system() is defined in stdlib.h which invokes a system call",
             "name": "Clear the console output"
         },
         "change_console_background_color":{
@@ -45,7 +37,7 @@
             "name":"change the text color of the console"
         },
         "file_functions_lib": {
-            "not-implemented":"true",
+            "code":"<stdio.h>",
             "name":"Library containing file IO functions"
         },
         "list_directory":{
@@ -77,15 +69,16 @@
             "name":"Update the permissions a user, group, or application has to a directory"
         },
       "read_line_of_file": {
-        "not-implemented":"true",
+        "code":"size_t fread( void *buffer, size_t size, size_t count,FILE *stream );",
+        "comment": "visit https://en.cppreference.com/w/c/io for more",
         "name":"Read a single line from a file"
       },
       "read_lines_of_file":{
-        "not-implemented":"true",
+        "code":"size_t fread( void *buffer, size_t size, size_t count,FILE *stream );",
         "name":"Read all the lines in a file"
     },
       "read_file_stream":{
-        "not-implemented":"true",
+        "code":"FILE *fp;",
         "name":"Read the file into a stream"
       }, 
         "create_file": {
@@ -93,7 +86,7 @@
             "name": "Create a file"
         },
         "delete_file": {
-            "code": "int remove ( const char * filename );",
+            "code": "int remove( const char * filename );",
             "comment": "returns 0 if file is deleted",
             "name": "Delete a file"
         },
@@ -163,11 +156,11 @@
         "name":"The inbuilt URL class"
       }, 
       "open_a_socket":{
-        "not-implemented":"true",
+        "code":" int socket(int namespace, int style, int protocol)",
         "name":"Open a network socket"
       }, 
       "close_a_socket":{
-        "not-implemented":"true",
+        "code":"int shutdown(int socket, int how)",
         "name":"Close a network socket"
       }, 
       "add_authorization_headers":{
