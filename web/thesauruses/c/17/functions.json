@@ -7,41 +7,59 @@
     },
     "concepts": {
         "void_function_no_parameters": {
-            "code": "void func(){return;}",
+            "code": [
+            "void func()",
+            "{",
+            "return;",
+            "}"
+        ],
             "comment": "Return statement is optional.",
             "name": "Function that does not return a value and takes no parameters"
         },
         "void_function_with_parameters": {
-            "code": "void foo(char c, int i, double d) { return; }",
+            "code": [
+                "void foo(char c, int i, double d)",
+                "{",
+                "return;",
+                "}"
+            ],
             "comment": "Return statement is optional.",
             "name": "Function that does not return a value and that takes 1 or more defined parameters"
         },
         "void_function_with_keyword_parameters": {
-            "code": "void sum(int a=5,int b=7)",
-            "comment":"default paramaters",
+            "code": "void sum(int a,int b)",
             "name": "Function that does not return a value and that takes 0 or more defined keyword parameters"
         },
         "void_function_variable_parameters": {
-            "code": "eg : void avg(int count,...)",
+            "code": "void avg(int count,...)",
             "comment": "a header file <stdargs.h> is available, these are called variadic functions and count variable is passed with no. of arguments",
             "name": "Function that does not return a value and function that takes an unknown number of parameters"
         },
         "return_value_function_no_parameters": {
-            "code": "int foo() { return 1; }",
+            "code": [
+                "int foo()",
+                "{", 
+                "return 1;",
+                "}"
+            ],
             "name": "Function that returns a value and takes no parameters"
         },
         "return_value_function_with_parameters": {
-            "code": "int foo(int x, int y){ return x + y; }",
+            "code": [
+                "int foo(int x, int y)",
+                "{", 
+                "return x + y;",
+                "}"
+            ],
             "comment": "Return value is converted to return type if a conversion is available.",
             "name": "Function that returns a value and takes 1 or more defined parameters"
         },
         "return_value_function_with_keyword_parameters": {
-            "code": "int sum(int a=5,int b=7)",
-            "comment":"default parameters",
+            "code": "int sum(int a,int b)",
             "name": "Function that returns a value and that takes 0 or more defined keyword parameters"
         },
         "return_value_function_variable_parameters": {
-            "code": "eg : double average(int count, ...)",
+            "code": "double average(int count, ...)",
             "comment": "a header file <stdargs.h> is available, these are called variadic functions and count variable is passed with no. of arguments",
             "name": "Function that returns a value and takes an unknown number of parameters"
         },
@@ -78,12 +96,11 @@
             "name":"Anonymous function that takes an unknown number of parameters and returns a value"
          }, 
         "call_subroutine": {
-            "code": "foo()",
-            "comment": "Calls the function 'foo' - must be defined first.",
+            "not-implemented":"true",
             "name": "Call subroutine"
         },
         "return_from_subroutine": {
-            "code": "return",
+            "not-implemented":"true",
             "name": "Return from subroutine"
         }
     }
