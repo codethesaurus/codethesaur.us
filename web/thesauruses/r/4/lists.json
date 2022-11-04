@@ -141,8 +141,7 @@
       "unordered_mutable_list_can_be_appended": {
         "name": "Can you append to it?",
         "code": [
-          "mylist <- list(a = 1, b = 2, c = 3)",
-          "mylist <- append(mylist, list(d = 4))"
+          "yes"
         ]
       },
       "unordered_mutable_list_can_be_inserted_in_middle": {
@@ -162,21 +161,24 @@
         "code": [
             "mylist <- list(a = 1, b = 2, c = 3)",
             "mylist <- append(mylist, list(x = 42), 1)"
-        ]
+        ],
+        "comment": "will insert at the position identified as the third argument, the beginning (1) in this example"
       },
       "insert_into_end_of_unordered_mutable_list": {
         "name": "Insert element at end",
         "code": [
             "mylist <- list(a = 1, b = 2, c = 3)",
-            "mylist <- append(mylist, list(x = 42), length(mylist))"
-        ]
+            "mylist <- append(mylist, list(x = 42), length(mylist)+1)"
+        ],
+        "comment": "will insert at the position identified as the third argument, the number of items in the list +1 in this example"
       },
       "insert_into_middle_of_unordered_mutable_list": {
         "name": "Insert element in middle",
         "code": [
             "mylist <- list(a = 1, b = 2, c = 3)",
             "mylist <- append(mylist, list(x = 42), 2)"
-        ]
+        ],
+        "comment": "will insert at the position identified as the third argument, 2 in this example"
       },
       "erase_element_at_beginning_of_unordered_mutable_list": {
         "name": "Erase first element",
