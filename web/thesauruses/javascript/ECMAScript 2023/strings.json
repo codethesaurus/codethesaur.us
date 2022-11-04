@@ -3,7 +3,7 @@
       "language": "javascript",
       "language_name": "JavaScript",
       "structure": "strings",
-      "language_version": "ECMAScript 2021"
+      "language_version": "ECMAScript 2023"
     },
     "concepts": {
       "is_primitive_or_not": {
@@ -106,8 +106,8 @@
         "code": "str === str.toLowerCase()"
       },
       "is_in_titlecase": {
-        "name": "Is string formatted in title case?",
-        "code": "str === str.replace(/\\w+/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase())"
+        "not-implemented": true,
+        "name": "Is string formatted in title case?"
       },
       "does_substring_exist": {
         "name": "Does a substring exist in a string?",
@@ -202,8 +202,7 @@
       },
       "split_at_index": {
         "name": "Split string into a list of strings at a given index",
-        "code": "str.split(separator, limit)",
-        "comment": ""
+        "code": "str.split(separator, limit)"
       },
       "split_at_newlines": {
         "name": "Split string into a list of strings at every new line character",
