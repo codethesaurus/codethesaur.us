@@ -78,9 +78,8 @@
       "name": "Exponential operator"
     },
     "factorial": {
-      "comment": "No built in function, but easy enough to write.",
-      "code": "(defn ! [n]\n  (reduce *' (range 1 (inc n))))",
-      "name": "Factorial operator"
+      "name": "Factorial operator",
+      "not-implemented": "true"
     },
     "absolute_value": {
       "comment": "Using the built-in JDK method.",
@@ -201,9 +200,8 @@
       "name": "Right shift assignment operator"
     },
     "ternary": {
-      "comment": "Use the `if` function to provide a ternary operator equivalent.",
-      "code": "(if (> 2 1) \"Yes\" \"No\")",
-      "name": "Ternary operator"
+      "name": "Ternary operator",
+      "not-implemented": "true"
     },
     "null_forgiving": {
       "not-implemented": "true",
