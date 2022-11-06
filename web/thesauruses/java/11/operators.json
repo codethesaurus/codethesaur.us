@@ -56,7 +56,7 @@
       "code": "%=",
       "name": "Modulus and assignment operator"
     },
-	"unary_plus": {
+    "unary_plus": {
       "comment": "This is somewhat redundant as the default sign for numeric values is positive",
       "code": "x = +7",
       "name": "Unary plus operator"
@@ -67,7 +67,7 @@
     },
     "increment": {
       "comment": "Supports both pre and post increment",
-      "code": "++x\nx++",
+      "code": "++x\nx++", 
       "name": "Increment (add 1) operator"
     },
     "decrement": {
@@ -149,10 +149,6 @@
       "code": "x & y",
       "name": "Bitwise AND operator"
     },
-    "bitwise_and_assignment": {
-      "name": "Bitwise AND and assignment operator",
-	  "not-implemented": "true"
-    },
     "bitwise_and_assignmnet": {
       "code": "x &= 0x000F",
       "name": "Bitwise AND and assignment operator"
@@ -171,7 +167,7 @@
     },
     "not_assignment": {
       "name": "Bitwise NOT and assignment operator",
-	  "not-implemented": "true"
+      "not-implemented": "true"
     },
     "bitwise_xor": {
       "code": "x ^ y",
