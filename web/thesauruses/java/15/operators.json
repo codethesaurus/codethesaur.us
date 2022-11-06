@@ -128,21 +128,21 @@
       "name": "Is not operator"
     },
     "logical_and": {
-      "code": "&&",
+      "code": "a && b",
       "name": "Logical AND operator"
     },
     "and_assignment": {
       "not-implemented": "true"
     },
     "logical_or": {
-      "code": "||",
+      "code": "a || b",
       "name": "Logical OR operator"
     },
     "or_assignment": {
       "not-implemented": "true"
     },
     "logical_not": {
-      "code": "!",
+      "code": "!x",
       "name": "Logical NOT operator"
     },
     "bitwise_and": {
