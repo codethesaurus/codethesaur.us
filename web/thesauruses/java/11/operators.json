@@ -67,12 +67,12 @@
     },
     "increment": {
       "comment": "Supports both pre and post increment",
-      "code": "x++\n++x",
+      "code": "++x\nx++",
       "name": "Increment (add 1) operator"
     },
     "decrement": {
       "comment": "Supports both pre and post decrement",
-      "code": "x--\n--x",
+      "code": "--x\nx--",
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
