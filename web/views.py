@@ -34,7 +34,7 @@ def store_url_info(request):
     visit = SiteVisit(
         url=request.get_full_path(),
         user_agent=user_agent,
-        referer=request
+        referer=referer,
     )
     visit.save()
     return visit
