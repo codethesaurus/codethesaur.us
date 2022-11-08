@@ -31,12 +31,22 @@
       "name": "Multiplication and assignment operator"
     },
     "division": {
-      "code": "/",
+      "comment": "If either operand is a float or double, then floating point division is used",
+      "code": "10.0d / 4",
       "name": "Division operator"
     },
     "division_assignment": {
-      "code": "/=",
+      "code": "x /= 2",
       "name": "Division and assignment operator"
+    },
+    "integer_division": {
+      "comment": "If both operands are integers or longs, then integral division is used",
+      "code": "10 / 3",
+      "name": "Integer division operator"
+    },
+    "integer_division_assignment": {
+      "code": "x /= 4",
+      "name": "Integer division and assignment operator"
     },
     "modulus": {
       "code": "%",
@@ -46,12 +56,23 @@
       "code": "%=",
       "name": "Modulus and assignment operator"
     },
+    "unary_plus": {
+      "comment": "This is somewhat redundant as the default sign for numeric values is positive",
+      "code": "x = +7",
+      "name": "Unary plus operator"
+    },
+    "unary_minus": {
+      "code": "y = -12",
+      "name": "Unary minus operator"
+    },
     "increment": {
-      "code": "++",
+      "comment": "Supports both pre and post increment",
+      "code": "++x\nx++",
       "name": "Increment (add 1) operator"
     },
     "decrement": {
-      "code": "--",
+      "comment": "Supports both pre and post decrement",
+      "code": "--x\nx--",
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
@@ -67,7 +88,7 @@
       "name": "Absolute value operator"
     },
     "percentage": {
-      "code": "%",
+      "not-implemented": "true",
       "name": "Percentage operator"
     },
     "equal_to": {
@@ -106,24 +127,83 @@
       "not-implemented": "true",
       "name": "Is not operator"
     },
+    "logical_and": {
+      "code": "a && b",
+      "name": "Logical AND operator"
+    },
+    "and_assignment": {
+      "not-implemented": "true"
+    },
+    "logical_or": {
+      "code": "a || b",
+      "name": "Logical OR operator"
+    },
+    "or_assignment": {
+      "not-implemented": "true"
+    },
+    "logical_not": {
+      "code": "!x",
+      "name": "Logical NOT operator"
+    },
+    "bitwise_and": {
+      "code": "x & y",
+      "name": "Bitwise AND operator"
+    },
+    "bitwise_and_assignmnet": {
+      "code": "x &= 0x000F",
+      "name": "Bitwise AND and assignment operator"
+    },
+    "bitwise_or": {
+      "code": "x | y",
+      "name": "Bitwise OR operator"
+    },
+    "bitwise_or_assignment": {
+      "code": "foo |= 0x2222",
+      "name": "Bitwise OR and assignment operator"
+    },
+    "bitwise_not": {
+      "code": "~x",
+      "name": "Bitwise NOT operator"
+    },
+    "not_assignment": {
+      "name": "Bitwise NOT and assignment operator",
+      "not-implemented": "true"
+    },
+    "bitwise_xor": {
+      "code": "x ^ y",
+      "name": "Bitwise XOR operator"
+    },
+    "bitwise_xor_assignment": {
+      "not-implemented": "true",
+      "name": "bitwise_xor_assignment"
+    },
+    "bitwise_xnor": {
+      "name": "Bitwise XNOR operator",
+      "not-implemented": "true",
+      "comment": "Can be implemented like `(!a ^ b)`"
+    },
+    "bitwise_xnor_assignment": {
+      "name": "Bitwise XNOR and assignment operator",
+      "not-implemented": "true"
+    },
     "left_shift": {
-      "code": "<<",
+      "code": "val << 2",
       "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "<<=",
+      "code": "x <<= 4",
       "name": "Left shift assignment operator"
     },
     "right_shift": {
-      "code": ">>",
+      "code": "val >> 2",
       "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "code": ">>=",
+      "code": "y >>= 6",
       "name": "Right shift assignment operator"
     },
     "ternary": {
-      "code": "? :",
+      "code": "cond ? whenTrue : whenFalse",
       "name": "Ternary operator"
     },
     "null_forgiving": {
