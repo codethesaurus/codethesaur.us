@@ -1,0 +1,107 @@
+{
+    "meta": {
+        "language": "c",
+        "language_version": "17",
+        "language_name": "C",
+        "structure": "functions"
+    },
+    "concepts": {
+        "void_function_no_parameters": {
+            "code": [
+            "void func()",
+            "{",
+            "return;",
+            "}"
+        ],
+            "comment": "Return statement is optional.",
+            "name": "Function that does not return a value and takes no parameters"
+        },
+        "void_function_with_parameters": {
+            "code": [
+                "void foo(char c, int i, double d)",
+                "{",
+                "return;",
+                "}"
+            ],
+            "comment": "Return statement is optional.",
+            "name": "Function that does not return a value and that takes 1 or more defined parameters"
+        },
+        "void_function_with_keyword_parameters": {
+            "code": "void sum(int a,int b)",
+            "name": "Function that does not return a value and that takes 0 or more defined keyword parameters"
+        },
+        "void_function_variable_parameters": {
+            "code": "void avg(int count,...)",
+            "comment": "a header file <stdargs.h> is available, these are called variadic functions and count variable is passed with no. of arguments",
+            "name": "Function that does not return a value and function that takes an unknown number of parameters"
+        },
+        "return_value_function_no_parameters": {
+            "code": [
+                "int foo()",
+                "{", 
+                "return 1;",
+                "}"
+            ],
+            "name": "Function that returns a value and takes no parameters"
+        },
+        "return_value_function_with_parameters": {
+            "code": [
+                "int foo(int x, int y)",
+                "{", 
+                "return x + y;",
+                "}"
+            ],
+            "comment": "Return value is converted to return type if a conversion is available.",
+            "name": "Function that returns a value and takes 1 or more defined parameters"
+        },
+        "return_value_function_with_keyword_parameters": {
+            "code": "int sum(int a,int b)",
+            "name": "Function that returns a value and that takes 0 or more defined keyword parameters"
+        },
+        "return_value_function_variable_parameters": {
+            "code": "double average(int count, ...)",
+            "comment": "a header file <stdargs.h> is available, these are called variadic functions and count variable is passed with no. of arguments",
+            "name": "Function that returns a value and takes an unknown number of parameters"
+        },
+        "anonymous_function_no_parameters": {
+            "not-implemented": "true",
+            "name": "Anonymous function that takes no parameters"
+        },
+        "anonymous_function_with_parameters": {
+            "not-implemented": "true",
+            "name": "Anonymous function that takes 1 or more defined parameters"
+        },
+        "anonymous_function_with_keyword_parameters": {
+            "not-implemented": "true",
+            "name": "Anonymous function that takes 0 or more defined keyword parameters"
+        },
+        "anonymous_function_variable_parameters": {
+            "not-implemented": "true",
+            "name": "Anonymous function that takes an unknown number of parameters"
+        },
+        "anonymous_function_no_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes no parameters and returns a value"
+        },
+        "anonymous_function_with_parameters_with_return": {
+            "not-implemented":"true",
+            "name":"Anonymous function that takes 1 or more defined parameters and returns a value"
+        },
+        "anonymous_function_with_keyword_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes 0 or more defined keyword parameters and returns a value"
+        },
+        "anonymous_function_variable_parameters_with_return":{
+            "not-implemented":"true",
+            "name":"Anonymous function that takes an unknown number of parameters and returns a value"
+         }, 
+        "call_subroutine": {
+            "not-implemented":"true",
+            "name": "Call subroutine"
+        },
+        "return_from_subroutine": {
+            "not-implemented":"true",
+            "name": "Return from subroutine"
+        }
+    }
+}

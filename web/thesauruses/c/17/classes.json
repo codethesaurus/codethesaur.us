@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "language": "c",
+    "language_version": "17",
+    "language_name": "C",
+    "structure": "classes"
+  },
+  "concepts": {
+    "normal_class": {
+      "not-implemented": "true",
+      "name": "Normal class"
+    },
+    "abstract_class": {
+     "not-implemented": "true",
+      "name": "Abstract class"
+    },
+    "interface": {
+     "not-implemented": "true",
+      "name": "Interface"
+    },
+    "read_only_class": {
+      "not-implemented": "true",
+      "name": "Read-only class"
+    },
+    "static_class": {
+      "not-implemented": "true",
+      "name": "Static class"
+    },
+    "inner_class": {
+      "not-implemented": "true",
+      "name": "Inner class"
+    },
+    "packages": {
+      "not-implemented": "true",
+      "name": "Packages"
+    },
+    "class_with_generic_type": {
+      "not-implemented": "true",
+      "name": "Class with a generic type"
+    },
+    "private_variables": {
+      "not-implemented": "true",
+      "name": "Defining private variables"
+    },
+    "protected_variables": {
+      "not-implemented": "true",
+      "name": "Defining protected variables"
+    },
+    "public_variables": {
+     "not-implemented": "true",
+      "name": "Defining public variables"
+    },
+    "static_variables": {
+     "not-implemented": "true",
+      "name": "Defining static variables"
+    },
+    "private_functions": {
+     "not-implemented": "true",
+      "name": "Defining private functions"
+    },
+    "protected_functions": {
+      "not-implemented": "true",
+      "name": "Defining protected functions"
+    },
+    "public_functions": {
+      "not-implemented": "true",
+      "name": "Defining public functions"
+    },
+    "static_functions": {
+      "not-implemented": "true", 
+      "name": "Defining static functions"
+    },
+    "extends_class": {
+      "not-implemented": "true",
+      "name": "Class that inherits/extends another class"
+    },
+    "extending_interface": {
+      "not-implemented": "true",
+      "name": "Class/Interface that inherits/extends another class/interface"
+    },
+    "calling_superclass_functions": {
+      "not-implemented": "true",
+      "name": "Calling a superclass function"
+    },
+    "overriding_superclass_functions": {
+      "not-implemented": "true",
+      "name": "Overriding a superclass function"
+    },
+    "instantiating_object": {
+      "not-implemented": "true",
+      "name": "Instantiating a new object"
+    },
+    "instantiating_polymorphic_object": {
+      "not-implemented": "true",
+      "name": "Instantiating a polymorphic object"
+    },
+    "implement_constructor": {
+      "not-implemented": "true",
+      "name": "Implementing a class constructor"
+    },
+    "implement_deconstructor": {
+      "not-implemented": "true",
+      "name": "Implementing a class deconstructor"
+    }
+  }
+}
