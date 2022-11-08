@@ -1,0 +1,513 @@
+{
+    "meta": {
+      "language": "r",
+      "language_name": "R",
+      "structure": "lists",
+      "language_version": "4"
+    },
+    "concepts": {
+      "name_of_ordered_mutable_list": {
+        "name": "What is a ordered (not sorted) mutable list called?",
+        "not-implemented":true
+      },
+      "create_a_ordered_mutable_list": {
+        "name": "Create the list",
+        "not-implemented":true
+        
+      },
+      "ordered_mutable_list_start_number": {
+        "name": "What number does it start at?",
+        "not-implemented":true
+      },
+      "ordered_mutable_list_can_be_appended": {
+        "name": "Can you append to it?",
+        "not-implemented":true
+      },
+      "ordered_mutable_list_can_be_inserted_in_middle": {
+        "name": "Can you insert into the middle of it?",
+        "not-implemented":true
+      },
+      "access_element_in_ordered_mutable_list": {
+        "name": "Access element by index",
+        "not-implemented":true
+      },
+      "insert_into_beginning_of_ordered_mutable_list": {
+        "name": "Insert element at beginning",
+        "not-implemented":true
+      },
+      "insert_into_end_of_ordered_mutable_list": {
+        "name": "Insert element at end",
+        "not-implemented":true
+      },
+      "insert_into_middle_of_ordered_mutable_list": {
+        "name": "Insert element in middle",
+        "not-implemented":true
+      },
+      "erase_element_at_beginning_of_ordered_mutable_list": {
+        "name": "Erase first element",
+        "not-implemented":true
+      },
+      "erase_element_at_end_of_ordered_mutable_list": {
+        "name": "Erase last element",
+        "not-implemented":true
+      },
+      "erase_element_in_middle_of_ordered_mutable_list": {
+        "name": "Erase element in the middle",
+        "not-implemented":true
+      },
+      "swap_elements_in_ordered_mutable_list": {
+        "name": "Swap two elements",
+        "not-implemented":true
+      },
+      "delete_ordered_mutable_list": {
+        "name": "Delete the list",
+        "not-implemented":true
+      },
+      "name_of_sorted_mutable_list": {
+        "name": "What is a sorted mutable list called?",
+        "not-implemented":true
+      },
+      "create_a_sorted_mutable_list": {
+        "name": "Create the list",
+        "not-implemented":true
+      },
+      "sorted_mutable_list_start_number": {
+        "name": "What number does it start at?",
+        "not-implemented":true
+      },
+      "sorted_mutable_list_can_be_appended": {
+        "name": "Can you append to it?",
+        "not-implemented":true
+      },
+      "sorted_mutable_list_can_be_inserted_in_middle": {
+        "name": "Can you insert into the middle of it?",
+        "not-implemented":true
+      },
+      "access_element_in_sorted_mutable_list": {
+        "name": "Access element by index",
+        "not-implemented":true
+      },
+      "insert_into_beginning_of_sorted_mutable_list": {
+        "name": "Insert element at beginning",
+        "not-implemented":true
+      },
+      "insert_into_end_of_sorted_mutable_list": {
+        "name": "Insert element at end",
+        "not-implemented":true
+      },
+      "insert_into_middle_of_sorted_mutable_list": {
+        "name": "Insert element in middle",
+        "not-implemented":true
+      },
+      "erase_element_at_beginning_of_sorted_mutable_list": {
+        "name": "Erase first element",
+        "not-implemented":true
+      },
+      "erase_element_at_end_of_sorted_mutable_list": {
+        "name": "Erase last element",
+        "not-implemented":true
+      },
+      "erase_element_in_middle_of_sorted_mutable_list": {
+        "name": "Erase element in the middle",
+        "not-implemented":true
+      },
+      "swap_elements_in_sorted_mutable_list": {
+        "name": "Swap two elements",
+        "not-implemented":true
+      },
+      "delete_sorted_mutable_list": {
+        "name": "Delete the list",
+        "not-implemented":true
+      },
+      "name_of_unordered_mutable_list": {
+        "name": "What is a unordered/unsorted mutable list called?",
+        "code": [
+          "list"
+        ]
+      },
+      "create_a_unordered_mutable_list": {
+        "name": "Create the list",
+        "code": [
+            "list()",
+            "mylist <- list(bob=1,sally=2)"
+          ]
+      },
+      "unordered_mutable_list_start_number": {
+        "name": "What number does it start at?",
+        "code": [
+          "1"
+        ]
+      },
+      "unordered_mutable_list_can_be_appended": {
+        "name": "Can you append to it?",
+        "code": [
+          "yes"
+        ]
+      },
+      "unordered_mutable_list_can_be_inserted_in_middle": {
+        "name": "Can you insert into the middle of it?",
+        "code": [
+         "yes"
+        ]
+      },
+      "access_element_in_unordered_mutable_list": {
+        "name": "Access element by index",
+        "code": [
+          "mylist[[1]]"
+        ]
+      },
+      "insert_into_beginning_of_unordered_mutable_list": {
+        "name": "Insert element at beginning",
+        "code": [
+            "mylist <- list(a = 1, b = 2, c = 3)",
+            "mylist <- append(mylist, list(x = 42), 1)"
+        ],
+        "comment": "will insert at the position identified as the third argument, the beginning (1) in this example"
+      },
+      "insert_into_end_of_unordered_mutable_list": {
+        "name": "Insert element at end",
+        "code": [
+            "mylist <- list(a = 1, b = 2, c = 3)",
+            "mylist <- append(mylist, list(x = 42), length(mylist)+1)"
+        ],
+        "comment": "will insert at the position identified as the third argument, the number of items in the list +1 in this example"
+      },
+      "insert_into_middle_of_unordered_mutable_list": {
+        "name": "Insert element in middle",
+        "code": [
+            "mylist <- list(a = 1, b = 2, c = 3)",
+            "mylist <- append(mylist, list(x = 42), 2)"
+        ],
+        "comment": "will insert at the position identified as the third argument, 2 in this example"
+      },
+      "erase_element_at_beginning_of_unordered_mutable_list": {
+        "name": "Erase first element",
+        "code": [
+          "mylist <- list(a = 1, b = 2, c = 3)",
+          "mylist[-1]"
+        ]
+      },
+      "erase_element_at_end_of_unordered_mutable_list": {
+        "name": "Erase last element",
+        "code": [
+            "mylist <- list(a = 1, b = 2, c = 3)",
+            "mylist[-length(mylist)]"
+        ]
+      },
+      "erase_element_in_middle_of_unordered_mutable_list": {
+        "name": "Erase element in the middle",
+        "code": [
+            "mylist <- list(a = 1, b = 2, c = 3)",
+            "mylist[-2]"
+        ]
+      },
+      "swap_elements_in_unordered_mutable_list": {
+        "name": "Swap two elements",
+        "not-implemented":true
+      },
+      "delete_unordered_mutable_list": {
+        "name": "Delete the list",
+        "code": [
+          "rm(mylist)"
+        ]
+      },
+      "name_of_ordered_immutable_list": {
+        "name": "What is a ordered (not sorted) immutable list called?",
+        "not-implemented":true
+      },
+      "create_a_ordered_immutable_list": {
+        "name": "Create the list",
+        "not-implemented":true
+      },
+      "ordered_immutable_list_start_number": {
+        "name": "What number does it start at?",
+        "not-implemented":true
+      },
+      "access_element_in_ordered_immutable_list": {
+        "name": "Access element by index",
+        "not-implemented":true
+      },
+      "delete_ordered_immutable_list": {
+        "name": "Delete the list",
+        "not-implemented":true
+      },
+      "name_of_sorted_immutable_list": {
+        "name": "What is a sorted immutable list called?",
+        "not-implemented":true
+      },
+      "create_a_sorted_immutable_list": {
+        "name": "Create the list",
+        "not-implemented":true
+      },
+      "sorted_immutable_list_start_number": {
+        "name": "What number does it start at?",
+        "not-implemented":true
+      },
+      "access_element_in_sorted_immutable_list": {
+        "name": "Access element by index",
+        "not-implemented":true
+      },
+      "delete_sorted_immutable_list": {
+        "name": "Delete the list",
+        "not-implemented":true
+      },
+      "name_of_unordered_immutable_list": {
+        "name": "What is a unordered/unsorted immutable list called?",
+        "not-implemented":true
+      },
+      "create_a_unordered_immutable_list": {
+        "name": "Create the list",
+        "not-implemented":true
+      },
+      "unordered_immutable_list_start_number": {
+        "name": "What number does it start at?",
+        "not-implemented":true
+      },
+      "access_element_in_unordered_immutable_list": {
+        "name": "Access element by index",
+        "not-implemented":true
+      },
+      "delete_unordered_immutable_list": {
+        "name": "Delete the list",
+        "not-implemented":true
+      },
+      "name_of_mutable_hashed_list": {
+        "name": "What is a mutable hashed list called?",
+        "code": [
+          "hash"
+        ],
+        "comment": "Requires package hash to use, not in base R"
+      },
+      "create_a_mutable_hashed_list": {
+        "name": "Create the list",
+        "code": [
+          "library(hash)",
+          "h <- hash()",
+          "h <- hash( letters, 1:26 )"
+        ]
+      },
+      "insert_element_to_mutable_hashed_list": {
+        "name": "Insert an element",
+        "not-implemented":true
+      },
+      "erase_element_from_mutable_hashed_list": {
+        "name": "Erase an element from the list",
+        "code": [
+          "delete(x,myhash)"
+        ],
+        "comment":"x should be the key"
+      },
+      "delete_mutable_hashed_list": {
+        "name": "Delete the list",
+        "code": [
+          "rm(myhash)",
+          "clear(myhash)"
+        ],
+        "comment":"rm deletes the hash; clear deletes the key value pairs but keeps the hash"
+      },
+      "name_of_immutable_hashed_list": {
+        "name": "What is an immutable hashed list called?",
+        "not-implemented":true
+      },
+      "create_a_immutable_hashed_list": {
+        "name": "Create the list",
+        "not-implemented":true
+      },
+      "insert_element_to_immutable_hashed_list": {
+        "name": "Insert an element",
+        "not-implemented":true
+      },
+      "erase_element_from_immutable_hashed_list": {
+        "name": "Erase an element from the list",
+        "not-implemented":true
+      },
+      "delete_immutable_hashed_list": {
+        "name": "Delete the list",
+        "not-implemented":true
+      },
+      "create_a_mutable_set": {
+        "name": "Create a mutable key/value set",
+        "not-implemented":true
+      },
+      "get_key_from_mutable_set": {
+        "name": "Get key",
+        "not-implemented":true
+      },
+      "get_value_from_mutable_set": {
+        "name": "Get value",
+        "not-implemented":true
+      },
+      "get_all_keys_from_mutable_set": {
+        "name": "Get all keys",
+        "not-implemented":true
+      },
+      "get_all_values_from_mutable_set": {
+        "name": "Get all values",
+        "not-implemented":true
+      },
+      "swap_key_and_value_in_mutable_set": {
+        "name": "Swap a key and value",
+        "not-implemented":true
+      },
+      "delete_mutable_set": {
+        "name": "Delete the set",
+        "not-implemented":true
+      },
+      "create_a_immutable_set": {
+        "name": "Create an immutable key/value set",
+        "not-implemented":true
+      },
+      "get_key_from_immutable_set": {
+        "name": "Get key",
+        "not-implemented":true
+      },
+      "get_value_from_immutable_set": {
+        "name": "Get value",
+        "not-implemented":true
+      },
+      "get_all_keys_from_immutable_set": {
+        "name": "Get all keys",
+        "not-implemented":true
+      },
+      "get_all_values_from_immutable_set": {
+        "name": "Get all values",
+        "not-implemented":true
+      },
+      "swap_key_and_value_in_immutable_set": {
+        "name": "Swap a key and value",
+        "not-implemented":true
+      },
+      "delete_immutable_set": {
+        "name": "Delete the set",
+        "not-implemented":true
+      },
+      "find_element_by_value": {
+        "name": "Find/search for an element by value",
+        "code": [
+          ""
+        ]
+      },
+      "find_minimum_element": {
+        "name": "Find the minimum value in a list",
+        "code": [
+          "min(unlist(mylist))"
+        ]
+      },
+      "find_maximum_element": {
+        "name": "Find the maximum value in a list",
+        "code": [
+          "max(unlist(mylist))"
+        ]
+      },
+      "convert_list_to_string": {
+        "name": "Convert a list to a string",
+        "code": [
+          ""
+        ]
+      },
+      "concatenate_two_lists": {
+        "name": "Concatenate two lists together",
+        "code": [
+          "lista <- list(a = 1, b = 2, c = 3)",
+          "listb <- list(x=5, r = 6, e = 0, t = 1)",
+          "mylist <- append(lista, listb)"
+        ]
+      },
+      "split_list_at_index": {
+        "name": "Split lists at an index",
+        "not-implemented":true
+      },
+      "split_list_at_value": {
+        "name": "Split list at a value",
+        "not-implemented":true
+      },
+      "duplicate_a_list": {
+        "name": "Duplicate a list",
+        "code": [
+          "mylist <- list(a = 1, b = 2, c = 3)",
+          "duplist <- mylist"
+        ]
+      },
+      "duplicate_subset_of_list": {
+        "name": "Duplicate a portion/subset of a list",
+        "code": [
+            "mylist <- list(a = 1, b = 2, c = 3)",
+            "duplist <- mylist[2:3]"
+        ]
+      },
+      "get_list_length": {
+        "name": "Get list length",
+        "code": [
+          "length(mylist)"
+        ]
+      },
+      "resize_list": {
+        "name": "Increase/decrease list size",
+        "not-implemented":true
+      },
+      "do_two_lists_match_exactly": {
+        "name": "Do two lists match every element?",
+        "code": [
+          "lista == listb"
+        ]
+      },
+      "do_two_lists_contain_same_items": {
+        "name": "Do two lists contain all the same items?",
+        "code": [
+          "a <- list(8, 28, 23, 21)",
+          "b <- list(28, 27, 8, 7)",
+          "all(match(a,b))"
+        ]
+      },
+      "does_list_satisfy_some_expression": {
+        "name": "Does a list satisfy some expression?",
+        "code": [
+          "any()"
+        ]
+      },
+      "does_list_not_satisfy_an_expression": {
+        "name": "Does a list entirely not satisfy an expression?",
+        "code": [
+          "!any()"
+        ]
+      },
+      "sort_list": {
+        "name": "Sort a list",
+        "not-implemented":true
+      },
+      "shuffle_list": {
+        "name": "Shuffle list elements",
+        "not-implemented":true
+      },
+      "reverse_list": {
+        "name": "Reverse order of list elements",
+        "not-implemented":true
+      },
+      "map": {
+        "name": "Map function across list",
+        "code": [
+          "lapply()"
+        ]
+      },
+      "filter": {
+        "name": "Filter a list based on criteria",
+        "code": [
+          "mylist <- list(a = 1, b = 2, 3 = 'dog', d = 3:8, e = 0)",
+          "mylist[lapply(mylist, length) > 0] # Filter out elements with length 0"
+        ]
+      },
+      "reduce_left": {
+        "name": "Reduce a list left-to-right",
+        "code": [
+          "Reduce()"
+        ]
+      },
+      "reduce_right": {
+        "name": "Reduce a list right-to-left",
+        "code": [
+          "Reduce()"
+        ],
+        "comment": "you have to choose the function; using library(purr), you can set .dir = backwards for this"
+      }
+    }
+  }
