@@ -18,14 +18,6 @@
       "code": "0 Based indexing",
       "name": "What number does it start at?"
     },
-    "ordered_mutable_list_can_be_appended": {
-      "code": "Yes",
-      "name": "Can you append to it?"
-    },
-    "ordered_mutable_list_can_be_inserted_in_middle": {
-      "code": "Yes",
-      "name": "Can you insert into the middle of it?"
-    },
     "access_element_in_ordered_mutable_list": {
       "code": "NSMutableArray arr = [Array1 objectAtIndex:i] objectIndex:j];",
       "name": "Access element by index"
@@ -82,27 +74,11 @@
       "not-implemented": "true",
       "name": "What number does it start at?"
     },
-    "unordered_mutable_list_can_be_appended": {
-      "code": "Yes",
-      "name": "Can you append to it?"
-    },
-    "unordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": "true",
-      "name": "Can you insert into the middle of it?"
-    },
     "access_element_in_unordered_mutable_list": {
       "not-implemented": "true",
       "name": "Access element by index"
     },
-    "insert_into_beginning_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "name": "Insert element at beginning"
-    },
-    "insert_into_end_of_unordered_mutable_list": {
-      "not-implemented": "true",
-      "name": "Insert element at end"
-    },
-    "insert_into_middle_of_unordered_mutable_list": {
+    "insert_into_unordered_mutable_list": {
       "not-implemented": "true",
       "name": "Insert element in middle"
     },
@@ -193,14 +169,6 @@
     "create_a_immutable_hashed_list": {
       "not-implemented": "true",
       "name": "Create the list"
-    },
-    "insert_element_to_immutable_hashed_list": {
-      "not-implemented": "true",
-      "name": "Insert an element"
-    },
-    "erase_element_from_immutable_hashed_list": {
-      "not-implemented": "true",
-      "name": "Erase an element from the list"
     },
     "delete_immutable_hashed_list": {
       "not-implemented": "true",
