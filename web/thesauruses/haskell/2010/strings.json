@@ -1,18 +1,18 @@
 {
   "meta": {
-    "language": "javascript",
-    "language_name": "JavaScript",
+    "language": "haskell",
+    "language_name": "Haskell",
     "structure": "strings",
-    "language_version": "ECMAScript 2020"
+    "language_version": "2010"
   },
   "concepts": {
     "is_primitive_or_not": {
       "name": "Is this a built-in type in this language?",
-      "code": "true"
+      "code": "Yes"
     },
     "import": {
-      "not-implemented": true,
-      "name": "Import the string class"
+      "name": "Import the string class",
+      "not-implemented": true
     },
     "default_string_byte_encoding": {
       "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)",
@@ -20,321 +20,330 @@
     },
     "create_new_string": {
       "name": "Create new string",
-      "code": "const str = \"Hello World\";"
+      "code": [
+        "newString = \"With exciting content.\""
+      ]
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
-      "code": "const str = `Hello\nWorld`;"
+      "code": [
+        "multiLineString = \"the first line\\n\\",
+        "    \\the second line\\n\\",
+        "    \\    the third line is indented\\n\"",
+        "{- produces the following:",
+        "the first line",
+        "the second line",
+        "    the third line is indented",
+        "",
+        "-}"
+      ],
+      "comment": "end a line with a `\\` and continue the string with a leading `\\`"
     },
     "assign_new_string": {
       "name": "Assign string from another string",
       "code": [
-          "const str = \"Hello World\";",
-          "const str2 = str;"
+        "newString = otherString"
       ]
     },
     "destroy_string": {
-      "not-implemented": true,
-      "name": "Destroy string"
+      "name": "Destroy string",
+      "not-implemented": true
     },
     "length_of_string": {
       "name": "Length of string",
-      "code": "str.length"
+      "code": "len stringVariable"
     },
     "max_length_of_string": {
-      "not-implemented": true,
       "name": "Maximum length of string",
-      "comment": [
-        "In V8 (64bit) : 2^29 - 24 (~1GB)",
-        "In V8 (32bit) : 2^28 - 16 (~512MB)",
-        "In Firefox/SpidersMonkey : 2^30 - 2 (~2GB)",
-        "Before Firefox 65: 2^28 - 1 (~512MB)",
-        "In Safari : 2^31 - 1 (~4GB)"
-      ]
+      "not-implemented": true
     },
     "clear_string": {
       "name": "Clear/empty string",
-      "code": "str = \"\";"
+      "not-implemented": true
     },
     "is_empty": {
       "name": "Is string empty?",
-      "code": [
-          "str.length === 0",
-          "str === \"\""
-      ]
+      "code": "null stringVariable"
     },
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
-      "code": [
-          "str + str2",
-          "str.concat(str2)"
-      ]
+      "code": "stringA ++ stringB"
     },
     "concatenate_many_strings": {
       "name": "Concatenate/join many strings",
       "code": [
-          "str + str2 + str3 + str4",
-          "str.concat(str2, str3, str4)"
+        "import Data.List (intercalate)",
+        "intercalate joiningString listOfStrings"
       ]
     },
     "is_all_alphabetical": {
-      "not-implemented": true,
-      "name": "Is string all alphabetical characters?"
+      "name": "Is string all alphabetical characters?",
+      "code": [
+        "import Data.Char (isAlpha)",
+        "all isAlpha stringVariable"
+      ]
     },
     "is_all_numerical": {
-      "not-implemented": true,
-      "name": "Is string all numerical characters?"
+      "name": "Is string all numerical characters?",
+      "code": [
+        "import Data.Char (isNumber)",
+        "all isNumber stringVariable"
+      ]
     },
     "is_all_alphanumeric": {
-      "not-implemented": true,
-      "name": "Is string all alphanumeric characters?"
+      "name": "Is string all alphanumeric characters?",
+      "code": [
+        "import Data.Char (isAlphaNum)",
+        "all isAlphaNum stringVariable"
+      ]
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "code": "Number.isFinite(+str)"
+      "code": [
+        "import Data.Char (isNumber)",
+        "all isNumber stringVariable"
+      ]
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
-      "code": "0 === str.trim().length"
+      "code": [
+        "import Data.Char (isSpace)",
+        "all isSpace stringVariable"
+      ]
     },
     "is_all_uppercase": {
       "name": "Is string all uppercase characters?",
-      "code": "str === str.toUpperCase()"
+      "code": [
+        "import Data.Char (isUpper)",
+        "all isUpper stringVariable"
+      ]
     },
     "is_all_lowercase": {
       "name": "Is string all lowercase characters?",
-      "code": "str === str.toLowerCase()"
+      "code": [
+        "import Data.Char (isLower)",
+        "all isLower stringVariable"
+      ]
     },
     "is_in_titlecase": {
       "name": "Is string formatted in title case?",
-      "code": "str === str.replace(/\\w+/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase())"
+      "not-implemented": true
     },
     "does_substring_exist": {
       "name": "Does a substring exist in a string?",
       "code": [
-          "str.includes(substring)",
-          "str.indexOf(substring) !== -1"
+        "import Data.List (isInfixOf)",
+        "isInfixOf \"needle\" \"hayhayhayneedlehayhay\""
       ]
     },
     "find_start_index_of_substring": {
       "name": "Find index of where a substring starts",
-      "code": [
-          "str.indexOf(substring)",
-          "str.search(substring)"
-      ]
+      "not-implemented": true
     },
     "find_start_index_of_additional_substring": {
       "name": "Find index of an additional substring (or starting at another index)",
-      "code": "str.indexOf(substring, index)"
+      "not-implemented": true
     },
     "find_start_index_of_substring_from_end": {
       "name": "Find substring index starting at end",
-      "code": "str.lastIndexOf(substring)"
+      "not-implemented": true
     },
     "count_occurrences_of_substring": {
       "name": "Find number of occurences of a substring",
-      "code": [
-          "str.split(substring).length - 1",
-          "str.match(/substring/g).length"
-      ]
+      "not-implemented": true
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "code": [
-          "str.slice(start, end)",
-          "str.substring(start, end)"
-      ]
+      "code": "take n stringVariable"
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "code": [
-          "str.slice(-end, -start)",
-          "str.substring(str.length - end, str.length - start)"
-      ]
+      "not-implemented": true
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "code": [
-          "str.slice(start, end)",
-          "str.substring(start, end)"
-      ]
+      "not-implemented": true
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
-      "code": [
-          "str.slice(start, start + length)",
-          "str.substring(start, start + length)"
-      ]
+      "code": "take n . drop i $ stringVariable"
     },
     "convert_to_uppercase": {
       "name": "Convert string to all uppercase",
-      "code": "str.toUpperCase()"
+      "code": [
+        "import Data.Char toUpper",
+        "map toUpper stringVariable"
+      ]
     },
     "convert_to_lowercase": {
       "name": "Convert string to all lowercase",
-      "code": "str.toLowerCase()"
+      "code": [
+        "import Data.Char toLower",
+        "map toLower stringVariable"
+      ]
     },
     "convert_to_title_case": {
-      "not-implemented": true,
-      "name": "Convert string to title case"
+      "name": "Convert string to title case",
+      "not-implemented": true
     },
     "capitalize_string": {
-      "not-implemented": true,
-      "name": "Capitalize first letter of a string"
+      "name": "Capitalize first letter of a string",
+      "not-implemented": true
     },
     "remove_whitespace": {
-      "not-implemented": true,
-      "name": "Remove all whitespaces from string"
+      "name": "Remove all whitespaces from string",
+      "not-implemented": true
     },
     "replace_substring": {
       "name": "Replace a substring with another string",
-      "code": [
-          "str.replace(substring, another)",
-          "str.split(substring).join(another)"
-      ]
+      "not-implemented": true
     },
     "replace_all_substring": {
       "name": "Replace all substring matches with another string",
-      "code": [
-          "str.replace(/substring/g, another)",
-          "str.split(substring).join(another)"
-      ]
+      "not-implemented": true
     },
     "split_at_index": {
       "name": "Split string into a list of strings at a given index",
-      "code": "str.split(separator, limit)",
-      "comment": ""
+      "code": "splitAt i stringVariable"
     },
     "split_at_newlines": {
       "name": "Split string into a list of strings at every new line character",
-      "code": "str.split(\"\\n\")"
+      "code": "lines stringVariable"
     },
     "split_at_substring": {
       "name": "Split string by locating all substrings",
-      "code": [
-          "str.split(substring)",
-          "str.match(/substring/g)"
-      ]
+      "not-implemented": true
     },
     "merge_lists_into_string": {
       "name": "Merge a list of strings into one string",
-      "code": [
-          "list.join(\" \")",
-          "list.reduce((a, b) => a + \" \" + b)"
-      ]
+      "code": "concat listOfStrings"
     },
     "encode_html_entities": {
-      "name": "Encode HTML entities in a string (ex: \u2122 to &trade;)",
-      "code": "str.replace(/[\\u00A0-\\u9999<>\\&]/gim, (i) => `&#${i.charCodeAt(0)};`)"
+      "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
+      "not-implemented": true
     },
     "decode_html_entities": {
       "name": "Decode HTML entitles into characters",
-      "code": "(new DOMParser).parseFromString(str, \"text/html\").documentElement.textContent"
+      "not-implemented": true
     },
     "encode_url_percent": {
       "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
-      "code": [
-        "encodeURI(str)",
-        "encodeURIComponent(str)"
-      ]
+      "not-implemented": true
     },
     "decode_url_percent": {
       "name": "Decode URL percent encoding",
-      "code": [
-        "decodeURI(str)",
-        "decodeURIComponent(str)"
-      ]
+      "not-implemented": true
     },
     "encode_to_base64": {
       "name": "Encode string into Base64 format",
-      "code": "btoa(str)"
+      "not-implemented": true
     },
     "decode_from_base64": {
       "name": "Decode string from Base64 format",
-      "code": "atob(str)"
+      "not-implemented": true
     },
     "format_string_function": {
-      "not-implemented": true,
-      "name": "Function to format a string"
+      "name": "Function to format a string",
+      "code": [
+        "import Text.Printf (printf)",
+        "printf \"Text with %s \" \"formatted\""
+      ],
+      "comment": "printf can either produce a `String` or a `IO ()` depending on context"
     },
     "parameter_format_in_order": {
-      "not-implemented": true,
-      "name": "Parameter used in format function if they're used in order"
+      "name": "Parameter used in format function if they're used in order",
+      "code": [
+        "import Text.Printf (printf)",
+        "printf \"first: %v, second: %v, third: %v\" \"first content\" \"second content\" \"third content\""
+      ],
+      "comment": "The v format specifier used here will use the \"best\" representation for the given type"
     },
     "parameter_format_numerical": {
-      "not-implemented": true,
-      "name": "Parameter used in format function if they're numerically numbered"
+      "name": "Parameter used in format function if they're numerically numbered",
+      "not-implemented": true
     },
     "parameter_format_by_name": {
-      "not-implemented": true,
-      "name": "Paramater used in format function if they're named variables"
+      "name": "Paramater used in format function if they're named variables",
+      "not-implemented": true
     },
     "format_as_integer": {
       "name": "Format parameter as an integer",
       "code": [
-        "Number(str).toFixed(0)",
-        "parseInt(str)",
-        "+str"
-      ],
-      "comment": "There is also `-str` but converts to negative number."
+        "import Text.Printf (printf)",
+        "printf \"%d\" 35"
+      ]
     },
     "format_as_decimal": {
       "name": "Format parameter as a decimal number",
       "code": [
-        "parseFloat(str)",
-        "new Intl.NumberFormat(locale, { style: \"decimal\" }).format(str)"
+        "import Text.Printf (printf)",
+        "printf \"%f\" 35.0"
       ]
     },
     "format_as_fixed_decimal": {
       "name": "Format parameter as a fixed-point decimal number",
       "code": [
-        "+str.toFixed(2)",
-        "Number(str).toFixed(2)",
-        "parseFloat(str).toFixed(2)",
-        "new Intl.NumberFormat(locale, { style: \"decimal\", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(str)"
+        "import Text.Printf (printf)",
+        "printf \"%0.2f\" 35.12"
       ]
     },
     "format_as_currency": {
       "name": "Format parameter as a currency number",
-      "code": "new Intl.NumberFormat(locale, { style: \"currency\", currency: currency }).format(str)"
+      "code": [
+        "import Text.Printf (printf)",
+        "printf \"%1.2f$\" 35.12"
+      ]
     },
     "format_as_percentage": {
       "name": "Format parameter as a percentage number",
-      "code": "new Intl.NumberFormat(locale, { style: \"percent\", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(str)"
+      "not-implemented": true
     },
     "format_number_with_separators": {
       "name": "Format number with thousand separators",
-      "code": "new Intl.NumberFormat(locale).format(str)"
+      "not-implemented": true
     },
     "format_number_with_positive_negative_sign": {
       "name": "Format number with positive/negative signs",
-      "code": "new Intl.NumberFormat(locale, { signDisplay: 'always' }).format(str)"
+      "code": [
+        "import Text.Printf (printf)",
+        "printf \"%+d\" 35"
+      ]
     },
     "format_number_in_scientific_notation_little_e": {
       "name": "Format number with scientific notation with 'e'",
       "code": [
-        "number.toExponential(2)",
-        "new Intl.NumberFormat(locale, { notation: \"scientific\" }).format(str)"
+        "import Text.Printf (printf)",
+        "printf \"%e\" 35.0"
       ]
     },
     "format_number_in_scientific_notation_big_e": {
       "name": "Format number with scientific notation with 'E'",
       "code": [
-        "number.toExponential(2).toUpperCase()",
-        "new Intl.NumberFormat(locale, { notation: \"scientific\", upperCase: true }).format(str)"
+        "import Text.Printf (printf)",
+        "printf \"%E\" 35.0"
       ]
     },
     "format_number_in_binary": {
       "name": "Format number into binary",
-      "code": "number.toString(2)"
+      "code": [
+        "import Text.Printf (printf)",
+        "printf \"%b\" 2"
+      ]
     },
     "format_number_in_octal": {
       "name": "Format number into octal",
-      "code": "number.toString(8)"
+      "code": [
+        "import Text.Printf (printf)",
+        "printf \"%o\" 8"
+      ]
     },
     "format_number_in_hexadecimal": {
       "name": "Format number into hexadecimal",
-      "code": "number.toString(16)"
+      "code": [
+        "import Text.Printf (printf)",
+        "printf \"%x\" 16",
+        "printf \"%X\" 16"
+      ]
     }
   }
 }

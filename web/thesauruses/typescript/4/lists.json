@@ -19,14 +19,6 @@
       "name": "What number does it start at?",
       "code": "0"
     },
-    "ordered_mutable_list_can_be_appended": {
-      "name": "Can you append to it?",
-      "code": "Yes"
-    },
-    "ordered_mutable_list_can_be_inserted_in_middle": {
-      "name": "Can you insert into the middle of it?",
-      "code": "Yes"
-    },
     "access_element_in_ordered_mutable_list": {
       "name": "Access element by index",
       "code": "const element = array[3]"
@@ -76,27 +68,11 @@
       "not-implemented": true,
       "name": "What number does it start at?"
     },
-    "unordered_mutable_list_can_be_appended": {
-      "not-implemented": true,
-      "name": "Can you append to it?"
-    },
-    "unordered_mutable_list_can_be_inserted_in_middle": {
-      "not-implemented": true,
-      "name": "Can you insert into the middle of it?"
-    },
     "access_element_in_unordered_mutable_list": {
       "not-implemented": true,
       "name": "Access element by index"
     },
-    "insert_into_beginning_of_unordered_mutable_list": {
-      "not-implemented": true,
-      "name": "Insert element at beginning"
-    },
-    "insert_into_end_of_unordered_mutable_list": {
-      "not-implemented": true,
-      "name": "Insert element at end"
-    },
-    "insert_into_middle_of_unordered_mutable_list": {
+    "insert_into_unordered_mutable_list": {
       "not-implemented": true,
       "name": "Insert element in middle"
     },
@@ -187,14 +163,6 @@
     "create_a_immutable_hashed_list": {
       "not-implemented": true,
       "name": "Create the list"
-    },
-    "insert_element_to_immutable_hashed_list": {
-      "not-implemented": true,
-      "name": "Insert an element"
-    },
-    "erase_element_from_immutable_hashed_list": {
-      "not-implemented": true,
-      "name": "Erase an element from the list"
     },
     "delete_immutable_hashed_list": {
       "not-implemented": true,
@@ -361,27 +329,11 @@
       "name": "What number does it start at?",
       "not-implemented": true
     },
-    "sorted_mutable_list_can_be_appended": {
-      "name": "Can you append to it?",
-      "not-implemented": true
-    },
-    "sorted_mutable_list_can_be_inserted_in_middle": {
-      "name": "Can you insert into the middle of it?",
-      "not-implemented": true
-    },
     "access_element_in_sorted_mutable_list": {
       "name": "Access element by index",
       "not-implemented": true
     },
-    "insert_into_beginning_of_sorted_mutable_list": {
-      "name": "Insert element at beginning",
-      "not-implemented": true
-    },
-    "insert_into_end_of_sorted_mutable_list": {
-      "name": "Insert element at end",
-      "not-implemented": true
-    },
-    "insert_into_middle_of_sorted_mutable_list": {
+    "insert_into_sorted_mutable_list": {
       "name": "Insert element in middle",
       "not-implemented": true
     },
@@ -402,26 +354,6 @@
       "not-implemented": true
     },
     "delete_sorted_mutable_list": {
-      "name": "Delete the list",
-      "not-implemented": true
-    },
-    "name_of_sorted_immutable_list": {
-      "name": "What is a sorted immutable list called?",
-      "not-implemented": true
-    },
-    "create_a_sorted_immutable_list": {
-      "name": "Create the list",
-      "not-implemented": true
-    },
-    "sorted_immutable_list_start_number": {
-      "name": "What number does it start at?",
-      "not-implemented": true
-    },
-    "access_element_in_sorted_immutable_list": {
-      "name": "Access element by index",
-      "not-implemented": true
-    },
-    "delete_sorted_immutable_list": {
       "name": "Delete the list",
       "not-implemented": true
     }
