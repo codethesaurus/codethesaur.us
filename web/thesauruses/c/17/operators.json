@@ -71,7 +71,8 @@
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
-      "not-implemented": "true",
+      "code":"pow(base,power)",
+      "comment": "not a operator but a function available in <math.h> header file", 
       "name": "Exponential operator"
     },
     "factorial": {
@@ -79,7 +80,8 @@
       "name": "Factorial operator"
     },
     "absolute_value": {
-      "not-implemented": "true",
+      "code":"abs(number)",
+      "comment":"not a operator but a function available in <stdlib.h> header file ", 
       "name": "Absolute value operator"
     },
     "percentage": {
@@ -123,11 +125,11 @@
       "name": "Is not operator"
     },
     "logical_and": {
-      "code" : "if((a==1)&&(b==1))",
+      "code" : "(a==1)&&(b==1)",
       "name" : "Logical AND Operator"
   },
     "logical_or": {
-      "code" : "if((a==1)||(b==1))",
+      "code" : "(a==1)||(b==1)",
       "name" : "Logical OR Operator"
   },
   "logical_not": {
@@ -191,7 +193,7 @@
       "name": "Right shift assignment operator"
     },
     "ternary": {
-      "code": "(a>b)? printf(\"0\") : printf(\"1\")",
+      "code": "(a>b)? printf(\"true\") : printf(\"false\")",
       "name": "Ternary operator"
     },
     "null_forgiving": {
