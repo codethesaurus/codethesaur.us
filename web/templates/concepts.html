@@ -7,12 +7,21 @@
                 <h1 class="col-12">{{ title }}</h1>
             </div>
             <div class="row col-12">
-                <p>The tables below show the syntactically highlighted {{ concept_friendly_name }} topic for the two
-                    languages.</p>
+                <p>
+                    The tables below show the syntactically highlighted
+                    {{ concept_friendly_name }} topic for the
+                    {% if languages|length > 1 %}{{ languages | length }}{% endif %}
+                    language{{ languages | length | pluralize }}.
+                </p>
                 <br />
-                <p>If you see any incorrect information, please help us improve! Feel free to either
-                    <a href="https://github.com/codethesaurus/codethesaur.us/issues/new/choose" rel="noopener">create
-                        an issue</a> or use the links at the bottom of the language columns to correct any information.
+                <p>
+                    If you see any incorrect information, please help us improve! Feel free to either
+                    <a href="https://github.com/codethesaurus/codethesaur.us/issues/new/choose" rel="noopener">
+                        create an issue
+                    </a>
+                    or use the link{{ languages | length | pluralize }} at the bottom of
+                    the language column{{ languages | length | pluralize }} to correct any
+                    information.
                 </p>
             </div>
 
