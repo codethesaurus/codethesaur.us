@@ -16,10 +16,14 @@ urlpatterns = [
     # /about/
     path('about/', views.about, name='about'),
 
-    # legacy url path
+    # /compare/lang1/lang2
+    #path('<str:lang1>/<str:lang2>/', views.detail, name='detail')
+    # /compare/
     path('compare/', views.concepts, name='compare'),
 
-    # legacy url path
+    # /reference/
+    # path('compare/', controller.for.reference???, name='reference'),
+    # /reference/lang1/
     path('reference/', views.concepts, name='reference'),
 
     # API reference
