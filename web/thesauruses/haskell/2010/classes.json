@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "language": "haskell",
+    "language_name": "Haskell",
+    "structure": "classes",
+    "language_version": "2010"
+  },
+  "concepts": {
+    "normal_class": {
+      "name": "Normal class",
+      "code": [
+        "data TypeName"
+      ]
+    },
+    "abstract_class": {
+      "name": "Abstract class",
+      "not-implemented": true
+    },
+    "interface": {
+      "name": "Interface",
+      "code": [
+        "class ClassName TypeName"
+      ]
+    },
+    "read_only_class": {
+      "name": "Read-only class",
+      "not-implemented": true
+    },
+    "static_class": {
+      "name": "Static class",
+      "not-implemented": true
+    },
+    "inner_class": {
+      "name": "Inner class",
+      "not-implemented": true
+    },
+    "packages": {
+      "name": "Packages",
+      "code": [
+        "module ModuleName"
+      ]
+    },
+    "class_with_generic_type": {
+      "name": "Class with a generic type",
+      "code": [
+        "data TypeName genericTypeParameter = Constructor genericTypeParameter"
+      ]
+    },
+    "private_variables": {
+      "name": "Defining private variables",
+      "not-implemented": true,
+      "comment": "If you don't export the constructors of a data type none of the variables can be accessed from outside the module."
+    },
+    "protected_variables": {
+      "name": "Defining protected variables",
+      "not-implemented": true
+    },
+    "public_variables": {
+      "name": "Defining public variables",
+      "code": [
+        "data TypeName = Constructor",
+        "    { variableName :: ParameterType",
+        "    }"
+      ]
+    },
+    "static_variables": {
+      "name": "Defining static variables",
+      "not-implemented": true
+    },
+    "private_functions": {
+      "name": "Defining private functions",
+      "not-implemented": true,
+      "comment": "Every module defines all exported functions in the export list"
+    },
+    "protected_functions": {
+      "name": "Defining protected functions",
+      "not-implemented": true
+    },
+    "public_functions": {
+      "name": "Defining public functions",
+      "not-implemented": true,
+      "comment": "Every module defines all exported functions in the export list"
+    },
+    "static_functions": {
+      "name": "Defining static functions",
+      "not-implemented": true
+    },
+    "extends_class": {
+      "name": "Class that inherits/extends another class",
+      "not-implemented": true
+    },
+    "extending_interface": {
+      "name": "Class/Interface that inherits/extends another class/interface",
+      "code": [
+        "class SuperClass typeParameter => SubClass typeParameter"
+      ]
+    },
+    "calling_superclass_functions": {
+      "name": "Calling a superclass function",
+      "not-implemented": true,
+      "comment": "To call functions their name has to be unique or you get a compile time error"
+    },
+    "overriding_superclass_functions": {
+      "name": "Overriding a superclass function",
+      "not-implemented": true
+    },
+    "instantiating_object": {
+      "name": "Instantiating a new object",
+      "code": [
+        "Constructor"
+      ]
+    },
+    "instantiating_polymorphic_object": {
+      "name": "Instantiating a polymorphic object",
+      "not-implemented": true
+    },
+    "implement_constructor": {
+      "name": "Implementing a class constructor",
+      "not-implemented": true,
+      "comment": "You specify all constructors when defining the type, they are simple containers for all members"
+    },
+    "implement_deconstructor": {
+      "name": "Implementing a class deconstructor",
+      "not-implemented": true
+    }
+  }
+}

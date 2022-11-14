@@ -1,6 +1,9 @@
 """codethesaur.us views"""
+import json
 import random
 import os
+
+from jsonmerge import merge
 
 from django.http import (
     HttpResponseBadRequest,
@@ -8,13 +11,13 @@ from django.http import (
     HttpResponseNotFound,
     HttpResponseServerError
 )
-from django.shortcuts import render
+from django.shortcuts import HttpResponse, render
 from django.utils.html import escape, strip_tags
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 
-from web.models import MetaInfo, SiteVisit, LookupData
+from web.models import Language, MetaInfo, SiteVisit, LookupData
 from web.thesaurus_template_generators import generate_language_template
 
 from codethesaurus.settings import BASE_DIR
@@ -34,7 +37,7 @@ def store_url_info(request):
     visit = SiteVisit(
         url=request.get_full_path(),
         user_agent=user_agent,
-        referer=request
+        referer=referer,
     )
     visit.save()
     return visit
@@ -239,7 +242,7 @@ def compare(request):
         "lang2_friendlyname": lang2.friendly_name,
         "categories": both_categories,
         "description": f"Code Thesaurus: Comparing {lang1.friendly_name} \
-                and {lang2.friendly_name}"
+                and {lang2.friendly_name}",
     }
 
     return render(request, 'compare.html', response)
@@ -461,3 +464,47 @@ def concept_reference(concept_id, name, lang):
         "code": format_code_for_display(concept_id, lang),
         "comment": format_comment_for_display(concept_id, lang)
     }
+
+
+# API functions
+
+def api_reference(request, structure_key, lang, version):
+    """
+    Returns the filled template for a given language and concept
+
+    :param request: HttpRequest object
+    :param structure_key: concept
+    :param lang: language
+    :param version: version
+    :return: HttpResponse filled template of concept
+    """
+    store_url_info(request)
+
+    lang = Language(lang, "")
+    response = lang.load_filled_concepts(structure_key, version)
+
+    if response is False:
+        return HttpResponseNotFound()
+
+    return HttpResponse(response, content_type="application/json")
+
+def api_compare(request, structure_key, lang1, version1, lang2, version2):
+    """
+    Returns the comparison between two languages for a given structure
+
+    :param request: HttpRequest object
+    :param structure_key: concept
+    :param lang1: language 1
+    :param version1: version 1
+    :param lang2: language 2
+    :param version2: version 2
+    :return: HttpResponse response
+    """
+    store_url_info(request)
+
+    response = Language(lang1, "").load_comparison(structure_key, lang2, version2, version1)
+
+    if response is False:
+        return HttpResponseNotFound()
+
+    return HttpResponse(response, content_type="application/json")
