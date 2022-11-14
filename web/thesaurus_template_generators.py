@@ -3,7 +3,7 @@ import json
 from web.models import MetaInfo
 
 
-def generate_language_template(language_id, structure_id, version=None, draft=False):
+def generate_language_template(language_id, structure_id, version=None):
     """Generate a template for the given language and structure"""
     meta_info = MetaInfo()
     if structure_id not in meta_info.structures:
@@ -20,9 +20,6 @@ def generate_language_template(language_id, structure_id, version=None, draft=Fa
 
     if version:
         meta['language_version'] = version
-    
-    if draft:
-        meta['draft'] = True
 
     concepts = {
         id: {
