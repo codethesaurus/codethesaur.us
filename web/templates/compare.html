@@ -74,14 +74,46 @@
                     <div class="card-body">
                         <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang1 }}/{{ version1 }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang1_friendlyname }}?
-                        </a>
+                        </a><br/>
+                        <details>
+                            <summary href="javascript:void(0)" onclick="(function(target){
+                                const textarea = target.closest('details').querySelector('textarea');
+                                if (textarea.value) return;
+                                fetch('/api/{{ concept }}/{{ lang1 }}/{{ version1 }}').then(function(response){
+                                    return response.text();
+                                }).then(function(data){
+                                    textarea.value = data;
+                                }).catch(function(error){
+                                    console.log(error);
+                                });
+                            })(event.target)">or get the complete template.</summary>
+                            <strong>{{concept}}.json</strong>
+                            <textarea class="form-control" rows="10" readonly style="min-width:100%;max-width:100%"></textarea>
+                            <noscript><i>JavaScript must be enabled to view the complete template.</i></noscript>
+                        </details>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
                         <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang2 }}/{{ version2 }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang2_friendlyname }}?
-                        </a>
+                        </a><br/>
+                        <details>
+                            <summary href="javascript:void(0)" onclick="(function(target){
+                                const textarea = target.closest('details').querySelector('textarea');
+                                if (textarea.value) return;
+                                fetch('/api/{{ concept }}/{{ lang2 }}/{{ version2 }}').then(function(response){
+                                    return response.text();
+                                }).then(function(data){
+                                    textarea.value = data;
+                                }).catch(function(error){
+                                    console.log(error);
+                                });
+                            })(event.target)">or get the complete template.</summary>
+                            <strong>{{concept}}.json</strong>
+                            <textarea class="form-control" rows="10" readonly style="min-width:100%;max-width:100%"></textarea>
+                            <noscript><i>JavaScript must be enabled to view the complete template.</i></noscript>
+                        </details>
                     </div>
                 </div>
             </div>

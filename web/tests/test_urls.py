@@ -1,7 +1,7 @@
 """Tests for codethesaur.us urls"""
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from web.views import index, about, compare, reference
+from web.views import index, about, compare, reference, api_reference, api_compare
 
 
 class TestUrls(SimpleTestCase):
@@ -26,3 +26,13 @@ class TestUrls(SimpleTestCase):
         """ensure the reference url uses the reference function"""
         url = reverse('reference')
         self.assertEqual(resolve(url).func, reference)
+
+    def test_api_reference_url(self):
+        """ensure the api reference url uses the api function"""
+        url = reverse(api_reference, args=['classes', 'javascript', 'ECMAScript 2023'])
+        self.assertEqual(resolve(url).func, api_reference)
+
+    def test_api_compare_url(self):
+        """ensure the api compare url uses the api function"""
+        url = reverse(api_compare, args=['classes', 'javascript', 'ECMAScript 2023', 'java', 'java17'])
+        self.assertEqual(resolve(url).func, api_compare)
