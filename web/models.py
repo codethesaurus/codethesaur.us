@@ -1,8 +1,10 @@
 """models of codethesaur.us"""
 import json
 import os
+from jsonmerge import merge
 
 from django.db import models
+
 
 # pylint: disable=too-few-public-methods
 class MetaStructure:
@@ -90,6 +92,56 @@ class Language:
             file_json = json.load(file)
             self.concepts = file_json["concepts"]
         self.version = version
+
+    def load_filled_concepts(self, structure_key, version):
+        from web.thesaurus_template_generators import generate_language_template
+        """
+        Loads the concepts from the language's structure file
+
+        :param structure_key: the ID for the concept to load
+        :param version: the version of the language
+        :return: a dict containing the code and comment, and possibly the
+            'not-implemented' flag. They are empty code entries if not specified
+        :rtype: object Filled template
+        """
+
+        self.load_concepts(structure_key, version)
+
+        template = generate_language_template(
+            self.key,
+            structure_key,
+            version
+        )
+
+        template = json.loads(template)
+
+        template['concepts'] = merge(template['concepts'], self.concepts)
+
+        response = json.dumps(template, indent=2)
+
+        return response
+
+    def load_comparison(self, structure_key, lang, version_lang, version_self):
+        lang = Language(lang, "")
+        self_filled_concept = self.load_filled_concepts(structure_key, version_self)
+        lang_filled_concept = lang.load_filled_concepts(structure_key, version_lang)
+
+        if self_filled_concept is False or lang_filled_concept is False:
+            return False
+
+        response = json.dumps({
+            "meta": {
+                "language_1": self.key,
+                "language_version_1": version_self,
+                "language_2": lang.key,
+                "language_version_2": version_lang,
+                "structure": structure_key
+            },
+            "concepts1": json.loads(self_filled_concept)['concepts'],
+            "concepts2": json.loads(lang_filled_concept)['concepts']
+        }, indent=2)
+
+        return response
 
 
     def concept(self, concept_key):

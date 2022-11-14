@@ -70,10 +70,45 @@
                         <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang.key }}/{{ lang.version }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang.name }}?
                         </a>
+                        <br/>
+                        <details>
+                            <summary onclick="(function(target){
+                                const textarea = target.closest('details').querySelector('textarea');
+                                if (textarea.value) return;
+                                fetch('/api/{{ concept }}/{{ lang.key }}/{{ lang.version }}').then(function(response){
+                                    return response.text();
+                                }).then(function(data){
+                                    textarea.value = data;
+                                }).catch(function(error){
+                                    console.log(error);
+                                });
+                                     debugger;
+                            })(event.target)">or get the complete template.
+                            </summary>
+                            <strong>{{ concept }}.json</strong>
+                            <textarea class="form-control" rows="10" readonly style="min-width:100%;max-width:100%"></textarea>
+                            <noscript><i>JavaScript must be enabled to view the complete template.</i></noscript>
+                        </details>
                     </div>
                 </div>
                 {% endfor %}
             </div>
 
+        </div>
+        <div class="modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="templateModalLabel">{{ concept }}.json</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="20" readonly style="min-width: 100%;max-width: 100%;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
         </div>
 {% endblock content %}
