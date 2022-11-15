@@ -212,17 +212,18 @@ class Language:
         :param structure_key: the ID for the structure to load
         :return: Boolean if the version is incomplete
         """
-        file_name = f"{structure_key}.json"
-        file_path = os.path.join(self.language_dir, version, file_name)
 
-        with open(file_path, 'r', encoding='UTF-8') as file:
-            file_json = json.load(file)
-            for concept in file_json["concepts"].values():
-                code = concept.get("code")
-                if isinstance(code, list):
-                    code = "".join(code)
-                if isinstance(code, str) and code.strip() == "":
-                    return True
+        template = self.load_filled_concepts(structure_key, version)
+        template = json.loads(template)
+        
+        for concept in template["concepts"].values():
+            code = concept.get("code")
+            not_implemented = concept.get("not-implemented", None)
+            comment = concept.get("comment", None)
+            if isinstance(code, list):
+                code = "".join(code)
+            if isinstance(code, str) and code.strip() == "" and not_implemented is None and comment is None:
+                return True
 
         return False
                     
