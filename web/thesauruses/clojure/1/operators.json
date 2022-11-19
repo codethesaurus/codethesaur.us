@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "language": "clojure",
+    "language_version": "1.10.3",
+    "language_name": "Clojure",
+    "structure": "operators"
+  },
+  "concepts": {
+    "addition": {
+      "code": "(+ 1 2 3)",
+      "name": "Addition operator"
+    },
+    "addition_assignment": {
+      "not-implemented": "true",
+      "name": "Addition and assignment operator"
+    },
+    "subtraction": {
+      "code": "(- 10 4)",
+      "name": "Subtraction operator"
+    },
+    "subtraction_assignment": {
+      "not-implemented": "true",
+      "name": "Subtraction and assignment operator"
+    },
+    "multiplication": {
+      "code": "(* 12 12)",
+      "name": "Multiplication operator"
+    },
+    "multiplication_assignment": {
+      "not-implemented": "true",
+      "name": "Multiplication and assignment operator"
+    },
+    "division": {
+      "code": "(/ 1024 16)",
+      "name": "Division operator"
+    },
+    "division_assignment": {
+      "not-implemented": "true",
+      "name": "Division and assignment operator"
+    },
+    "integer_division": {
+      "comment": "Clojure includes a Ratio type to represent rational ratios exactly, but this can be coerced to an int",
+      "code": "(int (/ 10 3))",
+      "name": "Integer division operator"
+    },
+    "integer_division_assignment": {
+      "not-implemented": "true",
+      "name": "Integer division and assignment operator"
+    },
+    "unary_plus": {
+      "comment": "All arithmetic operators can take arbitrarily many arguments, including `+`, but this provides unclear utility",
+      "code": "(+ 5)",
+      "name": "Unary plus operator"
+    },
+    "unary_minus": {
+      "comment": "All arithmetic operators can take arbitrarily many arguments, including `-`, but this provides unclear utility",
+      "code": "(- 10)",
+      "name": "Unary minus operator"
+    },
+    "modulus": {
+      "code": "(mod 18 8)",
+      "name": "Modulus (remainder) operator"
+    },
+    "modulus_assignment": {
+      "not-implemented": "true",
+      "name": "Modulus and assignment operator"
+    },
+    "increment": {
+      "code": "(inc 1)",
+      "name": "Increment (add 1) operator"
+    },
+    "decrement": {
+      "code": "(dec 10)",
+      "name": "Decrement (subtract 1) operator"
+    },
+    "exponential": {
+      "not-implemented": "true",
+      "name": "Exponential operator"
+    },
+    "factorial": {
+      "name": "Factorial operator",
+      "not-implemented": "true"
+    },
+    "absolute_value": {
+      "comment": "Using the built-in JDK method.",
+      "code": "(Math/abs -4)",
+      "name": "Absolute value operator"
+    },
+    "percentage": {
+      "name": "Percentage operator",
+      "not-implemented": "true"
+    },
+    "equal_to": {
+      "comment": "The `=` function can operate on various data types.",
+      "code": "(= \"foo\" \"bar\")",
+      "name": "Equality operator"
+    },
+    "not_equal_to": {
+      "comment": "The `!=` function can operate on various data types.",
+      "code": "(not= 4 5)",
+      "name": "Not equal to operator"
+    },
+    "less_than": {
+      "code": "(< 5 10)",
+      "name": "Less than operator"
+    },
+    "less_than_or_equal_to": {
+      "code": "(<= 8 8)",
+      "name": "Less than or equal to operator"
+    },
+    "greater_than": {
+      "code": "(> 8 1)",
+      "name": "Greater than operator"
+    },
+    "greater_than_or_equal_to": {
+      "comment": "All Clojure comparison functions can take arbitrarily many arguments.",
+      "code": "(>= 12 10 8)",
+      "name": "Greater than or equal to operator"
+    },
+    "null_coalescing": {
+      "not-implemented": "true",
+      "name": "Null coalescing operator"
+    },
+    "is": {
+      "not-implemented": "true",
+      "name": "Is operator"
+    },
+    "is_not": {
+      "not-implemented": "true",
+      "name": "Is not operator"
+    },
+    "logical_and": {
+      "comment": "As with most operator functions, arbitrarily many arguments are supported",
+      "code": "(and (> 10 2) (= 3 (/ 33 11) cond1)",
+      "name": "Logical AND Operator"
+    },
+    "logical_or": {
+      "comment": "As with most operator functions, arbitrarily many arguments are supported. For `or`, the first truthy clause is returned as the result of the overall expression.",
+      "code": "(or x y z)",
+      "name": "Logical OR Operator"
+    },
+    "logical_not": {
+      "code": "(not (< x 15))",
+      "name": "Logical NOT Operator"
+    },
+    "bitwise_and": {
+      "code": "(bit-and 2r1100 2r1001)",
+      "name": "Bitwise AND operator"
+    },
+    "bitwise_and_assignment": {
+      "not-implemented": "true",
+      "name": "Bitwise AND and assignment operator"
+    },
+    "bitwise_or": {
+      "code": "(bit-or 2r1100 2r1001)",
+      "name": "Bitwise OR operator"
+    },
+    "bitwise_or_assignment": {
+      "not-implemented": "true",
+      "name": "Bitwise OR and assignment operator"
+    },
+    "bitwise_not": {
+      "code": "(bit-not 2r0111)",
+      "name": "Bitwise NOT operator"
+    },
+    "not_assignment": {
+      "not-implemented": "true",
+      "name": "Bitwise NOT and assignment operator"
+    },
+    "bitwise_xor": {
+      "code": "(bit-xor 2r1100 2r1001) ",
+      "name": "Bitwise XOR operator"
+    },
+    "bitwise_xor_assignment": {
+      "not-implemented": "true",
+      "name": "Bitwise XOR and assignment operator"
+    },
+    "bitwise_xnor": {
+      "not-implemented": "true",
+      "name": "Bitwise XNOR operator"
+    },
+    "bitwise_xnor_assignment": {
+      "not-implemented": "true",
+      "name": "Bitwise XNOR and assignment operator"
+    },
+    "left_shift": {
+      "code": "(bit-shift-left 1 10)",
+      "name": "Left shift bitwise operator"
+    },
+    "left_shift_assignment": {
+      "not-implemented": "true",
+      "name": "Left shift assignment operator"
+    },
+    "right_shift": {
+      "code": "(bit-shift-right 100 2)",
+      "name": "Right shift bitwise operator"
+    },
+    "right_shift_assignment": {
+      "not-implemented": "true",
+      "name": "Right shift assignment operator"
+    },
+    "ternary": {
+      "name": "Ternary operator",
+      "not-implemented": "true"
+    },
+    "null_forgiving": {
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
+    }
+  }
+}
