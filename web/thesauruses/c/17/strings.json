@@ -5,7 +5,7 @@
     "language_name": "C",
     "structure": "strings"
   },
-  "categories": {
+  "concepts": {
     "is_primitive_or_not": {
       "code": "no",
       "name": "Is this a built-in type in this language?"
