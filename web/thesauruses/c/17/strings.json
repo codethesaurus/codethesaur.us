@@ -50,7 +50,7 @@
       "name": "Length of string"
     },
     "max_length_of_string": {
-      "code": "",
+      "not-implemented": "true",
       "name": "Maximum length of string"
     },
     "clear_string": {
