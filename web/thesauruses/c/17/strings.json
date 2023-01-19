@@ -39,7 +39,7 @@
       "name": "Assign string from another string"
     },
     "destroy_string": {
-      "code": "",
+      "not-implemented": "true",
       "name": "Destroy string"
     },
     "length_of_string": {
@@ -212,6 +212,7 @@
       "name": "Convert string to all uppercase"
     },
     "convert_to_lowercase": {
+      "not-implemented":"true",
       "comment": [
         "//indirect implementation",
         "//#include<ctype.h>",
@@ -301,7 +302,7 @@
       "name": "Paramater used in format function if they're named variables"
     },
     "format_as_integer": {
-      "code": "",
+      "not-implemented": "true",
       "name": "Format parameter as an integer"
     },
     "format_as_decimal": {
