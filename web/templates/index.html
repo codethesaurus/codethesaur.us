@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="card-text">
                                     <label class="text-muted py-2" for="lang1">Pick a language you know:</label>
-                                    <select class="form-select" id="lang1" name="lang1">
+                                    <select class="form-select" id="lang1" name="lang">
                                         {% for k, lang in languages.items %}
                                         {% for v in lang %}
                                         <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
@@ -47,7 +47,7 @@
                                     <label class="text-muted py-2" for="lang2">Pick a language you
                                         <strong>don't</strong>
                                         know:</label>
-                                    <select class="form-select" id="lang2" name="lang2">
+                                    <select class="form-select" id="lang2" name="lang">
                                         {% for k, lang in languages.items %}
                                         {% for v in lang %}
                                         <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
