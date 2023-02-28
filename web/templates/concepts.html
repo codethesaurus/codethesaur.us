@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load templatetags %}
+
+{% block content %}
+        <div class="container">
+            <div class="row mt-5">
+                <h1 class="col-12">{{ title }}</h1>
+            </div>
+            <div class="row col-12">
+                <p>
+                    The tables below show the syntactically highlighted
+                    {{ concept_friendly_name }} topic for the
+                    {% if languages|length > 1 %}{{ languages | length }}{% endif %}
+                    language{{ languages | length | pluralize }}.
+                </p>
+                <br />
+                <p>
+                    If you see any incorrect information, please help us improve! Feel free to either
+                    <a href="https://github.com/codethesaurus/codethesaur.us/issues/new/choose" rel="noopener">
+                        create an issue
+                    </a>
+                    or use the link{{ languages | length | pluralize }} at the bottom of
+                    the language column{{ languages | length | pluralize }} to correct any
+                    information.
+                </p>
+            </div>
+
+{% for category in categories %}
+            <div class="row">&nbsp;</div>
+            <div class="row"><h2>{{ category.key }}</h2></div>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center">Concept</h3>
+                    </div>
+                </div>
+                {% for lang in languages %} 
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center">{{ lang.name }}'s Implementation</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+    {% for concept in category.concepts %}
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="strong">
+                        {{ concept.name | linebreaksbr }}
+                    </div>
+                </div>
+            </div>
+            {% for d in concept.data %}
+            {% concept_card d.code d.comment %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endfor %}
+
+           <div class="row">&nbsp;</div>
+           <div class="card-group">
+                <div class="card border-0">
+                    <div class="card-body">&nbsp;</div>
+                </div>
+                {% for lang in languages %}
+                <div class="card" id="start-of-row">
+                    <div class="card-body">
+                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang.key }}/{{ lang.version }}/{{ concept }}.json">
+                            Want to add or correct information for {{ lang.name }}?
+                        </a>
+                        <br/>
+                        <details>
+                            <summary onclick="(function(target){
+                                const textarea = target.closest('details').querySelector('textarea');
+                                if (textarea.value) return;
+                                fetch('/api/{{ concept }}/{{ lang.key }}/{{ lang.version }}').then(function(response){
+                                    return response.text();
+                                }).then(function(data){
+                                    textarea.value = data;
+                                }).catch(function(error){
+                                    console.log(error);
+                                });
+                            })(event.target)">or get the complete template.
+                            </summary>
+                            <strong>{{ concept }}.json</strong>
+                            <textarea class="form-control" rows="10" readonly style="min-width:100%;max-width:100%"></textarea>
+                            <noscript><i>JavaScript must be enabled to view the complete template.</i></noscript>
+                        </details>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        <div class="modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="templateModalLabel">{{ concept }}.json</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="20" readonly style="min-width: 100%;max-width: 100%;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}

@@ -1,82 +1,78 @@
 {
   "meta": {
-    "language": "java",
+    "language": "c",
     "language_version": "17",
-    "language_name": "Java",
+    "language_name": "C",
     "structure": "operators"
-  },
+	},
   "concepts": {
     "addition": {
-      "code": "+",
+      "code": "a+b",
       "name": "Addition operator"
     },
     "addition_assignment": {
-      "code": "+=",
+      "code": "a+=b",
       "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-",
+      "code": "a-b",
       "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "code": "-=",
+      "code": "a-=b",
       "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*",
+      "code": "a*b",
       "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "code": "*=",
+      "code": "a*=b",
       "name": "Multiplication and assignment operator"
     },
     "division": {
-      "comment": "If either operand is a float or double, then floating point division is used",
-      "code": "10.0d / 4",
+      "code": "a/b",
       "name": "Division operator"
     },
     "division_assignment": {
-      "code": "x /= 2",
+      "code": "a/=b",
       "name": "Division and assignment operator"
     },
     "integer_division": {
-      "comment": "If both operands are integers or longs, then integral division is used",
-      "code": "10 / 3",
-      "name": "Integer division operator"
+      "not-implemented": "true",
+      "name": "Integer Division operator"
     },
     "integer_division_assignment": {
-      "code": "x /= 4",
-      "name": "Integer division and assignment operator"
+      "not-implemented": "true",
+      "name": "Integer Division and assignment operator"
     },
     "modulus": {
-      "code": "%",
+      "code": "a%b",
       "name": "Modulus (remainder) operator"
     },
     "modulus_assignment": {
-      "code": "%=",
+      "code": "a%=b",
       "name": "Modulus and assignment operator"
     },
     "unary_plus": {
-      "comment": "This is somewhat redundant as the default sign for numeric values is positive",
-      "code": "x = +7",
-      "name": "Unary plus operator"
-    },
+      "code" : "+a",
+      "name" : "Unary plus operator"
+  },
     "unary_minus": {
-      "code": "y = -12",
-      "name": "Unary minus operator"
-    },
+      "code" : "-a",
+      "name" : "Unary minus operator"
+  },
     "increment": {
-      "comment": "Supports both pre and post increment",
-      "code": "++x\nx++",
+      "code": "++a",
       "name": "Increment (add 1) operator"
     },
     "decrement": {
-      "comment": "Supports both pre and post decrement",
-      "code": "--x\nx--",
+      "code": "--a",
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
-      "not-implemented": "true",
+      "code":"pow(base,power)",
+      "comment": "not a operator but a function available in <math.h> header file", 
       "name": "Exponential operator"
     },
     "factorial": {
@@ -84,7 +80,8 @@
       "name": "Factorial operator"
     },
     "absolute_value": {
-      "code": "Math.abs(-4)",
+      "code":"abs(number)",
+      "comment":"not a operator but a function available in <stdlib.h> header file ", 
       "name": "Absolute value operator"
     },
     "percentage": {
@@ -92,27 +89,27 @@
       "name": "Percentage operator"
     },
     "equal_to": {
-      "code": "==",
+      "code": "a==b",
       "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "!=",
+      "code": "a!=b",
       "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "<",
+      "code": "a<b",
       "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "<=",
+      "code": "a<=b",
       "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": ">",
+      "code": "a>b",
       "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": ">=",
+      "code": "a>=b",
       "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
@@ -128,82 +125,75 @@
       "name": "Is not operator"
     },
     "logical_and": {
-      "code": "a && b",
-      "name": "Logical AND operator"
-    },
-    "and_assignment": {
-      "not-implemented": "true"
-    },
+      "code" : "(a==1)&&(b==1)",
+      "name" : "Logical AND Operator"
+  },
     "logical_or": {
-      "code": "a || b",
-      "name": "Logical OR operator"
-    },
-    "or_assignment": {
-      "not-implemented": "true"
-    },
-    "logical_not": {
-      "code": "!x",
-      "name": "Logical NOT operator"
-    },
-    "bitwise_and": {
-      "code": "x & y",
-      "name": "Bitwise AND operator"
-    },
-    "bitwise_and_assignmnet": {
-      "code": "x &= 0x000F",
-      "name": "Bitwise AND and assignment operator"
-    },
-    "bitwise_or": {
-      "code": "x | y",
-      "name": "Bitwise OR operator"
-    },
-    "bitwise_or_assignment": {
-      "code": "foo |= 0x2222",
-      "name": "Bitwise OR and assignment operator"
-    },
-    "bitwise_not": {
-      "code": "~x",
-      "name": "Bitwise NOT operator"
-    },
-    "not_assignment": {
-      "name": "Bitwise NOT and assignment operator",
-      "not-implemented": "true"
-    },
-    "bitwise_xor": {
-      "code": "x ^ y",
-      "name": "Bitwise XOR operator"
-    },
-    "bitwise_xor_assignment": {
+      "code" : "(a==1)||(b==1)",
+      "name" : "Logical OR Operator"
+  },
+  "logical_not": {
+      "code" : "if(!a)",
+      "name" : "Logical NOT Operator"
+  },
+"bitwise_and": {
+      "code" : "a&b",
+      "name" : "Bitwise AND operator"
+  },
+ "bitwise_and_assignment" : {
+      "code" : "a &= b",
+      "name" : "Bitwise AND and assignment operator"
+  },
+"bitwise_or": {
+      "code" : "a|b",
+      "name" : "Bitwise OR operator"
+  },
+"bitwise_or_assignment": {
+      "code" : "a|=b",
+      "name" : "Bitwise OR and assignment operator"
+  },
+ "bitwise_not": {
+      "code" : "~a",
+      "name" : "Bitwise NOT operator"
+  },
+ "not_assignment": {
+        "not-implemented": "true",
+	"name" : "Bitwise NOT and assignment operator"
+ },
+"bitwise_xor": {
+      "code" : "a^b",
+      "name" : "Bitwise XOR operator"
+  },
+"bitwise_xor_assignment": {
+      "code" : "a^=b",
+      "name" : "Bitwise XOR and assignment operator"
+  },
+ "bitwise_xnor": {
       "not-implemented": "true",
-      "name": "bitwise_xor_assignment"
-    },
-    "bitwise_xnor": {
-      "name": "Bitwise XNOR operator",
+      "name" : "Bitwise XNOR operator"
+  },
+ "bitwise_xnor_assignment": {
       "not-implemented": "true",
-      "comment": "Can be implemented like `(!a ^ b)`"
-    },
-    "bitwise_xnor_assignment": {
-      "name": "Bitwise XNOR and assignment operator",
-      "not-implemented": "true"
-    },
+      "name" : "Bitwise XNOR and assignment operator"
+  },
     "left_shift": {
-      "code": "val << 2",
+      "code": "a<<1",
       "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "x <<= 4",
+      "code": "a<<=1",
       "name": "Left shift assignment operator"
     },
     "right_shift": {
-      "code": "val >> 2",
+      "code": "a>>1",
       "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "code": "y >>= 6",
+      "code": "a>>=1",
       "name": "Right shift assignment operator"
     },
     "ternary": {
-      "code": "cond ? whenTrue : whenFalse",
+      "code": "(a>b)? printf(\"true\") : printf(\"false\")",
       "name": "Ternary operator"
     },
     "null_forgiving": {

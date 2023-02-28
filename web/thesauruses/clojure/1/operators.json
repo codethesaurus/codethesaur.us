@@ -1,78 +1,76 @@
 {
   "meta": {
-    "language": "java",
-    "language_version": "11",
-    "language_name": "Java",
+    "language": "clojure",
+    "language_version": "1.10.3",
+    "language_name": "Clojure",
     "structure": "operators"
   },
   "concepts": {
     "addition": {
-      "code": "+",
+      "code": "(+ 1 2 3)",
       "name": "Addition operator"
     },
     "addition_assignment": {
-      "code": "+=",
+      "not-implemented": "true",
       "name": "Addition and assignment operator"
     },
     "subtraction": {
-      "code": "-",
+      "code": "(- 10 4)",
       "name": "Subtraction operator"
     },
     "subtraction_assignment": {
-      "code": "-=",
+      "not-implemented": "true",
       "name": "Subtraction and assignment operator"
     },
     "multiplication": {
-      "code": "*",
+      "code": "(* 12 12)",
       "name": "Multiplication operator"
     },
     "multiplication_assignment": {
-      "code": "*=",
+      "not-implemented": "true",
       "name": "Multiplication and assignment operator"
     },
     "division": {
-      "comment": "If either operand is a float or double, then floating point division is used",
-      "code": "10.0d / 4",
+      "code": "(/ 1024 16)",
       "name": "Division operator"
     },
     "division_assignment": {
-      "code": "x /= 2",
+      "not-implemented": "true",
       "name": "Division and assignment operator"
     },
     "integer_division": {
-      "comment": "If both operands are integers or longs, then integral division is used",
-      "code": "10 / 3",
+      "comment": "Clojure includes a Ratio type to represent rational ratios exactly, but this can be coerced to an int",
+      "code": "(int (/ 10 3))",
       "name": "Integer division operator"
     },
     "integer_division_assignment": {
-      "code": "x /= 4",
+      "not-implemented": "true",
       "name": "Integer division and assignment operator"
     },
-    "modulus": {
-      "code": "%",
-      "name": "Modulus (remainder) operator"
-    },
-    "modulus_assignment": {
-      "code": "%=",
-      "name": "Modulus and assignment operator"
-    },
     "unary_plus": {
-      "comment": "This is somewhat redundant as the default sign for numeric values is positive",
-      "code": "x = +7",
+      "comment": "All arithmetic operators can take arbitrarily many arguments, including `+`, but this provides unclear utility",
+      "code": "(+ 5)",
       "name": "Unary plus operator"
     },
     "unary_minus": {
-      "code": "y = -12",
+      "comment": "All arithmetic operators can take arbitrarily many arguments, including `-`, but this provides unclear utility",
+      "code": "(- 10)",
       "name": "Unary minus operator"
     },
+    "modulus": {
+      "code": "(mod 18 8)",
+      "name": "Modulus (remainder) operator"
+    },
+    "modulus_assignment": {
+      "not-implemented": "true",
+      "name": "Modulus and assignment operator"
+    },
     "increment": {
-      "comment": "Supports both pre and post increment",
-      "code": "++x\nx++", 
+      "code": "(inc 1)",
       "name": "Increment (add 1) operator"
     },
     "decrement": {
-      "comment": "Supports both pre and post decrement",
-      "code": "--x\nx--",
+      "code": "(dec 10)",
       "name": "Decrement (subtract 1) operator"
     },
     "exponential": {
@@ -80,39 +78,43 @@
       "name": "Exponential operator"
     },
     "factorial": {
-      "not-implemented": "true",
-      "name": "Factorial operator"
+      "name": "Factorial operator",
+      "not-implemented": "true"
     },
     "absolute_value": {
-      "code": "Math.abs(-4)",
+      "comment": "Using the built-in JDK method.",
+      "code": "(Math/abs -4)",
       "name": "Absolute value operator"
     },
     "percentage": {
-      "not-implemented": "true",
-      "name": "Percentage operator"
+      "name": "Percentage operator",
+      "not-implemented": "true"
     },
     "equal_to": {
-      "code": "==",
+      "comment": "The `=` function can operate on various data types.",
+      "code": "(= \"foo\" \"bar\")",
       "name": "Equality operator"
     },
     "not_equal_to": {
-      "code": "!=",
+      "comment": "The `!=` function can operate on various data types.",
+      "code": "(not= 4 5)",
       "name": "Not equal to operator"
     },
     "less_than": {
-      "code": "<",
+      "code": "(< 5 10)",
       "name": "Less than operator"
     },
     "less_than_or_equal_to": {
-      "code": "<=",
+      "code": "(<= 8 8)",
       "name": "Less than or equal to operator"
     },
     "greater_than": {
-      "code": ">",
+      "code": "(> 8 1)",
       "name": "Greater than operator"
     },
     "greater_than_or_equal_to": {
-      "code": ">=",
+      "comment": "All Clojure comparison functions can take arbitrarily many arguments.",
+      "code": "(>= 12 10 8)",
       "name": "Greater than or equal to operator"
     },
     "null_coalescing": {
@@ -128,83 +130,78 @@
       "name": "Is not operator"
     },
     "logical_and": {
-      "code": "a && b",
-      "name": "Logical AND operator"
-    },
-    "and_assignment": {
-      "not-implemented": "true"
+      "comment": "As with most operator functions, arbitrarily many arguments are supported",
+      "code": "(and (> 10 2) (= 3 (/ 33 11) cond1)",
+      "name": "Logical AND Operator"
     },
     "logical_or": {
-      "code": "a || b",
-      "name": "Logical OR operator"
-    },
-    "or_assignment": {
-      "not-implemented": "true"
+      "comment": "As with most operator functions, arbitrarily many arguments are supported. For `or`, the first truthy clause is returned as the result of the overall expression.",
+      "code": "(or x y z)",
+      "name": "Logical OR Operator"
     },
     "logical_not": {
-      "code": "!x",
-      "name": "Logical NOT operator"
+      "code": "(not (< x 15))",
+      "name": "Logical NOT Operator"
     },
     "bitwise_and": {
-      "code": "x & y",
+      "code": "(bit-and 2r1100 2r1001)",
       "name": "Bitwise AND operator"
     },
-    "bitwise_and_assignmnet": {
-      "code": "x &= 0x000F",
+    "bitwise_and_assignment": {
+      "not-implemented": "true",
       "name": "Bitwise AND and assignment operator"
     },
     "bitwise_or": {
-      "code": "x | y",
+      "code": "(bit-or 2r1100 2r1001)",
       "name": "Bitwise OR operator"
     },
     "bitwise_or_assignment": {
-      "code": "foo |= 0x2222",
+      "not-implemented": "true",
       "name": "Bitwise OR and assignment operator"
     },
     "bitwise_not": {
-      "code": "~x",
+      "code": "(bit-not 2r0111)",
       "name": "Bitwise NOT operator"
     },
     "not_assignment": {
-      "name": "Bitwise NOT and assignment operator",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Bitwise NOT and assignment operator"
     },
     "bitwise_xor": {
-      "code": "x ^ y",
+      "code": "(bit-xor 2r1100 2r1001) ",
       "name": "Bitwise XOR operator"
     },
     "bitwise_xor_assignment": {
       "not-implemented": "true",
-      "name": "bitwise_xor_assignment"
+      "name": "Bitwise XOR and assignment operator"
     },
     "bitwise_xnor": {
-      "name": "Bitwise XNOR operator",
       "not-implemented": "true",
-      "comment": "Can be implemented like `(!a ^ b)`"
+      "name": "Bitwise XNOR operator"
     },
     "bitwise_xnor_assignment": {
-      "name": "Bitwise XNOR and assignment operator",
-      "not-implemented": "true"
+      "not-implemented": "true",
+      "name": "Bitwise XNOR and assignment operator"
     },
     "left_shift": {
-      "code": "val << 2",
+      "code": "(bit-shift-left 1 10)",
       "name": "Left shift bitwise operator"
     },
     "left_shift_assignment": {
-      "code": "x <<= 4",
+      "not-implemented": "true",
       "name": "Left shift assignment operator"
     },
     "right_shift": {
-      "code": "val >> 2",
+      "code": "(bit-shift-right 100 2)",
       "name": "Right shift bitwise operator"
     },
     "right_shift_assignment": {
-      "code": "y >>= 6",
+      "not-implemented": "true",
       "name": "Right shift assignment operator"
     },
     "ternary": {
-      "code": "cond ? whenTrue : whenFalse",
-      "name": "Ternary operator"
+      "name": "Ternary operator",
+      "not-implemented": "true"
     },
     "null_forgiving": {
       "not-implemented": "true",

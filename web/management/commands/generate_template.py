@@ -13,11 +13,11 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         structures = list(MetaInfo().structures.keys())
 
-        parser.add_argument('language', help="Id of the programming language")
+        parser.add_argument('language', help="Key of the programming language")
         parser.add_argument(
                 'structures',
                 nargs='+',
-                help="Id(s) of the structure(s)",
+                help="Key(s) of the structure(s)",
                 choices=structures
                 )
         parser.add_argument('--language-version', required=True)
