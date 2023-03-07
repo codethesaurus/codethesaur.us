@@ -18,13 +18,13 @@ class TestMetaStructures(TestCase):
         self.languages = meta_data["languages"]
 
         self.sample = dict()
-        self.sample["structure_id"] = list(self.structures.keys())[0]
-        self.sample["friendly_name"] = self.structures[self.sample["structure_id"]]
-        self.sample["language_id"] = list(self.languages.keys())[0]
-        self.sample["language_name"] = self.languages[self.sample["language_id"]]
+        self.sample["structure_key"] = list(self.structures.keys())[0]
+        self.sample["structure_name"] = self.structures[self.sample["structure_key"]]
+        self.sample["language_key"] = list(self.languages.keys())[0]
+        self.sample["language_name"] = self.languages[self.sample["language_key"]]
 
         # generate a dummy language
-        language_id = "abcdefg"
+        language_key = "abcdefg"
         language_name = "Alphabet language!"
         concepts = {
             "concept1": {"code": "abc"},
@@ -32,7 +32,7 @@ class TestMetaStructures(TestCase):
             "concept3": {"not-implemented": "true"},
             "concept4": {"code": ["line1", "line2"]}
         }
-        language = Language(language_id, language_name)
+        language = Language(language_key, language_name)
 
         # This is like the manual work of calling language.load_structure()
         language.concepts = concepts
@@ -42,23 +42,23 @@ class TestMetaStructures(TestCase):
         """test MetaInfo creation"""
         self.assertIsNotNone(self.metainfo)
 
-    def test_metainfo_structure_friendly_name(self):
-        """test MetaInfo#friendly_name"""
-        test_key = self.metainfo.structure_friendly_name(
-            self.sample["structure_id"])
+    def test_metainfo_structure_name(self):
+        """test MetaInfo#name"""
+        test_key = self.metainfo.structure_name(
+            self.sample["structure_key"])
 
-        self.assertEqual(test_key, self.sample["friendly_name"])
+        self.assertEqual(test_key, self.sample["structure_name"])
 
     def test_metastructure_init(self):
         """test MetaStructure creation"""
         metastructure = MetaStructure(
-            self.sample["structure_id"], self.sample["friendly_name"])
+            self.sample["structure_key"], self.sample["structure_name"])
 
         self.assertIsNotNone(metastructure.categories)
 
     def test_language_init(self):
         """test Language creation"""
-        language = Language(self.sample["language_id"], self.sample["language_name"])
+        language = Language(self.sample["language_key"], self.sample["language_name"])
 
         self.assertIsNotNone(language)
         self.assertIsNotNone(language.key)
@@ -79,12 +79,12 @@ class TestMetaStructures(TestCase):
 
     # def test_language_has_key_and_lang_exists(self):
     #     """test Language behaviour with good key and existing structure"""
-    #     language = Language(self.sample["language_id"])
+    #     language = Language(self.sample["language_key"])
     #
     #     self.assertEqual(language.has_key(), True)
     #     self.assertEqual(language.lang_exists(), True)
     #
-    #     language.load_structure(self.sample["structure_id"])
+    #     language.load_structure(self.sample["structure_key"])
     #     self.assertEqual(language.has_key(), True)
 
     def test_language_get_concept(self):
