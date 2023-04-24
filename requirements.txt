@@ -20,7 +20,7 @@ pylint==2.9.6
 pyparsing==3.0.6
 pytz==2021.1
 six==1.16.0
-sqlparse==0.4.2
+sqlparse==0.4.4
 toml==0.10.2
 typing-extensions==3.10.0.0
 tzdata==2021.5
