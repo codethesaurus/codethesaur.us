@@ -1,7 +1,8 @@
 {
   "meta": {
-    "structure": "io",
-    "structure_name": "Input and Output"
+    "language": "language_key",
+    "language_version": "version.number",
+    "language_name": "Human-Friendly Language Name"
   },
   "categories": {
     "Console IO": {
