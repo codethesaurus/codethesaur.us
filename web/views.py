@@ -87,20 +87,21 @@ def index(request):
 
     random_langs = random.sample(list(meta_data_langs.values()), k=3)
 
-    thesauruses_dir = f'{BASE_DIR}/web/thesauruses'
-    meta_dir = f'{thesauruses_dir}/_meta'
+    thesauruses_dir = os.path.join(BASE_DIR, 'web', 'thesauruses')
+    meta_dir = os.path.join(thesauruses_dir, '_meta')
     meta_concepts = os.listdir(meta_dir)
     for lang in os.listdir(thesauruses_dir):
         if 'meta' in lang:
             continue
-        for ver in os.listdir(f'{thesauruses_dir}/{lang}'):
+        for ver in os.listdir(os.path.join(thesauruses_dir, lang)):
             for concept_json in meta_concepts:
                 concept_name = concept_json.split('.')[0]
-                if concept_json in os.listdir(f'{thesauruses_dir}/{lang}/{ver}'):
-                    for i in meta_data_langs[lang]:
-                        if i['version'] == ver:
-                            i['availStructs'].append(concept_name)
-                            break
+                if os.path.isdir(os.path.join(thesauruses_dir, lang, ver)):
+                    if concept_json in os.listdir(os.path.join(thesauruses_dir, lang, ver)):
+                        for i in meta_data_langs[lang]:
+                            if i['version'] == ver:
+                                i['availStructs'].append(concept_name)
+                                break
 
     content = {
         'title': 'Welcome',
