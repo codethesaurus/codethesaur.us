@@ -268,7 +268,7 @@ def error_handler_404_not_found(request, exception):
     """
     store_url_info(request)
 
-    logging.error(exception)
+    logging.info(request)
     response = render(request, 'error404.html')
     return HttpResponseNotFound(response)
 
