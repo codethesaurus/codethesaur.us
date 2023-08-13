@@ -1,5 +1,5 @@
 """codethesaur.us views"""
-import json
+import logging
 import random
 import os
 
@@ -228,7 +228,7 @@ def render_concepts(request, languages, structure, all_categories):
     return render(request, 'concepts.html', response)
 
 
-def error_handler_400_bad_request(request, _exception):
+def error_handler_400_bad_request(request, exception):
     """
     Renders the page for a generic client error (HTTP 400)
 
@@ -238,11 +238,12 @@ def error_handler_400_bad_request(request, _exception):
     """
     store_url_info(request)
 
+    logging.error(exception)
     response = render(request, 'error400.html')
     return HttpResponseBadRequest(response)
 
 
-def error_handler_403_forbidden(request, _exception):
+def error_handler_403_forbidden(request, exception):
     """
     Renders the page for a forbidden error (HTTP 403)
 
@@ -252,11 +253,12 @@ def error_handler_403_forbidden(request, _exception):
     """
     store_url_info(request)
 
+    logging.error(exception)
     response = render(request, 'error403.html')
     return HttpResponseForbidden(response)
 
 
-def error_handler_404_not_found(request, _exception):
+def error_handler_404_not_found(request, exception):
     """
     Renders the page for a file not found error (HTTP 404)
 
@@ -266,6 +268,7 @@ def error_handler_404_not_found(request, _exception):
     """
     store_url_info(request)
 
+    logging.info(request)
     response = render(request, 'error404.html')
     return HttpResponseNotFound(response)
 
@@ -279,6 +282,7 @@ def error_handler_500_server_error(request):
     """
     store_url_info(request)
 
+    logging.error(request)
     response = render(request, 'error500.html')
     return HttpResponseServerError(response)
 

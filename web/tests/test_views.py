@@ -26,6 +26,15 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'about.html')
         self.assertTemplateUsed(response, 'base.html')
 
+    def test_invalid_page_gives_404_error(self):
+        url = 'no_real_page'
+        response = self.client.get(url)
+
+        self.assertEqual(response.status_code, 404)
+        self.assertTemplateUsed(response, 'error404.html')
+        self.assertTemplateUsed(response, 'base.html')
+        self.assertTemplateNotUsed(response, 'concepts.html')
+
     def test_compare_concepts_view_both_valid_languages(self):
         """test if compare with 2 valid languages uses the correct templates"""
         url = reverse('index') + \
