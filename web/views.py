@@ -1,5 +1,5 @@
 """codethesaur.us views"""
-import json
+import logging
 import random
 import os
 
@@ -87,20 +87,21 @@ def index(request):
 
     random_langs = random.sample(list(meta_data_langs.values()), k=3)
 
-    thesauruses_dir = f'{BASE_DIR}/web/thesauruses'
-    meta_dir = f'{thesauruses_dir}/_meta'
+    thesauruses_dir = os.path.join(BASE_DIR, 'web', 'thesauruses')
+    meta_dir = os.path.join(thesauruses_dir, '_meta')
     meta_concepts = os.listdir(meta_dir)
     for lang in os.listdir(thesauruses_dir):
         if 'meta' in lang:
             continue
-        for ver in os.listdir(f'{thesauruses_dir}/{lang}'):
+        for ver in os.listdir(os.path.join(thesauruses_dir, lang)):
             for concept_json in meta_concepts:
                 concept_name = concept_json.split('.')[0]
-                if concept_json in os.listdir(f'{thesauruses_dir}/{lang}/{ver}'):
-                    for i in meta_data_langs[lang]:
-                        if i['version'] == ver:
-                            i['availStructs'].append(concept_name)
-                            break
+                if os.path.isdir(os.path.join(thesauruses_dir, lang, ver)):
+                    if concept_json in os.listdir(os.path.join(thesauruses_dir, lang, ver)):
+                        for i in meta_data_langs[lang]:
+                            if i['version'] == ver:
+                                i['availStructs'].append(concept_name)
+                                break
 
     content = {
         'title': 'Welcome',
@@ -227,7 +228,7 @@ def render_concepts(request, languages, structure, all_categories):
     return render(request, 'concepts.html', response)
 
 
-def error_handler_400_bad_request(request, _exception):
+def error_handler_400_bad_request(request, exception):
     """
     Renders the page for a generic client error (HTTP 400)
 
@@ -237,11 +238,12 @@ def error_handler_400_bad_request(request, _exception):
     """
     store_url_info(request)
 
+    logging.error(exception)
     response = render(request, 'error400.html')
     return HttpResponseBadRequest(response)
 
 
-def error_handler_403_forbidden(request, _exception):
+def error_handler_403_forbidden(request, exception):
     """
     Renders the page for a forbidden error (HTTP 403)
 
@@ -251,11 +253,12 @@ def error_handler_403_forbidden(request, _exception):
     """
     store_url_info(request)
 
+    logging.error(exception)
     response = render(request, 'error403.html')
     return HttpResponseForbidden(response)
 
 
-def error_handler_404_not_found(request, _exception):
+def error_handler_404_not_found(request, exception):
     """
     Renders the page for a file not found error (HTTP 404)
 
@@ -265,6 +268,7 @@ def error_handler_404_not_found(request, _exception):
     """
     store_url_info(request)
 
+    logging.info(request)
     response = render(request, 'error404.html')
     return HttpResponseNotFound(response)
 
@@ -278,6 +282,7 @@ def error_handler_500_server_error(request):
     """
     store_url_info(request)
 
+    logging.error(request)
     response = render(request, 'error500.html')
     return HttpResponseServerError(response)
 
