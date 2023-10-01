@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "language": "java",
+    "language_version": "17",
+    "language_name": "Java",
+    "structure": "functions"
+  },
+  "concepts": {
+    "void_function_no_parameters": {
+      "code": "void methodName()\n{\n\t//code\n}",
+      "name": "Method that does not return a value and takes no parameters"
+    },
+    "void_function_with_parameters": {
+      "code": "void methodName(parameterType1 parameterName1, parameterType2 parameterName2)\n{\n\t//code\n}",
+      "name": "Method that does not return a value and that takes 1 or more defined parameters"
+    },
+    "void_function_variable_parameters": {
+      "code": "void methodName(parameterType... parameterName)\n{\n\t//code\n}",
+      "name": "Method that does not return a value and takes a variable number of parameters"
+    },
+    "return_value_function_no_parameters": {
+      "code": "returnValueType methodName()\n{\n\t//code\n\treturn returnValue;\n}",
+      "name": "Method that returns a value and takes no parameters"
+    },
+    "return_value_function_with_parameters": {
+      "code": "returnValueType methodName(parameterType1 parameterName1, parameterType2 parameterName2)\n{\n\t//code\n\treturn returnValue;\n}",
+      "name": "Method that returns a value and takes 1 or more defined parameters"
+    },
+    "return_value_function_variable_parameters": {
+      "name": "Method that returns a value and takes a variable number of parameters",
+      "code": "returnValueType methodName(parameterType... parameterName)\n{\n\t//code\n\treturn returnValue;\n}"
+    },
+    "anonymous_function_no_parameters": {
+      "name": "Anonymous function that takes no parameters",
+      "code": "() -> //single line of code\n\n() ->\n{\n\t//multiple lines of code\n}"
+    },
+    "anonymous_function_with_parameters": {
+      "name": "Anonymous function that takes 1 or more defined parameters",
+      "code": "(parameterName1, parameterName2) ->\n{\n\t//code\n}"
+    },
+    "call_subroutine": {
+      "name": "Call subroutine",
+      "code": "MyClass x = new MyClass();\nx.subRoutine();"
+    },
+    "return_from_subroutine": {
+      "name": "Return from subroutine",
+      "code": "MyClass x = new MyClass();\nsubRoutineReturnType y = x.subRoutine();"
+    }
+  }
+}
