@@ -18,6 +18,10 @@ Check out our [Installation/Running Locally](https://docs.codethesaur.us/install
 
 Check out the [Contributing Guide](https://docs.codethesaur.us/contributing/) to learn more about how you can help add more language data, fix bugs, or add features!
 
+## Is this project available for Hacktoberfest contributions?
+
+Yes! The Code Thesaurus code and documentation projects are both enabled for Hacktoberfest contributions.
+
 ## Code of Conduct
 
 All contributors are required to follow the [Code Thesaurus Code of Conduct](https://docs.codethesaur.us/code_of_conduct/).
