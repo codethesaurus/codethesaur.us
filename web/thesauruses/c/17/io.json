@@ -181,7 +181,7 @@
       },
       "database_functions_lib":{
         "code":"<mysql.h>",
-        "commnet":"using MySQL C API",
+        "comment":"using MySQL C API",
         "name":"Library containing database IO functions"
       }, 
       "open_connection":{
