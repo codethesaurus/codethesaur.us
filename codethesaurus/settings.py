@@ -158,5 +158,17 @@ EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL', '')
 EMAIL_PORT = os.getenv('EMAIL_PORT', '')
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', '')
 
+LOGGING = {
+    "version": 1,  # the dictConfig format version
+    "disable_existing_loggers": False,  # retain the default loggers
+    "handlers": {
+        "mail_admins": {
+            "level": "ERROR",
+            "class": "django.utils.log.AdminEmailHandler",
+            "include_html": True,
+        },
+    }
+}
+
 # Configure Django App for Heroku.
 django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True, logging=True)
