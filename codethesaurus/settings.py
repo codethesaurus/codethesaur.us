@@ -55,7 +55,8 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.BrokenLinkEmailsMiddleware'
 ]
 
 ROOT_URLCONF = 'codethesaurus.urls'
@@ -146,6 +147,16 @@ os.makedirs(STATIC_ROOT, exist_ok=True)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# For server error reporting
+ADMINS = os.getenv('ADMINS', '')
+EMAIL_HOST = os.getenv('EMAIL_HOST', '')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
+SERVER_EMAIL = os.getenv('SERVER_EMAIL', '')
+EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL', '')
+EMAIL_PORT = os.getenv('EMAIL_PORT', '')
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', '')
 
 # Configure Django App for Heroku.
 django_on_heroku.settings(locals(), test_runner=False, databases=False, staticfiles=True, logging=True)
