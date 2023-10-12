@@ -28,6 +28,12 @@
         "Memory Management": {
             "manual_management": "Languages where memory has to be managed by the programmer manually",
             "automatic_management": "Languages with an extensive support of automatic memory management"
+        },
+        "Generation": {
+            "first_generation": "Language consists of binary code directly understood and executed by a computer's central processing unit (CPU) and represent the lowest level of programming abstraction",
+            "second_generation": "Language uses mnemonic codes and symbols to represent machine-level instructions, providing a more human-readable way to program and interact with a computer's hardware.",
+            "third_generation": "High-level programming languages designed for general-purpose software development, offering a higher level of abstraction and greater ease of use compared to low-level languages like assembly.",
+            "fourth_generation": "High-level programming languages designed for specific applications or domains, often using natural language-like syntax and focusing on rapid application development."
         }
     }
 }
