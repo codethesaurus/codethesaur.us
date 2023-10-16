@@ -9,12 +9,10 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
 from pathlib import Path
 import os
 import dj_database_url
 import django_on_heroku
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,7 +31,7 @@ else:
 # redirect all http requests to https in non debugging envs
 SECURE_SSL_REDIRECT = not DEBUG
 
-ALLOWED_HOSTS = [ "*" ]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -149,7 +147,16 @@ STATICFILES_DIRS = [
 ]
 
 # For server error reporting
-ADMINS = os.getenv('ADMINS', '')
+# Admin emails are stored like Name1:email1@test.com,Name2:email2@test.com,...
+# Parse that first then set the rest
+ADMIN_STRING = os.getenv('ADMINS', '')
+ADMIN_SPLIT = ADMIN_STRING.split(",")  # gives us name/value list
+ADMINS = []
+for item in ADMIN_SPLIT:
+    if item == "":
+        break
+    contact = item.split(":")
+    ADMINS.append((contact[0], contact[1]))
 EMAIL_HOST = os.getenv('EMAIL_HOST', '')
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
