@@ -242,6 +242,7 @@ class MetaInfo:
             meta_info_json = json.load(meta_file)
         self.structures = meta_info_json["structures"]
         self.languages = meta_info_json["languages"]
+        
 
     def language_name(self, language_key):
         """
@@ -281,7 +282,7 @@ class MetaInfo:
                 raise MissingStructureError(
                     meta_structure,
                     language_key,
-                    self.language_friendly_name(language_key),
+                    self.language_name(language_key),
                     version,
                 ) from file_not_found
             except KeyError as key_error:
