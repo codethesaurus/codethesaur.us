@@ -205,29 +205,6 @@ class Language:
         :return: the string containing the concept's comment
         """
         return self.concept(concept_key).get("comment", "")
-
-    def is_incomplete(self, version, structure_key):
-        """
-        Returns a Boolean if the version is incomplete
-
-        :param version: the version of the language
-        :param structure_key: the ID for the structure to load
-        :return: Boolean if the version is incomplete
-        """
-
-        template = self.load_filled_concepts(structure_key, version)
-        template = json.loads(template)
-        
-        for concept in template["concepts"].values():
-            code = concept.get("code")
-            not_implemented = concept.get("not-implemented", None)
-            comment = concept.get("comment", None)
-            if isinstance(code, list):
-                code = "".join(code)
-            if isinstance(code, str) and code.strip() == "" and not_implemented is None and comment is None:
-                return True
-
-        return False
                     
 
 
