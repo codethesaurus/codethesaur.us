@@ -194,7 +194,7 @@ def concepts(request):
         category_entry = {
             "key": category_key,
             "concepts": concepts_list,
-            "is_incomplete": [False, False]
+            "is_incomplete": [False for _ in languages],
         }
         for i in range(len(languages)):
             for concept in concepts_list:
