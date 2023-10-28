@@ -8,152 +8,89 @@
   "concepts": {
     "boolean": {
       "name": "Boolean",
-      "code": [
-        ""
-      ],
       "not-implemented": true,
       "comment": "The type boolean has two values, false and true and both nil and false make a condition false."
     },
     "signed_integer_8_bit": {
       "name": "Signed 8-bit integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "unsigned_integer_8_bit": {
       "name": "Unsigned 8-bit integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "signed_integer_16_bit": {
       "name": "Signed 16-bit integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "unsigned_integer_16_bit": {
       "name": "Unsigned 16-bit integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "signed_integer_32_bit": {
       "name": "Signed 32-bit integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "unsigned_integer_32_bit": {
       "name": "Unsigned 32-bit integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "signed_integer_64_bit": {
       "name": "Signed 64-bit integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "unsigned_integer_64_bit": {
       "name": "Unsigned 64-bit integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "signed_integer_as_object": {
       "name": "Signed object-based Integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true,
       "comment":"Lua does not have a built-in concept of distinct signed, object-based integers with the full range of operations and methods that you might find in languages like C++ or Java."
     },
     "unsigned_integer_as_object": {
       "name": "Unsigned object-based Integer",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "signed_float_16_bit": {
       "name": "Signed 16-bit floating point",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "unsigned_float_16_bit": {
       "name": "Unsigned 16-bit floating point",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "signed_float_32_bit": {
       "name": "Signed 32-bit floating point",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "unsigned_float_32_bit": {
       "name": "Unsigned 32-bit floating point",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "signed_float_64_bit": {
       "name": "Signed 64-bit floating point",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "unsigned_float_64_bit": {
       "name": "Unsigned 64-bit floating point",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "signed_float_as_object": {
       "name": "Signed object-based floating point",
-      "code": [
-        ""
-      ],
       "not-implemented": true,
       "comment":"Same as integer applies here too."
     },
     "unsigned_float_as_object": {
       "name": "Unsigned object-based floating point",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "character": {
       "name": "Character",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "string_as_object": {
       "name": "String as an object",
-      "code": [
-        ""
-      ],
       "not-implemented": true,
       "comment":"In Lua, strings are not treated as objects in the same way that some other programming languages, like Python or JavaScript"
     },
@@ -167,25 +104,16 @@
     },
     "complex_as_object": {
       "name": "Complex Number as an object",
-      "code": [
-        ""
-      ],
       "not-implemented": true,
       "comment":"Lua does not have built-in support for complex numbers as a distinct data type like some other languages, such as Python."
 
     },
     "real_number_part": {
       "name": "Complex number real part",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     },
     "imaginary_number_part": {
       "name": "Complex number imaginary part",
-      "code": [
-        ""
-      ],
       "not-implemented": true
     }
   }
