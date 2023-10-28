@@ -76,7 +76,7 @@
       "stack_get_size": "Get size (number of items) on the stack",
       "stack_get_capacity": "Check capacity of stack",
       "stack_export_to_list": "Export a list of all stack items",
-      "stack_clear_all": "Clear all queue items"
+      "stack_clear_all": "Clear all stack items"
     },
     "Iterating": {
       "iterate_pointer_data_type": "Data type of a iterator pointer",

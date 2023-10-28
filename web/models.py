@@ -1,8 +1,10 @@
 """models of codethesaur.us"""
 import json
 import os
+from jsonmerge import merge
 
 from django.db import models
+
 
 # pylint: disable=too-few-public-methods
 class MetaStructure:
@@ -11,19 +13,18 @@ class MetaStructure:
     concepts
     """
 
-    def __init__(self, structure_key, friendly_name):
+    def __init__(self, key, name):
         """
         Inits the MetaStructure object by loading in the concepts and
         categories from a language's structure file
 
-        :param structure_key: key for the structure
-        :param friendly_name: the human-friendly name for the specified
-            structure
+        :param key: key for the structure
+        :param name: the human-friendly name for the specified structure
         """
-        self.key = structure_key
-        self.friendly_name = friendly_name
+        self.key = key
+        self.name = name
         meta_structure_file_path = os.path.join(
-            "web", "thesauruses", "_meta", structure_key) + ".json"
+            "web", "thesauruses", "_meta", f"{key}.json")
         with open(meta_structure_file_path, 'r', encoding='UTF-8') as meta_structure_file:
             meta_structure_file_json = json.load(meta_structure_file)
 
@@ -36,19 +37,22 @@ class Language:
     structure key
     """
 
-    def __init__(self, key, friendly_name):
+    def __init__(self, key, name):
         """
         Initialize the Language object, which will contain concepts for a given
         structure
 
-        :param key: ID of the language in the meta_info.json file
+        :param key: key of the language in the meta_info.json file
+        :param name: the human-friendly name for the specified language
         """
 
         # Add an empty string to convert SafeString to str
         self.key = str(key + "")
-        self.friendly_name = friendly_name
+        self.name = name
         self.concepts = None
+        self.version = None
         self.language_dir = os.path.join("web", "thesauruses", self.key)
+        self.version = None
 
 
     def versions(self):
@@ -80,14 +84,64 @@ class Language:
         """
         Loads the structure file into the Language object
 
-        :param structure_key: the ID for the structure to load
+        :param structure_key: the key for the structure to load
         :param version: the version of the language
         """
-        structure_file_name = f"{structure_key}.json"
-        file_path = os.path.join(self.language_dir, version, structure_file_name)
+        file_path = os.path.join(self.language_dir, version, f"{structure_key}.json")
         with open(file_path, 'r', encoding='UTF-8') as file:
             file_json = json.load(file)
             self.concepts = file_json["concepts"]
+        self.version = version
+
+    def load_filled_concepts(self, structure_key, version):
+        from web.thesaurus_template_generators import generate_language_template
+        """
+        Loads the concepts from the language's structure file
+
+        :param structure_key: the ID for the concept to load
+        :param version: the version of the language
+        :return: a dict containing the code and comment, and possibly the
+            'not-implemented' flag. They are empty code entries if not specified
+        :rtype: object Filled template
+        """
+
+        self.load_concepts(structure_key, version)
+
+        template = generate_language_template(
+            self.key,
+            structure_key,
+            version
+        )
+
+        template = json.loads(template)
+
+        template['concepts'] = merge(template['concepts'], self.concepts)
+
+        response = json.dumps(template, indent=2)
+
+        return response
+
+    def load_comparison(self, structure_key, lang, version_lang, version_self):
+        lang = Language(lang, "")
+        self_filled_concept = self.load_filled_concepts(structure_key, version_self)
+        lang_filled_concept = lang.load_filled_concepts(structure_key, version_lang)
+
+        if self_filled_concept is False or lang_filled_concept is False:
+            return False
+
+        response = json.dumps({
+            "meta": {
+                "language_1": self.key,
+                "language_version_1": version_self,
+                "language_2": lang.key,
+                "language_version_2": version_lang,
+                "structure": structure_key
+            },
+            "concepts1": json.loads(self_filled_concept)['concepts'],
+            "concepts2": json.loads(lang_filled_concept)['concepts']
+        }, indent=2)
+
+        return response
 
 
     def concept(self, concept_key):
@@ -117,7 +171,7 @@ class Language:
         """
         Returns a Boolean if the concept is not known
 
-        :param concept_key: ID for the concept
+        :param concept_key: key for the concept
         :return: Boolean if the concept is not known
         """
         return self.concepts.get(concept_key) is None
@@ -126,7 +180,7 @@ class Language:
         """
         Returns a Boolean if the concept is implemented
 
-        :param concept_key: ID for the concept
+        :param concept_key: key for the concept
         :return: Boolean if the language defines this concept
         """
         return not self.concept(concept_key).get("not-implemented", False)
@@ -135,7 +189,7 @@ class Language:
         """
         Returns the code portion of the provided concept
 
-        :param concept_key: ID for the concept
+        :param concept_key: key for the concept
         :return: the string containing the concept's code
         """
         code = self.concept(concept_key).get("code")
@@ -147,10 +201,30 @@ class Language:
         """
         Returns the comment portion of the provided concept
 
-        :param concept_key: ID for the concept
+        :param concept_key: key for the concept
         :return: the string containing the concept's comment
         """
         return self.concept(concept_key).get("comment", "")
+
+
+class MissingLanguageError(Exception):
+    """Error for when a requested language is not defined in `meta.json`"""
+    def __init__(self, key):
+        super().__init__()
+        self.key = key
+
+
+class MissingStructureError(Exception):
+    """
+    Error that signals that a specific language & version does not have the structure
+    defined
+    """
+    def __init__(self, structure, language_key, language_name, language_version):
+        super().__init__()
+        self.structure = structure
+        self.language_key = language_key
+        self.language_name = language_name
+        self.language_version = language_version
 
 
 class MetaInfo:
@@ -168,12 +242,13 @@ class MetaInfo:
             meta_info_json = json.load(meta_file)
         self.structures = meta_info_json["structures"]
         self.languages = meta_info_json["languages"]
+        
 
-    def language_friendly_name(self, language_key):
+    def language_name(self, language_key):
         """
         Given a structure key (from meta_info.json), returns the language's human-friendly name
 
-        :param language_key: ID of the language located in the meta_info.json file
+        :param language_key: key of the language located in the meta_info.json file
         :return: string with the human-friendly name
         """
         return self.languages[language_key]
@@ -183,22 +258,44 @@ class MetaInfo:
         Given a language key (from meta_info.json), returns the whole
         Language for it
 
-        :param language_key: ID of the language located in the meta_info.json
+        :param language_key: key of the language located in the meta_info.json
             file
         :return: Language for the requested key
         :rtype: Language
         """
         return Language(
             language_key,
-            self.language_friendly_name(language_key),
+            self.language_name(language_key),
         )
 
-    def structure_friendly_name(self, structure_key):
+
+    def load_languages(self, language_keys_versions, meta_structure):
+        """Tries to load all languages from `language_keys` and the requested `structure`"""
+        languages = []
+        for language_key, version in language_keys_versions:
+            try:
+                language = self.language(language_key)
+                version = version or sorted(language.versions())[-1]
+                language.load_concepts(meta_structure.key, version)
+                languages.append(language)
+            except FileNotFoundError as file_not_found:
+                raise MissingStructureError(
+                    meta_structure,
+                    language_key,
+                    self.language_name(language_key),
+                    version,
+                ) from file_not_found
+            except KeyError as key_error:
+                raise MissingLanguageError(language_key) from key_error
+        return languages
+
+
+    def structure_name(self, structure_key):
         """
         Given a structure key (from meta_info.json), returns the structure's
         human-friendly name
 
-        :param structure_key: ID of the structure located in the meta_info.json
+        :param structure_key: key of the structure located in the meta_info.json
             file
         :return: string with the human-friendly name
         :rtype: String
@@ -210,14 +307,14 @@ class MetaInfo:
         Given a structure key (from meta_info.json), returns the whole
         MetaStructure for it
 
-        :param structure_key: ID of the structure located in the meta_info.json
+        :param structure_key: key of the structure located in the meta_info.json
             file
         :return: MetaStructure for the requested key
         :rtype: MetaStructure
         """
         return MetaStructure(
             structure_key,
-            self.structure_friendly_name(structure_key)
+            self.structure_name(structure_key)
         )
 
 class SiteVisit(models.Model):

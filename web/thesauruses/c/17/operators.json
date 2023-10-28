@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "language": "c",
+    "language_version": "17",
+    "language_name": "C",
+    "structure": "operators"
+	},
+  "concepts": {
+    "addition": {
+      "code": "a+b",
+      "name": "Addition operator"
+    },
+    "addition_assignment": {
+      "code": "a+=b",
+      "name": "Addition and assignment operator"
+    },
+    "subtraction": {
+      "code": "a-b",
+      "name": "Subtraction operator"
+    },
+    "subtraction_assignment": {
+      "code": "a-=b",
+      "name": "Subtraction and assignment operator"
+    },
+    "multiplication": {
+      "code": "a*b",
+      "name": "Multiplication operator"
+    },
+    "multiplication_assignment": {
+      "code": "a*=b",
+      "name": "Multiplication and assignment operator"
+    },
+    "division": {
+      "code": "a/b",
+      "name": "Division operator"
+    },
+    "division_assignment": {
+      "code": "a/=b",
+      "name": "Division and assignment operator"
+    },
+    "integer_division": {
+      "not-implemented": "true",
+      "name": "Integer Division operator"
+    },
+    "integer_division_assignment": {
+      "not-implemented": "true",
+      "name": "Integer Division and assignment operator"
+    },
+    "modulus": {
+      "code": "a%b",
+      "name": "Modulus (remainder) operator"
+    },
+    "modulus_assignment": {
+      "code": "a%=b",
+      "name": "Modulus and assignment operator"
+    },
+    "unary_plus": {
+      "code" : "+a",
+      "name" : "Unary plus operator"
+  },
+    "unary_minus": {
+      "code" : "-a",
+      "name" : "Unary minus operator"
+  },
+    "increment": {
+      "code": "++a",
+      "name": "Increment (add 1) operator"
+    },
+    "decrement": {
+      "code": "--a",
+      "name": "Decrement (subtract 1) operator"
+    },
+    "exponential": {
+      "code":"pow(base,power)",
+      "comment": "not a operator but a function available in <math.h> header file", 
+      "name": "Exponential operator"
+    },
+    "factorial": {
+      "not-implemented": "true",
+      "name": "Factorial operator"
+    },
+    "absolute_value": {
+      "code":"abs(number)",
+      "comment":"not a operator but a function available in <stdlib.h> header file ", 
+      "name": "Absolute value operator"
+    },
+    "percentage": {
+      "not-implemented": "true",
+      "name": "Percentage operator"
+    },
+    "equal_to": {
+      "code": "a==b",
+      "name": "Equality operator"
+    },
+    "not_equal_to": {
+      "code": "a!=b",
+      "name": "Not equal to operator"
+    },
+    "less_than": {
+      "code": "a<b",
+      "name": "Less than operator"
+    },
+    "less_than_or_equal_to": {
+      "code": "a<=b",
+      "name": "Less than or equal to operator"
+    },
+    "greater_than": {
+      "code": "a>b",
+      "name": "Greater than operator"
+    },
+    "greater_than_or_equal_to": {
+      "code": "a>=b",
+      "name": "Greater than or equal to operator"
+    },
+    "null_coalescing": {
+      "not-implemented": "true",
+      "name": "Null coalescing operator"
+    },
+    "is": {
+      "not-implemented": "true",
+      "name": "Is operator"
+    },
+    "is_not": {
+      "not-implemented": "true",
+      "name": "Is not operator"
+    },
+    "logical_and": {
+      "code" : "(a==1)&&(b==1)",
+      "name" : "Logical AND Operator"
+  },
+    "logical_or": {
+      "code" : "(a==1)||(b==1)",
+      "name" : "Logical OR Operator"
+  },
+  "logical_not": {
+      "code" : "if(!a)",
+      "name" : "Logical NOT Operator"
+  },
+"bitwise_and": {
+      "code" : "a&b",
+      "name" : "Bitwise AND operator"
+  },
+ "bitwise_and_assignment" : {
+      "code" : "a &= b",
+      "name" : "Bitwise AND and assignment operator"
+  },
+"bitwise_or": {
+      "code" : "a|b",
+      "name" : "Bitwise OR operator"
+  },
+"bitwise_or_assignment": {
+      "code" : "a|=b",
+      "name" : "Bitwise OR and assignment operator"
+  },
+ "bitwise_not": {
+      "code" : "~a",
+      "name" : "Bitwise NOT operator"
+  },
+ "not_assignment": {
+        "not-implemented": "true",
+	"name" : "Bitwise NOT and assignment operator"
+ },
+"bitwise_xor": {
+      "code" : "a^b",
+      "name" : "Bitwise XOR operator"
+  },
+"bitwise_xor_assignment": {
+      "code" : "a^=b",
+      "name" : "Bitwise XOR and assignment operator"
+  },
+ "bitwise_xnor": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR operator"
+  },
+ "bitwise_xnor_assignment": {
+      "not-implemented": "true",
+      "name" : "Bitwise XNOR and assignment operator"
+  },
+    "left_shift": {
+      "code": "a<<1",
+      "name": "Left shift bitwise operator"
+    },
+    "left_shift_assignment": {
+      "code": "a<<=1",
+      "name": "Left shift assignment operator"
+    },
+    "right_shift": {
+      "code": "a>>1",
+      "name": "Right shift bitwise operator"
+    },
+    "right_shift_assignment": {
+      "code": "a>>=1",
+      "name": "Right shift assignment operator"
+    },
+    "ternary": {
+      "code": "(a>b)? printf(\"true\") : printf(\"false\")",
+      "name": "Ternary operator"
+    },
+    "null_forgiving": {
+      "not-implemented": "true",
+      "name": "Null forgiving operator"
+    }
+  }
+}

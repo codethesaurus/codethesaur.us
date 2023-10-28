@@ -1,0 +1,281 @@
+{
+    "meta": {
+        "language": "c",
+        "language_version": "17",
+        "language_name": "C",
+        "structure": "io"
+    },
+    "concepts": {
+        "write_line": {
+            "code": "printf(\"Format Specifier\", var1, var2, …., varn);",
+            "name": "Write a line to the console"
+        },
+        "write_line_with_new_line" : {
+            "code": "printf(\"Format Specifier\", var1, var2, …., varn);",
+            "name": "Write a line to the console with a return character"  
+        },
+        "read_line": {
+        "code": "scanf(\"Format Specifier\", &var1, &var2, …., &varn);",
+        "comment": "'&' is used to send memory address of variable(pass by reference) since changes to variable is being made(i.e. storing values) but not in printf since it is only accessing those values not changing it",
+        "name": "Read a line of user input from the console"
+        },
+        "read_char": {
+            "code": "getchar()",
+            "name": "Read a single char of user input from the console"
+            },
+       "clear_console_cutput": {
+            "not-implemented":"true",
+            "comment": "system() is defined in stdlib.h which invokes a system call",
+            "name": "Clear the console output"
+        },
+        "change_console_background_color":{
+            "not-implemented":"true",
+            "name":"change the background color of the console"
+        },
+        "change_console_text_color":{
+            "not-implemented":"true",
+            "name":"change the text color of the console"
+        },
+        "file_functions_lib": {
+            "code":"<stdio.h>",
+            "name":"Library containing file IO functions"
+        },
+        "list_directory":{
+            "not-implemented":"true",
+            "name":"list of the items in the current directory"
+        },
+        "read_directory_info":{
+            "not-implemented":"true",
+            "name":"Get information about the current directory (number of items, size, etc)"
+        },
+        "create_directory":{
+            "not-implemented":"true",
+            "name":"create a directory"
+        },
+        "delete_directory":{
+            "not-implemented":"true",
+            "name":"delete a directory"
+        },
+        "rename_directory":{
+            "not-implemented":"true",
+            "name":"rename a directory"
+        },
+        "move_directory":{
+            "not-implemented":"true",
+            "name":"move a directory to another location"
+        },
+        "update_directory_permissions":{
+            "not-implemented":"true",
+            "name":"Update the permissions a user, group, or application has to a directory"
+        },
+      "read_line_of_file": {
+        "code":"size_t fread( void *buffer, size_t size, size_t count,FILE *stream );",
+        "comment": "visit https://en.cppreference.com/w/c/io for more",
+        "name":"Read a single line from a file"
+      },
+      "read_lines_of_file":{
+        "code":"size_t fread( void *buffer, size_t size, size_t count,FILE *stream );",
+        "name":"Read all the lines in a file"
+    },
+      "read_file_stream":{
+        "code":"FILE *fp;",
+        "name":"Read the file into a stream"
+      }, 
+        "create_file": {
+            "code": "FILE *fopen( const char * filename, const char * mode );",
+            "name": "Create a file"
+        },
+        "delete_file": {
+            "code": "int remove( const char * filename );",
+            "comment": "returns 0 if file is deleted",
+            "name": "Delete a file"
+        },
+        "update_file": {
+            "code": "FILE *fopen( const char * filename, const char * mode );",
+            "comment": "different file modes are available",
+            "name": "Update a file"
+        },
+        "move_file":{
+            "not-implemented":"true",
+            "name":"move file to a new location"
+        },
+      "network_functions_lib":{
+        "not-implemented":"true",
+        "name":"Library containing network IO functions"
+      },
+      "send_a_http_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP request"
+      }, 
+      "send_a_get_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP GET request"
+      }, 
+      "send_a_post_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP POST request"
+      }, 
+      "send_a_put_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP PUT request"
+      }, 
+      "send_a_patch_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP PATCH request"
+      }, 
+      "send_a_delete_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP DELETE request"
+      }, 
+      "send_a_head_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP HEAD request"
+      }, 
+      "send_a_options_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP OPTIONS request"
+      }, 
+      "send_a_connect_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP CONNECT request"
+      }, 
+      "send_a_trace_request":{
+        "not-implemented":"true",
+        "name":"Send a HTTP TRACE request"
+      }, 
+      "add_headers":{
+        "not-implemented":"true",
+        "name":"Add headers to a HTTP request"
+      }, 
+      "add_query_params":{
+        "not-implemented":"true",
+        "name":"Add query parameters to a HTTP request"
+      }, 
+      "inbuilt_url_class":{
+        "not-implemented":"true",
+        "name":"The inbuilt URL class"
+      }, 
+      "open_a_socket":{
+        "code":" int socket(int namespace, int style, int protocol)",
+        "name":"Open a network socket"
+      }, 
+      "close_a_socket":{
+        "code":"int shutdown(int socket, int how)",
+        "name":"Close a network socket"
+      }, 
+      "add_authorization_headers":{
+        "not-implemented":"true",
+        "name":"Add an authorization header"
+      }, 
+      "add_cookies":{
+        "not-implemented":"true",
+        "name":"Add cookies to a HTTP request"
+      }, 
+      "read_cookies":{
+        "not-implemented":"true",
+        "name":"Read cookies from a HTTP response"
+      }, 
+      "read_headers":{
+        "not-implemented":"true",
+        "name":"Read headers from a HTTP response"
+      },
+      "database_functions_lib":{
+        "code":"<mysql.h>",
+        "comment":"using MySQL C API",
+        "name":"Library containing database IO functions"
+      }, 
+      "open_connection":{
+        "code":[
+          "MYSQL *con = mysql_init(NULL);",
+          "// allocates or initialises a MYSQL object suitable for mysql_real_connect()",
+          "mysql_real_connect(con,\"localhost\",\"root\",\"root_passwd\",NULL,0,NULL,0);",
+          "//mysql_real_connect(connection_handler, host_name, username, password, database_name, port_number, unix_socket,client_flag)"
+        ],
+        "name":"Open a database connection"
+      }, 
+      "close_connection":{
+        "code":"mysql_close(con);",
+        "name":"Close a database connection"
+      }, 
+      "execute_query_single_result_set":{
+        "code":[
+          "mysql_query(con,\"SELECT * FROM cars\")",
+          "MYSQL_RES *result = mysql_store_result(con);",
+          "MYSQL_ROW row = mysql_fetch_row(result);"
+        ],
+        "name":"Execute a query returning a single result set"
+      }, 
+      "execute_query_multiple_result_sets":{
+        "not-implemented":"true",
+        "name":"Execute a query returning a multiple result sets"
+      }, 
+      "execute_non_query":{
+        "code":"mysql_query(con,\"UPDATE Customers SET ContactName = 'Alfred Schmidt', City = 'Frankfurt' WHERE CustomerID = 1;\")",
+        "name":"Execute a non query (update, delete)" 
+      },
+      "json_function_lib":{
+        "not-implemented":"true",
+        "name":"Library containing JSON functions"
+      },
+      "serialize_json":{
+        "not-implemented":"true",
+        "name":"Serialize an object to JSON"
+      },
+      "deserialize_json":{
+        "not-implemented":"true",
+        "name":"Deserialize a string from JSON"
+      },
+      "serialize_json_with_options":{
+        "not-implemented":"true",
+        "name":"Serialize an object to JSON with options"
+      },
+      "deserialize_json_with_options":{
+        "not-implemented":"true",
+        "name":"Deserialize a string from JSON with options" 
+      },
+      "xml_function_lib":{
+        "not-implemented":"true",
+        "name":"Library containing XML functions"
+      },
+      "serialize_xml":{
+        "not-implemented":"true",
+        "name":"Serialize an object to XML"
+      },
+      "deserialize_xml":{
+        "not-implemented":"true",
+        "name":"Deserialize a string from XML"
+      },
+      "serialize_xml_with_options":{
+        "not-implemented":"true",
+        "name":"Serialize an object to XML with options"
+      },
+      "deserialize_xml_with_options":{
+        "not-implemented":"true",
+        "name":"Deserialize a string from XML with options"
+      },
+      "csv_function_lib":{
+        "not-implemented":"true",
+        "name":"Library containing CSV functions"
+      },
+      "read_csv_file":{
+        "not-implemented":"true",
+        "name":"Reading a CSV file"
+      },
+      "read_csv_to_type":{
+        "not-implemented":"true",
+        "name":"Reading a CSV file to a typed array"
+      },
+      "write_csv_file":{
+        "not-implemented":"true",
+        "name":"Write a new CSV file"
+      },
+      "append_csv_file":{
+        "not-implemented":"true",
+        "name":"Append to end of CSV file"
+      },
+      "set_csv_delimiter":{
+        "not-implemented":"true",
+        "name":"Set the CSV delitmiter to use when reading/writing"
+      }
+    }
+}

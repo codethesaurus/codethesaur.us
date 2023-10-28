@@ -1,0 +1,433 @@
+{
+  "meta": {
+    "language": "vbnet",
+    "language_version": "16.0",
+    "language_name": "Visual Basic",
+    "structure": "lists"
+  },
+  "concepts": {
+    "name_of_ordered_mutable_list": {
+      "code": "List(Of T)",
+      "name": "What is a unordered mutable list called?"
+    },
+    "create_a_ordered_mutable_list": {
+      "code": "Dim List(Of T) listName = new List(Of T)",
+      "name": "unordered"
+    },
+    "ordered_mutable_list_start_number": {
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "ordered_mutable_list_can_be_appended": {
+      "code": "Yes",
+      "name": "Can you append to it?"
+    },
+    "ordered_mutable_list_can_be_inserted_in_middle": {
+      "code": "Yes",
+      "name": "Can you insert into the middle of it?"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "code": "listName(index)",
+      "name": "Access element by index"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "code": "listName.Prepend(value)",
+      "name": "Insert element at beginning"
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "code": "listName.Add(value)",
+      "name": "Insert element at end"
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "code": "listName.Insert(index, value)",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": "listName.RemoveAt(0)",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": "listName.RemoveAt(listName.Count - 1)",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "code": "listName.RemoveAt(index)",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Swap two elements"
+    },
+    "delete_ordered_mutable_list": {
+      "code": "listName.Clear()",
+      "name": "Delete the list"
+    },
+    "name_of_sorted_mutable_list": {
+      "code": "SortedList",
+      "name": "What is a ordered mutable list called?"
+    },
+    "create_a_sorted_mutable_list": {
+      "code": "Dim sortedListName As New SortedList",
+      "name": "Create the list"
+    },
+    "sorted_mutable_list_start_number": {
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "sorted_mutable_list_can_be_appended": {
+      "code": "Yes",
+      "name": "Can you append to it?"
+    },
+    "sorted_mutable_list_can_be_inserted_in_middle": {
+      "code": "No",
+      "name": "Can you insert into the middle of it?"
+    },
+    "access_element_in_sorted_mutable_list": {
+      "code": "sortedListName.GetByIndex(index)",
+      "name": "Access element by index"
+    },
+    "insert_into_beginning_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element at beginning"
+    },
+    "insert_into_end_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element at end"
+    },
+    "insert_into_middle_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_sorted_mutable_list": {
+      "code": "sortedListName.RemoveAt(0)",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_sorted_mutable_list": {
+      "code": "sortedListName.RemoveAt(sortedList.Count - 1)",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_sorted_mutable_list": {
+      "code": "sortedListName.RemoveAt(index)",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Swap two elements"
+    },
+    "delete_sorted_mutable_list": {
+      "code": "sortedListName.Clear()",
+      "name": "Delete the list"
+    },
+    "name_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "What is a unordered mutable list called?"
+    },
+    "create_a_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "unordered"
+    },
+    "unordered_mutable_list_start_number": {
+      "not-implemented": "true",
+      "name": "What number does it start at?"
+    },
+    "unordered_mutable_list_can_be_appended": {
+      "not-implemented": "true",
+      "name": "Can you append to it?"
+    },
+    "unordered_mutable_list_can_be_inserted_in_middle": {
+      "not-implemented": "true",
+      "name": "Can you insert into the middle of it?"
+    },
+    "access_element_in_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Access element by index"
+    },
+    "insert_into_beginning_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element at beginning"
+    },
+    "insert_into_end_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element at end"
+    },
+    "insert_into_middle_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Swap two elements"
+    },
+    "delete_unordered_mutable_list": {
+      "not-implemented": "true",
+      "name": "Delete the list"
+    },
+    "name_of_ordered_immutable_list": {
+      "code": "ImmutableList(Of T)",
+      "name": "What is a ordered immutable list called?"
+    },
+    "create_a_ordered_immutable_list": {
+      "code": "Dim immutableListName as ImmutableList(Of T) = ImmutableList.Create(Of T)",
+      "name": "Create the list"
+    },
+    "ordered_immutable_list_start_number": {
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "code": "immutableListName.Item(index)",
+      "name": "Access element by index"
+    },
+    "delete_ordered_immutable_list": {
+      "code": "immutableListName.Clear()",
+      "name": "Delete the list"
+    },
+    "name_of_unordered_immutable_list": {
+      "not-implemented": "true",
+      "name": "What is a unordered immutable list called?"
+    },
+    "name_of_sorted_immutable_list": {
+      "code": "ImmutableSortedSet(Of T)",
+      "name": "What is a sorted immutable list called?"
+    },
+    "create_a_sorted_immutable_list": {
+      "code": "Dim immutableSortedSetName As ImmutableSortedSet(Of Integer) = ImmutableSortedSet.Create(Of Integer)",
+      "name": "Create the list"
+    },
+    "sorted_immutable_list_start_number": {
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_sorted_immutable_list": {
+      "code": "immutableSortedSetName.Item(0)",
+      "name": "Access element by index"
+    },
+    "delete_sorted_immutable_list": {
+      "code": "immutableSortedSetName.Clear()",
+      "name": "Delete the list"
+    },
+    "create_a_unordered_immutable_list": {
+      "not-implemented": "true",
+      "name": "Create the list"
+    },
+    "unordered_immutable_list_start_number": {
+      "not-implemented": "true",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "not-implemented": "true",
+      "name": "Access element by index"
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": "true",
+      "name": "Delete the list"
+    },
+    "name_of_mutable_hashed_list": {
+      "code": "HashSet(Of T)",
+      "name": "What is a mutable hashed list called?"
+    },
+    "create_a_mutable_hashed_list": {
+      "code": "Dim hashSetName as New HashSet(Of T)",
+      "name": "Create the list"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "code": "hashSetName.Add(value)",
+      "name": "Insert an element"
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "code": "hashSetName.Remove(value)",
+      "name": "Erase an element from the list"
+    },
+    "delete_mutable_hashed_list": {
+      "code": "hashSetName.Clear()",
+      "name": "Delete the list"
+    },
+    "name_of_immutable_hashed_list": {
+      "code": "ImmutableHashSet(Of T)",
+      "name": "What is an immutable hashed list called?"
+    },
+    "create_a_immutable_hashed_list": {
+      "code": "Dim immutableHashSetName as ImmutableHashSet(Of T) = ImmutableHashSet.Create(Of T)",
+      "name": "Create the list"
+    },
+    "insert_element_to_immutable_hashed_list": {
+      "code": "immutableHashSetName.Add(value)",
+      "name": "Insert an element"
+    },
+    "erase_element_from_immutable_hashed_list": {
+      "code": "immutableHashSetName.Remove(value)",
+      "name": "Erase an element from the list"
+    },
+    "delete_immutable_hashed_list": {
+      "code": "immutableHashSetName.Clear()",
+      "name": "Delete the list"
+    },
+    "create_a_mutable_set": {
+      "code": "Dim dictionaryName as New Dictionary(Of TKey, TValue)",
+      "name": "Create a mutable key/value set"
+    },
+    "get_key_from_mutable_set": {
+      "code": "dictionaryName.Keys(index)",
+      "name": "Get key"
+    },
+    "get_value_from_mutable_set": {
+      "code": "dictionaryName(key)",
+      "name": "Get value"
+    },
+    "get_all_keys_from_mutable_set": {
+      "code": "dictionaryName.Keys",
+      "name": "Get all keys"
+    },
+    "get_all_values_from_mutable_set": {
+      "code": "dictionaryName.Values",
+      "name": "Get all values"
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "not-implemented": "true",
+      "name": "Swap a key and value"
+    },
+    "delete_mutable_set": {
+      "code": "dictionaryName.Clear()",
+      "name": "Delete the set"
+    },
+    "create_a_immutable_set": {
+      "code": "Dim immutableDictionaryName as ImmutableDictionary(Of TKey, TValue) = ImmutableDictionary.Create(Of Tkey, TValue)",
+      "name": "Create an immutable key/value set"
+    },
+    "get_key_from_immutable_set": {
+      "code": "immutableDictionaryName.Keys(index)",
+      "name": "Get key"
+    },
+    "get_value_from_immutable_set": {
+      "code": "immutableDictionaryName(key)",
+      "name": "Get value"
+    },
+    "get_all_keys_from_immutable_set": {
+      "code": "immutableDictionaryName.Keys",
+      "name": "Get all keys"
+    },
+    "get_all_values_from_immutable_set": {
+      "code": "immutableDictionaryName.Values",
+      "name": "Get all values"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "not-implemented": "true",
+      "name": "Swap a key and value"
+    },
+    "delete_immutable_set": {
+      "code": "immutableDictionaryName.Clear()",
+      "name": "Delete the set"
+    },
+    "find_element_at_position": {
+      "code": "listName[index]"
+    },
+    "find_element_by_value": {
+      "code": "listName.Find(Function(x) x == value)",
+      "name": "Find/search for an element by value"
+    },
+    "find_minimum_element": {
+      "code": "listName.Min()",
+      "name": "Find the minimum value in a list"
+    },
+    "find_maximum_element": {
+      "code": "listName.Max()",
+      "name": "Find the maximum value in a list"
+    },
+    "convert_list_to_string": {
+      "code": "string.Join(\", \",listName)",
+      "name": "Convert a list to a string"
+    },
+    "concatenate_two_lists": {
+      "code": "listName.Concat(secondListName)",
+      "name": "Concatenate two lists together"
+    },
+    "split_list_at_index": {
+      "code": [
+        "listName.Take(index)",
+        "listName.Skip(index)"
+      ],
+      "name": "Split lists at an index",
+      "comment": "The first statement returns the first part of the list and the second one returns the second part of the list."
+    },
+    "split_list_at_value": {
+      "code": [
+        "listName.Take(listName.IndexOf(value))",
+        "listName.Skip(listName.IndexOf(value))"
+      ],
+      "name": "Split list at a value",
+      "comment": "The first statement returns the list up to the value and the second one returns the list from the value."
+    },
+    "duplicate_a_list": {
+      "code": "Dim newList As New List(Of T)(listName)",
+      "name": "Duplicate a list"
+    },
+    "duplicate_subset_of_list": {
+      "code": "listName.GetRange(startIndex, numberOfElements)",
+      "name": "Duplicate a portion/subset of a list"
+    },
+    "get_list_length": {
+      "code": "listName.Count()",
+      "name": "Get list length"
+    },
+    "resize_list": {
+      "not-implemented": true,
+      "name": "Increase/decrease list size"
+    },
+    "do_two_lists_match_exactly": {
+      "code": "listName.SequenceEqual(secondListName)",
+      "name": "Do two lists match every element?"
+    },
+    "do_two_lists_contain_same_items": {
+      "code": "New HashSet(Of T)(listName).SetEquals(secondListName)",
+      "name": "Do two lists contain all the same items?"
+    },
+    "does_list_satisfy_some_expression": {
+      "code": "listName.Any(Function(item) expression)",
+      "name": "Does a list satisfy some expression?"
+    },
+    "does_list_not_satisfy_an_expression": {
+      "code": "listName.All(Function(item) Not expression)",
+      "name": "Does a list entirely not satisfy an expression?"
+    },
+    "sort_list": {
+      "code": "listName.Sort()",
+      "name": "Sort a list"
+    },
+    "shuffle_list": {
+      "not-implemented": true,
+      "name": "Shuffle list elements"
+    },
+    "reverse_list": {
+      "code": "listName.Reverse()",
+      "name": "Reverse order of list elements"
+    },
+    "map": {
+      "code": "listName.Select(Function(item) expression)",
+      "name": "Map function across list"
+    },
+    "filter": {
+      "code": "listName.Where(Function(item) expression)",
+      "name": "Filter a list based on criteria"
+    },
+    "reduce_left": {
+      "code": "listName.Aggregate(Function(startValue, item) expression)",
+      "name": "Reduce a list left-to-right"
+    },
+    "reduce_right": {
+      "code": "listName.AsEnumerable().Reverse().ToList().Aggregate(Function(startValue, item) expression)",
+      "name": "Reduce a list right-to-left"
+    }
+  }
+}
