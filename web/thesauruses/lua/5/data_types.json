@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "language": "lua",
+    "language_name": "Lua",
+    "structure": "data_types",
+    "language_version": "5.1"
+  },
+  "concepts": {
+    "boolean": {
+      "name": "Boolean",
+      "not-implemented": true,
+      "comment": "The type boolean has two values, false and true and both nil and false make a condition false."
+    },
+    "signed_integer_16_bit": {
+      "name": "Signed 16-bit integer",
+      "not-implemented": true
+    },
+    "signed_integer_32_bit": {
+      "name": "Signed 32-bit integer",
+      "not-implemented": true
+    },
+    "signed_integer_64_bit": {
+      "name": "Signed 64-bit integer",
+      "not-implemented": true
+    },
+    "signed_integer_as_object": {
+      "name": "Signed object-based Integer",
+      "not-implemented": true,
+      "comment":"Lua does not have a built-in concept of distinct signed, object-based integers with the full range of operations and methods that you might find in languages like C++ or Java."
+
+    },
+    "signed_float_16_bit": {
+      "name": "Signed 16-bit floating point",
+      "not-implemented": true
+    },
+    "signed_float_32_bit": {
+      "name": "Signed 32-bit floating point",
+      "not-implemented": true
+    },
+    "signed_float_64_bit": {
+      "name": "Signed 64-bit floating point",
+      "not-implemented": true
+    },
+    "signed_float_as_object": {
+      "name": "Signed object-based floating point",
+      "not-implemented": true,
+      "comment":"Same as integer applies here too."
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "not-implemented": true,
+      "comment":"In Lua, strings are typically treated as sequences of characters and do not have built-in support for being 'signed' or 'object-based' in the same way that numbers do not."
+    },
+    "string_as_array": {
+      "name": "String as an array of characters",
+      "not-implemented": true
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "not-implemented": true,
+      "comment":"In Lua, you can work with complex numbers by implementing your own data structure using tables or userdata, and define the necessary operations and methods for working with them."
+    },
+    "real_number_part": {
+      "name": "Complex number real part",
+      "not-implemented": true
+    },
+    "imaginary_number_part": {
+      "name": "Complex number imaginary part",
+      "not-implemented": true
+    }
+  }
+}
