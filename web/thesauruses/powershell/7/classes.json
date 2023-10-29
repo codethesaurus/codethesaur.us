@@ -122,9 +122,7 @@
     },
     "calling_superclass_functions": {
       "name": "Calling a superclass function",
-      "code": [
-        ""
-      ]
+      "not-implemented": true
     },
     "overriding_superclass_functions": {
       "name": "Overriding a superclass function",
