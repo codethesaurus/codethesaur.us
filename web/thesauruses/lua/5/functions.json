@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "language": "lua",
+    "language_name": "Lua",
+    "structure": "functions",
+    "language_version": "5.1"
+  },
+  "concepts": {
+    "void_function_no_parameters": {
+      "name": "Function that does not return a value and takes no parameters",
+      "code": [
+        "function greet()\n\tprint(\"Hello, world!\")\nend\n\n-- Calling the function\ngreet()"
+      ]
+    },
+    "void_function_with_parameters": {
+      "name": "Function that does not return a value and that takes 1 or more defined parameters",
+      "code": [
+        "function addNumbers(a, b)\n\tlocal sum = a + b\n\treturn sum\nend\n\n-- Calling the function and storing the result in a variable\nlocal result = addNumbers(5, 3)\nprint(\"The sum is: \" .. result)"
+      ]
+    },
+    "void_function_with_keyword_parameters": {
+      "name": "Function that does not return a value and that takes 0 or more defined keyword parameters",
+      "code": [
+        "function myFunction(params)\n\tlocal param1 = params.param1 or \"default_value1\"\n\tlocal param2 = params.param2 or \"default_value2\"\n\tlocal param3 = params.param3 or \"default_value3\"\n\t-- Your code here, using param1, param2, param3\n\tprint(\"param1: \" .. param1)\n\tprint(\"param2: \" .. param2)\n\tprint(\"param3: \" .. param3)\nend\n\n-- Calling the function with keyword parameters\nmyFunction{\n\tparam1 = \"value1\",\n\tparam2 = \"value2\",\n}\nmyFunction{\n\tparam2 = \"value2\",\n\tparam3 = \"value3\",\n}\n\n-- OutPut:\nparam1: value1\nparam2: value2\nparam3: default_value3\nparam1: default_value1\nparam2: value2\nparam3: value3"
+      ],
+      "comment":"Lua doesn't have built-in support for named or keyword parameters like some other programming languages do, such as Python. However, you can emulate keyword parameters using a table (Lua's equivalent to dictionaries or maps) and passing named values within that table as above."
+
+    },
+    "void_function_variable_parameters": {
+      "name": "Function that does not return a value and function that takes an unknown number of parameters",
+      "code": [
+        "function myFunction(...)\n\tlocal params = {...}\n\tfor i, v in ipairs(params) do\n\t\tprint(\"Parameter \" .. i .. \": \" .. v)\n\tend\nend\n\n-- Calling the function with different numbers of parameters\nmyFunction(1, 2, 3)\nmyFunction(\"apple\", \"banana\")\nmyFunction(\"cat\")\n\n--OutPut:\nParameter 1: 1\nParameter 2: 2\nParameter 3: 3\nParameter 1: apple\nParameter 2: banana\nParameter 1: cat"
+      ]
+    },
+    "return_value_function_no_parameters": {
+      "name": "Function that returns a value and takes no parameters",
+      "code": [
+        "function generateRandomNumber()\n\treturn math.random(1, 100)\nend\n\n-- Calling the function and storing the result in a variable\nlocal randomValue = generateRandomNumber()\nprint(\"Random number: \" .. randomValue)"
+      ]
+    },
+    "return_value_function_with_parameters": {
+      "name": "Function that returns a value and takes 1 or more defined parameters",
+      "code": [
+        "function addNumbers(a, b)\nlocal sum = a + b\nreturn sum\nend\n\n-- Calling the function and storing the result in a variable\nlocal result = addNumbers(5, 3)\nprint(\"The sum is: \" .. result)\n\n-- OutPut:\nThe sum is: 8"
+      ]
+    },
+    "return_value_function_with_keyword_parameters": {
+      "name": "Function that returns a value and takes 0 or more defined keyword parameters",
+      "code": [
+        "function myFunction(params)\n\t-- Access parameters using named fields\n\tlocal param1 = params.param1 or \"default_value1\"\n\tlocal param2 = params.param2 or \"default_value2\"\n\tlocal param3 = params.param3 or \"default_value3\"\n\n\t-- Perform some operations\n\tlocal result = param1 .. \", \" .. param2 .. \", \" .. param3\n\n\t-- Return the result\n\treturn result\nend\n\n-- Calling the function with a table containing named parameters\nlocal output1 = myFunction{\n\tparam1 = \"value1\",\n\tparam2 = \"value2\",}\n\nlocal output2 = myFunction{\n\tparam2 = \"value2\",\n\tparam3 = \"value3\",}\n\nprint(\"Output 1: \" .. output1)\nprint(\"Output 2: \" .. output2)\n\n--OutPut:\nOutput 1: value1, value2, default_value3\nOutput 2: default_value1, value2, value3"
+      ],
+      "comment":"In Lua, you can't use keyword parameters as you would in some other programming languages like Python. However, you can achieve a similar effect by passing a table with named fields as a single parameter to the function as above."
+    },
+    "return_value_function_variable_parameters": {
+      "name": "Function that returns a value and takes an unknown number of parameters",
+      "code": [
+        "function sum(...)\n\tlocal result = 0\n\n\tfor i, v in ipairs({...}) do\n\t\tresult = result + v\n\tend\n\n\treturn result\nend\n\n-- Calling the function with different numbers of parameters\nlocal result1 = sum(1, 2, 3)\nlocal result2 = sum(5, 10, 15, 20)\n\nprint(\"Result 1: \" .. result1)\nprint(\"Result 2: \" .. result2)\n\n--OutPut\nResult 1: 6\nResult 2: 50"
+      ]
+    },
+    "anonymous_function_no_parameters": {
+      "name": "Anonymous function that takes no parameters",
+      "code": [
+        "local myFunction = function()\n\tprint(\"Anonymous function with no parameters\")\nend\n\nmyFunction()\n--OutPut\n\nAnonymous function with no parameters"
+      ]
+    },
+    "anonymous_function_with_parameters": {
+      "name": "Anonymous function that takes 1 or more defined parameters",
+      "code": [
+        "local add = function(a, b)\n\treturn a + b\nend\n\nlocal result = add(5, 3)\nprint(\"The sum is: \" .. result)\n--OutPut:\nThe sum is: 8"
+      ]
+    },
+    "anonymous_function_with_keyword_parameters": {
+      "name": "Anonymous function that takes 0 or more defined keyword parameters",
+      "code": [
+        "local myFunction = function(params)\n\tlocal param1 = params.param1 or 'default_value1'\n\tlocal param2 = params.param2 or 'default_value2'\n\tlocal param3 = params.param3 or 'default_value3'\n\n\t-- Your code here, using param1, param2, param3\n\tprint('param1: ' .. param1)\n\tprint('param2: ' .. param2)\n\tprint('param3: ' .. param3)\nend\n\n-- Call the anonymous function with keyword parameters\nmyFunction{\n\tparam1 = 'value1',\n\tparam2 = 'value2',\n}\n\nmyFunction{\n\tparam2 = 'value2',\n\tparam3 = 'value3',\n}\n--OutPut\n\nparam1: value1\nparam2: value2\nparam3: default_value3\nparam1: default_value1\nparam2: value2\nparam3: value3"
+      ]
+    },
+    "anonymous_function_variable_parameters": {
+      "name": "Anonymous function that takes an unknown number of parameters",
+      "code": [
+        "local myFunction = function(params)\n\tlocal param1 = params.param1 or 'default_value1'\n\tlocal param2 = params.param2 or 'default_value2'\n\tlocal param3 = params.param3 or 'default_value3'\n\n\t-- Your code here, using param1, param2, param3\n\tprint('param1: ' .. param1)\n\tprint('param2: ' .. param2)\n\tprint('param3: ' .. param3)\nend\n\n-- Call the anonymous function with keyword parameters\nmyFunction{\n\tparam1 = 'value1',\n\tparam2 = 'value2',\n}\n\nmyFunction{\n\tparam2 = 'value2',\n\tparam3 = 'value3',\n}\n\n--OutPut:\nparam1: value1\nparam2: value2\nparam3: default_value3\nparam1: default_value1\nparam2: value2\nparam3: value3"
+      ],
+      "comment":"In Lua, anonymous functions (also known as closures or lambdas) typically do not natively support keyword parameters as in some other programming languages. However, you can achieve a similar effect by passing a table with named fields as a single argument to the anonymous function as above."
+    },
+    "anonymous_function_no_parameters_with_return": {
+      "name": "Anonymous function that takes no parameters and returns a value",
+      "code": [
+        "local myFunction = function()\n\treturn 'Hello from the anonymous function!'\nend\n\n-- Call the anonymous function and capture the result\nlocal result = myFunction()\n\n-- Print the result\nprint(result)\n\nOutPut:\nHello from the anonymous function!"
+      ]
+    },
+    "anonymous_function_with_parameters_with_return": {
+      "name": "Anonymous function that takes 1 or more defined parameters and returns a value",
+      "code": [
+        "local add = function(a, b)\n\treturn a + b\nend\n\n-- Call the anonymous function with parameters and capture the result\nlocal result = add(5, 3)\n\n-- Print the result\nprint('The sum is: ' .. result)\n\n--OutPut:\nThe sum is: 8"
+      ]
+    },
+    "anonymous_function_with_keyword_parameters_with_return": {
+      "name": "Anonymous function that takes 0 or more defined keyword parameters and returns a value",
+      "code": [
+        "local myFunction = function(params)\n\tlocal param1 = params.param1 or 'default_value1'\n\tlocal param2 = params.param2 or 'default_value2'\n\tlocal param3 = params.param3 or 'default_value3'\n\n\t-- Your code here, using param1, param2, param3\n\tlocal result = param1 .. ', ' .. param2 .. ', ' .. param3\n\n\t-- Return the result\n\treturn result\nend\n\n-- Call the anonymous function with keyword parameters and capture the result\nlocal output1 = myFunction{\n\tparam1 = 'value1',\n\tparam2 = 'value2',\n}\n\nlocal output2 = myFunction{\n\tparam2 = 'value2',\n\tparam3 = 'value3',\n}\n\n-- Print the results\nprint('Output 1: ' .. output1)\nprint('Output 2: ' .. output2)\n\n--OutPut:\nOutput 1: value1, value2, default_value3\nOutput 2: default_value1, value2, value3"
+      ]
+    },
+    "anonymous_function_variable_parameters_with_return": {
+      "name": "Anonymous function that takes an unknown number of parameters and returns a value",
+      "code": [
+        "local myFunction = function(...)\n\tlocal params = {...}\n\tlocal result = 'Parameters: '\n\n\tfor i, v in ipairs(params) do\n\t\tresult = result .. 'Parameter ' .. i .. ': ' .. v .. ' '\n\tend\n\n\treturn result\nend\n\n-- Call the anonymous function with different numbers of parameters and capture the result\nlocal result1 = myFunction(1, 2, 3)\nlocal result2 = myFunction('apple', 'banana')\nlocal result3 = myFunction('cat')\n\n-- Print the results\nprint(result1)\nprint(result2)\nprint(result3)\n\n--OutPut:\nParameters: Parameter 1: 1 Parameter 2: 2 Parameter 3: 3 \nParameters: Parameter 1: apple Parameter 2: banana \nParameters: Parameter 1: cat"
+      ]
+    },
+    "call_subroutine": {
+      "name": "Call subroutine",
+      "not-implemented": "true"
+    },
+    "return_from_subroutine": {
+      "name": "Return from subroutine",
+      "not-implemented": "true"
+    }
+  }
+}
