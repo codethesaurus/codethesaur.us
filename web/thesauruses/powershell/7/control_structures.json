@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "language": "powershell",
+    "language_name": "Powershell",
+    "structure": "control_structures",
+    "language_version": "7"
+  },
+  "concepts": {
+    "if_conditional": {
+      "name": "If conditional",
+      "code": [
+        "if (condition) { ... }"
+      ]
+    },
+    "if_else_conditional": {
+      "name": "If/Else conditional",
+      "code": [
+        "if (condition) { ... }",
+        "else { ... }"
+      ]
+    },
+    "if_elseif_conditional": {
+      "name": "If/ElseIf conditional",
+      "code": [
+        "if (condition) { ... }",
+        "elseif (condition) { ... }"
+      ]
+    },
+    "if_elseif_else_conditional": {
+      "name": "If/ElseIf/Else conditional",
+      "code": [
+        "if (condition) { ... }",
+        "elseif (condition) { ... }",
+        "else { ... }"
+      ]
+    },
+    "switch_statement": {
+      "name": "Switch statement",
+      "code": [
+        "switch (condition) {",
+        "  case 1 { ... }",
+        "  case 2 { ... }",
+        "  default { ... }",
+        "}"
+      ]
+    },
+    "ternary_conditional": {
+      "name": "Ternary conditional",
+      "code": [
+        "condition ? true : false"
+      ]
+    },
+    "while_loop": {
+      "name": "While loop",
+      "code": [
+        "while (condition) {",
+        "  ...",
+        "}"
+      ]
+    },
+    "do_while_loop": {
+      "name": "Do/While loop",
+      "code": [
+        "do {",
+        "  ...",
+        "} while (condition)"
+      ]
+    },
+    "until_loop": {
+      "name": "Until loop",
+      "code": [
+        "until (condition) {",
+        "  ...",
+        "}"
+      ]
+    },
+    "do_until_loop": {
+      "name": "Do/Until loop",
+      "code": [
+        "do {",
+        "  ...",
+        "} until (condition)"
+      ]
+    },
+    "for_loop": {
+      "name": "For loop",
+      "code": [
+        "for ($i = 0; $i < 10; $i++) { ... }"
+      ]
+    },
+    "foreach_loop": {
+      "name": "Foreach loop",
+      "code": [
+        "foreach ($item in $items) { ... }"
+      ]
+    },
+    "list_comprehension": {
+      "name": "List Comprehension",
+      "not-implemented": true
+    },
+    "each_iteration": {
+      "name": "Each iteration",
+      "not-implemented": true
+    },
+    "map_iteration": {
+      "name": "Map iteration",
+      "not-implemented": true
+    },
+    "filter_iteration": {
+      "name": "Filter iteration",
+      "code": [
+        "$items | ? { condition }",
+        "$items | where { condition }",
+        "$items | where-object { condition }"
+      ],
+      "comment": "The ? operator and the where keyword are aliases for the where-object cmdlet."
+    },
+    "fold_iteration": {
+      "name": "Fold iteration",
+      "code": [
+        "$items | % { ... }",
+        "$items | foreach { ... }",
+        "$items | foreach-object { ... }"
+      ],
+      "comment": "The % operator and the foreach keyword are aliases for the foreach-object cmdlet."
+    }
+  }
+}
