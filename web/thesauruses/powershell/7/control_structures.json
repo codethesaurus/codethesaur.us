@@ -9,38 +9,38 @@
     "if_conditional": {
       "name": "If conditional",
       "code": [
-        "if (condition) { ... }"
+        "if (condition) {}"
       ]
     },
     "if_else_conditional": {
       "name": "If/Else conditional",
       "code": [
-        "if (condition) { ... }",
-        "else { ... }"
+        "if (condition) {}",
+        "else {}"
       ]
     },
     "if_elseif_conditional": {
       "name": "If/ElseIf conditional",
       "code": [
-        "if (condition) { ... }",
-        "elseif (condition) { ... }"
+        "if (condition) {}",
+        "elseif (condition) {}"
       ]
     },
     "if_elseif_else_conditional": {
       "name": "If/ElseIf/Else conditional",
       "code": [
-        "if (condition) { ... }",
-        "elseif (condition) { ... }",
-        "else { ... }"
+        "if (condition) {}",
+        "elseif (condition) {}",
+        "else {}"
       ]
     },
     "switch_statement": {
       "name": "Switch statement",
       "code": [
         "switch (condition) {",
-        "  case 1 { ... }",
-        "  case 2 { ... }",
-        "  default { ... }",
+        "  case 1 {}",
+        "  case 2 {}",
+        "  default {}",
         "}"
       ]
     },
@@ -85,13 +85,13 @@
     "for_loop": {
       "name": "For loop",
       "code": [
-        "for ($i = 0; $i < 10; $i++) { ... }"
+        "for ($i = 0; $i < 10; $i++) {}"
       ]
     },
     "foreach_loop": {
       "name": "Foreach loop",
       "code": [
-        "foreach ($item in $items) { ... }"
+        "foreach ($item in $items) {}"
       ]
     },
     "list_comprehension": {
@@ -118,9 +118,9 @@
     "fold_iteration": {
       "name": "Fold iteration",
       "code": [
-        "$items | % { ... }",
-        "$items | foreach { ... }",
-        "$items | foreach-object { ... }"
+        "$items | % {}",
+        "$items | foreach {}",
+        "$items | foreach-object {}"
       ],
       "comment": "The % operator and the foreach keyword are aliases for the foreach-object cmdlet."
     }
