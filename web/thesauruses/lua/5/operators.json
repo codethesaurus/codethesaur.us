@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "language": "lua",
+    "language_name": "Lua",
+    "structure": "operators",
+    "language_version": "5.1"
+  },
+  "concepts": {
+    "addition": {
+      "name": "Addition operator",
+      "code": [
+        "a + b"
+      ]
+    },
+    "addition_assignment": {
+      "name": "Addition and assignment operator",
+      "not-implemented": true
+    },
+    "subtraction": {
+      "name": "Subtraction operator",
+      "code": [
+        "a - b"
+      ]
+    },
+    "subtraction_assignment": {
+      "name": "Subtraction and assignment operator",
+      "not-implemented": true
+    },
+    "multiplication": {
+      "name": "Multiplication operator",
+      "code": [
+        "a * b"
+      ]
+    },
+    "multiplication_assignment": {
+      "name": "Multiplication and assignment operator",
+      "not-implemented": true
+    },
+    "division": {
+      "name": "Division operator",
+      "code": [
+        "a / b"
+      ]
+    },
+    "division_assignment": {
+      "name": "Division and assignment operator",
+      "not-implemented": true
+    },
+    "integer_division": {
+      "name": "Integer division operator",
+      "not-implemented": true
+    },
+    "integer_division_assignment": {
+      "name": "Integer division and assignment operator",
+      "not-implemented": true
+    },
+    "modulus": {
+      "name": "Modulus (remainder) operator",
+      "code": [
+        "a % b"
+      ]
+    },
+    "modulus_assignment": {
+      "name": "Modulus and assignment operator",
+      "not-implemented": true
+    },
+    "unary_plus": {
+      "name": "Unary plus operator",
+      "not-implemented": true
+    },
+    "unary_minus": {
+      "name": "Unary minus operator",
+      "not-implemented": true
+    },
+    "increment": {
+      "name": "Increment (add 1) operator",
+      "not-implemented": true
+    },
+    "decrement": {
+      "name": "Decrement (subtract 1) operator",
+      "not-implemented": true
+    },
+    "exponential": {
+      "name": "Exponential operator",
+      "code": [
+        "a ^ b"
+      ]
+    },
+    "factorial": {
+      "name": "Factorial operator",
+      "not-implemented": true
+    },
+    "absolute_value": {
+      "name": "Absolute value operator",
+      "code": [
+        "math.abs(a)"
+      ]
+    },
+    "percentage": {
+      "name": "Percentage operator",
+      "not-implemented": true
+    },
+    "equal_to": {
+      "name": "Equality operator",
+      "code": [
+        "a == b"
+      ]
+    },
+    "not_equal_to": {
+      "name": "Not equal to operator",
+      "code": [
+        "a ~= b"
+      ]
+    },
+    "less_than": {
+      "name": "Less than operator",
+      "code": [
+        "a < b"
+      ]
+    },
+    "less_than_or_equal_to": {
+      "name": "Less than or equal to operator",
+      "code": [
+        "a <= b"
+      ]
+    },
+    "greater_than": {
+      "name": "Greater than operator",
+      "code": [
+        "a > b"
+      ]
+    },
+    "greater_than_or_equal_to": {
+      "name": "Greater than or equal to operator",
+      "code": [
+        "a >= b"
+      ]
+    },
+    "null_coalescing": {
+      "name": "Null coalescing operator",
+      "not-implemented": true
+    },
+    "is": {
+      "name": "Is operator",
+      "not-implemented": true
+    },
+    "is_not": {
+      "name": "Is not operator",
+      "not-implemented": true
+    },
+    "logical_and": {
+      "name": "Logical AND operator",
+      "code": [
+        "a and b"
+      ]
+    },
+    "logical_or": {
+      "name": "Logical OR operator",
+      "code": [
+        "a or b"
+      ]
+    },
+    "logical_not": {
+      "name": "Logical NOT operator",
+      "code": [
+        "not [condition]"
+      ]
+    },
+    "bitwise_and": {
+      "name": "Bitwise AND operator",
+      "code": [
+        "a & b"
+      ]
+    },
+    "bitwise_and_assignment": {
+      "name": "Bitwise AND and assignment operator",
+      "not-implemented": true
+    },
+    "bitwise_or": {
+      "name": "Bitwise OR operator",
+      "code": [
+        "a | b"
+      ]
+    },
+    "bitwise_or_assignment": {
+      "name": "Bitwise OR and assignment operator",
+      "not-implemented": true
+    },
+    "bitwise_not": {
+      "name": "Bitwise NOT operator",
+      "code": [
+        "~a"
+      ]
+    },
+    "not_assignment": {
+      "name": "Bitwise NOT and assignment operator",
+      "not-implemented": true
+    },
+    "bitwise_xor": {
+      "name": "Bitwise XOR operator",
+      "not-implemented": true
+    },
+    "bitwise_xor_assignment": {
+      "name": "Bitwise XOR and assignment operator",
+      "not-implemented": true
+    },
+    "bitwise_xnor": {
+      "name": "Bitwise XNOR operator",
+      "not-implemented": true
+    },
+    "bitwise_xnor_assignment": {
+      "name": "Bitwise XNOR and assignment operator",
+      "not-implemented": true
+    },
+    "left_shift": {
+      "name": "Left shift bitwise operator",
+      "code": [
+        "a << b"
+      ]
+    },
+    "left_shift_assignment": {
+      "name": "Left shift assignment operator",
+      "not-implemented": true
+    },
+    "right_shift": {
+      "name": "Right shift bitwise operator",
+      "code": [
+        "a >> b"
+      ]
+    },
+    "right_shift_assignment": {
+      "name": "Right shift assignment operator",
+      "not-implemented": true
+    },
+    "ternary": {
+      "name": "Ternary operator",
+      "not-implemented": true
+    },
+    "null_forgiving": {
+      "name": "Null forgiving operator",
+      "not-implemented": true
+    }
+  }
+}
