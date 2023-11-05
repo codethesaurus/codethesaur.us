@@ -1,0 +1,13 @@
+name: Check Docker Build
+
+on:
+  pull_request:
+
+jobs:
+  check:
+    name: Check Docker Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Docker Compose Build
+        run: docker-compose build

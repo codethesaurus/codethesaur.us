@@ -85,7 +85,7 @@ class TestTemplates(TestCase):
                 "comment": "I am a humble\nmulti-line comment in the\nform of a haiku"
             }
         ).strip()
-        self.assertEquals(
+        self.assertEqual(
             rendered_template_5,
             "<div class=\"card\">\n"
             "    <div class=\"card-body\">\n"
