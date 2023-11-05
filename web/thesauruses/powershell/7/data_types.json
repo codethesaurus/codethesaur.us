@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "language": "powershell",
+    "language_name": "Human-Readable Language Name",
+    "structure": "data_types",
+    "language_version": "7"
+  },
+  "concepts": {
+    "boolean": {
+      "name": "Boolean",
+      "code": "System.Boolean"
+    },
+    "signed_integer_8_bit": {
+      "name": "Signed 8-bit integer",
+      "code": "System.Byte"
+    },
+    "unsigned_integer_8_bit": {
+      "name": "Unsigned 8-bit integer",
+      "code": "System.Byte"
+    },
+    "signed_integer_16_bit": {
+      "name": "Signed 16-bit integer",
+      "code": "System.Int16"
+    },
+    "unsigned_integer_16_bit": {
+      "name": "Unsigned 16-bit integer",
+      "code": "System.Int16"
+    },
+    "signed_integer_32_bit": {
+      "name": "Signed 32-bit integer",
+      "code": "System.Int32"
+    },
+    "unsigned_integer_32_bit": {
+      "name": "Unsigned 32-bit integer",
+      "code": "System.Int32"
+    },
+    "signed_integer_64_bit": {
+      "name": "Signed 64-bit integer",
+      "code": "System.Int64"
+    },
+    "unsigned_integer_64_bit": {
+      "name": "Unsigned 64-bit integer",
+      "code": "System.Int64"
+    },
+    "signed_integer_as_object": {
+      "name": "Signed object-based Integer",
+      "not-implemented": true
+    },
+    "unsigned_integer_as_object": {
+      "name": "Unsigned object-based Integer",
+      "not-implemented": true
+    },
+    "signed_float_16_bit": {
+      "name": "Signed 16-bit floating point",
+      "code": "System.Single"
+    },
+    "unsigned_float_16_bit": {
+      "name": "Unsigned 16-bit floating point",
+      "code": "System.Single"
+    },
+    "signed_float_32_bit": {
+      "name": "Signed 32-bit floating point",
+      "code": "System.Single"
+    },
+    "unsigned_float_32_bit": {
+      "name": "Unsigned 32-bit floating point",
+      "code": "System.Single"
+    },
+    "signed_float_64_bit": {
+      "name": "Signed 64-bit floating point",
+      "code": "System.Double"
+    },
+    "unsigned_float_64_bit": {
+      "name": "Unsigned 64-bit floating point",
+      "code": "System.Double"
+    },
+    "signed_float_as_object": {
+      "name": "Signed object-based floating point",
+      "not-implemented": true
+    },
+    "unsigned_float_as_object": {
+      "name": "Unsigned object-based floating point",
+      "not-implemented": true
+    },
+    "character": {
+      "name": "Character",
+      "code": "System.Char"
+    },
+    "string_as_object": {
+      "name": "String as an object",
+      "code": "System.String"
+    },
+    "string_as_array": {
+      "name": "String as an array of characters",
+      "code": "System.String"
+    },
+    "complex_as_object": {
+      "name": "Complex Number as an object",
+      "not-implemented": true
+    },
+    "real_number_part": {
+      "name": "Complex number real part",
+      "not-implemented": true
+    },
+    "imaginary_number_part": {
+      "name": "Complex number imaginary part",
+      "not-implemented": true
+    }
+  }
+}
