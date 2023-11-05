@@ -197,13 +197,19 @@ def concepts(request):
             "is_incomplete": [False] * len(languages)
         }
         for i in range(len(languages)):
+            is_incomplete = True
             for concept in concepts_list:
+                if not languages[i].concept_unknown(concept["key"]) and \
+                    languages[i].concept_implemented(concept["key"]):
+                    is_incomplete = False
                 if languages[i].concept_unknown(concept["key"]) or \
                     (languages[i].concept_implemented(concept["key"]) and \
                     not languages[i].concept_code(concept["key"]) and \
                     not languages[i].concept_comment(concept["key"]) ):
                     category_entry["is_incomplete"][i] = True
                     break
+            if is_incomplete:
+                category_entry["is_incomplete"][i] = True
         all_categories.append(category_entry)
 
     for lang in languages:
