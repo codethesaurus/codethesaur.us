@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "language": "lua",
+    "language_name": "Lua",
+    "structure": "functions",
+    "language_version": "5.1"
+  },
+  "concepts": {
+    "void_function_no_parameters": {
+      "name": "Function that does not return a value and takes no parameters",
+      "code": [
+        "function greet()\nend"
+      ]
+    },
+    "void_function_with_parameters": {
+      "name": "Function that does not return a value and that takes 1 or more defined parameters",
+      "code": [
+        "function addNumbers(a, b)\nend"
+      ]
+    },
+    "void_function_with_keyword_parameters": {
+      "name": "Function that does not return a value and that takes 0 or more defined keyword parameters",
+      "not-implemented": "true"
+    },
+    "void_function_variable_parameters": {
+      "name": "Function that does not return a value and function that takes an unknown number of parameters",
+      "code": [
+        "function myFunction(...)\nend"
+      ]
+    },
+    "return_value_function_no_parameters": {
+      "name": "Function that returns a value and takes no parameters",
+      "code": [
+        "function generateRandomNumber()\nreturn true\nend"
+      ]
+    },
+    "return_value_function_with_parameters": {
+      "name": "Function that returns a value and takes 1 or more defined parameters",
+      "code": [
+        "function addNumbers(a, b)\nreturn a,b\nend"
+      ]
+    },
+    "return_value_function_with_keyword_parameters": {
+      "name": "Function that returns a value and takes 0 or more defined keyword parameters",
+      "not-implemented": "true"
+    },
+    "return_value_function_variable_parameters": {
+      "name": "Function that returns a value and takes an unknown number of parameters",
+      "code": [
+        "function sum(...)\nreturn...\nend"
+      ]
+    },
+    "anonymous_function_no_parameters": {
+      "name": "Anonymous function that takes no parameters",
+      "code": [
+        "local myFunction = function()\nend"
+      ]
+    },
+    "anonymous_function_with_parameters": {
+      "name": "Anonymous function that takes 1 or more defined parameters",
+      "code": [
+        "local add = function(a, b)\nend"
+      ]
+    },
+    "anonymous_function_with_keyword_parameters": {
+      "name": "Anonymous function that takes 0 or more defined keyword parameters",
+      "not-implemented": "true"
+    },
+    "anonymous_function_variable_parameters": {
+      "name": "Anonymous function that takes an unknown number of parameters",
+      "code": [
+        "local add = function(...)\nend"
+      ]
+    },
+    "anonymous_function_no_parameters_with_return": {
+      "name": "Anonymous function that takes no parameters and returns a value",
+      "code": [
+        "local myFunction = function()\nreturn true\nend"
+      ]
+    },
+    "anonymous_function_with_parameters_with_return": {
+      "name": "Anonymous function that takes 1 or more defined parameters and returns a value",
+      "code": [
+        "local add = function(a, b)\nreturn a,b\nend"
+      ]
+    },
+    "anonymous_function_with_keyword_parameters_with_return": {
+      "name": "Anonymous function that takes 0 or more defined keyword parameters and returns a value",
+      "not-implemented": "true"
+    },
+    "anonymous_function_variable_parameters_with_return": {
+      "name": "Anonymous function that takes an unknown number of parameters and returns a value",
+      "code": [
+        "local myFunction = function(...)\nreturn...\nend"
+      ]
+    },
+    "call_subroutine": {
+      "name": "Call subroutine",
+      "not-implemented": "true"
+    },
+    "return_from_subroutine": {
+      "name": "Return from subroutine",
+      "not-implemented": "true"
+    }
+  }
+}
