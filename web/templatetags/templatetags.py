@@ -8,5 +8,5 @@ def concept_card(code, comment):
     """tag for a single concept"""
     return {
         'code': code,
-        'comment': comment
+        'comment': str(comment)
     }
