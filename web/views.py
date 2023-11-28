@@ -191,10 +191,31 @@ def concepts(request):
     for (category_key, category) in meta_structure.categories.items():
         concepts_list = [concepts_data(key, name, languages) for (key, name) in category.items()]
 
-        all_categories.append({
+        category_entry = {
             "key": category_key,
-            "concepts": concepts_list
-        })
+            "concepts": concepts_list,
+            "is_incomplete": [False] * len(languages)
+        }
+        for i in range(len(languages)):
+            is_incomplete = True
+            for concept in concepts_list:
+                if not languages[i].concept_unknown(concept["key"]) and \
+                    languages[i].concept_implemented(concept["key"]):
+                    is_incomplete = False
+                if languages[i].concept_unknown(concept["key"]) or \
+                    (languages[i].concept_implemented(concept["key"]) and \
+                    not languages[i].concept_code(concept["key"]) and \
+                    not languages[i].concept_comment(concept["key"]) ):
+                    category_entry["is_incomplete"][i] = True
+                    break
+            if is_incomplete:
+                category_entry["is_incomplete"][i] = True
+        all_categories.append(category_entry)
+
+    for lang in languages:
+        booleans = [category["is_incomplete"][languages.index(lang)] for category in all_categories]
+        lang._is_incomplete = any(booleans)
+
     return render_concepts(request, languages, meta_structure, all_categories)
 
 
@@ -217,7 +238,8 @@ def render_concepts(request, languages, structure, all_categories):
             {
                 "key": language.key,
                 "version": language.version,
-                "name": language.name
+                "name": language.name,
+                "is_incomplete": language._is_incomplete,
             }
             for language in languages
         ],
