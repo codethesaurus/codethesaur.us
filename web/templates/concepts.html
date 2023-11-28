@@ -23,6 +23,17 @@
                     the language column{{ languages | length | pluralize }} to correct any
                     information.
                 </p>
+                {% for lang in languages %}
+                    {% if lang.is_incomplete %}
+                    <div class="alert alert-link" role="alert">
+                        {{ lang.name }} ({{ lang.version }})'s thesaurus is incomplete. Please help us improve by
+                        <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang.key }}/{{ lang.version }}/{{ concept }}.json" rel="noopener">
+                            adding or correcting information
+                        </a>
+                        for this language.
+                    </div>
+                    {% endif %}
+                {% endfor %}
             </div>
 
 {% for category in categories %}
