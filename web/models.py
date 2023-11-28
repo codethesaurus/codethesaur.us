@@ -204,7 +204,10 @@ class Language:
         :param concept_key: key for the concept
         :return: the string containing the concept's comment
         """
-        return self.concept(concept_key).get("comment", "")
+        comment = self.concept(concept_key).get("comment", "")
+        if isinstance(comment, list):
+            comment = "\n".join(comment)
+        return comment
 
 
 class MissingLanguageError(Exception):

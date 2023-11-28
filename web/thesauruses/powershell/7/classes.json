@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "language": "powershell",
+    "language_name": "Powershell",
+    "structure": "classes",
+    "language_version": "7"
+  },
+  "concepts": {
+    "normal_class": {
+      "name": "Normal class",
+      "code": [
+        "class ClassName {",
+        "    # class body",
+        "}"
+      ]
+    },
+    "abstract_class": {
+      "name": "Abstract class",
+      "not-implemented": true
+    },
+    "interface": {
+      "name": "Interface",
+      "not-implemented": true
+    },
+    "read_only_class": {
+      "name": "Read-only class",
+      "not-implemented": true
+    },
+    "static_class": {
+      "name": "Static class",
+      "not-implemented": true
+    },
+    "inner_class": {
+      "name": "Inner class",
+      "not-implemented": true
+    },
+    "packages": {
+      "name": "Packages",
+      "code": [
+        "using namespace Your.Package"
+      ]
+    },
+    "class_with_generic_type": {
+      "name": "Class with a generic type",
+      "not-implemented": true
+    },
+    "private_variables": {
+      "name": "Defining private variables",
+      "code": [
+        "class ClassName {",
+        "    hidden [string] $privateVariable = \"private\";",
+        "}"
+      ],
+      "comment": "It's not possible to define private variables in Powershell. The closest approximation is to define a hidden variable."
+    },
+    "protected_variables": {
+      "name": "Defining protected variables",
+      "not-implemented": true
+    },
+    "public_variables": {
+      "name": "Defining public variables",
+      "code": [
+        "class ClassName {",
+        "    [string] $publicVariable = \"public\";",
+        "}"
+      ]
+    },
+    "static_variables": {
+      "name": "Defining static variables",
+      "code": [
+        "class ClassName {",
+        "    static [string] $staticVariable = \"static\";",
+        "}"
+      ]
+    },
+    "private_functions": {
+      "name": "Defining private functions",
+      "code": [
+        "class ClassName {",
+        "    hidden [string] privateFunction() {",
+        "        return \"private\";",
+        "    }",
+        "}"
+      ],
+      "comment": "It's not possible to define private functions in Powershell. The closest approximation is to define a hidden function."
+    },
+    "protected_functions": {
+      "name": "Defining protected functions",
+      "not-implemented": true
+    },
+    "public_functions": {
+      "name": "Defining public functions",
+      "code": [
+        "class ClassName {",
+        "    [string] publicFunction() {",
+        "        return \"public\";",
+        "    }",
+        "}"
+      ]
+    },
+    "static_functions": {
+      "name": "Defining static functions",
+      "code": [
+        "class ClassName {",
+        "    static [string] staticFunction() {",
+        "        return \"static\";",
+        "    }",
+        "}"
+      ]
+    },
+    "extends_class": {
+      "name": "Class that inherits/extends another class",
+      "code": [
+        "class ClassName : BaseClass {",
+        "    # class body",
+        "}"
+      ]
+    },
+    "extending_interface": {
+      "name": "Class/Interface that inherits/extends another class/interface",
+      "not-implemented": true
+    },
+    "calling_superclass_functions": {
+      "name": "Calling a superclass function",
+      "not-implemented": true
+    },
+    "overriding_superclass_functions": {
+      "name": "Overriding a superclass function",
+      "not-implemented": true
+    },
+    "instantiating_object": {
+      "name": "Instantiating a new object",
+      "code": [
+        "$object = [ClassName]::new()",
+        "$object = New-Object ClassName"
+      ]
+    },
+    "instantiating_polymorphic_object": {
+      "name": "Instantiating a polymorphic object",
+      "not-implemented": true
+    },
+    "implement_constructor": {
+      "name": "Implementing a class constructor",
+      "code": [
+        "class ClassName {",
+        "    ClassName() {",
+        "        # constructor body",
+        "    }",
+        "}"
+      ]
+    },
+    "implement_deconstructor": {
+      "name": "Implementing a class deconstructor",
+      "not-implemented": true
+    }
+  }
+}
