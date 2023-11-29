@@ -1,7 +1,7 @@
 {
   "meta": {
     "language": "powershell",
-    "language_name": "Human-Readable Language Name",
+    "language_name": "PowerShell",
     "structure": "data_types",
     "language_version": "7"
   },
