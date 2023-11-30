@@ -82,44 +82,14 @@
     },
     "is_all_alphabetical": {
       "not-implemented":"true",
-      "comment": [
-        "//indirect implementation",
-        "//#include<ctype.h>",
-        "char str[100];",
-        "gets(str);",
-        "for(int i=0;i<strlen(str);i++)",
-        " if(isalpha(str[i]))", 
-           "count+=1;",
-        "if(count==strlen(str)) printf(\"all alphabetical characters\");"
-      ],
       "name": "Is string all alphabetical characters?"
     },
     "is_all_numerical": {
       "not-implemented":"true",
-      "comment": [
-        "//indirect implementation",
-        "//#include<ctype.h>",
-        "char str[100];",
-        "gets(str);",
-        "for(int i=0;i<strlen(str);i++)",
-        " if(isdigit(str[i]))",
-           "count+=1;",
-        "if(count==strlen(str)) printf(\"all numerical characters\");"
-      ],
       "name": "Is string all numerical characters?"
     },
     "is_all_alphanumeric": {
       "not-implemented":"true",
-      "comment": [
-        "//indirect implementation",
-        "//#include<ctype.h>",
-        "char str[100];",
-        "gets(str);",
-        "for(int i=0;i<strlen(str);i++)",
-        "if(isalnum(str[i]))",
-           "count+=1;",
-        "if(count==strlen(str)) printf(\"all alphanumeric characters\");"
-      ],
       "name": "Is string all alphanumeric characters?"
     },
     "is_decimal": {
@@ -132,30 +102,10 @@
     },
     "is_all_uppercase": {
       "not-implemented":"true",
-      "comment": [
-        "//indirect implementation",
-        "//#include<ctype.h>",
-        "char str[100];",
-        "gets(str);",
-        "for(int i=0;i<strlen(str);i++)",
-        " if(isupper(str[i]))",
-            "count+=1;",
-        "if(count==strlen(str)) printf(\"all uppercase characters\");"
-      ],
       "name": "Is string all uppercase characters?"
     },
     "is_all_lowercase": {
       "not-implemented":"true",
-      "comment": [
-        "//indirect implementation",
-        "//#include<ctype.h>",
-        "char str[100];",
-        "gets(str);",
-        "for(int i=0;i<strlen(str);i++)",
-        " if(islower(str[i]))", 
-            "count+=1;",
-        "if(count==strlen) printf(\"all lowercase characters\");"
-      ],
       "name": "Is string all lowercase characters?"
     },
     "is_in_titlecase": {
@@ -199,28 +149,22 @@
       "name": "Return a substring from a string based on starting index and size of substring"
     },
     "convert_to_uppercase": {
-      "not-implemented":"true",
-      "comment": [
-        "//indirect implementation",
-        "//#include<ctype.h>",
+      "code": [
+        "#include<stdio.h>",
+        "#include<string.h>",
         "char str[100];",
         "gets(str);",
-        "for(int i=0;i<strlen(str);i++)",
-        " toupper(str[i])",
-        "puts(str);"
+        "printf(\"%s\",strupr(str);"
       ],
       "name": "Convert string to all uppercase"
     },
     "convert_to_lowercase": {
-      "not-implemented":"true",
-      "comment": [
-        "//indirect implementation",
-        "//#include<ctype.h>",
+      "code": [
+        "#include<stdio.h>",
+        "#include<string.h>",
         "char str[100];",
         "gets(str);",
-        "for(int i=0;i<strlen(str);i++)",
-        " toupper(str[i])",
-        "puts(str);"
+        "printf(\"%s\",strlwr(str);"
       ],
       "name": "Convert string to all lowercase"
     },
@@ -303,10 +247,16 @@
     },
     "format_as_integer": {
       "not-implemented": "true",
+      "code":[
+        "printf(\"%d\", age); // %i can be also used",
+        "printf(\"%u\", age); // %u for unsigned integer format"
+      ],
       "name": "Format parameter as an integer"
     },
     "format_as_decimal": {
-      "not-implemented": "true",
+      "code":[
+        "printf(\"%f\", result); // %lf for double"
+      ],
       "name": "Format parameter as a decimal number"
     },
     "format_as_fixed_decimal": {
@@ -318,7 +268,7 @@
       "name": "Format parameter as a currency number"
     },
     "format_as_percentage": {
-      "not-implemented": "true",
+      "code": " %% , this format specifier prints the '%' character",
       "name": "Format parameter as a percentage number"
     },
     "format_number_with_separators": {
@@ -342,11 +292,11 @@
       "name": "Format number into binary"
     },
     "format_number_in_octal": {
-      "not-implemented": "",
+      "code": "printf(\"%o\", a); // int a = 67",
       "name": "Format number into octal"
     },
     "format_number_in_hexadecimal": {
-      "not-implemented": "",
+      "code": "printf(\"%x\", a); // int a = 15454",
       "name": "Format number into hexadecimal"
     }
   }
