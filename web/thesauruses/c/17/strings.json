@@ -246,7 +246,6 @@
       "name": "Paramater used in format function if they're named variables"
     },
     "format_as_integer": {
-      "not-implemented": "true",
       "code":[
         "printf(\"%d\", age); // %i can be also used",
         "printf(\"%u\", age); // %u for unsigned integer format"
