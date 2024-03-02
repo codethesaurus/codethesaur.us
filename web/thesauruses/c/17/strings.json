@@ -12,7 +12,7 @@
     },
     "import": {
       "code": "#include<string.h>",
-      "name": "Import the string class"
+      "name": "Import the string header file"
     },
     "default_string_byte_encoding": {
       "code": "ASCII UTF-8",
@@ -32,8 +32,8 @@
     "assign_new_string": {
       "code": [
         "char s[] = \"hello\";",
-        "char st[] = s;",
-        "strcpy(st,s);",
+        "char st[sizeof(s)];",
+        "strcpy(st, s);",
         "printf(\"%s\",st);"
       ],
       "name": "Assign string from another string"
@@ -45,7 +45,7 @@
     "length_of_string": {
       "code": [
         "chat str[] = \"hello\";",
-        "printf(\"%s\",strlen(s));"
+        "printf(\"%zu\",strlen(s));"
       ],
       "name": "Length of string"
     },
@@ -54,26 +54,21 @@
       "name": "Maximum length of string"
     },
     "clear_string": {
-      "code": [
-        "char s[] = \"hello\";",
-        "strcpy(s,\"\");"
-      ],
+      "not-implemented":"true",
       "name": "Clear/empty string"
     },
     "is_empty": {
-      "code": [
-        "int result = strcmp(s,\"\");",
-        "printf(\"%d\",result);"
-      ],
+      "not-implemented": "true",
       "name": "Is string empty?"
     },
     "concatenate_two_strings": {
       "code": [
         "char str1[] = \"hello\";",
-        "char str2[] = \" world\"",
+        "char str2[] = \" world\";",
         "strcat(str1,str2);",
         "puts(str1);"
       ],
+      "comment":"this adds the content of str2 at the end of str1",
       "name": "Concatenate/join two strings"
     },
     "concatenate_many_strings": {
@@ -149,23 +144,11 @@
       "name": "Return a substring from a string based on starting index and size of substring"
     },
     "convert_to_uppercase": {
-      "code": [
-        "#include<stdio.h>",
-        "#include<string.h>",
-        "char str[100];",
-        "gets(str);",
-        "printf(\"%s\",strupr(str);"
-      ],
+      "not-implemented":"true",
       "name": "Convert string to all uppercase"
     },
     "convert_to_lowercase": {
-      "code": [
-        "#include<stdio.h>",
-        "#include<string.h>",
-        "char str[100];",
-        "gets(str);",
-        "printf(\"%s\",strlwr(str);"
-      ],
+      "not-implemented":"true",
       "name": "Convert string to all lowercase"
     },
     "convert_to_title_case": {
@@ -178,7 +161,6 @@
     },
     "remove_whitespace": {
       "not-implemented": "true",
-      "comment":"isspace() is available for custom implementation",
       "name": "Remove all whitespaces from string"
     },
     "replace_substring": {
@@ -247,8 +229,8 @@
     },
     "format_as_integer": {
       "code":[
-        "printf(\"%d\", age); // %i can be also used",
-        "printf(\"%u\", age); // %u for unsigned integer format"
+        "printf(\"%d\", age); // signed integer",
+        "printf(\"%u\", age); // unsigned integer"
       ],
       "name": "Format parameter as an integer"
     },
