@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "language": "c",
+    "language_version": "17",
+    "language_name": "C",
+    "structure": "strings"
+  },
+  "concepts": {
+    "is_primitive_or_not": {
+      "code": "no",
+      "name": "Is this a built-in type in this language?"
+    },
+    "import": {
+      "code": "#include<string.h>",
+      "name": "Import the string header file"
+    },
+    "default_string_byte_encoding": {
+      "code": "ASCII UTF-8",
+      "name": "Default byte encoding (ex: ASCII UTF-8, UTF-16, etc.)"
+    },
+    "create_new_string": {
+      "code": [
+        "char string[] = \"hello\";",
+        "char string[] = {'h','e','l','l','o','\\0'};"
+      ],
+      "name": "Create new string"
+    },
+    "create_multiline_string": {
+      "not-implemented": "true",
+      "name": "Create new multi-line string"
+    },
+    "assign_new_string": {
+      "code": [
+        "char s[] = \"hello\";",
+        "char st[sizeof(s)];",
+        "strcpy(st, s);",
+        "printf(\"%s\",st);"
+      ],
+      "name": "Assign string from another string"
+    },
+    "destroy_string": {
+      "not-implemented": "true",
+      "name": "Destroy string"
+    },
+    "length_of_string": {
+      "code": [
+        "chat str[] = \"hello\";",
+        "printf(\"%zu\",strlen(s));"
+      ],
+      "name": "Length of string"
+    },
+    "max_length_of_string": {
+      "not-implemented": "true",
+      "name": "Maximum length of string"
+    },
+    "clear_string": {
+      "not-implemented":"true",
+      "name": "Clear/empty string"
+    },
+    "is_empty": {
+      "not-implemented": "true",
+      "name": "Is string empty?"
+    },
+    "concatenate_two_strings": {
+      "code": [
+        "char str1[] = \"hello\";",
+        "char str2[] = \" world\";",
+        "strcat(str1,str2);",
+        "puts(str1);"
+      ],
+      "comment":"this adds the content of str2 at the end of str1",
+      "name": "Concatenate/join two strings"
+    },
+    "concatenate_many_strings": {
+      "not-implemented": "true",
+      "name": "Concatenate/join many strings"
+    },
+    "is_all_alphabetical": {
+      "not-implemented":"true",
+      "name": "Is string all alphabetical characters?"
+    },
+    "is_all_numerical": {
+      "not-implemented":"true",
+      "name": "Is string all numerical characters?"
+    },
+    "is_all_alphanumeric": {
+      "not-implemented":"true",
+      "name": "Is string all alphanumeric characters?"
+    },
+    "is_decimal": {
+      "not-implemented":"true",
+      "name": "Is string a decimal number?"
+    },
+    "is_all_whitespaces": {
+      "not-implemented":"true",
+      "name": "Is string all whitespace characters?"
+    },
+    "is_all_uppercase": {
+      "not-implemented":"true",
+      "name": "Is string all uppercase characters?"
+    },
+    "is_all_lowercase": {
+      "not-implemented":"true",
+      "name": "Is string all lowercase characters?"
+    },
+    "is_in_titlecase": {
+      "not-implemented":"true",
+      "name": "Is string formatted in title case?"
+    },
+    "does_substring_exist": {
+      "not-implemented": "true",
+      "name": "Does a substring exist in a string?"
+    },
+    "find_start_index_of_substring": {
+      "not-implemented": "true",
+      "name": "Find index of where a substring starts"
+    },
+    "find_start_index_of_additional_substring": {
+      "not-implemented": "true",
+      "name": "Find index of an additional substring (or starting at another index)"
+    },
+    "find_start_index_of_substring_from_end": {
+      "not-implemented": "true",
+      "name": "Find substring index starting at end"
+    },
+    "count_occurrences_of_substring": {
+      "not-implemented": "true",
+      "name": "Find number of occurences of a substring"
+    },
+    "get_leftmost_characters": {
+      "not-implemented": "true",
+      "name": "Get a specified number of characters from the left"
+    },
+    "get_rightmost_characters": {
+      "not-implemented": "true",
+      "name": "Get a specified number of characters from the right"
+    },
+    "get_substring_from_start_and_end_index": {
+      "not-implemented": "true",
+      "name": "Return a substring from a string based on starting and ending indices"
+    },
+    "get_substring_from_start_index_and_length": {
+      "not-implemented": "true",
+      "name": "Return a substring from a string based on starting index and size of substring"
+    },
+    "convert_to_uppercase": {
+      "not-implemented":"true",
+      "name": "Convert string to all uppercase"
+    },
+    "convert_to_lowercase": {
+      "not-implemented":"true",
+      "name": "Convert string to all lowercase"
+    },
+    "convert_to_title_case": {
+      "not-implemented": "true",
+      "name": "Convert string to title case"
+    },
+    "capitalize_string": {
+      "not-implemented": "true",
+      "name": "Capitalize first letter of a string"
+    },
+    "remove_whitespace": {
+      "not-implemented": "true",
+      "name": "Remove all whitespaces from string"
+    },
+    "replace_substring": {
+      "not-implemented": "true",
+      "name": "Replace a substring with another string"
+    },
+    "replace_all_substring": {
+      "not-implemented": "true",
+      "name": "Replace all substring matches with another string"
+    },
+    "split_at_index": {
+      "not-implemented": "true",
+      "name": "Split string into a list of strings at a given index"
+    },
+    "split_at_newlines": {
+      "not-implemented": "true",
+      "name": "Split string into a list of strings at every new line character"
+    },
+    "split_at_substring": {
+      "not-implemented": "true",
+      "name": "Split string by locating all substrings"
+    },
+    "merge_lists_into_string": {
+      "not-implemented": "true",
+      "name": "Merge a list of strings into one string"
+    },
+    "encode_html_entities": {
+      "not-implemented": "true",
+      "name": "Encode HTML entities in a string (ex: ™ to &trade;)"
+    },
+    "decode_html_entities": {
+      "not-implemented": "true",
+      "name": "Decode HTML entitles into characters"
+    },
+    "encode_url_percent": {
+      "not-implemented": "true",
+      "name": "Encode URL percent encoding into string (ex: ' ' to %20)"
+    },
+    "decode_url_percent": {
+      "not-implemented": "true",
+      "name": "Decode URL percent encoding"
+    },
+    "encode_to_base64": {
+      "not-implemented": "true",
+      "name": "Encode string into Base64 format"
+    },
+    "decode_from_base64": {
+      "not-implemented": "true",
+      "name": "Decode string from Base64 format"
+    },
+    "format_string_function": {
+      "not-implemented": "true",
+      "name": "Function to format a string"
+    },
+    "parameter_format_in_order": {
+      "not-implemented": "true",
+      "name": "Parameter used in format function if they're used in order"
+    },
+    "parameter_format_numerical": {
+      "not-implemented": "true",
+      "name": "Parameter used in format function if they're numerically numbered"
+    },
+    "parameter_format_by_name": {
+      "not-implemented": "true",
+      "name": "Paramater used in format function if they're named variables"
+    },
+    "format_as_integer": {
+      "code":[
+        "printf(\"%d\", age); // signed integer",
+        "printf(\"%u\", age); // unsigned integer"
+      ],
+      "name": "Format parameter as an integer"
+    },
+    "format_as_decimal": {
+      "code":[
+        "printf(\"%f\", result); // %lf for double"
+      ],
+      "name": "Format parameter as a decimal number"
+    },
+    "format_as_fixed_decimal": {
+      "not-implemented": "true",
+      "name": "Format parameter as a fixed-point decimal number"
+    },
+    "format_as_currency": {
+      "not-implemented": "true",
+      "name": "Format parameter as a currency number"
+    },
+    "format_as_percentage": {
+      "code": " %% , this format specifier prints the '%' character",
+      "name": "Format parameter as a percentage number"
+    },
+    "format_number_with_separators": {
+      "not-implemented": "true",
+      "name": "Format number with thousand separators"
+    },
+    "format_number_with_positive_negative_sign": {
+      "not-implemented": "true",
+      "name": "Format number with positive/negative signs"
+    },
+    "format_number_in_scientific_notation_little_e": {
+      "not-implemented": "true",
+      "name": "Format number with scientific notation with 'e'"
+    },
+    "format_number_in_scientific_notation_big_e": {
+      "not-implemented": "true",
+      "name": "Format number with scientific notation with 'E'"
+    },
+    "format_number_in_binary": {
+      "not-implemented": "true",
+      "name": "Format number into binary"
+    },
+    "format_number_in_octal": {
+      "code": "printf(\"%o\", a); // int a = 67",
+      "name": "Format number into octal"
+    },
+    "format_number_in_hexadecimal": {
+      "code": "printf(\"%x\", a); // int a = 15454",
+      "name": "Format number into hexadecimal"
+    }
+  }
+}
