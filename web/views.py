@@ -174,8 +174,7 @@ def concepts(request):
 
     if errors:
         return render_errors(request, errors)
-
-    
+        
     store_lookup_info(
         request,
         visit,
