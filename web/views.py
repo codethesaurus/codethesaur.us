@@ -174,17 +174,16 @@ def concepts(request):
 
     if errors:
         return render_errors(request, errors)
-
-    if len(languages) == 2:
-        store_lookup_info(
-            request,
-            visit,
-            languages[0].key,
-            languages[0].version,
-            languages[1].key,
-            languages[1].version,
-            meta_structure.key
-        )
+        
+    store_lookup_info(
+        request,
+        visit,
+        languages[0].key,
+        languages[0].version,
+        languages[1].key if len(languages) > 1 else "",
+        languages[1].version if len(languages) > 1 else "",
+        meta_structure.key
+    )
 
     all_categories = []
 
