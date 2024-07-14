@@ -38,4 +38,4 @@ tzdata==2023.3
 webencodings==0.5.1
 whitenoise==6.6.0
 wrapt==1.15.0
-zipp==3.6.0
+zipp==3.19.1
