@@ -1,112 +1,107 @@
 {
-    "meta": {
-      "language": "kotlin",
-      "language_version": "1.5",
-      "language_name": "Kotlin",
-      "structure": "classes"
+  "meta": {
+    "language": "kotlin",
+    "language_version": "1.5",
+    "language_name": "Kotlin",
+    "structure": "classes"
+  },
+  "concepts": {
+    "normal_class": {
+      "code": "class ClassName {\n    // Class body containing properties and methods\n}",
+      "name": "Normal class"
     },
-    "concepts": {
-      "normal_class": {
-        "code": "class ClassName {\n // Class body containing properties and methods \n}",
-        "name": "Normal class"
-      },
-      "abstract_class": {
-        "code": "abstract class ClassName {\n // Class body containing abstract methods \n}",
-        "name": "Abstract class"
-      },
-      "interface": {
-        "code": "interface InterfaceName {\n // Interface body containing method declarations \n}",
-        "name": "Interface"
-      },
-      "read_only_class": {
-        "code": "class ClassName(val property: Type) {\n // Only getter methods are provided \n}",
-        "name": "Read-only class"
-      },
-      "static_class": {
-        "code": "class ClassName {\n companion object {\n // Static properties and methods \n}\n}",
-        "name": "Static class"
-      },
-      "inner_class": {
-        "code": "class OuterClassName {\n inner class InnerClassName {\n // Inner class body \n}\n}",
-        "name": "Inner class"
-      },
-      "packages": {
-        "code": "package PackageName",
-        "comment": "Packages are declared at the beginning of the file using the package keyword.",
-        "name": "Packages"
-      },
-      "class_with_generic_type": {
-        "code": "class ClassName<T> {\n var property: T\n}",
-        "comment": "Kotlin generic classes are defined with a type parameter in angle brackets.",
-        "name": "Class with a generic type"
-      },
-      "private_variables": {
-        "code": "private var variableName: Type = value",
-        "name": "Defining private variables"
-      },
-      "protected_variables": {
-        "code": "protected var variableName: Type = value",
-        "name": "Defining protected variables"
-      },
-      "public_variables": {
-        "code": "var variableName: Type = value",
-        "comment": "Variables are public by default in Kotlin.",
-        "name": "Defining public variables"
-      },
-      "static_variables": {
-        "code": "class ClassName {\n companion object {\n var staticVar: Type = value\n}\n}",
-        "name": "Defining static variables"
-      },
-      "private_functions": {
-        "code": "private fun methodName() {\n // Method body \n}",
-        "name": "Defining private functions"
-      },
-      "protected_functions": {
-        "code": "protected fun methodName() {\n // Method body \n}",
-        "name": "Defining protected functions"
-      },
-      "public_functions": {
-        "code": "fun methodName() {\n // Method body \n}",
-        "name": "Defining public functions"
-      },
-      "static_functions": {
-        "code": "class ClassName {\n companion object {\n fun methodName() {\n // Method body \n}\n}\n}",
-        "name": "Defining static functions"
-      },
-      "extends_class": {
-        "code": "class ChildClassName : ParentClassName() {\n // Class body \n}",
-        "name": "Class that inherits/extends another class"
-      },
-      "extending_interface": {
-        "code": "class ClassName : InterfaceName {\n // Class body \n}",
-        "name": "Class/Interface that inherits/extends another class/interface"
-      },
-      "calling_superclass_functions": {
-        "code": "super.methodName()",
-        "name": "Calling a superclass function"
-      },
-      "overriding_superclass_functions": {
-        "code": "override fun methodName() {\n // Overridden method body \n}",
-        "name": "Overriding a superclass function"
-      },
-      "instantiating_object": {
-        "code": "val obj = ClassName()",
-        "name": "Instantiating a new object"
-      },
-      "instantiating_polymorphic_object": {
-        "code": "val obj: InterfaceName = ClassName()",
-        "comment": "An object can be instantiated as a polymorphic type.",
-        "name": "Instantiating a polymorphic object"
-      },
-      "implement_constructor": {
-        "code": "class ClassName(val property: Type) {\n init {\n // Constructor body \n}\n}",
-        "name": "Implementing a class constructor"
-      },
-      "implement_deconstructor": {
-        "not-implemented": true,
-        "comment": "Kotlin does not have destructors like C++.",
-        "name": "Implementing a class deconstructor"
-      }
+    "abstract_class": {
+      "code": "abstract class ClassName {\n    // Class body containing abstract methods\n}",
+      "name": "Abstract class"
+    },
+    "interface": {
+      "code": "interface InterfaceName {\n    // Interface body containing method declarations\n}",
+      "name": "Interface"
+    },
+    "read_only_class": {
+      "code": "class ClassName(val property: Type) {\n    // Only getter methods are provided\n}",
+      "name": "Read-only class"
+    },
+    "static_class": {
+      "code": "class ClassName {\n    companion object {\n        // Static properties and methods\n    }\n}",
+      "name": "Static class"
+    },
+    "inner_class": {
+      "not-implemented": true,
+      "name": "Inner class"
+    },
+    "packages": {
+      "comment": "Use 'import' keyword to include packages.",
+      "not-implemented": true,
+      "name": "Packages"
+    },
+    "class_with_generic_type": {
+      "code": "class ClassName<T> {\n    // Class body with generic type T\n}",
+      "name": "Class with a generic type"
+    },
+    "private_variables": {
+      "code": "private var variableName: Type = value",
+      "name": "Defining private variables"
+    },
+    "protected_variables": {
+      "code": "protected var variableName: Type = value",
+      "name": "Defining protected variables"
+    },
+    "public_variables": {
+      "code": "var variableName: Type = value",
+      "name": "Defining public variables"
+    },
+    "static_variables": {
+      "code": "companion object {\n    var variableName: Type = value\n}",
+      "name": "Defining static variables"
+    },
+    "private_functions": {
+      "code": "private fun methodName() {\n    // Method body\n}",
+      "name": "Defining private functions"
+    },
+    "protected_functions": {
+      "code": "protected fun methodName() {\n    // Method body\n}",
+      "name": "Defining protected functions"
+    },
+    "public_functions": {
+      "code": "fun methodName() {\n    // Method body\n}",
+      "name": "Defining public functions"
+    },
+    "static_functions": {
+      "code": "companion object {\n    fun methodName() {\n        // Method body\n    }\n}",
+      "name": "Defining static functions"
+    },
+    "extends_class": {
+      "code": "class ChildClassName : ParentClassName() {\n    // Class body containing variables and methods\n}",
+      "name": "Class that inherits/extends another class"
+    },
+    "extending_interface": {
+      "code": "class ClassName : InterfaceName {\n    // Class body containing variables and methods\n}",
+      "name": "Class/Interface that inherits/extends another class/interface"
+    },
+    "calling_superclass_functions": {
+      "code": "super.methodName()",
+      "name": "Calling a superclass function"
+    },
+    "overriding_superclass_functions": {
+      "code": "class ChildClassName : ParentClassName() {\n    override fun methodName() {\n        // Overriding method body\n    }\n}",
+      "name": "Overriding a superclass function"
+    },
+    "instantiating_object": {
+      "code": "val objectName = ClassName()",
+      "name": "Instantiating a new object"
+    },
+    "instantiating_polymorphic_object": {
+      "code": "val objectName: InterfaceName = ClassName()",
+      "name": "Instantiating a polymorphic object"
+    },
+    "implement_constructor": {
+      "code": "class ClassName(val property: Type) {\n    init {\n        // Constructor body\n    }\n}",
+      "name": "Implementing a class constructor"
+    },
+    "implement_deconstructor": {
+      "not-implemented": true,
+      "name": "Implementing a class deconstructor"
     }
   }
-  
+}
