@@ -1,0 +1,51 @@
+{
+    "meta": {
+      "language": "kotlin",
+      "language_name": "Kotlin",
+      "structure": "control_structures",
+      "language_version": "1.5"
+    },
+    "concepts": {
+      "if_conditional": {
+        "name": "If conditional",
+        "code": "if (condition) {\n    // statements\n}"
+      },
+      "if_else_conditional": {
+        "name": "If/Else conditional",
+        "code": "if (condition) {\n    // statements\n} else {\n    // statements\n}"
+      },
+      "if_elseif_conditional": {
+        "name": "If/ElseIf conditional",
+        "code": "if (condition) {\n    // statements\n} else if (condition) {\n    // statements\n}"
+      },
+      "if_elseif_else_conditional": {
+        "name": "If/ElseIf/Else conditional",
+        "code": "if (condition) {\n    // statements\n} else if (condition) {\n    // statements\n} else {\n    // statements\n}"
+      },
+      "ternary_conditional": {
+        "name": "Ternary conditional",
+        "code": "val result = if (condition) valueIfTrue else valueIfFalse"
+      },
+      "switch_statement": {
+        "name": "Switch statement",
+        "code": "when (expression) {\n    value1 -> {\n        // statements\n    }\n    value2 -> {\n        // statements\n    }\n    else -> {\n        // statements\n    }\n}"
+      },
+      "while_loop": {
+        "name": "While loop",
+        "code": "while (condition) {\n    // statements\n}"
+      },
+      "do_while_loop": {
+        "name": "Do/While loop",
+        "code": "do {\n    // statements\n} while (condition)"
+      },
+      "for_loop": {
+        "name": "For loop",
+        "code": "for (item in collection) {\n    // statements\n}"
+      },
+      "foreach_loop": {
+        "name": "Foreach loop",
+        "code": "collection.forEach { item ->\n    // statements\n}"
+      }
+    }
+  }
+   

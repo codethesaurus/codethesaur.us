@@ -1,0 +1,71 @@
+{
+    "meta": {
+      "language": "kotlin",
+      "language_name": "Kotlin",
+      "structure": "data_types",
+      "language_version": "1.5"
+    },
+    "concepts": {
+      "boolean": {
+        "name": "Boolean",
+        "code": "Boolean"
+      },
+      "signed_integer_8_bit": {
+        "name": "Signed 8-bit integer",
+        "code": "Byte"
+      },
+      "signed_integer_16_bit": {
+        "name": "Signed 16-bit integer",
+        "code": "Short"
+      },
+      "signed_integer_32_bit": {
+        "name": "Signed 32-bit integer",
+        "code": "Int"
+      },
+      "signed_integer_64_bit": {
+        "name": "Signed 64-bit integer",
+        "code": "Long"
+      },
+      "signed_integer_as_object": {
+        "name": "Signed object-based Integer",
+        "code": "Int"
+      },
+      "signed_float_16_bit": {
+        "name": "Signed 16-bit floating point",
+        "not-implemented": true
+      },
+      "signed_float_32_bit": {
+        "name": "Signed 32-bit floating point",
+        "code": "Float"
+      },
+      "signed_float_64_bit": {
+        "name": "Signed 64-bit floating point",
+        "code": "Double"
+      },
+      "signed_float_as_object": {
+        "name": "Signed object-based floating point",
+        "code": "Float"
+      },
+      "string_as_object": {
+        "name": "String as an object",
+        "code": "String"
+      },
+      "string_as_array": {
+        "name": "String as an array of characters",
+        "code": "CharArray"
+      },
+      "complex_as_object": {
+        "name": "Complex Number as an object",
+        "not-implemented": true
+      },
+      "real_number_part": {
+        "name": "Complex number real part",
+        "not-implemented": true
+      },
+      "imaginary_number_part": {
+        "name": "Complex number imaginary part",
+        "not-implemented": true
+      }
+    }
+  }
+  
