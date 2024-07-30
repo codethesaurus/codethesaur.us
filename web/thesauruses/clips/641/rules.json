@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "language": "clips",
+    "language_version": "6.4.1",
+    "language_name": "CLIPS",
+    "structure": "rules"
+  },
+  "concepts": {
+    "assert": {
+      "code": [
+        "(defrule my-rule",
+	"    (my-fact ?value)", 
+	"=>",
+        "(println \"My value: \" ?value))"
+      ],
+      "name": "Defining a Rule in the CLIPS environment"
+    },
+    "undefrule": {
+      "code": "(undefrule my-rule)",
+      "name": "Deleting a Rule from the CLIPS environment"
+    }
+  }
+}
+
