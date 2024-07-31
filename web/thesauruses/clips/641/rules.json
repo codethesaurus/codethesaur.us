@@ -6,18 +6,18 @@
     "structure": "rules"
   },
   "concepts": {
-    "assert": {
+    "defrule": {
       "code": [
         "(defrule my-rule",
 	"    (my-fact ?value)", 
 	"=>",
         "(println \"My value: \" ?value))"
       ],
-      "name": "Defining a Rule in the CLIPS environment"
+      "name": "Creating a Defrule in the CLIPS environment"
     },
     "undefrule": {
       "code": "(undefrule my-rule)",
-      "name": "Deleting a Rule from the CLIPS environment"
+      "name": "Deleting a Defrule from the CLIPS environment"
     }
   }
 }

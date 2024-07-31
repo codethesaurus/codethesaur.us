@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "structure": "rules",
+    "structure_name": "Rules"
+  },
+  "categories": {
+    "Defining Rules": {
+	"defrule": "Defining Rules"
+    },
+    "Undefining Rules": {
+	"undefrule": "Undefining Rules"
+    }
+}

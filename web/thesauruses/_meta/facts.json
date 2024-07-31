@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "structure": "facts",
+    "structure_name": "Facts"
+  },
+  "categories": {
+    "Asserting Facts": {
+	"assert": "Asserting Facts"
+    },
+    "Retracting Facts": {
+	"retract": "Retracting Facts"
+    }
+}
