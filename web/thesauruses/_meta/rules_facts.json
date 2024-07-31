@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "structure": "rules_facts",
+    "structure_name": "Rules and Facts"
+  },
+  "categories": {
+    "Defining Rules": {
+	"defrule": "Defining Rules"
+    },
+    "Undefining Rules": {
+	"undefrule": "Undefining Rules"
+    },
+    "Asserting Facts": {
+	"assert": "Asserting Facts"
+    },
+    "Retracting Facts": {
+	"retract": "Retracting Facts"
+    }
+  }
+}

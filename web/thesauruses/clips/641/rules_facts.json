@@ -3,7 +3,7 @@
     "language": "clips",
     "language_version": "6.4.1",
     "language_name": "CLIPS",
-    "structure": "rules"
+    "structure": "rules_facts"
   },
   "concepts": {
     "defrule": {
@@ -18,6 +18,14 @@
     "undefrule": {
       "code": "(undefrule my-rule)",
       "name": "Deleting a Defrule from the CLIPS environment"
+    },
+    "assert": {
+      "code": "(assert (my-fact foo))",
+      "name": "Assert Fact(s) into working memory"
+    },
+    "retract": {
+      "code": "(retract 1)",
+      "name": "Retract existing Fact in working memory"
     }
   }
 }
