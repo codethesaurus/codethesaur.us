@@ -5,10 +5,10 @@
   },
   "categories": {
     "Defining Rules": {
-	"defrule": "Defining Rules"
+	"defining_rules": "Defining Rules"
     },
     "Undefining Rules": {
-	"undefrule": "Undefining Rules"
+	"undefining_rules": "Undefining Rules"
     },
     "Asserting Facts": {
 	"assert": "Asserting Facts"
