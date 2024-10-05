@@ -5,6 +5,7 @@
     "c": "C",
     "cpp": "C++",
     "csharp": "C#",
+    "clips": "CLIPS",
     "clojure": "Clojure",
     "go": "Go",
     "haskell": "Haskell",
@@ -37,6 +38,7 @@
     "lists": "Lists, Arrays, and Hashed Lists",
     "operators": "Logical and Mathematical/Arithmetic Operators",
     "queues_stacks": "Queues and Stacks",
+    "rules_facts": "Rules and Facts",
     "strings": "Strings"
   }
 }
