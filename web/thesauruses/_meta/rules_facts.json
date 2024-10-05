@@ -4,17 +4,13 @@
     "structure_name": "Rules and Facts"
   },
   "categories": {
-    "Defining Rules": {
-	"defining_rules": "Defining Rules"
+    "Rules": {
+      "defining_rules": "Defining Rules",
+      "undefining_rules": "Undefining Rules"
     },
-    "Undefining Rules": {
-	"undefining_rules": "Undefining Rules"
-    },
-    "Asserting Facts": {
-	"assert": "Asserting Facts"
-    },
-    "Retracting Facts": {
-	"retract": "Retracting Facts"
+    "Facts": {
+	  "asserting_facts": "Asserting Facts",
+      "retracting_facts": "Retracting Facts"
     }
   }
 }

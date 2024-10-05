@@ -6,7 +6,7 @@
     "structure": "rules_facts"
   },
   "concepts": {
-    "defrule": {
+    "defining_rules": {
       "code": [
         "(defrule my-rule",
 	"    (my-fact ?value)", 
@@ -15,15 +15,15 @@
       ],
       "name": "Creating a Defrule in the CLIPS environment"
     },
-    "undefrule": {
+    "undefining_rules": {
       "code": "(undefrule my-rule)",
       "name": "Deleting a Defrule from the CLIPS environment"
     },
-    "assert": {
+    "asserting_facts": {
       "code": "(assert (my-fact foo))",
       "name": "Assert Fact(s) into working memory"
     },
-    "retract": {
+    "retracting_facts": {
       "code": "(retract 1)",
       "name": "Retract existing Fact in working memory"
     }
