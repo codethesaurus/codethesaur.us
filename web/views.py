@@ -16,6 +16,8 @@ from django.utils.html import escape, strip_tags
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
+from pygments.util import ClassNotFound
+from django.conf import settings
 
 from web.models import (
     Language,
@@ -307,6 +309,14 @@ def error_handler_500_server_error(request):
     response = render(request, 'error500.html')
     return HttpResponseServerError(response)
 
+#get lexer 
+def get_highlighter(language):
+    SIMILAR_LEXERS = settings.SIMILAR_LEXERS
+    try:
+        lexer = get_lexer_by_name(language, startinline=True)
+    except ClassNotFound:
+        lexer = get_lexer_by_name(SIMILAR_LEXERS.get(language, "text"), startinline=True)
+    return lexer
 
 # Helper functions
 def format_code_for_display(concept_key, lang):
@@ -322,9 +332,10 @@ def format_code_for_display(concept_key, lang):
     if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
         return "Unknown"
     if lang.concept_implemented(concept_key):
+        lexer = get_highlighter(lang.key)
         return highlight(
             lang.concept_code(concept_key),
-            get_lexer_by_name(lang.key, startinline=True),
+            lexer,
             HtmlFormatter()
         )
     return None
