@@ -315,7 +315,6 @@ def get_highlighter(language):
     try:
         lexer = get_lexer_by_name(language, startinline=True)
     except ClassNotFound:
-        
         lexer = get_lexer_by_name(SIMILAR_LEXERS.get(language, "text"), startinline=True)
     return lexer
 
