@@ -1,0 +1,35 @@
+<h1>Visit Statistics</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Page Name</th>
+            <th>Visit Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% visitStats.forEach(stat => { %>
+            <tr>
+                <td><%= stat.page_name %></td>
+                <td><%= stat.visit_count %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<h1>Missing Data Statistics</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Requested Item</th>
+            <th>Missing Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% missingDataStats.forEach(stat => { %>
+            <tr>
+                <td><%= stat.requested_item %></td>
+                <td><%= stat.missing_count %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
