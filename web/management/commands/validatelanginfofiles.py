@@ -46,39 +46,39 @@ class Command(BaseCommand):
 
                         if not language:
                             print(
-                                "[Error] `" + relative_path_name + "` has an empty `language` attribute and needs to be updated")
+                                f"[Error] `{relative_path_name}` has an empty `language` attribute and needs to be updated")
                             error_count += 1
                         elif language == "language_id":
                             print(
-                                "[Error] `" + relative_path_name + "` has the default `language` attribute and needs to be updated")
+                                f"[Error] `{relative_path_name}` has the default `language` attribute and needs to be updated")
                             error_count += 1
                         elif not language == lang_dir:
                             print(
-                                "[Error] `" + relative_path_name + "` has a `language` attribute that should be `" + lang_dir + "` and needs to be updated")
+                                f"[Error] `{relative_path_name}` has a `language` attribute that should be `{lang_dir}` and needs to be updated")
                             error_count += 1
 
                         if not language_version:
                             print(
-                                "[Error] `" + relative_path_name + "` has an empty `language_version` attribute and needs to be updated")
+                                f"[Error] `{relative_path_name}` has an empty `language_version` attribute and needs to be updated")
                             error_count += 1
                         elif language_version == "version.number":
                             print(
-                                "[Error] `" + relative_path_name + "` has the default `language_version` attribute and needs to be updated")
+                                f"[Error] `{relative_path_name}` has the default `language_version` attribute and needs to be updated")
                             error_count += 1
 
                         if not language_name:
                             print(
-                                "[Error] `" + relative_path_name + "` has an empty `language_name` attribute and needs to be updated")
+                                f"[Error] `{relative_path_name}` has an empty `language_name` attribute and needs to be updated")
                             error_count += 1
                         elif language_name == "Human-Friendly Language Name" or language_name == "Human-Readable Language Name":
                             print(
-                                "[Error] `" + relative_path_name + "` has the default `language_name` attribute and needs to be updated")
+                                f"[Error] `{relative_path_name}` has the default `language_name` attribute and needs to be updated")
                             error_count += 1
 
                         #       Ensure categories aren't in file
                         if "categories" in meta_structure_file_json:
                             print(
-                                "[Error] `" + relative_path_name + "` has a `categories` section in it, which is now deprecated")
+                                f"[Error] `{relative_path_name}` has a `categories` section in it, which is now deprecated")
                             error_count += 1
 
                         #       Ensure name lines are removed
@@ -88,8 +88,8 @@ class Command(BaseCommand):
                             # This generates SO many warnings that I'm commenting it out for now. Consider uncommenting
                             # when more errors and such have been resolved
                             # if "name" in structure_item_data:
-                            #     print(
-                            #         "[Warn] `" + relative_path_name + "`, ID: `" + item + "` has a `name` line that can be removed")
+                            #     print(f"[Warn] `{relative_path_name}`, ID: `{item}` has a `name` line that can be "
+                            #           f"removed")
                             #     warning_count += 1
 
                             #       Ensure there's either code or not-implemented
@@ -100,44 +100,45 @@ class Command(BaseCommand):
 
                             #       Ensure they use not-implemented (hyphen) not not_implemented (underscore)
                             if has_not_underscore_implemented:
-                                print("[Error] `" + relative_path_name + "`, ID: `" + item +
-                                      "` has not_implemented (underscore) when it should use not-implemented (hyphen)")
+                                print(f"[Error] `{relative_path_name}`, ID: `{item}` has not_implemented (underscore) "
+                                      f"when it should use not-implemented (hyphen)")
                                 error_count += 1
 
                             if has_code and (has_not_implemented or has_not_underscore_implemented):
                                 print(
-                                    "[Error] `" + relative_path_name + "`, ID: `" + item + "` should have `code` or `not-implemented`, not both")
+                                    f"[Error] `{relative_path_name}`, ID: `{item}` should have `code` or "
+                                    f"`not-implemented`, not both")
                                 error_count += 1
 
                             if not has_code and not has_not_implemented and not has_not_underscore_implemented:
                                 print(
-                                    "[Error] `" + relative_path_name + "`, ID: `" + item + "` is missing a needed `code` or `not-implemented` line")
+                                    f"[Error] `{relative_path_name}`, ID: `{item}` is missing a needed `code` or "
+                                    f"`not-implemented` line")
                                 error_count += 1
 
                             #       Ensure if not-implemented, there's no code line
                             if has_not_implemented and structure_item_data["not-implemented"] is True and has_code:
-                                print("[Error] `" + relative_path_name + "`, ID: `" + item +
-                                      "` is not implemented, but has a `code` line that should be removed")
+                                print(f"[Error] `{relative_path_name}`, ID: `{item}` is not implemented, but has a "
+                                      f"`code` line that should be removed")
                                 error_count += 1
 
                             #     Ensure if code, it's not empty and there's no not-implemented
                             if has_code and not structure_item_data["code"] and not has_not_implemented:
-                                print("[Error] `" + relative_path_name + "`, ID: `" + item +
-                                      "` is confusing: `code` is empty but there's no `not-implemented` either")
+                                print(f"[Error] `{relative_path_name}`, ID: `{item}` is confusing: `code` is empty "
+                                      f"but there's no `not-implemented` either")
                                 error_count += 1
 
                             #       Ensure it's comment, not comments
                             if has_comments_plural:
-                                print("[Error] `" + relative_path_name + "`, ID: `" + item +
-                                      "` has `comments` (plural) that should be `comment` (singular) instead")
+                                print(f"[Error] `{relative_path_name}`, ID: `{item}` has `comments` (plural) that "
+                                      f"should be `comment` (singular) instead")
                                 error_count += 1
 
                             #       Code can be string or array (maybe warn if string)
                             # if has_code and isinstance(structure_item_data["code"], str):
-                                # print("[Warning] `" +
-                                #     relative_path_name + "`, ID: `" + item +
-                                #     "` has a `code` line that's a string and could optionally be an array")
-                                # warning_count += 1
+                            #     print(f"[Warning] `{relative_path_name}`, ID: `{item}` has a `code` line that's a "
+                            #           f"string and could optionally be an array")
+                            #     warning_count += 1
 
                             #       There shouldn't be any other fields
                             for key in structure_item_data:
@@ -147,9 +148,10 @@ class Command(BaseCommand):
                                         or key == "not-implemented"
                                         or key == "not_implemented"
                                         or key == "name"):
-                                    # Why "not_implemented"/"name"/"comments"? Because we check for them above, this checks for other exceptions
-                                    print("[Warning] `" + relative_path_name + "`, ID: `" + item +
-                                          "` has a line `" + key + "` that's unknown")
+                                    # Why "not_implemented"/"name"/"comments"? Because we check for them above,
+                                    # this checks for other exceptions
+                                    print(f"[Warning] `{relative_path_name}`, ID: `{item}` has a line `{key}` that's "
+                                          f"unknown")
                                     warning_count += 1
 
         if warning_count + error_count > 0:
