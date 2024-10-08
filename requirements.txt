@@ -5,7 +5,7 @@ bleach==6.1.0
 colorama==0.4.6
 dill==0.3.7
 dj-database-url==2.1.0
-Django==4.2.15
+Django==4.2.16
 django-markdownify==0.9.3
 django-on-heroku==1.1.2
 gunicorn==22.0.0
