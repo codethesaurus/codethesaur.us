@@ -1,10 +1,9 @@
 """codethesaur.us views"""
 import logging
-import random
 import os
+import random
 
-from jsonmerge import merge
-
+from django.conf import settings
 from django.http import (
     HttpResponseBadRequest,
     HttpResponseForbidden,
@@ -13,12 +12,13 @@ from django.http import (
 )
 from django.shortcuts import HttpResponse, render
 from django.utils.html import escape, strip_tags
+from django.views.decorators.http import require_http_methods
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers import get_lexer_by_name
 from pygments.util import ClassNotFound
-from django.conf import settings
 
+from codethesaurus.settings import BASE_DIR
 from web.models import (
     Language,
     LookupData,
@@ -28,8 +28,6 @@ from web.models import (
     SiteVisit,
 )
 from web.thesaurus_template_generators import generate_language_template
-
-from codethesaurus.settings import BASE_DIR
 
 
 def store_url_info(request):
@@ -64,6 +62,7 @@ def store_lookup_info(request, visit, language1, version1, language2, version2, 
     info.save()
 
 
+@require_http_methods(['GET'])
 def index(request):
     """
     Renders the home page (/)
@@ -115,6 +114,7 @@ def index(request):
     return render(request, 'index.html', content)
 
 
+@require_http_methods(['GET'])
 def about(request):
     """
     Renders the about page (/about)
@@ -131,6 +131,7 @@ def about(request):
     return render(request, 'about.html', content)
 
 
+@require_http_methods(['GET'])
 def concepts(request):
     """
     Renders the page comparing two language structures (/compare)
@@ -220,6 +221,7 @@ def concepts(request):
     return render_concepts(request, languages, meta_structure, all_categories)
 
 
+@require_http_methods(['GET'])
 def render_concepts(request, languages, structure, all_categories):
     """Renders the `structure` page for all `languages`"""
 

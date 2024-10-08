@@ -26,6 +26,42 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'about.html')
         self.assertTemplateUsed(response, 'base.html')
 
+    def test_index_view_not_GET(self):
+        """test that index shouldn't allow POST/PUT/etc."""
+        url = reverse('index')
+        response = self.client.post(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+        response = self.client.put(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+        response = self.client.head(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+        response = self.client.options(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+        response = self.client.delete(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+    def test_about_view_not_GET(self):
+        """test that about shouldn't allow POST/PUT/etc."""
+        url = reverse('about')
+        response = self.client.post(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+        response = self.client.put(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+        response = self.client.head(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+        response = self.client.options(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
+        response = self.client.delete(url)
+        self.assertEqual(response.status_code, HTTPStatus.METHOD_NOT_ALLOWED)
+
     def test_invalid_page_gives_404_error(self):
         """ test if a page that doesn't exist returns a 404"""
         url = 'no_real_page'
