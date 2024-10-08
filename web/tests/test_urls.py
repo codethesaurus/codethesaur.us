@@ -1,6 +1,8 @@
 """Tests for codethesaur.us urls"""
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
+from django.urls.exceptions import NoReverseMatch
+
 from web.views import index, about, concepts, api_reference, api_compare
 
 
@@ -36,3 +38,8 @@ class TestUrls(SimpleTestCase):
         """ensure the api compare url uses the api function"""
         url = reverse(api_compare, args=['classes', 'javascript', 'ECMAScript 2023', 'java', 'java17'])
         self.assertEqual(resolve(url).func, api_compare)
+
+    def test_not_existing_reverse(self):
+        with self.assertRaises(NoReverseMatch):
+            url = reverse('this_page_name_doesnt_exist')
+            resolve(url)
