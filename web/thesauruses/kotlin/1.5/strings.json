@@ -34,7 +34,7 @@
     },
     "destroy_string": {
       "name": "Destroy string",
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "length_of_string": {
       "name": "Length of string",
@@ -78,7 +78,7 @@
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
@@ -186,19 +186,19 @@
     },
     "encode_html_entities": {
       "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "decode_html_entities": {
       "name": "Decode HTML entitles into characters",
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "encode_url_percent": {
       "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "decode_url_percent": {
       "name": "Decode URL percent encoding",
-      "not-implemented": "true"
+      "not-implemented": true
     },
     "encode_to_base64": {
       "name": "Encode string into Base64 format",
