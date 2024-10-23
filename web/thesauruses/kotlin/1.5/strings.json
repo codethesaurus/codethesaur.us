@@ -21,16 +21,16 @@
     },
     "create_new_string": {
       "name": "Create new string",
-      "code": "val myString: String = \"......\";"
+      "code": "val myString: String = \"......\""
     },
     "create_multiline_string": {
       "name": "Create new multi-line string",
-      "code": "String variableName = \"Line 1\n  Line2\n  Line3\";",
+      "code": "val multiLineString = \"Line 1\n  Line2\n  Line3\";",
       "comment": "Multiline literal implementation does not exist in Kotlin."
     },
     "assign_new_string": {
       "name": "Assign string from another string",
-      "code": "String stringOne = \"A new string.\";\nString stringTwo = stringOne;"
+      "code": "val stringOne = \"A new string.\";\nval stringTwo = stringOne;"
     },
     "destroy_string": {
       "name": "Destroy string",
@@ -38,7 +38,7 @@
     },
     "length_of_string": {
       "name": "Length of string",
-      "code": "variableName.length();\n\"Word\".length();"
+      "code": "variableName.length\n\"Word\".length"
     },
     "max_length_of_string": {
       "name": "Maximum length of string",
@@ -46,32 +46,35 @@
     },
     "clear_string": {
       "name": "Clear/empty string",
-      "code": "stringVariableYouWantEmptied = \"\";"
+      "code": "val stringVariableYouWantEmptied = \"\"\nval emptyString: String = String()"
     },
     "is_empty": {
       "name": "Is string empty?",
-      "code": "boolean results = (stringVariable == null || stringVariable.length() == 0);",
-      "comment": "The results boolean will return true if the string is null or is an empty string."
+      "code": "val results: Boolean = (stringVariable == null || \nstringVariable.length == 0)",
+      "comment": "The results Boolean will return true if the string is null or is an empty string."
     },
     "concatenate_two_strings": {
       "name": "Concatenate/join two strings",
-      "code": "String str1 = \"Hello \";\n\"String str2 = \"World\";\nString str3 = str1 + str2;"
+      "code": "val str1 = \"Hello \"\n\"val str2 = \"World\"\nString str3 = str1 + str2"
     },
     "concatenate_many_strings": {
       "name": "Concatenate/join many strings",
-      "code": "String str1 = \"Hello \";\n\"String str2 = \"World\";\n\"String str3 = \"I\";\n\"String str4 = \"am\";\n\"String str5 = \"a computer!\";\nString results = str1 + str2 + str3 + str4 + str5;"
+      "code": "val str1 = \"Hello \"\nval str2 = \"World\";\nval str3 = \"I\";\nval str4 = \"am\";\nval str5 = \"a computer!\";\nval results = str1 + str2 + str3 + str4 + str5;"
     },
     "is_all_alphabetical": {
       "name": "Is string all alphabetical characters?",
-      "not-implemented": "true"
+      "code": "val isAllAlphabetical1 = str1.all { it.isLetter() }",
+      "comment": "You can use isLetter to check if the string contains all alphabets"
     },
     "is_all_numerical": {
       "name": "Is string all numerical characters?",
-      "not-implemented": "true"
+      "code": "val isAllNumerical1 = str1.all { it.isDigit() }",
+      "comment": "You can use isDigit to check if the string contains all numbers"
     },
     "is_all_alphanumeric": {
       "name": "Is string all alphanumeric characters?",
-      "not-implemented": "true"
+      "code": "val isAllAlphanumeric1 = str1.all { it.isLetterOrDigit() }",
+      "comment": "You can use isLetterOrDigit to check if the string contains letters and alphabets"
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
@@ -79,35 +82,35 @@
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
-      "code": "boolean results = str.trim().isEmpty();",
-      "comment": "Boolean results is true if string was all white space."
+      "code": "val isAllWhitespace1 = str1.all { it.isWhitespace() }",
+      "comment": "You can use isWhitespace to check if the string contains all whitespaces"
     },
     "is_all_uppercase": {
       "name": "Is string all uppercase characters?",
-      "code": "boolean isUppercase = str.equals(str.toUpperCase());",
-      "comment": "Boolean isUppercase is true if string is all uppercase."
+      "code": "input.all { it.isUpperCase() }",
+      "comment": "isUpperCase is true if string is all uppercase."
 
     },
     "is_all_lowercase": {
       "name": "Is string all lowercase characters?",
-      "code": "boolean isLowercase = str.equals(str.toLowerCase());",
-      "comment": "Boolean isLowercase becomes true if string is all lowercase."
+      "code": "val isAllLowercase = str.all { it.isLowerCase() }",
+      "comment": "You can use isLowerCase to check if the string contains all whitespaces"
     },
     "is_in_titlecase": {
       "name": "Is string formatted in title case?",
-      "not-implemented": "true"
+      "code": "val isTitleCase = str.split(\" \").all { it.isNotEmpty() && \n it[0].isUpperCase() && it.substring(1).all { char -> char.isLowerCase() } }"
     },
     "does_substring_exist": {
       "name": "Does a substring exist in a string?",
-      "code": "str.contains(subString);"
+      "code": "str.contains(subString)"
     },
     "find_start_index_of_substring": {
       "name": "Find index of where a substring starts",
-      "code": "str.indexOf(subString);"
+      "code": "str.indexOf(subString)"
     },
     "find_start_index_of_additional_substring": {
       "name": "Find index of an additional substring (or starting at another index)",
-      "code": "str.indexOf(subString, startIndex);"
+      "code": "str.indexOf(subString, startIndex)"
     },
     "find_start_index_of_substring_from_end": {
       "name": "Find substring index starting at end",
@@ -115,24 +118,25 @@
     },
     "count_occurrences_of_substring": {
       "name": "Find number of occurences of a substring",
-      "code": "StringUtils.countMatches(str, findStr)",
-      "comment": "Requires StringUtils.countMatches from Apache Commons Lang"
+      "not_implemented": true
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
-      "not-implemented": "true"
+      "code": "inputString.take(n)",
+      "comment": "Returns the left n characters"
     },
     "get_rightmost_characters": {
       "name": "Get a specified number of characters from the right",
-      "not-implemented": "true"
+      "code": "inputString.takeLast(n)",
+      "comment": "Returns the right n characters"
     },
     "get_substring_from_start_and_end_index": {
       "name": "Return a substring from a string based on starting and ending indices",
-      "not-implemented": "true"
+      "code": "inputString.substring(startIndex, endIndex)"
     },
     "get_substring_from_start_index_and_length": {
       "name": "Return a substring from a string based on starting index and size of substring",
-      "code": "str.substring(startIndex, endIndex.length());",
+      "code": "str.substring(startIndex, endIndex.length)",
       "comment": "Second parameter in substring() is exclusive."
 
     },
@@ -146,39 +150,39 @@
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
-      "not-implemented": "true"
+      "not_implemented": true
     },
     "capitalize_string": {
       "name": "Capitalize first letter of a string",
-      "code": "String str = \"java\";\nString cap = str.substring(0, 1).toUpperCase() + str.substring(1);"
+      "code": "input[0].uppercaseChar() + input.substring(1)"
     },
     "remove_whitespace": {
       "name": "Remove all whitespaces from string",
-      "code": "str.replaceAll(\"\\\\s\",\"\")"
+      "code": "input.replace(\"\\s+\".toRegex(), \"\")"
     },
     "replace_substring": {
       "name": "Replace a substring with another string",
-      "code": "replace(\"abcd\", \"dddd\");"
+      "code": "replace(\"abcd\", \"dddd\")"
     },
     "replace_all_substring": {
       "name": "Replace all substring matches with another string",
-      "code": "replaceAll(\"abcd\", \"dddd\");"
+      "code": "input.replace(target, replacement)"
     },
     "split_at_index": {
       "name": "Split string into a list of strings at a given index",
-      "code": "List stringList = strings.split(\" \");"
+      "code": "input.substring(0, index) to input.substring(index)"
     },
     "split_at_newlines": {
       "name": "Split string into a list of strings at every new line character",
-      "code": "List stringList = strings.split(\"\\n\");"
+      "code": "List stringList = strings.split(\"\\n\")"
     },
     "split_at_substring": {
       "name": "Split string by locating all substrings",
-      "code": "string.split(substring);"
+      "code": "string.split(substring)"
     },
     "merge_lists_into_string": {
       "name": "Merge a list of strings into one string",
-      "code": "string.join(\" \", list);"
+      "code": "combinedList.joinToString(delimiter)"
     },
     "encode_html_entities": {
       "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
@@ -198,35 +202,35 @@
     },
     "encode_to_base64": {
       "name": "Encode string into Base64 format",
-      "code": "import java.nio.charset.StandardCharsets;\nimport java.util.Base64;\nString newString = new String(Base64.getDecoder().decode(value), StandardCharsets.UTF_8.toString());"
+      "code": "Base64.getEncoder().encodeToString(input.toByteArray())"
     },
     "decode_from_base64": {
       "name": "Decode string from Base64 format",
-      "code": "import java.nio.charset.StandardCharsets;\nimport java.util.Base64;\nString newString = new String(Base64.getDecoder().decode(value), StandardCharsets.UTF_8.toString());"
+      "code": "val decodedBytes = Base64.getDecoder().decode(encodedString)\nreturn String(decodedBytes)"
     },
     "format_string_function": {
       "name": "Function to format a string",
-      "code": "string.format()"
+      "code": "String.format(template, *values)"
     },
     "parameter_format_in_order": {
       "name": "Parameter used in format function if they're used in order",
-      "code": "Locale l, String format, Object... args"
+      "not_implemented": true
     },
     "format_as_integer": {
       "name": "Format parameter as an integer",
-      "code": "%d"
+      "code": "input.toInt()"
     },
     "format_number_in_scientific_notation_little_e": {
       "name": "Format number with scientific notation with 'e'",
-      "code": "%e"
+      "code": "String.format(\"%.6e\", number).replace('E', 'e')"
     },
     "format_number_in_octal": {
       "name": "Format number into octal",
-      "code": "%o"
+      "code": "Integer.toOctalString(number)"
     },
     "format_number_in_hexadecimal": {
       "name": "Format number into hexadecimal",
-      "code": "%x"
+      "code": "Integer.toHexString(number)"
     }
   }
 }
