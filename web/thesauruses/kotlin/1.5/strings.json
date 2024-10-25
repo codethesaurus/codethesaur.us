@@ -34,7 +34,7 @@
     },
     "destroy_string": {
       "name": "Destroy string",
-      "not_implemented": true
+      "not-implemented": true
     },
     "length_of_string": {
       "name": "Length of string",
@@ -78,7 +78,7 @@
     },
     "is_decimal": {
       "name": "Is string a decimal number?",
-      "not_implemented": true
+      "not-implemented": true
     },
     "is_all_whitespaces": {
       "name": "Is string all whitespace characters?",
@@ -118,7 +118,7 @@
     },
     "count_occurrences_of_substring": {
       "name": "Find number of occurences of a substring",
-      "not_implemented": true
+      "not-implemented": true
     },
     "get_leftmost_characters": {
       "name": "Get a specified number of characters from the left",
@@ -150,7 +150,7 @@
     },
     "convert_to_title_case": {
       "name": "Convert string to title case",
-      "not_implemented": true
+      "not-implemented": true
     },
     "capitalize_string": {
       "name": "Capitalize first letter of a string",
@@ -186,19 +186,19 @@
     },
     "encode_html_entities": {
       "name": "Encode HTML entities in a string (ex: ™ to &trade;)",
-      "not_implemented": true
+      "not-implemented": true
     },
     "decode_html_entities": {
       "name": "Decode HTML entitles into characters",
-      "not_implemented": true
+      "not-implemented": true
     },
     "encode_url_percent": {
       "name": "Encode URL percent encoding into string (ex: ' ' to %20)",
-      "not_implemented": true
+      "not-implemented": true
     },
     "decode_url_percent": {
       "name": "Decode URL percent encoding",
-      "not_implemented": true
+      "not-implemented": true
     },
     "encode_to_base64": {
       "name": "Encode string into Base64 format",
@@ -214,7 +214,7 @@
     },
     "parameter_format_in_order": {
       "name": "Parameter used in format function if they're used in order",
-      "not_implemented": true
+      "not-implemented": true
     },
     "format_as_integer": {
       "name": "Format parameter as an integer",
