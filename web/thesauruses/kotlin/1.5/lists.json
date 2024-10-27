@@ -1,0 +1,289 @@
+{
+  "meta": {
+    "language": "kotlin",
+    "language_version": "1.5",
+    "language_name": "Kotlin",
+    "structure": "lists"
+  },
+  "concepts": {
+    "name_of_ordered_mutable_list": {
+      "comment": "Provided by `MutableList` in Kotlin.",
+      "code": "MutableList",
+      "name": "What is a ordered mutable list called?"
+    },
+    "create_a_ordered_mutable_list": {
+      "comment": "Kotlin's MutableList supports generics.",
+      "code": "val myList: MutableList<Int> = mutableListOf()",
+      "name": "Create the list"
+    },
+    "ordered_mutable_list_start_number": {
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "comment": "Indexed access is efficient in a MutableList.",
+      "code": "myList[1]",
+      "name": "Access element by index"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "code": "myList.add(0, 7)",
+      "name": "Insert element at beginning"
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "code": "myList.add(10)",
+      "name": "Insert element at end"
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "comment": "Inserts element at index 1.",
+      "code": "myList.add(1, 7)",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": "myList.removeAt(0)",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": "myList.removeAt(myList.size - 1)",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "comment": "Removes element at index 1.",
+      "code": "myList.removeAt(1)",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "code": "Collections.swap(myList, index1, index2)",
+      "name": "Swap two elements"
+    },
+    "delete_ordered_mutable_list": {
+      "comment": "Setting list to null for garbage collection eligibility.",
+      "code": "myList = null",
+      "name": "Delete the list"
+    },
+    "name_of_unordered_mutable_list": {
+      "code": "HashSet",
+      "name": "What is an unordered mutable list called?"
+    },
+    "create_a_unordered_mutable_list": {
+      "code": "val mySet: MutableSet<Int> = mutableSetOf()",
+      "name": "Create the unordered mutable list"
+    },
+    "unordered_mutable_list_start_number": {
+      "code": "Unordered lists don’t have indices in Kotlin",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_unordered_mutable_list": {
+      "code": "mySet.contains(element)",
+      "name": "Access element by value"
+    },
+    "insert_into_unordered_mutable_list": {
+      "code": "mySet.add(element)",
+      "name": "Insert element in unordered list"
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "comment": "No 'beginning' in unordered lists.",
+      "code": "mySet.remove(mySet.first())",
+      "name": "Erase element (no specific order)"
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "comment": "No 'end' in unordered lists.",
+      "code": "mySet.remove(mySet.last())",
+      "name": "Erase element (no specific order)"
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "comment": "Unordered lists don't support indexed access.",
+      "code": "mySet.remove(element)",
+      "name": "Erase element (no specific order)"
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": true,
+      "name": "Swap two elements"
+    },
+    "delete_unordered_mutable_list": {
+      "comment": "Setting set to null for garbage collection eligibility.",
+      "code": "mySet = null",
+      "name": "Delete the unordered list"
+    },
+    "name_of_ordered_immutable_list": {
+      "comment": "Kotlin has immutable lists using List interface.",
+      "code": "List",
+      "name": "What is an ordered immutable list called?"
+    },
+    "create_a_ordered_immutable_list": {
+      "code": "val immutableList = listOf(1, 2, 3)",
+      "name": "Create the ordered immutable list"
+    },
+    "ordered_immutable_list_start_number": {
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "code": "immutableList[0]",
+      "name": "Access element by index"
+    },
+    "delete_ordered_immutable_list": {
+      "comment": "Setting list to null for garbage collection eligibility.",
+      "code": "immutableList = null",
+      "name": "Delete the immutable list"
+    },
+    "name_of_unordered_immutable_list": {
+      "code": "Set",
+      "name": "What is an unordered immutable list called?"
+    },
+    "create_a_unordered_immutable_list": {
+      "code": "val immutableSet = setOf(1, 2, 3)",
+      "name": "Create the unordered immutable list"
+    },
+    "unordered_immutable_list_start_number": {
+      "code": "No specific order",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "code": "immutableSet.contains(element)",
+      "name": "Access element by value"
+    },
+    "delete_unordered_immutable_list": {
+      "comment": "Setting set to null for garbage collection eligibility.",
+      "code": "immutableSet = null",
+      "name": "Delete the unordered immutable list"
+    },
+    "name_of_mutable_hashed_list": {
+      "comment": "A `LinkedHashSet` provides set semantics while preserving insertion order.",
+      "code": "LinkedHashSet",
+      "name": "What is a mutable hashed list called?"
+    },
+    "create_a_mutable_hashed_list": {
+      "code": "val myNumbers: LinkedHashMap<Int, String> = linkedMapOf()",
+      "name": "Create the list"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "code": "myNumbers[1] = \"One\"",
+      "name": "Insert an element"
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "code": "myNumbers.remove(1)",
+      "name": "Erase an element from the list"
+    },
+    "delete_mutable_hashed_list": {
+      "comment": "Setting map to null for garbage collection eligibility.",
+      "code": "myNumbers = null",
+      "name": "Delete the list"
+    },
+    "name_of_immutable_hashed_list": {
+      "comment": "Use a map without mutation functions.",
+      "code": "Map",
+      "name": "What is an immutable hashed list called?"
+    },
+    "create_a_immutable_hashed_list": {
+      "code": "val myImmutableNumbers: Map<Int, String> = mapOf(1 to \"One\", 2 to \"Two\")",
+      "name": "Create the immutable hashed list"
+    },
+    "delete_immutable_hashed_list": {
+      "comment": "Setting map to null for garbage collection eligibility.",
+      "code": "myImmutableNumbers = null",
+      "name": "Delete the immutable hashed list"
+    },
+    "create_a_mutable_set": {
+      "code": "val translations: MutableMap<String, String> = mutableMapOf()",
+      "name": "Create a mutable key/value set"
+    },
+    "get_key_from_mutable_set": {
+      "comment": "Key retrieval not by value in maps.",
+      "not-implemented": true,
+      "name": "Get key"
+    },
+    "get_value_from_mutable_set": {
+      "code": "translations[\"coding\"]",
+      "name": "Get value"
+    },
+    "get_all_keys_from_mutable_set": {
+      "code": "translations.keys",
+      "name": "Get all keys"
+    },
+    "get_all_values_from_mutable_set": {
+      "code": "translations.values",
+      "name": "Get all values"
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "comment": "Swapping keys and values not supported directly.",
+      "not-implemented": true,
+      "name": "Swap a key and value"
+    },
+    "delete_mutable_set": {
+      "comment": "Setting map to null for garbage collection eligibility.",
+      "code": "translations = null",
+      "name": "Delete the set"
+    },
+    "find_element_by_position": {
+      "comment": "Finding element by position depends on context.",
+      "not-implemented": true,
+      "name": "Find/search for an element by position"
+    },
+    "find_element_by_value": {
+      "comment": "Finds the first matching element by value.",
+      "code": "myList.find { it == value }",
+      "name": "Find/search for an element by value"
+    },
+    "find_minimum_element": {
+      "code": "myList.minOrNull() ?: throw NoSuchElementException()",
+      "name": "Find the minimum value in a list"
+    },
+    "find_maximum_element": {
+      "code": "myList.maxOrNull() ?: throw NoSuchElementException()",
+      "name": "Find the maximum value in a list"
+    },
+    "convert_list_to_string": {
+      "comment": "Converts list elements to a string representation.",
+      "code": "myList.joinToString(\", \")",
+      "name": "Convert a list to a string"
+    },
+    "concatenate_two_lists": {
+      "code": "val merged = list1 + list2",
+      "name": "Concatenate two lists together"
+    },
+    "split_list_at_index": {
+      "code": "val (firstPart, secondPart) = myList.partition { myList.indexOf(it) < index }",
+      "name": "Split lists at an index"
+    },
+    "duplicate_a_list": {
+      "code": "val duplicateList = myList.toList()",
+      "name": "Duplicate a list"
+    },
+    "duplicate_subset_of_list": {
+      "code": "val duplicateList = myList.subList(2, 5).toList()",
+      "name": "Duplicate a portion/subset of a list"
+    },
+    "get_list_length": {
+      "code": "myList.size",
+      "name": "Get list length"
+    },
+    "do_two_lists_match_exactly": {
+      "comment": "Checks for deep equality between two lists.",
+      "code": "list1 == list2",
+      "name": "Do two lists match every element?"
+    },
+    "sort_list": {
+      "comment": "Sorts list elements in ascending order.",
+      "code": "myList.sort()",
+      "name": "Sort a list"
+    },
+    "reverse_list": {
+      "code": "myList.reverse()",
+      "name": "Reverse order of list elements"
+    },
+    "filter": {
+      "comment": "Filters list to elements matching a condition.",
+      "code": "val filteredList = myList.filter { it > 10 }",
+      "name": "Filter a list based on criteria"
+    },
+    "map": {
+      "not-implemented": true,
+      "name": "Map a function onto each element in a list"
+    },
+    "reduce_left": {
+      "comment": "Example to sum elements in list from left to right.",
+      "code": "val computedSum = myList.reduce { acc, i -> acc + i }",
+      "name": "Reduce a list left-to-right"
+    }
+  }
+}
