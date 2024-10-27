@@ -10,18 +10,6 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 
 You agree to follow our Code of Conduct while working on the project and/or being a part of any related communities. You can read that [here](https://github.com/codethesaurus/codethesaur.us/blob/main/CODE_OF_CONDUCT.md).
 
-## Testing
-
-In order to validate meta_info.json and adding a new language/concept we can run:
-
-```python manage.py validatemetainfofile```
-
-In order to validate individual files, we can run:
-
-```python manage.py validatelanginfofiles```
-
-Ideally run both to get a full check on it.
-
 ## Hacktoberfest
 
 Code Thesaurus grew out of [@geekygirlsarah](https://twitter.com/geekygirlsarah) building it over Hacktoberfests 2018, 2019, and 2020. She's a strong encourager of working on Hacktoberfest, and so this is a project that has opted in!
