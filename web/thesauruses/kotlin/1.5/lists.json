@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "language": "kotlin",
+    "language_version": "1.5",
+    "language_name": "Kotlin",
+    "structure": "lists"
+  },
+  "concepts": {
+    "name_of_ordered_mutable_list": {
+      "comment": "In Kotlin, the ordered mutable list is called `MutableList`, which is a dynamically sized array.",
+      "code": "MutableList",
+      "name": "What is a ordered mutable list called?"
+    },
+    "create_a_ordered_mutable_list": {
+      "comment": "Kotlin MutableLists are generic and provide mutable collections. To create a MutableList, use the `mutableListOf` function with the desired type.",
+      "code": "val myList: MutableList<Int> = mutableListOf()",
+      "name": "Create the list"
+    },
+    "ordered_mutable_list_start_number": {
+      "comment": "The starting index of ordered lists in Kotlin is 0, following standard array indexing.",
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "comment": "Accessing elements by index is an O(1) operation in Kotlin's ArrayList-backed MutableList.",
+      "code": "myList[1]",
+      "name": "Access element by index"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "comment": "Inserts an element at the beginning of the MutableList, shifting other elements to the right.",
+      "code": "myList.add(0, 7)",
+      "name": "Insert element at beginning"
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "comment": "Inserts an element at the end of the MutableList.",
+      "code": "myList.add(10)",
+      "name": "Insert element at end"
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "comment": "Inserts an element at the specified index, shifting other elements as needed.",
+      "code": "myList.add(1, 7)",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "comment": "Removes the first element of the MutableList, shifting remaining elements to the left.",
+      "code": "myList.removeAt(0)",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "comment": "Removes the last element in the MutableList by index.",
+      "code": "myList.removeAt(myList.size - 1)",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "comment": "Removes an element at the specified index in the middle of the list.",
+      "code": "myList.removeAt(1)",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "comment": "Swaps two elements in the MutableList at the specified indices, using `Collections.swap`.",
+      "code": "Collections.swap(myList, index1, index2)",
+      "name": "Swap two elements"
+    },
+    "delete_ordered_mutable_list": {
+      "comment": "Clears all elements in the MutableList. Assigning null is only possible if the list variable is nullable.",
+      "code": "myList.clear()",
+      "name": "Delete the list"
+    },
+    "name_of_unordered_mutable_list": {
+      "comment": "In Kotlin, the closest equivalent to an unordered mutable list is a `MutableSet`, which is an unordered collection of unique elements.",
+      "code": "MutableSet",
+      "name": "What is a unordered mutable list called?"
+    },
+    "create_a_unordered_mutable_list": {
+      "comment": "Creates a MutableSet using the `mutableSetOf` function with the desired type.",
+      "code": "val mySet: MutableSet<Int> = mutableSetOf()",
+      "name": "Create the list"
+    },
+    "unordered_mutable_list_start_number": {
+      "comment": "Kotlin sets do not maintain an order, so there is no starting index.",
+      "code": "N/A",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_unordered_mutable_list": {
+      "comment": "Accessing elements by index is not supported in Kotlin's `Set`. Use `contains` to check for the presence of elements.",
+      "code": "mySet.contains(1)",
+      "name": "Access element by index"
+    },
+    "insert_into_unordered_mutable_list": {
+      "comment": "Inserts an element into the MutableSet. If the element already exists, it is not added again.",
+      "code": "mySet.add(7)",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "comment": "Removes a specific element from the set, not index-based.",
+      "code": "mySet.remove(0)",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "comment": "Removes the last element, but this concept does not apply as sets are unordered.",
+      "code": "mySet.remove(mySet.last())",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "comment": "Removes a specific element from the set; exact middle index is not applicable.",
+      "code": "mySet.remove(7)",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": true,
+      "comment": "Swapping elements is not applicable in an unordered MutableSet.",
+      "name": "Swap two elements"
+    },
+    "delete_unordered_mutable_list": {
+      "comment": "Clears all elements in the MutableSet.",
+      "code": "mySet.clear()",
+      "name": "Delete the list"
+    },
+    "name_of_ordered_immutable_list": {
+      "comment": "In Kotlin, `List` is an immutable ordered list by default.",
+      "code": "List",
+      "name": "What is a ordered immutable list called?"
+    },
+    "create_a_ordered_immutable_list": {
+      "comment": "Creates an immutable List using the `listOf` function with specified elements.",
+      "code": "val myList: List<Int> = listOf(1, 2, 3)",
+      "name": "Create the list"
+    },
+    "ordered_immutable_list_start_number": {
+      "comment": "Immutable ordered lists in Kotlin also start indexing at 0.",
+      "code": "0",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "comment": "Access elements by index in an immutable list using square brackets.",
+      "code": "myList[1]",
+      "name": "Access element by index"
+    },
+    "delete_ordered_immutable_list": {
+      "not-implemented": true,
+      "comment": "Kotlin does not allow deletion of elements from immutable lists. Use a MutableList if deletions are needed.",
+      "name": "Delete the list"
+    },
+    "name_of_unordered_immutable_list": {
+      "comment": "Kotlin's `Set` is immutable by default when created using `setOf`.",
+      "code": "Set",
+      "name": "What is a unordered immutable list called?"
+    },
+    "create_a_unordered_immutable_list": {
+      "comment": "Creates an immutable Set with unique elements using `setOf`.",
+      "code": "val mySet: Set<Int> = setOf(1, 2, 3)",
+      "name": "Create the list"
+    },
+    "unordered_immutable_list_start_number": {
+      "not-implemented": true,
+      "comment": "No concept of start number in unordered lists.",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_unordered_immutable_list": {
+      "not-implemented": true,
+      "comment": "Unordered sets do not support index-based access.",
+      "name": "Access element by index"
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": true,
+      "comment": "Immutable sets cannot be modified.",
+      "name": "Delete the list"
+    },
+    "name_of_mutable_hashed_list": {
+      "comment": "Kotlin offers `LinkedHashMap` for mutable key-value storage with ordered keys, or `HashMap` for unordered keys.",
+      "code": "LinkedHashMap",
+      "name": "What is a mutable hashed list called?"
+    },
+    "create_a_mutable_hashed_list": {
+      "comment": "Creates a mutable LinkedHashMap with key-value pairs.",
+      "code": "val myNumbers = linkedMapOf<Int, String>()",
+      "name": "Create the list"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "comment": "Inserts a key-value pair into the map, updating the value if the key already exists.",
+      "code": "myNumbers[5] = \"Five\"",
+      "name": "Insert element at beginning"
+    },
+    "delete_mutable_hashed_list": {
+      "comment": "Removes all elements from the mutable map.",
+      "code": "myNumbers.clear()",
+      "name": "Delete the list"
+    },
+    "access_element_by_key_in_mutable_hashed_list": {
+      "comment": "Accesses the value associated with the key, or null if it does not exist.",
+      "code": "myNumbers[1]",
+      "name": "Access element by key"
+    },
+    "get_all_keys_from_immutable_set": {
+      "code": "frozenTranslations.keys",
+      "name": "Get all keys"
+    },
+    "get_all_values_from_immutable_set": {
+      "code": "frozenTranslations.values",
+      "name": "Get all values"
+    },
+    "delete_immutable_set": {
+      "not-implemented": true,
+      "name": "Delete the set"
+    },
+    "name_of_ordered_list_by_insertion": {
+      "comment": "Kotlin provides `LinkedHashMap` and `LinkedHashSet` for maintaining insertion order.",
+      "code": "LinkedHashMap",
+      "name": "Name of list ordered by insertion"
+    },
+    "create_ordered_list_by_insertion": {
+      "code": "val orderedMap = linkedMapOf<String, Int>()",
+      "name": "Create ordered list by insertion"
+    },
+    "sort_list": {
+      "code": "val sortedList = myList.sorted()",
+      "name": "Sort a list"
+    },
+    "filter_list": {
+      "code": "val evenNumbers = myList.filter { it % 2 == 0 }",
+      "name": "Filter a list"
+    },
+    "reduce_list": {
+      "code": "val sum = myList.reduce { acc, num -> acc + num }",
+      "name": "Reduce a list left-to-right"
+    }
+  }
+}
