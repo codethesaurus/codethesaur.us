@@ -1,0 +1,226 @@
+{
+    "meta": {
+      "language": "kotlin",
+      "language_name": "Kotlin",
+      "structure": "operators",
+      "language_version": "1.5"
+    },
+    "concepts": {
+      "addition": {
+        "name": "Addition operator",
+        "code": "a + b"
+      },
+      "addition_assignment": {
+        "name": "Addition and assignment operator",
+        "code": "a += b"
+      },
+      "subtraction": {
+        "name": "Subtraction operator",
+        "code": "a - b"
+      },
+      "subtraction_assignment": {
+        "name": "Subtraction and assignment operator",
+        "code": "a -= b"
+      },
+      "multiplication": {
+        "name": "Multiplication operator",
+        "code": "a * b"
+      },
+      "multiplication_assignment": {
+        "name": "Multiplication and assignment operator",
+        "code": "a *= b"
+      },
+      "division": {
+        "name": "Division operator",
+        "code": "a / b"
+      },
+      "division_assignment": {
+        "name": "Division and assignment operator",
+        "code": "a /= b"
+      },
+      "integer_division": {
+        "name": "Integer division operator",
+        "code": "a // b"
+      },
+      "integer_division_assignment": {
+        "name": "Integer division and assignment operator",
+        "code": "a //= b"
+      },
+      "modulus": {
+        "name": "Modulus (remainder) operator",
+        "code": "a % b"
+      },
+      "modulus_assignment": {
+        "name": "Modulus and assignment operator",
+        "code": "a %= b"
+      },
+      "unary_plus": {
+        "name": "Unary plus operator",
+        "code": "+a"
+      },
+      "unary_minus": {
+        "name": "Unary minus operator",
+        "code": "-a"
+      },
+      "increment": {
+        "name": "Increment (add 1) operator",
+        "code": [
+            "a++ // postfix",
+            "++a // prefix"
+        ],
+        "comment": "The prefix form returns the new value, the postfix form returns the old value."
+      },
+      "decrement": {
+        "name": "Decrement (subtract 1) operator",
+        "code": [
+            "a-- // postfix",
+            "--a // prefix"
+        ],
+        "comment": "The prefix form returns the new value, the postfix form returns the old value."
+      },
+      "exponential": {
+        "name": "Exponential operator",
+        "code": "Math.pow(a, b)",
+        "comment": "Not a operator but a standard library function."
+      },
+      "factorial": {
+        "not-implemented": true,
+        "name": "Factorial operator"
+      },
+      "absolute_value": {
+        "name": "Absolute value operator",
+        "code": "Math.abs(a)"
+      },
+      "percentage": {
+        "not-implemented": true,
+        "name": "Percentage operator"
+      },
+      "equal_to": {
+        "name": "Equality operator",
+        "code": [
+          "a == b // structural equality",
+          "a === b // referential equality"
+        ],
+        "comment": "referential equality `===` checks if two references point to the same object, while structural equality `==` checks if two objects have the same content."
+      },
+      "not_equal_to": {
+        "name": "Not equal to operator",
+        "code": [
+            "a != b // structural inequality",
+            "a !== b // referential inequality"
+        ],
+        "comment": "referential equality `!==` checks if two references fo not point to the same object, while structural equality `!=` checks if two objects do not have the same content."
+      },
+      "less_than": {
+        "name": "Less than operator",
+        "code": "a < b"
+      },
+      "less_than_or_equal_to": {
+        "name": "Less than or equal to operator",
+        "code": "a <= b"
+      },
+      "greater_than": {
+        "name": "Greater than operator",
+        "code": "a > b"
+      },
+      "greater_than_or_equal_to": {
+        "name": "Greater than or equal to operator",
+        "code": "a >= b"
+      },
+      "null_coalescing": {
+        "name": "Elvis operator",
+        "code": "a ?: b",
+        "comment": "The Elvis operator returns the left-hand operand if it is non-null, otherwise, it returns the right-hand operand."
+      },
+      "is": {
+        "name": "Type checking operator",
+        "code": "a is Type",
+        "comment": "The `is` operator checks if an object is of a specific type."
+      },
+      "is_not": {
+        "name": "Is not operator",
+      "code": "a !is Type",
+      "comment": "The `!is` operator checks if an object is not of a specific type."
+      },
+      "logical_and": {
+        "name": "Logical AND operator",
+        "code": "a && b"
+      },
+      "logical_or": {
+        "name": "Logical OR operator",
+        "code": "a || b"
+      },
+      "logical_not": {
+        "name": "Logical NOT operator",
+        "code": "!a"
+      },
+      "bitwise_and": {
+        "name": "Bitwise AND operator",
+        "code": "a and b"
+      },
+      "bitwise_and_assignment": {
+        "name": "Bitwise AND and assignment operator",
+        "not-implemented": true
+      },
+      "bitwise_or": {
+        "name": "Bitwise OR operator",
+        "code": "a or b"
+      },
+      "bitwise_or_assignment": {
+        "name": "Bitwise OR and assignment operator",
+        "not-implemented": true
+      },
+      "bitwise_not": {
+        "name": "Bitwise NOT operator",
+        "code": "a.inv()"
+      },
+      "bitwise_xor": {
+        "name": "Bitwise XOR operator",
+        "code": "a xor b"
+      },
+      "bitwise_xor_assignment": {
+        "name": "Bitwise XOR and assignment operator",
+        "not-implemented": true
+      },
+      "bitwise_xnor": {
+        "not-implemented": true,
+        "name": "Bitwise XNOR operator"
+      },
+      "bitwise_xnor_assignment": {
+        "name": "Bitwise XNOR and assignment operator",
+        "not-implemented": true
+      },
+      "left_shift": {
+        "name": "Left shift bitwise operator",
+        "code": "a shl b"
+      },
+      "left_shift_assignment": {
+        "name": "Left shift assignment operator",
+        "not-implemented": true
+      },
+      "right_shift": {
+        "name": "Right shift bitwise operator",
+        "code": "a shr b"
+      },
+      "right_shift_assignment": {
+        "name": "Right shift assignment operator",
+        "not-implemented": true
+      },
+      "not_assignment": {
+        "not-implemented": true,
+        "name": "Bitwise NOT and assignment operator"
+      },
+      "ternary": {
+        "name": "Ternary operator",
+        "code": [
+            "if (condition) true_expression else false_expression",
+            "var result = if (condition) true_expression else false_expression"
+        ],
+        "comment": "Both expressions are similar."
+      },
+      "null_forgiving": {
+        "not-implemented": true,
+        "name": "Null forgiving operator"
+      }
+    }
+  }
