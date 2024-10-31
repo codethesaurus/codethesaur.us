@@ -128,9 +128,9 @@
         "code": "a >= b"
       },
       "null_coalescing": {
-        "name": "Elvis operator",
+        "name": "Null coalescing operator",
         "code": "a ?: b",
-        "comment": "The Elvis operator returns the left-hand operand if it is non-null, otherwise, it returns the right-hand operand."
+        "comment": "Also known as the Elvis operator returns the left-hand operand if it is non-null, otherwise, it returns the right-hand operand."
       },
       "is": {
         "name": "Type checking operator",
