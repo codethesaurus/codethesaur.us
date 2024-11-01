@@ -22,13 +22,7 @@
         ]
     },
     "read_char": {
-        "code": [
-        "val variable_name = readln()",
-        "val first_char = variable_name[0]"
-        ],
-        "comment": [
-        "First character can be read by accessing the first element of the string"
-        ]
+        "not-implemented": true
     },
     "clear_console_output": {
         "not-implemented": true
@@ -46,21 +40,11 @@
     },
     "list_directory": {
         "code": [
-        "val dir = File(\".\")",
-        "val files = dir.listFiles()",
-        "file?.forEach { println(it.name) }"
+        "val files = File(\".\").listFiles()"
         ]
     },
     "read_directory_info": {
-        "code": [
-        "val dir = File(\".\")",
-        "val files = dir.listFiles()",
-        "println(\"Number of items: ${files.size}\")",
-        "println(\"Total size: ${files.sumOf { it.length() }}\")"
-        ],
-        "comment": [
-        "There are no in built stats functions in Kotlin, so we have to calculate them manually"
-        ]
+        "not-implemented": true
     },
     "create_directory": {
         "code": [
@@ -126,14 +110,7 @@
         ]
     },
     "update_file": {
-        "code": [
-        "val lines = File(\"filePath\").readLines().toMutableList()",
-        "lines.add(\"Example text\")",
-        "File(filePath).writeText(lines.joinToString(\"\\n\"))"
-        ],
-        "comment": [
-        "This example appends a line to the end of the file, there is no explicit update method present in this language"
-        ]
+        "not-implemented": true
     },
     "move_file": {
         "code": [
