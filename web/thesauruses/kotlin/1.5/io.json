@@ -1,0 +1,247 @@
+{
+    "meta": {
+        "language": "kotlin",
+        "language_name": "Kotlin",
+        "structure": "io",
+        "language_version": "1.5"
+    },
+    "concepts": {
+    "write_line": {
+        "code": [
+        "print(\"...\")"
+        ]
+    },
+    "write_line_with_new_line": {
+        "code": [
+        "println(\"...\")"
+        ]
+    },
+    "read_line": {
+        "code": [
+        "val variable_name = readln()"
+        ]
+    },
+    "read_char": {
+        "not-implemented": true
+    },
+    "clear_console_output": {
+        "not-implemented": true
+    },
+    "change_console_background_color": {
+        "not-implemented": true
+    },
+    "change_console_text_color": {
+        "not-implemented": true
+    },
+    "file_functions_lib": {
+        "code": [
+        "java.io.File"
+        ]
+    },
+    "list_directory": {
+        "code": [
+        "val files = File(\".\").listFiles()"
+        ]
+    },
+    "read_directory_info": {
+        "not-implemented": true
+    },
+    "create_directory": {
+        "code": [
+        "File(\"location\").mkdir()"
+        ],
+        "comment": [
+        "Successful creation can be checked with conditional statements"
+        ]
+    },
+    "delete_directory": {
+        "code": [
+        "File(\"location\").delete()"
+        ]
+    },
+    "rename_directory": {
+        "code": [
+        "File(\"oldDirectoryName\").renameTo(File(\"newDirectoryName\"))"
+        ]
+    },
+    "move_directory": {
+        "code": [
+        "File(\"oldDirectoryName\").renameTo(File(\"newDirectoryName\"))"
+        ]
+    },
+    "update_directory_permissions": {
+        "code": [
+        "File(\"location\").setReadable(true, true).setWritable(true, true)"
+        ],
+        "comment": [
+        "First parameter: specifies if permission is granted (true) or revoked (false)\n\n Second parameter: specifies if permission is granted to all users (true) or only the owner (false)"
+        ]
+    },
+    "read_line_of_file": {
+        "code": [
+        "val line = File(\"filePath\").bufferedReader().readLine()"
+        ]
+    },
+    "read_lines_of_file": {
+        "code": [
+        "val lines = File(\"filePath\").readLines()"
+        ]
+    },
+    "read_file_stream": {
+        "code": [
+        "val inputStream = File(\"filePath\").inputStream()",
+        "// OR",
+        "File(\"filePath\").inputStream().use { inputStream ->",
+        "// Code to alter stream",
+        "}"
+        ],
+        "comment": [
+        "The second example ensures the stream is closed after use"
+        ]
+    },
+    "create_file": {
+        "code": [
+        "val fileCreated = File(\"filePath\").createNewFile()"
+        ]
+    },
+    "delete_file": {
+        "code": [
+        "val fileDeleted = File(\"filePath\").delete()"
+        ]
+    },
+    "update_file": {
+        "not-implemented": true
+    },
+    "move_file": {
+        "code": [
+        "val moved = File(\"sourceFilePath\").renameTo(File(\"targetFilePath\"))"
+        ]
+    },
+    "network_functions_lib": {
+        "not-implemented": true
+    },
+    "send_a_http_request": {
+        "not-implemented": true
+    },
+    "send_a_get_request": {
+        "not-implemented": true
+    },
+    "send_a_post_request": {
+        "not-implemented": true
+    },
+    "send_a_put_request": {
+        "not-implemented": true
+    },
+    "send_a_patch_request": {
+        "not-implemented": true
+    },
+    "send_a_delete_request": {
+        "not-implemented": true
+    },
+    "send_a_head_request": {
+        "not-implemented": true
+    },
+    "send_a_options_request": {
+        "not-implemented": true
+    },
+    "send_a_connect_request": {
+        "not-implemented": true
+    },
+    "send_a_trace_request": {
+        "not-implemented": true
+    },
+    "add_headers": {
+        "not-implemented": true
+    },
+    "add_query_params": {
+        "not-implemented": true
+    },
+    "inbuilt_url_class": {
+        "not-implemented": true
+    },
+    "open_a_socket": {
+        "not-implemented": true
+    },
+    "close_a_socket": {
+        "not-implemented": true
+    },
+    "add_authorization_headers": {
+        "not-implemented": true
+    },
+    "add_cookies": {
+        "not-implemented": true
+    },
+    "read_cookies": {
+        "not-implemented": true
+    },
+    "read_headers": {
+        "not-implemented": true
+    },
+    "database_functions_lib": {
+        "not-implemented": true
+    },
+    "open_connection": {
+        "not-implemented": true
+    },
+    "close_connection": {
+        "not-implemented": true
+    },
+    "execute_query_single_result_set": {
+        "not-implemented": true
+    },
+    "execute_query_multiple_result_sets": {
+        "not-implemented": true
+    },
+    "execute_non_query": {
+        "not-implemented": true
+    },
+    "json_function_lib": {
+        "not-implemented": true
+    },
+    "serialize_json": {
+        "not-implemented": true
+    },
+    "deserialize_json": {
+        "not-implemented": true
+    },
+    "serialize_json_with_options": {
+        "not-implemented": true
+    },
+    "deserialize_json_with_options": {
+        "not-implemented": true
+    },
+    "xml_function_lib": {
+        "not-implemented": true
+    },
+    "serialize_xml": {
+        "not-implemented": true
+    },
+    "deserialize_xml": {
+        "not-implemented": true
+    },
+    "serialize_xml_with_options": {
+        "not-implemented": true
+    },
+    "deserialize_xml_with_options": {
+        "not-implemented": true
+    },
+    "csv_function_lib": {
+        "not-implemented": true
+    },
+    "read_csv_file": {
+        "not-implemented": true
+    },
+    "read_csv_to_type": {
+        "not-implemented": true
+    },
+    "write_csv_file": {
+        "not-implemented": true
+    },
+    "append_csv_file": {
+        "not-implemented": true
+    },
+    "set_csv_delimiter": {
+        "not-implemented": true
+    }
+  }
+}
