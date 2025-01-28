@@ -428,7 +428,11 @@ def api_reference(request, structure_key, lang, version):
     store_url_info(request)
 
     lang = Language(lang, "")
-    response = lang.load_filled_concepts(structure_key, version)
+
+    try:
+        response = lang.load_filled_concepts(structure_key, version)
+    except Exception as e:
+        return error_handler_404_not_found(request, e)
 
     if response is False:
         return HttpResponseNotFound()
