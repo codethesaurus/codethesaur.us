@@ -437,6 +437,9 @@ def api_reference(request, structure_key, lang, version):
     if response is False:
         return HttpResponseNotFound()
 
+    print(response)
+    print("=======================")
+
     return HttpResponse(response, content_type="application/json")
 
 def api_compare(request, structure_key, lang1, version1, lang2, version2):

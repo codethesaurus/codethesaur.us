@@ -250,4 +250,23 @@ class TestViews(TestCase):
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
 
+    def test_single_concept_view_valid_language_version(self):
+        """
+        Test if the API response contains 'meta' and 'concepts' keys. And doesnt return error.
+        """
+        url = '/api/data_types/javascript/ECMAScript%202009/'
+        
+        # Send GET request to the URL
+        response = self.client.get(url)
+
+        # Check the response status
+        self.assertEqual(response.status_code, HTTPStatus.OK)
+
+        # Parse the response JSON
+        response_data = response.json()
+
+        # Assert that 'meta' and 'concepts' keys exist
+        self.assertIn('meta', response_data)
+        self.assertIn('concepts', response_data)
+
 
