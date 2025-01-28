@@ -242,3 +242,12 @@ class TestViews(TestCase):
         response = self.client.post("/robots.txt")
 
         self.assertEqual(HTTPStatus.METHOD_NOT_ALLOWED, response.status_code)
+
+    def test_api_not_found(self):
+        """Test if an invalid API call returns a 404 error"""
+        url = "http://localhost:8000/api/shared/config/config.env/"
+        response = self.client.get(url)
+
+        self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
+
+
