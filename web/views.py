@@ -437,8 +437,6 @@ def api_reference(request, structure_key, lang, version):
     if response is False:
         return HttpResponseNotFound()
 
-    print(response)
-    print("=======================")
 
     return HttpResponse(response, content_type="application/json")
 
