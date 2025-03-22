@@ -8,7 +8,7 @@ dj-database-url==2.1.0
 Django==4.2.18
 django-markdownify==0.9.3
 django-on-heroku==1.1.2
-gunicorn==22.0.0
+gunicorn==23.0.0
 importlib-metadata==6.8.0
 isort==5.12.0
 jsonmerge==1.9.2
