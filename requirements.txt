@@ -19,7 +19,7 @@ Markdown==3.5
 mccabe==0.7.0
 packaging==23.2
 platformdirs==3.11.0
-protobuf==4.24.4
+protobuf==4.25.8
 psycopg2-binary==2.9.10
 Pygments==2.16.1
 pylint==3.0.2
