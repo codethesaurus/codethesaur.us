@@ -62,6 +62,11 @@
       "not-implemented": true,
       "name": "Each iteration"
     },
+    "list_comprehension": {
+      "comment": "Second line adds a guard, which plays the same role as Python’s `if` filter.",
+      "code": "newList = [foo item | item <- iterable]\nnewList = [foo item | item <- iterable, conditional item]",
+      "name": "List Comprehension"
+    },
     "map_iteration": {
       "code": "map function list",
       "name": "Map iteration"
