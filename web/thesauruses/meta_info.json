@@ -39,6 +39,7 @@
     "operators": "Logical and Mathematical/Arithmetic Operators",
     "queues_stacks": "Queues and Stacks",
     "rules_facts": "Rules and Facts",
-    "strings": "Strings"
+    "strings": "Strings",
+    "trees": "Trees"
   }
 }
