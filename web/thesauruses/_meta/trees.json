@@ -10,32 +10,88 @@
         "create_node_class": "Creating the node class or struct",
         "create_a_node_object": "Creating an object of the node class or struct",
         "create_tree_class": "Creating the tree class",
-        "create_a_tree_object": "Creating an object of the tree class"
+        "create_a_tree_object": "Creating an object of the tree class",
+        "create_node_for_tst": "Creating a node for a ternary search tree (TST)",
+        "create_n_ary_trees": "Creating N-ary trees",
+        "create_btree_node": "Creating a node for a B-tree",
+        "create_btree": "Creating a B-tree",
+        "create_b+tree_node": "Creating a node for a B+ tree",
+        "create_b+tree": "Creating a B+ tree"
+    },
+    "Depth-First Traversals":{
+      "inorder_tree_traversal": "Inorder Tree Traversal",
+      "preorder_tree_traversal": "Pre-order Tree Traversal",
+      "postorder_tree_traversal": "Post-order Tree Traversal",
+      "tst_tree_traversal": "Ternary Search Tree (TST) Traversal",
+      "n_ary_tree_level_order_traversal": "N-ary Tree Level Order Traversal using DFS",
+      "btree_traversal": "B-tree Traversal"
+    },
+    "Breadth-First Traversals":{
+      "level_order_tree_traversal_recursion": "Level Order Tree Traversal using recursion",
+      "level_order_tree_traversal_queues": "Level Order Tree Traversal using queues",
+      "n_ary_tree_level_order_traversal": "N-ary Tree Level Order Traversal using BFS"
+    },
+    "Balancing Trees":{
+      "is_balanced_binary_tree": "Check if a binary tree is height-balanced",
+      "balance_factor_of_node": "Finding the balance factor of a node in an AVL tree",
+      "right_rotation_avl_tree": "Right rotation in an AVL tree",
+      "left_rotation_avl_tree": "Left rotation in an AVL tree",
+      "left_right_rotation_avl_tree": "Left-Right rotation in an AVL tree",
+      "right_left_rotation_avl_tree": "Right-Left rotation in an AVL tree",
+      "rebalance_avl_tree": "Rebalancing an AVL tree after insertion or deletion",
+      "is_red_black_tree": "Check if a binary tree is a valid Red-Black tree"
     },
     "Insertions": {
       "insert_node_in_empty_tree": "Inserting a new node in an empty tree",
       "insert_node_in_binary_tree": "Inserting a node with a given value in a binary tree",
       "insert_node_in_bst_recursion": "Inserting a node with a given value in a binary search tree using recursion",
       "insert_node_in_bst_iteration": "Inserting a node with a given value in a binary search tree using iteration",
-      "insert_node_in_avl_tree": "Inserting a node with a given value in an AVL tree"
-    },
-    "Depth-First Traversals":{
-      "inorder_tree_traversal": "Inorder Tree Traversal",
-      "preorder_tree_traversal": "Pre-order Tree Traversal",
-      "postorder_tree_traversal": "Post-order Tree Traversal"
-    },
-    "Breadth-First Traversals":{
-      "level_order_tree_traversal_recursion": "Level Order Tree Traversal using recursion",
-      "level_order_tree_traversal_queues": "Level Order Tree Traversal using queues"
+      "insert_node_in_avl_tree": "Inserting a node with a given value in an AVL tree",
+      "insert_node_in_red_black_tree_black_parent": "Inserting a node in a Red-Black tree when the parent is black",
+      "insert_node_in_red_black_tree_red_parent_and_uncle": "Inserting a node in a Red-Black tree when the parent and uncle are red",
+      "insert_node_in_red_black_tree_red_parent_and_black_uncle": "Inserting a node in a Red-Black tree when the parent is red and uncle is black",
+      "insert_node_in_red_black_tree_top_down_insertion": "Top-down insertion in a Red-Black tree",
+      "insert_node_in_tst": "Inserting a word in a ternary search tree (TST)",
+      "insert_node_in_btree": "Inserting an element in a B-tree",
+      "insert_node_in_parent_b+tree": "Inserting an element in a parent node of a B+ tree",
+      "insert_node_in_leaf_b+tree": "Inserting an element in a leaf node of a B+ tree",
+      "insert_node_in_b+tree": "Inserting an element in a B+ tree"
     },
     "Deletions":{
       "delete_node_binary_tree": "Deleting a node with a given value from a binary tree",
       "delete_leaf_node_bst": "Deleting a leaf node from a binary search tree",
       "delete_node_with_single_child_bst": "Deleting a node with a single child from a binary search tree",
-      "delete_node_with_both_children_bst": "Deleting a node with both children from a binary search tree"
+      "delete_node_with_both_children_bst": "Deleting a node with both children from a binary search tree",
+      "delete_node_avl_tree": "Deleting a node with a given value from an AVL tree",
+      "delete_black_node_red_sibling_red_black_tree": "Deleting a black node with a red sibling node from a Red-Black tree",
+      "delete_black_node_black_sibling_black_children_red_black_tree": "Deleting a black node with a black sibling node that has black children from a Red-Black tree",
+      "delete_black_node_black_sibling_far_red_child_red_black_tree": "Deleting a black node with a black sibling node that has a far red child from a Red-Black tree",
+      "delete_black_node_black_sibling_near_red_child_red_black_tree": "Deleting a black node with a black sibling node that has a near red child from a Red-Black tree",
+      "delete_node_in_tst": "Deleting a word from a ternary search tree (TST)",
+      "delete_node_in_btree": "Deleting an element from a B-tree",
+      "delete_node_in_b+tree": "Deleting an element from a B+ tree"
     },
     "Search":{
-
+      "search_value_in_binary_tree": "Searching for a value in a binary tree",
+      "search_value_in_bst_recursion": "Searching for a value in a binary search tree using recursion",
+      "search_value_in_bst_iteration": "Searching for a value in a binary search tree using iteration",
+      "search_word_in_tst": "Searching for a word in a ternary search tree (TST)",
+      "search_element_in_btree": "Searching for an element in a B-tree",
+      "search_element_in_b+tree": "Searching for an element in a B+ tree"
+    },
+    "Find":{
+      "find_minimum_value_in_bst": "Finding the minimum value in a binary search tree",
+      "find_maximum_value_in_bst": "Finding the maximum value in a binary search tree",
+      "find_height_of_tree": "Finding the height of a tree",
+      "find_depth_of_node": "Finding the depth of a node in a tree",
+      "find_lca_binary_tree": "Finding the lowest common ancestor (LCA) of two nodes in a binary tree",
+      "find_lca_bst": "Finding the lowest common ancestor (LCA) of two nodes in a binary search tree",
+      "find_kth_smallest_element_bst": "Finding the k-th smallest element in a binary search tree",
+      "find_kth_largest_element_bst": "Finding the k-th largest element in a binary search tree",
+      "find_diameter_of_tree": "Finding the diameter of a tree",
+      "find_level_of_node": "Finding the level of a node in a tree",
+      "find_parent_node_btree": "Finding the parent node of a given node in a B-tree",
+      "find_predecessor_successor_bst": "Finding the predecessor and successor of a given node in a binary search tree"
     }
 
   }
