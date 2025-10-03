@@ -4,6 +4,39 @@
     "structure_name": "Trees"
   },
   "categories": {
-    
+    "Creating Basic Tree Objects":{
+        "structure_of_node": "What data structure do you create the tree node with?",
+        "information_inside_node": "Information stored inside of a node",
+        "create_node_class": "Creating the node class or struct",
+        "create_a_node_object": "Creating an object of the node class or struct",
+        "create_tree_class": "Creating the tree class",
+        "create_a_tree_object": "Creating an object of the tree class"
+    },
+    "Insertions": {
+      "insert_node_in_empty_tree": "Inserting a new node in an empty tree",
+      "insert_node_in_binary_tree": "Inserting a node with a given value in a binary tree",
+      "insert_node_in_bst_recursion": "Inserting a node with a given value in a binary search tree using recursion",
+      "insert_node_in_bst_iteration": "Inserting a node with a given value in a binary search tree using iteration",
+      "insert_node_in_avl_tree": "Inserting a node with a given value in an AVL tree"
+    },
+    "Depth-First Traversals":{
+      "inorder_tree_traversal": "Inorder Tree Traversal",
+      "preorder_tree_traversal": "Pre-order Tree Traversal",
+      "postorder_tree_traversal": "Post-order Tree Traversal"
+    },
+    "Breadth-First Traversals":{
+      "level_order_tree_traversal_recursion": "Level Order Tree Traversal using recursion",
+      "level_order_tree_traversal_queues": "Level Order Tree Traversal using queues"
+    },
+    "Deletions":{
+      "delete_node_binary_tree": "Deleting a node with a given value from a binary tree",
+      "delete_leaf_node_bst": "Deleting a leaf node from a binary search tree",
+      "delete_node_with_single_child_bst": "Deleting a node with a single child from a binary search tree",
+      "delete_node_with_both_children_bst": "Deleting a node with both children from a binary search tree"
+    },
+    "Search":{
+
+    }
+
   }
 }
