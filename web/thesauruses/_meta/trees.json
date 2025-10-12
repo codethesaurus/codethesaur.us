@@ -42,20 +42,16 @@
       "is_red_black_tree": "Check if a binary tree is a valid Red-Black tree"
     },
     "Insertions": {
-      "insert_node_in_empty_tree": "Inserting a new node in an empty tree",
-      "insert_node_in_binary_tree": "Inserting a node with a given value in a binary tree",
-      "insert_node_in_bst_recursion": "Inserting a node with a given value in a binary search tree using recursion",
-      "insert_node_in_bst_iteration": "Inserting a node with a given value in a binary search tree using iteration",
+      "insert_node_in_tree": "Inserting a new node in a binary tree",
+      "insert_node_in_bst": "Inserting a node with a given value in a binary search tree",
       "insert_node_in_avl_tree": "Inserting a node with a given value in an AVL tree",
       "insert_node_in_red_black_tree_black_parent": "Inserting a node in a Red-Black tree when the parent is black",
       "insert_node_in_red_black_tree_red_parent_and_uncle": "Inserting a node in a Red-Black tree when the parent and uncle are red",
       "insert_node_in_red_black_tree_red_parent_and_black_uncle": "Inserting a node in a Red-Black tree when the parent is red and uncle is black",
-      "insert_node_in_red_black_tree_top_down_insertion": "Top-down insertion in a Red-Black tree",
       "insert_node_in_tst": "Inserting a word in a ternary search tree (TST)",
       "insert_node_in_btree": "Inserting an element in a B-tree",
       "insert_node_in_parent_b+tree": "Inserting an element in a parent node of a B+ tree",
-      "insert_node_in_leaf_b+tree": "Inserting an element in a leaf node of a B+ tree",
-      "insert_node_in_b+tree": "Inserting an element in a B+ tree"
+      "insert_node_in_leaf_b+tree": "Inserting an element in a leaf node of a B+ tree"
     },
     "Deletions":{
       "delete_node_binary_tree": "Deleting a node with a given value from a binary tree",
