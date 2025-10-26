@@ -32,7 +32,7 @@
     },
     "simple_queue_data_structure": {
       "name": "Data structure that backs the simple queue",
-      "comment": "doubly-linked list"
+      "code": "doubly-linked list"
     },
     "circular_queue_import_statement": {
       "not-implemented": true,
@@ -116,7 +116,7 @@
     },
     "double_ended_queue_data_structure": {
       "name": "Data structure that backs the double-ended queue",
-      "comment": "resizable array"
+      "code": "resizable array"
     },
     "stack_import_statement": {
       "name": "Import statement to add stacks",
