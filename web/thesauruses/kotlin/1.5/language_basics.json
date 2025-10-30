@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "language": "kotlin",
+    "language_version": "1.5",
+    "language_name": "Kotlin",
+    "structure": "language_basics"
+  },
+  "concepts": {
+    "statically_typed": {
+      "code": "val x: Int = 5"
+    },
+    "dynamically_typed": {
+      "not-implemented": true
+    },
+    "procedural_language": {
+      "code": "fun calculateSum(a: Int, b: Int): Int {\n    return a + b\n}"
+    },
+    "functional_language": {
+      "code": "val numbers = listOf(1, 2, 3, 4, 5)\nval doubled = numbers.map { it * 2 }"
+    },
+    "object_oriented_language": {
+      "code": "class Person(val name: String, val age: Int)"
+    },
+    "low_level_language": {
+      "not-implemented": true
+    },
+    "high_level_language": {
+      "code": "println(\"Hello, World!\")"
+    },
+    "compiled_language": {
+      "code": "// Kotlin compiles to JVM bytecode or native code",
+      "comment": "Kotlin is compiled to JVM bytecode, JavaScript, or native binaries"
+    },
+    "interpreted_language": {
+      "not-implemented": true
+    },
+    "general_purpose_language": {
+      "code": "// Kotlin can be used for Android, web, server-side, desktop, etc."
+    },
+    "domain_specific_language": {
+      "not-implemented": true
+    },
+    "manual_management": {
+      "not-implemented": true
+    },
+    "automatic_management": {
+      "code": "// Kotlin uses JVM's garbage collector",
+      "comment": "Memory is managed automatically by the JVM garbage collector"
+    },
+    "first_generation": {
+      "not-implemented": true
+    },
+    "second_generation": {
+      "not-implemented": true
+    },
+    "third_generation": {
+      "code": "// Kotlin is a modern third-generation language"
+    },
+    "fourth_generation": {
+      "not-implemented": true
+    },
+    "main_function": {
+      "code": "fun main() {\n    println(\"Hello, World!\")\n}"
+    },
+    "custom_function": {
+      "not-implemented": true
+    },
+    "script_file": {
+      "code": "// Kotlin supports scripting with .kts files",
+      "comment": "Kotlin scripts (.kts files) execute from top to bottom"
+    },
+    "single_line": {
+      "code": "// This is a single line comment"
+    },
+    "multi_line": {
+      "code": "/* This is a\n   multi-line comment */"
+    },
+    "documentation": {
+      "code": "/**\n * This is a KDoc documentation comment\n * @param name the person's name\n * @return a greeting message\n */\nfun greet(name: String): String {\n    return \"Hello, $name!\"\n}"
+    },
+    "special": {
+      "code": "//TODO: Implement this feature\n//FIXME: Bug in this code",
+      "comment": "Kotlin recognizes TODO, FIXME and other special comment markers"
+    },
+    "standard_libraries": {
+      "code": "import kotlin.math.sqrt\nimport kotlin.collections.*",
+      "comment": "Kotlin has extensive standard library available without external dependencies"
+    },
+    "extensive_frameworks": {
+      "code": "// Gradle dependency example\n// implementation(\"org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0\")",
+      "comment": "Kotlin uses Gradle or Maven for dependency management"
+    },
+    "hello_world": {
+      "code": "fun main() {\n    println(\"Hello World\")\n}"
+    }
+  }
+}
