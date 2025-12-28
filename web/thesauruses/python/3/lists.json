@@ -256,12 +256,10 @@
     "delete_immutable_set": {
       "not-implemented": "true"
     },
-    "find_element_by_value": {
+    "get_index_of_element": {
       "code": [
-        "value in list_name",
         "list_name.index(value)"
-      ],
-      "comment": "First line returns a True/False value. Second line returns an index if found or a ValueError if not found"
+      ]
     },
     "find_minimum_element": {
       "code": [
@@ -272,6 +270,12 @@
       "code": [
         "max(list_name)"
       ]
+    },
+    "contains_element": {
+      "code": [
+        "value in list_name"
+      ],
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "code": [
@@ -316,8 +320,21 @@
         "len(list_name)"
       ]
     },
+    "is_list_empty": {
+      "code": [
+        "not list_name"
+      ],
+      "comment": "In Python, empty lists are falsy.",
+      "name": "Check if the list is empty"
+    },
     "resize_list": {
       "not-implemented": "true"
+    },
+    "clear_list": {
+      "code": [
+        "list_name.clear()"
+      ],
+      "name": "Remove all elements from the list"
     },
     "do_two_lists_match_exactly": {
       "code": [
@@ -369,6 +386,39 @@
     },
     "reduce_right": {
       "not-implemented": "true"
+    },
+    "slice_list": {
+      "code": [
+        "list_name[start:stop:step]"
+      ],
+      "comment": "Python slicing creates a shallow copy of the list.",
+      "name": "Get a slice/portion of a list (view or shallow copy)"
+    },
+    "get_first_element": {
+      "code": [
+        "list_name[0]"
+      ],
+      "name": "Get the first element"
+    },
+    "get_last_element": {
+      "code": [
+        "list_name[-1]"
+      ],
+      "name": "Get the last element"
+    },
+    "remove_duplicates": {
+      "code": [
+        "list_name = list(set(list_name))"
+      ],
+      "comment": "This method does not preserve order. For preserving order, use dict.fromkeys(list_name).",
+      "name": "Remove duplicate elements from the list"
+    },
+    "flatten_list": {
+      "code": [
+        "[item for sublist in nested_list for item in sublist]"
+      ],
+      "comment": "This is a common way to flatten a list of lists using list comprehension.",
+      "name": "Flatten a nested list"
     }
   }
 }

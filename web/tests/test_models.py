@@ -144,15 +144,54 @@ class TestMetaStructures(TestCase):
         self.assertEqual(language.concept_code("concept3"), "")
         self.assertEqual(language.concept_code("concept4"), "line1\nline2")
 
-    def test_language_get_concept_comment(self):
-        """test Language#get_concept_comment"""
-        language = self.dummy_language
+    def test_language_versions(self):
+        """test Language#versions"""
+        language = Language("python", "Python")
+        versions = language.versions()
+        self.assertGreater(len(versions), 0)
+        self.assertIn("3", versions)
 
-        # Test unknown concept
-        self.assertEqual(language.concept_comment("12345"), "")
+    def test_language_load_filled_concepts(self):
+        """test Language#load_filled_concepts"""
+        language = Language("python", "Python")
+        # Python 3 has data_types structure
+        response = language.load_filled_concepts("data_types", "3")
+        response_json = json.loads(response)
+        self.assertEqual(response_json["meta"]["language"], "python")
+        self.assertEqual(response_json["meta"]["structure"], "data_types")
+        self.assertIn("concepts", response_json)
+        # Check if some basic concept exists
+        self.assertIn("boolean", response_json["concepts"])
 
-        # Test known concept
-        self.assertEqual(language.concept_comment("concept1"), "")
-        self.assertEqual(language.concept_comment("concept2"), "My comment")
-        self.assertEqual(language.concept_comment("concept3"), "")
-        self.assertEqual(language.concept_comment("concept4"), "")
+    def test_language_load_comparison(self):
+        """test Language#load_comparison"""
+        language = Language("python", "Python")
+        response = language.load_comparison("data_types", "javascript", "ECMAScript 2023", "3")
+        response_json = json.loads(response)
+        self.assertEqual(response_json["meta"]["language_1"], "python")
+        self.assertEqual(response_json["meta"]["language_2"], "javascript")
+        self.assertIn("concepts1", response_json)
+        self.assertIn("concepts2", response_json)
+
+    def test_metainfo_language_methods(self):
+        """test MetaInfo language related methods"""
+        self.assertEqual(self.metainfo.language_name("python"), "Python")
+        lang = self.metainfo.language("python")
+        self.assertIsInstance(lang, Language)
+        self.assertEqual(lang.key, "python")
+
+    def test_metainfo_load_languages(self):
+        """test MetaInfo#load_languages"""
+        structure = self.metainfo.structure("data_types")
+        langs = self.metainfo.load_languages([("python", "3"), ("javascript", "ECMAScript 2023")], structure)
+        self.assertEqual(len(langs), 2)
+        self.assertEqual(langs[0].key, "python")
+        self.assertEqual(langs[1].key, "javascript")
+
+    def test_metainfo_load_languages_missing_structure(self):
+        """test MetaInfo#load_languages with missing structure"""
+        from web.models import MissingStructureError
+        structure = self.metainfo.structure("data_types")
+        with self.assertRaises(MissingStructureError):
+            # python 3 definitely has data_types, but let's try something that doesn't exist
+            self.metainfo.load_languages([("python", "non_existent_version")], structure)

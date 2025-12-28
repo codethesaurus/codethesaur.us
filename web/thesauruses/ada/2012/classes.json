@@ -139,7 +139,7 @@
       "not-implemented": true,
       "comment": "A constructor is simply a method with the class as an output parameter"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "name": "Implementing a class deconstructor",
       "not-implemented": true
     }

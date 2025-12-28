@@ -63,11 +63,11 @@
       "name": "Delete the list"
     },
     "name_of_unordered_mutable_list": {
-      "code": "NSMutableSet",
+      "not-implemented": "true",
       "name": "What is a unordered mutable list called?"
     },
     "create_a_unordered_mutable_list": {
-      "code": "NSMutableSet *set = [NSMutableSet setWithCapacity:2];NSLog(@\"%@\",set);",
+      "not-implemented": "true",
       "name": "unordered"
     },
     "unordered_mutable_list_start_number": {
@@ -123,11 +123,11 @@
       "name": "Delete the list"
     },
     "name_of_unordered_immutable_list": {
-      "code": "NSset",
+      "not-implemented": "true",
       "name": "What is a unordered immutable list called?"
     },
     "create_a_unordered_immutable_list": {
-      "code": "NSSet *set = [NSSet set];NSLog(@\"%@\",set);",
+      "not-implemented": "true",
       "name": "Create the list"
     },
     "unordered_immutable_list_start_number": {
@@ -143,31 +143,31 @@
       "name": "Delete the list"
     },
     "name_of_mutable_hashed_list": {
-      "code": "NSHashTable",
+      "code": "NSMutableSet",
       "name": "What is a mutable hashed list called?"
     },
     "create_a_mutable_hashed_list": {
-      "not-implemented": "true",
+      "code": "NSMutableSet *set = [NSMutableSet setWithCapacity:2];",
       "name": "Create the list"
     },
     "insert_element_to_mutable_hashed_list": {
-      "code": "add(_:)",
+      "code": "[set addObject:object];",
       "name": "Insert an element"
     },
     "erase_element_from_mutable_hashed_list": {
-      "code": "remove(_:)",
+      "code": "[set removeObject:object];",
       "name": "Erase an element from the list"
     },
     "delete_mutable_hashed_list": {
-      "code": "removeAllObjects()",
+      "code": "[set removeAllObjects];",
       "name": "Delete the list"
     },
     "name_of_immutable_hashed_list": {
-      "not-implemented": "true",
+      "code": "NSSet",
       "name": "What is an immutable hashed list called?"
     },
     "create_a_immutable_hashed_list": {
-      "not-implemented": "true",
+      "code": "NSSet *set = [NSSet setWithObjects:@\"a\", @\"b\", nil];",
       "name": "Create the list"
     },
     "delete_immutable_hashed_list": {
@@ -175,23 +175,23 @@
       "name": "Delete the list"
     },
     "create_a_mutable_set": {
-      "code": "NSMutableSet",
+      "code": "NSMutableDictionary *dict = [NSMutableDictionary dictionary];",
       "name": "Create a mutable key/value set"
     },
     "get_key_from_mutable_set": {
-      "not-implemented": "true",
+      "code": "[dict allKeysForObject:value]",
       "name": "Get key"
     },
     "get_value_from_mutable_set": {
-      "not-implemented": "true",
+      "code": "[dict objectForKey:key]",
       "name": "Get value"
     },
     "get_all_keys_from_mutable_set": {
-      "not-implemented": "true",
+      "code": "[dict allKeys]",
       "name": "Get all keys"
     },
     "get_all_values_from_mutable_set": {
-      "not-implemented": "true",
+      "code": "[dict allValues]",
       "name": "Get all values"
     },
     "swap_key_and_value_in_mutable_set": {
@@ -199,27 +199,27 @@
       "name": "Swap a key and value"
     },
     "delete_mutable_set": {
-      "code": "remove(_:)",
+      "code": "[dict removeAllObjects];",
       "name": "Delete the set"
     },
     "create_a_immutable_set": {
-      "not-implemented": "true",
+      "code": "NSDictionary *dict = @{@\"key\": @\"value\"};",
       "name": "Create an immutable key/value set"
     },
     "get_key_from_immutable_set": {
-      "not-implemented": "true",
+      "code": "[dict allKeysForObject:value]",
       "name": "Get key"
     },
     "get_value_from_immutable_set": {
-      "not-implemented": "true",
+      "code": "[dict objectForKey:key]",
       "name": "Get value"
     },
     "get_all_keys_from_immutable_set": {
-      "not-implemented": "true",
+      "code": "[dict allKeys]",
       "name": "Get all keys"
     },
     "get_all_values_from_immutable_set": {
-      "not-implemented": "true",
+      "code": "[dict allValues]",
       "name": "Get all values"
     },
     "swap_key_and_value_in_immutable_set": {
@@ -233,9 +233,9 @@
     "find_element_at_position": {
       "code": "indexOfObjectIdenticalTo:"
     },
-    "find_element_by_value": {
-      "code": "containsObject:",
-      "name": "Find/search for an element by value"
+    "get_index_of_element": {
+      "code": "[myArray indexOfObject:@\"value\"]",
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "not-implemented": "true",
@@ -244,6 +244,10 @@
     "find_maximum_element": {
       "not-implemented": "true",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "code": "[myArray containsObject:@\"value\"]",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "code": "NSString * result = [[array valueForKey:@\"description\"] componentsJoinedByString:@\"\"];",
@@ -270,7 +274,7 @@
       "name": "Duplicate a portion/subset of a list"
     },
     "get_list_length": {
-      "code": "var count: Int { get }",
+      "code": "[myArray count]",
       "name": "Get list length"
     },
     "resize_list": {

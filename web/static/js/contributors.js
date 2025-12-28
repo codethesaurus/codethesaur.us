@@ -26,4 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
     contributorsRequest.onerror = function () {
         document.querySelector("#contributors").innerHTML = "multiple";
     };
+
+    var repoRequest = new XMLHttpRequest();
+    repoRequest.open(
+        "GET",
+        "https://api.github.com/repos/codethesaurus/codethesaur.us"
+    );
+    repoRequest.send();
+
+    repoRequest.onload = function () {
+        if (repoRequest.status === 200) {
+            let repoData = JSON.parse(repoRequest.responseText);
+            let lastUpdate = new Date(repoData.pushed_at);
+            let options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.querySelector("#last-update").innerHTML = lastUpdate.toLocaleDateString(undefined, options);
+        }
+    };
 });

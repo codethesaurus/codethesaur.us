@@ -217,9 +217,9 @@
     "find_element_at_position": {
       "code": "listName[index]"
     },
-    "find_element_by_value": {
-      "code": "listName.Find(x => x == value)",
-      "name": "Find/search for an element by value"
+    "get_index_of_element": {
+      "code": "listName.IndexOf(value)",
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "code": "listName.Min()",
@@ -228,6 +228,10 @@
     "find_maximum_element": {
       "code": "listName.Max()",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "code": "listName.Contains(value)",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "code": "string.Join(\",\",listName)",

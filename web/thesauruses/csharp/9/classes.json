@@ -99,7 +99,7 @@
       "code": "class ClassName {\n\tconstructor ClassName() {\n\t}\n}",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "code": "class ClassName {\n\t-ClassName() {\n\t}\n}",
       "name": "Implementing a class deconstructor"
     }

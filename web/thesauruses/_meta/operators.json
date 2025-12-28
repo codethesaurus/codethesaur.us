@@ -58,7 +58,9 @@
     },
     "Conditional Operators": {
       "ternary": "Ternary operator",
-      "null_forgiving": "Null forgiving operator"
+      "null_forgiving": "Null forgiving operator",
+      "optional_chaining": "Optional chaining operator",
+      "spread_operator": "Spread/Rest operator"
     }
   }
 }

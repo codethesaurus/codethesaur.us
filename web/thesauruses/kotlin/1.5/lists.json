@@ -219,10 +219,9 @@
       "not-implemented": true,
       "name": "Find/search for an element by position"
     },
-    "find_element_by_value": {
-      "comment": "Finds the first matching element by value.",
-      "code": "myList.find { it == value }",
-      "name": "Find/search for an element by value"
+    "get_index_of_element": {
+      "code": "myList.indexOf(value)",
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "code": "myList.minOrNull() ?: throw NoSuchElementException()",
@@ -231,6 +230,10 @@
     "find_maximum_element": {
       "code": "myList.maxOrNull() ?: throw NoSuchElementException()",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "code": "myList.contains(value)",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "comment": "Converts list elements to a string representation.",

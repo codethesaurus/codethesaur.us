@@ -108,7 +108,7 @@
       "code": "def __init__(self):\n  # body of the constructor",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "code": "def __del__(self):\n  # body of destructor",
       "name": "Implementing a class deconstructor"
     }

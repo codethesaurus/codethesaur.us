@@ -30,6 +30,12 @@ Resolves #xxxx
    <!-- Please replace this line with a description of your changes. -->
 
 
+## AI bots used in the process of making this PR
+
+   <!-- Please replace this line with any information on any bots you used and how they were used -->
+   <!-- AI is allowed, but please review the suggested changes and ensure they work correctly. -->
+   <!-- We're also curious how bots were used and how they helped you make this PR. -->
+
 ## (If editing website code) Please add screenshots
 
    <!--
@@ -53,7 +59,7 @@ Resolves #xxxx
 - [ ] I tested my changes locally to ensure they work
 - [ ] For language files, I have validated the edited files are valid JSON and data shows up correctly
 - [ ] For website code edits, I have added or edited any appropriate unit tests for my changes
-
+- [ ] If I used artificial intelligence (AI), I have reviewed the suggested changes and ensured they work correctly 
 
 ## Any additional comments or things to be aware of while reviewing?
 

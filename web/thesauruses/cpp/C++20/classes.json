@@ -101,7 +101,7 @@
       "code": "class ClassName {\n public: ClassName(){\n //constructor body  \n}  \n}",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "code": " class ClassName {\n public: ~ClassName(){\n //deconstructor body  \n}  \n}",
       "name": "Implementing a class deconstructor"
     }

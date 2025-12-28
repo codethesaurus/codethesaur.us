@@ -57,39 +57,35 @@
       "name": "Delete the list"
     },
     "name_of_unordered_mutable_list": {
-      "code": "Dictionary<Key, Value>",
+      "not-implemented": "true",
       "name": "What is a unordered mutable list called?"
     },
     "create_a_unordered_mutable_list": {
-      "code": "var someList: [Int: String] = [:]",
+      "not-implemented": "true",
       "name": "unordered"
     },
     "unordered_mutable_list_start_number": {
       "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
       "name": "What number does it start at?"
     },
     "access_element_in_unordered_mutable_list": {
-      "code": "someList[26]",
+      "not-implemented": "true",
       "name": "Access element by index"
     },
     "insert_into_unordered_mutable_list": {
       "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
       "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
       "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
       "name": "Erase first element"
     },
     "erase_element_at_end_of_unordered_mutable_list": {
       "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
       "name": "Erase last element"
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
-      "code": "someList[1] = nil",
+      "not-implemented": "true",
       "name": "Erase element in the middle"
     },
     "swap_elements_in_unordered_mutable_list": {
@@ -122,21 +118,19 @@
       "name": "Delete the list"
     },
     "name_of_unordered_immutable_list": {
-      "code": "Dictionary<Key, Value>",
-      "comment": "It is only immutable when assigned to a constant",
+      "not-implemented": "true",
       "name": "What is a unordered immutable list called?"
     },
     "create_a_unordered_immutable_list": {
-      "code": "let someList:[Int: String] = [:]",
+      "not-implemented": "true",
       "name": "Create the list"
     },
     "unordered_immutable_list_start_number": {
       "not-implemented": "true",
-      "comment": "This operation is not necessary as the elements are accessed by the key",
       "name": "What number does it start at?"
     },
     "access_element_in_unordered_immutable_list": {
-      "code": "someList[4]",
+      "not-implemented": "true",
       "name": "Access element by index"
     },
     "delete_unordered_immutable_list": {
@@ -236,9 +230,9 @@
     "find_element_at_position": {
       "code": "someArray[2]"
     },
-    "find_element_by_value": {
-      "code": "someArray.firstIndex(of: \"blue\")",
-      "name": "Find/search for an element by value"
+    "get_index_of_element": {
+      "code": "myArray.firstIndex(of: value)",
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "code": "someArray.min()",
@@ -247,6 +241,10 @@
     "find_maximum_element": {
       "code": "someArray.max()",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "code": "myArray.contains(value)",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "code": "let codes = [\"abc\",\"def\",\"ghi\"] \nlet codesAsText = codes.reduce(\"\", +)",

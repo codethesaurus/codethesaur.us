@@ -22,7 +22,9 @@
       "private_functions": "Defining private functions",
       "protected_functions": "Defining protected functions",
       "public_functions": "Defining public functions",
-      "static_functions": "Defining static functions"
+      "static_functions": "Defining static functions",
+      "getter": "Defining a getter for a property",
+      "setter": "Defining a setter for a property"
     },
     "Extending and Implementing Classes": {
       "extends_class": "Class that inherits/extends another class",
@@ -34,9 +36,9 @@
       "instantiating_object": "Instantiating a new object",
       "instantiating_polymorphic_object": "Instantiating a polymorphic object"
     },
-    "Constructors and Deconstructor": {
+    "Constructors and Destructor/Deconstructor": {
       "implement_constructor": "Implementing a class constructor",
-      "implement_deconstructor": "Implementing a class deconstructor"
+      "implement_destructor": "Implementing a class destructor/deconstructor"
     }
   }
 }

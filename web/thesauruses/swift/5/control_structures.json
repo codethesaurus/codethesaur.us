@@ -27,8 +27,14 @@
       "name": "Ternary conditional"
     },
     "switch_statement": {
-      "code": "switch (expression) {\n  case constant-expression:\n    statements;\n    break;\n  default:\n    statements;\n}",
+      "comment": "Swift switches must be exhaustive and can match many different patterns.",
+      "code": "switch someValue {\ncase 1:\n    print(\"One\")\ncase 2...5:\n    print(\"Between 2 and 5\")\ndefault:\n    print(\"Something else\")\n}",
       "name": "Switch statement"
+    },
+    "pattern_matching": {
+      "comment": "Swift has powerful pattern matching in `switch`, `if case`, `guard case`, and loops.",
+      "code": "switch somePoint {\ncase (0, 0):\n    print(\"Origin\")\ncase (_, 0):\n    print(\"On the x-axis\")\ncase (0, _):\n    print(\"On the y-axis\")\ncase (-2...2, -2...2):\n    print(\"Near the origin\")\ndefault:\n    print(\"Outside area\")\n}",
+      "name": "Pattern matching"
     },
     "while_loop": {
       "code": "while condition {\n    statements\n}",

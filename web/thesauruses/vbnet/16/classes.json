@@ -99,7 +99,7 @@
       "code": "Class ClassName \n\tSub New() \n\tEnd Sub\nEnd Class",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "code": "Class ClassName \n\tSub Finalize()\n\tEnd Sub\nEnd Class",
       "name": "Implementing a class deconstructor"
     }

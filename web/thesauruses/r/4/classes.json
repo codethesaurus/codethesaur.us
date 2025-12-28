@@ -126,7 +126,7 @@
         "name": "Implementing a class constructor",
         "not-implemented":true
       },
-      "implement_deconstructor": {
+      "implement_destructor": {
         "name": "Implementing a class deconstructor",
         "not-implemented":true
       }

@@ -10,6 +10,7 @@
       "if_elseif_conditional": "If/ElseIf conditional",
       "if_elseif_else_conditional": "If/ElseIf/Else conditional",
       "switch_statement": "Switch statement",
+      "pattern_matching": "Pattern matching",
       "ternary_conditional": "Ternary conditional"
     },
     "Loops": {
@@ -19,6 +20,8 @@
       "do_until_loop": "Do/Until loop",
       "for_loop": "For loop",
       "foreach_loop": "Foreach loop",
+      "break": "Breaking out of a loop",
+      "continue": "Continuing to the next iteration of a loop",
       "list_comprehension": "List Comprehension"
     },
     "Iterations": {
@@ -26,6 +29,10 @@
       "map_iteration": "Map iteration",
       "filter_iteration": "Filter iteration",
       "fold_iteration": "Fold iteration"
+    },
+    "Resource Management": {
+      "context_manager": "Context manager or with/using statement",
+      "defer": "Defer statement"
     }
   }
 }

@@ -228,10 +228,10 @@
     "find_element_at_position": {
       "not-implemented": true
     },
-    "find_element_by_value": {
-      "comment": "Here s is the slice (list) and value is the search query",
-      "code": "for _, v := range s {\n    if s == value {\n        return true\n    }\n}\nreturn false",
-      "name": "Find/search for an element by value"
+    "get_index_of_element": {
+      "comment": "Go does not have a built-in indexOf function for slices. You must iterate through the slice.",
+      "code": "for i, v := range s {\n    if v == value {\n        return i\n    }\n}\nreturn -1",
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "comment": "Here s is the slice(list) and min is the minimum value",
@@ -242,6 +242,11 @@
       "comment": "Here s is the slice(list) and max is the maximum value",
       "code": "max = s[0]\nfor _, value := range s {\n    if (value > max) {\n        max = value\n    }\n}",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "comment": "Go does not have a built-in contains function for slices. You must iterate through the slice.",
+      "code": "for _, v := range s {\n    if v == value {\n        return true\n    }\n}\nreturn false",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "comment": "Built-in \"strings\" package needs to be imported first",

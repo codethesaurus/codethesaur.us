@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "language": "kotlin",
+    "language_name": "Kotlin",
+    "structure": "functions",
+    "language_version": "1.5"
+  },
+  "concepts": {
+    "void_function_no_parameters": {
+      "code": "fun functionName() {\n    // statements\n}",
+      "name": "Function that does not return a value and takes no parameters"
+    },
+    "void_function_with_parameters": {
+      "code": "fun functionName(param1: Type, param2: Type) {\n    // statements\n}",
+      "name": "Function that does not return a value and that takes 1 or more defined parameters"
+    },
+    "void_function_with_optional_parameters": {
+      "code": "fun functionName(param1: Type, param2: Type = defaultValue) {\n    // statements\n}",
+      "name": "Function that does not return a value and that takes 1 or more optional parameters (with default values)"
+    },
+    "void_function_variable_parameters": {
+      "code": "fun functionName(vararg params: Type) {\n    // statements\n}",
+      "name": "Function that does not return a value and function that takes an unknown number of parameters"
+    },
+    "return_value_function_no_parameters": {
+      "code": "fun functionName(): ReturnType {\n    // statements\n    return expression\n}",
+      "name": "Function that returns a value and takes no parameters"
+    },
+    "return_value_function_with_parameters": {
+      "code": "fun functionName(param1: Type, param2: Type): ReturnType {\n    // statements\n    return expression\n}",
+      "name": "Function that returns a value and takes 1 or more defined parameters"
+    },
+    "return_value_function_with_optional_parameters": {
+      "code": "fun functionName(param1: Type, param2: Type = defaultValue): ReturnType {\n    // statements\n    return expression\n}",
+      "name": "Function that returns a value and takes 1 or more optional parameters (with default values)"
+    },
+    "return_value_function_variable_parameters": {
+      "code": "fun functionName(vararg params: Type): ReturnType {\n    // statements\n    return expression\n}",
+      "name": "Function that returns a value and takes an unknown number of parameters"
+    },
+    "anonymous_function_no_parameters": {
+      "code": "{ -> // statements }",
+      "name": "Anonymous function that takes no parameters"
+    },
+    "anonymous_function_with_parameters": {
+      "code": "{ param1: Type, param2: Type -> // statements }",
+      "name": "Anonymous function that takes 1 or more defined parameters"
+    },
+    "anonymous_function_variable_parameters": {
+      "not-implemented": true,
+      "name": "Anonymous function that takes an unknown number of parameters"
+    },
+    "anonymous_function_no_parameters_with_return": {
+      "code": "{ -> expression }",
+      "name": "Anonymous function that takes no parameters and returns a value"
+    },
+    "anonymous_function_with_parameters_with_return": {
+      "code": "{ param1: Type, param2: Type -> expression }",
+      "name": "Anonymous function that takes 1 or more defined parameters and returns a value"
+    },
+    "extension_function": {
+      "code": "fun ReceiverType.functionName() {\n    // statements\n}",
+      "comment": "Extension functions allow you to add new functions to existing classes without inheriting from them.",
+      "name": "Extension functions"
+    },
+    "named_arguments": {
+      "code": "functionName(param2 = value2, param1 = value1)",
+      "name": "Named arguments in function calls"
+    },
+    "async_function": {
+      "code": "suspend fun functionName() {\n    // statements\n}",
+      "name": "Asynchronous function (async/await)"
+    }
+  }
+}

@@ -105,7 +105,7 @@
       "code": "public function __construct() {\n //Method body \n}",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "code": "public function __destruct() {\n //Method body \n}",
       "name": "Implementing a class deconstructor"
     }

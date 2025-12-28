@@ -105,7 +105,7 @@
       "code": "class ClassName {\n constructor() {\n  // Constructor body\n }\n}",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "not-implemented": true,
       "name": "Implementing a class deconstructor"
     }

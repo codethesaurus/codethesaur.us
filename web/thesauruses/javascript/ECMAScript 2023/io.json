@@ -145,6 +145,80 @@
       "code": "fs.renameSync(old_location, new_location);",
       "comment": "The `fs` module is a part of Node.js and is not available in the browser."
     },
+    "check_file_exists": {
+      "name": "Check if a file exists",
+      "code": "fs.existsSync(location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "check_directory_exists": {
+      "name": "Check if a directory exists",
+      "code": "fs.existsSync(location);",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "get_file_size": {
+      "name": "Get the size of a file",
+      "code": "fs.statSync(location).size;",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "get_file_last_modified": {
+      "name": "Get the last modified time of a file",
+      "code": "fs.statSync(location).mtime;",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "is_file": {
+      "name": "Check if a path is a file",
+      "code": "fs.statSync(location).isFile();",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "is_directory": {
+      "name": "Check if a path is a directory",
+      "code": "fs.statSync(location).isDirectory();",
+      "comment": "The `fs` module is a part of Node.js and is not available in the browser."
+    },
+    "get_absolute_path": {
+      "name": "Get the absolute path of a file/directory",
+      "code": [
+        "const path = require('path');",
+        "path.resolve(location);"
+      ],
+      "comment": "The `path` module is a part of Node.js and is not available in the browser."
+    },
+    "get_environment_variable": {
+      "name": "Get an environment variable",
+      "code": "process.env.VARIABLE_NAME;",
+      "comment": "`process.env` is Node.js specific."
+    },
+    "set_environment_variable": {
+      "name": "Set an environment variable",
+      "code": "process.env.VARIABLE_NAME = 'value';",
+      "comment": "`process.env` is Node.js specific."
+    },
+    "list_all_environment_variables": {
+      "name": "List all environment variables",
+      "code": "process.env;",
+      "comment": "`process.env` is Node.js specific."
+    },
+    "create_temporary_file": {
+      "name": "Create a temporary file",
+      "code": [
+        "const os = require('os');",
+        "const path = require('path');",
+        "const fs = require('fs');",
+        "const tempFilePath = path.join(os.tmpdir(), 'temp-file');",
+        "fs.writeFileSync(tempFilePath, content);"
+      ],
+      "comment": "`os`, `path`, and `fs` modules are part of Node.js."
+    },
+    "create_temporary_directory": {
+      "name": "Create a temporary directory",
+      "code": [
+        "const os = require('os');",
+        "const fs = require('fs');",
+        "const path = require('path');",
+        "const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'temp-'));"
+      ],
+      "comment": "`os`, `path`, and `fs` modules are part of Node.js."
+    },
     "network_functions_lib": {
       "name": "Library containing network IO functions",
       "code": [

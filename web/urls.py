@@ -16,6 +16,9 @@ urlpatterns = [
     # /about/
     path('about/', views.about, name='about'),
 
+    # /statistics/
+    path('statistics/', views.statistics, name='statistics'),
+
     # /compare/lang1/lang2
     #path('<str:lang1>/<str:lang2>/', views.detail, name='detail')
     # /compare/

@@ -23,9 +23,14 @@
       "name": "If/ElseIf/Else conditional"
     },
     "switch_statement": {
-      "comment": "This control structure was introduced with Python 3.10 and is more powerful than shown here.",
-      "code": "match condition:\n    case value1:\n        statements\n    case value2:\n        statements",
+      "comment": "In Python 3.10+, the `match` statement is used for both switch-like behavior and advanced pattern matching.",
+      "code": "match variable:\n    case value1:\n        # statements\n    case value2:\n        # statements\n    case _:\n        # default case",
       "name": "Switch statement"
+    },
+    "pattern_matching": {
+      "comment": "Structural Pattern Matching was introduced in Python 3.10.",
+      "code": "match command.split():\n    case [\"quit\"]:\n        quit()\n    case [\"load\", filename]:\n        load(filename)\n    case [\"move\", x, y] if int(y) > 0:\n        move(x, y)\n    case _: \n        print(\"Unknown command\")",
+      "name": "Pattern matching"
     },
     "ternary_conditional": {
       "code": "expression_if_true if condition else expression_if_false",

@@ -14,6 +14,10 @@
       "code": "def function_name(parameter, parameter_1):\n    statements",
       "name": "Function that does not return a value and that takes 1 or more defined parameters"
     },
+    "void_function_with_optional_parameters": {
+      "code": "def function_name(param1, param2=default_value):\n    statements",
+      "name": "Function that does not return a value and that takes 1 or more optional parameters (with default values)"
+    },
     "void_function_variable_parameters": {
       "code": "def function_name(*parameter_name):\n    statements",
       "name": "Function that does not return a value and function that takes an unknown number of parameters"
@@ -25,6 +29,10 @@
     "return_value_function_with_parameters": {
       "code": "def function_name(parameter, parameter_1):\n    statements\n    return expression",
       "name": "Function that returns a value and takes 1 or more defined parameters"
+    },
+    "return_value_function_with_optional_parameters": {
+      "code": "def function_name(param1, param2=default_value):\n    statements\n    return expression",
+      "name": "Function that returns a value and takes 1 or more optional parameters (with default values)"
     },
     "return_value_function_variable_parameters": {
       "code": "def function_name(*parameter_name):\n    statements\n    return expression",
@@ -38,8 +46,28 @@
       "name": "Anonymous function that takes 1 or more defined parameters",
       "code": "lambda parameter,parameter_1  : expression"
     },
+    "anonymous_function_with_optional_parameters": {
+      "name": "Anonymous function that takes 1 or more optional parameters (with default values)",
+      "code": "lambda param1, param2=default_value: expression"
+    },
     "anonymous_function_variable_parameters": {
       "name": "Anonymous function that takes an unknown number of parameters",
+      "code": "lambda *parameter : expression"
+    },
+    "anonymous_function_no_parameters_with_return": {
+      "name": "Anonymous function that takes no parameters and returns a value",
+      "code": "lambda: expression"
+    },
+    "anonymous_function_with_parameters_with_return": {
+      "name": "Anonymous function that takes 1 or more defined parameters and returns a value",
+      "code": "lambda parameter,parameter_1  : expression"
+    },
+    "anonymous_function_with_optional_parameters_with_return": {
+      "name": "Anonymous function that takes 1 or more optional parameters (with default values) and returns a value",
+      "code": "lambda param1, param2=default_value: expression"
+    },
+    "anonymous_function_variable_parameters_with_return": {
+      "name": "Anonymous function that takes an unknown number of parameters and returns a value",
       "code": "lambda *parameter : expression"
     }
   }

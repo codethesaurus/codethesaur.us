@@ -1,8 +1,7 @@
 {
   "meta": {
-    "language": "language_key",
-    "language_version": "version.number",
-    "language_name": "Human-Friendly Language Name"
+    "structure": "io",
+    "structure_name": "Input and Output"
   },
   "categories": {
     "Console IO": {
@@ -10,18 +9,18 @@
       "write_line_with_new_line": "Write a line to the console with a return character",
       "read_line": "Read a line of user input from the console",
       "read_char": "Read a single char of user input from the console",
-      "clear_console_cutput": "Clear the console output",
+      "clear_console_output": "Clear the console output",
       "change_console_background_color": "Change the background color of the console",
       "change_console_text_color": "Change the text color of the console"
     },
     "File IO": {
       "file_functions_lib": "Library containing file IO functions",
       "list_directory": "List of the items in the current directory",
-      "read_directory_info": "Get infomation about the current directory (number of items, size, etc)",
+      "read_directory_info": "Get information about the current directory (number of items, size, etc)",
       "create_directory": "Create a directory",
       "delete_directory": "Delete a directory",
       "rename_directory": "Rename a directory",
-      "move_directory": "Move a directory to another locaiton",
+      "move_directory": "Move a directory to another location",
       "update_directory_permissions": "Update the permissions a user, group, or application has to a directory",
       "read_line_of_file": "Read a single line from a file",
       "read_lines_of_file": "Read all the lines in a file",
@@ -30,6 +29,24 @@
       "delete_file": "Delete a file",
       "update_file": "Update a file",
       "move_file": "Move a file to a new location"
+    },
+    "File and Directory Metadata": {
+      "check_file_exists": "Check if a file exists",
+      "check_directory_exists": "Check if a directory exists",
+      "get_file_size": "Get the size of a file",
+      "get_file_last_modified": "Get the last modified time of a file",
+      "is_file": "Check if a path is a file",
+      "is_directory": "Check if a path is a directory",
+      "get_absolute_path": "Get the absolute path of a file/directory"
+    },
+    "Environment Variables": {
+      "get_environment_variable": "Get an environment variable",
+      "set_environment_variable": "Set an environment variable",
+      "list_all_environment_variables": "List all environment variables"
+    },
+    "Temporary Files and Directories": {
+      "create_temporary_file": "Create a temporary file",
+      "create_temporary_directory": "Create a temporary directory"
     },
     "Network IO": {
       "network_functions_lib": "Library containing network IO functions",

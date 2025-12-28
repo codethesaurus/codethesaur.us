@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "language": "python",
+    "language_version": "3",
+    "language_name": "Python",
+    "structure": "io"
+  },
+  "concepts": {
+    "write_line": {
+      "code": "print(content, end='')"
+    },
+    "write_line_with_new_line": {
+      "code": "print(content)"
+    },
+    "read_line": {
+      "code": "variable = input(prompt)"
+    },
+    "clear_console_output": {
+      "code": [
+        "import os",
+        "os.system('cls' if os.name == 'nt' else 'clear')"
+      ]
+    },
+    "file_functions_lib": {
+      "code": "import os"
+    },
+    "list_directory": {
+      "code": "os.listdir(path)"
+    },
+    "create_directory": {
+      "code": "os.mkdir(path)"
+    },
+    "delete_directory": {
+      "code": "os.rmdir(path)"
+    },
+    "check_file_exists": {
+      "code": "os.path.isfile(path)"
+    },
+    "check_directory_exists": {
+      "code": "os.path.isdir(path)"
+    },
+    "get_file_size": {
+      "code": "os.path.getsize(path)"
+    },
+    "get_file_last_modified": {
+      "code": "os.path.getmtime(path)"
+    },
+    "get_environment_variable": {
+      "code": "os.environ.get('VARIABLE_NAME')"
+    },
+    "set_environment_variable": {
+      "code": "os.environ['VARIABLE_NAME'] = 'value'"
+    },
+    "list_all_environment_variables": {
+      "code": "os.environ"
+    },
+    "create_temporary_file": {
+      "code": [
+        "import tempfile",
+        "with tempfile.NamedTemporaryFile(delete=False) as fp:",
+        "    fp.write(content)"
+      ]
+    },
+    "create_temporary_directory": {
+      "code": [
+        "import tempfile",
+        "with tempfile.TemporaryDirectory() as tmpdirname:",
+        "    print('created temporary directory', tmpdirname)"
+      ]
+    }
+  }
+}

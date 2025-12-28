@@ -104,7 +104,7 @@
       "code": "access-modifier class ClassName {\n  ClassName(){\n //constructor body  \n}  \n}",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "not-implemented": "true",
       "comment": "There is no concept of destructor in Java. In place of the destructor, Java provides the garbage collector that works the same as the destructor. The garbage collector is a program (thread) that runs on the JVM. It automatically deletes the unused objects (objects that are no longer used) and free-up the memory.",
       "name": "Implementing a class deconstructor"

@@ -28,7 +28,12 @@
       },
       "switch_statement": {
         "name": "Switch statement",
-        "code": "when (expression) {\n    value1 -> {\n        // statements\n    }\n    value2 -> {\n        // statements\n    }\n    else -> {\n        // statements\n    }\n}"
+        "code": "when (x) {\n    1 -> print(\"x == 1\")\n    2 -> print(\"x == 2\")\n    else -> {\n        print(\"x is neither 1 nor 2\")\n    }\n}"
+      },
+      "pattern_matching": {
+        "name": "Pattern matching",
+        "comment": "Kotlin's `when` expression supports advanced pattern matching like type checks and range checks.",
+        "code": "when (obj) {\n    1 -> \"One\"\n    \"Hello\" -> \"Greeting\"\n    is Long -> \"Long\"\n    !is String -> \"Not a string\"\n    else -> \"Unknown\"\n}"
       },
       "while_loop": {
         "name": "While loop",

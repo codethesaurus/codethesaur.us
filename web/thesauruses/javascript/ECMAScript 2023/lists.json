@@ -303,13 +303,13 @@
         "not-implemented": true,
         "name": "Delete the set"
       },
-      "find_element_by_value": {
-        "name": "Find/search for an element by value",
+      "get_index_of_element": {
+        "name": "Get the index of an element by value",
         "code": [
-            "list_name.filter(element => element === value)",
-            "list_name.find(element => element === value)"
+            "list_name.indexOf(value)",
+            "list_name.findIndex(element => element === value)"
         ],
-        "comment": "Works only with an array. The first one returns a collection of elements matching the value, and the second returns the first element."
+        "comment": "indexOf works for primitive values, while findIndex allows for more complex search criteria."
       },
       "find_minimum_element": {
         "name": "Find the minimum value in a list",
@@ -328,6 +328,10 @@
           "list_name.sort((a, b) => b - a)[0]"
         ],
         "comment": "These solutions do not have the same performance depending on the browsers. Choose from the first to the last one depending on your needs."
+      },
+      "contains_element": {
+        "name": "Check if the list contains a specific element",
+        "code": "list_name.includes(value)"
       },
       "convert_list_to_string": {
         "name": "Convert a list to a string",
@@ -372,9 +376,17 @@
         "name": "Get list length",
         "code": "list_name.length"
       },
+      "is_list_empty": {
+        "name": "Check if the list is empty",
+        "code": "list_name.length === 0"
+      },
       "resize_list": {
         "name": "Increase/decrease list size",
         "code": "list_name.length = size"
+      },
+      "clear_list": {
+        "name": "Remove all elements from the list",
+        "code": "list_name.length = 0"
       },
       "do_two_lists_match_exactly": {
         "name": "Do two lists match every element?",
@@ -433,6 +445,26 @@
       "reduce_right": {
         "name": "Reduce a list right-to-left",
         "code": "list_name.reduceRight((accumulator, value) => { /* Function body */ })"
+      },
+      "slice_list": {
+        "name": "Get a slice/portion of a list (view or shallow copy)",
+        "code": "list_name.slice(start, end)"
+      },
+      "get_first_element": {
+        "name": "Get the first element",
+        "code": "list_name[0]"
+      },
+      "get_last_element": {
+        "name": "Get the last element",
+        "code": "list_name[list_name.length - 1]"
+      },
+      "remove_duplicates": {
+        "name": "Remove duplicate elements from the list",
+        "code": "[...new Set(list_name)]"
+      },
+      "flatten_list": {
+        "name": "Flatten a nested list",
+        "code": "list_name.flat()"
       }
     }
   }

@@ -1,165 +1,132 @@
-import os
 import json
+from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
-
-from web.models import MetaInfo
 
 
 class Command(BaseCommand):
     help = "Reads all language JSON files to ensure they're constructed correctly"
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.error_count = 0
+        self.warning_count = 0
+        self.thesauruses_path = Path("web/thesauruses")
+
     def handle(self, *args, **options):
-        error_count = 0
-        warning_count = 0
-
-        # Open up thesaurus directory
-        language_dirs = os.listdir("web/thesauruses/")
-        for lang_dir in language_dirs:
-            if lang_dir == "_meta":
-                continue
-            if os.path.isfile("web/thesauruses/" + lang_dir):
+        for lang_dir in self.thesauruses_path.iterdir():
+            if not lang_dir.is_dir() or lang_dir.name == "_meta":
                 continue
 
-            # Open up each version directory
-            versions = os.listdir("web/thesauruses/" + lang_dir)
-            for version in versions:
-                #    Open up each structures file
-                structure_files = os.listdir("web/thesauruses/" + lang_dir + "/" + version)
-                for structure_file in structure_files:
-                    structure = structure_file[:-5]
+            for version_dir in lang_dir.iterdir():
+                if not version_dir.is_dir():
+                    continue
 
-                    #       Ensure valid lang/version/name
-                    meta_structure_file_path = os.path.join(
-                        "web", "thesauruses", lang_dir, version, structure) + ".json"
+                for structure_file in version_dir.glob("*.json"):
+                    self.validate_language_file(structure_file)
 
-                    # parse file
-                    with open(meta_structure_file_path, 'r') as meta_structure_file:
-                        raw_file_data = meta_structure_file.read()
+        if self.warning_count > 0:
+            self.stdout.write(self.style.WARNING(f"{self.warning_count} warnings found."))
 
-                        meta_structure_file_json = json.loads(raw_file_data)
+        if self.error_count > 0:
+            self.stdout.write(self.style.ERROR(f"{self.error_count} errors found."))
+            raise CommandError(f"{self.error_count} errors found.")
 
-                        language = meta_structure_file_json["meta"]["language"]
-                        language_version = meta_structure_file_json["meta"]["language_version"]
-                        language_name = meta_structure_file_json["meta"]["language_name"]
-                        relative_path_name = lang_dir + "/" + version + "/" + structure + ".json"
+        if self.error_count == 0 and self.warning_count == 0:
+            self.stdout.write(self.style.SUCCESS("No issues found."))
 
-                        if not language:
-                            print(
-                                f"[Error] `{relative_path_name}` has an empty `language` attribute and needs to be updated")
-                            error_count += 1
-                        elif language == "language_id":
-                            print(
-                                f"[Error] `{relative_path_name}` has the default `language` attribute and needs to be updated")
-                            error_count += 1
-                        elif not language == lang_dir:
-                            print(
-                                f"[Error] `{relative_path_name}` has a `language` attribute that should be `{lang_dir}` and needs to be updated")
-                            error_count += 1
+    def report_error(self, message):
+        self.stderr.write(self.style.ERROR(f"[Error] {message}"))
+        self.error_count += 1
 
-                        if not language_version:
-                            print(
-                                f"[Error] `{relative_path_name}` has an empty `language_version` attribute and needs to be updated")
-                            error_count += 1
-                        elif language_version == "version.number":
-                            print(
-                                f"[Error] `{relative_path_name}` has the default `language_version` attribute and needs to be updated")
-                            error_count += 1
+    def report_warning(self, message):
+        self.stdout.write(self.style.WARNING(f"[Warning] {message}"))
+        self.warning_count += 1
 
-                        if not language_name:
-                            print(
-                                f"[Error] `{relative_path_name}` has an empty `language_name` attribute and needs to be updated")
-                            error_count += 1
-                        elif language_name == "Human-Friendly Language Name" or language_name == "Human-Readable Language Name":
-                            print(
-                                f"[Error] `{relative_path_name}` has the default `language_name` attribute and needs to be updated")
-                            error_count += 1
+    def validate_language_file(self, file_path):
+        relative_path = file_path.relative_to(self.thesauruses_path)
+        
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, UnicodeDecodeError) as e:
+            self.report_error(f"Failed to parse `{relative_path}`: {e}")
+            return
 
-                        #       Ensure categories aren't in file
-                        if "categories" in meta_structure_file_json:
-                            print(
-                                f"[Error] `{relative_path_name}` has a `categories` section in it, which is now deprecated")
-                            error_count += 1
+        self.check_meta_section(data, relative_path)
+        self.check_concepts(data, relative_path)
 
-                        #       Ensure name lines are removed
-                        for item in meta_structure_file_json["concepts"]:
-                            structure_item_data = meta_structure_file_json["concepts"][item]
+    def check_meta_section(self, data, relative_path):
+        meta = data.get("meta", {})
+        # relative_path is something like "python/3/data_types.json"
+        # parts[0] is the language directory name
+        lang_dir = relative_path.parts[0]
 
-                            # This generates SO many warnings that I'm commenting it out for now. Consider uncommenting
-                            # when more errors and such have been resolved
-                            # if "name" in structure_item_data:
-                            #     print(f"[Warn] `{relative_path_name}`, ID: `{item}` has a `name` line that can be "
-                            #           f"removed")
-                            #     warning_count += 1
+        language = meta.get("language")
+        language_version = meta.get("language_version")
+        language_name = meta.get("language_name")
 
-                            #       Ensure there's either code or not-implemented
-                            has_code = "code" in structure_item_data
-                            has_not_implemented = "not-implemented" in structure_item_data
-                            has_not_underscore_implemented = "not_implemented" in structure_item_data
-                            has_comments_plural = "comments" in structure_item_data
+        if not language:
+            self.report_error(f"`{relative_path}` has an empty `language` attribute and needs to be updated")
+        elif language == "language_id":
+            self.report_error(f"`{relative_path}` has the default `language` attribute and needs to be updated")
+        elif language != lang_dir:
+            self.report_error(f"`{relative_path}` has a `language` attribute that should be `{lang_dir}` and needs to be updated")
 
-                            #       Ensure they use not-implemented (hyphen) not not_implemented (underscore)
-                            if has_not_underscore_implemented:
-                                print(f"[Error] `{relative_path_name}`, ID: `{item}` has not_implemented (underscore) "
-                                      f"when it should use not-implemented (hyphen)")
-                                error_count += 1
+        if not language_version:
+            self.report_error(f"`{relative_path}` has an empty `language_version` attribute and needs to be updated")
+        elif language_version == "version.number":
+            self.report_error(f"`{relative_path}` has the default `language_version` attribute and needs to be updated")
 
-                            if has_code and (has_not_implemented or has_not_underscore_implemented):
-                                print(
-                                    f"[Error] `{relative_path_name}`, ID: `{item}` should have `code` or "
-                                    f"`not-implemented`, not both")
-                                error_count += 1
+        if not language_name:
+            self.report_error(f"`{relative_path}` has an empty `language_name` attribute and needs to be updated")
+        elif language_name in ["Human-Friendly Language Name", "Human-Readable Language Name"]:
+            self.report_error(f"`{relative_path}` has the default `language_name` attribute and needs to be updated")
 
-                            if not has_code and not has_not_implemented and not has_not_underscore_implemented:
-                                print(
-                                    f"[Error] `{relative_path_name}`, ID: `{item}` is missing a needed `code` or "
-                                    f"`not-implemented` line")
-                                error_count += 1
+        if "categories" in data:
+            self.report_error(f"`{relative_path}` has a `categories` section in it, which is now deprecated")
 
-                            #       Ensure if not-implemented, there's no code line
-                            if has_not_implemented and structure_item_data["not-implemented"] is True and has_code:
-                                print(f"[Error] `{relative_path_name}`, ID: `{item}` is not implemented, but has a "
-                                      f"`code` line that should be removed")
-                                error_count += 1
+    def check_concepts(self, data, relative_path):
+        concepts = data.get("concepts", {})
+        for concept_id, item_data in concepts.items():
+            has_code = "code" in item_data
+            has_not_implemented = "not-implemented" in item_data
+            has_not_underscore_implemented = "not_implemented" in item_data
+            has_comments_plural = "comments" in item_data
 
-                            #     Ensure if code, it's not empty and there's no not-implemented
-                            if has_code and not structure_item_data["code"] and not has_not_implemented:
-                                print(f"[Error] `{relative_path_name}`, ID: `{item}` is confusing: `code` is empty "
-                                      f"but there's no `not-implemented` either")
-                                error_count += 1
+            if has_not_underscore_implemented:
+                self.report_error(
+                    f"`{relative_path}`, ID: `{concept_id}` has not_implemented (underscore) "
+                    "when it should use not-implemented (hyphen)"
+                )
 
-                            #       Ensure it's comment, not comments
-                            if has_comments_plural:
-                                print(f"[Error] `{relative_path_name}`, ID: `{item}` has `comments` (plural) that "
-                                      f"should be `comment` (singular) instead")
-                                error_count += 1
+            if has_code and (has_not_implemented or has_not_underscore_implemented):
+                self.report_error(
+                    f"`{relative_path}`, ID: `{concept_id}` should have `code` or `not-implemented`, not both"
+                )
 
-                            #       Code can be string or array (maybe warn if string)
-                            # if has_code and isinstance(structure_item_data["code"], str):
-                            #     print(f"[Warning] `{relative_path_name}`, ID: `{item}` has a `code` line that's a "
-                            #           f"string and could optionally be an array")
-                            #     warning_count += 1
+            if not has_code and not has_not_implemented and not has_not_underscore_implemented:
+                self.report_error(
+                    f"`{relative_path}`, ID: `{concept_id}` is missing a needed `code` or `not-implemented` line"
+                )
 
-                            #       There shouldn't be any other fields
-                            for key in structure_item_data:
-                                if not (key == "code"
-                                        or key == "comment"
-                                        or key == "comments"
-                                        or key == "not-implemented"
-                                        or key == "not_implemented"
-                                        or key == "name"):
-                                    # Why "not_implemented"/"name"/"comments"? Because we check for them above,
-                                    # this checks for other exceptions
-                                    print(f"[Warning] `{relative_path_name}`, ID: `{item}` has a line `{key}` that's "
-                                          f"unknown")
-                                    warning_count += 1
+            if has_not_implemented and item_data.get("not-implemented") is True and has_code:
+                self.report_error(
+                    f"`{relative_path}`, ID: `{concept_id}` is not implemented, but has a `code` line that should be removed"
+                )
 
-        if warning_count + error_count > 0:
-            # if error_count > 0:
-            if warning_count:
-                print(str(warning_count) + " warnings found.")
-            if error_count:
-                print(str(error_count) + " errors found.")
-                raise CommandError(str(error_count) + " errors found.")
-        else:
-            print("No issues found.")
+            if has_code and not item_data.get("code") and not has_not_implemented:
+                self.report_error(
+                    f"`{relative_path}`, ID: `{concept_id}` is confusing: `code` is empty but there's no `not-implemented` either"
+                )
+
+            if has_comments_plural:
+                self.report_error(
+                    f"`{relative_path}`, ID: `{concept_id}` has `comments` (plural) that should be `comment` (singular) instead"
+                )
+
+            # Check for unknown keys
+            allowed_keys = {"code", "comment", "not-implemented", "not_implemented", "name", "comments"}
+            for key in item_data:
+                if key not in allowed_keys:
+                    self.report_warning(f"`{relative_path}`, ID: `{concept_id}` has a line `{key}` that's unknown")

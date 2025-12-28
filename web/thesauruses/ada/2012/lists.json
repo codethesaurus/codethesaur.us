@@ -60,13 +60,54 @@
       "not-implemented": "true",
       "name": "Delete the list"
     },
-    "name_of_unordered_mutable_list": {
+    "name_of_sorted_mutable_list": {
       "code": "sets",
+      "name": "What is a sorted mutable list called?"
+    },
+    "create_a_sorted_mutable_list": {
+      "code": "S : Set;",
+      "comment": "Ad.Containers.Ordered_Sets container is required",
+      "name": "Create the list"
+    },
+    "sorted_mutable_list_start_number": {
+      "not-implemented": "true",
+      "name": "What number does it start at?"
+    },
+    "access_element_in_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Access element by index"
+    },
+    "insert_into_sorted_mutable_list": {
+      "code": "S.Include (value); \n S.Insert (value);",
+      "comment": "S.Insert(value) raises Constraint_Error if value appended is already in the list",
+      "name": "Insert element in middle"
+    },
+    "erase_element_at_beginning_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase first element"
+    },
+    "erase_element_at_end_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase last element"
+    },
+    "erase_element_in_middle_of_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Erase element in the middle"
+    },
+    "swap_elements_in_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Swap two elements"
+    },
+    "delete_sorted_mutable_list": {
+      "not-implemented": "true",
+      "name": "Delete the list"
+    },
+    "name_of_unordered_mutable_list": {
+      "not-implemented": "true",
       "name": "What is a unordered mutable list called?"
     },
     "create_a_unordered_mutable_list": {
-      "code": "S : Set;",
-      "comment": "Ad.Containers.Ordered_Sets container is required",
+      "not-implemented": "true",
       "name": "unordered"
     },
     "unordered_mutable_list_start_number": {
@@ -78,9 +119,8 @@
       "name": "Access element by index"
     },
     "insert_into_unordered_mutable_list": {
-      "code": "S.Include (value); \n S.Insert (value);",
-      "comment": "S.Insert(value) raises Constraint_Error if value appended is already in the list",
-      "name": "Insert element at end"
+      "not-implemented": "true",
+      "name": "Insert element in middle"
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
       "not-implemented": "true",
@@ -234,9 +274,9 @@
     "find_element_at_position": {
       "code": "V(index)"
     },
-    "find_element_by_value": {
-      "code": "V.Find_Index (value) \n V.Find (value)",
-      "name": "Find/search for an element by value"
+    "get_index_of_element": {
+      "code": "V.Find_Index (value)",
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "not-implemented": "true",
@@ -245,6 +285,10 @@
     "find_maximum_element": {
       "not-implemented": "true",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "code": "V.Contains (value)",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "not-implemented": "true",

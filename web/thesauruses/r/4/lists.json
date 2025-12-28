@@ -381,11 +381,9 @@
         "name": "Delete the set",
         "not-implemented":true
       },
-      "find_element_by_value": {
-        "name": "Find/search for an element by value",
-        "code": [
-          ""
-        ]
+      "get_index_of_element": {
+        "name": "Get the index of an element by value",
+        "code": "which(my_vector == value)"
       },
       "find_minimum_element": {
         "name": "Find the minimum value in a list",
@@ -398,6 +396,10 @@
         "code": [
           "max(unlist(mylist))"
         ]
+      },
+      "contains_element": {
+        "name": "Check if the list contains a specific element",
+        "code": "value %in% my_vector"
       },
       "convert_list_to_string": {
         "name": "Convert a list to a string",

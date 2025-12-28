@@ -34,6 +34,13 @@
       "complex_as_object": "Complex Number as an object",
       "real_number_part": "Complex number real part",
       "imaginary_number_part": "Complex number imaginary part"
+    },
+    "Special Types": {
+      "null_type": "Null / None / Nil",
+      "optional_type": "Optional / Maybe / Nullable",
+      "void_type": "Void / Unit / None",
+      "enum_type": "Enumeration (Enum)",
+      "tuple_type": "Tuple"
     }
   }
 }

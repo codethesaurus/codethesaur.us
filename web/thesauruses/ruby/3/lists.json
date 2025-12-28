@@ -382,16 +382,13 @@
       "not-implemented": true,
       "comment": "Immutable hashes cannot be changed."
     },
-    "find_element_by_value": {
-      "name": "Find/search for an element by value",
+    "get_index_of_element": {
+      "name": "Get the index of an element by value",
       "code": [
-        "popsicle_costs = { melon: 5, 'lemon': 3, 'orange' => 4.5, 'root beer': 4, 1 => 10 }",
         "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
-        "fruits.index 'orange'",
-        "popsicle_costs.key 5",
-        "fruits.include? 'tomato'"
+        "fruits.index 'orange'"
       ],
-      "comment": "First two lines are our array and hash. Third returns the index of orange, 1 in this case. Fourth line gives the key for 5, which is melon. The last line returns true, because a tomato is a fruit."
+      "comment": "Returns the index of the first occurrence of the element."
     },
     "find_minimum_element": {
       "name": "Find the minimum value in a list",
@@ -409,6 +406,13 @@
         "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
         "popsicle_costs.values.max",
         "fruits.max"
+      ]
+    },
+    "contains_element": {
+      "name": "Check if the list contains a specific element",
+      "code": [
+        "fruits = ['apple', 'orange', 'tomato', 'cantaloupe']",
+        "fruits.include? 'tomato'"
       ]
     },
     "convert_list_to_string": {

@@ -27,8 +27,14 @@
       "name": "Ternary conditional"
     },
     "switch_statement": {
-      "code": "match expression {\n    pattern => { statements }\n    _ => { statements } // the special pattern _ matches all cases\n}",
+      "comment": "Rust uses the `match` keyword for switch-like behavior and exhaustive pattern matching.",
+      "code": "match expression {\n    pattern => { statements }\n    _ => { statements } // default case\n}",
       "name": "Switch statement"
+    },
+    "pattern_matching": {
+      "comment": "Rust has very powerful pattern matching capabilities with `match` and `if let`.",
+      "code": "match some_option {\n    Some(i) if i > 5 => println!(\"Greater than five: {}\", i),\n    Some(i) => println!(\"Value: {}\", i),\n    None => println!(\"No value\"),\n}",
+      "name": "Pattern matching"
     },
     "while_loop": {
       "code": "while condition {\n    statements;\n}",

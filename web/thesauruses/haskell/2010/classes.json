@@ -119,7 +119,7 @@
       "not-implemented": true,
       "comment": "You specify all constructors when defining the type, they are simple containers for all members"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "name": "Implementing a class deconstructor",
       "not-implemented": true
     }

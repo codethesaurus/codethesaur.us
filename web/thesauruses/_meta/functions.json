@@ -8,29 +8,39 @@
       "void_function_no_parameters": "Function that does not return a value and takes no parameters",
       "void_function_with_parameters": "Function that does not return a value and that takes 1 or more defined parameters",
       "void_function_with_keyword_parameters": "Function that does not return a value and that takes 0 or more defined keyword parameters",
+      "void_function_with_optional_parameters": "Function that does not return a value and that takes 1 or more optional parameters (with default values)",
       "void_function_variable_parameters": "Function that does not return a value and function that takes an unknown number of parameters"
     },
     "Return Value Functions": {
       "return_value_function_no_parameters": "Function that returns a value and takes no parameters",
       "return_value_function_with_parameters": "Function that returns a value and takes 1 or more defined parameters",
       "return_value_function_with_keyword_parameters": "Function that returns a value and takes 0 or more defined keyword parameters",
+      "return_value_function_with_optional_parameters": "Function that returns a value and takes 1 or more optional parameters (with default values)",
       "return_value_function_variable_parameters": "Function that returns a value and takes an unknown number of parameters"
     },
     "Lambda/Anonymous Functions": {
       "anonymous_function_no_parameters": "Anonymous function that takes no parameters",
       "anonymous_function_with_parameters": "Anonymous function that takes 1 or more defined parameters",
       "anonymous_function_with_keyword_parameters": "Anonymous function that takes 0 or more defined keyword parameters",
+      "anonymous_function_with_optional_parameters": "Anonymous function that takes 1 or more optional parameters (with default values)",
       "anonymous_function_variable_parameters": "Anonymous function that takes an unknown number of parameters"
     },
     "Lambda/Anonymous Functions with Return Value": {
       "anonymous_function_no_parameters_with_return": "Anonymous function that takes no parameters and returns a value",
       "anonymous_function_with_parameters_with_return": "Anonymous function that takes 1 or more defined parameters and returns a value",
       "anonymous_function_with_keyword_parameters_with_return": "Anonymous function that takes 0 or more defined keyword parameters and returns a value",
+      "anonymous_function_with_optional_parameters_with_return": "Anonymous function that takes 1 or more optional parameters (with default values) and returns a value",
       "anonymous_function_variable_parameters_with_return": "Anonymous function that takes an unknown number of parameters and returns a value"
     },
     "Subroutines": {
       "call_subroutine": "Call subroutine",
       "return_from_subroutine": "Return from subroutine"
+    },
+    "Modern Function Features": {
+      "async_function": "Asynchronous function (async/await)",
+      "named_arguments": "Named arguments in function calls",
+      "extension_function": "Extension functions",
+      "multiple_return_values": "Multiple return values"
     }
   }
 }

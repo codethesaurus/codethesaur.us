@@ -56,43 +56,43 @@
     },
     "name_of_unordered_mutable_list": {
       "name": "What is a unordered, mutable list called?",
-      "code": "Table"
+      "not-implemented": true
     },
     "create_a_unordered_mutable_list": {
       "name": "unordered",
-      "code": "{\"key\": \"value\"}.toTable"
+      "not-implemented": true
     },
     "unordered_mutable_list_start_number": {
       "name": "What number does it start at?",
-      "code": "0"
+      "not-implemented": true
     },
     "access_element_in_unordered_mutable_list": {
       "name": "Access element by index",
-      "code": "table[key]"
+      "not-implemented": true
     },
     "insert_into_unordered_mutable_list": {
       "name": "Insert element in middle",
-      "code": "table[key] = value"
+      "not-implemented": true
     },
     "erase_element_at_beginning_of_unordered_mutable_list": {
       "name": "Erase first element",
-      "code": "table.del key"
+      "not-implemented": true
     },
     "erase_element_at_end_of_unordered_mutable_list": {
       "name": "Erase last element",
-      "code": "table.del key"
+      "not-implemented": true
     },
     "erase_element_in_middle_of_unordered_mutable_list": {
       "name": "Erase element in the middle",
-      "code": "table.del key"
+      "not-implemented": true
     },
     "swap_elements_in_unordered_mutable_list": {
       "name": "Swap two elements",
-      "code": "swap table[key0], table[key1]"
+      "not-implemented": true
     },
     "delete_unordered_mutable_list": {
       "name": "Delete the list",
-      "code": "Automatic compile-time deterministic memory management"
+      "not-implemented": true
     },
     "name_of_ordered_immutable_list": {
       "name": "What is a ordered, immutable list called?",
@@ -116,39 +116,39 @@
     },
     "name_of_unordered_immutable_list": {
       "name": "What is a unordered, immutable list called?",
-      "code": "Table"
+      "not-implemented": true
     },
     "create_a_unordered_immutable_list": {
       "name": "Create the list",
-      "code": "{\"key\": \"value\"}.toTable"
+      "not-implemented": true
     },
     "unordered_immutable_list_start_number": {
       "name": "What number does it start at?",
-      "code": "0"
+      "not-implemented": true
     },
     "access_element_in_unordered_immutable_list": {
       "name": "Access element by index",
-      "code": "table[key]"
+      "not-implemented": true
     },
     "delete_unordered_immutable_list": {
       "name": "Delete the list",
-      "code": "Automatic compile-time deterministic memory management"
+      "not-implemented": true
     },
     "name_of_mutable_hashed_list": {
       "name": "What is a mutable hashed list called?",
-      "code": "Table"
+      "code": "HashSet"
     },
     "create_a_mutable_hashed_list": {
       "name": "Create the list",
-      "code": "{\"key\": \"value\"}.toTable"
+      "code": "[1, 2].toHashSet"
     },
     "insert_element_to_mutable_hashed_list": {
       "name": "Insert an element",
-      "code": "table[key] = value"
+      "code": "hashset.incl item"
     },
     "erase_element_from_mutable_hashed_list": {
       "name": "Erase an element from the list",
-      "code": "table.del key"
+      "code": "hashset.excl item"
     },
     "delete_mutable_hashed_list": {
       "name": "Delete the list",
@@ -156,26 +156,74 @@
     },
     "name_of_immutable_hashed_list": {
       "name": "What is an immutable hashed list called?",
-      "code": "Table"
+      "code": "HashSet"
     },
     "create_a_immutable_hashed_list": {
       "name": "Create the list",
-      "code": "{\"key\": \"value\"}.toTable"
+      "code": "[1, 2].toHashSet"
     },
     "delete_immutable_hashed_list": {
       "name": "Delete the list",
       "code": "Automatic compile-time deterministic memory management"
     },
+    "create_a_mutable_set": {
+      "name": "Create a mutable key/value set",
+      "code": "{\"key\": \"value\"}.toTable"
+    },
+    "get_key_from_mutable_set": {
+      "name": "Get key",
+      "not-implemented": true
+    },
+    "get_value_from_mutable_set": {
+      "name": "Get value",
+      "code": "table[key]"
+    },
+    "get_all_keys_from_mutable_set": {
+      "name": "Get all keys",
+      "code": "toSeq(table.keys)"
+    },
+    "get_all_values_from_mutable_set": {
+      "name": "Get all values",
+      "code": "toSeq(table.values)"
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "name": "Swap a key and value",
+      "not-implemented": true
+    },
     "delete_mutable_set": {
       "name": "Delete the set",
       "code": "Automatic compile-time deterministic memory management"
+    },
+    "create_a_immutable_set": {
+      "name": "Create an immutable key/value set",
+      "code": "{\"key\": \"value\"}.toTable"
+    },
+    "get_key_from_immutable_set": {
+      "name": "Get key",
+      "not-implemented": true
+    },
+    "get_value_from_immutable_set": {
+      "name": "Get value",
+      "code": "table[key]"
+    },
+    "get_all_keys_from_immutable_set": {
+      "name": "Get all keys",
+      "code": "toSeq(table.keys)"
+    },
+    "get_all_values_from_immutable_set": {
+      "name": "Get all values",
+      "code": "toSeq(table.values)"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "name": "Swap a key and value",
+      "not-implemented": true
     },
     "delete_immutable_set": {
       "name": "Delete the set",
       "code": "Automatic compile-time deterministic memory management"
     },
-    "find_element_by_value": {
-      "name": "Find/search for an element by value",
+    "get_index_of_element": {
+      "name": "Get the index of an element by value",
       "code": "list.find item"
     },
     "find_minimum_element": {
@@ -185,6 +233,10 @@
     "find_maximum_element": {
       "name": "Find the maximum value in a list",
       "code": "list.high"
+    },
+    "contains_element": {
+      "name": "Check if the list contains a specific element",
+      "code": "item in list"
     },
     "convert_list_to_string": {
       "name": "Convert a list to a string",

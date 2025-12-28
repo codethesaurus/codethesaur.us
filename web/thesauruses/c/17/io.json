@@ -23,7 +23,7 @@
             "code": "getchar()",
             "name": "Read a single char of user input from the console"
             },
-       "clear_console_cutput": {
+       "clear_console_output": {
             "not-implemented":"true",
             "comment": "system() is defined in stdlib.h which invokes a system call",
             "name": "Clear the console output"

@@ -95,9 +95,10 @@
       "delete_immutable_set": "Delete the set"
     },
     "Find/Search Functions": {
-      "find_element_by_value": "Find/search for an element by value",
+      "get_index_of_element": "Get the index of an element by value",
       "find_minimum_element": "Find the minimum value in a list",
       "find_maximum_element": "Find the maximum value in a list",
+      "contains_element": "Check if the list contains a specific element",
       "convert_list_to_string": "Convert a list to a string"
     },
     "Splitting/Joining Lists": {
@@ -111,7 +112,9 @@
     },
     "Sizing/Resizing Lists": {
       "get_list_length": "Get list length",
-      "resize_list": "Increase/decrease list size"
+      "is_list_empty": "Check if the list is empty",
+      "resize_list": "Increase/decrease list size",
+      "clear_list": "Remove all elements from the list"
     },
     "Comparing/Equality": {
       "do_two_lists_match_exactly": "Do two lists match every element?",
@@ -129,6 +132,13 @@
       "filter": "Filter a list based on criteria",
       "reduce_left": "Reduce a list left-to-right",
       "reduce_right": "Reduce a list right-to-left"
+    },
+    "Advanced Collection Operations": {
+      "slice_list": "Get a slice/portion of a list (view or shallow copy)",
+      "get_first_element": "Get the first element",
+      "get_last_element": "Get the last element",
+      "remove_duplicates": "Remove duplicate elements from the list",
+      "flatten_list": "Flatten a nested list"
     }
   }
 }

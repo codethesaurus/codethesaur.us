@@ -289,10 +289,9 @@
         "not-implemented": true,
         "name": "Delete the set"
       },
-      "find_element_by_value": {
-        "name": "Find/search for an element by value",
-        "code": "list_name.filter(element => element === value)",
-        "comment": "Works only with an array. Returns a collection of elements matching the value."
+      "get_index_of_element": {
+        "name": "Get the index of an element by value",
+        "code": "list_name.indexOf(value)"
       },
       "find_minimum_element": {
         "name": "Find the minimum value in a list",
@@ -309,6 +308,10 @@
           "list_name.sort((a, b) => b - a)[0]"
         ],
         "comment": "These solutions do not have the same performance depending on the browsers. Choose from the first to the last one depending on your needs."
+      },
+      "contains_element": {
+        "name": "Check if the list contains a specific element",
+        "code": "list_name.indexOf(value) !== -1"
       },
       "convert_list_to_string": {
         "name": "Convert a list to a string",

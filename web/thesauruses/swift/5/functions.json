@@ -55,6 +55,11 @@
       "code": "return",
       "comment": "If entire function body is a single expression, no return keyword needed to return expression.",
       "name": "Return from subroutine"
+    },
+    "extension_function": {
+      "code": "extension SomeType {\n    func newFunction() {\n        // statements\n    }\n}",
+      "comment": "Extensions add new functionality to an existing class, structure, enumeration, or protocol type.",
+      "name": "Extension functions"
     }
   }
 }

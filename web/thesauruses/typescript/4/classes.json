@@ -98,7 +98,7 @@
       "code": "class Employee {\n empCode: number;\n empName: string;\n constructor(code: number, name: string) {\n this.empName = name;\n this.empCode = code;\n }\n }",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "not-implemented": true,
       "name": "Implementing a class deconstructor"
     }

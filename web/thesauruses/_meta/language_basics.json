@@ -19,11 +19,18 @@
         },
         "Execution Method": {
             "compiled_language": "Language is translated into machine code or an intermediate form by a compiler before execution",
-            "interpreted_language": "Language is executed line by line by an interpreter at runtime withot a separate compilation step"
+            "interpreted_language": "Language is executed line by line by an interpreter at runtime without a separate compilation step"
         },
         "Application Domain": {
             "general_purpose_language": "Language is designed to be versatile and applicable to a wide range of tasks and applications",
             "domain_specific_language": "Language is designed to address specific application domains or industries"
+        },
+        "Syntax and Style": {
+            "case_sensitive": "Language distinguishes between uppercase and lowercase characters in identifiers",
+            "case_insensitive": "Language does not distinguish between uppercase and lowercase characters in identifiers",
+            "significant_whitespace": "Indentation or whitespace has semantic meaning in the language",
+            "insignificant_whitespace": "Indentation or whitespace does not have semantic meaning, often using braces or other delimiters",
+            "statement_terminators": "The characters or methods used to signal the end of a statement (e.g., semicolons, newlines)"
         },
         "Memory Management": {
             "manual_management": "Languages where memory has to be managed by the programmer manually",
@@ -34,6 +41,26 @@
             "second_generation": "Language uses mnemonic codes and symbols to represent machine-level instructions, providing a more human-readable way to program and interact with a computer's hardware.",
             "third_generation": "High-level programming languages designed for general-purpose software development, offering a higher level of abstraction and greater ease of use compared to low-level languages like assembly.",
             "fourth_generation": "High-level programming languages designed for specific applications or domains, often using natural language-like syntax and focusing on rapid application development."
+        },
+        "Naming Conventions": {
+            "variable_naming": "The standard convention for naming variables (e.g., snake_case, camelCase)",
+            "function_naming": "The standard convention for naming functions or methods",
+            "class_naming": "The standard convention for naming classes or types (e.g., PascalCase)"
+        },
+        "Scoping": {
+            "lexical_scoping": "Variable scope is determined by its position in the source code",
+            "dynamic_scoping": "Variable scope is determined by the program's runtime call stack",
+            "block_scoping": "Variables are scoped to the nearest enclosing block (usually marked by braces or indentation)",
+            "function_scoping": "Variables are scoped to the nearest enclosing function"
+        },
+        "Package Management": {
+            "primary_package_manager": "The primary tool used for managing dependencies and libraries",
+            "central_repository": "The main public repository for sharing and downloading packages"
+        },
+        "Error Handling": {
+            "exception_based": "Errors are handled using an exception-throwing mechanism (try/catch/finally)",
+            "return_code_based": "Errors are handled by checking return values or status codes",
+            "type_based": "Errors are handled using functional types like Result, Option, or Either"
         },
         "Entry Point": {
             "main_function": "Entry point of the program is the main function of the file",
@@ -49,6 +76,10 @@
         "Library and Framework support": {
             "standard_libraries": "Programming Language is supported by an extensive network of standard libraries which are not required to be imported externally",
             "extensive_frameworks": "Language has a strong network of external frameworks for supporting additional functionalities. Usually the external libraries are installed into the project using a package manager, and imported into the required file using the `import` keyword"
+        },
+        "Variable Declaration": {
+            "mutable_variable": "Declaring a mutable variable",
+            "immutable_variable": "Declaring an immutable variable/constant"
         },
         "Minimal Program": {
             "hello_world": "The most minimal program to understand all the basics is the Hello World program. Here you only need to print \"Hello World\" to the console/output of the programming language of your choice."

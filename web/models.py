@@ -12,6 +12,7 @@ class MetaStructure:
     Holds info about how the structure is divided into categories and
     concepts
     """
+    _cached_files = {}
 
     def __init__(self, key, name):
         """
@@ -23,12 +24,18 @@ class MetaStructure:
         """
         self.key = key
         self.name = name
+
+        if key in MetaStructure._cached_files:
+            self.categories = MetaStructure._cached_files[key]
+            return
+
         meta_structure_file_path = os.path.join(
             "web", "thesauruses", "_meta", f"{key}.json")
         with open(meta_structure_file_path, 'r', encoding='UTF-8') as meta_structure_file:
             meta_structure_file_json = json.load(meta_structure_file)
 
             self.categories = meta_structure_file_json["categories"]
+            MetaStructure._cached_files[key] = self.categories
 
 
 class Language:
@@ -210,6 +217,37 @@ class Language:
         return comment
 
 
+    def is_concept_complete(self, concept_key):
+        """
+        Returns a Boolean if the concept has either code or a comment.
+        """
+        if self.concept_unknown(concept_key):
+            return False
+        if not self.concept_implemented(concept_key):
+            return True # If explicitly marked as not-implemented, we consider it "complete" in terms of knowledge
+        return bool(self.concept_code(concept_key) or self.concept_comment(concept_key))
+
+    def is_category_incomplete(self, category_concepts_keys):
+        """
+        Returns a Boolean if ANY concept in the category is unknown or missing code/comment.
+        """
+        for key in category_concepts_keys:
+            if self.concept_unknown(key):
+                return True
+            if self.concept_implemented(key) and not (self.concept_code(key) or self.concept_comment(key)):
+                return True
+        return False
+
+    def has_any_implemented_in_category(self, category_concepts_keys):
+        """
+        Returns True if at least one concept in the category is known AND implemented.
+        """
+        for key in category_concepts_keys:
+            if not self.concept_unknown(key) and self.concept_implemented(key):
+                return True
+        return False
+
+
 class MissingLanguageError(Exception):
     """Error for when a requested language is not defined in `meta.json`"""
     def __init__(self, key):
@@ -232,6 +270,8 @@ class MissingStructureError(Exception):
 
 class MetaInfo:
     """Holds info about structures and languages"""
+    _cached_structures = None
+    _cached_languages = None
 
     def __init__(self):
         """
@@ -239,12 +279,19 @@ class MetaInfo:
 
         :rtype: None
         """
+        if MetaInfo._cached_structures is not None:
+            self.structures = MetaInfo._cached_structures
+            self.languages = MetaInfo._cached_languages
+            return
+
         meta_info_file_path = os.path.join(
             "web", "thesauruses", "meta_info.json")
         with open(meta_info_file_path, 'r', encoding='UTF-8') as meta_file:
             meta_info_json = json.load(meta_file)
         self.structures = meta_info_json["structures"]
         self.languages = meta_info_json["languages"]
+        MetaInfo._cached_structures = self.structures
+        MetaInfo._cached_languages = self.languages
         
 
     def language_name(self, language_key):
@@ -330,10 +377,19 @@ class SiteVisit(models.Model):
 
 class LookupData(models.Model):
     id = models.BigAutoField(primary_key=True)
-    date_time = models.DateTimeField
+    date_time = models.DateTimeField(auto_now_add=True)
     language1 = models.CharField(max_length=50)
     version1 = models.CharField(max_length=20, default='')
     language2 = models.CharField(max_length=50)
     version2 = models.CharField(max_length=20, default='')
     structure = models.CharField(max_length=50)
+    site_visit = models.ForeignKey(SiteVisit, on_delete=models.CASCADE)
+
+
+class MissingLookup(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    date_time = models.DateTimeField(auto_now_add=True)
+    item_type = models.CharField(max_length=20)  # 'language', 'structure', 'concept'
+    item_value = models.CharField(max_length=100)
+    language_context = models.CharField(max_length=50, blank=True, null=True)
     site_visit = models.ForeignKey(SiteVisit, on_delete=models.CASCADE)

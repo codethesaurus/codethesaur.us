@@ -227,9 +227,9 @@
       "not-implemented": true,
       "name": "Delete the set"
     },
-    "find_element_by_value": {
-      "code": "array.find((element) => element === value)",
-      "name": "Find/search for an element by value"
+    "get_index_of_element": {
+      "code": "myArray.indexOf(value)",
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "code": "Math.min.apply(null, array)\nOR\nMath.min(...array)",
@@ -238,6 +238,10 @@
     "find_maximum_element": {
       "code": "Math.max.apply(null, array)\nOR\nMath.max(...array)",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "code": "myArray.includes(value)",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "code": "array.toString()",

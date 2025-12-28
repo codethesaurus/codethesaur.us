@@ -100,7 +100,7 @@
       "code": "function ClassName() {\n // Constructor body\n}",
       "name": "Implementing a class constructor"
     },
-    "implement_deconstructor": {
+    "implement_destructor": {
       "not-implemented": true,
       "name": "Implementing a class deconstructor"
     }

@@ -270,9 +270,9 @@
     "find_element_at_position": {
       "code": "$array[$n]"
     },
-    "find_element_by_value": {
+    "get_index_of_element": {
       "code": "array_search($element,$array)",
-      "name": "Find/search for an element by value"
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "code": "min($array)",
@@ -281,6 +281,10 @@
     "find_maximum_element": {
       "code": "max($array)",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "code": "in_array($element, $array)",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "code": "implode($array)",

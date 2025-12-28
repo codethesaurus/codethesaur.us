@@ -237,10 +237,9 @@
     "find_element_at_position": {
       "not-implemented": true
     },
-    "find_element_by_value": {
-      "comment": "The stream capabilities added in Java 8+ provide a generic map, filter, and reduce capability for all built-in collections.",
-      "code": "myList.stream().filter(v -> v == value).findFirst().get()",
-      "name": "Find/search for an element by value"
+    "get_index_of_element": {
+      "code": "myList.indexOf(value)",
+      "name": "Get the index of an element by value"
     },
     "find_minimum_element": {
       "code": "myList\n      .stream()\n      .mapToInt(v -> v)\n      .min().orElseThrow(NoSuchElementException::new);",
@@ -249,6 +248,10 @@
     "find_maximum_element": {
       "code": "myList\n      .stream()\n      .mapToInt(v -> v)\n      .max().orElseThrow(NoSuchElementException::new);",
       "name": "Find the maximum value in a list"
+    },
+    "contains_element": {
+      "code": "myList.contains(value)",
+      "name": "Check if the list contains a specific element"
     },
     "convert_list_to_string": {
       "comment": "If the list contains non-String objects, you can use the stream capabilities to map the items to Strings first.",
