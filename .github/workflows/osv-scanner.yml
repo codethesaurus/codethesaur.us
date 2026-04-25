@@ -1,0 +1,24 @@
+name: OSV Scanner
+
+on:
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+jobs:
+  scan:
+    name: Run OSV Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the branch
+        uses: actions/checkout@v4
+
+      - name: Run OSV Scanner
+        uses: google/osv-scanner-action@v1
+        with:
+          scan-args: |-
+            -r .
