@@ -1,11 +1,11 @@
-﻿asgiref==3.11.1
+asgiref==3.11.1
 astroid==3.0.1
 attrs==25.4.0
 bleach==6.4.0
 colorama==0.4.6
 dill==0.4.1
 dj-database-url==3.1.0
-Django==6.0.2
+Django==6.0.5
 django-markdownify==0.9.6
 django-on-heroku==1.1.2
 gunicorn==25.0.1
