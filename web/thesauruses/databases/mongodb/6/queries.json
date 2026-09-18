@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "language": "mongodb",
+    "language_name": "MongoDB",
+    "structure": "queries",
+    "language_version": "6"
+  },
+  "concepts": {
+    "select_all": {
+      "code": "db.collection.find({});"
+    },
+    "select_columns": {
+      "code": "db.collection.find({}, { column1: 1, column2: 1 });"
+    }
+  }
+}

@@ -1,20 +1,20 @@
 """Generator functions for thesaurus files"""
 import json
-from web.models import MetaInfo
+from web.models import ThesaurusMetaInfo
 
 
-def generate_language_template(language_key, structure_key, version=None):
-    """Generate a template for the given language and structure"""
-    meta_info = MetaInfo()
+def generate_entry_template(entry_key, structure_key, version=None):
+    """Generate a template for the given entry and structure"""
+    meta_info = ThesaurusMetaInfo()
     if structure_key not in meta_info.structures:
         raise ValueError
-    language_name = meta_info.languages.get(
-        language_key,
-        'Human-Readable Language Name'
+    entry_name = meta_info.languages.get(
+        entry_key,
+        'Human-Readable Name'
     )
     meta = {
-        'language': language_key,
-        'language_name': language_name,
+        'language': entry_key,
+        'language_name': entry_name,
         'structure': structure_key,
     }
 

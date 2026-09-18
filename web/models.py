@@ -6,6 +6,12 @@ from jsonmerge import merge
 from django.db import models
 
 
+def _is_safe_path_component(value):
+    return bool(value) and value not in (
+        os.curdir, os.pardir
+    ) and "/" not in value and "\\" not in value
+
+
 # pylint: disable=too-few-public-methods
 class MetaStructure:
     """
@@ -25,12 +31,19 @@ class MetaStructure:
         self.key = key
         self.name = name
 
+        if not _is_safe_path_component(key):
+            raise FileNotFoundError(f"Structure key is not a safe path component: {key!r}")
+
         if key in MetaStructure._cached_files:
             self.categories = MetaStructure._cached_files[key]
             return
 
-        meta_structure_file_path = os.path.join(
-            "web", "thesauruses", "_meta", f"{key}.json")
+        thesaurus_root = os.path.join("web", "thesauruses")
+        root_real = os.path.realpath(thesaurus_root)
+        meta_structure_file_path = os.path.realpath(
+            os.path.join(thesaurus_root, "_meta", f"{key}.json"))
+        if not meta_structure_file_path.startswith(root_real + os.sep):
+            raise FileNotFoundError(f"Structure key escapes the thesaurus dir: {key!r}")
         with open(meta_structure_file_path, 'r', encoding='UTF-8') as meta_structure_file:
             meta_structure_file_json = json.load(meta_structure_file)
 
@@ -38,7 +51,7 @@ class MetaStructure:
             MetaStructure._cached_files[key] = self.categories
 
 
-class Language:
+class ThesaurusEntry:
     """
     Represents a programming language and knows how to fetch concepts for a
     structure key
@@ -46,7 +59,7 @@ class Language:
 
     def __init__(self, key, name):
         """
-        Initialize the Language object, which will contain concepts for a given
+        Initialize the ThesaurusEntry object, which will contain concepts for a given
         structure
 
         :param key: key of the language in the meta_info.json file
@@ -58,13 +71,34 @@ class Language:
         self.name = name
         self.concepts = None
         self.version = None
-        self.language_dir = os.path.join("web", "thesauruses", self.key)
+        self.language_dir = None
+        if not _is_safe_path_component(self.key):
+            return
+
+        thesaurus_root = os.path.join("web", "thesauruses")
+        root_real = os.path.realpath(thesaurus_root)
+        for category in os.listdir(thesaurus_root):
+            if category == "_meta" or not os.path.isdir(os.path.join(thesaurus_root, category)):
+                continue
+            potential_dir = os.path.realpath(
+                os.path.join(thesaurus_root, category, self.key))
+            if potential_dir.startswith(root_real + os.sep) and os.path.isdir(potential_dir):
+                self.language_dir = potential_dir
+                break
+        
+        if self.language_dir is None:
+            fallback_dir = os.path.realpath(
+                os.path.join(thesaurus_root, "langs", self.key))
+            if fallback_dir.startswith(root_real + os.sep):
+                self.language_dir = fallback_dir
         self.version = None
 
 
     def versions(self):
-        """Generate all versions and their paths for the Language"""
+        """Generate all versions and their paths for the ThesaurusEntry"""
         versions = dict()
+        if self.language_dir is None:
+            return versions
         try:
             for entry in os.scandir(self.language_dir):
                 if not entry.is_dir():
@@ -85,28 +119,36 @@ class Language:
 
         :rtype: bool
         """
-        return os.path.exists(self.language_dir)
+        return self.language_dir is not None and os.path.exists(self.language_dir)
 
     def load_concepts(self, structure_key, version):
         """
-        Loads the structure file into the Language object
+        Loads the structure file into the ThesaurusEntry object
 
         :param structure_key: the key for the structure to load
         :param version: the version of the language
         """
-        file_path = os.path.join(self.language_dir, version, f"{structure_key}.json")
+        if not (_is_safe_path_component(structure_key) and _is_safe_path_component(version)):
+            raise FileNotFoundError(
+                f"Unsafe structure/version path components: {structure_key!r} / {version!r}")
+        root_real = os.path.realpath(os.path.join("web", "thesauruses"))
+        file_path = os.path.realpath(os.path.join(
+            self.language_dir, version, f"{structure_key}.json"))
+        if not file_path.startswith(root_real + os.sep):
+            raise FileNotFoundError(
+                f"Structure/version escape the thesaurus dir: {structure_key!r} / {version!r}")
         with open(file_path, 'r', encoding='UTF-8') as file:
             file_json = json.load(file)
             self.concepts = file_json["concepts"]
         self.version = version
 
     def load_filled_concepts(self, structure_key, version):
-        from web.thesaurus_template_generators import generate_language_template
+        from web.thesaurus_template_generators import generate_entry_template
         """
-        Loads the concepts from the language's structure file
+        Loads the concepts from the entry's structure file
 
         :param structure_key: the ID for the concept to load
-        :param version: the version of the language
+        :param version: the version of the entry
         :return: a dict containing the code and comment, and possibly the
             'not-implemented' flag. They are empty code entries if not specified
         :rtype: object Filled template
@@ -114,7 +156,7 @@ class Language:
 
         self.load_concepts(structure_key, version)
 
-        template = generate_language_template(
+        template = generate_entry_template(
             self.key,
             structure_key,
             version
@@ -128,24 +170,24 @@ class Language:
 
         return response
 
-    def load_comparison(self, structure_key, lang, version_lang, version_self):
-        lang = Language(lang, "")
+    def load_comparison(self, structure_key, entry_key, version_entry, version_self):
+        entry_obj = ThesaurusEntry(entry_key, "")
         self_filled_concept = self.load_filled_concepts(structure_key, version_self)
-        lang_filled_concept = lang.load_filled_concepts(structure_key, version_lang)
+        entry_filled_concept = entry_obj.load_filled_concepts(structure_key, version_entry)
 
-        if self_filled_concept is False or lang_filled_concept is False:
+        if self_filled_concept is False or entry_filled_concept is False:
             return False
 
         response = json.dumps({
             "meta": {
-                "language_1": self.key,
-                "language_version_1": version_self,
-                "language_2": lang.key,
-                "language_version_2": version_lang,
+                "entry_1": self.key,
+                "entry_version_1": version_self,
+                "entry_2": entry_obj.key,
+                "entry_version_2": version_entry,
                 "structure": structure_key
             },
             "concepts1": json.loads(self_filled_concept)['concepts'],
-            "concepts2": json.loads(lang_filled_concept)['concepts']
+            "concepts2": json.loads(entry_filled_concept)['concepts']
         }, indent=2)
 
         return response
@@ -154,7 +196,7 @@ class Language:
     def concept(self, concept_key):
         """
         Get the concept (including code and comment) from the concept file for
-        that Language
+        that ThesaurusEntry
 
         :param concept_key: key for the concept to look up
         :returns: a dict containing the code and comment, and possibly the
@@ -248,8 +290,8 @@ class Language:
         return False
 
 
-class MissingLanguageError(Exception):
-    """Error for when a requested language is not defined in `meta.json`"""
+class MissingEntryError(Exception):
+    """Error for when a requested entry is not defined in `meta.json`"""
     def __init__(self, key):
         super().__init__()
         self.key = key
@@ -257,87 +299,100 @@ class MissingLanguageError(Exception):
 
 class MissingStructureError(Exception):
     """
-    Error that signals that a specific language & version does not have the structure
+    Error that signals that a specific entry & version does not have the structure
     defined
     """
-    def __init__(self, structure, language_key, language_name, language_version):
+    def __init__(self, structure, entry_key, entry_name, entry_version):
         super().__init__()
         self.structure = structure
-        self.language_key = language_key
-        self.language_name = language_name
-        self.language_version = language_version
+        self.entry_key = entry_key
+        self.entry_name = entry_name
+        self.entry_version = entry_version
 
 
-class MetaInfo:
+class ThesaurusMetaInfo:
     """Holds info about structures and languages"""
     _cached_structures = None
     _cached_languages = None
 
     def __init__(self):
         """
-        Initializes MetaInfo object with meta language information
+        Initializes ThesaurusMetaInfo object with meta language information
 
         :rtype: None
         """
-        if MetaInfo._cached_structures is not None:
-            self.structures = MetaInfo._cached_structures
-            self.languages = MetaInfo._cached_languages
+        if ThesaurusMetaInfo._cached_structures is not None:
+            self.structures = ThesaurusMetaInfo._cached_structures
+            self.languages = ThesaurusMetaInfo._cached_languages
+            self.categories = getattr(ThesaurusMetaInfo, "_cached_categories", {})
+            self.category_structures = getattr(ThesaurusMetaInfo, "_cached_category_structures", {})
             return
 
         meta_info_file_path = os.path.join(
             "web", "thesauruses", "meta_info.json")
         with open(meta_info_file_path, 'r', encoding='UTF-8') as meta_file:
             meta_info_json = json.load(meta_file)
-        self.structures = meta_info_json["structures"]
+        
+        self.categories = meta_info_json.get("categories", {})
         self.languages = meta_info_json["languages"]
-        MetaInfo._cached_structures = self.structures
-        MetaInfo._cached_languages = self.languages
+        
+        # Flatten structures for backward compatibility where needed, 
+        # but keep track of category-specific ones
+        self.category_structures = meta_info_json["structures"]
+        self.structures = {}
+        for cat_structs in self.category_structures.values():
+            self.structures.update(cat_structs)
+
+        ThesaurusMetaInfo._cached_structures = self.structures
+        ThesaurusMetaInfo._cached_languages = self.languages
+        ThesaurusMetaInfo._cached_categories = self.categories
+        ThesaurusMetaInfo._cached_category_structures = self.category_structures
         
 
-    def language_name(self, language_key):
+    def entry_name(self, entry_key):
         """
-        Given a structure key (from meta_info.json), returns the language's human-friendly name
+        Given a structure key (from meta_info.json), returns the entry's human-friendly name
 
-        :param language_key: key of the language located in the meta_info.json file
+        :param entry_key: key of the entry located in the meta_info.json file
         :return: string with the human-friendly name
         """
-        return self.languages[language_key]
+        return self.languages[entry_key]
 
-    def language(self, language_key):
+    def entry(self, entry_key):
         """
-        Given a language key (from meta_info.json), returns the whole
-        Language for it
+        Given a entry key (from meta_info.json), returns the whole
+        ThesaurusEntry for it
 
-        :param language_key: key of the language located in the meta_info.json
+        :param entry_key: key of the entry located in the meta_info.json
             file
-        :return: Language for the requested key
-        :rtype: Language
+        :return: ThesaurusEntry for the requested key
+        :rtype: ThesaurusEntry
         """
-        return Language(
-            language_key,
-            self.language_name(language_key),
+        return ThesaurusEntry(
+            entry_key,
+            self.entry_name(entry_key),
         )
 
 
-    def load_languages(self, language_keys_versions, meta_structure):
-        """Tries to load all languages from `language_keys` and the requested `structure`"""
-        languages = []
-        for language_key, version in language_keys_versions:
+    def load_entries(self, entry_keys_versions, meta_structure):
+        """Tries to load all entries from `entry_keys` and the requested `structure`"""
+        entries = []
+        for entry_key, version in entry_keys_versions:
             try:
-                language = self.language(language_key)
-                version = version or sorted(language.versions())[-1]
-                language.load_concepts(meta_structure.key, version)
-                languages.append(language)
+                entry = self.entry(entry_key)
+                version = version or sorted(entry.versions())[-1]
+                entry.load_concepts(meta_structure.key, version)
+                entries.append(entry)
             except FileNotFoundError as file_not_found:
                 raise MissingStructureError(
                     meta_structure,
-                    language_key,
-                    self.language_name(language_key),
+                    entry_key,
+                    self.entry_name(entry_key),
                     version,
                 ) from file_not_found
             except KeyError as key_error:
-                raise MissingLanguageError(language_key) from key_error
-        return languages
+                raise MissingEntryError(entry_key) from key_error
+        return entries
 
 
     def structure_name(self, structure_key):
@@ -378,9 +433,9 @@ class SiteVisit(models.Model):
 class LookupData(models.Model):
     id = models.BigAutoField(primary_key=True)
     date_time = models.DateTimeField(auto_now_add=True)
-    language1 = models.CharField(max_length=50)
+    entry1 = models.CharField(max_length=50)
     version1 = models.CharField(max_length=20, default='')
-    language2 = models.CharField(max_length=50)
+    entry2 = models.CharField(max_length=50)
     version2 = models.CharField(max_length=20, default='')
     structure = models.CharField(max_length=50)
     site_visit = models.ForeignKey(SiteVisit, on_delete=models.CASCADE)

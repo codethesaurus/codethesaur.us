@@ -22,15 +22,15 @@ from pygments.util import ClassNotFound
 
 from codethesaurus.settings import BASE_DIR
 from web.models import (
-    Language,
+    ThesaurusEntry,
     LookupData,
-    MetaInfo,
-    MissingLanguageError,
+    ThesaurusMetaInfo,
+    MissingEntryError,
     MissingLookup,
     MissingStructureError,
     SiteVisit,
 )
-from web.thesaurus_template_generators import generate_language_template
+from web.thesaurus_template_generators import generate_entry_template
 
 
 def store_url_info(request):
@@ -58,14 +58,14 @@ def store_url_info(request):
         return None
 
 
-def store_lookup_info(request, visit, language1, version1, language2, version2, structure):
+def store_lookup_info(request, visit, entry1, version1, entry2, version2, structure):
     if not visit:
         return
     try:
         info = LookupData(
-            language1=language1,
+            entry1=entry1,
             version1=version1,
-            language2=language2,
+            entry2=entry2,
             version2=version2,
             structure=structure,
             site_visit=visit
@@ -102,43 +102,78 @@ def index(request):
     """
 
     store_url_info(request)
-    if "lang" in request.GET and "concept" in request.GET:
+    if "entry" in request.GET and "concept" in request.GET:
         return concepts(request)
 
-    meta_info = MetaInfo()
-
-    meta_data_langs = dict()
-    for key in meta_info.languages:
-        lang = meta_info.language(key)
-        meta_data_langs[key] = [{
-            "name": lang.name,
-            "version": version,
-            "availStructs": []
-        } for version in lang.versions()]
-
-    random_langs = random.sample(list(meta_data_langs.values()), k=3)
-
+    meta_info = ThesaurusMetaInfo()
     thesauruses_dir = os.path.join(BASE_DIR, 'web', 'thesauruses')
     meta_dir = os.path.join(thesauruses_dir, '_meta')
     meta_concepts = os.listdir(meta_dir)
-    for lang in os.listdir(thesauruses_dir):
-        if 'meta' in lang:
+
+    meta_data_entries = dict()
+    for key in meta_info.languages:
+        entry = meta_info.entry(key)
+        # Find which category this entry belongs to
+        category_name = "Other"
+        for cat_key, cat_label in meta_info.categories.items():
+            if os.path.exists(os.path.join(thesauruses_dir, cat_key, key)):
+                category_name = cat_label
+                break
+        
+        meta_data_entries[key] = {
+            "name": entry.name,
+            "category": category_name,
+            "versions": [{
+                "name": entry.name,
+                "version": version,
+                "availStructs": []
+            } for version in entry.versions()]
+        }
+
+    random_entries = random.sample(list(meta_data_entries.values()), k=min(3, len(meta_data_entries)))
+
+    for category in os.listdir(thesauruses_dir):
+        category_path = os.path.join(thesauruses_dir, category)
+        if category == '_meta' or not os.path.isdir(category_path):
             continue
-        for ver in os.listdir(os.path.join(thesauruses_dir, lang)):
-            for concept_json in meta_concepts:
-                concept_name = concept_json.split('.')[0]
-                if os.path.isdir(os.path.join(thesauruses_dir, lang, ver)):
-                    if concept_json in os.listdir(os.path.join(thesauruses_dir, lang, ver)):
-                        for i in meta_data_langs[lang]:
-                            if i['version'] == ver:
-                                i['availStructs'].append(concept_name)
-                                break
+        for entry_dir in os.listdir(category_path):
+            entry_path = os.path.join(category_path, entry_dir)
+            if not os.path.isdir(entry_path):
+                continue
+            for ver in os.listdir(entry_path):
+                ver_path = os.path.join(entry_path, ver)
+                if not os.path.isdir(ver_path):
+                    continue
+                for concept_json in meta_concepts:
+                    concept_name = concept_json.split('.')[0]
+                    if concept_json in os.listdir(ver_path):
+                        if entry_dir in meta_data_entries:
+                            for i in meta_data_entries[entry_dir]['versions']:
+                                if i['version'] == ver:
+                                    i['availStructs'].append(concept_name)
+                                    break
+
+    # Group meta_data_entries by category for the template
+    grouped_entries = []
+    for cat_key, cat_label in meta_info.categories.items():
+        category_data = {
+            "key": cat_key,
+            "label": cat_label,
+            "entries": {},
+            "structures": meta_info.category_structures.get(cat_key, {})
+        }
+        for key, data in meta_data_entries.items():
+            if data['category'] == cat_label:
+                category_data["entries"][key] = data['versions']
+        
+        if category_data["entries"]:
+            grouped_entries.append(category_data)
 
     content = {
         'title': 'Welcome',
-        'languages': meta_data_langs,
+        'languages': grouped_entries,
         'structures': meta_info.structures,
-        'randomLanguages': random_langs,
+        'randomLanguages': random_entries,
         'description': 'Code Thesaurus: A polyglot developer reference tool'
     }
     return render(request, 'index.html', content)
@@ -154,28 +189,28 @@ def statistics(request):
     """
     store_url_info(request)
 
-    meta_info = MetaInfo()
+    meta_info = ThesaurusMetaInfo()
 
     # Most popular languages (considering both language1 and language2)
     # We need to aggregate counts for each language across both fields.
     # A simple way is to get counts for each and then merge them in Python.
-    lang1_counts = LookupData.objects.values('language1').annotate(count=Count('language1'))
-    lang2_counts = LookupData.objects.exclude(language2='').values('language2').annotate(count=Count('language2'))
+    entry1_counts = LookupData.objects.values('entry1').annotate(count=Count('entry1'))
+    entry2_counts = LookupData.objects.exclude(entry2='').values('entry2').annotate(count=Count('entry2'))
 
     combined_counts = {}
-    for item in lang1_counts:
-        lang = item['language1']
-        combined_counts[lang] = combined_counts.get(lang, 0) + item['count']
-    for item in lang2_counts:
-        lang = item['language2']
-        combined_counts[lang] = combined_counts.get(lang, 0) + item['count']
+    for item in entry1_counts:
+        entry = item['entry1']
+        combined_counts[entry] = combined_counts.get(entry, 0) + item['count']
+    for item in entry2_counts:
+        entry = item['entry2']
+        combined_counts[entry] = combined_counts.get(entry, 0) + item['count']
 
     sorted_langs = sorted(combined_counts.items(), key=lambda x: x[1], reverse=True)
     popular_languages = []
     for lang_key, count in sorted_langs[:10]:
         try:
-            name = meta_info.language_name(lang_key)
-        except (KeyError, MissingLanguageError):
+            name = meta_info.entry_name(lang_key)
+        except (KeyError, MissingEntryError):
             name = lang_key
         popular_languages.append({'name': name, 'count': count})
 
@@ -192,24 +227,24 @@ def statistics(request):
     # Most popular comparisons
     # Using a technique to ensure (lang1, lang2) is treated the same as (lang2, lang1) if we wanted to,
     # but let's keep it simple and just look at pairs as they are.
-    comparison_counts = LookupData.objects.exclude(language2='').values('language1', 'language2').annotate(count=Count('id')).order_by('-count')[:10]
+    comparison_counts = LookupData.objects.exclude(entry2='').values('entry1', 'entry2').annotate(count=Count('id')).order_by('-count')[:10]
     popular_comparisons = []
     for item in comparison_counts:
         try:
-            name1 = meta_info.language_name(item['language1'])
-        except (KeyError, MissingLanguageError):
-            name1 = item['language1']
+            name1 = meta_info.entry_name(item['entry1'])
+        except (KeyError, MissingEntryError):
+            name1 = item['entry1']
         try:
-            name2 = meta_info.language_name(item['language2'])
-        except (KeyError, MissingLanguageError):
-            name2 = item['language2']
+            name2 = meta_info.entry_name(item['entry2'])
+        except (KeyError, MissingEntryError):
+            name2 = item['entry2']
         popular_comparisons.append({'lang1': name1, 'lang2': name2, 'count': item['count']})
 
     total_visits = SiteVisit.objects.count()
     total_lookups = LookupData.objects.count()
 
     # Unique language comparisons
-    unique_comparisons_count = LookupData.objects.exclude(language2='').values('language1', 'language2').distinct().count()
+    unique_comparisons_count = LookupData.objects.exclude(entry2='').values('entry1', 'entry2').distinct().count()
 
     # Unique concept categories (structures) looked up
     unique_structures_count = LookupData.objects.values('structure').distinct().count()
@@ -218,19 +253,19 @@ def statistics(request):
     concept_lang_counts = {}
     for entry in LookupData.objects.all():
         # Count for language 1
-        key1 = (entry.language1, entry.structure)
-        concept_lang_counts[key1] = concept_lang_counts.get(key1, 0) + 1
+        key1 = (entry.entry1, entry.structure)
+        concept_lang_counts[key1] = concept_lang_counts[key1] + 1 if key1 in concept_lang_counts else 1
         # Count for language 2 if it exists
-        if entry.language2:
-            key2 = (entry.language2, entry.structure)
-            concept_lang_counts[key2] = concept_lang_counts.get(key2, 0) + 1
+        if entry.entry2:
+            key2 = (entry.entry2, entry.structure)
+            concept_lang_counts[key2] = concept_lang_counts[key2] + 1 if key2 in concept_lang_counts else 1
     
     sorted_concept_langs = sorted(concept_lang_counts.items(), key=lambda x: x[1], reverse=True)
     popular_concept_langs = []
     for (lang_key, struct_key), count in sorted_concept_langs[:10]:
         try:
-            lang_name = meta_info.language_name(lang_key)
-        except (KeyError, MissingLanguageError):
+            lang_name = meta_info.entry_name(lang_key)
+        except (KeyError, MissingEntryError):
             lang_name = lang_key
         try:
             struct_name = meta_info.structure_name(struct_key)
@@ -248,13 +283,13 @@ def statistics(request):
     recent_lookups = []
     for item in recent_lookups_query:
         try:
-            name1 = meta_info.language_name(item.language1)
-        except (KeyError, MissingLanguageError):
-            name1 = item.language1
+            name1 = meta_info.entry_name(item.entry1)
+        except (KeyError, MissingEntryError):
+            name1 = item.entry1
         try:
-            name2 = meta_info.language_name(item.language2) if item.language2 else None
-        except (KeyError, MissingLanguageError):
-            name2 = item.language2
+            name2 = meta_info.entry_name(item.entry2) if item.entry2 else None
+        except (KeyError, MissingEntryError):
+            name2 = item.entry2
         
         try:
             struct_name = meta_info.structure_name(item.structure)
@@ -276,17 +311,17 @@ def statistics(request):
     for item in missing_items_counts:
         label = item['item_value']
         if item['item_type'] == 'language':
-            label = f"Language: {item['item_value']}"
+            label = f"ThesaurusEntry: {item['item_value']}"
         elif item['item_type'] == 'structure':
             try:
-                lang_name = meta_info.language_name(item['language_context'])
-            except (KeyError, MissingLanguageError):
+                lang_name = meta_info.entry_name(item['language_context'])
+            except (KeyError, MissingEntryError):
                 lang_name = item['language_context']
             label = f"Structure: {item['item_value']} (for {lang_name})"
         elif item['item_type'] == 'concept':
             try:
-                lang_name = meta_info.language_name(item['language_context'])
-            except (KeyError, MissingLanguageError):
+                lang_name = meta_info.entry_name(item['language_context'])
+            except (KeyError, MissingEntryError):
                 lang_name = item['language_context']
             label = f"Concept: {item['item_value']} (missing in {lang_name})"
         
@@ -344,25 +379,24 @@ def concepts(request):
     """
     visit = store_url_info(request)
 
-    language_strings, structure_key, errors = clean_concepts_parameters(request.GET)
+    entry_strings, structure_key, errors = clean_concepts_parameters(request.GET)
     if errors:
         return render_errors(request, errors)
 
-    meta_info = MetaInfo()
+    meta_info = ThesaurusMetaInfo()
     try:
         meta_structure = meta_info.structure(structure_key)
     except KeyError:
-        return render_errors(request, ["The structure/concept isn't valid. \
-                Double-check your URL and try again."])
+        return render_errors(request, ["The structure/concept isn't valid. Double-check your URL and try again."])
 
     try:
-        languages = meta_info.load_languages(language_strings, meta_structure)
+        entries = meta_info.load_entries(entry_strings, meta_structure)
     except MissingStructureError as missing_structure:
         store_missing_info(
             visit,
             'structure',
             missing_structure.structure.key,
-            missing_structure.language_key
+            missing_structure.entry_key
         )
         return HttpResponseNotFound(render(
             request,
@@ -370,20 +404,19 @@ def concepts(request):
             {
                 "key": missing_structure.structure.key,
                 "name": missing_structure.structure.name,
-                "lang": missing_structure.language_key,
-                "lang_name": missing_structure.language_name,
-                "version": missing_structure.language_version,
-                "template": generate_language_template(
-                    missing_structure.language_key,
+                "entry": missing_structure.entry_key,
+                "entry_name": missing_structure.entry_name,
+                "version": missing_structure.entry_version,
+                "template": generate_entry_template(
+                    missing_structure.entry_key,
                     missing_structure.structure.key,
-                    missing_structure.language_version
+                    missing_structure.entry_version
                 )
             }
         ))
-    except MissingLanguageError as missing_language:
-        store_missing_info(visit, 'language', missing_language.key)
-        errors.append(f"The language \"{missing_language.key}\" isn't valid. \
-                        Double-check your URL and try again.")
+    except MissingEntryError as missing_entry:
+        store_missing_info(visit, 'language', missing_entry.key)
+        errors.append(f"The entry \"{missing_entry.key}\" isn't valid. Double-check your URL and try again.")
 
     if errors:
         return render_errors(request, errors)
@@ -391,19 +424,19 @@ def concepts(request):
     store_lookup_info(
         request,
         visit,
-        languages[0].key,
-        languages[0].version,
-        languages[1].key if len(languages) > 1 else "",
-        languages[1].version if len(languages) > 1 else "",
+        entries[0].key,
+        entries[0].version,
+        entries[1].key if len(entries) > 1 else "",
+        entries[1].version if len(entries) > 1 else "",
         meta_structure.key
     )
 
-    lexers = [get_highlighter(lang.key) for lang in languages]
+    lexers = [get_highlighter(entry.key) for entry in entries]
     all_categories = []
 
     for (category_key, category) in meta_structure.categories.items():
         concept_keys = list(category.keys())
-        concepts_list = [concepts_data(key, name, languages, lexers, visit) for (key, name) in category.items()]
+        concepts_list = [concepts_data(key, name, entries, lexers, visit) for (key, name) in category.items()]
 
         category_entry = {
             "key": category_key,
@@ -411,35 +444,34 @@ def concepts(request):
             "is_incomplete": []
         }
 
-        for lang in languages:
+        for entry in entries:
             is_incomplete = False
             # If nothing in this category is implemented for this language
-            if not lang.has_any_implemented_in_category(concept_keys):
+            if not entry.has_any_implemented_in_category(concept_keys):
                 is_incomplete = True
             # OR if at least one concept is missing code/comment
-            elif lang.is_category_incomplete(concept_keys):
+            elif entry.is_category_incomplete(concept_keys):
                 is_incomplete = True
             
             category_entry["is_incomplete"].append(is_incomplete)
             
         all_categories.append(category_entry)
 
-    for i, lang in enumerate(languages):
-        lang._is_incomplete = any(cat["is_incomplete"][i] for cat in all_categories)
+    for i, entry in enumerate(entries):
+        entry._is_incomplete = any(cat["is_incomplete"][i] for cat in all_categories)
 
-    return render_concepts(request, languages, meta_structure, all_categories)
+    return render_concepts(request, entries, meta_structure, all_categories)
 
 
 @require_http_methods(['GET'])
-def render_concepts(request, languages, structure, all_categories):
-    """Renders the `structure` page for all `languages`"""
+def render_concepts(request, entries, structure, all_categories):
+    """Renders the `structure` page for all `entries`"""
 
-    language_name_versions = [f"{l.name} ({l.version})" for l in languages]
-    if len(languages) == 1:
-        title = f"Reference for {language_name_versions[0]}"
+    entry_name_versions = [f"{l.name} (version {l.version})" for l in entries]
+    if len(entries) == 1:
+        title = f"Reference for {entry_name_versions[0]}"
     else:
-        title = f"Comparing {', '.join(language_name_versions[:-1])}\
-                and {language_name_versions[-1]}"
+        title = f"Comparing {', '.join(entry_name_versions[:-1])} and {entry_name_versions[-1]}"
 
 
     response = {
@@ -448,12 +480,12 @@ def render_concepts(request, languages, structure, all_categories):
         "concept_name": structure.name,
         "languages": [
             {
-                "key": language.key,
-                "version": language.version,
-                "name": language.name,
-                "is_incomplete": language._is_incomplete,
+                "key": entry.key,
+                "version": entry.version,
+                "name": entry.name,
+                "is_incomplete": entry._is_incomplete,
             }
-            for language in languages
+            for entry in entries
         ],
         "categories": all_categories,
         "description": f"Code Thesaurus: {title}"
@@ -524,75 +556,75 @@ def error_handler_500_server_error(request):
     return HttpResponseServerError(response)
 
 #get lexer 
-def get_highlighter(language):
+def get_highlighter(entry_key):
     SIMILAR_LEXERS = settings.SIMILAR_LEXERS
     try:
-        lexer = get_lexer_by_name(language, startinline=True)
+        lexer = get_lexer_by_name(entry_key, startinline=True)
     except ClassNotFound:
-        lexer = get_lexer_by_name(SIMILAR_LEXERS.get(language, "text"), startinline=True)
+        lexer = get_lexer_by_name(SIMILAR_LEXERS.get(entry_key, "text"), startinline=True)
     return lexer
 
 # Helper functions
-def format_code_for_display(concept_key, lang, lexer=None):
+def format_code_for_display(concept_key, entry, lexer=None):
     """
     Returns the formatted HTML formatted syntax-highlighted text for a concept key (from a meta
-            language file) and a language
+            thesaurus file) and an entry
 
     :param concept_key: name of the key to format
-    :param lang: language to format it (in meta language/syntax highlighter format)
+    :param entry: entry to format it (in meta entry/syntax highlighter format)
     :param lexer: optional pre-fetched lexer
     :return: string with code with applied HTML formatting
     """
 
-    if lang.concept_unknown(concept_key) or lang.concept_code(concept_key) is None:
+    if entry.concept_unknown(concept_key) or entry.concept_code(concept_key) is None:
         return "Unknown"
-    if lang.concept_implemented(concept_key):
+    if entry.concept_implemented(concept_key):
         if lexer is None:
-            lexer = get_highlighter(lang.key)
+            lexer = get_highlighter(entry.key)
         return highlight(
-            lang.concept_code(concept_key),
+            entry.concept_code(concept_key),
             lexer,
             HtmlFormatter()
         )
     return None
 
 
-def format_comment_for_display(concept_key, lang):
+def format_comment_for_display(concept_key, entry):
     """
-    Returns the formatted HTML formatted comment text for a concept key (from a meta language
-            file) and a language
+    Returns the formatted HTML formatted comment text for a concept key (from a meta thesaurus
+            file) and an entry
 
-    :param concept_key: the concept key located in the meta language JSON file
-    :param lang: the key of the language to fetch concept key from
+    :param concept_key: the concept key located in the meta thesaurus JSON file
+    :param entry: the entry to fetch concept key from
     :return: formatted HTML for the comment
     """
-    if not lang.concept_implemented(concept_key) and lang.concept_comment(concept_key) == "":
-        return "Not Implemented In This Language"
-    return lang.concept_comment(concept_key)
+    if not entry.concept_implemented(concept_key) and entry.concept_comment(concept_key) == "":
+        return "Not Implemented"
+    return entry.concept_comment(concept_key)
 
 
-def concepts_data(key, name, languages, lexers=None, visit=None):
+def concepts_data(key, name, entries, lexers=None, visit=None):
     """
-    Generates the comparision object of a single concept
+    Generates the comparison object of a single concept
 
     :param key: key of the concept
     :param name: name of the concept
-    :param languages: list of languages to compare / get a reference for
-    :param lexers: optional list of pre-fetched lexers corresponding to languages
+    :param entries: list of entries to compare / get a reference for
+    :param lexers: optional list of pre-fetched lexers corresponding to entries
     :param visit: optional SiteVisit for logging missing items
-    :return: string with code with applied HTML formatting
+    :return: dict with code and comment for each entry
     """
     data = []
-    for i, lang in enumerate(languages):
+    for i, entry in enumerate(entries):
         lexer = lexers[i] if lexers else None
         
         # Log if concept is not implemented
-        if visit and not lang.concept_implemented(key):
-            store_missing_info(visit, 'concept', key, lang.key)
+        if visit and not entry.concept_implemented(key):
+            store_missing_info(visit, 'concept', key, entry.key)
             
         data.append({
-            "code": format_code_for_display(key, lang, lexer),
-            "comment": format_comment_for_display(key, lang)
+            "code": format_code_for_display(key, entry, lexer),
+            "comment": format_comment_for_display(key, entry)
         })
 
     return {
@@ -615,28 +647,30 @@ def render_errors(request, errors):
 def clean_concepts_parameters(parameters):
     """Verify and clean up the parameters for concepts view"""
 
-    language_strings = list(parameters.getlist('lang'))
+    entry_strings = list(parameters.getlist('entry'))
     # legacy parameter names
+    if "lang" in parameters:
+        entry_strings.append(parameters['lang'])
     if "lang1" in parameters:
-        language_strings.append(parameters['lang1'])
+        entry_strings.append(parameters['lang1'])
     if "lang2" in parameters:
-        language_strings.append(parameters['lang2'])
+        entry_strings.append(parameters['lang2'])
 
-    language_keys_versions = []
-    for lang in language_strings:
-        key_version = escape(strip_tags(lang)).split(";")
+    entry_keys_versions = []
+    for entry_str in entry_strings:
+        key_version = escape(strip_tags(entry_str)).split(";")
         try:
-            language_keys_versions.append((key_version[0], key_version[1]))
+            entry_keys_versions.append((key_version[0], key_version[1]))
         except IndexError:
-            language_keys_versions.append((key_version[0], None))
+            entry_keys_versions.append((key_version[0], None))
     structure_key = escape(strip_tags(parameters.get('concept', '')))
 
     errors = []
     if not structure_key:
         errors.append("The URL didn't specify a structure/concept to look up.")
-    if not language_keys_versions:
-        errors.append("The URL didn't specify any languages to look up.")
-    return language_keys_versions, structure_key, errors
+    if not entry_keys_versions:
+        errors.append("The URL didn't specify any entries to look up.")
+    return entry_keys_versions, structure_key, errors
 
 
 # API functions
@@ -653,14 +687,14 @@ def api_reference(request, structure_key, lang, version):
     """
     visit = store_url_info(request)
 
-    lang_obj = Language(lang, "")
+    entry_obj = ThesaurusEntry(lang, "")
 
     try:
-        response = lang_obj.load_filled_concepts(structure_key, version)
+        response = entry_obj.load_filled_concepts(structure_key, version)
     except Exception as e:
         # Determine if it's a language or structure issue
-        # If Language(lang, "") failed to find versions, it might be a language issue
-        if not lang_obj.versions():
+        # If ThesaurusEntry(lang, "") failed to find versions, it might be a language issue
+        if not entry_obj.versions():
             store_missing_info(visit, 'language', lang)
         else:
             store_missing_info(visit, 'structure', structure_key, lang)
@@ -697,7 +731,7 @@ def api_compare(request, structure_key, lang1, version1, lang2, version2):
     visit = store_url_info(request)
 
     try:
-        response = Language(lang1, "").load_comparison(structure_key, lang2, version2, version1)
+        response = ThesaurusEntry(lang1, "").load_comparison(structure_key, lang2, version2, version1)
     except Exception:
         # Simple logging for now
         store_missing_info(visit, 'structure', structure_key, f"{lang1}/{lang2}")

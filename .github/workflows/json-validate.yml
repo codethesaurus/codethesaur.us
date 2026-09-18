@@ -5,14 +5,32 @@ on:
     paths:
       - '**.json'
   pull_request:
+    paths:
+      - '**.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: json-syntax-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check:
     name: Check JSON Files
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
       - name: JSON Syntax Check
-        uses: limitusus/json-syntax-check@v1
-        with:
-          pattern: "\\.json$"
+        run: |
+          failed=0
+          while IFS= read -r -d '' file; do
+            if python3 -m json.tool "$file" > /dev/null 2>&1; then
+              echo "OK: $file"
+            else
+              echo "Invalid JSON: $file"
+              failed=1
+            fi
+          done < <(find . -type f -name '*.json' -not -path './.git/*' -not -path './venv/*' -print0)
+          exit "$failed"

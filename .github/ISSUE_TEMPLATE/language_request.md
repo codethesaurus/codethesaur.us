@@ -1,5 +1,5 @@
 ---
-name: Language Request
+name: ThesaurusEntry Request
 about: Use this template to request a new language
 ---
 

@@ -3,6 +3,8 @@ from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
 
+from web.models import ThesaurusMetaInfo
+
 
 class Command(BaseCommand):
     help = "Reads all language JSON files to ensure they're constructed correctly"
@@ -12,18 +14,24 @@ class Command(BaseCommand):
         self.error_count = 0
         self.warning_count = 0
         self.thesauruses_path = Path("web/thesauruses")
+        self.metainfo = None
 
     def handle(self, *args, **options):
-        for lang_dir in self.thesauruses_path.iterdir():
-            if not lang_dir.is_dir() or lang_dir.name == "_meta":
+        self.metainfo = ThesaurusMetaInfo()
+        for category_dir in self.thesauruses_path.iterdir():
+            if not category_dir.is_dir() or category_dir.name == "_meta":
                 continue
-
-            for version_dir in lang_dir.iterdir():
-                if not version_dir.is_dir():
+            
+            for lang_dir in category_dir.iterdir():
+                if not lang_dir.is_dir():
                     continue
 
-                for structure_file in version_dir.glob("*.json"):
-                    self.validate_language_file(structure_file)
+                for version_dir in lang_dir.iterdir():
+                    if not version_dir.is_dir():
+                        continue
+
+                    for structure_file in version_dir.glob("*.json"):
+                        self.validate_language_file(structure_file)
 
         if self.warning_count > 0:
             self.stdout.write(self.style.WARNING(f"{self.warning_count} warnings found."))
@@ -55,12 +63,13 @@ class Command(BaseCommand):
 
         self.check_meta_section(data, relative_path)
         self.check_concepts(data, relative_path)
+        self.check_category_structure_consistency(data, relative_path)
 
     def check_meta_section(self, data, relative_path):
         meta = data.get("meta", {})
-        # relative_path is something like "python/3/data_types.json"
-        # parts[0] is the language directory name
-        lang_dir = relative_path.parts[0]
+        # relative_path is something like "langs/python/3/data_types.json"
+        # parts[1] is the language directory name
+        lang_dir = relative_path.parts[1]
 
         language = meta.get("language")
         language_version = meta.get("language_version")
@@ -80,7 +89,7 @@ class Command(BaseCommand):
 
         if not language_name:
             self.report_error(f"`{relative_path}` has an empty `language_name` attribute and needs to be updated")
-        elif language_name in ["Human-Friendly Language Name", "Human-Readable Language Name"]:
+        elif language_name in ["Human-Friendly ThesaurusEntry Name", "Human-Readable ThesaurusEntry Name"]:
             self.report_error(f"`{relative_path}` has the default `language_name` attribute and needs to be updated")
 
         if "categories" in data:
@@ -130,3 +139,13 @@ class Command(BaseCommand):
             for key in item_data:
                 if key not in allowed_keys:
                     self.report_warning(f"`{relative_path}`, ID: `{concept_id}` has a line `{key}` that's unknown")
+
+    def check_category_structure_consistency(self, data, relative_path):
+        """Check if the structure is allowed for the category it is in"""
+        # relative_path is like "langs/python/3/data_types.json"
+        category = relative_path.parts[0]
+        structure_name = relative_path.name.split('.')[0]
+
+        category_structures = self.metainfo.category_structures.get(category, {})
+        if structure_name not in category_structures:
+            self.report_error(f"`{relative_path}` is in category `{category}`, but `{structure_name}` is not a valid structure for this category in `meta_info.json`")

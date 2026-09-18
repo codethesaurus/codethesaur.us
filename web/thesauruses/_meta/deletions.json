@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "structure": "deletions",
+    "structure_name": "Deletions"
+  },
+  "categories": {
+    "Deleting Data": {
+      "delete_all": "Delete All Records",
+      "delete_where": "Delete with WHERE clause"
+    }
+  }
+}

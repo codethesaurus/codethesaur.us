@@ -13,42 +13,48 @@
 
 <div class="album py-5 bg-light">
     <div class="container">
-        <div class="card-deck row">
+        {% for category in languages %}
+        <div class="row">
+            <div class="col-12">
+                <h2 class="category-header pb-3">{{ category.label }}</h2>
+            </div>
+        </div>
+        <div class="card-deck row mb-5">
             <div class="col-md-6 mb-4">
                 <div class="card">
                     <form method="get" action="/compare">
                         <div class="card-block">
                             <h2 class="card-header p-3">
-                                Learn a Language
+                                Compare {{ category.label }}
                             </h2>
                             <div class="card-body p-3">
                                 <h3 class="card-subtitle pb-3">
-                                    Compare concepts side-by-side with a language you know and one you don't.
+                                    Compare concepts side-by-side between different {{ category.label|lower }}.
                                 </h3>
 
                                 <div class="card-text">
-                                    <label class="text-muted py-2" for="concept"> Choose a language concept:</label>
-                                    <select class="form-select" id="concept" name="concept">
-                                        {% for k, v in structures.items %}
+                                    <label class="text-muted py-2" for="concept-{{ category.key }}"> Choose a concept:</label>
+                                    <select class="form-select concept-select" id="concept-{{ category.key }}" name="concept" data-category="{{ category.key }}">
+                                        {% for k, v in category.structures.items %}
                                         <option value="{{ k }}">{{ v }}</option>
                                         {% endfor %}
                                     </select>
 
                                 </div>
                                 <div class="card-text">
-                                    <label class="text-muted py-2" for="lang1">Pick a language you know:</label>
-                                    <select class="form-select" id="lang1" name="lang">
-                                        {% for k, lang in languages.items %}
+                                    <label class="text-muted py-2" for="entry1-{{ category.key }}">Pick one you know:</label>
+                                    <select class="form-select entry1-select" id="entry1-{{ category.key }}" name="entry" data-category="{{ category.key }}">
+                                        {% for k, lang in category.entries.items %}
                                         {% for v in lang %}
                                         <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                         {% endfor %}
                                         {% endfor %}
                                     </select>
-                                    <label class="text-muted py-2" for="lang2">Pick a language you
+                                    <label class="text-muted py-2" for="entry2-{{ category.key }}">Pick one you
                                         <strong>don't</strong>
                                         know:</label>
-                                    <select class="form-select" id="lang2" name="lang">
-                                        {% for k, lang in languages.items %}
+                                    <select class="form-select entry2-select" id="entry2-{{ category.key }}" name="entry" data-category="{{ category.key }}">
+                                        {% for k, lang in category.entries.items %}
                                         {% for v in lang %}
                                         <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                         {% endfor %}
@@ -58,7 +64,7 @@
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn bg-blue text-white btn-lg my-3"
-                                    aria-label="Go compare languages">
+                                    aria-label="Go compare {{ category.label|lower }}">
                                     <span class="d-inline">Go <i class="fa fa-arrow-right ml-2"
                                         ></i></span></button>
                             </div>
@@ -75,19 +81,17 @@
                             </h2>
                             <div class="card-body p-3">
                                 <h3 class="card-subtitle pb-3">
-                                    A quick and easy way to remind yourself how to do something.
-
-                                    Still under construction.
+                                    A quick and easy way to remind yourself how to do something in a specific {{ category.key|slice:":-1" }}.
                                 </h3>
-                                <label class="text-muted py-2" for="reference-concept">Choose a language concept:</label>
-                                <select class="form-select" id="reference-concept" name="concept">
-                                    {% for k, v in structures.items %}
+                                <label class="text-muted py-2" for="reference-concept-{{ category.key }}">Choose a concept:</label>
+                                <select class="form-select reference-concept-select" id="reference-concept-{{ category.key }}" name="concept" data-category="{{ category.key }}">
+                                    {% for k, v in category.structures.items %}
                                     <option value="{{ k }}">{{ v }}</option>
                                     {% endfor %}
                                 </select>
-                                <label class="text-muted py-2" for="lang">Pick a language:</label>
-                                <select class="form-select" id="lang" name="lang">
-                                    {% for k, lang in languages.items %}
+                                <label class="text-muted py-2" for="entry-{{ category.key }}">Pick one:</label>
+                                <select class="form-select entry-select" id="entry-{{ category.key }}" name="entry" data-category="{{ category.key }}">
+                                    {% for k, lang in category.entries.items %}
                                     {% for v in lang %}
                                     <option class="{{v.availStructs|join:" "}}" value="{{ k }};{{ v.version }}">{{ v.name }} (version {{v.version}})</option>
                                     {% endfor %}
@@ -104,6 +108,7 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
     <div id="contribution-alert" class="container">
         <div class="alert alert-info" role="alert">

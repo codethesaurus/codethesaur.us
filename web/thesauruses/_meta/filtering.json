@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "structure": "filtering",
+    "structure_name": "Filtering"
+  },
+  "categories": {
+    "Filtering Data": {
+      "where_clause": "WHERE Clause",
+      "limit_results": "Limit Results"
+    }
+  }
+}

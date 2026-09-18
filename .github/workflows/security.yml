@@ -1,0 +1,73 @@
+name: Security Scans
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - '.github/workflows/security.yml'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - '.github/workflows/security.yml'
+  schedule:
+    - cron: '30 4 * * *' # Daily at 04:30 UTC
+
+concurrency:
+  group: security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  bandit:
+    name: Bandit (SAST)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14'
+          cache: 'pip'
+
+      - name: Install Bandit
+        run: pip install bandit==1.9.4
+
+      - name: Run Bandit
+        # -r: recursive, -ll: medium severity or higher, -x: exclude directories
+        run: bandit -r . -ll -x ./venv,./web/tests,./staticfiles
+
+  dependency-check:
+    name: Dependency Scan (pip-audit)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14'
+          cache: 'pip'
+
+      - name: Install pip-audit
+        run: pip install pip-audit==2.10.1
+
+      - name: Run pip-audit
+        run: pip-audit -r requirements.txt
+
+  osv-scanner:
+    name: Dependency Scan (OSV)
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@a345acffa64b0eaede81a3d9aae6141214d9c8fc # v2.6.0

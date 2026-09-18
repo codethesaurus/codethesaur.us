@@ -1,4 +1,8 @@
 {
+  "categories": {
+    "langs": "Programming Languages",
+    "databases": "Databases"
+  },
   "languages": {
     "ada": "Ada",
     "bash": "Bash",
@@ -25,20 +29,31 @@
     "scala": "Scala",
     "swift": "Swift",
     "typescript": "TypeScript",
-    "vbnet": "Visual Basic"
+    "vbnet": "Visual Basic",
+    "mongodb": "MongoDB",
+    "mysql": "MySQL",
+    "postgresql": "PostgreSQL"
   },
   "structures": {
-    "classes": "Classes",
-    "control_structures": "Control Structures",
-    "data_types": "Data Types",
-    "exception_handling": "Exception Handling",
-    "functions": "Functions, Methods, and Subroutines",
-    "io": "Input and Output",
-    "language_basics": "Basics of A Programming Language",
-    "lists": "Lists, Arrays, and Hashed Lists",
-    "operators": "Logical and Mathematical/Arithmetic Operators",
-    "queues_stacks": "Queues and Stacks",
-    "rules_facts": "Rules and Facts",
-    "strings": "Strings"
+    "langs": {
+      "language_basics": "Basics of A Programming Language",
+      "classes": "Classes",
+      "control_structures": "Control Structures",
+      "data_types": "Data Types",
+      "exception_handling": "Exception Handling",
+      "functions": "Functions, Methods, and Subroutines",
+      "io": "Input and Output",
+      "lists": "Arrays and Hashed Lists",
+      "operators": "Logical and Mathematical/Arithmetic Operators",
+      "queues_stacks": "Queues and Stacks",
+      "rules_facts": "Rules and Facts",
+      "strings": "Strings"
+    },
+    "databases": {
+      "deletions": "Deletions",
+      "filtering": "Filtering",
+      "inserts": "Inserts",
+      "queries": "Queries"
+    }
   }
 }

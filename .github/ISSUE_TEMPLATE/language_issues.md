@@ -1,5 +1,5 @@
 ---
-name: Language Issue
+name: ThesaurusEntry Issue
 about: Use this template to report issues with a language
 ---
 

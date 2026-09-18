@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "language": "postgresql",
+    "language_name": "PostgreSQL",
+    "structure": "queries",
+    "language_version": "15"
+  },
+  "concepts": {
+    "select_all": {
+      "code": "SELECT * FROM table_name;"
+    },
+    "select_columns": {
+      "code": "SELECT column1, column2 FROM table_name;"
+    }
+  }
+}

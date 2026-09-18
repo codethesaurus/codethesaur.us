@@ -85,7 +85,7 @@ class TestViews(TestCase):
     def test_compare_concepts_view_both_valid_languages(self):
         """test if compare with 2 valid languages uses the correct templates"""
         url = reverse('index') + \
-              '?concept=data_types&lang=python%3B3&lang=java%3B17'
+              '?concept=data_types&entry=python%3B3&entry=java%3B17'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.OK)
@@ -94,7 +94,7 @@ class TestViews(TestCase):
 
     def test_compare_concepts_view_both_invalid_languages(self):
         """test if compare with invalid languages uses the correct templates"""
-        url = reverse('index') + '?concept=data_types&lang=cupcake&lang=donut'
+        url = reverse('index') + '?concept=data_types&entry=cupcake&entry=donut'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -106,7 +106,7 @@ class TestViews(TestCase):
         """
         test if compare with one invalid language uses the correct templates
         """
-        url = reverse('index') + '?concept=data_types&lang=python&lang=donut'
+        url = reverse('index') + '?concept=data_types&entry=python&entry=donut'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -116,7 +116,7 @@ class TestViews(TestCase):
 
     def test_compare_concepts_view_invalid_concept(self):
         """test if compare with an invalid concept uses the correct templates"""
-        url = reverse('index') + '?concept=boop&lang=python&lang=haskell'
+        url = reverse('index') + '?concept=boop&entry=python&entry=haskell'
 
         response = self.client.get(url)
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -126,7 +126,7 @@ class TestViews(TestCase):
 
     def test_single_concepts_view_valid_language(self):
         """test if reference with a valid language uses the correct templates"""
-        url = reverse('index') + '?concept=data_types&lang=python%3B3'
+        url = reverse('index') + '?concept=data_types&entry=python%3B3'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.OK)
@@ -137,7 +137,7 @@ class TestViews(TestCase):
         """
         test if reference with an invalid language uses the correct templates
         """
-        url = reverse('index') + '?concept=data_types&lang=cupcake'
+        url = reverse('index') + '?concept=data_types&entry=cupcake'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -149,7 +149,7 @@ class TestViews(TestCase):
         """
         test if reference with an invalid concept uses the correct templates
         """
-        url = reverse('index') + '?concept=boop&lang=python'
+        url = reverse('index') + '?concept=boop&entry=python'
 
         response = self.client.get(url)
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -160,7 +160,7 @@ class TestViews(TestCase):
     def test_compare_concepts_view_both_valid_friendly_languages(self):
         """test if compare with 2 valid languages uses the correct templates"""
         url = reverse('index') + \
-              '?concept=data_types&lang=Python%3B3&lang=Java%3B17'
+              '?concept=data_types&entry=Python%3B3&entry=Java%3B17'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -169,7 +169,7 @@ class TestViews(TestCase):
 
     def test_compare_concepts_view_both_invalid_friendly_languages(self):
         """test if compare with invalid languages uses the correct templates"""
-        url = reverse('index') + '?concept=data_types&lang=Cupcake&lang=Donut'
+        url = reverse('index') + '?concept=data_types&entry=Cupcake&entry=Donut'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -181,7 +181,7 @@ class TestViews(TestCase):
         """
         test if compare with one invalid language uses the correct templates
         """
-        url = reverse('index') + '?concept=data_types&lang=Python&lang=donut'
+        url = reverse('index') + '?concept=data_types&entry=Python&entry=donut'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -189,7 +189,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'base.html')
         self.assertTemplateUsed(response, 'errormisc.html')
 
-        url = reverse('index') + '?concept=data_types&lang=python&lang=Donut'
+        url = reverse('index') + '?concept=data_types&entry=python&entry=Donut'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -199,7 +199,7 @@ class TestViews(TestCase):
 
     def test_compare_concepts_view_invalid_friendly_concept(self):
         """test if compare with an invalid concept uses the correct templates"""
-        url = reverse('index') + '?concept=Boop&lang=python&lang=haskell'
+        url = reverse('index') + '?concept=Boop&entry=python&entry=haskell'
 
         response = self.client.get(url)
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -209,7 +209,7 @@ class TestViews(TestCase):
 
     def test_single_concepts_view_valid_friendly_language(self):
         """test if reference with a valid language uses the correct templates"""
-        url = reverse('index') + '?concept=Data Types&lang=python%3B3'
+        url = reverse('index') + '?concept=Data Types&entry=python%3B3'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -220,7 +220,7 @@ class TestViews(TestCase):
         """
         test if reference with an invalid language uses the correct templates
         """
-        url = reverse('index') + '?concept=data_types&lang=Cupcake'
+        url = reverse('index') + '?concept=data_types&entry=Cupcake'
         response = self.client.get(url)
 
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -232,7 +232,7 @@ class TestViews(TestCase):
         """
         test if reference with an invalid concept uses the correct templates
         """
-        url = reverse('index') + '?concept=Boop&lang=python'
+        url = reverse('index') + '?concept=Boop&entry=python'
 
         response = self.client.get(url)
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -294,18 +294,23 @@ class TestViews(TestCase):
         self.assertIn('meta', response_data)
         self.assertIn('concepts1', response_data)
         self.assertIn('concepts2', response_data)
-        self.assertEqual(response_data['meta']['language_1'], 'python')
-        self.assertEqual(response_data['meta']['language_2'], 'javascript')
+        self.assertEqual(response_data['meta']['entry_1'], 'python')
+        self.assertEqual(response_data['meta']['entry_2'], 'javascript')
 
     def test_concepts_view_valid_params(self):
         """Test concepts view with valid parameters that should return 200"""
-        url = reverse('index') + '?concept=data_types&lang=python%3B3&lang=javascript%3BECMAScript%202023'
+        url = reverse('index') + '?concept=data_types&entry=python%3B3&entry=javascript%3BECMAScript%202023'
         response = self.client.get(url)
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertTemplateUsed(response, 'concepts.html')
 
     def test_concepts_view_legacy_params(self):
-        """Test concepts view with legacy lang1/lang2 parameters"""
+        """Test concepts view with legacy lang/lang1/lang2 parameters"""
+        url = reverse('compare') + '?concept=data_types&lang=python%3B3'
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, HTTPStatus.OK)
+        self.assertTemplateUsed(response, 'concepts.html')
+
         url = reverse('compare') + '?concept=data_types&lang1=python%3B3&lang2=javascript%3BECMAScript%202023'
         response = self.client.get(url)
         self.assertEqual(response.status_code, HTTPStatus.OK)
@@ -314,22 +319,22 @@ class TestViews(TestCase):
     def test_concepts_view_logging(self):
         """test if the concepts view correctly logs to the database"""
         # test single language
-        url = reverse('index') + '?concept=data_types&lang=python%3B3'
+        url = reverse('index') + '?concept=data_types&entry=python%3B3'
         self.client.get(url)
         lookup = LookupData.objects.last()
-        self.assertEqual(lookup.language1, 'python')
+        self.assertEqual(lookup.entry1, 'python')
         self.assertEqual(lookup.version1, '3')
-        self.assertEqual(lookup.language2, '')
+        self.assertEqual(lookup.entry2, '')
         self.assertEqual(lookup.version2, '')
         self.assertEqual(lookup.structure, 'data_types')
 
         # test two languages
-        url = reverse('index') + '?concept=data_types&lang=python%3B3&lang=javascript%3BECMAScript%202023'
+        url = reverse('index') + '?concept=data_types&entry=python%3B3&entry=javascript%3BECMAScript%202023'
         self.client.get(url)
         lookup = LookupData.objects.last()
-        self.assertEqual(lookup.language1, 'python')
+        self.assertEqual(lookup.entry1, 'python')
         self.assertEqual(lookup.version1, '3')
-        self.assertEqual(lookup.language2, 'javascript')
+        self.assertEqual(lookup.entry2, 'javascript')
         self.assertEqual(lookup.version2, 'ECMAScript 2023')
         self.assertEqual(lookup.structure, 'data_types')
 
@@ -343,9 +348,9 @@ class TestViews(TestCase):
         })
         self.client.get(url)
         lookup = LookupData.objects.last()
-        self.assertEqual(lookup.language1, 'python')
+        self.assertEqual(lookup.entry1, 'python')
         self.assertEqual(lookup.version1, '3')
-        self.assertEqual(lookup.language2, '')
+        self.assertEqual(lookup.entry2, '')
         self.assertEqual(lookup.version2, '')
         self.assertEqual(lookup.structure, 'data_types')
 
@@ -359,9 +364,9 @@ class TestViews(TestCase):
         })
         self.client.get(url)
         lookup = LookupData.objects.last()
-        self.assertEqual(lookup.language1, 'python')
+        self.assertEqual(lookup.entry1, 'python')
         self.assertEqual(lookup.version1, '3')
-        self.assertEqual(lookup.language2, 'javascript')
+        self.assertEqual(lookup.entry2, 'javascript')
         self.assertEqual(lookup.version2, 'ECMAScript 2009')
         self.assertEqual(lookup.structure, 'data_types')
 

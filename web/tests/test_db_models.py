@@ -21,17 +21,17 @@ class TestDbModels(TestCase):
             referer="http://google.com"
         )
         lookup = LookupData.objects.create(
-            language1="python",
+            entry1="python",
             version1="3",
-            language2="javascript",
+            entry2="javascript",
             version2="es6",
             structure="data_types",
             site_visit=visit
         )
         self.assertIsNotNone(lookup.id)
-        self.assertEqual(lookup.language1, "python")
+        self.assertEqual(lookup.entry1, "python")
         self.assertEqual(lookup.version1, "3")
-        self.assertEqual(lookup.language2, "javascript")
+        self.assertEqual(lookup.entry2, "javascript")
         self.assertEqual(lookup.version2, "es6")
         self.assertEqual(lookup.structure, "data_types")
         self.assertEqual(lookup.site_visit, visit)

@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "structure": "inserts",
+    "structure_name": "Inserts"
+  },
+  "categories": {
+    "Inserting Data": {
+      "insert_single": "Insert Single Record",
+      "insert_multiple": "Insert Multiple Records"
+    }
+  }
+}

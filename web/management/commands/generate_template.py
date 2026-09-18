@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 
-from web.thesaurus_template_generators import generate_language_template
-from web.models import MetaInfo
+from web.thesaurus_template_generators import generate_entry_template
+from web.models import ThesaurusMetaInfo
 from packaging.version import parse as parse_version
 
 import os
@@ -11,7 +11,7 @@ class Command(BaseCommand):
     help = 'Generate language thesaurus files to be filled out'
 
     def add_arguments(self, parser):
-        structures = list(MetaInfo().structures.keys())
+        structures = list(ThesaurusMetaInfo().structures.keys())
 
         parser.add_argument('language', help="Key of the programming language")
         parser.add_argument(
@@ -28,7 +28,7 @@ class Command(BaseCommand):
 
     def generate_file(self, language, structure, language_version):
         try:
-            template = generate_language_template(
+            template = generate_entry_template(
                 language,
                 structure,
                 language_version

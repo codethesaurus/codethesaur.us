@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "language": "mysql",
+    "language_name": "MySQL",
+    "structure": "queries",
+    "language_version": "8"
+  },
+  "concepts": {
+    "select_all": {
+      "code": "SELECT * FROM table_name;"
+    },
+    "select_columns": {
+      "code": "SELECT column1, column2 FROM table_name;"
+    }
+  }
+}

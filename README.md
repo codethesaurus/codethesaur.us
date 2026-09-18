@@ -18,6 +18,16 @@ Check out our [Installation/Running Locally](https://docs.codethesaur.us/install
 
 Check out the [Contributing Guide](https://docs.codethesaur.us/contributing/) to learn more about how you can help add more language data, fix bugs, or add features!
 
+## Use of AI tools
+
+We're happy for you to use AI tools to help you contribute — a lot of our contributors do, and they can be a great way to speed up work or learn something new. But AI-generated changes have to meet the same bar as any other contribution:
+
+- **Follow the project's conventions and docs** — the structure, naming, and style, including the thesaurus data rules. Code examples must genuinely work in that language; don't let an AI invent syntax or fake a feature that should be marked `"not-implemented": true`.
+- **Follow the PR template** — including the "AI bots used" section, telling us what you used and how. (Please actually review the changes before submitting.)
+- **Be tested** — run the unit tests and the data-validation commands, and make sure the GitHub Actions checks pass.
+
+Low-effort AI pull requests — unchecked dumps of generated code that ignore the conventions, skip the template, or aren't tested — will be closed or marked as spam. If we misjudge one of yours, reach out and we'll take another look.
+
 ## Is this project available for Hacktoberfest contributions?
 
 Yes! The Code Thesaurus code and documentation projects are both enabled for Hacktoberfest contributions.

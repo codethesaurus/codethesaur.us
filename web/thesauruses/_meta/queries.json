@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "structure": "queries",
+    "structure_name": "Queries"
+  },
+  "categories": {
+    "Basic Queries": {
+      "select_all": "Select All",
+      "select_columns": "Select Specific Columns"
+    }
+  }
+}

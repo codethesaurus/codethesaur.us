@@ -1,8 +1,13 @@
+name: Auto-Unassign Inactive Issues
+
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 0/12 * * *'
   workflow_dispatch: # Enable manual runs of the bot
+
+permissions:
+  issues: write
 
 jobs:
   unassign_issues:
@@ -10,7 +15,7 @@ jobs:
     name: Unassign issues
     steps:
       - name: Unassign issues
-        uses: codethesaurus/unassign-issues@1.3
+        uses: codethesaurus/unassign-issues@fec46824b2acd69b012edb5db2101399019be0b6 # 1.3
         id: unassign_issues
         with:
           token: ${{secrets.GITHUB_TOKEN}}
