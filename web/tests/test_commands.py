@@ -66,6 +66,8 @@ class TestCommands(TestCase):
         meta_mock.structures = {test_structure: 'Data Types'}
 
         entry_mock = Mock()
+        entry_mock.language_dir = os.path.join(
+            'web', 'thesauruses', 'test_lang')
         entry_mock.versions.return_value = [test_version]
 
         try:

@@ -13,18 +13,22 @@ class Command(BaseCommand):
         meta_info = ThesaurusMetaInfo()
         languages = meta_info.languages
         structures = meta_info.structures
-        
-        for language in languages:
-            versions = ThesaurusEntry(language, languages[language]).versions()
-            for version in versions:
+
+        for language, language_name in languages.items():
+            entry = ThesaurusEntry(language, language_name)
+            if entry.language_dir is None:
+                continue
+
+            lang_root = os.path.realpath(entry.language_dir)
+            for version in entry.versions():
                 for structure in structures:
-                    file_path = os.path.join(
-                        'web',
-                        'thesauruses',
-                        language,
+                    file_path = os.path.realpath(os.path.join(
+                        entry.language_dir,
                         version,
                         structure + '.json'
-                    )
+                    ))
+                    if not file_path.startswith(lang_root + os.sep):
+                        continue
                     if not os.path.exists(file_path):
                         call_command(
                             'generate_template',
