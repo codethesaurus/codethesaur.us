@@ -2,9 +2,35 @@
 import json
 import os
 
-from django.test import TestCase
+from django.core.cache import cache
+from django.test import TestCase, override_settings
 
-from web.models import ThesaurusEntry, ThesaurusMetaInfo, MetaStructure
+from web.models import MetaStructure, ThesaurusEntry, ThesaurusMetaInfo
+
+
+@override_settings(
+    CACHES={'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'}}
+)
+class TestCachedStructureLoading(TestCase):
+    """Tests that loading a structure from disk goes through the Django cache"""
+
+    def setUp(self):
+        cache.clear()
+
+    def test_load_concepts_reads_structure_file_only_once(self):
+        """test that loading the same structure/version reads the file only once"""
+        from unittest.mock import mock_open, patch
+
+        payload = json.dumps({"concepts": {"boolean": {"code": "True"}}})
+        with patch("builtins.open", mock_open(read_data=payload)) as mocked_open:
+            first_entry = ThesaurusEntry("python", "Python")
+            first_entry.load_concepts("data_types", "3")
+            second_entry = ThesaurusEntry("python", "Python")
+            second_entry.load_concepts("data_types", "3")
+
+        self.assertEqual(mocked_open.call_count, 1)
+        self.assertEqual(first_entry.concepts, {"boolean": {"code": "True"}})
+        self.assertEqual(second_entry.concepts, {"boolean": {"code": "True"}})
 
 
 class TestMetaStructures(TestCase):
