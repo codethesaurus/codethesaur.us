@@ -4,6 +4,17 @@ from django.core.management.base import BaseCommand, CommandError
 
 from web.models import ThesaurusMetaInfo
 
+import os
+
+
+def _safe_joined_path(root, *parts):
+    """Join parts under root and return the realpath only if it stays inside root, else None."""
+    root_real = os.path.realpath(str(root))
+    candidate = os.path.realpath(os.path.join(str(root), *parts))
+    if candidate == root_real or candidate.startswith(root_real + os.sep):
+        return candidate
+    return None
+
 
 class Command(BaseCommand):
     help = "Validate the structure of the meta info file"
@@ -43,8 +54,11 @@ class Command(BaseCommand):
         
         # Check if all categories in meta_info.json have directories
         for category_key in self.metainfo.categories:
-            path = self.thesauruses_path / category_key
-            if not path.is_dir():
+            path = _safe_joined_path(self.thesauruses_path, category_key)
+            if path is None:
+                self.report_error(f"Category `{category_key}` in `meta_info.json` escapes the thesauruses directory")
+                continue
+            if not os.path.isdir(path):
                 self.report_error(f"Category `{category_key}` is listed in `meta_info.json` but directory `{path}` was not found")
 
     def check_thesaurus_directories(self):
@@ -79,8 +93,8 @@ class Command(BaseCommand):
             for category_dir in self.thesauruses_path.iterdir():
                 if not category_dir.is_dir() or category_dir.name == "_meta":
                     continue
-                path = category_dir / meta_lang
-                if path.is_dir():
+                path = _safe_joined_path(category_dir, meta_lang)
+                if path is not None and os.path.isdir(path):
                     found = True
                     break
             if not found:
@@ -101,6 +115,9 @@ class Command(BaseCommand):
 
         # Check structures listed in ThesaurusMetaInfo have corresponding files in _meta
         for structure in self.metainfo.structures:
-            path = self.meta_path / f"{structure}.json"
-            if not path.is_file():
+            path = _safe_joined_path(self.meta_path, f"{structure}.json")
+            if path is None:
+                self.report_error(f"{structure} is listed as a structure in `meta_info.json` but its path escapes the _meta directory")
+                continue
+            if not os.path.isfile(path):
                 self.report_error(f"{structure} is listed as a structure in `meta_info.json` but the `{path}` file doesn't exist")

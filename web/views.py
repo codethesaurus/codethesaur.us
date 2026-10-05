@@ -2,6 +2,7 @@
 import logging
 import os
 import random
+import re
 
 from django.conf import settings
 from django.http import (
@@ -33,6 +34,30 @@ from web.models import (
 from web.thesaurus_template_generators import generate_entry_template
 
 
+def _sanitize_query_param(value):
+    if value is None:
+        return None
+    if not isinstance(value, str):
+        value = str(value)
+    # Remove control characters and limit length
+    value = re.sub(r"[\x00-\x1f\x7f]", " ", value)
+    value = value[:200]
+    return value.strip()
+
+
+def _log_sanitized(message, *args):
+    sanitized_args = []
+    for arg in args:
+        if isinstance(arg, str):
+            sanitized_args.append(_sanitize_query_param(arg) or "")
+        else:
+            sanitized_args.append(arg)
+    try:
+        logging.warning(message, *sanitized_args)
+    except Exception:
+        logging.warning("Log message sanitized due to encoding issues")
+
+
 def store_url_info(request):
     try:
         if 'HTTP_USER_AGENT' in request.META:
@@ -54,7 +79,7 @@ def store_url_info(request):
             visit.save()
         return visit
     except Exception as e:
-        logging.error(f"Failed to store URL info: {e}")
+        logging.error("Failed to store URL info: %s", _sanitize_query_param(str(e)))
         return None
 
 
@@ -73,7 +98,7 @@ def store_lookup_info(request, visit, entry1, version1, entry2, version2, struct
         with transaction.atomic():
             info.save()
     except Exception as e:
-        logging.error(f"Failed to store lookup info: {e}")
+        logging.error("Failed to store lookup info: %s", _sanitize_query_param(str(e)))
 
 
 def store_missing_info(visit, item_type, item_value, language_context=None):
@@ -89,7 +114,7 @@ def store_missing_info(visit, item_type, item_value, language_context=None):
         with transaction.atomic():
             info.save()
     except Exception as e:
-        logging.error(f"Failed to store missing info: {e}")
+        logging.error("Failed to store missing info: %s", _sanitize_query_param(str(e)))
 
 
 @require_http_methods(['GET'])
@@ -695,23 +720,23 @@ def api_reference(request, structure_key, lang, version):
         # Determine if it's a language or structure issue
         # If ThesaurusEntry(lang, "") failed to find versions, it might be a language issue
         if not entry_obj.versions():
-            store_missing_info(visit, 'language', lang)
+            store_missing_info(visit, 'language', _sanitize_query_param(lang))
         else:
-            store_missing_info(visit, 'structure', structure_key, lang)
+            store_missing_info(visit, 'structure', _sanitize_query_param(structure_key), _sanitize_query_param(lang))
         return error_handler_404_not_found(request, e)
 
     if response is False:
-        store_missing_info(visit, 'structure', structure_key, lang)
+        store_missing_info(visit, 'structure', _sanitize_query_param(structure_key), _sanitize_query_param(lang))
         return HttpResponseNotFound()
 
     store_lookup_info(
         request,
         visit,
-        lang,
-        version,
+        _sanitize_query_param(lang) or lang,
+        _sanitize_query_param(version) or version,
         "",
         "",
-        structure_key
+        _sanitize_query_param(structure_key) or structure_key
     )
 
     return HttpResponse(response, content_type="application/json")
@@ -731,24 +756,39 @@ def api_compare(request, structure_key, lang1, version1, lang2, version2):
     visit = store_url_info(request)
 
     try:
-        response = ThesaurusEntry(lang1, "").load_comparison(structure_key, lang2, version2, version1)
+        response = ThesaurusEntry(_sanitize_query_param(lang1) or lang1, "").load_comparison(
+            _sanitize_query_param(structure_key) or structure_key,
+            _sanitize_query_param(lang2) or lang2,
+            _sanitize_query_param(version2) or version2,
+            _sanitize_query_param(version1) or version1
+        )
     except Exception:
         # Simple logging for now
-        store_missing_info(visit, 'structure', structure_key, f"{lang1}/{lang2}")
+        store_missing_info(
+            visit,
+            'structure',
+            _sanitize_query_param(structure_key) or structure_key,
+            _sanitize_query_param(f"{lang1}/{lang2}") or f"{lang1}/{lang2}"
+        )
         return HttpResponseNotFound()
 
     if response is False:
-        store_missing_info(visit, 'structure', structure_key, f"{lang1}/{lang2}")
+        store_missing_info(
+            visit,
+            'structure',
+            _sanitize_query_param(structure_key) or structure_key,
+            _sanitize_query_param(f"{lang1}/{lang2}") or f"{lang1}/{lang2}"
+        )
         return HttpResponseNotFound()
 
     store_lookup_info(
         request,
         visit,
-        lang1,
-        version1,
-        lang2,
-        version2,
-        structure_key
+        _sanitize_query_param(lang1) or lang1,
+        _sanitize_query_param(version1) or version1,
+        _sanitize_query_param(lang2) or lang2,
+        _sanitize_query_param(version2) or version2,
+        _sanitize_query_param(structure_key) or structure_key
     )
 
     return HttpResponse(response, content_type="application/json")

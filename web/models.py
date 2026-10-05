@@ -1,9 +1,14 @@
 """models of codethesaur.us"""
 import json
+import logging
 import os
+import re
+
+from django.core.cache import cache
+from django.db import models
 from jsonmerge import merge
 
-from django.db import models
+_CACHE_KEY_SAFE = re.compile(r"[^0-9A-Za-z_.-]")
 
 
 def _is_safe_path_component(value):
@@ -137,10 +142,39 @@ class ThesaurusEntry:
         if not file_path.startswith(root_real + os.sep):
             raise FileNotFoundError(
                 f"Structure/version escape the thesaurus dir: {structure_key!r} / {version!r}")
-        with open(file_path, 'r', encoding='UTF-8') as file:
-            file_json = json.load(file)
-            self.concepts = file_json["concepts"]
+        self.concepts = self._load_cached_concepts(structure_key, version, file_path)
         self.version = version
+
+    def _load_cached_concepts(self, structure_key, version, file_path):
+        """
+        Returns the parsed concepts for this entry, reading them from the
+        Django cache when possible so the structure file is only parsed once
+
+        :param structure_key: the key of the structure to load
+        :param version: the version of the entry
+        :param file_path: the resolved path to the structure file
+        :return: dict of concept ID -> concept data
+        """
+        cache_key = f"thesaurus:{self.key}:{version}:{structure_key}"
+        cache_key = _CACHE_KEY_SAFE.sub("_", cache_key)
+        # The cache is optional infrastructure -- fall back to parsing the
+        # file directly if the backend is unavailable (e.g. database is down).
+        # pylint: disable=broad-exception-caught
+        try:
+            concepts = cache.get(cache_key)
+            if concepts is not None:
+                return concepts
+        except Exception as exception:
+            logging.warning(
+                "Failed to read thesaurus cache: %s", exception)
+        with open(file_path, 'r', encoding='UTF-8') as file:
+            concepts = json.load(file)["concepts"]
+        try:
+            cache.set(cache_key, concepts)
+        except Exception as exception:
+            logging.warning(
+                "Failed to write thesaurus cache: %s", exception)
+        return concepts
 
     def load_filled_concepts(self, structure_key, version):
         from web.thesaurus_template_generators import generate_entry_template
