@@ -166,14 +166,14 @@ class ThesaurusEntry:
                 return concepts
         except Exception as exception:
             logging.warning(
-                "Failed to read thesaurus cache for %s: %s", cache_key, exception)
+                "Failed to read thesaurus cache: %s", exception)
         with open(file_path, 'r', encoding='UTF-8') as file:
             concepts = json.load(file)["concepts"]
         try:
             cache.set(cache_key, concepts)
         except Exception as exception:
             logging.warning(
-                "Failed to write thesaurus cache for %s: %s", cache_key, exception)
+                "Failed to write thesaurus cache: %s", exception)
         return concepts
 
     def load_filled_concepts(self, structure_key, version):
