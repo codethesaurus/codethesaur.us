@@ -1,14 +1,28 @@
 {% load markdownify %}
 
-<div class="card">
+<div class="card ct-entry-card">
     <div class="card-body">
-    {% if code %}
-        <div class="syntax">{{ code | safe }}</div>
-    {% endif %}
-    {% if comment %}
-        <div>
-            {{ comment|markdownify|linebreaksbr }}
+        {% if language %}
+        <p class="ct-cell-label">
+            <span class="ct-cell-label-name">{{ language.name }}</span>
+            <span class="ct-cell-label-detail">(version {{ language.version }})</span>
+        </p>
+        {% endif %}
+        {% if placeholder %}
+        <p class="ct-placeholder">
+            <i class="fa fa-circle-o" aria-hidden="true"></i>
+            <span>{{ placeholder }}</span>
+        </p>
+        {% endif %}
+        {% if code %}
+        <div class="syntax ct-code">{{ code | safe }}</div>
+        {% endif %}
+        {% if comment %}
+        {% if code %}<div class="ct-comment-divider" aria-hidden="true"></div>{% endif %}
+        <div class="ct-comment">
+            <span class="ct-comment-label">Note</span>
+            <div class="ct-comment-body">{{ comment|markdownify|linebreaksbr }}</div>
         </div>
-    {% endif %}
+        {% endif %}
     </div>
 </div>
