@@ -1,4 +1,5 @@
 <!doctype html>
+{% load templatetags %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -13,64 +14,57 @@
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="{{request.scheme}}://{{request.META.HTTP_HOST}}/static/images/Logo-Book-Code.png" />
-    
+
     <!-- Twitter, Slack, etc. -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@CodeThesaurus">
     <meta name="twitter:title" content="Code Thesaurus - {{ title }}">
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{{request.scheme}}://{{request.META.HTTP_HOST}}/static/images/Logo-Book-Code.png">
-    <meta name="twitter:image:alt" content="Code Thesarus logo">
+    <meta name="twitter:image:alt" content="Code Thesaurus logo">
     <!-- TODO: make these show number of languages/examples? -->
-    <!--
-    <meta name="twitter:label1" content="">
-    <meta name="twitter:data1" content="">
-    <meta name="twitter:label2" content="">
-    <meta name="twitter:data2" content="">
-    -->
 
     <title>Code Thesaurus - {{ title }}</title>
 
-    <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/static/css/app.css" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Styles: app.css loads after pygments_colorful.css so project overrides win -->
     <link rel="stylesheet" href="/static/css/pygments_colorful.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
 </head>
-<body>
+<body id="top">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue" aria-label="Primary">
+        <div class="container">
           <a class="navbar-brand" href="/">Code Thesaurus</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end">
+              {% nav_items as items %}
+              {% for item in items %}
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link{% if item.is_active %} active{% endif %}" href="{{ item.url }}"
+                  {% if item.is_active %}aria-current="page"{% endif %}
+                  {% if item.external %}rel="noopener"{% endif %}>{{ item.label }}</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/statistics">Statistics</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://docs.codethesaur.us">Docs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://docs.codethesaur.us/contributing/">Contribute</a>
-              </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
       </nav>
 </header>
 
-<main role="main">
+<main id="main-content" role="main">
 
 {% block content %}{% endblock %}
 
@@ -81,13 +75,13 @@
     <div class="container">
         <div class="row">
           <div class="col-8 justify-content-start">
-            <p>Made with &#x2764; by Sarah Withee and <a href="https://github.com/codethesaurus/codethesaur.us/graphs/contributors" target="_blank" rel="noreferrer"><span id="contributors"></span> contributors</a>.</p> <!-- x2764 the heart emoji code -->
+            <p>Made with &#x2764; by Sarah Withee and <a href="https://github.com/codethesaurus/codethesaur.us/graphs/contributors" target="_blank" rel="noopener noreferrer"><span id="contributors"></span> contributors</a>.</p> <!-- x2764 the heart emoji code -->
             <p>Last GitHub update: <span id="last-update"></span></p>
             <p>Want to help out? Check the project out on <a href="http://github.com/codethesaurus/" target="_blank" rel="noopener">GitHub</a>.</p>
           </div>
           <div class="col-4 order-sm-2 d-flex justify-content-end align-self-center">
               <div class="flex-column">
-                  <a class="toTop" href="#">
+                  <a class="toTop" href="#top">
                       <span class="d-flex flex-column">
                           <i class="fa fa-angle-up fa-2x align-self-center" aria-hidden="true"></i>
                           Back to top

@@ -1,18 +1,17 @@
 """codethesaur.us views"""
 import logging
 import os
-import random
 import re
 
 from django.conf import settings
+from django.db import transaction
+from django.db.models import Count, Q
 from django.http import (
     HttpResponseBadRequest,
     HttpResponseForbidden,
     HttpResponseNotFound,
-    HttpResponseServerError
+    HttpResponseServerError,
 )
-from django.db import transaction
-from django.db.models import Count, Q
 from django.shortcuts import HttpResponse, render
 from django.utils.html import escape, strip_tags
 from django.views.decorators.http import require_http_methods
@@ -23,13 +22,13 @@ from pygments.util import ClassNotFound
 
 from codethesaurus.settings import BASE_DIR
 from web.models import (
-    ThesaurusEntry,
     LookupData,
-    ThesaurusMetaInfo,
     MissingEntryError,
     MissingLookup,
     MissingStructureError,
     SiteVisit,
+    ThesaurusEntry,
+    ThesaurusMetaInfo,
 )
 from web.thesaurus_template_generators import generate_entry_template
 
@@ -155,8 +154,6 @@ def index(request):
             } for version in entry.versions()]
         }
 
-    random_entries = random.sample(list(meta_data_entries.values()), k=min(3, len(meta_data_entries)))
-
     for category in os.listdir(thesauruses_dir):
         category_path = os.path.join(thesauruses_dir, category)
         if category == '_meta' or not os.path.isdir(category_path):
@@ -198,7 +195,6 @@ def index(request):
         'title': 'Welcome',
         'languages': grouped_entries,
         'structures': meta_info.structures,
-        'randomLanguages': random_entries,
         'description': 'Code Thesaurus: A polyglot developer reference tool'
     }
     return render(request, 'index.html', content)
@@ -498,25 +494,45 @@ def render_concepts(request, entries, structure, all_categories):
     else:
         title = f"Comparing {', '.join(entry_name_versions[:-1])} and {entry_name_versions[-1]}"
 
+    languages = [
+        {
+            "key": entry.key,
+            "version": entry.version,
+            "name": entry.name,
+            "is_incomplete": entry._is_incomplete,
+        }
+        for entry in entries
+    ]
+    pair_languages_with_concepts(languages, all_categories)
 
     response = {
         "title": title,
         "concept": structure.key,
         "concept_name": structure.name,
-        "languages": [
-            {
-                "key": entry.key,
-                "version": entry.version,
-                "name": entry.name,
-                "is_incomplete": entry._is_incomplete,
-            }
-            for entry in entries
-        ],
+        "languages": languages,
         "categories": all_categories,
         "description": f"Code Thesaurus: {title}"
     }
 
     return render(request, 'concepts.html', response)
+
+
+def pair_languages_with_concepts(languages, all_categories):
+    """
+    Attaches the matching language to every per-entry concept cell.
+
+    `concepts_data` builds one cell per entry in the order they were requested, but
+    knows nothing about the friendly language names the template renders. Pairing
+    them here lets a cell label itself, which matters on narrow screens where the
+    cards stack and the column header no longer sits above them.
+
+    :param languages: list of language dicts, in entry order
+    :param all_categories: category/concept structure, mutated in place
+    """
+    for category in all_categories:
+        for concept in category["concepts"]:
+            for index, data in enumerate(concept["data"]):
+                data["language"] = languages[index]
 
 
 def error_handler_400_bad_request(request, exception):
@@ -595,14 +611,18 @@ def format_code_for_display(concept_key, entry, lexer=None):
     Returns the formatted HTML formatted syntax-highlighted text for a concept key (from a meta
             thesaurus file) and an entry
 
+    Returns None (rather than placeholder text) when there is no code to show, so
+    that the template can render an appropriate placeholder instead of presenting
+    a bare string as though it were a syntax-highlighted example.
+
     :param concept_key: name of the key to format
     :param entry: entry to format it (in meta entry/syntax highlighter format)
     :param lexer: optional pre-fetched lexer
-    :return: string with code with applied HTML formatting
+    :return: string with code with applied HTML formatting, or None
     """
 
     if entry.concept_unknown(concept_key) or entry.concept_code(concept_key) is None:
-        return "Unknown"
+        return None
     if entry.concept_implemented(concept_key):
         if lexer is None:
             lexer = get_highlighter(entry.key)
@@ -614,18 +634,24 @@ def format_code_for_display(concept_key, entry, lexer=None):
     return None
 
 
-def format_comment_for_display(concept_key, entry):
+def format_placeholder_for_display(concept_key, entry):
     """
-    Returns the formatted HTML formatted comment text for a concept key (from a meta thesaurus
-            file) and an entry
+    Returns the placeholder text to show when a concept has neither code nor a comment.
+
+    Returning None keeps the comparison cell empty-free: every cell either shows
+    code, a note, or an explicit placeholder explaining why there is nothing.
 
     :param concept_key: the concept key located in the meta thesaurus JSON file
     :param entry: the entry to fetch concept key from
-    :return: formatted HTML for the comment
+    :return: placeholder text, or None when the concept has real content
     """
-    if not entry.concept_implemented(concept_key) and entry.concept_comment(concept_key) == "":
-        return "Not Implemented"
-    return entry.concept_comment(concept_key)
+    if entry.concept_unknown(concept_key):
+        return "No entry for this concept yet"
+    if not entry.concept_implemented(concept_key):
+        return "Not implemented in this language"
+    if not entry.concept_code(concept_key) and not entry.concept_comment(concept_key):
+        return "No example yet"
+    return None
 
 
 def concepts_data(key, name, entries, lexers=None, visit=None):
@@ -637,7 +663,7 @@ def concepts_data(key, name, entries, lexers=None, visit=None):
     :param entries: list of entries to compare / get a reference for
     :param lexers: optional list of pre-fetched lexers corresponding to entries
     :param visit: optional SiteVisit for logging missing items
-    :return: dict with code and comment for each entry
+    :return: dict with code, comment and placeholder for each entry
     """
     data = []
     for i, entry in enumerate(entries):
@@ -649,7 +675,8 @@ def concepts_data(key, name, entries, lexers=None, visit=None):
             
         data.append({
             "code": format_code_for_display(key, entry, lexer),
-            "comment": format_comment_for_display(key, entry)
+            "comment": entry.concept_comment(key),
+            "placeholder": format_placeholder_for_display(key, entry)
         })
 
     return {

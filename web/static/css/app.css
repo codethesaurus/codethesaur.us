@@ -1,7 +1,69 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+:root {
+  --ct-primary: #304ffe;
+  --ct-primary-hover: #1a2fff;
+  --ct-accent: #fdd835;
+  --ct-bg: #ffffff;
+  --ct-bg-subtle: #f8f9fa;
+  --ct-text: #1a1a1a;
+  --ct-text-muted: #5c636a;
+  --ct-border: rgba(0, 0, 0, 0.08);
+  --ct-border-strong: rgba(0, 0, 0, 0.125);
+  --ct-code-bg: #f6f8fb;
+  --ct-code-border: rgba(0, 0, 0, 0.18);
+  --ct-note-bg: #fffbeb;
+  --ct-note-accent: #a67c00;
+  --ct-note-label: #6b5000;
+  --ct-radius-sm: 0.375rem;
+  --ct-radius: 0.5rem;
+  --ct-radius-lg: 0.75rem;
+  --ct-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+  --ct-shadow-hover: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+  --ct-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --ct-font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --jumbotron-padding-y: 3rem;
+}
+
+* {
+  font-family: var(--ct-font-sans);
+}
+
+body {
+  color: var(--ct-text);
+  background-color: var(--ct-bg);
+  line-height: 1.7;
+}
 
 a {
-  color: #304ffe;
+  color: var(--ct-primary);
+  text-decoration: none;
+}
+
+/* Off-screen until focused, so keyboard users can jump the navigation. */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1080;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--ct-bg);
+  color: var(--ct-primary);
+  border: 2px solid var(--ct-primary);
+  border-radius: 0 0 var(--ct-radius) 0;
+  font-weight: 600;
+  transform: translateY(-120%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+a:hover {
+  color: var(--ct-primary-hover);
+  text-decoration: underline;
 }
 
 .navbar-nav {
@@ -49,10 +111,11 @@ a {
 }
 
 .jumbotron {
-  padding-top: var(--jumbotron-padding-y);
-  padding-bottom: var(--jumbotron-padding-y);
+  padding-top: calc(var(--jumbotron-padding-y) * 1.5);
+  padding-bottom: calc(var(--jumbotron-padding-y) * 1.5);
   margin-bottom: 0;
-  background-color: #fff;
+  background: radial-gradient(circle at top, #ffffff 0%, #f8f9ff 100%);
+  border-bottom: 1px solid var(--ct-border);
 }
 
 @media (min-width: 767px) {
@@ -63,11 +126,21 @@ a {
 }
 
 .jumbotron .container {
-  max-width: 60rem;
+  max-width: 64rem;
 }
 
 .jumbotron .container h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.jumbotron .lead {
+  color: var(--ct-text-muted);
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  margin-top: 1.25rem;
 }
 
 .jumbotron p:last-child {
@@ -75,12 +148,15 @@ a {
 }
 
 .bg-blue {
-  background-color: #304ffe;
+  background-color: var(--ct-primary);
 }
 
 .card-header {
-  background: #fdd835;
+  background: var(--ct-accent);
   color: #000;
+  border-bottom: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 #contribution-alert {
@@ -116,9 +192,65 @@ footer p {
   font-weight: bold;
 }
 
+.album {
+  background-color: var(--ct-bg-subtle);
+}
+
+.nav-tabs {
+  border-bottom: 1px solid var(--ct-border);
+}
+
+.nav-tabs .nav-link {
+  color: var(--ct-text-muted);
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--ct-text);
+  border-bottom-color: var(--ct-border);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--ct-primary);
+  border-bottom-color: var(--ct-primary);
+  background-color: transparent;
+}
+
+.category-header {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ct-text);
+}
+
+.ct-card {
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+  box-shadow: var(--ct-shadow);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+  overflow: hidden;
+}
+
+.ct-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ct-shadow-hover);
+}
+
+.ct-card .card-header {
+  border-radius: 0;
+}
+
+.ct-card .card-body {
+  background-color: #ffffff;
+}
+
 .card-footer {
   border: 0;
-  background-color: #fff;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem 1.5rem;
 }
 
 a.toTop {
@@ -130,10 +262,212 @@ a.toTop {
   color: #304ffe;
 }
 
-#start-of-row {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  border: 1px solid rgba(0,0,0,.125);
+.ct-contribute-cell {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border: 1px solid var(--ct-border);
+}
+
+.ct-table-header .card {
+  border: 1px solid var(--ct-border);
+  border-radius: 0;
+  background-color: #ffffff;
+}
+
+.ct-table-header .card:first-child {
+  border-top-left-radius: var(--ct-radius);
+  border-bottom-left-radius: var(--ct-radius);
+}
+
+.ct-table-header .card:last-child {
+  border-top-right-radius: var(--ct-radius);
+  border-bottom-right-radius: var(--ct-radius);
+}
+
+/* h3 for a correct heading outline under the h2 category headers, sized to keep
+   the compact column-header look it had as an h5. */
+.ct-table-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.ct-concept-header {
+  background-color: var(--ct-bg-subtle);
+}
+
+.ct-concept-cell {
+  background-color: var(--ct-bg-subtle);
+}
+
+/* The column header only lines up with its column while the cards sit side by side.
+   Narrow screens cannot fit a comparison, so the cards wrap and stack instead. At
+   that size the header row would detach and float above unrelated cards, so it is
+   hidden and every card names its own column in its place. */
+.ct-cell-label {
+  display: none;
+  margin: 0 0 0.55rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--ct-border);
+  color: var(--ct-text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.ct-cell-label-detail {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+@media (max-width: 991.98px) {
+  .ct-table-header {
+    display: none;
+  }
+
+  .ct-cell-label {
+    display: block;
+  }
+}
+
+.card-group .card .card-body .strong {
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.syntax {
+  font-family: var(--ct-font-mono);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* Code sample: contained in its own tinted, bordered box so it reads as code
+   rather than as loose text sitting on the card. The `syntax` class must stay on
+   this element for the Pygments token colors in pygments_colorful.css to apply. */
+.ct-code {
+  background-color: var(--ct-code-bg);
+  border: 1px solid var(--ct-code-border);
+  border-radius: var(--ct-radius-sm);
+  padding: 0.75rem 0.9rem;
+  overflow-x: auto;
+}
+
+.ct-code pre {
+  margin: 0;
+  background: transparent;
+  line-height: 1.6;
+}
+
+/* Pygments' stock "colorful" theme renders several token colors below WCAG AA
+   against a light code background. These darken the same hues just far enough to
+   clear 4.5:1. Only tokens that render as text are overridden; the theme's
+   background-only rules (.hll, .s, .w, .si) are left alone. */
+.syntax .vg {
+  color: #ac5c00;
+}
+
+.syntax .gi,
+.syntax .k,
+.syntax .kc,
+.syntax .kd,
+.syntax .kn,
+.syntax .kr {
+  color: #008300;
+}
+
+.syntax .c,
+.syntax .ch,
+.syntax .cm,
+.syntax .cpf,
+.syntax .c1,
+.syntax .go {
+  color: #707070;
+}
+
+.syntax .err,
+.syntax .gr,
+.syntax .ne {
+  color: #e30000;
+}
+
+.syntax .nl {
+  color: #8b6c00;
+}
+
+.syntax .nn {
+  color: #0d78a5;
+}
+
+.syntax .gp {
+  color: #b55508;
+}
+
+.syntax .sd {
+  color: #cb3f1f;
+}
+
+.syntax .ss {
+  color: #a26100;
+}
+
+.syntax .cp {
+  color: #527394;
+}
+
+/* Comment/note: distinguished from code by a shaded background, a left accent
+   bar, a different (sans-serif) font, and a visible label -- so the difference
+   does not rely on color alone. */
+.ct-comment {
+  background-color: var(--ct-note-bg);
+  border-left: 3px solid var(--ct-note-accent);
+  border-radius: var(--ct-radius-sm);
+  padding: 0.7rem 0.9rem;
+  color: var(--ct-text);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.ct-comment-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--ct-note-label);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ct-comment-body p:last-child {
+  margin-bottom: 0;
+}
+
+.ct-comment-body code {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.25rem;
+  padding: 0.05rem 0.25rem;
+  font-size: 0.9em;
+}
+
+.ct-comment-divider {
+  margin: 0.9rem 0 0.8rem;
+  border-top: 1px solid var(--ct-border-strong);
+}
+
+/* Shown when a concept has no code and no comment, so the reader can tell an
+   intentional gap apart from missing data. */
+.ct-placeholder {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  background-color: var(--ct-bg-subtle);
+  border: 1px dashed var(--ct-border-strong);
+  border-radius: var(--ct-radius-sm);
+  padding: 0.65rem 0.8rem;
+  color: var(--ct-text-muted);
+  font-size: 0.9375rem;
 }
 
 textarea {

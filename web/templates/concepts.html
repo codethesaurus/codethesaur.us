@@ -8,29 +8,29 @@
             </div>
             <div class="row col-12">
                 <p>
-                    The tables below show the syntactically highlighted
-                    {{ concept_friendly_name }} topic for the
-                    {% if languages|length > 1 %}{{ languages | length }}{% endif %}
-                    language{{ languages | length | pluralize }}.
+                    {% if languages|length > 1 %}
+                    Here you can compare <strong>{{ concept_name }}</strong> across
+                    {% for lang in languages %}{{ lang.name }} (version {{ lang.version }}){% if not forloop.last %} and {% endif %}{% endfor %},
+                    side by side.
+                    {% else %}
+                    Here you can browse <strong>{{ concept_name }}</strong> for
+                    {% for lang in languages %}{{ lang.name }} (version {{ lang.version }}){% endfor %}.
+                    {% endif %}
                 </p>
-                <br />
-                <p>
-                    If you see any incorrect information, please help us improve! Feel free to either
+                <p class="mt-3">
+                    Spot something incorrect? You can
                     <a href="https://github.com/codethesaurus/codethesaur.us/issues/new/choose" rel="noopener">
-                        create an issue
+                        open an issue
                     </a>
-                    or use the link{{ languages | length | pluralize }} at the bottom of
-                    the language column{{ languages | length | pluralize }} to correct any
-                    information.
+                    or use the "Want to add or correct" link{{ languages | length | pluralize }} at the bottom of each column.
                 </p>
                 {% for lang in languages %}
                     {% if lang.is_incomplete %}
-                    <div class="alert alert-link" role="alert">
-                        {{ lang.name }} ({{ lang.version }})'s thesaurus is incomplete. Please help us improve by
+                    <div class="alert alert-warning" role="alert">
+                        {{ lang.name }} ({{ lang.version }}) is missing some entries. Help improve it by
                         <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang.key }}/{{ lang.version }}/{{ concept }}.json" rel="noopener">
-                            adding or correcting information
-                        </a>
-                        for this language.
+                            editing this file on GitHub
+                        </a>.
                     </div>
                     {% endif %}
                 {% endfor %}
@@ -38,33 +38,35 @@
 
 {% for category in categories %}
             <div class="row">&nbsp;</div>
-            <div class="row"><h2>{{ category.key }}</h2></div>
-            <div class="card-group">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="text-center">Concept</h3>
+            <div class="row mb-2 mt-4"><h2 class="category-header">{{ category.key }}</h2></div>
+            <div class="table-responsive">
+                <div class="card-group ct-table-header">
+                    <div class="card ct-concept-header">
+                        <div class="card-body py-3">
+                            <h3 class="text-center mb-0">Concept</h3>
+                        </div>
                     </div>
-                </div>
-                {% for lang in languages %} 
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="text-center">{{ lang.name }}'s Implementation</h3>
+                    {% for lang in languages %}
+                    <div class="card">
+                        <div class="card-body py-3">
+                            <h3 class="text-center mb-0">{{ lang.name }}'s Implementation</h3>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
 
     {% for concept in category.concepts %}
         <div class="card-group">
-            <div class="card">
+            <div class="card ct-concept-cell">
                 <div class="card-body">
+                    <p class="ct-cell-label">Concept</p>
                     <div class="strong">
                         {{ concept.name | linebreaksbr }}
                     </div>
                 </div>
             </div>
             {% for d in concept.data %}
-            {% concept_card d.code d.comment %}
+            {% concept_card d.code d.comment d.placeholder d.language %}
             {% endfor %}
         </div>
     {% endfor %}
@@ -76,7 +78,7 @@
                     <div class="card-body">&nbsp;</div>
                 </div>
                 {% for lang in languages %}
-                <div class="card" id="start-of-row">
+                <div class="card ct-contribute-cell">
                     <div class="card-body">
                         <a href="https://github.com/codethesaurus/codethesaur.us/edit/main/web/thesauruses/{{ lang.key }}/{{ lang.version }}/{{ concept }}.json">
                             Want to add or correct information for {{ lang.name }}?
@@ -104,21 +106,5 @@
                 {% endfor %}
             </div>
 
-        </div>
-        <div class="modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="templateModalLabel">{{ concept }}.json</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control" rows="20" readonly style="min-width: 100%;max-width: 100%;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-                </div>
-            </div>
         </div>
 {% endblock content %}

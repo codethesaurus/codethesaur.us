@@ -13,27 +13,27 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm h-100">
                 <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0"><i class="fas fa-users"></i> Overall Activity</h5>
+                    <h2 class="h5 mb-0"><i class="fas fa-users" aria-hidden="true"></i> Overall Activity</h2>
                 </div>
                 <div class="card-body">
                     <div class="row text-center mb-3">
                         <div class="col-6">
-                            <h2 class="display-4">{{ total_visits }}</h2>
+                            <p class="display-4 mb-0">{{ total_visits }}</p>
                             <p class="text-muted">Total Visits</p>
                         </div>
                         <div class="col-6">
-                            <h2 class="display-4">{{ total_lookups }}</h2>
+                            <p class="display-4 mb-0">{{ total_lookups }}</p>
                             <p class="text-muted">Total Lookups</p>
                         </div>
                     </div>
                     <hr>
                     <div class="row text-center">
                         <div class="col-6 border-end">
-                            <h4 class="mb-0">{{ unique_comparisons_count }}</h4>
+                            <p class="h4 mb-0">{{ unique_comparisons_count }}</p>
                             <small class="text-muted">Unique Lang Comparisons</small>
                         </div>
                         <div class="col-6">
-                            <h4 class="mb-0">{{ unique_structures_count }}</h4>
+                            <p class="h4 mb-0">{{ unique_structures_count }}</p>
                             <small class="text-muted">Unique Category Lookups</small>
                         </div>
                     </div>
@@ -43,10 +43,35 @@
         <div class="col-md-8">
             <div class="card mb-4 shadow-sm h-100">
                 <div class="card-header bg-success text-white">
-                    <h5 class="mb-0"><i class="fas fa-chart-bar"></i> Language Popularity</h5>
+                    <h2 class="h5 mb-0"><i class="fas fa-chart-bar" aria-hidden="true"></i> Language Popularity</h2>
                 </div>
                 <div class="card-body">
-                    <canvas id="languagesChart" height="100"></canvas>
+                    <canvas id="languagesChart" height="100" role="img"
+                        aria-label="Bar chart of total lookups per language"></canvas>
+                    <div class="ct-chart-data">
+                        <details>
+                            <summary>View data as a table</summary>
+                            <div class="table-responsive mt-2">
+                                <table class="table table-sm">
+                                    <caption class="visually-hidden">Total lookups per language</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Language</th>
+                                            <th scope="col">Lookups</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in popular_languages %}
+                                        <tr>
+                                            <td>{{ item.name }}</td>
+                                            <td>{{ item.count }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,11 +81,36 @@
         <div class="col-12">
             <div class="card mb-4 shadow-sm">
                 <div class="card-header bg-dark text-white">
-                    <h5 class="mb-0"><i class="fas fa-chart-line"></i> Most Popular Specific Concept Lookups</h5>
+                    <h2 class="h5 mb-0"><i class="fas fa-chart-line" aria-hidden="true"></i> Most Popular Specific Concept Lookups</h2>
                 </div>
                 <div class="card-body">
                     <p class="text-muted small">Comparing how often specific concepts are looked up for each language (e.g., "Javascript functions").</p>
-                    <canvas id="conceptLangsChart" height="80"></canvas>
+                    <canvas id="conceptLangsChart" height="80" role="img"
+                        aria-label="Bar chart of the most looked-up language and concept pairs"></canvas>
+                    <div class="ct-chart-data">
+                        <details>
+                            <summary>View data as a table</summary>
+                            <div class="table-responsive mt-2">
+                                <table class="table table-sm">
+                                    <caption class="visually-hidden">Most popular language and concept lookups</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Language and concept</th>
+                                            <th scope="col">Lookups</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in popular_concept_langs %}
+                                        <tr>
+                                            <td>{{ item.label }}</td>
+                                            <td>{{ item.count }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,17 +120,19 @@
         <div class="col-12">
             <div class="card mb-4 shadow-sm">
                 <div class="card-header bg-secondary text-white">
-                    <h5 class="mb-0"><i class="fas fa-history"></i> Recent Lookups</h5>
+                    <h2 class="h5 mb-0"><i class="fas fa-history" aria-hidden="true"></i> Recent Lookups</h2>
                 </div>
                 <div class="card-body">
                     {% if recent_lookups %}
+                    <div class="table-responsive">
                     <table class="table table-hover table-sm">
+                        <caption class="visually-hidden">The most recent concept lookups</caption>
                         <thead>
                             <tr>
-                                <th>Time</th>
-                                <th>Language 1</th>
-                                <th>Language 2</th>
-                                <th>Concept</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Language 1</th>
+                                <th scope="col">Language 2</th>
+                                <th scope="col">Concept</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -94,6 +146,7 @@
                             {% endfor %}
                         </tbody>
                     </table>
+                    </div>
                     {% else %}
                     <p class="text-center">No recent lookups recorded.</p>
                     {% endif %}
@@ -106,16 +159,18 @@
         <div class="col-12">
             <div class="card mb-4 shadow-sm">
                 <div class="card-header bg-warning text-dark">
-                    <h5 class="mb-0"><i class="fas fa-exchange-alt"></i> Top Comparisons</h5>
+                    <h2 class="h5 mb-0"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Top Comparisons</h2>
                 </div>
                 <div class="card-body">
                     {% if popular_comparisons %}
+                    <div class="table-responsive">
                     <table class="table table-hover table-sm">
+                        <caption class="visually-hidden">The most frequently compared language pairs</caption>
                         <thead>
                             <tr>
-                                <th>Language 1</th>
-                                <th>Language 2</th>
-                                <th class="text-end">Count</th>
+                                <th scope="col">Language 1</th>
+                                <th scope="col">Language 2</th>
+                                <th scope="col" class="text-end">Count</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -128,6 +183,7 @@
                             {% endfor %}
                         </tbody>
                     </table>
+                    </div>
                     {% else %}
                     <p class="text-center">No comparisons made yet.</p>
                     {% endif %}
@@ -140,16 +196,18 @@
         <div class="col-12">
             <div class="card mb-4 shadow-sm border-danger">
                 <div class="card-header bg-danger text-white">
-                    <h5 class="mb-0"><i class="fas fa-exclamation-triangle"></i> Most Requested Missing Items</h5>
+                    <h2 class="h5 mb-0"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Most Requested Missing Items</h2>
                 </div>
                 <div class="card-body">
                     <p class="text-muted small">Tracking languages, structures, or concepts that were requested but are currently missing from the site.</p>
                     {% if missing_items %}
+                    <div class="table-responsive">
                     <table class="table table-hover table-sm">
+                        <caption class="visually-hidden">Items users requested that the site does not have yet</caption>
                         <thead>
                             <tr>
-                                <th>Item</th>
-                                <th class="text-end">Requests</th>
+                                <th scope="col">Item</th>
+                                <th scope="col" class="text-end">Requests</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -159,7 +217,7 @@
                                     {% if item.type == 'language' %}
                                     <span class="badge bg-primary">Language</span>
                                     {% elif item.type == 'structure' %}
-                                    <span class="badge bg-info">Structure</span>
+                                    <span class="badge bg-info text-dark">Structure</span>
                                     {% else %}
                                     <span class="badge bg-secondary">Concept</span>
                                     {% endif %}
@@ -170,6 +228,7 @@
                             {% endfor %}
                         </tbody>
                     </table>
+                    </div>
                     {% else %}
                     <p class="text-center">No missing items requested yet.</p>
                     {% endif %}
@@ -181,11 +240,36 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card mb-4 shadow-sm">
-                <div class="card-header bg-info text-white">
-                    <h5 class="mb-0"><i class="fas fa-chart-pie"></i> Category Popularity</h5>
+                <div class="card-header bg-info text-dark">
+                    <h2 class="h5 mb-0"><i class="fas fa-chart-pie" aria-hidden="true"></i> Category Popularity</h2>
                 </div>
                 <div class="card-body">
-                    <canvas id="structuresChart"></canvas>
+                    <canvas id="structuresChart" role="img"
+                        aria-label="Doughnut chart of lookups per category"></canvas>
+                    <div class="ct-chart-data">
+                        <details>
+                            <summary>View data as a table</summary>
+                            <div class="table-responsive mt-2">
+                                <table class="table table-sm">
+                                    <caption class="visually-hidden">Lookups per category</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">Lookups</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in popular_structures %}
+                                        <tr>
+                                            <td>{{ item.name }}</td>
+                                            <td>{{ item.count }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </div>
         </div>
