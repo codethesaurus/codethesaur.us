@@ -18,7 +18,7 @@ packaging==26.2
 platformdirs==4.10.0
 psycopg2-binary==2.9.11
 Pygments==2.20.0
-pylint==3.0.2
+pylint==4.0.9
 referencing==0.37.0
 rpds-py==2026.5.1
 six==1.17.0
