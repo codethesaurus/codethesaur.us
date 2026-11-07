@@ -1,3 +1,4 @@
+
 import json
 from pathlib import Path
 
@@ -18,10 +19,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.metainfo = ThesaurusMetaInfo()
+
         for category_dir in self.thesauruses_path.iterdir():
             if not category_dir.is_dir() or category_dir.name == "_meta":
                 continue
-            
+
             for lang_dir in category_dir.iterdir():
                 if not lang_dir.is_dir():
                     continue
@@ -34,10 +36,14 @@ class Command(BaseCommand):
                         self.validate_language_file(structure_file)
 
         if self.warning_count > 0:
-            self.stdout.write(self.style.WARNING(f"{self.warning_count} warnings found."))
+            self.stdout.write(
+                self.style.WARNING(f"{self.warning_count} warnings found.")
+            )
 
         if self.error_count > 0:
-            self.stdout.write(self.style.ERROR(f"{self.error_count} errors found."))
+            self.stdout.write(
+                self.style.ERROR(f"{self.error_count} errors found.")
+            )
             raise CommandError(f"{self.error_count} errors found.")
 
         if self.error_count == 0 and self.warning_count == 0:
@@ -53,9 +59,9 @@ class Command(BaseCommand):
 
     def validate_language_file(self, file_path):
         relative_path = file_path.relative_to(self.thesauruses_path)
-        
+
         try:
-            with open(file_path, 'r', encoding='utf-8') as f:
+            with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
         except (json.JSONDecodeError, UnicodeDecodeError) as e:
             self.report_error(f"Failed to parse `{relative_path}`: {e}")
@@ -67,8 +73,6 @@ class Command(BaseCommand):
 
     def check_meta_section(self, data, relative_path):
         meta = data.get("meta", {})
-        # relative_path is something like "langs/python/3/data_types.json"
-        # parts[1] is the language directory name
         lang_dir = relative_path.parts[1]
 
         language = meta.get("language")
@@ -76,29 +80,50 @@ class Command(BaseCommand):
         language_name = meta.get("language_name")
 
         if not language:
-            self.report_error(f"`{relative_path}` has an empty `language` attribute and needs to be updated")
+            self.report_error(
+                f"`{relative_path}` has an empty `language` attribute and needs to be updated"
+            )
         elif language == "language_id":
-            self.report_error(f"`{relative_path}` has the default `language` attribute and needs to be updated")
+            self.report_error(
+                f"`{relative_path}` has the default `language` attribute and needs to be updated"
+            )
         elif language != lang_dir:
-            self.report_error(f"`{relative_path}` has a `language` attribute that should be `{lang_dir}` and needs to be updated")
+            self.report_error(
+                f"`{relative_path}` has a `language` attribute that should be `{lang_dir}` and needs to be updated"
+            )
 
         if not language_version:
-            self.report_error(f"`{relative_path}` has an empty `language_version` attribute and needs to be updated")
+            self.report_error(
+                f"`{relative_path}` has an empty `language_version` attribute and needs to be updated"
+            )
         elif language_version == "version.number":
-            self.report_error(f"`{relative_path}` has the default `language_version` attribute and needs to be updated")
+            self.report_error(
+                f"`{relative_path}` has the default `language_version` attribute and needs to be updated"
+            )
 
         if not language_name:
-            self.report_error(f"`{relative_path}` has an empty `language_name` attribute and needs to be updated")
-        elif language_name in ["Human-Friendly ThesaurusEntry Name", "Human-Readable ThesaurusEntry Name"]:
-            self.report_error(f"`{relative_path}` has the default `language_name` attribute and needs to be updated")
+            self.report_error(
+                f"`{relative_path}` has an empty `language_name` attribute and needs to be updated"
+            )
+        elif language_name in [
+            "Human-Friendly ThesaurusEntry Name",
+            "Human-Readable ThesaurusEntry Name",
+        ]:
+            self.report_error(
+                f"`{relative_path}` has the default `language_name` attribute and needs to be updated"
+            )
 
         if "categories" in data:
-            self.report_error(f"`{relative_path}` has a `categories` section in it, which is now deprecated")
+            self.report_error(
+                f"`{relative_path}` has a `categories` section in it, which is now deprecated"
+            )
 
     def check_concepts(self, data, relative_path):
         concepts = data.get("concepts", {})
+
         for concept_id, item_data in concepts.items():
             has_code = "code" in item_data
+            has_comment = bool(item_data.get("comment"))
             has_not_implemented = "not-implemented" in item_data
             has_not_underscore_implemented = "not_implemented" in item_data
             has_comments_plural = "comments" in item_data
@@ -109,24 +134,42 @@ class Command(BaseCommand):
                     "when it should use not-implemented (hyphen)"
                 )
 
-            if has_code and (has_not_implemented or has_not_underscore_implemented):
+            if has_code and (
+                has_not_implemented or has_not_underscore_implemented
+            ):
                 self.report_error(
                     f"`{relative_path}`, ID: `{concept_id}` should have `code` or `not-implemented`, not both"
                 )
 
-            if not has_code and not has_not_implemented and not has_not_underscore_implemented:
+            # A concept must have code, a non-empty comment,
+            # or a not-implemented flag.
+            if (
+                not item_data.get("code")
+                and not has_comment
+                and not has_not_implemented
+                and not has_not_underscore_implemented
+            ):
                 self.report_error(
-                    f"`{relative_path}`, ID: `{concept_id}` is missing a needed `code` or `not-implemented` line"
+                    f"`{relative_path}`, ID: `{concept_id}` is missing a needed `code`, `comment` or `not-implemented` line"
                 )
 
-            if has_not_implemented and item_data.get("not-implemented") is True and has_code:
+            if (
+                has_not_implemented
+                and item_data.get("not-implemented") is True
+                and has_code
+            ):
                 self.report_error(
                     f"`{relative_path}`, ID: `{concept_id}` is not implemented, but has a `code` line that should be removed"
                 )
 
-            if has_code and not item_data.get("code") and not has_not_implemented:
+            if (
+                has_code
+                and not item_data.get("code")
+                and not has_comment
+                and not has_not_implemented
+            ):
                 self.report_error(
-                    f"`{relative_path}`, ID: `{concept_id}` is confusing: `code` is empty but there's no `not-implemented` either"
+                    f"`{relative_path}`, ID: `{concept_id}` is confusing: `code` is empty and `comment` is also empty"
                 )
 
             if has_comments_plural:
@@ -135,17 +178,29 @@ class Command(BaseCommand):
                 )
 
             # Check for unknown keys
-            allowed_keys = {"code", "comment", "not-implemented", "not_implemented", "name", "comments"}
+            allowed_keys = {
+                "code",
+                "comment",
+                "not-implemented",
+                "not_implemented",
+                "name",
+                "comments",
+            }
+
             for key in item_data:
                 if key not in allowed_keys:
-                    self.report_warning(f"`{relative_path}`, ID: `{concept_id}` has a line `{key}` that's unknown")
+                    self.report_warning(
+                        f"`{relative_path}`, ID: `{concept_id}` has a line `{key}` that's unknown"
+                    )
 
     def check_category_structure_consistency(self, data, relative_path):
         """Check if the structure is allowed for the category it is in"""
-        # relative_path is like "langs/python/3/data_types.json"
         category = relative_path.parts[0]
-        structure_name = relative_path.name.split('.')[0]
+        structure_name = relative_path.name.split(".")[0]
 
         category_structures = self.metainfo.category_structures.get(category, {})
+
         if structure_name not in category_structures:
-            self.report_error(f"`{relative_path}` is in category `{category}`, but `{structure_name}` is not a valid structure for this category in `meta_info.json`")
+            self.report_error(
+                f"`{relative_path}` is in category `{category}`, but `{structure_name}` is not a valid structure for this category in `meta_info.json`"
+            )
