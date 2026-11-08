@@ -1,9 +1,17 @@
+import json
 import os
 import shutil
+import tempfile
 from io import StringIO
+from pathlib import Path
 from unittest.mock import Mock, patch
+
 from django.core.management import call_command
 from django.test import TestCase
+
+from web.management.commands import validatelanginfofiles
+from web.models import ThesaurusMetaInfo
+
 
 class TestCommands(TestCase):
     def test_validatemetainfofile_command(self):
@@ -18,6 +26,36 @@ class TestCommands(TestCase):
         # It should at least finish without error and say something positive
         # Depending on the output of that command
         self.assertIn('no issues found', out.getvalue().lower())
+
+    def test_validatelanginfofiles_reports_non_object_concepts(self):
+        """A `concepts` value that is not an object is reported, not a crash."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            lang_file = root / "langs" / "python" / "3" / "data_types.json"
+            lang_file.parent.mkdir(parents=True)
+            lang_file.write_text(
+                json.dumps(
+                    {
+                        "meta": {
+                            "language": "python",
+                            "language_version": "3",
+                            "language_name": "Python",
+                        },
+                        "concepts": [],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            err = StringIO()
+            command = validatelanginfofiles.Command(stdout=StringIO(), stderr=err)
+            command.thesauruses_path = root
+            command.metainfo = ThesaurusMetaInfo()
+
+            command.validate_language_file(lang_file)
+
+            self.assertEqual(command.error_count, 1)
+            self.assertIn("concepts", err.getvalue())    
 
     def test_generate_template_command(self):
         out = StringIO()
