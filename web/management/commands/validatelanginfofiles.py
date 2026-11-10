@@ -97,6 +97,10 @@ class Command(BaseCommand):
 
     def check_concepts(self, data, relative_path):
         concepts = data.get("concepts", {})
+        # Ensure concepts is a dict; otherwise report an error and stop processing this file.
+        if not isinstance(concepts, dict):
+            self.report_error(f"`{relative_path}` has a `concepts` section that is not an object")
+            return
         for concept_id, item_data in concepts.items():
             has_code = "code" in item_data
             has_not_implemented = "not-implemented" in item_data
