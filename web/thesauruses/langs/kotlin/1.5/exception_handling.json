@@ -1,0 +1,261 @@
+{
+    "meta": {
+        "language": "kotlin",
+        "language_version": "1.5",
+        "language_name": "Kotlin",
+        "structure": "exception_handling"
+    },
+    "concepts": {
+        "statement_to_import_exception_handling": {
+            "not-implemented": true,
+            "comment": "Exception handling is built into the language and requires no imports"
+        },
+        "are_exception_types_functions": {
+            "code": "No"
+        },
+        "are_exception_types_objects": {
+            "code": "Yes"
+        },
+        "are_exception_types_gotos": {
+            "code": "No"
+        },
+        "base_exception_type": {
+            "code": "Throwable"
+        },
+        "define_new_exception_type": {
+            "code": "class CustomException(message: String) : Exception(message)"
+        },
+        "try_or_operator": {
+            "not-implemented": true
+        },
+        "statement_to_start_trying_code": {
+            "code": "try {\n    statements\n}"
+        },
+        "statement_to_start_catching_exceptions": {
+            "code": "catch (e: ExceptionType) {\n    statements\n}",
+            "comment": "Replace `ExceptionType` with the exception class you want to catch"
+        },
+        "statement_to_catch_generic_exception": {
+            "code": "catch (e: Exception) {\n    statements\n}"
+        },
+        "statement_to_catch_specific_exception": {
+            "code": "catch (e: ExceptionType) {\n    statements\n}",
+            "comment": "Replace `ExceptionType` with the specific exception class you want to catch"
+        },
+        "statement_to_catch_multiple_exceptions": {
+            "code": "catch (e: ExceptionType1) {\n    statements\n} catch (e: ExceptionType2) {\n    statements\n} catch (e: ExceptionType3) {\n    statements\n}",
+            "comment": "Kotlin does not support multi-catch in a single block. Use separate catch blocks for each exception type."
+        },
+        "statement_to_break_out_if_caught_exception": {
+            "not-implemented": true,
+            "comment": "Kotlin does not have a dedicated statement to break out of an exception block; standard control flow (such as `return` to exit the function or `break` within a loop) is used instead"
+        },
+        "statement_to_stop_program_if_caught_exception": {
+            "code": "catch (e: Exception) {\n    kotlin.system.exitProcess(1)\n}",
+            "comment": "Uses `kotlin.system.exitProcess` with an exit code to terminate the process"
+        },
+        "statement_to_start_code_if_no_exceptions_caught": {
+            "not-implemented": true,
+            "comment": "Kotlin does not have an else clause for try/catch blocks"
+        },
+        "statement_to_start_cleaning_up_after_exception": {
+            "code": "finally {\n    statements\n}"
+        },
+        "order_to_call_all_statements": {
+            "code": "try {\n    statements\n} catch (e: Exception) {\n    statements\n} finally {\n    statements\n}"
+        },
+        "statement_to_end_trying_code": {
+            "not-implemented": true,
+            "comment": "The closing brace `}` ends the try block"
+        },
+        "property_with_exception_code": {
+            "not-implemented": true,
+            "comment": "`Throwable` in Kotlin/JVM does not define an error code property (`cause` represents the underlying causal exception, not an error code)"
+        },
+        "property_with_exception_message": {
+            "code": "message",
+            "comment": "Inherited from `Throwable` class"
+        },
+        "property_with_stack_trace": {
+            "code": "stackTrace",
+            "comment": "Inherited from `Throwable` class"
+        },
+        "property_containing_other_info": {
+            "not-implemented": true,
+            "comment": "`Throwable` in Kotlin/JVM has no generic metadata container (such as C#'s `Exception.Data`); `suppressedExceptions` only stores suppressed exceptions from resource cleanup"
+        },
+        "throw_generic_exception": {
+            "code": "throw Exception()"
+        },
+        "throw_exception_as_text": {
+            "code": "throw Exception(\"my custom error message\")"
+        },
+        "throw_specific_exception_type": {
+            "code": "throw CustomException(\"error message\")"
+        },
+        "base_data_type_exception_type": {
+            "not-implemented": true
+        },
+        "invalid_data_type_exception_type": {
+            "not-implemented": true,
+            "comment": "Kotlin is statically typed; type mismatches are caught at compile time"
+        },
+        "variable_not_found_exception_type": {
+            "not-implemented": true,
+            "comment": "Variable references are resolved at compile time"
+        },
+        "object_not_found_exception_type": {
+            "not-implemented": true
+        },
+        "index_out_of_bounds_exception_type": {
+            "code": "IndexOutOfBoundsException"
+        },
+        "key_name_not_found_exception_type": {
+            "code": "NoSuchElementException",
+            "comment": "Thrown when using `Map.getValue()` with a missing key"
+        },
+        "invalid_encoding_exception_type": {
+            "code": "java.io.UnsupportedEncodingException",
+            "comment": "Uses the Java standard library class"
+        },
+        "base_mathematical_exception_type": {
+            "code": "ArithmeticException"
+        },
+        "overflow_exception_type": {
+            "code": "ArithmeticException",
+            "comment": "Standard arithmetic operators wrap on overflow; exact math operations (such as `java.lang.Math.addExact`) throw `ArithmeticException`"
+        },
+        "floating_point_exception_type": {
+            "not-implemented": true,
+            "comment": "Kotlin/JVM uses IEEE 754 and returns special values (NaN, Infinity) instead of throwing exceptions"
+        },
+        "divide_by_zero_exception_type": {
+            "code": "ArithmeticException",
+            "comment": "Thrown for integer division by zero. Floating-point division by zero returns Infinity or NaN."
+        },
+        "cannot_cast_types_exception_type": {
+            "code": "ClassCastException"
+        },
+        "base_memory_exception_type": {
+            "code": "java.lang.VirtualMachineError",
+            "comment": "Uses the Java standard library class"
+        },
+        "cannot_allocate_memory_exception_type": {
+            "code": "OutOfMemoryError"
+        },
+        "out_of_memory_exception_type": {
+            "code": "OutOfMemoryError"
+        },
+        "stack_overflow_exception_type": {
+            "code": "StackOverflowError"
+        },
+        "cannot_access_pointer_exception_type": {
+            "code": "NullPointerException",
+            "comment": "Kotlin's type system helps prevent this, but it can still occur with Java interop or using the `!!` operator"
+        },
+        "base_file_exception_type": {
+            "code": "java.io.IOException",
+            "comment": "Uses the Java standard library class"
+        },
+        "end_of_file_exception_type": {
+            "code": "java.io.EOFException",
+            "comment": "Uses the Java standard library class"
+        },
+        "file_does_not_exist_exception_type": {
+            "code": "java.io.FileNotFoundException",
+            "comment": "Uses the Java standard library class"
+        },
+        "file_already_exists_exception_type": {
+            "code": "java.nio.file.FileAlreadyExistsException",
+            "comment": "Uses the Java standard library class"
+        },
+        "item_is_actually_directory_exception_type": {
+            "not-implemented": true
+        },
+        "item_is_not_a_directory_exception_type": {
+            "code": "java.nio.file.NotDirectoryException",
+            "comment": "Uses the Java standard library class"
+        },
+        "cannot_access_file_exception_type": {
+            "code": "java.nio.file.AccessDeniedException",
+            "comment": "Uses the Java standard library class"
+        },
+        "drive_disconnected_exception_type": {
+            "not-implemented": true
+        },
+        "file_no_longer_available_exception_type": {
+            "code": "java.io.FileNotFoundException",
+            "comment": "Uses the Java standard library class"
+        },
+        "file_timeout_exception": {
+            "not-implemented": true,
+            "comment": "File operations in the JVM standard library block or fail without a specific file timeout exception"
+        },
+        "base_network_exception_type": {
+            "not-implemented": true,
+            "comment": "The JVM standard library has no unified base network exception class; network operations throw `java.io.IOException` or specific subclasses such as `java.net.SocketException`"
+        },
+        "connection_refused_exception_type": {
+            "code": "java.net.ConnectException",
+            "comment": "Uses the Java standard library class"
+        },
+        "connection_broken_exception_type": {
+            "not-implemented": true,
+            "comment": "There is no dedicated connection broken class; standard socket operations throw `java.net.SocketException` with a message such as 'Connection reset' or 'Broken pipe'"
+        },
+        "invalid_hostname_exception": {
+            "code": "java.net.UnknownHostException",
+            "comment": "Uses the Java standard library class"
+        },
+        "cannot_establish_connection_exception_type": {
+            "code": "java.net.ConnectException",
+            "comment": "Uses the Java standard library class"
+        },
+        "connection_timed_out_exception_type": {
+            "code": "java.net.SocketTimeoutException",
+            "comment": "Uses the Java standard library class"
+        },
+        "bad_certificate_exception_type": {
+            "code": "java.security.cert.CertificateException",
+            "comment": "Base class for certificate validation and formatting errors in the Java security package"
+        },
+        "expired_certificate_exception_type": {
+            "code": "java.security.cert.CertificateExpiredException",
+            "comment": "Uses the Java standard library class"
+        },
+        "child_process_could_not_be_created_exception_type": {
+            "not-implemented": true
+        },
+        "child_process_unexpected_ending_exception_type": {
+            "not-implemented": true
+        },
+        "process_not_found_exception_type": {
+            "not-implemented": true
+        },
+        "base_test_assertion_exception_type": {
+            "code": "AssertionError"
+        },
+        "import_not_found_exception_type": {
+            "not-implemented": true,
+            "comment": "Kotlin imports are resolved at compile time; unresolved imports prevent compilation rather than throwing a runtime exception (`ClassNotFoundException` occurs during dynamic reflection or class loading)"
+        },
+        "keyboard_interrupt_exception_type": {
+            "not-implemented": true,
+            "comment": "Keyboard interrupts (such as Ctrl+C) send an OS signal (SIGINT) that terminates the process or triggers shutdown hooks, rather than throwing a catchable exception (`InterruptedException` is for thread interruption)"
+        },
+        "syntax_exception_type": {
+            "not-implemented": true,
+            "comment": "Syntax errors are caught at compile time and do not produce runtime exceptions"
+        },
+        "uncaught_signal_exception_type": {
+            "not-implemented": true
+        },
+        "base_warning_type": {
+            "not-implemented": true
+        },
+        "deprecation_warning_type": {
+            "code": "@Deprecated(\"reason\")",
+            "comment": "Kotlin uses the `@Deprecated` annotation to mark deprecated declarations"
+        }
+    }
+}
