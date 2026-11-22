@@ -1,0 +1,469 @@
+{
+  "meta": {
+    "language": "scala",
+    "language_version": "2.13.x",
+    "language_name": "Scala",
+    "structure": "lists"
+  },
+  "concepts": {
+    "name_of_ordered_mutable_list": {
+      "code": "scala.collection.mutable.ArrayBuffer",
+      "comment": "`ArrayBuffer` is a resizable array. `ListBuffer` is an alternative that is efficient for prepending and appending."
+    },
+    "create_a_ordered_mutable_list": {
+      "code": [
+        "val myList = scala.collection.mutable.ArrayBuffer[Int]()",
+        "val myList = scala.collection.mutable.ArrayBuffer(1, 2, 3)"
+      ],
+      "comment": "Add `import scala.collection.mutable.ArrayBuffer` to use the short name `ArrayBuffer`."
+    },
+    "ordered_mutable_list_start_number": {
+      "code": "0"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "code": "myList(1)"
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "code": [
+        "myList.prepend(7)",
+        "7 +=: myList"
+      ]
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "code": [
+        "myList.append(10)",
+        "myList += 10"
+      ]
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "code": "myList.insert(1, 7)",
+      "comment": "Inserts `7` at index `1`."
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": "myList.remove(0)"
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": "myList.remove(myList.length - 1)"
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "code": "myList.remove(1)",
+      "comment": "Removes the element at index `1` and returns it."
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "code": "val temp = myList(index1); myList(index1) = myList(index2); myList(index2) = temp",
+      "comment": "There is no built-in swap method, so the elements are swapped by updating each index."
+    },
+    "delete_ordered_mutable_list": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The list is freed once nothing references it anymore."
+    },
+    "name_of_sorted_mutable_list": {
+      "code": "scala.collection.mutable.TreeSet",
+      "comment": "A `TreeSet` keeps its elements sorted, but like any set it does not store duplicates."
+    },
+    "create_a_sorted_mutable_list": {
+      "code": [
+        "val sortedSet = scala.collection.mutable.TreeSet[Int]()",
+        "val sortedSet = scala.collection.mutable.TreeSet(3, 1, 2)"
+      ]
+    },
+    "sorted_mutable_list_start_number": {
+      "not-implemented": true,
+      "comment": "A `TreeSet` is not indexed."
+    },
+    "access_element_in_sorted_mutable_list": {
+      "not-implemented": true,
+      "comment": "A `TreeSet` is not indexed. Use `sortedSet.contains(2)` to check if an element is in it."
+    },
+    "insert_into_sorted_mutable_list": {
+      "code": [
+        "sortedSet.add(5)",
+        "sortedSet += 5"
+      ],
+      "comment": "The element is placed in sorted order automatically."
+    },
+    "erase_element_at_beginning_of_sorted_mutable_list": {
+      "code": "sortedSet.remove(sortedSet.head)"
+    },
+    "erase_element_at_end_of_sorted_mutable_list": {
+      "code": "sortedSet.remove(sortedSet.last)"
+    },
+    "erase_element_in_middle_of_sorted_mutable_list": {
+      "code": [
+        "sortedSet.remove(2)",
+        "sortedSet -= 2"
+      ],
+      "comment": "Elements are removed by value, not by index."
+    },
+    "swap_elements_in_sorted_mutable_list": {
+      "not-implemented": true,
+      "comment": "Elements in a sorted collection can't be reordered."
+    },
+    "delete_sorted_mutable_list": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The set is freed once nothing references it anymore."
+    },
+    "name_of_unordered_mutable_list": {
+      "code": "scala.collection.mutable.HashSet"
+    },
+    "create_a_unordered_mutable_list": {
+      "code": [
+        "val mySet = scala.collection.mutable.HashSet[Int]()",
+        "val mySet = scala.collection.mutable.HashSet(1, 2, 3)"
+      ]
+    },
+    "unordered_mutable_list_start_number": {
+      "not-implemented": true,
+      "comment": "A `HashSet` is not indexed."
+    },
+    "access_element_in_unordered_mutable_list": {
+      "not-implemented": true,
+      "comment": "A `HashSet` is not indexed. Use `mySet.contains(2)` to check if an element is in it."
+    },
+    "insert_into_unordered_mutable_list": {
+      "code": [
+        "mySet.add(4)",
+        "mySet += 4"
+      ]
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "not-implemented": true,
+      "comment": "A `HashSet` has no beginning or end. `mySet.remove(mySet.head)` removes an arbitrary element."
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "not-implemented": true,
+      "comment": "A `HashSet` has no beginning or end. `mySet.remove(mySet.head)` removes an arbitrary element."
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "code": [
+        "mySet.remove(2)",
+        "mySet -= 2"
+      ],
+      "comment": "Elements are removed by value, not by index."
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "delete_unordered_mutable_list": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The set is freed once nothing references it anymore."
+    },
+    "name_of_ordered_immutable_list": {
+      "code": [
+        "List",
+        "Vector"
+      ],
+      "comment": "`List` is a linked list, so accessing by index takes linear time. `Vector` gives fast access by index."
+    },
+    "create_a_ordered_immutable_list": {
+      "code": [
+        "val immutableList = List(1, 2, 3)",
+        "val immutableList = Vector(1, 2, 3)"
+      ]
+    },
+    "make_ordered_mutable_list_immutable": {
+      "code": [
+        "val immutableList = myList.toList",
+        "val immutableList = myList.toVector"
+      ]
+    },
+    "make_ordered_immutable_list_mutable": {
+      "code": [
+        "val myList = immutableList.toBuffer",
+        "val myList = immutableList.to(scala.collection.mutable.ArrayBuffer)"
+      ]
+    },
+    "ordered_immutable_list_start_number": {
+      "code": "0"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "code": "immutableList(1)"
+    },
+    "delete_ordered_immutable_list": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The list is freed once nothing references it anymore."
+    },
+    "name_of_unordered_immutable_list": {
+      "code": "Set"
+    },
+    "create_a_unordered_immutable_list": {
+      "code": "val immutableSet = Set(1, 2, 3)"
+    },
+    "make_unordered_mutable_list_immutable": {
+      "code": "val immutableSet = mySet.toSet"
+    },
+    "make_unordered_immutable_list_mutable": {
+      "code": "val mySet = immutableSet.to(scala.collection.mutable.HashSet)"
+    },
+    "unordered_immutable_list_start_number": {
+      "not-implemented": true,
+      "comment": "A `Set` is not indexed."
+    },
+    "access_element_in_unordered_immutable_list": {
+      "not-implemented": true,
+      "comment": "A `Set` is not indexed. Use `immutableSet.contains(2)` to check if an element is in it."
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The set is freed once nothing references it anymore."
+    },
+    "name_of_mutable_hashed_list": {
+      "code": "scala.collection.mutable.LinkedHashMap",
+      "comment": "A hash table that remembers the order elements were inserted in. Use `scala.collection.mutable.HashMap` if order doesn't matter."
+    },
+    "create_a_mutable_hashed_list": {
+      "code": "val myNumbers = scala.collection.mutable.LinkedHashMap[Int, String]()"
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "code": [
+        "myNumbers(1) = \"One\"",
+        "myNumbers += (2 -> \"Two\")"
+      ]
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "code": [
+        "myNumbers.remove(1)",
+        "myNumbers -= 1"
+      ]
+    },
+    "delete_mutable_hashed_list": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The map is freed once nothing references it anymore."
+    },
+    "name_of_immutable_hashed_list": {
+      "code": "scala.collection.immutable.HashMap"
+    },
+    "create_a_immutable_hashed_list": {
+      "code": "val myImmutableNumbers = scala.collection.immutable.HashMap(1 -> \"One\", 2 -> \"Two\")"
+    },
+    "make_mutable_hashed_list_immutable": {
+      "code": "val myImmutableNumbers = scala.collection.immutable.HashMap.from(myNumbers)"
+    },
+    "make_immutable_hashed_list_mutable": {
+      "code": "val myNumbers = scala.collection.mutable.LinkedHashMap.from(myImmutableNumbers)"
+    },
+    "delete_immutable_hashed_list": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The map is freed once nothing references it anymore."
+    },
+    "create_a_mutable_set": {
+      "code": [
+        "val translations = scala.collection.mutable.Map[String, String]()",
+        "val translations = scala.collection.mutable.Map(\"hello\" -> \"hola\", \"goodbye\" -> \"adios\")"
+      ]
+    },
+    "get_key_from_mutable_set": {
+      "code": "translations.find(_._2 == \"hola\").map(_._1)",
+      "comment": "Returns an `Option` with the first key mapped to the given value, or `None` if no key has that value."
+    },
+    "get_value_from_mutable_set": {
+      "code": [
+        "translations(\"hello\")",
+        "translations.get(\"hello\")",
+        "translations.getOrElse(\"hello\", \"\")"
+      ],
+      "comment": "The first throws a `NoSuchElementException` if the key is missing, the second returns an `Option`, and the third returns a default value."
+    },
+    "get_all_keys_from_mutable_set": {
+      "code": "translations.keys"
+    },
+    "get_all_values_from_mutable_set": {
+      "code": "translations.values"
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "code": "val swapped = translations.map(_.swap)",
+      "comment": "Creates a new map with keys and values swapped. If several keys share a value, only one of them is kept."
+    },
+    "delete_mutable_set": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The map is freed once nothing references it anymore."
+    },
+    "create_a_immutable_set": {
+      "code": "val translations = Map(\"hello\" -> \"hola\", \"goodbye\" -> \"adios\")"
+    },
+    "make_mutable_set_immutable": {
+      "code": "val translations = mutableTranslations.toMap"
+    },
+    "make_immutable_set_mutable": {
+      "code": "val mutableTranslations = scala.collection.mutable.Map.from(translations)"
+    },
+    "get_key_from_immutable_set": {
+      "code": "translations.find(_._2 == \"hola\").map(_._1)",
+      "comment": "Returns an `Option` with the first key mapped to the given value, or `None` if no key has that value."
+    },
+    "get_value_from_immutable_set": {
+      "code": [
+        "translations(\"hello\")",
+        "translations.get(\"hello\")",
+        "translations.getOrElse(\"hello\", \"\")"
+      ],
+      "comment": "The first throws a `NoSuchElementException` if the key is missing, the second returns an `Option`, and the third returns a default value."
+    },
+    "get_all_keys_from_immutable_set": {
+      "code": "translations.keys"
+    },
+    "get_all_values_from_immutable_set": {
+      "code": "translations.values"
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "code": "val swapped = translations.map(_.swap)",
+      "comment": "Creates a new map with keys and values swapped. If several keys share a value, only one of them is kept."
+    },
+    "delete_immutable_set": {
+      "not-implemented": true,
+      "comment": "Memory is managed by the JVM garbage collector. The map is freed once nothing references it anymore."
+    },
+    "get_index_of_element": {
+      "code": "myList.indexOf(value)",
+      "comment": "Returns `-1` if the element isn't found."
+    },
+    "find_minimum_element": {
+      "code": [
+        "myList.min",
+        "myList.minOption"
+      ],
+      "comment": "`min` throws an exception on an empty list, while `minOption` returns `None`."
+    },
+    "find_maximum_element": {
+      "code": [
+        "myList.max",
+        "myList.maxOption"
+      ],
+      "comment": "`max` throws an exception on an empty list, while `maxOption` returns `None`."
+    },
+    "contains_element": {
+      "code": "myList.contains(value)"
+    },
+    "convert_list_to_string": {
+      "code": [
+        "myList.mkString(\", \")",
+        "myList.toString"
+      ],
+      "comment": "`mkString` joins the elements with a separator. `toString` includes the collection name, like `List(1, 2, 3)`."
+    },
+    "concatenate_two_lists": {
+      "code": "val merged = list1 ++ list2"
+    },
+    "split_list_at_index": {
+      "code": "val (firstPart, secondPart) = myList.splitAt(index)"
+    },
+    "split_list_at_value": {
+      "code": "val (beforeValue, fromValue) = myList.span(_ != value)",
+      "comment": "Splits right before the first occurrence of `value`."
+    },
+    "duplicate_a_list": {
+      "code": "val copiedList = myList.clone()",
+      "comment": "Use this for mutable collections like `ArrayBuffer`. Immutable collections can be shared safely without copying."
+    },
+    "duplicate_subset_of_list": {
+      "code": "val subsetList = myList.slice(2, 5)",
+      "comment": "Copies the elements from index `2` up to, but not including, index `5`."
+    },
+    "get_list_length": {
+      "code": [
+        "myList.length",
+        "myList.size"
+      ]
+    },
+    "is_list_empty": {
+      "code": [
+        "myList.isEmpty",
+        "myList.nonEmpty"
+      ],
+      "comment": "`nonEmpty` is the opposite of `isEmpty`."
+    },
+    "resize_list": {
+      "code": [
+        "myList.padToInPlace(10, 0)",
+        "myList.dropRightInPlace(2)"
+      ],
+      "comment": "For mutable buffers like `ArrayBuffer`. `padToInPlace` grows the list to 10 elements by adding `0`s, and `dropRightInPlace` removes the last 2 elements."
+    },
+    "clear_list": {
+      "code": "myList.clear()",
+      "comment": "Only available on mutable collections."
+    },
+    "do_two_lists_match_exactly": {
+      "code": "list1 == list2"
+    },
+    "do_two_lists_contain_same_items": {
+      "code": [
+        "list1.sorted == list2.sorted",
+        "list1.toSet == list2.toSet"
+      ],
+      "comment": "Comparing sorted copies ignores order. Comparing sets ignores both order and duplicate elements."
+    },
+    "does_list_satisfy_some_expression": {
+      "code": [
+        "myList.exists(_ > 10)",
+        "myList.forall(_ > 10)"
+      ],
+      "comment": "`exists` checks if at least one element matches, while `forall` checks if every element matches."
+    },
+    "does_list_not_satisfy_an_expression": {
+      "code": "!myList.exists(_ > 10)"
+    },
+    "sort_list": {
+      "code": [
+        "val sortedList = myList.sorted",
+        "myList.sortInPlace()"
+      ],
+      "comment": "`sorted` returns a new sorted collection. `sortInPlace` sorts a mutable collection like `ArrayBuffer` directly."
+    },
+    "shuffle_list": {
+      "code": "val shuffledList = scala.util.Random.shuffle(myList)",
+      "comment": "Returns a new shuffled collection."
+    },
+    "reverse_list": {
+      "code": "val reversedList = myList.reverse",
+      "comment": "Returns a new collection in reverse order."
+    },
+    "map": {
+      "code": "val doubledList = myList.map(_ * 2)"
+    },
+    "filter": {
+      "code": "val filteredList = myList.filter(_ > 10)"
+    },
+    "reduce_left": {
+      "code": [
+        "myList.reduceLeft(_ + _)",
+        "myList.foldLeft(0)(_ + _)"
+      ],
+      "comment": "`reduceLeft` throws an exception on an empty list. `foldLeft` takes a starting value, so it works on empty lists too."
+    },
+    "reduce_right": {
+      "code": [
+        "myList.reduceRight(_ + _)",
+        "myList.foldRight(0)(_ + _)"
+      ],
+      "comment": "`reduceRight` throws an exception on an empty list. `foldRight` takes a starting value, so it works on empty lists too."
+    },
+    "slice_list": {
+      "code": [
+        "myList.slice(start, end)",
+        "myList.view.slice(start, end)"
+      ],
+      "comment": "`slice` returns a new collection from `start` up to, but not including, `end`. Calling it on a `view` avoids copying."
+    },
+    "get_first_element": {
+      "code": [
+        "myList.head",
+        "myList.headOption"
+      ],
+      "comment": "`head` throws an exception on an empty list, while `headOption` returns `None`."
+    },
+    "get_last_element": {
+      "code": [
+        "myList.last",
+        "myList.lastOption"
+      ],
+      "comment": "`last` throws an exception on an empty list, while `lastOption` returns `None`."
+    },
+    "remove_duplicates": {
+      "code": "myList.distinct"
+    },
+    "flatten_list": {
+      "code": "val flatList = nestedList.flatten"
+    }
+  }
+}
