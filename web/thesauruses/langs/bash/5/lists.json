@@ -1,0 +1,385 @@
+{
+  "meta": {
+    "language": "bash",
+    "language_version": "5.1",
+    "language_name": "Bash",
+    "structure": "lists"
+  },
+  "concepts": {
+    "name_of_ordered_mutable_list": {
+      "code": "indexed array"
+    },
+    "create_a_ordered_mutable_list": {
+      "code": [
+        "array_name=()",
+        "array_name=(value)",
+        "array_name=(value1 value2 value3)",
+        "declare -a array_name"
+      ],
+      "comment": "The first line creates an empty array, the second creates an array with one value, and the third creates an array with multiple values. Elements are separated by whitespace, so quote any value that contains spaces. `declare -a` explicitly declares an empty indexed array."
+    },
+    "ordered_mutable_list_start_number": {
+      "code": "0"
+    },
+    "access_element_in_ordered_mutable_list": {
+      "code": "\"${array_name[index]}\"",
+      "comment": "The braces are required. Without them, `$array_name[index]` expands to the first element followed by the literal text `[index]`."
+    },
+    "insert_into_beginning_of_ordered_mutable_list": {
+      "code": "array_name=(\"$value\" \"${array_name[@]}\")"
+    },
+    "insert_into_end_of_ordered_mutable_list": {
+      "code": "array_name+=(\"$value\")"
+    },
+    "insert_into_middle_of_ordered_mutable_list": {
+      "code": "array_name=(\"${array_name[@]:0:index}\" \"$value\" \"${array_name[@]:index}\")"
+    },
+    "erase_element_at_beginning_of_ordered_mutable_list": {
+      "code": [
+        "array_name=(\"${array_name[@]:1}\")",
+        "unset 'array_name[0]'"
+      ],
+      "comment": "The first line removes the first element and re-numbers the remaining elements starting at 0. The second line removes the element but leaves a gap, so the array then starts at index 1."
+    },
+    "erase_element_at_end_of_ordered_mutable_list": {
+      "code": "unset 'array_name[-1]'",
+      "comment": "Negative indexes count back from the end of the array (Bash 4.3 and newer). The quotes stop the shell from treating the brackets as a filename pattern."
+    },
+    "erase_element_in_middle_of_ordered_mutable_list": {
+      "code": [
+        "array_name=(\"${array_name[@]:0:index}\" \"${array_name[@]:index+1}\")",
+        "unset 'array_name[index]'"
+      ],
+      "comment": "The first line removes the element and re-numbers the elements after it. The second line removes the element but leaves a gap in the indexes."
+    },
+    "swap_elements_in_ordered_mutable_list": {
+      "code": [
+        "temp=\"${array_name[index1]}\"",
+        "array_name[index1]=\"${array_name[index2]}\"",
+        "array_name[index2]=\"$temp\""
+      ],
+      "comment": "Bash has no swap operation, so a temporary variable is used. All three lines are needed."
+    },
+    "delete_ordered_mutable_list": {
+      "code": "unset array_name"
+    },
+    "name_of_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "create_a_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "sorted_mutable_list_start_number": {
+      "not-implemented": true
+    },
+    "access_element_in_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "insert_into_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_at_beginning_of_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_at_end_of_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_in_middle_of_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "swap_elements_in_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "delete_sorted_mutable_list": {
+      "not-implemented": true
+    },
+    "name_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "create_a_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "unordered_mutable_list_start_number": {
+      "not-implemented": true
+    },
+    "access_element_in_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "insert_into_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_at_beginning_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_at_end_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "erase_element_in_middle_of_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "swap_elements_in_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "delete_unordered_mutable_list": {
+      "not-implemented": true
+    },
+    "name_of_ordered_immutable_list": {
+      "code": "readonly indexed array"
+    },
+    "create_a_ordered_immutable_list": {
+      "code": [
+        "declare -ra array_name=(value1 value2 value3)",
+        "readonly -a array_name=(value1 value2 value3)"
+      ],
+      "comment": "Both lines do the same thing. Any later attempt to change the array is an error."
+    },
+    "make_ordered_mutable_list_immutable": {
+      "code": "readonly array_name",
+      "comment": "This makes an existing array read-only in place. It cannot be made mutable again."
+    },
+    "make_ordered_immutable_list_mutable": {
+      "code": "new_array=(\"${array_name[@]}\")",
+      "comment": "A read-only array cannot be made mutable, but its elements can be copied into a new, mutable array."
+    },
+    "ordered_immutable_list_start_number": {
+      "code": "0"
+    },
+    "access_element_in_ordered_immutable_list": {
+      "code": "\"${array_name[index]}\""
+    },
+    "delete_ordered_immutable_list": {
+      "not-implemented": true,
+      "comment": "Read-only variables cannot be unset. They exist until the shell exits."
+    },
+    "name_of_unordered_immutable_list": {
+      "not-implemented": true
+    },
+    "create_a_unordered_immutable_list": {
+      "not-implemented": true
+    },
+    "make_unordered_mutable_list_immutable": {
+      "not-implemented": true
+    },
+    "make_unordered_immutable_list_mutable": {
+      "not-implemented": true
+    },
+    "unordered_immutable_list_start_number": {
+      "not-implemented": true
+    },
+    "access_element_in_unordered_immutable_list": {
+      "not-implemented": true
+    },
+    "delete_unordered_immutable_list": {
+      "not-implemented": true
+    },
+    "name_of_mutable_hashed_list": {
+      "not-implemented": true,
+      "comment": "Bash has no hash set. For key/value pairs, see associative arrays under Mutable Key/Value Sets."
+    },
+    "create_a_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "insert_element_to_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "erase_element_from_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "delete_mutable_hashed_list": {
+      "not-implemented": true
+    },
+    "name_of_immutable_hashed_list": {
+      "not-implemented": true
+    },
+    "create_a_immutable_hashed_list": {
+      "not-implemented": true
+    },
+    "make_mutable_hashed_list_immutable": {
+      "not-implemented": true
+    },
+    "make_immutable_hashed_list_mutable": {
+      "not-implemented": true
+    },
+    "delete_immutable_hashed_list": {
+      "not-implemented": true
+    },
+    "create_a_mutable_set": {
+      "code": [
+        "declare -A map_name",
+        "declare -A map_name=([key]=value)",
+        "declare -A map_name=([key1]=value1 [key2]=value2)"
+      ],
+      "comment": "Bash calls this an associative array (Bash 4.0 and newer). It must be declared with `declare -A`. Keys are not stored in any particular order. To add or change a pair later, use `map_name[key]=value`."
+    },
+    "get_key_from_mutable_set": {
+      "not-implemented": true,
+      "comment": "Keys are not stored in any particular order, so they cannot be looked up by position. Use `${!map_name[@]}` to get all keys."
+    },
+    "get_value_from_mutable_set": {
+      "code": [
+        "\"${map_name[key]}\"",
+        "\"${map_name[key]:-default_value}\""
+      ],
+      "comment": "A missing key expands to an empty string. The second line expands to `default_value` instead when the key is missing or its value is empty."
+    },
+    "get_all_keys_from_mutable_set": {
+      "code": "\"${!map_name[@]}\""
+    },
+    "get_all_values_from_mutable_set": {
+      "code": "\"${map_name[@]}\""
+    },
+    "swap_key_and_value_in_mutable_set": {
+      "not-implemented": true
+    },
+    "delete_mutable_set": {
+      "code": "unset map_name"
+    },
+    "create_a_immutable_set": {
+      "code": "declare -rA map_name=([key1]=value1 [key2]=value2)"
+    },
+    "make_mutable_set_immutable": {
+      "code": "readonly map_name",
+      "comment": "This makes an existing associative array read-only in place. It cannot be made mutable again."
+    },
+    "make_immutable_set_mutable": {
+      "not-implemented": true
+    },
+    "get_key_from_immutable_set": {
+      "not-implemented": true,
+      "comment": "Keys are not stored in any particular order, so they cannot be looked up by position. Use `${!map_name[@]}` to get all keys."
+    },
+    "get_value_from_immutable_set": {
+      "code": [
+        "\"${map_name[key]}\"",
+        "\"${map_name[key]:-default_value}\""
+      ],
+      "comment": "A missing key expands to an empty string. The second line expands to `default_value` instead when the key is missing or its value is empty."
+    },
+    "get_all_keys_from_immutable_set": {
+      "code": "\"${!map_name[@]}\""
+    },
+    "get_all_values_from_immutable_set": {
+      "code": "\"${map_name[@]}\""
+    },
+    "swap_key_and_value_in_immutable_set": {
+      "not-implemented": true
+    },
+    "delete_immutable_set": {
+      "not-implemented": true,
+      "comment": "Read-only variables cannot be unset. They exist until the shell exits."
+    },
+    "get_index_of_element": {
+      "not-implemented": true
+    },
+    "find_minimum_element": {
+      "code": "printf '%s\\n' \"${array_name[@]}\" | sort -n | head -n 1",
+      "comment": "Bash has no built-in for this, so the elements are printed one per line and passed to the external `sort` command. `-n` compares numbers. Drop it to compare text."
+    },
+    "find_maximum_element": {
+      "code": "printf '%s\\n' \"${array_name[@]}\" | sort -n | tail -n 1",
+      "comment": "Bash has no built-in for this, so the elements are printed one per line and passed to the external `sort` command. `-n` compares numbers. Drop it to compare text."
+    },
+    "contains_element": {
+      "not-implemented": true
+    },
+    "convert_list_to_string": {
+      "code": [
+        "\"${array_name[*]}\"",
+        "(IFS=,; echo \"${array_name[*]}\")"
+      ],
+      "comment": "`${array_name[*]}` joins the elements using the first character of `IFS`, which is a space by default. The second line joins them with commas. The parentheses run it in a subshell so `IFS` is unchanged afterward."
+    },
+    "concatenate_two_lists": {
+      "code": [
+        "array_name1+=(\"${array_name2[@]}\")",
+        "array_name3=(\"${array_name1[@]}\" \"${array_name2[@]}\")"
+      ],
+      "comment": "The first line appends the second array to the first. The second line creates a new array from both."
+    },
+    "split_list_at_index": {
+      "code": [
+        "first_part=(\"${array_name[@]:0:index}\")",
+        "second_part=(\"${array_name[@]:index}\")"
+      ],
+      "comment": "`${array_name[@]:offset:length}` returns `length` elements starting at `offset`. If `length` is left out, it returns every element from `offset` to the end."
+    },
+    "split_list_at_value": {
+      "not-implemented": true
+    },
+    "duplicate_a_list": {
+      "code": "new_array=(\"${array_name[@]}\")",
+      "comment": "If the original array has gaps in its indexes, the copy is re-numbered starting at 0."
+    },
+    "duplicate_subset_of_list": {
+      "code": "new_array=(\"${array_name[@]:start_index:length}\")"
+    },
+    "get_list_length": {
+      "code": "${#array_name[@]}"
+    },
+    "is_list_empty": {
+      "code": "(( ${#array_name[@]} == 0 ))"
+    },
+    "resize_list": {
+      "not-implemented": true,
+      "comment": "Bash arrays have no fixed size. They grow as elements are added and shrink as elements are unset."
+    },
+    "clear_list": {
+      "code": "array_name=()"
+    },
+    "do_two_lists_match_exactly": {
+      "not-implemented": true
+    },
+    "do_two_lists_contain_same_items": {
+      "not-implemented": true
+    },
+    "does_list_satisfy_some_expression": {
+      "not-implemented": true
+    },
+    "does_list_not_satisfy_an_expression": {
+      "not-implemented": true
+    },
+    "sort_list": {
+      "code": "readarray -t sorted_array < <(printf '%s\\n' \"${array_name[@]}\" | sort)",
+      "comment": "Bash has no built-in sort, so the external `sort` command is used and its output is read back into a new array. This does not work for elements that contain newlines."
+    },
+    "shuffle_list": {
+      "code": "readarray -t shuffled_array < <(printf '%s\\n' \"${array_name[@]}\" | shuf)",
+      "comment": "Uses the external `shuf` command from GNU coreutils. It may not be installed on macOS or BSD systems by default."
+    },
+    "reverse_list": {
+      "code": "readarray -t reversed_array < <(printf '%s\\n' \"${array_name[@]}\" | tac)",
+      "comment": "Uses the external `tac` command from GNU coreutils. It may not be installed on macOS or BSD systems by default."
+    },
+    "map": {
+      "not-implemented": true
+    },
+    "filter": {
+      "not-implemented": true
+    },
+    "reduce_left": {
+      "not-implemented": true
+    },
+    "reduce_right": {
+      "not-implemented": true
+    },
+    "slice_list": {
+      "code": "new_array=(\"${array_name[@]:start_index:length}\")",
+      "comment": "This creates a copy. Bash has no array views and no step value for slices."
+    },
+    "get_first_element": {
+      "code": "\"${array_name[0]}\""
+    },
+    "get_last_element": {
+      "code": "\"${array_name[-1]}\"",
+      "comment": "Negative indexes count back from the end of the array (Bash 4.3 and newer)."
+    },
+    "remove_duplicates": {
+      "code": "readarray -t unique_array < <(printf '%s\\n' \"${array_name[@]}\" | sort -u)",
+      "comment": "Uses the external `sort` command, so the result is sorted and the original order is not kept."
+    },
+    "flatten_list": {
+      "not-implemented": true,
+      "comment": "Bash arrays can only hold strings, so arrays cannot be nested."
+    }
+  }
+}
