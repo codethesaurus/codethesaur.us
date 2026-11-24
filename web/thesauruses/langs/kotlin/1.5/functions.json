@@ -7,69 +7,92 @@
   },
   "concepts": {
     "void_function_no_parameters": {
-      "code": "fun functionName() {\n    // statements\n}",
-      "name": "Function that does not return a value and takes no parameters"
+      "code": "fun functionName() {\n    println(\"Hello\")\n}"
     },
     "void_function_with_parameters": {
-      "code": "fun functionName(param1: Type, param2: Type) {\n    // statements\n}",
-      "name": "Function that does not return a value and that takes 1 or more defined parameters"
+      "code": "fun functionName(param1: String, param2: Int) {\n    println(\"$param1 $param2\")\n}"
+    },
+    "void_function_with_keyword_parameters": {
+      "not-implemented": true,
+      "comment": "Kotlin does not declare keyword-only parameters separately. Named arguments can be used when calling a function."
     },
     "void_function_with_optional_parameters": {
-      "code": "fun functionName(param1: Type, param2: Type = defaultValue) {\n    // statements\n}",
-      "name": "Function that does not return a value and that takes 1 or more optional parameters (with default values)"
+      "code": "fun functionName(param1: String, param2: Int = 0) {\n    println(\"$param1 $param2\")\n}"
     },
     "void_function_variable_parameters": {
-      "code": "fun functionName(vararg params: Type) {\n    // statements\n}",
-      "name": "Function that does not return a value and function that takes an unknown number of parameters"
+      "code": "fun functionName(vararg params: String) {\n    println(params.joinToString())\n}"
     },
     "return_value_function_no_parameters": {
-      "code": "fun functionName(): ReturnType {\n    // statements\n    return expression\n}",
-      "name": "Function that returns a value and takes no parameters"
+      "code": "fun functionName(): Int {\n    return 42\n}"
     },
     "return_value_function_with_parameters": {
-      "code": "fun functionName(param1: Type, param2: Type): ReturnType {\n    // statements\n    return expression\n}",
-      "name": "Function that returns a value and takes 1 or more defined parameters"
+      "code": "fun functionName(param1: Int, param2: Int): Int {\n    return param1 + param2\n}"
+    },
+    "return_value_function_with_keyword_parameters": {
+      "not-implemented": true,
+      "comment": "Kotlin does not declare keyword-only parameters separately. Named arguments can be used when calling a function."
     },
     "return_value_function_with_optional_parameters": {
-      "code": "fun functionName(param1: Type, param2: Type = defaultValue): ReturnType {\n    // statements\n    return expression\n}",
-      "name": "Function that returns a value and takes 1 or more optional parameters (with default values)"
+      "code": "fun functionName(param1: Int, param2: Int = 0): Int {\n    return param1 + param2\n}"
     },
     "return_value_function_variable_parameters": {
-      "code": "fun functionName(vararg params: Type): ReturnType {\n    // statements\n    return expression\n}",
-      "name": "Function that returns a value and takes an unknown number of parameters"
+      "code": "fun functionName(vararg params: Int): Int {\n    return params.sum()\n}"
     },
     "anonymous_function_no_parameters": {
-      "code": "{ -> // statements }",
-      "name": "Anonymous function that takes no parameters"
+      "code": "val function = { println(\"Hello\") }"
     },
     "anonymous_function_with_parameters": {
-      "code": "{ param1: Type, param2: Type -> // statements }",
-      "name": "Anonymous function that takes 1 or more defined parameters"
+      "code": "val function = { param1: String, param2: Int -> println(\"$param1 $param2\") }"
+    },
+    "anonymous_function_with_keyword_parameters": {
+      "not-implemented": true,
+      "comment": "Kotlin lambda parameters do not support keyword-only parameter declarations."
+    },
+    "anonymous_function_with_optional_parameters": {
+      "not-implemented": true,
+      "comment": "Kotlin lambda parameters cannot declare default values."
     },
     "anonymous_function_variable_parameters": {
       "not-implemented": true,
-      "name": "Anonymous function that takes an unknown number of parameters"
+      "comment": "Kotlin lambda parameters cannot use vararg declarations."
     },
     "anonymous_function_no_parameters_with_return": {
-      "code": "{ -> expression }",
-      "name": "Anonymous function that takes no parameters and returns a value"
+      "code": "val function: () -> Int = { 42 }"
     },
     "anonymous_function_with_parameters_with_return": {
-      "code": "{ param1: Type, param2: Type -> expression }",
-      "name": "Anonymous function that takes 1 or more defined parameters and returns a value"
+      "code": "val function: (Int, Int) -> Int = { param1, param2 -> param1 + param2 }"
     },
-    "extension_function": {
-      "code": "fun ReceiverType.functionName() {\n    // statements\n}",
-      "comment": "Extension functions allow you to add new functions to existing classes without inheriting from them.",
-      "name": "Extension functions"
+    "anonymous_function_with_keyword_parameters_with_return": {
+      "not-implemented": true,
+      "comment": "Kotlin lambda parameters do not support keyword-only parameter declarations."
     },
-    "named_arguments": {
-      "code": "functionName(param2 = value2, param1 = value1)",
-      "name": "Named arguments in function calls"
+    "anonymous_function_with_optional_parameters_with_return": {
+      "not-implemented": true,
+      "comment": "Kotlin lambda parameters cannot declare default values."
+    },
+    "anonymous_function_variable_parameters_with_return": {
+      "not-implemented": true,
+      "comment": "Kotlin lambda parameters cannot use vararg declarations."
+    },
+    "call_subroutine": {
+      "code": "functionName(param1, param2)"
+    },
+    "return_from_subroutine": {
+      "code": "return"
     },
     "async_function": {
-      "code": "suspend fun functionName() {\n    // statements\n}",
-      "name": "Asynchronous function (async/await)"
+      "code": "suspend fun functionName() {\n    println(\"Async work\")\n}"
+    },
+    "named_arguments": {
+      "code": "functionName(param2 = 2, param1 = 1)"
+    },
+    "extension_function": {
+      "code": "fun String.functionName() {\n    println(this)\n}",
+      "comment": "Extension functions allow you to add functions to existing classes without inheriting from them."
+    },
+    "multiple_return_values": {
+      "code": "data class Result(val value: Int, val message: String)\n\nfun functionName(): Result {\n    return Result(42, \"Success\")\n}\n\nval (value, message) = functionName()",
+      "comment": "Kotlin uses data classes or other object types for returning multiple values; destructuring declarations can unpack the returned values."
     }
   }
 }
